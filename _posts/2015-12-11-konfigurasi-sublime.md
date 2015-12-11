@@ -9,8 +9,8 @@ share: true
 ---
 Dalam mengembangkan aplikasi dan web, text-editor pilihan saya adalah [Sublime Text](http://sublimetext.com).
 Saya sudah mencoba text-editor yang lain seperti [Atom](http://atom.io) dan [Visual Studio Code](http://code.visualstudio.com). Berikut konfigurasi sublime text yang saya gunakan
-
-<img src="{{ site.url }}/img/sublime.png" align="center">
+ 
+<img src="{{ site.url }}/img/sublime.png" align="center" width="680">
 <figcaption>Berikut tema sublime-text saya</figcaption>
 
 ```
