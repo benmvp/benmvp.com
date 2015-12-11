@@ -1,4 +1,4 @@
-edwinlunando.github.io
+Andre Christoga Blog
 ======================
 
-My thought about information technology. This blog is built with [jekyll](http://jekyllrb.com/)
+My blog is currently using [Edwin Lunando Blog Template](http://edwinlunando.net)
