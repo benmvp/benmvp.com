@@ -1,10 +1,10 @@
 # Site settings
-title: Kode Edwin
-email: edwinlunando@gmail.com
+title: Andre Christoga
+email: andre.christoga@gmail.com
 description: "produk, metode, dan kode"
-username: edwinlunando
-baseurl: ""
-url: "http://edwinlunando.github.io"
+username: christoga
+baseurl: "/blog"
+url: "http://christoga.github.io/blog"
 paginate: 10
 paginate_path: "/halaman/:num/"
 
