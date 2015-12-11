@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  {{ content }}
+</div>

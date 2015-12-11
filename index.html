@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="mdl-cell--8-col">
+
+  <ul class="posts">
+
+    {% for post in paginator.posts %}
+      <li>
+        <div class="mdl-card mdl-shadow--2dp layout-card">
+          {% if post.header_image %}
+          <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.header_image }});">
+          </div>
+          {% endif %}
+          <div class="mdl-card__title">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <h1 class="mdl-card__title-text">{{ post.title }}</h1>
+            </a>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
+            <p class="post-preview">
+              {{ post.content | strip_html | truncatewords:35}}
+            </p>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Sebelumnya</a>
+  {% else %}
+  {% endif %}
+  <span class="page_number ">Halaman: {{ paginator.page }} dari {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Selanjutnya</a>
+  {% else %}
+  {% endif %}
+</div>
+
+</div>

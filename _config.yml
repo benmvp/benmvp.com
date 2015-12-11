@@ -1,0 +1,15 @@
+# Site settings
+title: Kode Edwin
+email: edwinlunando@gmail.com
+description: "produk, metode, dan kode"
+username: edwinlunando
+baseurl: ""
+url: "http://edwinlunando.github.io"
+paginate: 10
+paginate_path: "/halaman/:num/"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+gems: [jekyll-paginate]
+highlighter: pygments

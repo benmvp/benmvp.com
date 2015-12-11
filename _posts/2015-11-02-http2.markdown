@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "HTTP 2: Generasi Baru Performa Web"
+date:   2015-11-02
+categories: http2 protokol
+author: Edwin Lunando
+author_t: edwinlunando
+permalink: http2
+header_image: /images/http2.png
+---
+
+## HTTP 1.1
+
+Sudah sekitar 16 tahun sejak Hyper Text Transfer Protocol(HTTP) 1.1 dirilis dan menjadi salah satu bagian inti dari aplikasi web ataupun mobile. Mayoritas aplikasi yang berbasis client dan server pasti menggunakan protokol HTTP untuk berkomunikasi dari client(browser, mobile phone, dan alat elektronik lainnya) ke server.
+
+Semakin besar sebuah aplikasi web, semakin banyak juga aset seperti gambar, javascript, dan css yang dibutuhkan dalam sebuah halaman web. Apalagi menjamurnya startup yang baru, artinya semakin banyak juga aplikasi baru yang menyebabkan penggunaan protokol HTTP semakin intensif.
+
+## Bottleneck di mana?
+
+Jika kita lihat 5 tahun yang lalu, bandwidth internet tentunya tidak sebaik yang sekarang. Perkembangan bandwidth dari tahun ke tahun sangatlah cepat. 5 tahun lalu mungkin ADSL mulai banyak, sekarang sudah jaman serat optik. Permasalahannya, round trip time(RTT) atau latency tidak berubah signifikan dari tahun ke tahun. 5 tahun lalu saya coba *ping* ke server singapura jadi rumah saya di Jakarta itu waktunya sekitar 32-40 milidetik. Sekarang, tidak berbeda jauh, masih di sekitar 30 milidetik. Jadi, **mau sebesar apapun perkembangan bandwidth-nya, selalu ada delay 30 milidetik untuk setiap request yang dikirim oleh client**.
+
+Coba buka beberapa situs yang sering Anda buka lalu, coba hitung jumlah aset di halaman tersebut. Kalau dari beberapa halaman yang saya buka, tiap halaman membutuhkan lebih dari 100 aset, bahkan ada yang lebih dari 200 aset. Kalau kita kalikan 30 milidetik dengan 100 kali request, artinya minimal ada 3 detik(3000 milidetik) dihabiskan untuk berkomunikasi dengan server. Nah, untungnya, di HTTP 1.1, browser diperbolehkan mengirim 4-8 request sekaligus ke host yang sama.
+
+Berikut beberapa "*hack*" yang biasa dilakukan beberapa engineer untuk mengakali masalah banyaknya request ini.
+
+1. **Spriting**: Menggabungkan beberapa gambar jadi 1 file
+2. **Inlines**: Menaruh konten aset langsung di HTML
+3. **Concatenation**: Menggabungkan beberapa file javascript dan css menjadi 1
+4. **Sharding**: Menaruh aset di banyak tempat untuk nge-bypass limitasi request per host
+
+Hampir semua metode yang disebutkan itu ditujukan untuk mengurangi request yang dikirim karena **lebih baik satu request yang besar daripada banyak request tapi kecil-kecil**, toh bandwidth juga sudah mumpuni.
+
+## Kenapa Request Mahal?
+
+Ada beberapa faktor yang menyebabkan sebuah HTTP request itu "mahal".
+
+1. HTTP berbeda desain dengan prinsip TCP
+2. Verbose(berbasis teks)
+
+Yang pertama, HTTP didesain untuk pemrosesan yang cepat dan singkat, sedangkan TCP didesain untuk berumur panjang. Jika ada 100 aset, artinya harus ada banyak koneksi yang perlu dibuat. Selain itu, request header yang menyimpan informasi terkait request juga memberikan kontribusi dalam.
+
+Berikut contoh request header ke edwinlunando.net dari komputer saya.
+
+{% highlight text %}
+GET / HTTP/1.1
+Host: www.edwinlunando.net
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/583.96 (KHTML, like Gecko) Chrome/49.0.2490.80 Safari/597.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,id;q=0.6,ms;q=0.4,it;q=0.2,fr;q=0.2
+Cookie: _ga=GA1.2.1263144633.1447832885; _gat=9
+If-Modified-Since: Sun, 25 Oct 2015 14:21:14 GMT
+{% endhighlight %}
+
+Ada 536 karakter dalam teks request header tersebut, yang berarti client butuh mengirim 536 bytes setiap request baru. Kalau dilihat, 500 bytes merupakan ukuran yang kecil, namun, jika ada 100 request, artinya 500 bytes x 100 = 50000 bytes(kira-kira 50 Kilobytes). Lumayan juga kan?
+
+## HTTP 2
+
+Dari beberapa masalah yang disebutkan di atas, [IETF][4] menrilis sebuah protokol baru yang merupakan pengembangan dari HTTP 1.1, yaitu HTTP 2. Semua semantik dari HTTP 1.1 dibawa ke HTTP 2, yang berbeda hanyalah metode pengirimannya. Fokus dari HTTP 2 adalah performa, performa, dan performa. Semua masalah dari HTTP 1.1 yang sudah saya jabarkan di atas, diberikan solusinya di HTTP 2. Berikut beberapa fitur yang baru dari HTTP 2.
+
+1. Single, persistent connection
+2. Server push
+3. Far better multiplexing
+4. Binary
+5. Header compression
+
+### Single, Persistent Connection
+
+Dengan HTTP 2, client dapat langsung mengirim request sebanyak apapun ke server hanya dengan 1 koneksi selama bandwidth masih mencukupi.
+
+<img src="/images/persistent_connection.png" alt="Single, persistent connection" style="width: 100%;"/>
+
+### Server Push
+
+Dengan 1 request HTML, server langsung dapat mengirimkan aset-aset yang dibutuhkan di halaman tersebut.
+
+<img src="/images/server_push.png" alt="server push" style="width: 100%;"/>
+
+Sayangnya, khusus fitur server push belum banyak diimplementasi di web server populer seperti Nginx atau Apache.
+
+### Far Better Multiplexing
+
+Pada HTTP 1.1 fitur multiplexing sudah ada, namun sangat terbatas. Hanya 4 - 8 koneksi yang ditentukan sendiri oleh implementasi client. Di HTTP 2, batasan tersebut sudah dilepas, titik. Jadi, *bottleneck* kembali pada bandwidth.
+
+### Binary and Header Compression
+
+Membaca dan menulis header lebih cepat dalam format binary dan kompresi header membuat data yang dikirim lebih sedikit daripada biasanya. Lebih cepat, lebih ringan. :D
+
+## Kesimpulan
+
+Dengan adanya HTTP 2, "*best practice*" atau metode "*hack*" yang sering digunakan sudah tidak berlaku lagi di hadapan HTTP 2. Sekarang, kita harus mencari tahu *best practice* baru yang paling cocok dengan HTTP 2.
+
+HTTP 2 ada untuk web yang lebih cepat. Dengan penggunaan bandwidth dan koneksi yang lebih efisien, HTTP 2 akan mempercepat pengalaman browsing kita semua. Setahu saya, 2 web server utama yaitu, [Nginx][3] dan [Apache][2] sudah mendukung HTTP 2. Jadi, kita sudah dapat mencicipi HTTP 2! Yeyyyyyy.
+
+[2]:    https://httpd.apache.org/
+[3]:    http://nginx.org/
+[4]:    https://www.ietf.org/
