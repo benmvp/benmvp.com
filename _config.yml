@@ -2,13 +2,13 @@
 title: Andre Christoga
 email: andre.christoga@gmail.com
 description: "produk, metode, dan kode"
-username: christoga
+username: andrechristoga
 baseurl: "/blog"
 url: "http://christoga.github.io/blog"
 paginate: 10
 paginate_path: "/halaman/:num/"
 
-# Build settings
+# Build settings`
 markdown: kramdown
 permalink: pretty
 gems: [jekyll-paginate]
