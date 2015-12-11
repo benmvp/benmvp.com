@@ -6,15 +6,10 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="meta">{{ page.date | date: "%-d %B %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   {{ content }}
-  <section>
-    <div id="disqus_thread"></div>
-  </section>
-</div>
-<div style="display:inline-block">
-  <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+  <div class="mdl-card__actions mdl-card--border" align="center">
+                <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                   Share :
-                </a>
+                </a> -->
                 <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-button--accent">
                   <a href="https://www.facebook.com/sharer/sharer.php?u=http://tobathq.github.io/tobat/www"><i class="fa fa-facebook"></i></a>
                 </button>
@@ -25,7 +20,10 @@ layout: default
                   <a href="https://plus.google.com/share?url=http://tobathq.github.io/tobat/www"><i class="fa fa-google-plus"></i></a>
                 </button>
               </div>
-  </div>
+  <section>
+    <div id="disqus_thread"></div>
+  </section>
+</div>
 <script type="text/javascript">
     var disqus_shortname = 'andrechristoga';
 
