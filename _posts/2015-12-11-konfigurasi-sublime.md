@@ -13,7 +13,7 @@ Saya sudah mencoba text-editor yang lain seperti [Atom](http://atom.io) dan [Vis
 <img src="{{ site.url }}/images/sublime-configuration.png" align="center">
 <figcaption>Berikut tema sublime-text saya</figcaption>
 
-```json
+```
 {
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
 	"font_size": 12,
