@@ -28,7 +28,7 @@ Saya menggunakan [Material Theme](https://github.com/equinusocio/material-theme)
 Saya suka dengan tema ini karena cocok dengan mata saya ditambah desainya yang material design 😀
 
 ## Sublime Theme
-Semenjak ada fitur **Package Control: Install Package**, para developer mulai membuat tema sublimenya sendiri dengan responsive design :smile:
+Semenjak ada fitur **Package Control: Install Package**, para developer mulai membuat tema sublimenya sendiri dengan responsive design 😀
 
 Anda bisa mencari tema-tema sublime di google dan di github,
 Disana akan diberi tahu caranya menginstall tema sublime tersebut.
