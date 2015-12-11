@@ -6,6 +6,7 @@ permalink: /tentang/
 
 Hi! I'm Christo!
 I'm a frontend developer that have skills at :
+
 - HTML5
 - CSS3
 - JS
