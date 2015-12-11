@@ -24,7 +24,6 @@ Saya sudah mencoba text-editor yang lain seperti [Atom](http://atom.io) dan [Vis
 
 ## Material Theme
 Saya menggunakan [Material Theme](https://github.com/equinusocio/material-theme), sebuah tema material-design dengan 3 pilihan: Biasa, Darker dan Lighter
-
 Saya suka dengan tema ini karena cocok dengan mata saya ditambah desainya yang material design 😀
 
 ## Sublime Theme
