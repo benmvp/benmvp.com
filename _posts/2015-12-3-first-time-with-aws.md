@@ -3,7 +3,7 @@ layout: post
 title: First Time with AWS
 description: "The team that help me code."
 modified: 2015-11-30
-category: technology
+category: journey
 comments: true
 share: true
 ---
