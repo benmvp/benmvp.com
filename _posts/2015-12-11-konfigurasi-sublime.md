@@ -3,7 +3,7 @@ layout: post
 title: Konfigurasi Sublime Saya
 description: "Hal-hal yang terdapat pada text-editor saya"
 modified: 2015-11-30
-category: lifestyle
+category: technology
 comments: true
 share: true
 ---
