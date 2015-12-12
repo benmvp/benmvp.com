@@ -3,7 +3,7 @@ layout: post
 title: How to use HTTPS Protocol
 description: "A trick to use https protocol"
 modified: 2015-11-30
-category: tips-trick
+category: tips-tricks
 comments: true
 share: true
 ---
