@@ -31,4 +31,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 ## About `.htaccess`
 
-`.htaccess` is a configuration file that supported by several web servers
+A `.htaccess` (hypertext access) file is a directory-level configuration file supported by several web servers, that allows for decentralized management of web server configuration. They are placed inside the web tree, and are able to override a subset of the server's global configuration for the directory that they are in, and all sub-directories.[1]
+
+The original purpose of .htaccess—reflected in its name—was to allow per-directory access control by, for example, requiring a password to access the content. More commonly, however, the .htaccess files override many other configuration settings such as content type, character set, CGI handlers, etc.
