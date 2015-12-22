@@ -1,11 +1,10 @@
 ---
 layout: post
 title: First Time with AWS
-description: "The team that help me code."
-modified: 2015-11-30
-category: journey
-comments: true
-share: true
+date: 2015-11-30
+categories: journey
+layout: post
+author: Andre Christoga
 ---
 ## Introduction
 I started to fall in love with code since my mom told me : “Stop playing games!, try make games, apps and website!” that was a moving time of my life.

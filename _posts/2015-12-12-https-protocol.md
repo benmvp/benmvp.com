@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "How to get HTTPS Protocol using .htaccess"
-description: "A trick to get https protocol using .htaccess file"
-modified: 2015-11-30
-category: tips-tricks
-comments: true
-share: true
+title: How to get HTTPS Protocol using .htaccess
+date: 2015-11-30
+categories: tips-tricks
+author: Andre Christoga
 ---
 Sometimes people more often to use https then http, Why?
 **HTTP** is an abbreviation of **Hyper Text Transfer Protocol** and **HTTPS** is an abbreviation of **Hyper Text Transfer Protocol Secured**

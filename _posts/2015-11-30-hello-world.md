@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Hello World!
-description: "Welcome to my world!"
-modified: 2015-11-30
-category: lifestyle
-comments: true
-share: true
+date: 2015-11-30
+categories: lifestyle
+author: Andre Christoga
 ---
 
 **Hello world!**
