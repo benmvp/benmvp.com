@@ -6,13 +6,13 @@ $(document).ready(function(){
             value: 80,
             highlight: "#F4511E",
             color: "#FF5722",
-            label: "HTML"
+            label: "HTML5"
         },
         {
             value: 60,
             highlight: "#039BE5",
             color: "#03A9F4",
-            label: "CSS"
+            label: "CSS3"
         },
         {
             value: 30,
