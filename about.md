@@ -7,10 +7,20 @@ permalink: /tentang/
 Hi! I'm Christo!
 I'm a frontend developer that have skills at :
 
-* HTML5
-* CSS3
-* JS
-* Python 
+<div class="mdl-grid" align="center">
+  <div class="mdl-cell mdl-cell--4-col">
+  	<i class="fa fa-html5 fa-4x"></i>
+  	<h4>HTML5</h4>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+  	<i class="fa fa-css3 fa-4x"></i>
+  	<h4>CSS3</h4>	
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+  	<i class="fa fa-terminal fa-4x"></i>
+  	<h4>Python</h4>
+  </div>
+</div>
 
 I am available for freelance work, contact me at andre.christoga@gmail.com
 But... before sending me an email, 
