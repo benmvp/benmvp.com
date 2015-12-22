@@ -4,6 +4,7 @@ title: Konfigurasi Sublime Saya
 date: 2015-11-30
 categories: tips-tricks
 author: Andre Christoga
+header_image: img/sublime.png
 ---
 Dalam mengembangkan aplikasi dan web, text-editor pilihan saya adalah [Sublime Text](http://sublimetext.com).
 Saya sudah mencoba text-editor yang lain seperti [Atom](http://atom.io) dan [Visual Studio Code](http://code.visualstudio.com) tetapi selalu kembali ke Sublime Text. Berikut konfigurasi sublime text yang saya gunakan

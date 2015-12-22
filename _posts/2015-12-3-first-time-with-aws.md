@@ -5,6 +5,7 @@ date: 2015-11-30
 categories: journey
 layout: post
 author: Andre Christoga
+header_image: img/aws.png
 ---
 ## Introduction
 I started to fall in love with code since my mom told me : “Stop playing games!, try make games, apps and website!” that was a moving time of my life.

@@ -4,6 +4,7 @@ title: How to get HTTPS Protocol using .htaccess
 date: 2015-11-30
 categories: tips-tricks
 author: Andre Christoga
+header_image: img/htaccess.png
 ---
 Sometimes people more often to use https then http, Why?
 **HTTP** is an abbreviation of **Hyper Text Transfer Protocol** and **HTTPS** is an abbreviation of **Hyper Text Transfer Protocol Secured**
