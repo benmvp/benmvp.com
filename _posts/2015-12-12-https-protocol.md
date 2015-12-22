@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to get HTTPS Protocol"
-description: "A trick to use https protocol"
+title: "How to get HTTPS Protocol using .htaccess"
+description: "A trick to get https protocol using .htaccess file"
 modified: 2015-11-30
 category: tips-tricks
 comments: true
