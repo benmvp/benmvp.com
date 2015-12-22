@@ -21,7 +21,7 @@ I'm a frontend developer that have skills at :
   	<h4>Python</h4>
   </div>
 </div>
-
+<center><canvas id="skills" width="250" height="250"></canvas></center>
 I am available for freelance work, contact me at andre.christoga@gmail.com
 But... before sending me an email, 
 view the requirements, make sure the job doesnt have min-age ;)
