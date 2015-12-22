@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Time with AWS
-date: 2015-11-30
+date: 2015-12-03
 categories: journey
 layout: post
 author: Andre Christoga

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Konfigurasi Sublime Saya
-date: 2015-11-30
+date: 2015-12-11
 categories: tips-tricks
 author: Andre Christoga
 header_image: img/sublime.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to get HTTPS Protocol using .htaccess
-date: 2015-11-30
+date: 2015-12-12
 categories: tips-tricks
 author: Andre Christoga
 header_image: img/htaccess.png
