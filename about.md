@@ -11,8 +11,6 @@ I'm a frontend developer that have skills at :
 * CSS3
 * JS
 * Python 
-* Ruby
-* Golang
 
 I am available for freelance work, contact me at andre.christoga@gmail.com
 But... before sending me an email, 
