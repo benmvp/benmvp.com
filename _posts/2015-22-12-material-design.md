@@ -6,7 +6,7 @@ categories: tips-tricks
 author: Andre Christoga
 header_image: img/material.jpg
 ---
-Kali ini saya akan membahas tentang bahasa desain yang dikembangkan oleh google yaitu Material Design.
+Today I'm gonna be posting about Material Design, lets get started!
 
 ## What is Material Design?
 
