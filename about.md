@@ -8,17 +8,21 @@ Hi! I'm Christo!
 I'm a frontend developer that have skills at :
 
 <div class="mdl-grid" align="center">
-  <div class="mdl-cell mdl-cell--4-col">
+  <div class="mdl-cell mdl-cell--3-col">
   	<i class="fa fa-html5 fa-4x"></i>
   	<h4>HTML5</h4>
   </div>
-  <div class="mdl-cell mdl-cell--4-col">
+  <div class="mdl-cell mdl-cell--3-col">
   	<i class="fa fa-css3 fa-4x"></i>
   	<h4>CSS3</h4>	
   </div>
-  <div class="mdl-cell mdl-cell--4-col">
-  	<i class="fa fa-terminal fa-4x"></i>
-  	<h4>Python</h4>
+  <div class="mdl-cell mdl-cell--3-col">
+  	<i class="fa fa-code fa-4x"></i>
+  	<h4>Javascript</h4>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col">
+    <i class="fa fa-terminal fa-4x"></i>
+    <h4>Python</h4>
   </div>
 </div>
 <center><canvas id="skills" width="250" height="250"></canvas></center>

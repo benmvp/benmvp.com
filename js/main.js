@@ -19,6 +19,12 @@ $(document).ready(function(){
             highlight: "#FFEB3B",
             color: "#FFEE58",
             label: "Python"
+        },
+        {
+            value: 40,
+            highlight: "#F0DB4F",
+            color: "#F0DB4F",
+            label: "Javascript"
         }
     ];
 
