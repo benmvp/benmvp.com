@@ -11,7 +11,7 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-32539024-2', 'auto');
+    ga('create', '{{ site.owner.google.analytics }}', 'auto');
     ga('send', 'pageview');
 
   </script>
@@ -30,6 +30,6 @@
     </main>
 
   </div>
-
+  <script id="dsq-count-scr" src="//{{ site.owner.disqus-shortname }}.disqus.com/count.js" async></script>
 </body>
 </html>

@@ -1,15 +1,29 @@
 # Site settings
-title: Andre Christoga
-email: andre.christoga@gmail.com
-description: "Tech geek, Technologist, Frontend Dev, Developer, Nerdy Boy, Technokid!"
-username: andrechristoga
-baseurl: "/blog"
-url: "http://christoga.github.io/blog"
-paginate: 10
-paginate_path: "/halaman/:num/"
+title: Ben Ilegbodu
+email: ben@benmvp.com
+description: "{priorities:['Christ','Family','Work'], work:'@Eventbrite', title:'Sr UI Engineer', tech:['#ES6,'#CSS3','#HTML5'], passions:['#Jesus','@NBA']}"
+baseurl: ""
+url: "https://benmvp.github.io"
+paginate: 4
+paginate_path: "/page/:num/"
 
-# Build settings`
-markdown: kramdown
+
+# Build settings
+permalink:   pretty
+markdown: redcarpet
 permalink: pretty
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-sitemap]
 highlighter: pygments
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+
+# Site owner
+owner:
+  name: Ben Ilegbodu
+  email: you@email.com
+  disqus-shortname: benmvp
+  twitter: benmvp
+  github: benmvp
+  linkedin: benmvp
+  google:
+    analytics: UA-65375615-1

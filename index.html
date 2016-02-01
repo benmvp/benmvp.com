@@ -10,11 +10,12 @@ layout: default
       <li>
         <div class="mdl-card mdl-shadow--2dp layout-card">
           {% if post.header_image %}
-          <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.header_image }});">
-          </div>
+          <a href="{{ post.url }}">
+              <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.header_image }});"></div>
+          </a>
           {% endif %}
           <div class="mdl-card__title">
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            <a href="{{ post.url }}">
               <h1 class="mdl-card__title-text">{{ post.title }}</h1>
             </a>
           </div>
@@ -32,12 +33,12 @@ layout: default
   <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Sebelumnya</a>
+    <a href="{{ paginator.previous_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Previous</a>
   {% else %}
   {% endif %}
-  <span class="page_number ">Halaman: {{ paginator.page }} dari {{ paginator.total_pages }}</span>
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Selanjutnya</a>
+    <a href="{{ paginator.next_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Next</a>
   {% else %}
   {% endif %}
 </div>

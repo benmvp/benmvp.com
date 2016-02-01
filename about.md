@@ -1,37 +1,19 @@
 ---
 layout: page
-title: Tentang
-permalink: /tentang/
+title: About
+permalink: /about/
 ---
 
-Hi! I'm Christo!
-I'm a frontend developer that have skills at :
+Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father. He lives in Pittsburg, CA with his wife Rashida and their daughter Simone.
 
-<div class="mdl-grid" align="center">
-  <div class="mdl-cell mdl-cell--3-col">
-  	<i class="fa fa-html5 fa-4x"></i>
-  	<h4>HTML5</h4>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-  	<i class="fa fa-css3 fa-4x"></i>
-  	<h4>CSS3</h4>	
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-  	<i class="fa fa-code fa-4x"></i>
-  	<h4>Javascript</h4>
-  </div>
-  <div class="mdl-cell mdl-cell--3-col">
-    <i class="fa fa-terminal fa-4x"></i>
-    <h4>Python</h4>
-  </div>
-</div>
-<center><canvas id="skills" width="250" height="250"></canvas></center>
-I am available for freelance work, contact me at andre.christoga@gmail.com
-But... before sending me an email, 
-view the requirements, make sure the job doesnt have min-age ;)
+<img src="http://1.bp.blogspot.com/-aW7dFTkDB_c/VjLawhtfvZI/AAAAAAABBHw/1AFw9tVB-hg/s1600/family-nyc.jpg" alt="Family in NYC" width="320" />
 
-I currently living at Jakarta.
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7805735632382!2d106.91437185008911!3d-6.16013549551814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698acc410ed719%3A0x87195a50598a8260!2sJl.+Raya+Pegangsaan+Dua%2C+Klp.+Gading%2C+Kota+Jkt+Utara%2C+Daerah+Khusus+Ibukota+Jakarta!5e0!3m2!1sen!2sid!4v1449824427822" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+Ben has been a Senior UI Engineer at [Eventbrite](https://www.eventbrite.com/") ([@Eventbrite](https://twitter.com/eventbrite) since May 2015 when he joined the Listings team tasked to revamp the event details pages from an archaic MySpace-style design to a modern, fully responsive layout. As of January 2016 he has joined the Frontend Platform team.
 
+Prior to Eventbrite, Ben spent nearly 9 years at [Zazzle](http://www.zazzle.com) ([@Zazzle](https://twitter.com/zazzle)) where he started out as an entry-level UI Engineer straight out of college and grew to eventually become its UI Architect. At Zazzle, Ben implemented multiple iterations of the product details pages and design tools as well as architected and developed Zazzle's server- and client-side UI framework.
 
+Ben attended [Stanford University]([@Stanford(http://twitter.com/stanford)]) and received both a B.S. and M.S. in Computer Science with an HCI concentration. His strong computer science background, coupled with his HCI training and passion for building web sites, has provided him with a unique set of skills where he is able to get nitty gritty with hardcore back-end developers as well as work through challenging UX issues with designers and product managers.
 
+As of now, Ben's main focus is responsive UI development on the web, but he has recently begun learning native mobile application development on Android.
+
+Ben's complete resume is available on [LinkedIn](https://www.linkedin.com/in/benmvp). Fork him on [Github](https://github.com/benmvp). Follow him on Twitter [@BenMVP](http://twitter.com/benmvp). Track his [speaking engagements](/speaking-engagements).
