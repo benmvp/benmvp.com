@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generators as iterators
+title: "Learning ES6: Generators as iterators"
 date: 2016-01-13
 author: Ben Ilegbodu
 categories: learning-es6

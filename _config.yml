@@ -2,7 +2,6 @@
 title: Ben Ilegbodu
 email: ben@benmvp.com
 description: "{priorities:['Christ','Family','Work'], work:'@Eventbrite', title:'Sr UI Engineer', tech:['#ES6,'#CSS3','#HTML5'], passions:['#Jesus','@NBA']}"
-baseurl: ""
 url: "https://benmvp.github.io"
 paginate: 4
 paginate_path: "/page/:num/"
