@@ -3,24 +3,23 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ site.title }}" />
     <meta property="og:description" content="{{ site.description }}" />
     <meta property="og:url" content="{{ site.url }}" />
+
     <meta name="twitter:card" content="{{ site.title }}" />
     <meta name="twitter:title" content="{{ site.title }}" />
     <meta name="twitter:username" content="{{ site.owner.twitter }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
     <meta name="twitter:url" content="{{ site.url }}" />
 
-
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-light_blue.min.css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
