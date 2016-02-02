@@ -11,7 +11,7 @@ paginate_path: "/page/:num/"
 permalink:   pretty
 markdown: redcarpet
 permalink: pretty
-gems: [jekyll-paginate, jekyll-sitemap]
+gems: [jekyll-paginate, jekyll-redirect-from, jekyll-sitemap]
 highlighter: pygments
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']

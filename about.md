@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+redirect_from: /p/about.html
 ---
 
 Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father. He lives in Pittsburg, CA with his wife Rashida and their daughter Simone.

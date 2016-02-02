@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, iterables, iterators, javascript, learning-es6]
 permalink: /learning-es6-iterators-iterables/
 header_image: /img/generators.jpg
+redirect_from: /2015/12/learning-es6-iterators-iterables.html
 ---
 
 We've talked about the new [`for-of` operator](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html) and [new collection APIs](http://www.benmvp.com/2015/12/learning-es6-new-collections.html), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.

@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, generators, iterables, iterators, javascript, learning-es6]
 permalink: /learning-es6-generators-as-iterators/
 header_image: /img/generators.jpg
+redirect_from: /2016/01/learning-es6-generators-as-iterators.html
 ---
 
 I feel like all the articles in the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!

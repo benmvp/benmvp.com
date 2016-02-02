@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, block-scoping, const, let]
 permalink: /learning-es6-block-level-scoping-let-const/
 header_image: /img/generators.jpg
+redirect_from: /2015/08/learning-es6-block-level-scoping-let-const.html
 ---
 
 Coming off the heels of discussing [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html), let’s continue the [_Learning ES6_](http://www.benmvp.com/2015/08/the-learning-es6-series.html) series talking about block-level scoping in ECMAScript 6.

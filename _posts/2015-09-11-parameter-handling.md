@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, default-parameters, rest-parameters, rest-operator, spread-operator]
 permalink: /learning-es6-parameter-handling/
 header_image: /img/generators.jpg
+redirect_from: /2015/09/learning-es6-parameter-handling.html
 ---
 
 This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html), [block-level scoping](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html) and [destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html), so if you're unfamiliar with those topics you may want to read up on them first.

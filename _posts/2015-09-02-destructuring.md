@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, destructuring]
 permalink: /learning-es6-destructuring/
 header_image: /img/generators.jpg
+redirect_from: /2015/09/learning-es6-destructuring.html
 ---
 
 After learning all about [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) and [block-level scoping](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html), let's continue the syntactic sugar train in our [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) with _destructuring_ in ECMAScript 6.

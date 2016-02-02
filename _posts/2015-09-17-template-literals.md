@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, template-literals, tagged-templates]
 permalink: /learning-es6-template-literals-tagged-templates/
 header_image: /img/generators.jpg
+redirect_from: /2015/09/learning-es6-template-literals-tagged-templates.html
 ---
 
 Template literals and tagged templates comprise topic #6 in the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html). If you're new to the series, we most recently covered [enhanced object literals](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html) and [parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html).

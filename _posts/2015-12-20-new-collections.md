@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, map, set, weakmap, weakset]
 permalink: /learning-es6-new-collections/
 header_image: /img/generators.jpg
+redirect_from: /2015/12/learning-es6-new-collections.html
 ---
 
 Now that we covered [ES6 classes](http://www.benmvp.com/2015/12/learning-es6-classes.html) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn and they are types of _iterables_ which we'll deep dive into in the next article.

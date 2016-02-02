@@ -7,6 +7,7 @@ categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, arrow-functions, fat-arrow]
 permalink: /learning-es6-arrow-functions/
 header_image: /img/generators.jpg
+redirect_from: /2015/08/learning-es6-arrow-functions.html
 ---
 
 After looking at the [history of ECMAScript](http://www.benmvp.com/2015/07/learning-es6-history-of-ecmascript.html), the [goals of ECMAScript 6](http://www.benmvp.com/2015/08/learning-es6-goals-features-of-ecmascript-6.html) and [using ES6 right now](http://www.benmvp.com/2015/08/learning-es6-using-es6-right-now.html), the first actual feature we’ll look at in our [_Learning ES6_](http://www.benmvp.com/2015/08/the-learning-es6-series.html) series is going to be arrow functions, which are also known as “fat arrow” functions.
