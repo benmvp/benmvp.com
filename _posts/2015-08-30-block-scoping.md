@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/08/learning-es6-block-level-scoping-let-const.html
 ---
 
-Coming off the heels of discussing [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html), let’s continue the [_Learning ES6_](http://www.benmvp.com/2015/08/the-learning-es6-series.html) series talking about block-level scoping in ECMAScript 6.
+Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6/) series talking about block-level scoping in ECMAScript 6.
 
 ![electric generator]({{page.header_image}})
 
@@ -61,7 +61,7 @@ You just _know_ you’re interested, so keep on reading!
 
 ## A quick look at `var`
 
-Before we jump into `let` and `const`, let’s remind ourselves about how `var` works. In the [History of ECMAScript](http://www.benmvp.com/2015/07/learning-es6-history-of-ecmascript.html), we learned that Brandon Eich supposedly created JavaScript in 10 days. I still find that hard to believe, but the way `var` declarations work in JavaScript may very well be the proof that it really was developed that quickly.
+Before we jump into `let` and `const`, let’s remind ourselves about how `var` works. In the [History of ECMAScript](/learning-es6-history-of-ecmascript/), we learned that Brandon Eich supposedly created JavaScript in 10 days. I still find that hard to believe, but the way `var` declarations work in JavaScript may very well be the proof that it really was developed that quickly.
 
 [Nicholas C. Zakas](https://twitter.com/slicknet) explains it best in his book [_Understanding ECMAScript 6_](https://leanpub.com/understandinges6/):
 
@@ -474,4 +474,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-We will be continuing the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) by looking at the fun new [_destructuring_](http://www.benmvp.com/2015/09/learning-es6-destructuring.html) techniques introduced with ES6. Until then...
+We will be continuing the [_Learning ES6_ series](/learning-es6/) by looking at the fun new [_destructuring_](/learning-es6-destructuring/) techniques introduced with ES6. Until then...

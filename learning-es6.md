@@ -13,7 +13,7 @@ Each article will come with of set of [ES6 code examples](http://benmvp.github.i
 
 ## Existing Articles
 
-### [Generators as iterators](http://www.benmvp.com/2016/01/learning-es6-generators-as-iterators.html)
+### [Generators as iterators](/learning-es6-generators-as-iterators/)
 
 A generator function is a special type of function that when invoked automatically generates a special iterator, called a _generator_. Generator functions are indicated by `function*` and make use of the `yield` operator to indicate the value to return for each successive call to `.next()` on the generator.
 
@@ -33,9 +33,9 @@ Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/le
 
 With out further ado, let's keep reading.
 
-[Read the full article...](http://www.benmvp.com/2016/01/learning-es6-generators-as-iterators.html)
+[Read the full article...](/learning-es6-generators-as-iterators/)
 
-### [Iterators & Iterables](http://www.benmvp.com/2015/12/learning-es6-iterators-iterables.html)
+### [Iterators & Iterables](/learning-es6-iterators-iterables/)
 
 Iterators provide a simple way to return a (potentially unbounded) sequence of values. The `@@iterator` symbol is used to define default iterators for objects, making them an _iterable_.
 
@@ -109,11 +109,11 @@ Iterables are important to know because a lot of the APIs moving forward will ac
 
 Let's get this party started.
 
-[Read the full article...](http://www.benmvp.com/2015/12/learning-es6-iterators-iterables.html)
+[Read the full article...](/learning-es6-iterators-iterables/)
 
 ----------
 
-### [New Collections](http://www.benmvp.com/2015/12/learning-es6-new-collections.html)
+### [New Collections](/learning-es6-new-collections/)
 
 ES6 introduces four new efficient collection data structures to mitigate our ab-use of object and array literals.
 
@@ -168,11 +168,11 @@ The differences between the 4 collection types are subtle but important. Be sure
 
 To learn _how_ to use these collections you could just read documentation because they are just new APIs. However, to know _why_ you would want to use each one, I suggest you keep reading.
 
-[Read the full article...](http://www.benmvp.com/2015/12/learning-es6-new-collections.html)
+[Read the full article...](/learning-es6-new-collections/)
 
 ----------
 
-### [Classes](http://www.benmvp.com/2015/12/learning-es6-classes.html)
+### [Classes](/learning-es6-classes/)
 
 ECMAScript 6 provides syntactic sugar over the prototype-based, object-oriented pattern in JavaScript. ES6 classes provide support for constructors, instance and static methods, (prototype-based) inheritance, and super calls. Instance and static properties are not (yet) supported.
 
@@ -265,13 +265,13 @@ console.log(Note.get('note0') === colorNote);
 
 This is just a quick example of how ES6 classes work. Be sure to clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [classes code examples](http://benmvp.github.io/learning-es6/#classes) page showing off the features in greater detail.
 
-The example also uses default parameters, rest parameters, and the spread operator so may want to revisit the [parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html) article if you're not familiar. It also makes use of [template strings](http://www.benmvp.com/2015/09/learning-es6-template-literals-tagged-templates.html) for string interpolation, so you should read up on that as well.
+The example also uses default parameters, rest parameters, and the spread operator so may want to revisit the [parameter handling](/learning-es6-parameter-handling/) article if you're not familiar. It also makes use of [template strings](/learning-es6-template-literals-tagged-templates/) for string interpolation, so you should read up on that as well.
 
-[Read the full article...](http://www.benmvp.com/2015/12/learning-es6-classes.html)
+[Read the full article...](/learning-es6-classes/)
 
 ----------
 
-### [`for-of` loop](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html)
+### [`for-of` loop](/learning-es6-for-of-loop/)
 
 The new `for-of` loop introduced with ES6 allows for iterating over an array (or any _iterable_) in a succinct fashion similar to how we can iterate over the keys of an object using `for-in`.
 
@@ -287,11 +287,11 @@ For the most part, there's nothing really too earth-shattering here. We just now
 
 But keep on readin' to learn the ins and outs!
 
-[Read the full article...](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html)
+[Read the full article...](/learning-es6-for-of-loop/)
 
 ----------
 
-### [Promises](http://www.benmvp.com/2015/09/learning-es6-promises.html)
+### [Promises](/learning-es6-promises/)
 
 A promise represents the eventual result of an asynchronous operation. Instead of registering a callback in the call to an async function, the function returns a promise. The caller registers callbacks with the promise to receive either a promise's eventual value from the async operation or the reason why the promise cannot be fulfilled.
 
@@ -319,15 +319,15 @@ wait(3000).then(() => {
 });
 ```
 
-Did you notice the use of [default parameters](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html) and [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](http://benmvp.github.io/learning-es6/#promises) page showing off the features in greater detail.
+Did you notice the use of [default parameters](/learning-es6-parameter-handling/) and [arrow functions](/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](http://benmvp.github.io/learning-es6/#promises) page showing off the features in greater detail.
 
 Well you've come this far. You might as well keep going!
 
-[Read the full article...](http://www.benmvp.com/2015/09/learning-es6-promises.html)
+[Read the full article...](/learning-es6-promises/)
 
 ----------
 
-### [Template literals & tagged templates](http://www.benmvp.com/2015/09/learning-es6-template-literals-tagged-templates.html)
+### [Template literals & tagged templates](/learning-es6-template-literals-tagged-templates/)
 
 ES6 template literals are a brand new type of string literal, delimited by backticks (`` ` ``), that natively support string interpolation (token substitution) and multi-line strings. And because they use backticks as a delimiter, they can include single and double quotes without needing to escape them.
 
@@ -392,12 +392,12 @@ Intrigued by template literals? Confused about tagged templates? Feel free to ch
 
 But don't stop now. Keep on reading!
 
-[Read the full article...](http://www.benmvp.com/2015/09/learning-es6-template-literals-tagged-templates.html)
+[Read the full article...](/learning-es6-template-literals-tagged-templates/)
 
 ----------
 
 
-### [Enhanced object literals](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html)
+### [Enhanced object literals](/learning-es6-enhanced-object-literals/)
 
 ECMAScript 6 makes declaring object literals even more succinct by providing shorthand syntax for initializing properties from variables and defining function methods. It also enables the ability to have computed property keys in an object literal definition.
 
@@ -446,12 +446,12 @@ Continue on for more details!
 
 
 
-[Read the full article...](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html)
+[Read the full article...](/learning-es6-enhanced-object-literals/)
 
 ----------
 
 
-### [Parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html)
+### [Parameter handling](/learning-es6-parameter-handling/)
 
 ES6  allows for function headers to define default values for parameters, marking them as optional:
 
@@ -526,13 +526,13 @@ ajax(
 
 These quick examples are just a tip of the iceberg.  Be sure to check out the full suite of [parameter handling code examples](http://benmvp.github.io/learning-es6/#parameter-handling) (a part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
 
-[Read the full article...](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html)
+[Read the full article...](/learning-es6-parameter-handling/)
 
 
 ----------
 
 
-### [Destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html)
+### [Destructuring](/learning-es6-destructuring/)
 
 Destructuring makes it easier to work with objects and arrays in JavaScript. Using a pattern syntax similar to object and array literals, we can poke into data structures and pick out the information we want into variables. This is best explained with examples:
 
@@ -553,11 +553,11 @@ console.log(third, second, first);
 As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](http://benmvp.github.io/learning-es6/#destructuring) which are part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
 
 
-[Read the full article...](http://www.benmvp.com/2015/09/learning-es6-destructuring.html)
+[Read the full article...](/learning-es6-destructuring/)
 
 ----------
 
-### [Block-level scoping with `let` and `const`](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html)
+### [Block-level scoping with `let` and `const`](/learning-es6-block-level-scoping-let-const/)
 
 `let` is the new `var`. ES6 provides two new ways for declaring variables: `let` and `const`. These pretty much replace the ES3 or ES5 way of declaring variables using `var`. By using block-level scoping, these two keywords help developers avoid common mistakes they make not because they write bad code, but because they don’t fully understand the idiosyncrasies of how JavaScript handles variables.
 
@@ -600,11 +600,11 @@ simpleExample(2);
 
 Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](http://benmvp.github.io/learning-es6/#block-scoping) for the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
 
-[Read the full article...](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html)
+[Read the full article...](/learning-es6-block-level-scoping-let-const/)
 
 ----------
 
-### [Arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html)
+### [Arrow functions](/learning-es6-arrow-functions/)
 
 Arrow functions are more or less a shorthand form of anonymous function expressions that already exist in JavaScript. In ES6 this looks like:
 
@@ -624,11 +624,11 @@ As you can see a lot of the verbosity of old-style function expressions is remov
 
 You’ll find the greatest utility in arrow functions in places where functions take a callback function, like event handlers (such as `onClick`, `$.ajax`, etc.) and array processors (such as `map`, `sort`, etc.)
 
-[Read the full article...](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html)
+[Read the full article...](/learning-es6-arrow-functions/)
 
 ----------
 
-### [Using ES6 right now](http://www.benmvp.com/2015/08/learning-es6-using-es6-right-now.html)
+### [Using ES6 right now](/learning-es6-using-es6-right-now/)
 
 Support for ES6 functionality in JS engines is growing every week and kept up to date by [Kangax’s ES6 compatibility matrix](http://kangax.github.io/compat-table/es6/). However:
 
@@ -638,31 +638,31 @@ Support for ES6 functionality in JS engines is growing every week and kept up to
 
 As a result, you cannot yet reliable run ES6 natively client- or server-side. Your best bet is compiling your ES6 code down to ES5 using transpilation tools like [Babel](https://babeljs.io/), [Traceur](https://github.com/google/traceur-compiler) or [TypeScript](http://www.typescriptlang.org/) as part of your build process.
 
-[Read the full article...](http://www.benmvp.com/2015/08/learning-es6-using-es6-right-now.html)
+[Read the full article...](/learning-es6-using-es6-right-now/)
 
 
 ----------
 
 
-### [Goals & Features of ECMAScript 6](http://www.benmvp.com/2015/08/learning-es6-goals-features-of-ecmascript-6.html)
+### [Goals & Features of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/)
 
 The main goal for the [ES6 / Harmony project](http://wiki.ecmascript.org/doku.php?id=harmony:harmony) was to fix some of JavaScript’s gotchas and add a whole bunch of functionality that we find in other popular programming languages that have been long missing in JavaScript. At the same time, the TC39 wanted keep the language relatively lightweight and maintain backwards compatibility in order to not break all of the existing code on the web.
 
 They also wanted to make JavaScript a better language for writing code. They realized that applications written in JavaScript have become quite large over the years and wanted JavaScript to be better for writing these complex apps. So they added native modules to ES6. Modules also helped the committee make the shared JavaScript libraries used by all those complex applications easier to write as well.
 
-[Read the full article...](http://www.benmvp.com/2015/08/learning-es6-goals-features-of-ecmascript-6.html)
+[Read the full article...](/learning-es6-goals-features-ecmascript-6/)
 
 
 ----------
 
 
-### [History of ECMAScript](http://www.benmvp.com/2015/07/learning-es6-history-of-ecmascript.html)
+### [History of ECMAScript](/learning-es6-history-of-ecmascript/)
 
 JavaScript was created in May 1995 by [Brendan Eich](https://twitter.com/brendaneich) while at Netscape, reportedly in only *10 days*. It was originally named *Mocha*, a name chosen by Netscape founder [Marc Andreessen](https://twitter.com/pmarca), but was renamed four months later to *LiveScript*. At that time, Sun Microsystems owned the trademark for *JavaScript*. Netscape acquired a trademark license and renamed LiveScript to *JavaScript* in December 1995. It was somewhat of a marketing maneuver since Java was really popular at the time. The languages are not related at all.
 
 Some time between 1996 and 1997, Netscape took JavaScript to the [Ecma standards organization](http://www.ecma-international.org/) to carve out and maintain a specification for the language to enable other browser vendors to implement based on the work they had done. The [Ecma Technical Committee 39](http://www.ecma-international.org/memento/TC39.htm) (better known as TC39) was created to continue to evolve the language, eventually releasing *ECMA-262 Ed.1* in June 1997. *ECMAScript* is name of the official standard with *JavaScript* being the most well-known implementation of the standard. *ActionScript* (Macromedia) and *JScript* (Microsoft) are examples of other implementations.
 
-[Read the full article...](http://www.benmvp.com/2015/07/learning-es6-history-of-ecmascript.html)
+[Read the full article...](/learning-es6-history-of-ecmascript/)
 
 ## Upcoming Articles
 

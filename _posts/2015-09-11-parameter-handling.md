@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/09/learning-es6-parameter-handling.html
 ---
 
-This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html), [block-level scoping](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html) and [destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html), so if you're unfamiliar with those topics you may want to read up on them first.
+This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/learning-es6-arrow-functions/), [block-level scoping](/learning-es6-block-level-scoping-let-const/) and [destructuring](/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
 
 ![electric generator]({{page.header_image}})
 
@@ -289,7 +289,7 @@ console.log(
 );
 ```
 
-If you recall in the article on [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html), we learned that when arrow function just has one parameter that's an identifier we can omit the parentheses around it. However, that rule only applies when that parameter is _only_ an identifier. If it has a default value, as in our example above, parenthesis are needed.
+If you recall in the article on [arrow functions](/learning-es6-arrow-functions/), we learned that when arrow function just has one parameter that's an identifier we can omit the parentheses around it. However, that rule only applies when that parameter is _only_ an identifier. If it has a default value, as in our example above, parenthesis are needed.
 
 ## Rest parameters
 
@@ -375,7 +375,7 @@ max(1, 2, 3);
 max(1, 2, 3, 4);
 ```
 
-The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html).
+The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](/learning-es6-destructuring/).
 
 We could clean things up a little bit:
 
@@ -550,7 +550,7 @@ The spread operator replaces the need to call `concat`. The spread operator spli
 
 ## Destructured parameters
 
-We've already learned all about [destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html), but in that article we didn't talk about destructuring function parameters because it uses some of the parameter handling features we've just learned.
+We've already learned all about [destructuring](/learning-es6-destructuring/), but in that article we didn't talk about destructuring function parameters because it uses some of the parameter handling features we've just learned.
 
 Let's pretend we needed to implement an `ajax` method that takes the URL endpoint as well as a bucket of configuration options. In ES5, this would look something like:
 
@@ -683,7 +683,7 @@ Good news! According to the [ECMAScript 6 Compatibility table](http://kangax.git
  - Safari (spread operator & destructured parameters only)
  - Node 4 (rest parameters & spread operator only)
 
-If it wasn't apparent from the previous articles that [transpilation](http://www.benmvp.com/2015/08/learning-es6-using-es6-right-now.html) is the only viable solution for production-ready code, it should be obvious now. There is just too much variance in native support among the JS engines, so we can only rely on the transpilers.
+If it wasn't apparent from the previous articles that [transpilation](/learning-es6-using-es6-right-now/) is the only viable solution for production-ready code, it should be obvious now. There is just too much variance in native support among the JS engines, so we can only rely on the transpilers.
 
 ## Additional Resources
 
@@ -699,4 +699,4 @@ Finally, if this information wasn't enough, there is even more you can read conc
 
 ## Coming up next...
 
-Phew! The parameter handling features are pretty simple, but there's just so much you can do with them, that it takes some time to explain. Up next we'll take a look at [enhancements to object literals](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html) as the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) rolls on. Until then...
+Phew! The parameter handling features are pretty simple, but there's just so much you can do with them, that it takes some time to explain. Up next we'll take a look at [enhancements to object literals](/learning-es6-enhanced-object-literals/) as the [_Learning ES6_ series](/learning-es6/) rolls on. Until then...

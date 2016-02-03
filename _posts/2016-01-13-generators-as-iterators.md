@@ -10,9 +10,9 @@ header_image: /img/generators.jpg
 redirect_from: /2016/01/learning-es6-generators-as-iterators.html
 ---
 
-I feel like all the articles in the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!
+I feel like all the articles in the [_Learning ES6_ series](/learning-es6/) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!
 
-Generators can be used both as data producers and data consumers. In this article, we're going to look at how generator functions are a much more convenient way to produce data and and create iterators. It's the simpler way to use generators. In the last article we covered [iterators & iterables](http://www.benmvp.com/2015/12/learning-es6-iterators-iterables.html), so you may need to familiarize yourself with that before looking at generators as iterators.
+Generators can be used both as data producers and data consumers. In this article, we're going to look at how generator functions are a much more convenient way to produce data and and create iterators. It's the simpler way to use generators. In the last article we covered [iterators & iterables](/learning-es6-iterators-iterables/), so you may need to familiarize yourself with that before looking at generators as iterators.
 
 ![electric generator]({{page.header_image}})
 
@@ -119,7 +119,7 @@ let someObj = new SomeClass();
 let generator = someObj.generatorFunc();
 ```
 
-The most basic form of a generator object acts as a data producer, aka an iterator. It returns a value for each iteration. If you haven't had a chance to read up on [iterators & iterables](http://www.benmvp.com/2015/12/learning-es6-iterators-iterables.html), you probably should do that first. Everything we'll cover in this section builds upon that knowledge.
+The most basic form of a generator object acts as a data producer, aka an iterator. It returns a value for each iteration. If you haven't had a chance to read up on [iterators & iterables](/learning-es6-iterators-iterables/), you probably should do that first. Everything we'll cover in this section builds upon that knowledge.
 
 As the article on iterators mentioned, we most likely won't be implementing iterators directly because of generators. Generator functions make it dead simple to create iterators. All we have to do is write the looping behavior because all generators have built-in implementations for `.next()` and `[Symbol.iterator]()`. This makes generators both iterators as well as iterables. As a refresher, here's the iterable interface written using [TypeScript](http://typescriptlang.org/):
 
@@ -200,7 +200,7 @@ Wow! We just spent many articles going through the syntactic sugar features of E
 
 ## Consuming a generator
 
-In the article on [iterators & iterators](http://www.benmvp.com/2015/12/learning-es6-iterators-iterables.html#other-consumers-of-iterators) we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
+In the article on [iterators & iterators](/learning-es6-iterators-iterables/#other-consumers-of-iterators) we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
 
 ```js
 function* awesomeGeneratorFunc() {
@@ -287,7 +287,7 @@ The `for-of` operator calls `.next()` on the `generatorObj` automatically and as
 
 ### Consuming a generator with destructuring
 
-By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring article](http://www.benmvp.com/2015/09/learning-es6-destructuring.html) to ramp up. We can use destructuring to consume part of the generator values:
+By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring article](/learning-es6-destructuring/) to ramp up. We can use destructuring to consume part of the generator values:
 
 ```js
 let generatorObj = awesomeGeneratorFunc();
@@ -309,7 +309,7 @@ With destructuring we don't have to consume the entire generator. We can just pu
 
 ### Consuming a generator with the spread operator
 
-We've already learned that we can use the [spread operator](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html#spread-operator) as a shorthand for converting any iterable into an `Array` object. A generator object is an iterable too!
+We've already learned that we can use the [spread operator](/learning-es6-parameter-handling/#spread-operator) as a shorthand for converting any iterable into an `Array` object. A generator object is an iterable too!
 
 ```js
 let generatorObj = awesomeGeneratorFunc();

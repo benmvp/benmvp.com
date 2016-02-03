@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/09/learning-es6-destructuring.html
 ---
 
-After learning all about [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) and [block-level scoping](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html), let's continue the syntactic sugar train in our [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) with _destructuring_ in ECMAScript 6.
+After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6/) with _destructuring_ in ECMAScript 6.
 
 ![electric generator]({{page.header_image}})
 
@@ -376,7 +376,7 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
  - Firefox (does support default values in destructure patterns yet)
  - Safari (partial support)
 
-It's surprising to see that Chrome doesn't yet support destructuring. Neither does node.js or io.js. This is also the first feature we've covered that Microsoft's Edge doesn't support either. My guess is that this feature may be low priority for these vendors since it's basically 100% syntactic sugar. At least [arrow functions](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) providing proper `this` binding and [block-scoping](http://www.benmvp.com/2015/08/learning-es6-block-level-scoping-let-const.html) fixed variable hoisting.
+It's surprising to see that Chrome doesn't yet support destructuring. Neither does node.js or io.js. This is also the first feature we've covered that Microsoft's Edge doesn't support either. My guess is that this feature may be low priority for these vendors since it's basically 100% syntactic sugar. At least [arrow functions](/learning-es6-arrow-functions/) providing proper `this` binding and [block-scoping](/learning-es6-block-level-scoping-let-const/) fixed variable hoisting.
 
 ## Additional resources
 
@@ -390,4 +390,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-As promised, the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html). Until then...
+As promised, the [_Learning ES6_ series](/learning-es6/) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](/learning-es6-parameter-handling/). Until then...

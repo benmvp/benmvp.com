@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/09/learning-es6-template-literals-tagged-templates.html
 ---
 
-Template literals and tagged templates comprise topic #6 in the [_Learning ES6_ series](http://www.benmvp.com/2015/08/the-learning-es6-series.html). If you're new to the series, we most recently covered [enhanced object literals](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html) and [parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html).
+Template literals and tagged templates comprise topic #6 in the [_Learning ES6_ series](/learning-es6/). If you're new to the series, we most recently covered [enhanced object literals](/learning-es6-enhanced-object-literals/) and [parameter handling](/learning-es6-parameter-handling/).
 
 Template literals, as well as tagged templates, are still primarily syntactic sugar, so you can totally do them in ES5. In fact, we have been doing them in ES5 up to this point. But the amount of code needed to mimic these ES6 features in ES5, especially tagged templates, can be pretty substantial.
 
@@ -165,7 +165,7 @@ console.log(`${timeOfDay < 12 ? 'Morning' : 'Evening'} meal: $${(mealCost * (1 +
 
 Now granted, you would probably factor out the expressions into variables for readability purposes, but this code illustrates the point that any sort of expression can go inside the substitution token. Did you happen to notice the `$$`? No, that's not some special syntax. That is a `$` string preceding the `${}` substitution token. The result is that it looks like a price.
 
-Many JavaScript libraries that support string interpolation with regular string literals support being able to pass an object literal as a bucket of substitution values. The keys are the token names. You can still do that with template literals, but you will have to [destructure](http://www.benmvp.com/2015/09/learning-es6-destructuring.html) the object literal first.
+Many JavaScript libraries that support string interpolation with regular string literals support being able to pass an object literal as a bucket of substitution values. The keys are the token names. You can still do that with template literals, but you will have to [destructure](/learning-es6-destructuring/) the object literal first.
 
 ```js
 let replacements = {
@@ -266,7 +266,7 @@ let eventCardInfo = {
 			</section>`;
 ```
 
-The `map` on the `tags` array uses an [arrow function](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) as well as a template literal to substitute each `tag` into an `<li>`. The new array is then joined by new lines and the resultant string of `<li>` tags is then substituted into the `<ul>`.
+The `map` on the `tags` array uses an [arrow function](/learning-es6-arrow-functions/) as well as a template literal to substitute each `tag` into an `<li>`. The new array is then joined by new lines and the resultant string of `<li>` tags is then substituted into the `<ul>`.
 
 Pretty cool huh? But all in all, still pretty much a whole bunch of syntax sugar right? We could pretty easily have done everything so far in ES5. The code wouldn't have been as succinct or as pretty, but it wouldn't have been all that complicated. Things get _real_ when template literals join forces with template handlers to create tagged templates.
 
@@ -341,7 +341,7 @@ function interpolate(literals, lastName, firstName) {
 }
 ```
 
-The `interpolate` function is passed an array of string literals, the value of the first substitution (`lastName`) and the value of the second substitution (`firstName`). Now we want `interpolate` to be generic and not assume what the substitution tokens are. [Rest parameters](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html#rest-parameters) to the rescue!
+The `interpolate` function is passed an array of string literals, the value of the first substitution (`lastName`) and the value of the second substitution (`firstName`). Now we want `interpolate` to be generic and not assume what the substitution tokens are. [Rest parameters](/learning-es6-parameter-handling/#rest-parameters) to the rescue!
 
 ```js
 function interpolate(literals, ...substitutions) {
@@ -444,4 +444,4 @@ Lastly, here are a few books and articles that talk about template literals and 
 
 ## Coming up next...
 
-I'm liking template literals. The jury's still out on tagged templates. Up next we've got [promises](http://www.benmvp.com/2015/09/learning-es6-promises.html) in ECMAScript 6. I _promise_ it will be fun! 😀 Until then...
+I'm liking template literals. The jury's still out on tagged templates. Up next we've got [promises](/learning-es6-promises/) in ECMAScript 6. I _promise_ it will be fun! 😀 Until then...

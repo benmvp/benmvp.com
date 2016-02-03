@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/12/learning-es6-iterators-iterables.html
 ---
 
-We've talked about the new [`for-of` operator](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html) and [new collection APIs](http://www.benmvp.com/2015/12/learning-es6-new-collections.html), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.
+We've talked about the new [`for-of` operator](/learning-es6-for-of-loop/) and [new collection APIs](/learning-es6-new-collections/), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.
 
 ![electric generator]({{page.header_image}})
 
@@ -90,7 +90,7 @@ Let's get this party started.
 
 ## Iterables
 
-The reason the [`for-of` loop](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html) can work on `Array`, `Map`, `Set`, `String`, `arguments`, etc. is because they are all _iterables_. An iterable is an object that intends to make its sequential elements publicly accessible through iteration interfaces. This object does so by implementing the default `@@iterator` method using the _well-known_ `Symbol.iterator` symbol. We'll talk about about ES6 symbols more in a future article.
+The reason the [`for-of` loop](/learning-es6-for-of-loop/) can work on `Array`, `Map`, `Set`, `String`, `arguments`, etc. is because they are all _iterables_. An iterable is an object that intends to make its sequential elements publicly accessible through iteration interfaces. This object does so by implementing the default `@@iterator` method using the _well-known_ `Symbol.iterator` symbol. We'll talk about about ES6 symbols more in a future article.
 
 The default `@@iterator` returns an object that implements the iterator "interface" (explained further below), which is the actual object that `for-of` and other iteration features use to iterate. This means that you can create your own objects that implement the _iterable_ "interface" via [duck-typing](https://en.wikipedia.org/wiki/Duck_typing).
 
@@ -229,7 +229,7 @@ let myIterableSequence = {
 };
 ```
 
-In the example, the iterable (`myIterableSequence`) is just a plain JavaScript object instead of a class instance. It uses [computed property keys](http://www.benmvp.com/2015/09/learning-es6-enhanced-object-literals.html#computed-property-keys) added in ES6 to quickly define the default `@@iterator`. All it does is return a `MyIterator` instance.
+In the example, the iterable (`myIterableSequence`) is just a plain JavaScript object instead of a class instance. It uses [computed property keys](/learning-es6-enhanced-object-literals/#computed-property-keys) added in ES6 to quickly define the default `@@iterator`. All it does is return a `MyIterator` instance.
 
 Now check out what happens when we use `myIterableSequence` in a `for-of` loop:
 
@@ -355,7 +355,7 @@ You see? The iterator never returns `{done: true}`, making it infinite. If we tr
 
 ### Built-in iterators
 
-As mentioned, `for-of` works with a lot of native objects because they have default `@@iterator` methods defined. Collections have additional iterator methods: `.entries()`, `.values()` and `.keys()`. Check out the article on the [new collections](http://www.benmvp.com/2015/12/learning-es6-new-collections.html) added in ES6 for  more details.
+As mentioned, `for-of` works with a lot of native objects because they have default `@@iterator` methods defined. Collections have additional iterator methods: `.entries()`, `.values()` and `.keys()`. Check out the article on the [new collections](/learning-es6-new-collections/) added in ES6 for  more details.
 
 ## Other consumers of iterators
 
@@ -373,7 +373,7 @@ Because `Array.from()` creates an array from the iterable, the iterable cannot b
 
 ### Spread operator
 
-As we learned in the [parameter handling](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html#spread-operator) article, the spread operator can be used to insert values of an iterable into an array:
+As we learned in the [parameter handling](/learning-es6-parameter-handling/#spread-operator) article, the spread operator can be used to insert values of an iterable into an array:
 
 ```js
 let array = ['a', ...iterable, 'z'];
@@ -395,7 +395,7 @@ So if `iterable` was an iterator, it would just call `.next()` until it received
 
 ### Array destructuring
 
-[Destructuring](http://www.benmvp.com/2015/09/learning-es6-destructuring.html) actually allows us to pull out values from any iterable. When we initially learned about destructuring, we only focused on arrays. Imagine we had our `fibonacci` iterable example from earlier. It's neither an array nor finite, yet it can be a part of destructuring:
+[Destructuring](/learning-es6-destructuring/) actually allows us to pull out values from any iterable. When we initially learned about destructuring, we only focused on arrays. Imagine we had our `fibonacci` iterable example from earlier. It's neither an array nor finite, yet it can be a part of destructuring:
 
 ```js
 let [, secondFib, , fourthFib] = fibonacci;
@@ -410,13 +410,13 @@ Destructuring and lazy iterators work very well together.
 
 ### `Map` & `Set` constructor
 
-The [`Map` constructor](http://www.benmvp.com/2015/12/learning-es6-new-collections.html#constructor) converts an iterable of `[key, value]` pairs into a `Map` object:
+The [`Map` constructor](/learning-es6-new-collections/#constructor) converts an iterable of `[key, value]` pairs into a `Map` object:
 
 ```js
 let map = new Map(iterable);
 ```
 
-The [`Set` constructor](http://www.benmvp.com/2015/12/learning-es6-new-collections.html#constructor-1) converts an iterable of values into a `Set` object:
+The [`Set` constructor](/learning-es6-new-collections/#constructor-1) converts an iterable of values into a `Set` object:
 
 ```js
 let set = new Set(iterable);
@@ -426,7 +426,7 @@ And as we learned, because the `Map` & `Set` objects are themselves iterables, w
 
 ### `Promise.all` & `Promise.race`
 
-`Promise.all()` and `Promise.race()` both accept iterables of [`Promise`](http://www.benmvp.com/2015/09/learning-es6-promises.html) objects (technically _thenables_), and not just arrays. So if you had a `Set` of _thenables_ you could pass it directly to either of those static methods without having to do any array conversions. You could in theory use an infinite iterable with `Promise.race()` since it stops once one of the promises are fulfilled, but since it's inherently asynchronous it may try to read the whole iterable prior to getting back the first asynchronous result.
+`Promise.all()` and `Promise.race()` both accept iterables of [`Promise`](/learning-es6-promises/) objects (technically _thenables_), and not just arrays. So if you had a `Set` of _thenables_ you could pass it directly to either of those static methods without having to do any array conversions. You could in theory use an infinite iterable with `Promise.race()` since it stops once one of the promises are fulfilled, but since it's inherently asynchronous it may try to read the whole iterable prior to getting back the first asynchronous result.
 
 ### `yield*`
 
@@ -486,7 +486,7 @@ We've only really just scratched the surface of iterators. Like I mentioned earl
 
 ## JavaScript engine support
 
-According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/compat-table/es6/), all modern browsers support iterators and iterables. That shouldn't really come as a surprise since we've already learned that they all support the [`for-of` loop](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html) and the [new collections](http://www.benmvp.com/2015/12/learning-es6-new-collections.html).
+According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/compat-table/es6/), all modern browsers support iterators and iterables. That shouldn't really come as a surprise since we've already learned that they all support the [`for-of` loop](/learning-es6-for-of-loop/) and the [new collections](/learning-es6-new-collections/).
 
 ## Additional resources
 
@@ -501,4 +501,4 @@ This article only covered the parts of iterators I considered the most useful to
 
 ## Coming up next...
 
-All this learning about [promises](http://www.benmvp.com/2015/09/learning-es6-promises.html), the [`for-of` loop](http://www.benmvp.com/2015/11/learning-es6-for-of-loop.html), and today's article on iterators & iterables are all setting the stage for discussion on generators, the next generation of asynchronous programming. The `yield` keyword helps create generators and was something I saw in C# years ago and always want to learn about. Now it's in JavaScript! Until then...
+All this learning about [promises](/learning-es6-promises/), the [`for-of` loop](/learning-es6-for-of-loop/), and today's article on iterators & iterables are all setting the stage for discussion on generators, the next generation of asynchronous programming. The `yield` keyword helps create generators and was something I saw in C# years ago and always want to learn about. Now it's in JavaScript! Until then...

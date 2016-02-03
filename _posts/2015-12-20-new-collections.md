@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/12/learning-es6-new-collections.html
 ---
 
-Now that we covered [ES6 classes](http://www.benmvp.com/2015/12/learning-es6-classes.html) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn and they are types of _iterables_ which we'll deep dive into in the next article.
+Now that we covered [ES6 classes](/learning-es6-classes/) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn and they are types of _iterables_ which we'll deep dive into in the next article.
 
 ![electric generator]({{page.header_image}})
 
@@ -252,7 +252,7 @@ for (let [player, count] of allStarVotes) {
 }
 ```
 
-An since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](http://www.benmvp.com/2015/09/learning-es6-parameter-handling.html#spread-operator):
+An since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
 
 ```js
 let durant = new Player('Kevin Durant');
@@ -287,7 +287,7 @@ allStarVotes.forEach((count, player, map) => {
 });
 ```
 
-The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](http://www.benmvp.com/2015/08/learning-es6-arrow-functions.html) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in useful.
+The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](/learning-es6-arrow-functions/) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in useful.
 
 Although `Map` does have `forEach`, it doesn't have `filter` or `map`. You will first have to convert the `Map` object to an array of `[key, value]` pairs (using the spread operator like `[...allStarVotes]`), do the `filter`/`map` operation, and then construct a new `Map` object from the result. Hopefully this functionality will be added in the future.
 
@@ -561,7 +561,7 @@ And because the `WeakSet` holds onto its references _weakly_, if a DOM node is r
 
 ## Inheriting from collections
 
-So let's wrap up our discussion and talk about creating derived classes from these new collection objects. We learned in the article on [classes](http://www.benmvp.com/2015/12/learning-es6-classes.html#inheritable-built-ins) that native classes can now be derived in ES6.
+So let's wrap up our discussion and talk about creating derived classes from these new collection objects. We learned in the article on [classes](/learning-es6-classes/#inheritable-built-ins) that native classes can now be derived in ES6.
 
 We may want to derive from `Map` to add the following functionality:
 
