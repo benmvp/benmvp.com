@@ -1,6 +1,5 @@
 # Site settings
 title: Ben Ilegbodu
-email: ben@benmvp.com
 description: "{priorities:['Christ','Family','Work'], work:'@Eventbrite', title:'Sr UI Engineer', tech:['#ES6,'#CSS3','#HTML5'], passions:['#Jesus','@NBA']}"
 url: "https://benmvp.github.io"
 paginate: 4
@@ -19,7 +18,7 @@ redcarpet:
 # Site owner
 owner:
   name: Ben Ilegbodu
-  email: you@email.com
+  email: ben@benmvp.com
   disqus-shortname: benmvp
   twitter: benmvp
   github: benmvp

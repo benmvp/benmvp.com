@@ -323,10 +323,6 @@ pre { white-space: pre; overflow: auto; }
   color: #9e9e9e;
 }
 
-.site-tab {
-  text-transform: uppercase;
-}
-
 .layout-main {
   flex-shrink: 0;
 }
@@ -346,7 +342,7 @@ pre { white-space: pre; overflow: auto; }
   color: #424242;
 }
 
-.demo-content {
+.page-content {
   border-radius: 2px;
   padding: 20px 56px;
   margin-bottom: 80px;

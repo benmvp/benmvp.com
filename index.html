@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<div class="mdl-cell--8-col">
 
   <ul class="posts">
 
@@ -16,7 +15,7 @@ layout: default
           {% endif %}
           <div class="mdl-card__title">
             <a href="{{ post.url }}">
-              <h1 class="mdl-card__title-text">{{ post.title }}</h1>
+              <h2 class="mdl-card__title-text">{{ post.title }}</h2>
             </a>
           </div>
           <div class="mdl-card__supporting-text">
@@ -31,16 +30,14 @@ layout: default
   </ul>
 
   <!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Previous</a>
-  {% else %}
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Next</a>
-  {% else %}
-  {% endif %}
-</div>
-
-</div>
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Previous</a>
+      {% else %}
+      {% endif %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Next</a>
+      {% else %}
+      {% endif %}
+    </div>
