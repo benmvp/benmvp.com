@@ -8,7 +8,6 @@ paginate_path: "/page/:num/"
 
 # Build settings
 permalink:   pretty
-markdown: redcarpet
 permalink: pretty
 gems: [jekyll-paginate, jekyll-redirect-from, jekyll-feed, jekyll-sitemap]
 highlighter: pygments
