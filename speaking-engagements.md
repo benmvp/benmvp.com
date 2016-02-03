@@ -5,6 +5,8 @@ permalink: /speaking-engagements/
 redirect_from: /p/speaking-engagements.html
 ---
 
+![speaking at Sacramento JS Meetup](/img/sacjs-no-js-closeup.jpg)
+
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking outside of my company about what I've learned in the realm of web development and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
 I am open to speak about anything I write about in this blog. I also have plenty of experience not currently embodied in a blog post. If you're interested in having me speak to your group, thank you! That means a whole lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp) or [email](mailto:ben@benmvp.com).

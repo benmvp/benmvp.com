@@ -6,13 +6,13 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, block-scoping, const, let]
 permalink: /learning-es6-block-level-scoping-let-const/
-header_image: /img/generators.jpg
+header_image: http://2.bp.blogspot.com/-y2xpRxjcfPE/VftwzPR5xuI/AAAAAAAACCU/_yEMHaqb9H8/s1600/block-scope.png
 redirect_from: /2015/08/learning-es6-block-level-scoping-let-const.html
 ---
 
-Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
+![block scoping]({{page.header_image}})
 
-![electric generator]({{page.header_image}})
+Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
 
 ## TL;DR
 

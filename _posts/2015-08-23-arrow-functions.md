@@ -6,13 +6,13 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, arrow-functions, fat-arrow]
 permalink: /learning-es6-arrow-functions/
-header_image: /img/generators.jpg
+header_image: http://www.wickedlysmart.com/wp-content/uploads/2015/06/Untitled-6.jpg
 redirect_from: /2015/08/learning-es6-arrow-functions.html
 ---
 
-After looking at the [history of ECMAScript](/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/learning-es6-using-es6-right-now/), the first actual feature we’ll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as “fat arrow” functions.
+![right arrow sign]({{page.header_image}})
 
-![electric generator]({{page.header_image}})
+After looking at the [history of ECMAScript](/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/learning-es6-using-es6-right-now/), the first actual feature we’ll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as “fat arrow” functions.
 
 ## TL;DR
 

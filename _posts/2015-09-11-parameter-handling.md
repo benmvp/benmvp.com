@@ -6,13 +6,13 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, default-parameters, rest-parameters, rest-operator, spread-operator]
 permalink: /learning-es6-parameter-handling/
-header_image: /img/generators.jpg
+header_image: http://www.enjoymargarineeveryday.com/sites/files/markets/england/articles/margarine-butter-vs-margarine-fortified-spread.jpg
 redirect_from: /2015/09/learning-es6-parameter-handling.html
 ---
 
-This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/learning-es6-arrow-functions/), [block-level scoping](/learning-es6-block-level-scoping-let-const/) and [destructuring](/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
+![spread operator]({{page.header_image}})
 
-![electric generator]({{page.header_image}})
+This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/learning-es6-arrow-functions/), [block-level scoping](/learning-es6-block-level-scoping-let-const/) and [destructuring](/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
 
 ## TL;DR
 

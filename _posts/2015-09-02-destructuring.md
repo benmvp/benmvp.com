@@ -6,13 +6,13 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, destructuring]
 permalink: /learning-es6-destructuring/
-header_image: /img/generators.jpg
+header_image: https://rickhigginstest.files.wordpress.com/2015/06/baton-pass.jpg
 redirect_from: /2015/09/learning-es6-destructuring.html
 ---
 
-After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
+![destructuring]({{page.header_image}})
 
-![electric generator]({{page.header_image}})
+After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
 
 ## TL;DR
 

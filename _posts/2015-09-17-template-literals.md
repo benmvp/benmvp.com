@@ -6,15 +6,15 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, template-literals, tagged-templates]
 permalink: /learning-es6-template-literals-tagged-templates/
-header_image: /img/generators.jpg
+header_image: http://thewindowsclub.thewindowsclubco.netdna-cdn.com/wp-content/uploads/2013/11/Backtick.png
 redirect_from: /2015/09/learning-es6-template-literals-tagged-templates.html
 ---
+
+![template literals]({{page.header_image}})
 
 Template literals and tagged templates comprise topic #6 in the [_Learning ES6_ series](/learning-es6-series/). If you're new to the series, we most recently covered [enhanced object literals](/learning-es6-enhanced-object-literals/) and [parameter handling](/learning-es6-parameter-handling/).
 
 Template literals, as well as tagged templates, are still primarily syntactic sugar, so you can totally do them in ES5. In fact, we have been doing them in ES5 up to this point. But the amount of code needed to mimic these ES6 features in ES5, especially tagged templates, can be pretty substantial.
-
-![electric generator]({{page.header_image}})
 
 ## TL;DR
 

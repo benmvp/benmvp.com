@@ -6,15 +6,15 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, generators, iterables, iterators, javascript, learning-es6]
 permalink: /learning-es6-generators-as-iterators/
-header_image: /img/generators.jpg
+header_image: http://cctv-africa.com/wp-content/photo-gallery/2015/11/electric-generators.jpg
 redirect_from: /2016/01/learning-es6-generators-as-iterators.html
 ---
+
+![electric generator]({{page.header_image}})
 
 I feel like all the articles in the [_Learning ES6_ series](/learning-es6-series/) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!
 
 Generators can be used both as data producers and data consumers. In this article, we're going to look at how generator functions are a much more convenient way to produce data and and create iterators. It's the simpler way to use generators. In the last article we covered [iterators & iterables](/learning-es6-iterators-iterables/), so you may need to familiarize yourself with that before looking at generators as iterators.
-
-![electric generator]({{page.header_image}})
 
 ## TL;DR
 

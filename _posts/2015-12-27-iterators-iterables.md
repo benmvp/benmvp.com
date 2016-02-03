@@ -6,13 +6,13 @@ author: Ben Ilegbodu
 categories: learning-es6
 tags: [ecmascript-6, es6, iterables, iterators, javascript, learning-es6]
 permalink: /learning-es6-iterators-iterables/
-header_image: /img/generators.jpg
+header_image: http://neuedist.com/img/iterators-gonna-iterate-small.jpg
 redirect_from: /2015/12/learning-es6-iterators-iterables.html
 ---
 
-We've talked about the new [`for-of` operator](/learning-es6-for-of-loop/) and [new collection APIs](/learning-es6-new-collections/), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.
+![iterators]({{page.header_image}})
 
-![electric generator]({{page.header_image}})
+We've talked about the new [`for-of` operator](/learning-es6-for-of-loop/) and [new collection APIs](/learning-es6-new-collections/), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.
 
 ## TL;DR
 
