@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/09/learning-es6-enhanced-object-literals.html
 ---
 
-Wow, we're making some good progress covering ECMAScript 6 features in this [_Learning ES6_](/learning-es6/) series. We just covered [parameter handling](/learning-es6-parameter-handling/), and have learned about [destructuring](/learning-es6-destructuring/), [`let` & `const`](/learning-es6-block-level-scoping-let-const/), as well as [arrow functions](/learning-es6-arrow-functions/). Now we zero in on the enhancements to object literals, another piece of ES6 syntactic sugar.
+Wow, we're making some good progress covering ECMAScript 6 features in this [_Learning ES6_](/learning-es6-series/) series. We just covered [parameter handling](/learning-es6-parameter-handling/), and have learned about [destructuring](/learning-es6-destructuring/), [`let` & `const`](/learning-es6-block-level-scoping-let-const/), as well as [arrow functions](/learning-es6-arrow-functions/). Now we zero in on the enhancements to object literals, another piece of ES6 syntactic sugar.
 
 ![electric generator]({{page.header_image}})
 

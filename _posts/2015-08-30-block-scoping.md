@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/08/learning-es6-block-level-scoping-let-const.html
 ---
 
-Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6/) series talking about block-level scoping in ECMAScript 6.
+Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
 
 ![electric generator]({{page.header_image}})
 
@@ -474,4 +474,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-We will be continuing the [_Learning ES6_ series](/learning-es6/) by looking at the fun new [_destructuring_](/learning-es6-destructuring/) techniques introduced with ES6. Until then...
+We will be continuing the [_Learning ES6_ series](/learning-es6-series/) by looking at the fun new [_destructuring_](/learning-es6-destructuring/) techniques introduced with ES6. Until then...

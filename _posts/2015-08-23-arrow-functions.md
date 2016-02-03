@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/08/learning-es6-arrow-functions.html
 ---
 
-After looking at the [history of ECMAScript](/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/learning-es6-using-es6-right-now/), the first actual feature we’ll look at in our [_Learning ES6_](/learning-es6/) series is going to be arrow functions, which are also known as “fat arrow” functions.
+After looking at the [history of ECMAScript](/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/learning-es6-using-es6-right-now/), the first actual feature we’ll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as “fat arrow” functions.
 
 ![electric generator]({{page.header_image}})
 
@@ -330,4 +330,4 @@ Other super helpful resources:
 
 ## Coming up next…
 
-We will be continuing the [_Learning ES6_](/learning-es6/) series by looking at [block-level scoping](/learning-es6-block-level-scoping-let-const/) using the new `let` and `const` keywords. Until then...
+We will be continuing the [_Learning ES6_](/learning-es6-series/) series by looking at [block-level scoping](/learning-es6-block-level-scoping-let-const/) using the new `let` and `const` keywords. Until then...

@@ -10,7 +10,7 @@ header_image: /img/generators.jpg
 redirect_from: /2015/09/learning-es6-destructuring.html
 ---
 
-After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6/) with _destructuring_ in ECMAScript 6.
+After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
 
 ![electric generator]({{page.header_image}})
 
@@ -390,4 +390,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-As promised, the [_Learning ES6_ series](/learning-es6/) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](/learning-es6-parameter-handling/). Until then...
+As promised, the [_Learning ES6_ series](/learning-es6-series/) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](/learning-es6-parameter-handling/). Until then...

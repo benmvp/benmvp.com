@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Learning ES6 Series
-permalink: /learning-es6/
+permalink: /learning-es6-series/
 redirect_from: /2015/08/the-learning-es6-series.html
 ---
 
