@@ -7,12 +7,12 @@ paginate_path: "/page/:num/"
 
 
 # Build settings
-permalink:   pretty
 permalink: pretty
 gems: [jekyll-paginate, jekyll-redirect-from, jekyll-feed, jekyll-sitemap]
-highlighter: pygments
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+highlighter: rouge
+markdown: kramdown
+kramdown:
+    input: GFM
 
 # Site owner
 owner:
