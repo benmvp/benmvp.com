@@ -103,7 +103,7 @@ interface Iterable {
 }
 ```
 
-You may already be familiar with iterables if you used C# [`IEnumerable`](https://msdn.microsoft.com/en-us/library/9eekhta0\(v=vs.110\).aspx) or Java [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html). We'll explore the `Iterator` interface in the section on [iterators](#iterators) below.
+You may already be familiar with iterables if you used C# [`IEnumerable`](https://msdn.microsoft.com/en-us/library/9eekhta0\(v=vs.110\).aspx) or Java [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html). We'll explore the `Iterator` interface in the section on [iterators](#iterators) below.
 
 ### Why `Symbol.iterator`?
 
