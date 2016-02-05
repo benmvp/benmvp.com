@@ -12,12 +12,38 @@ img {
   display: block;
 }
 
+blockquote {
+    border-color: #2196F3;
+    border-width: 0 0 0 10px;
+    border-style: solid;
+    margin: 1em 20px;
+    padding: 20px;
+}
+blockquote:before,
+blockquote:after {
+    display: none;
+}
+
+/* Page Content styles */
+/* ----------------------------------------------------------*/
+.drawer-headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    margin-left: 40px;
+    transition: border-radius 150ms;
+}
+.drawer-headshot:hover {
+    border-radius: 50%;
+}
+
 /* Page Content styles */
 /* ----------------------------------------------------------*/
 
 .page-content {
   padding: 30px 0;
   background-color: #fff;
+  min-height: 300px;
 }
 
 
