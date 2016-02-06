@@ -319,7 +319,7 @@ The notable missing engines are Safari and Node.js. We of course know IE 11 and 
 
 Additional Resources
 
-You can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#arrow-functions) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support arrow functions). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](/learning-es6/#arrow-functions) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support arrow functions). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 

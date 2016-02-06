@@ -32,7 +32,7 @@ for (let teenageYear of range(13, 7)) {
 }
 ```
 
-Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](http://benmvp.github.io/learning-es6/#generators) page showing them off in greater detail.
+Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](/learning-es6/#generators) page showing them off in greater detail.
 
 With out further ado, let's keep reading.
 
@@ -560,7 +560,7 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#generators) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#generators) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
 
 For more on using generators as iterators feel free to read:
 

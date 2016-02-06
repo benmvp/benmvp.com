@@ -9,7 +9,7 @@ ECMAScript 6 is the new version of JavaScript making its way into the interprete
 
 ## Code examples
 
-Each article will come with of set of [ES6 code examples](http://benmvp.github.io/learning-es6/) that can be run in the browser. The code examples will use both Babel & Traceur transpilation as well as native execution. All of the source code for the code examples can be found in the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
+Each article will come with of set of [ES6 code examples](/learning-es6/) that can be run in the browser. The code examples will use both Babel & Traceur transpilation as well as native execution. All of the source code for the code examples can be found in the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
 ## Existing Articles
 
@@ -29,7 +29,7 @@ for (let teenageYear of range(13, 7)) {
 }
 ```
 
-Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](http://benmvp.github.io/learning-es6/#generators) page showing them off in greater detail.
+Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](/learning-es6/#generators) page showing them off in greater detail.
 
 With out further ado, let's keep reading.
 
@@ -105,7 +105,7 @@ for (let char of str) {
 // 🙏
 ```
 
-Iterables are important to know because a lot of the APIs moving forward will accept iterables instead of just arrays for greater flexibility. Iterators are helpful to know because they serve as the basis for generators, which open new doors to asynchronous programming. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [iterators & iterables code examples](http://benmvp.github.io/learning-es6/#iterators-iterables) page showing off the features in greater detail.
+Iterables are important to know because a lot of the APIs moving forward will accept iterables instead of just arrays for greater flexibility. Iterators are helpful to know because they serve as the basis for generators, which open new doors to asynchronous programming. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [iterators & iterables code examples](/learning-es6/#iterators-iterables) page showing off the features in greater detail.
 
 Let's get this party started.
 
@@ -164,7 +164,7 @@ let clickedDomNodes = new WeakSet();
 clickedDomNodes.add($leftButton);
 ```
 
-The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](http://benmvp.github.io/learning-es6/#new-collections) page showing off the features in greater detail.
+The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](/learning-es6/#new-collections) page showing off the features in greater detail.
 
 To learn _how_ to use these collections you could just read documentation because they are just new APIs. However, to know _why_ you would want to use each one, I suggest you keep reading.
 
@@ -263,7 +263,7 @@ console.log(`${colorNote}`);
 console.log(Note.get('note0') === colorNote);
 ```
 
-This is just a quick example of how ES6 classes work. Be sure to clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [classes code examples](http://benmvp.github.io/learning-es6/#classes) page showing off the features in greater detail.
+This is just a quick example of how ES6 classes work. Be sure to clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [classes code examples](/learning-es6/#classes) page showing off the features in greater detail.
 
 The example also uses default parameters, rest parameters, and the spread operator so may want to revisit the [parameter handling](/learning-es6-parameter-handling/) article if you're not familiar. It also makes use of [template strings](/learning-es6-template-literals-tagged-templates/) for string interpolation, so you should read up on that as well.
 
@@ -319,7 +319,7 @@ wait(3000).then(() => {
 });
 ```
 
-Did you notice the use of [default parameters](/learning-es6-parameter-handling/) and [arrow functions](/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](http://benmvp.github.io/learning-es6/#promises) page showing off the features in greater detail.
+Did you notice the use of [default parameters](/learning-es6-parameter-handling/) and [arrow functions](/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](/learning-es6/#promises) page showing off the features in greater detail.
 
 Well you've come this far. You might as well keep going!
 
@@ -388,7 +388,7 @@ let cost = 10.45,
 console.log(l10n`Your ticket for ${date} is {$cost}:c.`);
 ```
 
-Intrigued by template literals? Confused about tagged templates? Feel free to check out the [template literal code examples](http://benmvp.github.io/learning-es6/#template-literals) page, which shows off the features in great detail. You can also try your hand at [ES6 katas](http://es6katas.org/) to practice your template literal skills.
+Intrigued by template literals? Confused about tagged templates? Feel free to check out the [template literal code examples](/learning-es6/#template-literals) page, which shows off the features in great detail. You can also try your hand at [ES6 katas](http://es6katas.org/) to practice your template literal skills.
 
 But don't stop now. Keep on reading!
 
@@ -440,7 +440,7 @@ car.depreciate();
 console.log(car.value);
 ```
 
-The [enhanced object literals code examples](http://benmvp.github.io/learning-es6/#enhanced-object-literals) page has many more examples showing off each feature in more details. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
+The [enhanced object literals code examples](/learning-es6/#enhanced-object-literals) page has many more examples showing off each feature in more details. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
 
 Continue on for more details!
 
@@ -524,7 +524,7 @@ ajax(
 );
 ```
 
-These quick examples are just a tip of the iceberg.  Be sure to check out the full suite of [parameter handling code examples](http://benmvp.github.io/learning-es6/#parameter-handling) (a part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
+These quick examples are just a tip of the iceberg.  Be sure to check out the full suite of [parameter handling code examples](/learning-es6/#parameter-handling) (a part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
 
 [Read the full article...](/learning-es6-parameter-handling/)
 
@@ -550,7 +550,7 @@ console.log(lName + ', '+ fName);
 console.log(third, second, first);
 ```
 
-As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](http://benmvp.github.io/learning-es6/#destructuring) which are part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
+As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](/learning-es6/#destructuring) which are part of the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
 
 
 [Read the full article...](/learning-es6-destructuring/)
@@ -598,7 +598,7 @@ function simpleExample(value) {
 simpleExample(2);
 ```
 
-Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](http://benmvp.github.io/learning-es6/#block-scoping) for the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
+Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](/learning-es6/#block-scoping) for the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6).
 
 [Read the full article...](/learning-es6-block-level-scoping-let-const/)
 

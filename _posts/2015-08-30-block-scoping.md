@@ -55,7 +55,7 @@ function simpleExample(value) {
 simpleExample(2);
 ```
 
-Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](http://benmvp.github.io/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
+Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
 You just _know_ you’re interested, so keep on reading!
 
@@ -463,7 +463,7 @@ The most notable missing engine is Safari. Of course IE 11 and lower do not supp
 
 ## Additional resources
 
-You can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support `let` and `const`). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support `let` and `const`). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 

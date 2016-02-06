@@ -87,7 +87,7 @@ ajax(
 );
 ```
 
-These quick examples are just a tip of the iceberg.  Be sure to check out the full suite of [parameter handling code examples](http://benmvp.github.io/learning-es6/#parameter-handling) (a part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
+These quick examples are just a tip of the iceberg.  Be sure to check out the full suite of [parameter handling code examples](/learning-es6/#parameter-handling) (a part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
 
 ## Default parameters
 
@@ -687,7 +687,7 @@ If it wasn't apparent from the previous articles that [transpilation](/learning-
 
 ## Additional Resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#parameter-handling) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser for those that support all of the parameter handling features. Unfortunately, there isn't a browser that supports all of the features, so you will need to use the examples running through Babel and Traceur transpilation.
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#parameter-handling) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser for those that support all of the parameter handling features. Unfortunately, there isn't a browser that supports all of the features, so you will need to use the examples running through Babel and Traceur transpilation.
 
 You can also practice everything you've learned on [ES6 Katas](http://es6katas.org/). It uses a TDD (test-driven development) approach for you to implement ES6 features such that all of the tests pass. I highly recommend it!
 

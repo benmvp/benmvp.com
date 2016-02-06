@@ -57,7 +57,7 @@ car.depreciate();
 console.log(car.value);
 ```
 
-The [enhanced object literals code examples](http://benmvp.github.io/learning-es6/#enhanced-object-literals) page has many more examples showing off each feature in more detail. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
+The [enhanced object literals code examples](/learning-es6/#enhanced-object-literals) page has many more examples showing off each feature in more detail. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
 
 Continue on for more details!
 
@@ -304,7 +304,7 @@ I'm happy to report that according to the [ECMAScript 6 Compatibility table](htt
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#enhanced-object-literals) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#enhanced-object-literals) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
 
 You can also practice everything you've learned on [ES6 Katas](http://es6katas.org/). It uses a TDD (test-driven development) approach for you to implement ES6 features such that all of the tests pass. I highly recommend it!
 

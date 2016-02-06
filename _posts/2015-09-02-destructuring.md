@@ -32,7 +32,7 @@ console.log(lName + ', '+ fName);
 console.log(third, second, first);
 ```
 
-As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](http://benmvp.github.io/learning-es6/#destructuring) which are part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
+As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](/learning-es6/#destructuring) which are part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
 If you're finding destructuring intriguing (which you should), keep on reading for a more in-depth explanation.
 
@@ -380,7 +380,7 @@ It's surprising to see that Chrome doesn't yet support destructuring. Neither do
 
 ## Additional resources
 
-You can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#destructuring) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support destructuring). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](/learning-es6/#destructuring) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support destructuring). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 

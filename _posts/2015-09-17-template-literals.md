@@ -77,7 +77,7 @@ let cost = 10.45,
 console.log(l10n`Your ticket for ${date} is {$cost}:c.`);
 ```
 
-Intrigued by template literals? Confused about tagged templates? Feel free to check out the [template literal code examples](http://benmvp.github.io/learning-es6/#template-literals) page, which shows off the features in great detail. You can also try your hand at [ES6 katas](http://es6katas.org/) to practice your template literal skills.
+Intrigued by template literals? Confused about tagged templates? Feel free to check out the [template literal code examples](/learning-es6/#template-literals) page, which shows off the features in great detail. You can also try your hand at [ES6 katas](http://es6katas.org/) to practice your template literal skills.
 
 But don't stop now. Keep on reading!
 
@@ -432,7 +432,7 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#template-literals) for the [_sLearning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#template-literals) for the [_sLearning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
 
 You can also practice everything you've learned about template literals and tagged templates on [ES6 Katas](http://es6katas.org/). It uses a TDD (test-driven development) approach for you to implement ES6 features such that all of the tests pass. It's really cool!
 

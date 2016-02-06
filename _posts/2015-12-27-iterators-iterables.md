@@ -84,7 +84,7 @@ for (let char of str) {
 // 🙏
 ```
 
-Iterables are important to know because a lot of the APIs moving forward will accept iterables instead of just arrays for greater flexibility. Iterators are helpful to know because they serve as the basis for generators, which open new doors to asynchronous programming. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [iterators & iterables code examples](http://benmvp.github.io/learning-es6/#iterators-iterables) page showing off the features in greater detail.
+Iterables are important to know because a lot of the APIs moving forward will accept iterables instead of just arrays for greater flexibility. Iterators are helpful to know because they serve as the basis for generators, which open new doors to asynchronous programming. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [iterators & iterables code examples](/learning-es6/#iterators-iterables) page showing off the features in greater detail.
 
 Let's get this party started.
 
@@ -490,7 +490,7 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#iterators-iterables) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#iterators-iterables) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
 
 This article only covered the parts of iterators I considered the most useful to know. In my opinion, iterables were the key learning from this article, but you have to know something about iterators for iterables to make sense. However, if you _really_ want to know all of the ins and outs of the iteration protocol, there are some additional resources you can read:
 

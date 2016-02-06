@@ -25,7 +25,7 @@ February 16, 2016 @ 4p
 ### [ConFoo 2016](http://confoo.ca/en/2016/)
 [_You don't need JavaScript for that!_](http://confoo.ca/en/2016/session/you-don-t-need-javascript-for-that)  
 February 24, 2016 @ 3p in Hampstead  
-[Code examples](http://benmvp.github.io/you-dont-need-js-for-that)  
+[Code examples](/you-dont-need-js-for-that)  
 
 [_Demistifying ES6_](http://confoo.ca/en/2016/session/demystifying-es6)  
 February 25, 2016 @ 3p in Fontaine F  
@@ -43,7 +43,7 @@ March 11, 2016
 ### [Prairie Dev Con 2016](http://www.prairiedevcon.com/)
 _You don't need JavaScript for that!_  
 April 11/12, 2016  
-[Code examples](http://benmvp.github.io/you-dont-need-js-for-that)  
+[Code examples](/you-dont-need-js-for-that)  
 
 _Sweet ES6_  
 April 11/12, 2016  
@@ -55,21 +55,21 @@ April 11/12, 2016
 ### [Sacramento JavaScript Meetup](http://www.meetup.com/The-Sacramento-Javascript-Meetup/)
 [_You don't need JavaScript for that!_](http://www.meetup.com/The-Sacramento-Javascript-Meetup/events/226841739/)  
 November 24, 2015 @ 7p at The Urban Hive  
-[Slides](http://benmvp.github.io/slides/sacjs2015-no-js.html) | [Code examples](http://benmvp.github.io/you-dont-need-js-for-that)  
+[Slides](/slides/sacjs2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
 ### [Fossetcon 2015](http://fossetcon.org/2015/)
 [_You don't need JavaScript for that!_](http://fossetcon.org/2015/sessions/you-don%E2%80%99t-need-javascript)  
 November 20, 2015 @ 2p in Palm 3  
-[Slides](http://benmvp.github.io/slides/fossetcon2015-no-js.html) | [Code examples](http://benmvp.github.io/you-dont-need-js-for-that)  
+[Slides](/slides/fossetcon2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
 ### [Nodevember 2015](http://nodevember.org/index.html)
 _Sugar & Spice and everything nice about ES6_  
 November 14, 2015 @ 1p in Ezell 301  
-[Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | [Slides](http://benmvp.github.io/slides/nodevember2015-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
+[Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | [Slides](/slides/nodevember2015-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 ----------
 

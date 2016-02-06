@@ -65,7 +65,7 @@ let clickedDomNodes = new WeakSet();
 clickedDomNodes.add($leftButton);
 ```
 
-The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](http://benmvp.github.io/learning-es6/#new-collections) page showing off the features in greater detail.
+The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](/learning-es6/#new-collections) page showing off the features in greater detail.
 
 To learn _how_ to use these collections you could just read documentation because they are just new APIs. However, to know _why_ you would want to use each one, I suggest you keep reading.
 
@@ -590,7 +590,7 @@ All of the modern browsers and servers support all 4 collections, so this is the
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](http://benmvp.github.io/learning-es6/#new-collections) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 collections using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#new-collections) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 collections using [ES6 Katas](http://es6katas.org/).
 
 There is also lots of great reading to deep dive into these ES6 collections:
 
