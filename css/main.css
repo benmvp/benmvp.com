@@ -132,17 +132,6 @@ blockquote:after {
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
-pre,
-.post code {
-  padding: 8px 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  font-size: 15px;
-}
-
-pre { white-space: pre; overflow: auto; }
-
 .post code { padding: 1px 5px; }
 
 .post ul,
@@ -279,6 +268,13 @@ pre { white-space: pre; overflow: auto; }
 
 code {
   font-family: 'Inconsolata', monospace;
+}
+
+pre code {
+  padding: 8px 12px;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+  tab-size: 2;
 }
 
 :not(pre) > code {
