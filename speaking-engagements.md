@@ -34,7 +34,7 @@ February 25, 2016 @ 3p in Fontaine F
 ----------
 
 ### [NationJS Node Day Conference](http://nationjs.com/)
-[_Sweet ES6_](http://nationjs.com/program#ben_ilegboduo)  
+[_Sweet ES6_](http://nationjs.com/program#ben_ilegbodu)  
 March 11, 2016  
 [Code examples](https://github.com/benmvp/learning-es6)
 
