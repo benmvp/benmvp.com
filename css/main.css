@@ -30,7 +30,7 @@ blockquote:after {
     width: 150px;
     height: 150px;
     border-radius: 25%;
-    margin-left: 40px;
+    margin: 20px 0 0 40px;
     transition: border-radius 150ms;
 }
 .drawer-headshot:hover {

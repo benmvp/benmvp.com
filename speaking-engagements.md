@@ -16,7 +16,7 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 ## Upcoming
 
 ### [DeveloperWeek 2016](http://developerweek.com/)
-[_Sugar & spice and everything nice about ES6_](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)  
+[_Sweet ES6_](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)  
 February 16, 2016 @ 3p in Workshop Room 1
 [Code examples](https://github.com/benmvp/learning-es6)   
 
