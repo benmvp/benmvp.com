@@ -55,11 +55,11 @@ March 11, 2016
 
 [_You don't need JavaScript for that!_](http://confoo.ca/en/2016/session/you-don-t-need-javascript-for-that)  
 February 24, 2016 @ 3p in Hampstead  
-[Code examples](/you-dont-need-js-for-that)  
+[Slides](http://www.benmvp.com/slides/confoo2016-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 [_Demistifying ES6_](http://confoo.ca/en/2016/session/demystifying-es6)  
 February 25, 2016 @ 3p in Fontaine F  
-[Code examples](https://github.com/benmvp/learning-es6)
+[Slides](http://www.benmvp.com/slides/confoo2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
@@ -69,7 +69,7 @@ February 25, 2016 @ 3p in Fontaine F
 
 [_Sweet ES6_](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)  
 February 16, 2016 @ 3p in Workshop Room 1  
-[Slides](/slides/devweek2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
+[Slides](http://www.benmvp.com/slides/devweek2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 
 ## 2015
@@ -80,7 +80,7 @@ February 16, 2016 @ 3p in Workshop Room 1
 
 [_You don't need JavaScript for that!_](http://www.meetup.com/The-Sacramento-Javascript-Meetup/events/226841739/)  
 November 24, 2015 @ 7p at The Urban Hive  
-[Slides](/slides/sacjs2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
+[Slides](http://www.benmvp.com/slides/sacjs2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
@@ -90,7 +90,7 @@ November 24, 2015 @ 7p at The Urban Hive
 
 [_You don't need JavaScript for that!_](http://fossetcon.org/2015/sessions/you-don%E2%80%99t-need-javascript)  
 November 20, 2015 @ 2p in Palm 3  
-[Slides](/slides/fossetcon2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
+[Slides](http://www.benmvp.com/slides/fossetcon2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
@@ -100,7 +100,7 @@ November 20, 2015 @ 2p in Palm 3
 
 _Sugar & Spice and everything nice about ES6_  
 November 14, 2015 @ 1p in Ezell 301  
-[Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | [Slides](/slides/nodevember2015-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
+[Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | [Slides](http://www.benmvp.com/slides/nodevember2015-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 ----------
 
