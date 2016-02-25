@@ -15,7 +15,7 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 ## 2016
 
-### [SyntaxCon 2016](http://2016.syntaxcon.com/)
+### [Syntax Code & Craft Convention 2016](http://2016.syntaxcon.com/)
 
 #### Charleston, SC
 
