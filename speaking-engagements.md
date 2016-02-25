@@ -57,7 +57,7 @@ February 24, 2016 @ 3p in Hampstead
 [Slides](http://www.benmvp.com/slides/confoo2016-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 [_Demistifying ES6_](http://confoo.ca/en/2016/session/demystifying-es6)  
-February 25, 2016 @ 3p in Fontaine F  
+February 25, 2016 @ 3p in Fontaine D  
 [Slides](http://www.benmvp.com/slides/confoo2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
