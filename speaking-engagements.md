@@ -19,9 +19,8 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 #### Charleston, SC
 
-_Sweet ES6_  
+[Talk TBD](https://2016.syntaxcon.com/speaker/ben-ilegbodu/)  
 May 6/7, 2016  
-[Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
