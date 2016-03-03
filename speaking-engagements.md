@@ -15,6 +15,16 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 ## 2016
 
+### [NDC Oslo 2016](http://ndcoslo.com/)
+
+#### Oslo, Norway
+
+[_You don't need JavaScript for that!_](http://ndcoslo2016.oktaset.com/t-32738)  
+Friday, June 10, 2016 @ 1:40p in Room 2   
+[Code examples](/you-dont-need-js-for-that)  
+
+----------
+
 ### [Syntax Code & Craft Convention 2016](http://2016.syntaxcon.com/)
 
 #### Charleston, SC
@@ -43,7 +53,7 @@ April 11/12, 2016
 #### Washington, D.C.
 
 [_Sweet ES6_](http://nationjs.com/program#ben_ilegbodu)  
-March 11, 2016  
+Friday, March 11, 2016  
 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
@@ -53,11 +63,11 @@ March 11, 2016
 #### Montreal, Canada
 
 [_Demistifying ES6_](http://confoo.ca/en/2016/session/demystifying-es6)  
-February 25, 2016 @ 3p in Fontaine D  
+Thursday, February 25, 2016 @ 3p in Fontaine D  
 [Slides](http://www.benmvp.com/slides/confoo2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 [_You don't need JavaScript for that!_](http://confoo.ca/en/2016/session/you-don-t-need-javascript-for-that)  
-February 24, 2016 @ 3p in Hampstead  
+Wednesday, February 24, 2016 @ 3p in Hampstead  
 [Slides](http://www.benmvp.com/slides/confoo2016-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
@@ -67,7 +77,7 @@ February 24, 2016 @ 3p in Hampstead
 #### San Francisco, CA
 
 [_Sweet ES6_](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)  
-February 16, 2016 @ 3p in Workshop Room 1  
+Tuesday, February 16, 2016 @ 3p in Workshop Room 1  
 [Slides](http://www.benmvp.com/slides/devweek2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 
@@ -78,7 +88,7 @@ February 16, 2016 @ 3p in Workshop Room 1
 #### Sacramento, CA
 
 [_You don't need JavaScript for that!_](http://www.meetup.com/The-Sacramento-Javascript-Meetup/events/226841739/)  
-November 24, 2015 @ 7p at The Urban Hive  
+Tuesday, November 24, 2015 @ 7p at The Urban Hive  
 [Slides](http://www.benmvp.com/slides/sacjs2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
@@ -88,7 +98,7 @@ November 24, 2015 @ 7p at The Urban Hive
 #### Orlando, FL
 
 [_You don't need JavaScript for that!_](http://fossetcon.org/2015/sessions/you-don%E2%80%99t-need-javascript)  
-November 20, 2015 @ 2p in Palm 3  
+Friday, November 20, 2015 @ 2p in Palm 3  
 [Slides](http://www.benmvp.com/slides/fossetcon2015-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
@@ -98,7 +108,7 @@ November 20, 2015 @ 2p in Palm 3
 #### Nashville, TN
 
 _Sugar & Spice and everything nice about ES6_  
-November 14, 2015 @ 1p in Ezell 301  
+Saturday, November 14, 2015 @ 1p in Ezell 301  
 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | [Slides](http://www.benmvp.com/slides/nodevember2015-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)  
 
 ----------
@@ -108,5 +118,5 @@ November 14, 2015 @ 1p in Ezell 301
 #### Little Rock, AR
 
 _Sugar & spice and everything nice about ES6_  
-October 16, 2015 @ 1:30p in Fulton  
+Friday, October 16, 2015 @ 1:30p in Fulton  
 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | [Code examples](https://github.com/benmvp/learning-es6)  
