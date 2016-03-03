@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Ben
 permalink: /about/
 redirect_from: /p/about.html
 ---
