@@ -29,8 +29,13 @@ Friday, June 10, 2016 @ 1:40p in Room 2
 
 #### Charleston, SC
 
-[Talk TBD](https://2016.syntaxcon.com/speaker/ben-ilegbodu/)  
-May 6/7, 2016  
+[_Sweet ES6_](https://2016.syntaxcon.com/session/sweet-es6/)  
+Friday, May 6, 2016 @ 9:30a (Front-End)  
+[Code examples](https://github.com/benmvp/learning-es6)
+
+_You don't need JavaScript for that!_  
+Saturday, May 7, 2016 @ 10:30a (Front-End II)  
+[Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
