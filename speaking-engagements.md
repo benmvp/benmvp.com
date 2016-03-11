@@ -19,7 +19,7 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 #### Oslo, Norway
 
-[_You don't need JavaScript for that!_](http://ndcoslo2016.oktaset.com/t-32738)  
+[_You don't need JavaScript for that!_](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)  
 Friday, June 10, 2016 @ 1:40p in Room 2   
 [Code examples](/you-dont-need-js-for-that)  
 
