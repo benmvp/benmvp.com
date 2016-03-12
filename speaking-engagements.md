@@ -5,7 +5,7 @@ permalink: /speaking-engagements/
 redirect_from: /p/speaking-engagements.html
 ---
 
-![speaking at Sacramento JS Meetup](/img/sacjs-no-js-closeup.jpg)
+![speaking at NationJS Node Day](/img/es6-nationjs-nodeday.jpg)
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking outside of my company about what I've learned in the realm of web development and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
