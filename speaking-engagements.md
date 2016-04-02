@@ -44,11 +44,11 @@ Saturday, May 7, 2016 @ 10:30a (Front-End II)
 #### Winnipeg, Canada
 
 _You don't need JavaScript for that!_  
-April 11/12, 2016  
+April 11, 2016 @ 9:45a (Ambassador 2)   
 [Code examples](/you-dont-need-js-for-that)  
 
 _Sweet ES6_  
-April 11/12, 2016  
+April 12, 2016 @ 1p (Ambassador 2)  
 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
