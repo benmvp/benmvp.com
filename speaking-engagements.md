@@ -45,11 +45,11 @@ Saturday, May 7, 2016 @ 10:30a (Front-End II)
 
 _You don't need JavaScript for that!_  
 April 11, 2016 @ 9:45a (Ambassador 2)   
-[Code examples](/you-dont-need-js-for-that)  
+[Slides](http://www.benmvp.com/slides/prairiedevcon2016-no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 _Sweet ES6_  
 April 12, 2016 @ 1p (Ambassador 2)  
-[Code examples](https://github.com/benmvp/learning-es6)
+[Slides](http://www.benmvp.com/slides/prairiedevcon2016-es6.html) | [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
