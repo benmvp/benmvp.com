@@ -183,7 +183,7 @@ As you can see, the colon (:) and the `function` keyword can now be omitted maki
 
 If you recall, property accessors (getters and setters) were introduced in ES5, enabling us to execute some code prior to or after getting and setting a property value. In ES6, property accessors continue to work as they did in ES5.
 
-Let's say we instead wanted to make that users of car objects couldn't set invalid values for their cars. We could instead make `value` an accessor:
+Let's say we instead wanted to ensure that users of car objects couldn't set invalid values for their cars. We could instead make `value` an accessor:
 
 ```js
 function getCar(make, model, value) {
@@ -244,57 +244,52 @@ function getCar(make, model, value) {
 }
 ```
 
-In practice, you may find that you use this method definition shorthand rather sparingly. The reason being is that if you wanted to create an object like the one above, you would probably use a class instead so you can have all the benefits that inheritance brings. The main reason for adding functions to an object literal is to create a module that exports some functions or classes:
+In practice, you may find that you use this method definition shorthand rather sparingly. The reason being is that if you wanted to create an object like the one above, you would probably use a class instead so you can have all the benefits that prototypal inheritance brings. The main reason for adding functions to an object literal is to create a module that exports some functions or classes:
 
 ```js
-	// export the following functions
-	return {
-		cube(value) {
-			return Math.pow(value, 3);
-		},
-		cubeRoot(value) {
-			return Math.pow(value, 1/3);
-		}
-	};
-}) ();
+// export the following functions
+module.exports = {
+	cube(value) {
+		return Math.pow(value, 3);
+	},
+	cubeRoot(value) {
+		return Math.pow(value, 1/3);
+	}
+};
 ```
 
 However, the standard design practice is to separate out the functions from the export command in order to help the API stand out:
 
 ```js
-(function() {
-	function cube(value) {
-		return Math.pow(value, 3);
-	}
-	function cubeRoot(value) {
-		return Math.pow(value, 1/3);
-	}
+function cube(value) {
+	return Math.pow(value, 3);
+}
+function cubeRoot(value) {
+	return Math.pow(value, 1/3);
+}
 
-	// export the following functions
-	return {
-		cube: cube,
-		cubeRoot: cubeRoot
-	};
-}) ();
+// export the following functions
+module.exports = {
+	cube: cube,
+	cubeRoot: cubeRoot
+};
 ```
 
 With the new ES6 property value syntax, we can shorten this up a bit:
 
 ```js
-(function() {
-	function cube(value) {
-		return Math.pow(value, 3);
-	}
-	function cubeRoot(value) {
-		return Math.pow(value, 1/3);
-	}
+function cube(value) {
+	return Math.pow(value, 3);
+}
+function cubeRoot(value) {
+	return Math.pow(value, 1/3);
+}
 
-	// export the following functions
-	return { cube, cubeRoot };
-}) ();
+// export the following functions
+module.exports = { cube, cubeRoot };
 ```
 
-We'll be talking about the new ES6 module syntax shortly in a future article.
+We'll be talking about the new ES6 module syntax in a future article.
 
 You may find that the only time you end up adding a function to an object literal is when you're passing a bucket of options in an object to some function and that object can contain a callback function. We actually saw an example of this when we discussed destructured parameters in the [parameter handling](/learning-es6-parameter-handling/#destructured-parameters) article.
 
