@@ -15,11 +15,11 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 ## 2016
 
-### [Front Porch Conference](http://frontporch.io/)
+### [Front Porch Conference](http://frontporch.io/austin/)
 
 #### Austin, TX
 
-React + ES.next = ♥  
+[_React + ES.next = ♥_](http://frontporch.io/ben-ilegbodu)  
 Friday, July 19, 2016
 
 ----------
