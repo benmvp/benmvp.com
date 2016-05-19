@@ -304,19 +304,23 @@ function wait(delay = 0) {
 }
 
 // Using a promise
-wait(3000).then(() => {
-    console.log('3 seconds have passed!');
-    return wait(2000);
-}).then(() => {
-	console.log('5 seconds have passed!');
-	x++; // ReferenceError triggers `catch`
-}).catch(error => {
-	// output: ReferenceError
-	console.log(error);
-}).then(() => {
-	// simulate `finally` clause
-	console.log('clean up');
-});
+wait(3000)
+    .then(() => {
+        console.log('3 seconds have passed!');
+        return wait(2000);
+    })
+    .then(() => {
+    	console.log('5 seconds have passed!');
+    	x++; // ReferenceError triggers `catch`
+    })
+    .catch(error => {
+    	// output: ReferenceError
+    	console.log(error);
+    })
+    .then(() => {
+    	// simulate `finally` clause
+    	console.log('clean up');
+    });
 ```
 
 Did you notice the use of [default parameters](/learning-es6-parameter-handling/) and [arrow functions](/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [*Learning ES6* Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](/learning-es6/#promises) page showing off the features in greater detail.
