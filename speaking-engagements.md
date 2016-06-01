@@ -24,6 +24,15 @@ Friday, July 19, 2016
 
 ----------
 
+### [ReactJS San Francisco Bay Area meetup](http://www.meetup.com/ReactJS-San-Francisco/)
+
+#### San Francisco, CA
+
+[_React + ES.next = ♥_](http://www.meetup.com/ReactJS-San-Francisco/events/229270590/)  
+Thursday, July 14, 2016 @ 7:30p at Bleacher Report
+
+----------
+
 ### [NDC Oslo 2016](http://ndcoslo.com/)
 
 #### Oslo, Norway
@@ -31,6 +40,16 @@ Friday, July 19, 2016
 [_You don't need JavaScript for that!_](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)  
 Friday, June 10, 2016 @ 1:40p in Room 2   
 [Code examples](/you-dont-need-js-for-that)  
+
+----------
+
+### [Eventbrite Engineering](http://www.eventbrite.com/engineering)
+
+#### San Francisco, CA
+
+_React Fundamentals Workshop_  
+Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ  
+[Workshop Repo](https://github.com/benmvp/react-workshop) | [Slides](www.benmvp.com/slides/2016/evbeng/react-workshop.html)
 
 ----------
 
