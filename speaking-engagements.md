@@ -38,7 +38,7 @@ Thursday, July 14, 2016 @ 7:30p at Bleacher Report
 #### Oslo, Norway
 
 [_You don't need JavaScript for that!_](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)  
-Friday, June 10, 2016 @ 1:40p in Room 2   
+Friday, June 10, 2016 @ 1:40p in Room 7   
 [Code examples](/you-dont-need-js-for-that)  
 
 ----------
