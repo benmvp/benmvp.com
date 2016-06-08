@@ -39,7 +39,7 @@ Thursday, July 14, 2016 @ 7:30p at Bleacher Report
 
 [_You don't need JavaScript for that!_](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)  
 Friday, June 10, 2016 @ 1:40p in Room 7   
-[Code examples](/you-dont-need-js-for-that)  
+[Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | [Code examples](/you-dont-need-js-for-that)  
 
 ----------
 
@@ -49,7 +49,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 
 _React Fundamentals Workshop_  
 Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ  
-[Workshop Repo](https://github.com/benmvp/react-workshop) | [Slides](www.benmvp.com/slides/2016/evbeng/react-workshop.html)
+[Workshop Repo](https://github.com/benmvp/react-workshop) | [Slides](http://www.benmvp.com/slides/2016/evbeng/react-workshop.html)
 
 ----------
 
