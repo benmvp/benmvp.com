@@ -124,7 +124,7 @@ April 11, 2016 @ 9:45a (Ambassador 2)
 #### [Sweet ES6](http://nationjs.com/program#ben_ilegbodu)
 
 Friday, March 11, 2016 @ 11:15a  
-🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
 
