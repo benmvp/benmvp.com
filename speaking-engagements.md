@@ -5,7 +5,7 @@ permalink: /speaking-engagements/
 redirect_from: /p/speaking-engagements.html
 ---
 
-![speaking at NationJS Node Day](/img/es6-nationjs-nodeday.jpg)
+![Speaking at NDC Oslo 2016](/img/ndcoslo-closeup.jpg)
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking publicly about what I've learned in the realm of frontend engineering and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
