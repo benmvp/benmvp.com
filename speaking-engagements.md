@@ -203,7 +203,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 #### Sugar & Spice and everything nice about ES6
 
 Saturday, November 14, 2015 @ 1p in Ezell 301  
-🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](http://www.benmvp.com/slides/2015/nodevember/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](http://www.benmvp.com/slides/2015/nodevember/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nodevember-2015/)
 
 > ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
 
@@ -218,7 +218,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 #### Sugar & spice and everything nice about ES6
 
 Friday, October 16, 2015 @ 1:30p in Fulton  
-🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/little-rock-tech-fest-2015/)
 
 > ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
 
