@@ -15,6 +15,25 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 ## 2016
 
+### [ConFoo Vancouver 2016](https://confoo.ca/en/yvr2016)
+
+##### Montreal, Canada
+
+#### [Sweet ES6](https://confoo.ca/en/yvr2016/session/sweet-es6)
+
+Date TBD  
+🖥 [Code examples](https://github.com/benmvp/learning-es6)
+
+> ECMAScript 6 is the new version of JavaScript available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our code clearer and more concise. Learn how to use arrow functions, destructuring, rest parameters, and other sweet ES6 features.
+
+#### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
+
+Date TBD  
+
+> Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
+
+----------
+
 ### [Front Porch Conference](http://frontporch.io/austin/)
 
 ##### Austin, Texas
@@ -132,7 +151,7 @@ Friday, March 11, 2016 @ 11:15a
 
 ----------
 
-### [ConFoo 2016](http://confoo.ca/en/2016/)
+### [ConFoo Montreal 2016](http://confoo.ca/en/2016/)
 
 ##### Montreal, Canada
 
