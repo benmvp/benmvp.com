@@ -69,7 +69,7 @@ Thursday, July 14, 2016 @ 7:30p at Bleacher Report
 #### [You don't need JavaScript for that!](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)
 
 Friday, June 10, 2016 @ 1:40p in Room 7   
-🎞 [Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
 
