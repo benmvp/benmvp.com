@@ -21,16 +21,49 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 #### [Sweet ES6](https://confoo.ca/en/yvr2016/session/sweet-es6)
 
-Date TBD  
+December 5-7, 2016  
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our code clearer and more concise. Learn how to use arrow functions, destructuring, rest parameters, and other sweet ES6 features.
 
 #### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
 
-Date TBD  
+December 5-7, 2016  
 
 > Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
+
+----------
+
+### [Connect.Tech 2016](http://connect.tech/)
+
+##### Atlanta, Georgia
+
+#### Isomorphic React w/o Node??
+
+October 20/21, 2016  
+
+> React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
+
+#### Navigating the React Ecosystem
+
+October 20/21, 2016  
+
+> React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
+
+> Let’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll  have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.
+
+----------
+
+
+### [NodeSummit](http://nodesummit.com/)
+
+##### San Francisco, California
+
+#### [Evolution of Javascript Panel](http://nodesummit.com/agenda/#day-two)
+
+Thursday July 28, 2016 on Main Stage
+
+> One of the most popular sessions from each of the past three Node Summit events is back for episode four.
 
 ----------
 
@@ -40,7 +73,7 @@ Date TBD
 
 #### [React + ES.next = ♥](http://frontporch.io/ben-ilegbodu)
 
-Friday, July 19, 2016 at Alamo Theater
+Tuesday, July 19, 2016 at Alamo Theater
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
 
@@ -143,7 +176,7 @@ April 11, 2016 @ 9:45a (Ambassador 2)
 #### [Sweet ES6](http://nationjs.com/program#ben_ilegbodu)
 
 Friday, March 11, 2016 @ 11:15a  
-🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nationjs-nodeday-2016/)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
 
