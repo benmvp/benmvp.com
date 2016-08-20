@@ -13,6 +13,18 @@ I am open to speak about anything I write about in [my blog](http://www.benmvp.c
 
 You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) for more information.
 
+## 2017
+
+### [ReactJS San Francisco Bay Area Meetup ](http://www.meetup.com/ReactJS-San-Francisco/)
+
+##### San Francisco, California
+
+#### [TBD](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
+
+Thursday, February 9, 2017 at Eventbrite
+
+> TBD
+
 ## 2016
 
 ### [ConFoo Vancouver 2016](https://confoo.ca/en/yvr2016)
@@ -31,6 +43,21 @@ December 5-7, 2016
 December 5-7, 2016  
 
 > Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
+
+----------
+
+### [Thunder Plains Developer Conference](http://thunderplainsconf.com/)
+
+##### Oklahoma City, Oklahoma
+
+#### React + ES.next = ♥
+
+November 3/4, 2016  
+🖥 [Code examples](https://github.com/benmvp/react-esnext)
+
+> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
+
+> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
 
@@ -55,13 +82,26 @@ October 20/21, 2016
 ----------
 
 
+### [Real World React](http://www.meetup.com/Real-World-React/)
+
+##### San Francisco, California
+
+#### [TBD](http://www.meetup.com/Real-World-React/events/232638998/)
+
+Tuesday, October 18, 2016 at Eventbrite
+
+> TBD
+
+----------
+
+
 ### [NodeSummit](http://nodesummit.com/)
 
 ##### San Francisco, California
 
 #### [Evolution of Javascript Panel](http://nodesummit.com/agenda/#day-two)
 
-Thursday July 28, 2016 on Main Stage
+Thursday, July 28, 2016 on Main Stage
 
 > One of the most popular sessions from each of the past three Node Summit events is back for episode four.
 
@@ -153,7 +193,7 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 
 #### Sweet ES6
 
-April 12, 2016 @ 1p (Ambassador 2)  
+Tuesday, April 12, 2016 @ 1p (Ambassador 2)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
@@ -162,7 +202,7 @@ April 12, 2016 @ 1p (Ambassador 2)
 
 #### You don't need JavaScript for that!
 
-April 11, 2016 @ 9:45a (Ambassador 2)   
+Monday, April 11, 2016 @ 9:45a (Ambassador 2)   
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
