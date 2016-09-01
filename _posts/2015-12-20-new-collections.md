@@ -12,7 +12,7 @@ redirect_from: /2015/12/learning-es6-new-collections.html
 
 ![collections]({{page.header_image}})
 
-Now that we covered [ES6 classes](/learning-es6-classes/) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn and they are types of _iterables_ which we'll deep dive into in the next article.
+Now that we covered [ES6 classes](/learning-es6-classes/) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn. In addition, they are types of _iterables_ which we'll deep dive into in the next article.
 
 ## TL;DR
 
@@ -86,11 +86,11 @@ let steph = new Player('Stephen Curry');
 let kobe = new Player('Kobe Bryant');
 let lebron = new Player('LeBron James');
 
-let allStarVotesInitialized = new Map(
+let allStarVotesInitialized = new Map([
     [steph, 50],
     [kobe, 0],
     [lebron, 22]
-);
+]);
 ```
 
 Right now, there doesn't seem to be much difference between an object literal and a `Map`. In fact the `Map` seems like _more_ syntax. But that's about the change...
@@ -209,26 +209,26 @@ We haven't actually talked about iterators and how they work yet (that's coming 
 ```js
 // log each player name since player
 // is a key in the map
-for (let player of allStarVotes.keys()) {
+allStarVotes.keys().forEach((player) => {
     console.log(player.name);
-}
+});
 
 // log each all star vote count since
 // count is a value in the map
-for (let count of allStarVotes.values()) {
+allStarVotes.values().forEach((count) => {
     console.log(count);
-}
+});
 
 // log each player name and his votes count
 // together. Ex: 'Stephen Curry (50)
 // Uses array destructuring to assign [key, value]
 // pair into separate variables
-for (let [player, count] of allStarVotes.entries()) {
+allStarVotes.entries().forEach(([player, count]) => {
     console.log(`${player.name} (${count})`);
-}
+});
 ```
 
-We learned earlier that the `Map` [constructor](#constructor) accepts an array of `[key, value]` pairs. That's only a part of the story. It actually accepts any _iterable_ of `[key, value]` pairs. This means that we can quickly clone a `Map` object by passing its `Map.prototype.entries()` iterator to the constructor of a new `Map`:
+We learned earlier that the `Map` [constructor](#constructor) accepts an array of `[key, value]` pairs. That's only a part of the story. It actually accepts any _iterable_ of `[key, value]` pairs. This means that we can quickly clone a `Map` object by passing its `Map.prototype.entries()` iterator to the constructor of a new `Map` (because we just showed it returns an array of `[key, value]`):
 
 ```js
 let allStarVotesCopy = new Map(allstarVotes.entries());
@@ -252,7 +252,7 @@ for (let [player, count] of allStarVotes) {
 }
 ```
 
-An since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
+And since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
 
 ```js
 let durant = new Player('Kevin Durant');
@@ -287,7 +287,7 @@ allStarVotes.forEach((count, player, map) => {
 });
 ```
 
-The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](/learning-es6-arrow-functions/) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in useful.
+The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](/learning-es6-arrow-functions/) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in handy.
 
 Although `Map` does have `forEach`, it doesn't have `filter` or `map`. You will first have to convert the `Map` object to an array of `[key, value]` pairs (using the spread operator like `[...allStarVotes]`), do the `filter`/`map` operation, and then construct a new `Map` object from the result. Hopefully this functionality will be added in the future.
 
@@ -299,7 +299,7 @@ However, if you're mapping string keys to data values, you have options. A good 
 
 ## `WeakMap`
 
-You've probably heard of a map before, but what's a _weak_ map? A `WeakMap` is a subset of a `Map`. You can call it a `Map` with restrictions. It's not _iterable_, so it doesn't have a `.size` property nor `.clear()`, `.entries()`, `.keys()`, `.values()` or `.forEach()` methods. All keys _must_ be objects; no strings, numbers, booleans or symbols (more on these later) allowed.
+You've probably heard of a map before, but what's a _weak_ map? A `WeakMap` is a subset of a `Map`. You can call it a "`Map` with restrictions." It's not _iterable_, so it doesn't have a `.size` property nor `.clear()`, `.entries()`, `.keys()`, `.values()` or `.forEach()` methods. All keys _must_ be objects; no strings, numbers, booleans or symbols (more on these later) allowed.
 
 ```js
 let steph = new Player('Stephen Curry');
@@ -351,7 +351,7 @@ The reason using a `WeakMap` is advantageous in this example is that if a given 
 
 ## `Set`
 
-A set can also be thought of as a subset of a map as well. You could think of it as a map where the values don't matter, but the keys still need to remain distinct/unique. In fact, because ES5 didn't have an explicit set data structure, the best workaround has been to use a vanilla JavaScript object making the elements of our "set" the keys of the object. The values in the object would be some truthy value (like `1`) to make existence testing easier, but the values themselves didn't really matter.
+A set can also be thought of as a subset of a map as well. You could think of it as a map where the keys don't matter, but the values still need to remain distinct/unique. In fact, because ES5 didn't have an explicit set data structure, the best workaround has been to use a vanilla JavaScript object making the elements of our "set" the keys of the object. The values in the object would be some truthy value (like `1`) to make existence testing easier, but the values themselves didn't really matter.
 
 ```js
 let nbaPlayers = {
@@ -363,7 +363,7 @@ let nbaPlayers = {
 if (nbaPlayers['Stephen Curry']) { // true
     console.log('Stephen Curry is an NBA player');
 }
-if (nbaPlayers['Ben Ilegbodu']) { // false
+if (nbaPlayers['Ben Ilegbodu']) { // false :'(
     console.log('Ben Ilegbodu is an NBA player');
 }
 ```
