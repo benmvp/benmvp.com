@@ -17,11 +17,11 @@ You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) fo
 
 ### [ReactJS San Francisco Bay Area Meetup ](http://www.meetup.com/ReactJS-San-Francisco/)
 
-##### San Francisco, California
+##### San Francisco, California (Eventbrite)
 
 #### [TBD](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
 
-Thursday, February 9, 2017 at Eventbrite
+Thursday, February 9, 2017  
 
 > TBD
 
@@ -29,18 +29,18 @@ Thursday, February 9, 2017 at Eventbrite
 
 ### [ConFoo Vancouver 2016](https://confoo.ca/en/yvr2016)
 
-##### Montreal, Canada
+##### Montreal, Canada (Sheraton Vancouver Wall Centre)
 
 #### [Sweet ES6](https://confoo.ca/en/yvr2016/session/sweet-es6)
 
-December 5-7, 2016  
+Monday, December 5, 2016 @ 10a (Pavilion B)  
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our code clearer and more concise. Learn how to use arrow functions, destructuring, rest parameters, and other sweet ES6 features.
 
 #### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
 
-December 5-7, 2016  
+Tuesday, December 6, 2016 @ 4p (Pavilion A)  
 
 > Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
 
@@ -48,11 +48,11 @@ December 5-7, 2016
 
 ### [Thunder Plains Developer Conference](http://thunderplainsconf.com/)
 
-##### Oklahoma City, Oklahoma
+##### Oklahoma City, Oklahoma (Devon Boathouse)
 
 #### React + ES.next = ♥
 
-November 3/4, 2016  
+Thursday, November 3, 2016 @ 4p  
 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
@@ -63,17 +63,17 @@ November 3/4, 2016
 
 ### [Connect.Tech 2016](http://connect.tech/)
 
-##### Atlanta, Georgia
+##### Atlanta, Georgia (Cobb Galleria Centre)
 
 #### Isomorphic React w/o Node??
 
-October 20/21, 2016  
+Friday, October 21, 2016 @ 5:10p (React.JS track)  
 
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
 #### Navigating the React Ecosystem
 
-October 20/21, 2016  
+Friday, October 21, 2016 @ 11:20a (React.JS track)  
 
 > React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
 
@@ -81,23 +81,21 @@ October 20/21, 2016
 
 ----------
 
-
 ### [Real World React](http://www.meetup.com/Real-World-React/)
 
-##### San Francisco, California
+##### San Francisco, California (Eventbrite)
 
-#### [TBD](http://www.meetup.com/Real-World-React/events/232638998/)
+#### [Isomorphic React w/o Node??](http://www.meetup.com/Real-World-React/events/232638998/)
 
-Tuesday, October 18, 2016 at Eventbrite
+Tuesday, October 18, 2016  
 
-> TBD
+> React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
 ----------
 
-
 ### [NodeSummit](http://nodesummit.com/)
 
-##### San Francisco, California
+##### San Francisco, California (The Village)
 
 #### [Evolution of Javascript Panel](http://nodesummit.com/agenda/#day-two)
 
@@ -109,11 +107,11 @@ Thursday, July 28, 2016 on Main Stage
 
 ### [Front Porch Conference](http://frontporch.io/austin/)
 
-##### Austin, Texas
+##### Austin, Texas (Alamo Theater)
 
 #### [React + ES.next = ♥](http://frontporch.io/ben-ilegbodu)
 
-Tuesday, July 19, 2016 at Alamo Theater  
+Tuesday, July 19, 2016
 🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
@@ -124,11 +122,11 @@ Tuesday, July 19, 2016 at Alamo Theater
 
 ### [ReactJS San Francisco Bay Area meetup](http://www.meetup.com/ReactJS-San-Francisco/)
 
-##### San Francisco, California
+##### San Francisco, California (Bleacher Report)
 
 #### [React + ES.next = ♥](http://www.meetup.com/ReactJS-San-Francisco/events/229270590/)
 
-Thursday, July 14, 2016 @ 7:30p at Bleacher Report  
+Thursday, July 14, 2016 @ 7:30p  
 🎞 [Slides](http://www.benmvp.com/slides/2016/reactsf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
@@ -139,7 +137,7 @@ Thursday, July 14, 2016 @ 7:30p at Bleacher Report
 
 ### [NDC Oslo 2016](http://ndcoslo.com/)
 
-##### Oslo, Norway
+##### Oslo, Norway (Oslo Spektrum)
 
 #### [You don't need JavaScript for that!](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)
 
@@ -165,7 +163,7 @@ Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
 ### [Syntax Code & Craft Convention 2016](http://2016.syntaxcon.com/)
 
-##### Charleston, South Carolina
+##### Charleston, South Carolina (College of Charleston)
 
 #### [You don't need JavaScript for that!](https://2016.syntaxcon.com/session/you-dont-need-javascript-for-that/)
 
@@ -189,7 +187,7 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 
 ### [Prairie Dev Con 2016](http://www.prairiedevcon.com/)
 
-##### Winnipeg, Canada
+##### Winnipeg, Canada (CanadInns Destination Centre Polo Park)
 
 #### Sweet ES6
 
@@ -211,9 +209,9 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
 ----------
 
-### [NationJS Node Day Conference](http://nationjs.com/)
+### [NationJS Node Day Conference](http://nationnode2016.herokuapp.com/)
 
-##### Washington, D.C.
+##### Washington, D.C. (Capital One Auditorium)
 
 #### [Sweet ES6](http://nationjs.com/program#ben_ilegbodu)
 
@@ -228,7 +226,7 @@ Friday, March 11, 2016 @ 11:15a
 
 ### [ConFoo Montreal 2016](http://confoo.ca/en/2016/)
 
-##### Montreal, Canada
+##### Montreal, Canada (Bonaventure Hotel)
 
 #### [Demistifying ES6](http://confoo.ca/en/2016/session/demystifying-es6)
 
@@ -250,7 +248,7 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 
 ### [DeveloperWeek 2016](http://developerweek.com/)
 
-##### San Francisco, California
+##### San Francisco, California (Pier 27)
 
 #### [Sweet ES6](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)
 
@@ -266,7 +264,7 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 
 ### [Sacramento JavaScript Meetup](http://www.meetup.com/The-Sacramento-Javascript-Meetup/)
 
-##### Sacramento, California
+##### Sacramento, California (The Urban Hive)
 
 #### [You don't need JavaScript for that!](http://www.meetup.com/The-Sacramento-Javascript-Meetup/events/226841739/)  
 Tuesday, November 24, 2015 @ 7p at The Urban Hive  
@@ -278,7 +276,7 @@ Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
 ### [Fossetcon 2015](http://fossetcon.org/2015/)
 
-##### Orlando, Florida
+##### Orlando, Florida (Hilton Lake Buena Vista)
 
 #### [You don't need JavaScript for that!](http://fossetcon.org/2015/sessions/you-don%E2%80%99t-need-javascript)  
 Friday, November 20, 2015 @ 2p in Palm 3  
@@ -292,7 +290,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 
 ### [Nodevember 2015](http://nodevember.org/index.html)
 
-##### Nashville, Tennessee
+##### Nashville, Tennessee (Lipscomb University)
 
 #### Sugar & Spice and everything nice about ES6
 
@@ -307,7 +305,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 
 ### [Little Rock Tech Fest 2015](http://lrtechfest.com/)
 
-##### Little Rock, Arkansas
+##### Little Rock, Arkansas (Statehouse Convention Center)
 
 #### Sugar & spice and everything nice about ES6
 
