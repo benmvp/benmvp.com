@@ -109,7 +109,7 @@ You may already be familiar with iterables if you used C# [`IEnumerable`](https:
 
 You can think of the default `Symbol.iterator()` method just like the default `toString()` method. `toString()` provides a custom way to serialize any object to a string. `Symbol.iterator()` provides a custom way to iterate over an object.
 
-The TC-39 committee chose `Symbol.iterator()` for backwards compatibility. They could've chosen a friendlier name like `iterator()` or `iter()` to be more like `toString()`, but there was a good chance that there would be existing JavaScript code out in the wild using those method names. That code of course would be doing something different, so when it ran on an ES6 JavaScript engine, it would break. As we'll learn in a future article, Symbols are new to ES6 as well and are guaranteed to be unique. Therefore there was no possibility of existing code having a naming conflict. The `toString()` method has existed in the language from the very beginning
+The TC-39 committee chose `Symbol.iterator()` for backwards compatibility. They could've chosen a friendlier name like `iterator()` or `iter()` to be more like `toString()`, but there was a good chance that there would be existing JavaScript code out in the wild using those method names. That code of course would be doing something different, so when it ran on an ES6 JavaScript engine, it would break. As we'll learn in a future article, Symbols are new to ES6 as well and are guaranteed to be unique. Therefore there was no possibility of existing code having a naming conflict. The `toString()` method has existed in the language from the very beginning.
 
 ### Using the default iterator
 
@@ -144,7 +144,7 @@ console.log(defaultIterator.next());
 console.log(defaultIterator.next());
 ```
 
-We'll go into this in more depth in the section on [iterators](iterators), but the `.next()` method on an iterator object returns an object containing the `value` of that iteration and whether or not the iteration is `done`. When `for-of` receives `{done: true}` it stops iterating.
+We'll go into this in more depth in the section on [iterators](#iterators), but the `.next()` method on an iterator object returns an object containing the `value` of that iteration and whether or not the iteration is `done`. When `for-of` receives `{done: true}` it stops iterating.
 
 One cool application of the default `Symbol.iterator()` is to make the array-like `jQuery` object an iterable (thanks to [Jason Orendorff](https://twitter.com/jorendorff) in [ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)):
 
@@ -327,7 +327,7 @@ for (let uList of $('ul')) {
 
 Wouldn't this be so nice? Because we use `for-of` instead of `.each()` we no longer have to deal with a callback function either. And because the DOM nodes are wrapped jQuery objects we no longer have to do that initial `$(this)` step. Kudos to [Nicolas Bevacqua](https://twitter.com/nzgb) in [ES6 Iterators in Depth](https://ponyfoo.com/articles/es6-iterators-in-depth) for the idea.
 
-Another possibility with lazy iterators is infinite sequences. This is an iterator that will never return `{done: true}`to signal that the sequence is over. Each call to `.next()` will always return a value. A perfect example of an infinite sequence is the Fibonacci sequence (borrowed from [Luke Hoban](https://github.com/lukehoban/es6features#iterators--forof)):
+Another possibility with lazy iterators is infinite sequences. This is an iterator that will never return `{done: true}` to signal that the sequence is over. Each call to `.next()` will always return a value. A perfect example of an infinite sequence is the Fibonacci sequence (borrowed from [Luke Hoban](https://github.com/lukehoban/es6features#iterators--forof)):
 
 ```js
 let fibonacci = {
@@ -355,7 +355,7 @@ You see? The iterator never returns `{done: true}`, making it infinite. If we tr
 
 ### Built-in iterators
 
-As mentioned, `for-of` works with a lot of native objects because they have default `@@iterator` methods defined. Collections have additional iterator methods: `.entries()`, `.values()` and `.keys()`. Check out the article on the [new collections](/learning-es6-new-collections/) added in ES6 for  more details.
+As mentioned, `for-of` works with a lot of native objects because they have default `@@iterator` methods defined. Collections have additional iterator methods: `.entries()`, `.values()` and `.keys()`. Check out the article on the [new collections](/learning-es6-new-collections/) added in ES6 for more details.
 
 ## Other consumers of iterators
 
@@ -404,7 +404,7 @@ let [, secondFib, , fourthFib] = fibonacci;
 console.log(secondFib, fourthFib);
 ```
 
-The code is simply extracting the 2nd and 4th Fibonacci numbers from the `fibonacci` iterable.  But what's happening is that destructuring is calling `.next()` on the iterable only four times. That's how destructuring can work with infinite iterables. The first call to `.next()` returns the first Fibonacci number, but we aren't actually consuming it into a variable. It's the second number we want, so it calls `.next()` again, retrieves the value and assigns it to `secondFib`. The third number returned by the third call to `.next()` isn't consummed, and then finally the fourth call to `.next()` assigns the value to `fourthFib`.
+The code is simply extracting the 2nd and 4th Fibonacci numbers from the `fibonacci` iterable.  But what's happening is that destructuring is calling `.next()` on the iterable only four times. That's how destructuring can work with infinite iterables. The first call to `.next()` returns the first Fibonacci number, but we aren't actually consuming it into a variable. It's the second number we want, so it calls `.next()` again, retrieves the value and assigns it to `secondFib`. The third number returned by the third call to `.next()` isn't consumed, and then finally the fourth call to `.next()` assigns the value to `fourthFib`.
 
 Destructuring and lazy iterators work very well together.
 
@@ -478,7 +478,7 @@ We were able to create an array of the first 6 Fibonacci numbers by using the `t
 
 ES6 doesn't have a native iterable object that's like C# [`IEnumerable`](https://msdn.microsoft.com/en-us/library/9eekhta0\(v=vs.110\).aspx) or Java [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html). This type of object would be a special type of iterable that would have combinators as methods that would return new iterables. These may come in future version of ECMAScript. The goal with ECMAScript 6 was to standardize the iteration protocol, and then survey the landscape for what sort of libraries pop up based on the protocol. The most useful stuff could then get folded in for native support.
 
-JavaScript seems to be moving more towards functional programming over object-oriented programming. So it's possible that instead of having a native iterable object with combinators methods like C# & Java have, there may be a native set of modules with a bunch of combinator functions (like `take()` above that can be used with iterables.
+JavaScript seems to be moving more towards functional programming over object-oriented programming. So it's possible that instead of having a native iterable object with combinators methods like C# & Java have, there may be a native set of modules with a bunch of combinator functions (like `take()` above) that can be used with iterables.
 
 ## Generators
 
