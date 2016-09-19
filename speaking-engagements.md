@@ -112,7 +112,7 @@ Thursday, July 28, 2016 on Main Stage
 #### [React + ES.next = ♥](http://frontporch.io/ben-ilegbodu)
 
 Tuesday, July 19, 2016
-🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](http://www.benmvp.com/front-porch-austin-2016/)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
 
