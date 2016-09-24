@@ -9,13 +9,13 @@ permalink: /front-porch-austin-2016/
 header_image: /img/front-porch-austin-closeup.jpg
 ---
 
-![Ben @ Front Porch Austin 2016 Closeup]({{page.header_image}})
+![Ben Ilegbodu @ Front Porch Austin 2016 Closeup]({{page.header_image}})
 
 Back in July I was invited to speak at [Front Porch Austin 2016](http://frontporch.io/austin/) and gave a talk called "React + ES.next = ♥". The main Front Porch conference actually takes place in [Dallas](http://frontporch.io/dallas/) in October, but they decided to launch a new conference in July to which I was invited!
 
 It was really nice to be able to speak back in my home state. I _really_ want to speak in my home city (Houston), but this was awfully close. So close, in fact, that my mom and sister made the 3-hour drive from Houston to Austin to visit and watch me speak for the very first time. I was speaking about React & ES.next so they literally had no idea what I was talking about, but they were proud nonetheless!
 
-![Ben @ Front Porch Austin 2016 Side Shot](/img/front-porch-austin-side.jpg)
+![Ben Ilegbodu @ Front Porch Austin 2016 Side Shot](/img/front-porch-austin-side.jpg)
 
 You know, I really enjoy speaking at 1-day, single-track conferences. There's just a different vibe when conference attendees are in one room and hearing the same talks. My first 1-day, single track conference was [NationJS Node Day](/nationjs-nodeday-2016/) back in March and hope to do more like them. The venue was also super cool. We were at an [Alamo Drafthouse](https://drafthouse.com/theater/south-lamar) so folks could order food and drinks while listening to engaging tech talks. Couldn't get any better!
 

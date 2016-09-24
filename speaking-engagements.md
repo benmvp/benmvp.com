@@ -93,13 +93,14 @@ Tuesday, October 18, 2016
 
 ----------
 
-### [NodeSummit](http://nodesummit.com/)
+### [NodeSummit 2016](http://nodesummit.com/)
 
 ##### San Francisco, California (The Village)
 
-#### [Evolution of Javascript Panel](http://nodesummit.com/agenda/#day-two)
+#### [Evolution of Javascript IV](http://nodesummit.com/agenda/#day-two)
 
-Thursday, July 28, 2016 on Main Stage
+Thursday, July 28, 2016 on Main Stage  
+🎥 [Video](https://vimeo.com/album/4104052/video/180426378) | 📝 [Blog post](http://www.benmvp.com/nodesummit-2016/)
 
 > One of the most popular sessions from each of the past three Node Summit events is back for episode four.
 

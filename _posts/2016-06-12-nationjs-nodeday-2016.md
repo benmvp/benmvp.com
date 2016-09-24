@@ -15,9 +15,9 @@ Back in March, I had the pleasure of speaking at the [NationJS Node Day Conferen
 
 NationJS Node Day was a fun conference to speak at. It was my first single-track conference, so everyone who attended the conference _had_ to hear me speak. Both exciting and nerve-racking at the same time! Also, the venue was huge with stadium seating and a wide stage:
 
-![NationJS Node Day Crowd]({{page.header_image}})
+![Ben Ilegbodu @ NationJS Node Day Crowd]({{page.header_image}})
 
-![NationJS Node Day Crowd Birds-eye](/img/nationjs-nodeday-crowd2.jpg)
+![Ben Ilegbodu @ NationJS Node Day Crowd Birds-eye](/img/nationjs-nodeday-crowd2.jpg)
 
 Thankfully I had practiced going "off-notes" when I spoke at [ConFoo 2016](http://confoo.ca/en/2016/session/demystifying-es6), so I was able to command the entire stage.
 
