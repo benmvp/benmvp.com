@@ -56,7 +56,7 @@ Thursday, November 3, 2016 @ 4p
 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
-
+>
 > Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
@@ -76,7 +76,7 @@ Friday, October 21, 2016 @ 5:10p (React.JS track)
 Friday, October 21, 2016 @ 11:20a (React.JS track)  
 
 > React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
-
+>
 > Let’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll  have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.
 
 ----------
@@ -112,11 +112,11 @@ Thursday, July 28, 2016 on Main Stage
 
 #### [React + ES.next = ♥](http://frontporch.io/ben-ilegbodu)
 
-Tuesday, July 19, 2016
+Tuesday, July 19, 2016  
 🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](http://www.benmvp.com/front-porch-austin-2016/)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
-
+>
 > Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
@@ -131,7 +131,7 @@ Thursday, July 14, 2016 @ 7:30p
 🎞 [Slides](http://www.benmvp.com/slides/2016/reactsf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
-
+>
 > Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
@@ -146,7 +146,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that) | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-
+>
 > In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
@@ -172,7 +172,7 @@ Saturday, May 7, 2016 @ 10:30a (Front-End II)
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-
+>
 > In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 #### [Sweet ES6](https://2016.syntaxcon.com/session/sweet-es6/)
@@ -181,7 +181,7 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
-
+>
 > Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
 
 ----------
@@ -196,7 +196,7 @@ Tuesday, April 12, 2016 @ 1p (Ambassador 2)
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
-
+>
 > Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
 
 #### You don't need JavaScript for that!
@@ -205,7 +205,7 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-
+>
 > In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
@@ -220,7 +220,7 @@ Friday, March 11, 2016 @ 11:15a
 🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nationjs-nodeday-2016/)
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
-
+>
 > Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
 
 ----------
@@ -242,7 +242,7 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-
+>
 > In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
@@ -257,7 +257,7 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 🎞 [Slides](http://www.benmvp.com/slides/2016/devweek/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript making its way into the engines of our modern browsers and servers. Some of its features appear to be no more than a little syntax _sugar_ — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to _spice_ up our code without having to include yet another library.
-
+>
 > Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the _sugar_ and _spice_ of ES6 and what makes it just so nice for code readability. Along the way, you’ll learn about arrow functions, destructuring, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
 
 
@@ -284,7 +284,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 🎞 [Slides](http://www.benmvp.com/slides/2015/fossetcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-
+>
 > In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
@@ -299,7 +299,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](http://www.benmvp.com/slides/2015/nodevember/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nodevember-2015/)
 
 > ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
-
+>
 > Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the sugar and spice of ES6 and what makes it just so nice. Along the way, you’ll learn about arrow functions, modules, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
 
 ----------
@@ -314,5 +314,5 @@ Friday, October 16, 2015 @ 1:30p in Fulton
 🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/little-rock-tech-fest-2015/)
 
 > ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
-
+> 
 > Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the sugar and spice of ES6 and what makes it just so nice. Along the way, you’ll learn about arrow functions, modules, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
