@@ -11,7 +11,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 I am open to speak about anything I write about in [my blog](http://www.benmvp.com). I also have plenty of experience not currently expressed in a blog post. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp) or [email](mailto:ben@benmvp.com).
 
-You can also check out my [Lanyrd profile](http://lanyrd.com/profile/benmvp/) for more information.
+You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-videos/) and [Lanyrd profile](http://lanyrd.com/profile/benmvp/) for more speaking information.
 
 ## 2017
 
@@ -106,7 +106,7 @@ Thursday, July 28, 2016 on Main Stage
 
 ----------
 
-### [Front Porch Conference](http://frontporch.io/austin/)
+### [Front Porch Austin 2016](http://frontporch.io/austin/)
 
 ##### Austin, Texas (Alamo Theater)
 
@@ -210,7 +210,7 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
 ----------
 
-### [NationJS Node Day Conference](http://nationnode2016.herokuapp.com/)
+### [NationJS Node Day 2016](http://nationnode2016.herokuapp.com/)
 
 ##### Washington, D.C. (Capital One Auditorium)
 
