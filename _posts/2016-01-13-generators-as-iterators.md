@@ -18,7 +18,7 @@ Generators can be used both as data producers and data consumers. In this articl
 
 ## TL;DR
 
-A generator function is a special type of function that when invoked automatically generates a special iterator, called a _generator_. Generator functions are indicated by `function*` and make use of the `yield` operator to indicate the value to return for each successive call to `.next()` on the generator.
+A generator function is a special type of function that when invoked automatically generates a special iterator, called a _generator_ object. Generator functions are indicated by `function*` and make use of the `yield` operator to indicate the value to return for each successive call to `.next()` on the generator.
 
 ```js
 function* range(start, count) {
@@ -121,7 +121,7 @@ let generator = someObj.generatorFunc();
 
 The most basic form of a generator object acts as a data producer, aka an iterator. It returns a value for each iteration. If you haven't had a chance to read up on [iterators & iterables](/learning-es6-iterators-iterables/), you probably should do that first. Everything we'll cover in this section builds upon that knowledge.
 
-As the article on iterators mentioned, we most likely won't be implementing iterators directly because of generators. Generator functions make it dead simple to create iterators. All we have to do is write the looping behavior because all generators have built-in implementations for `.next()` and `[Symbol.iterator]()`. This makes generators both iterators as well as iterables. As a refresher, here's the iterable interface written using [TypeScript](http://typescriptlang.org/):
+As the article on iterators mentioned, we most likely won't be implementing iterators directly because of generators. Generator functions make it dead simple to create iterators (although understanding them isn't quite so simple). All we have to do is write the looping behavior because all generators have built-in implementations for `.next()` and `[Symbol.iterator]()`. This makes generators both iterators as well as iterables. As a refresher, here's the iterable interface written using [TypeScript](http://typescriptlang.org/):
 
 ```
 interface Iterable {
@@ -196,11 +196,11 @@ for (let teenageYear of range(13, 7)) {
 }
 ```
 
-Wow! We just spent many articles going through the syntactic sugar features of ES6 learning how it made our code more succinct. But we just used the new generator functionality to replace 25+ lines of code with only 4! We no longer have to define the `RangeIterator` class because generator functions automatically create the class for us. And the best part of the generator function implementation is that we get to avoid the weirdness `RangeIterator` where it describes the functionality of a loop without using any loop syntax. It has to use state variables (`this.start`, `this.count` & `this.index`) to manage the looping behavior across multiple calls to `.next()`. Generators are _much_ better.
+Wow! We just spent many articles going through the syntactic sugar features of ES6 learning how it made our code more succinct. But we just used the new generator functionality to replace 25+ lines of code with only 4! We no longer have to define the `RangeIterator` class because generator functions automatically create the class for us. And the best part of the generator function implementation is that we get to avoid the weirdness of `RangeIterator` where it describes the functionality of a loop without using any loop syntax. It has to use state variables (`this.start`, `this.count` & `this.index`) to manage the looping behavior across multiple calls to `.next()`. Generators are _much_ better.
 
 ## Consuming a generator
 
-In the article on [iterators & iterators](/learning-es6-iterators-iterables/#other-consumers-of-iterators) we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
+In the article on [iterators & iterators](/learning-es6-iterators-iterables/#other-consumers-of-iterators), we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
 
 ```js
 function* awesomeGeneratorFunc() {
@@ -260,7 +260,7 @@ console.log(generatorObj.next());
 
 Manually consuming a generator shows the pausing nature of generator functions. We're just successively calling `.next()` to keep the example simple, but we could do a whole host of things in between calls to `.next()` and the generator function would stay "suspended" until a subsequent call to `.next()`.
 
-The only thing really new in this example is that `awesomeGeneratorFunc()` actually returns a value. But `1000` is not what is assigned to `generatorObj`; it is still a generator object. `1000` gets set as the `value` when the generator is done for the first time (`{value: 1000, done: true}`). Subsequent calls to `.next()` return an `undefined` `value` when `done` is `true`.
+The only thing really new in this example is that `awesomeGeneratorFunc()` actually returns a value. But `1000` is not what is assigned to `generatorObj`; it is still a generator object. `1000` gets set as the `value` when the generator is done for the first time (`{value: 1000, done: true}`). Subsequent calls to `.next()` return an `undefined` `value` when `done` is `true`. We'll look at the use case for this return value later on when we look at `yield*`.
 
 ### Consuming a generator with a `for-of` loop
 
@@ -283,11 +283,11 @@ for (let word of generatorObj) {
 }
 ```
 
-The `for-of` operator calls `.next()` on the `generatorObj` automatically and assigns the `value` property to `word`. We see here that `for-of` consumes the generator until the generator is completed (`{done: true}`) and then it stops looping.  However it doesn't utilize the `1000` return value at all. It's also worth pointing out that if we had a `break` in the loop,  the generator never would've completed.
+The `for-of` operator calls `.next()` on the `generatorObj` automatically and assigns the `value` property to `word`. We see here that `for-of` consumes the generator until the generator is completed (`{done: true}`) and then it stops looping.  However it doesn't utilize the `1000` return value at all. It's also worth pointing out that if we had a `break` in the loop, the generator never would've completed.
 
 ### Consuming a generator with destructuring
 
-By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring article](/learning-es6-destructuring/) to ramp up. We can use destructuring to consume part of the generator values:
+By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring](/learning-es6-destructuring/) article to ramp up. We can use destructuring to consume part of the generator values:
 
 ```js
 let generatorObj = awesomeGeneratorFunc();
@@ -325,13 +325,15 @@ let generatedArray = [...generatorObj];
 console.log(generatedArray);
 ```
 
-As we can see, the spread operator consumes until completion in order to create the array. Using the new `Array.from()` static method would also have the same effect and results.
+As we can see, the spread operator consumes until completion in order to create the array. Using the new `Array.from()` static method would also have the same effect and results. We can then utilize all of the methods on an `Array` object (like `.forEach`, `.map`, etc.).
 
 ## Generator recursion with `yield*`
 
+Head hurting yet? If not, it definitely will as we start talking about `yield*`!
+
 There will be times when we want to combine the values of one or more generators into a single one. Or, we want to factor out generator logic into a separate function so that it can be used multiple times. With "regular" programming we would just create the factored out function and call it as needed.
 
-However, it's not as simple in generator land. We don't simply want to call the helper generator function to get back its return value. If we did that, we'd just get a new generator for that helper generator function. We actually want it to continue to `yield` into our _current_ generator. What we want to do is delegate the generator's population to another generator function.
+However, it's not as simple in generator land. We don't want to call the helper generator function to get back its return value. If we did that, we'd just get a new generator for that helper generator function. We actually want it to continue to `yield` into our _current_ generator. What we want to do is delegate the generator's population to another generator function.
 
 And we can do this using `yield*`:
 
@@ -344,7 +346,7 @@ function* delegatedGeneratorFunc(start) {
     // 3 more items
     yield* awesomeGeneratorFunc();
 
-    // yield 7th item
+    // yield 5th item
     yield 'between';
 
     // delegate yielding to `range()` which will add 5 items
@@ -359,7 +361,7 @@ function* delegatedGeneratorFunc(start) {
 
 // quickly see contents of generator by converting to an array
 // output:
-// ['before', 1, 2, 3, 4, 5, 'between', 'Generators', 'area', 'awesome', 'after']
+// ['before', 'Generators', 'area', 'awesome', 'between', 1, 2, 3, 4, 5, 'after']
 console.log([...delegatedGeneratorFunc(1)]);
 ```
 
@@ -377,7 +379,7 @@ function* iterableGeneratorFunc() {
 }
 
 // quickly see contents of generator by converting to an array
-// output: ['adios', 'H', 'e', 'l', 'l', 'o', 'au revoir']
+// output: ['adios', 'h', 'e', 'l', 'l', 'o', 'au revoir']
 console.log([...iterableGeneratorFunc()]);
 ```
 
@@ -447,7 +449,7 @@ let tree = new BinaryTree(4,
 console.log([...tree]);
 ```
 
-Now, I don't have time to explain binary tree traversal with recursion. You can Google it if you're unfamiliar. But doing this sort of recursion in a manually-created iterator would be pretty complicated. But using generators and `yield*` makes it just as simple as the normal recursive solution would be.
+Now, I don't have time to explain binary tree traversal with recursion. Chances are you've had to write it on a whiteboard during an interview. 😭 You can Google it if you're unfamiliar. But doing this sort of recursion in a manually-created iterator would be pretty complicated. Using generators and `yield*` makes it just as simple as the normal recursive solution would be.
 
 In this example we made a `BinaryTree` object an iterable by giving it a `[Symbol.iterator]()` method. We need to prefix the method with `*` because our implementation is using `yield` and `yield*` to return a generator object. Also, because `BinaryTree` is iterable, we can use `yield*` to recursively get all of the items in a subtree (`this.left` or `this.right`) and add them to the main generator object. And this is all done lazily so the depth-first recursion only goes as deep as the generator is iterated. In this example we're converting the iterable tree into an array, so we end up traversing the entire tree.
 
@@ -462,7 +464,7 @@ Let's mimic [underscorejs](http://underscorejs.org/) or [lodash](https://lodash.
 // to lazily transform the items
 class Enumerable {
     constructor(iterator) {
-        // assuming iterator is iterable
+        // assuming iterator is some sort of iterable
         this._iterator = iterator;
     }
 
@@ -495,7 +497,8 @@ class Enumerable {
     }
 
     // Instance methods wrapping functional helpers which allow for chaining
-    // They essentially act as iterator transformers
+    // The existing iterator is transformed by the helper generator function.
+    // The operations haven't actually happened yet, just the "instructions"
     filter(predicate) {
         this._iterator = Enumerable._filter(this._iterator, predicate);
         return this;
@@ -529,8 +532,8 @@ function generateStocks() {
 }
 
 let enumerable = generateStocks()
-    .filter(stockInfo => stockInfo.price > 30)
-    .map(stockInfo => `${stockInfo.name} ($${stockInfo.price})`)
+    .filter((stockInfo) => stockInfo.price > 30)
+    .map((stockInfo) => `${stockInfo.name} ($${stockInfo.price})`)
     .take(5);
 
 // Even though `_generate()` is an infinite generator, it's also lazy so
@@ -538,13 +541,13 @@ let enumerable = generateStocks()
 console.log([...enumerable]);
 ```
 
-We've basically implemented a (small) portion of [RxJs](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/libraries/main/rx.md) using generators. Congratulations! We're taking an infinite list of stocks, filtering by the ones that cost over $30, mapping each of those stocks to a display name, and then taking the first 5. Finally we convert that resultant iterator/generator into an array, which we log to the console.
+We've basically implemented a (small) portion of [lazy.js](http://danieltao.com/lazy.js) or [RxJs](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/libraries/main/rx.md) using generators. Congratulations! We're taking an infinite list of stocks, filtering by the ones that cost over $30, mapping each of those stocks to a display name, and then taking the first 5. Finally we convert that resultant iterator/generator into an array, which we log to the console.
 
 The cool thing about it is that it's lazy. It obviously doesn't create the infinite list of stocks, otherwise it would crash. Instead it only creates enough stocks to get 5 that are over $30. If you run the code, you'll see that you get less than a dozen `'Generated stock info'` log messages.
 
 The best way to understand how this all works is to work backwards.
 
-Let's start with `.take()` (and `*_take()`). As long as we haven't gotten to `count` it `yield`s the value from the iterator. Each iteration in the `for-of` loop retrieves the next value from its iterator. But that iterator is actually a generator from `.map()` (and `*_map()`). So the first `value` in the `for-of` loop within `*_take()` is actually the first value `yield`ed by `*_map()`, and so on.
+Let's start with `.take()` (and `*_take()`). As long as we haven't gotten to `count` it `yield`s the value from the iterator. Each iteration in the `for-of` loop retrieves the next value from its iterator. But that iterator is actually a generator from `.map()` (and `*_map()`). So the first `value` in the `for-of` loop within `*_take()` is actually the first value `yield`ed by `*_map()`, the second `value` is the second value `yield`ed by `*_map()`, and so on.
 
 Similarly within `*_map()`, each iteration in the `for-of` loop retrieves the next value from its iterator. That value is `yield`ed after transforming it by `mapperFunc`. And its iterator is actually the generator returned by `.filter()` and `*_filter()`. So the first `value` in the `for-of` loop within `*_map()` is actually the first value `yield`ed by `*_filter()`, and so on.
 
@@ -572,6 +575,6 @@ For more on using generators as iterators feel free to read:
 
 ## Coming up next...
 
-So we just looked at how we can use generator functions to easily create generator objects that are iterators. But that's only half the story! Generator objects not only can act as data producers (aka iterators), but they can also act as data consumers (aka observers). Up next, we'll continue our deep dive into generators, looking at how we can use them to _consume_ data. This is where the asynchronous magic really happens. I had initially planned to just do one big article on generators that covered both sides, but it's clearly too big for just one article.
+So we just looked at how we can use generator functions to easily create generator objects that are iterators. But that's only half the story! Generator objects not only can act as data producers (aka iterators), but they can also act as data consumers (aka observers). Up next, we'll continue our deep dive into generators, looking at how we can use them to _consume_ data. This is where the asynchronous magic really happens. I had initially planned to just do one big article on generators that covered both sides, but it's clearly too big for just one article. Even this article post could've been split into two.
 
 Until then...
