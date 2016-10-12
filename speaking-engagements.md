@@ -15,15 +15,33 @@ You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-video
 
 ## 2017
 
-### [ReactJS San Francisco Bay Area Meetup ](http://www.meetup.com/ReactJS-San-Francisco/)
+### [DeveloperWeek JavaScript Conference 2017](http://www.developerweek.com/javascript-conference/)
+
+##### San Francisco, California (Pier 27)
+
+#### Navigating the React Ecosystem
+
+February 13/14, 2017 @ TBD (TBD)  
+
+> React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
+>
+> Let’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll  have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.
+
+----------
+
+### [ReactJS San Francisco Bay Area Meetup](http://www.meetup.com/ReactJS-San-Francisco/)
 
 ##### San Francisco, California (Eventbrite)
 
-#### [TBD](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
+#### [React exposed! 😮](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
 
 Thursday, February 9, 2017  
 
-> TBD
+> React’s seemingly “magical” features make developing sophisticated web UIs easy by doing so much heavy lifting for us. Unfortunately, without knowing how certain parts of the “magic” work, we run into confusing React warnings/errors.
+>
+> Why can’t we have “if blocks” in our JSX code? Why do we need to wrap multiple sibling components in a container component? Why do we need to include a “key” attribute on components that are in an array?
+>
+> In this session geared towards those familiar with React, let’s answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other “magical” features. Not only will we be able to prevent errors with a clearer understanding of the “magic,” but we can potentially boost rendering performance as well.
 
 ## 2016
 
@@ -31,18 +49,18 @@ Thursday, February 9, 2017
 
 ##### Montreal, Canada (Sheraton Vancouver Wall Centre)
 
+#### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
+
+Tuesday, December 6, 2016 @ 4p (Pavilion A)  
+
+> Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
+
 #### [Sweet ES6](https://confoo.ca/en/yvr2016/session/sweet-es6)
 
 Monday, December 5, 2016 @ 10a (Pavilion B)  
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 > ECMAScript 6 is the new version of JavaScript available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our code clearer and more concise. Learn how to use arrow functions, destructuring, rest parameters, and other sweet ES6 features.
-
-#### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
-
-Tuesday, December 6, 2016 @ 4p (Pavilion A)  
-
-> Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
 
 ----------
 
@@ -87,7 +105,7 @@ Friday, October 21, 2016 @ 11:20a (React.JS track)
 
 #### [Isomorphic React w/o Node??](http://www.meetup.com/Real-World-React/events/232638998/)
 
-Tuesday, October 18, 2016  
+Tuesday, October 18, 2016 @ 6:45p  
 
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
@@ -99,7 +117,7 @@ Tuesday, October 18, 2016
 
 #### [Evolution of Javascript IV](http://nodesummit.com/agenda/#day-two)
 
-Thursday, July 28, 2016 on Main Stage  
+Thursday, July 28, 2016 @ 9:30a (Main Stage)  
 🎥 [Video](https://vimeo.com/album/4104052/video/180426378) | 📝 [Blog post](http://www.benmvp.com/nodesummit-2016/)
 
 > One of the most popular sessions from each of the past three Node Summit events is back for episode four.
@@ -247,7 +265,7 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 
 ----------
 
-### [DeveloperWeek 2016](http://developerweek.com/)
+### [DeveloperWeek JavaScript Conference 2016](http://www.developerweek.com/javascript-conference/)
 
 ##### San Francisco, California (Pier 27)
 
@@ -314,5 +332,5 @@ Friday, October 16, 2015 @ 1:30p in Fulton
 🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/little-rock-tech-fest-2015/)
 
 > ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
-> 
+>
 > Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the sugar and spice of ES6 and what makes it just so nice. Along the way, you’ll learn about arrow functions, modules, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
