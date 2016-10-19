@@ -106,6 +106,7 @@ Friday, October 21, 2016 @ 11:20a (React.JS track)
 #### [Isomorphic React w/o Node??](http://www.meetup.com/Real-World-React/events/232638998/)
 
 Tuesday, October 18, 2016 @ 6:45p  
+🎞 [Slides](http://www.benmvp.com/slides/2016/rwreact/iso-react.html)
 
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
