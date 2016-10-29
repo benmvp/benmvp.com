@@ -9,9 +9,9 @@ redirect_from: /p/speaking-engagements.html
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking publicly about what I've learned in the realm of frontend engineering and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
-I am open to speak about anything I write about in [my blog](http://www.benmvp.com). I also have plenty of experience not currently expressed in a blog post. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp) or [email](mailto:ben@benmvp.com).
+I am open to speak about anything I write about in [my blog](http://www.benmvp.com) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
 
-You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-videos/) and [Lanyrd profile](http://lanyrd.com/profile/benmvp/) for more speaking information.
+You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-videos/).
 
 ## 2017
 
