@@ -71,7 +71,7 @@ Monday, December 5, 2016 @ 10a (Pavilion B)
 #### React + ES.next = ♥
 
 Thursday, November 3, 2016 @ 4p  
-🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎞 [Slides](http://www.benmvp.com/slides/2016/thunderplains/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
 >
