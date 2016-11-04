@@ -7,6 +7,8 @@ redirect_from: /p/speaking-engagements.html
 
 ![Speaking at Thunder Plains 2016](/img/thunder-plains.jpg)
 
+<p style="font-style:italic;text-align:right;margin-top:0">Source: <a href="http://JoeThePhotographyGuy.com">Joe The Photography Guy</a></p>
+
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking publicly about what I've learned in the realm of frontend engineering and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
 I am open to speak about anything I write about in [my blog](http://www.benmvp.com) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
