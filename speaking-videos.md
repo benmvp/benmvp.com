@@ -6,6 +6,14 @@ permalink: /speaking-videos/
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### React + ES.next = ♥
+
+#### Real World React
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_bfZHCSkT3Q" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### Evolution of Javascript IV
 
 #### NodeSummit 2016
