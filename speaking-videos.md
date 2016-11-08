@@ -2,6 +2,7 @@
 layout: page
 title: Speaking Videos
 permalink: /speaking-videos/
+redirect_from: /videos
 ---
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):

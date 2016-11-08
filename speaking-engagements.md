@@ -2,7 +2,7 @@
 layout: page
 title: Speaking Engagements
 permalink: /speaking-engagements/
-redirect_from: /p/speaking-engagements.html
+redirect_from: /talks
 ---
 
 ![Speaking at Thunder Plains 2016](/img/thunder-plains.jpg)
