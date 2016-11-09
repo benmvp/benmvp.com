@@ -17,6 +17,20 @@ You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-video
 
 ## 2017
 
+### [Mobile+Web DevCon 2017](http://mobilewebdevconference.com/san-francisco-2017/)
+
+##### San Francisco, California (Marines' Memorial Club & Hotel)
+
+#### React + ES.next = ♥
+
+Friday, March 3, 2017 @ 2:30p (Track B: Web Development)   
+
+> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
+>
+> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
+
+----------
+
 ### [DeveloperWeek JavaScript Conference 2017](http://www.developerweek.com/javascript-conference/)
 
 ##### San Francisco, California (Pier 27)
