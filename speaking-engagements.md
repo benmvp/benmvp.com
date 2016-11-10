@@ -59,6 +59,21 @@ Thursday, February 9, 2017
 >
 > In this session geared towards those familiar with React, let’s answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other “magical” features. Not only will we be able to prevent errors with a clearer understanding of the “magic,” but we can potentially boost rendering performance as well.
 
+----------
+
+### [Hackbright Academy](https://hackbrightacademy.com/)
+
+##### San Francisco, California (Hackbright Academy)
+
+#### Sweet ES6
+
+Thursday, January 12, 2017  
+🖥 [Code examples](https://github.com/benmvp/learning-es6)
+
+> ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
+>
+> Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
+
 ## 2016
 
 ### [ConFoo Vancouver 2016](https://confoo.ca/en/yvr2016)
