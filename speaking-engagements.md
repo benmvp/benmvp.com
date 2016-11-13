@@ -2,7 +2,7 @@
 layout: page
 title: Speaking Engagements
 permalink: /speaking-engagements/
-redirect_from: /talks
+redirect_from: /speak
 ---
 
 ![Speaking at Thunder Plains 2016](/img/thunder-plains.jpg)
@@ -11,23 +11,25 @@ redirect_from: /talks
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking publicly about what I've learned in the realm of frontend engineering and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
 
-I am open to speak about anything I write about in [my blog](http://www.benmvp.com) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
-
-You can also check out my [Speaking Videos](http://www.benmvp.com/speaking-videos/).
-
 ## 2017
 
 ### [Mobile+Web DevCon 2017](http://mobilewebdevconference.com/san-francisco-2017/)
 
 ##### San Francisco, California (Marines' Memorial Club & Hotel)
 
-#### React + ES.next = ♥
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Friday, March 3, 2017 @ 2:30p (Track B: Web Development)   
 
-> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
->
-> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
+----------
+
+### [Sabio](http://www.sabio.la/)
+
+##### Los Angeles, California
+
+#### [ES.Next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+
+Tuesday, February 21, 2017 @ 7p (TBD)  
 
 ----------
 
@@ -35,29 +37,19 @@ Friday, March 3, 2017 @ 2:30p (Track B: Web Development)
 
 ##### San Francisco, California (Pier 27)
 
-#### Navigating the React Ecosystem
+#### [Navigating the React Ecosystem](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 February 13/14, 2017 @ TBD (TBD)  
 
-> React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
->
-> Let’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll  have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.
-
 ----------
 
-### [ReactJS San Francisco Bay Area Meetup](http://www.meetup.com/ReactJS-San-Francisco/)
+### [ReactJS San Francisco Bay Area Meetup](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
 
 ##### San Francisco, California (Eventbrite)
 
-#### [React exposed! 😮](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
+#### [React exposed! 😮](http://www.benmvp.com/#react-exposed-)
 
 Thursday, February 9, 2017  
-
-> React’s seemingly “magical” features make developing sophisticated web UIs easy by doing so much heavy lifting for us. Unfortunately, without knowing how certain parts of the “magic” work, we run into confusing React warnings/errors.
->
-> Why can’t we have “if blocks” in our JSX code? Why do we need to wrap multiple sibling components in a container component? Why do we need to include a “key” attribute on components that are in an array?
->
-> In this session geared towards those familiar with React, let’s answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other “magical” features. Not only will we be able to prevent errors with a clearer understanding of the “magic,” but we can potentially boost rendering performance as well.
 
 ----------
 
@@ -65,14 +57,12 @@ Thursday, February 9, 2017
 
 ##### San Francisco, California (Hackbright Academy)
 
-#### Sweet ES6
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Thursday, January 12, 2017  
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-> ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
->
-> Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
+----------
 
 ## 2016
 
@@ -80,18 +70,14 @@ Thursday, January 12, 2017
 
 ##### Montreal, Canada (Sheraton Vancouver Wall Centre)
 
-#### [Flexing your Flexbox muscles](https://confoo.ca/en/yvr2016/session/flexing-your-flexbox-muscles)
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Tuesday, December 6, 2016 @ 4p (Pavilion A)  
-
-> Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully CSS Flexbox enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Let’s deep dive into Flexbox: what it is, why you should use it, how it’s configured, and where it’s most useful.
-
-#### [Sweet ES6](https://confoo.ca/en/yvr2016/session/sweet-es6)
-
-Monday, December 5, 2016 @ 10a (Pavilion B)  
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-> ECMAScript 6 is the new version of JavaScript available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our code clearer and more concise. Learn how to use arrow functions, destructuring, rest parameters, and other sweet ES6 features.
+#### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
+
+Monday, December 5, 2016 @ 10a (Pavilion B)  
 
 ----------
 
@@ -99,14 +85,10 @@ Monday, December 5, 2016 @ 10a (Pavilion B)
 
 ##### Oklahoma City, Oklahoma (Devon Boathouse)
 
-#### React + ES.next = ♥
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Thursday, November 3, 2016 @ 4p  
 🎞 [Slides](http://www.benmvp.com/slides/2016/thunderplains/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
-
-> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
->
-> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
 
@@ -114,34 +96,26 @@ Thursday, November 3, 2016 @ 4p
 
 ##### Atlanta, Georgia (Cobb Galleria Centre)
 
-#### Isomorphic React w/o Node??
+#### [Isomorphic React w/o Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
 Friday, October 21, 2016 @ 5:10p (React.JS track)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/connect/iso-react.html)
 
-> React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
-
-#### Navigating the React Ecosystem
+#### [Navigating the React Ecosystem](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 Friday, October 21, 2016 @ 11:20a (React.JS track)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/connect/nav-react.html)
 
-> React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
->
-> Let’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll  have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.
-
 ----------
 
-### [Real World React](http://www.meetup.com/Real-World-React/)
+### [Real World React](http://www.meetup.com/Real-World-React/events/232638998/)
 
 ##### San Francisco, California (Eventbrite)
 
-#### [Isomorphic React w/o Node??](http://www.meetup.com/Real-World-React/events/232638998/)
+#### [Isomorphic React w/o Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
 Tuesday, October 18, 2016 @ 6:45p  
 🎥 [Video](https://www.youtube.com/watch?v=_bfZHCSkT3Q) | 🎞 [Slides](http://www.benmvp.com/slides/2016/rwreact/iso-react.html)
-
-> React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
 ----------
 
@@ -149,12 +123,10 @@ Tuesday, October 18, 2016 @ 6:45p
 
 ##### San Francisco, California (The Village)
 
-#### [Evolution of Javascript IV](http://nodesummit.com/agenda/#day-two)
+#### Evolution of Javascript IV
 
 Thursday, July 28, 2016 @ 9:30a (Main Stage)  
 🎥 [Video](https://vimeo.com/album/4104052/video/180426378) | 📝 [Blog post](http://www.benmvp.com/nodesummit-2016/)
-
-> One of the most popular sessions from each of the past three Node Summit events is back for episode four.
 
 ----------
 
@@ -162,29 +134,21 @@ Thursday, July 28, 2016 @ 9:30a (Main Stage)
 
 ##### Austin, Texas (Alamo Theater)
 
-#### [React + ES.next = ♥](http://frontporch.io/ben-ilegbodu)
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Tuesday, July 19, 2016  
 🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](http://www.benmvp.com/front-porch-austin-2016/)
 
-> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
->
-> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
-
 ----------
 
-### [ReactJS San Francisco Bay Area meetup](http://www.meetup.com/ReactJS-San-Francisco/)
+### [ReactJS San Francisco Bay Area meetup](http://www.meetup.com/ReactJS-San-Francisco/events/229270590/)
 
 ##### San Francisco, California (Bleacher Report)
 
-#### [React + ES.next = ♥](http://www.meetup.com/ReactJS-San-Francisco/events/229270590/)
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Thursday, July 14, 2016 @ 7:30p  
 🎞 [Slides](http://www.benmvp.com/slides/2016/reactsf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
-
-> JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
->
-> Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 ----------
 
@@ -192,14 +156,10 @@ Thursday, July 14, 2016 @ 7:30p
 
 ##### Oslo, Norway (Oslo Spektrum)
 
-#### [You don't need JavaScript for that!](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/)
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
 
 Friday, June 10, 2016 @ 1:40p in Room 7   
 🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that) | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
-
-> We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
->
-> In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
 
@@ -207,7 +167,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 
 ##### San Francisco, California
 
-#### React Fundamentals Workshop
+#### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
 
 Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ  
 🖥 [Workshop repo](https://github.com/benmvp/react-workshop) | 🎞 [Slides](http://www.benmvp.com/slides/2016/evbeng/react-workshop.html)
@@ -218,23 +178,15 @@ Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
 ##### Charleston, South Carolina (College of Charleston)
 
-#### [You don't need JavaScript for that!](https://2016.syntaxcon.com/session/you-dont-need-javascript-for-that/)
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
 
 Saturday, May 7, 2016 @ 10:30a (Front-End II)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-> We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
->
-> In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
-
-#### [Sweet ES6](https://2016.syntaxcon.com/session/sweet-es6/)
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Friday, May 6, 2016 @ 9:30a (Front-End)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
-
-> ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
->
-> Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
 
 ----------
 
@@ -242,23 +194,15 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 
 ##### Winnipeg, Canada (CanadInns Destination Centre Polo Park)
 
-#### Sweet ES6
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Tuesday, April 12, 2016 @ 1p (Ambassador 2)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-> ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
->
-> Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
-
-#### You don't need JavaScript for that!
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
 
 Monday, April 11, 2016 @ 9:45a (Ambassador 2)   
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
-
-> We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
->
-> In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
 
@@ -266,14 +210,10 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
 ##### Washington, D.C. (Capital One Auditorium)
 
-#### [Sweet ES6](http://nationjs.com/program#ben_ilegbodu)
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Friday, March 11, 2016 @ 11:15a  
 🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nationjs-nodeday-2016/)
-
-> ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in ES6.
->
-> Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this session.
 
 ----------
 
@@ -281,21 +221,15 @@ Friday, March 11, 2016 @ 11:15a
 
 ##### Montreal, Canada (Bonaventure Hotel)
 
-#### [Demistifying ES6](http://confoo.ca/en/2016/session/demystifying-es6)
+#### [Demistifying ES6](http://www.benmvp.com/talks/#demystifying-es6)
 
 Thursday, February 25, 2016 @ 3p in Fontaine D  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-> Features from ECMAScript 6 have been in browsers since early 2012. We’ve seen ES6 syntax used in talks for compact code, but can it really be used right now for cross-browser compatible production code? Let’s uncover a broad range of new features, like arrow functions, rest parameters, and generators, that will have you itching to start developing your favorite app in ES6.
-
-#### [You don't need JavaScript for that!](http://confoo.ca/en/2016/session/you-don-t-need-javascript-for-that)
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
 
 Wednesday, February 24, 2016 @ 3p in Hampstead  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
-
-> We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
->
-> In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
 
@@ -303,15 +237,12 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 
 ##### San Francisco, California (Pier 27)
 
-#### [Sweet ES6](http://embed.bonfyreapp.com/embed/agenda/7d9083ec2502b7427ce6380556ac24cc/session/oUzP2h9glzxcxMS4AMYw2g**)
+#### [Sweet ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Tuesday, February 16, 2016 @ 3p in Workshop Room 1  
 🎞 [Slides](http://www.benmvp.com/slides/2016/devweek/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-> ECMAScript 6 is the new version of JavaScript making its way into the engines of our modern browsers and servers. Some of its features appear to be no more than a little syntax _sugar_ — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to _spice_ up our code without having to include yet another library.
->
-> Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the _sugar_ and _spice_ of ES6 and what makes it just so nice for code readability. Along the way, you’ll learn about arrow functions, destructuring, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
-
+-----
 
 ## 2015
 
@@ -319,11 +250,10 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 
 ##### Sacramento, California (The Urban Hive)
 
-#### [You don't need JavaScript for that!](http://www.meetup.com/The-Sacramento-Javascript-Meetup/events/226841739/)  
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+
 Tuesday, November 24, 2015 @ 7p at The Urban Hive  
 🎞 [Slides](http://www.benmvp.com/slides/2015/sacjs/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
-
-> In his talk, Ben will show us ways to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications.
 
 ----------
 
@@ -331,13 +261,10 @@ Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
 ##### Orlando, Florida (Hilton Lake Buena Vista)
 
-#### [You don't need JavaScript for that!](http://fossetcon.org/2015/sessions/you-don%E2%80%99t-need-javascript)  
+#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+
 Friday, November 20, 2015 @ 2p in Palm 3  
 🎞 [Slides](http://www.benmvp.com/slides/2015/fossetcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
-
-> We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
->
-> In this session, let’s look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We’ll discuss CSS3 transitions & animations, new HTML5 attributes, and other “tricks” to offload JavaScript functionality to the browser’s rendering engine for more performant web applications. Whether you’re a seasoned JavaScripter or just getting started, you’ll leave the session with fresh ideas to work with.
 
 ----------
 
@@ -345,14 +272,10 @@ Friday, November 20, 2015 @ 2p in Palm 3
 
 ##### Nashville, Tennessee (Lipscomb University)
 
-#### Sugar & Spice and everything nice about ES6
+#### [Sugar & Spice and everything nice about ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Saturday, November 14, 2015 @ 1p in Ezell 301  
 🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](http://www.benmvp.com/slides/2015/nodevember/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nodevember-2015/)
-
-> ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
->
-> Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the sugar and spice of ES6 and what makes it just so nice. Along the way, you’ll learn about arrow functions, modules, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.
 
 ----------
 
@@ -360,11 +283,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 
 ##### Little Rock, Arkansas (Statehouse Convention Center)
 
-#### Sugar & spice and everything nice about ES6
+#### [Sugar & Spice and everything nice about ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Friday, October 16, 2015 @ 1:30p in Fulton  
 🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/little-rock-tech-fest-2015/)
-
-> ECMAScript 6 is the new version of JavaScript making its way into our modern browsers and interpreters. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
->
-> Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. Let’s walk through all the sugar and spice of ES6 and what makes it just so nice. Along the way, you’ll learn about arrow functions, modules, rest parameters, and other features. We’ll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don’t worry if you didn’t understand any of those terms — you will after the session.

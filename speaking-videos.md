@@ -17,7 +17,7 @@ July 28, 2016
 
 ----------
 
-### Isomorphic React w/o Node??
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 #### Real World React
 
@@ -27,7 +27,7 @@ October 18, 2016
 
 ----------
 
-### React + ES.next = ♥
+### [React + ES.next = ♥](/talks/#react--esnext--)
 
 #### Front Porch Austin 2016
 
@@ -37,7 +37,7 @@ July 19, 2016
 
 ----------
 
-### Sweet ES6
+### [Sweet ES6](/talks/#sweet-es6)
 
 #### NationJS Node Day 2016
 
@@ -47,7 +47,7 @@ March 11, 2016
 
 ----------
 
-### Sugar & Spice and everything nice about ES6
+### [Sugar & Spice and everything nice about ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 #### Nodevember 2015
 
@@ -57,7 +57,7 @@ November 14, 2015
 
 ----------
 
-### You don't need JavaScript for that!
+### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 #### NDC Oslo 2016
 
