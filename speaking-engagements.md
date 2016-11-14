@@ -27,7 +27,7 @@ Friday, March 3, 2017 @ 2:30p (Track B: Web Development)
 
 ##### Los Angeles, California
 
-#### [ES.Next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
 Tuesday, February 21, 2017 @ 7p (TBD)  
 

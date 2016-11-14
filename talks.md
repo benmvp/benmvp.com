@@ -16,7 +16,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 #### JavaScript
 
-- [ES.Next Fundamentals Workshop](#esnext-fundamentals-workshop)
+- [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [React + ES.next = ♥](#react--esnext--)
 - [React Exposed! 😮](#react-exposed-)
@@ -54,9 +54,11 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 >
 > Experience with JavaScript will help you get the most out of this session, but you don’t have to be a JS ninja to leave confident to begin using ES6 right now. We’ll cover a little history behind ECMAScript and uncover a broad range of new features, like arrow functions, modules, and rest parameters, that will have you itching to start developing your favorite app in ES6.
 
-### ES.Next Fundamentals Workshop
+### ES.next Fundamentals Workshop
 
-> Hands-on ES6+ workshop.
+> JavaScript is evolving quickly. The mega ES6 specification was released in 2015 and is quickly being implemented by modern JS interpreters. New versions of ECMAScript will now be released on a yearly basis with new features going through a 4-stage proposal process. We can leverage features in ES6, ES2016, and those slated for future versions right now to write even clearer and more concise JavaScript code.
+>
+> Experience with JavaScript will help you get the most out of this hands-on workshop, but you don’t have to have a JavaScript black belt to leave feeling confident in “ES.next.” Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other ES.next features you’re likely to use and benefit from on a daily basis. Oh, and don’t worry if you didn’t understand any of those terms — you soon will after this workshop.
 
 ### Flexing your Flexbox muscles
 
