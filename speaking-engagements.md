@@ -47,9 +47,9 @@ Tuesday, February 21, 2017 @ 7p (TBD)
 
 ##### San Francisco, California (Pier 27)
 
-#### [Navigating the React Ecosystem](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-February 13/14, 2017 @ TBD (TBD)  
+February 13/14, 2017 @ 9:20 (DeveloperWeek Main Stage)  
 
 ----------
 
