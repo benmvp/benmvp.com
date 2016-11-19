@@ -16,7 +16,10 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 #### JavaScript
 
+- [The async future is present](#the-async-future-is-present)
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
+- [isReactDev === isMobileDev](#isreactdev--ismobiledev)
+- [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [React + ES.next = ♥](#react--esnext--)
 - [React Exposed! 😮](#react-exposed-)
@@ -38,6 +41,10 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [Isomorphic React sans Node??](#isomorphic-react-sans-node)
 
 -----
+
+### The async future is present
+
+_Official talk description about ES2017 `async` coming soon!_
 
 ### Demystifying Conference Speaking
 
@@ -68,6 +75,14 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn’t run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
+### isReactDev === isMobileDev
+
+_Official talk description about transitioning from React to React Native coming soon!_
+
+### Native Flexbox
+
+_Official talk description about Flexbox layout in React Native coming soon!_
+
 ### Navigating the React Solar System
 
 > React just exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _[insert latest JS framework]_. We need to create our own “framework” by picking from the plethora of libraries in the React solar system. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!
@@ -90,7 +105,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 ### React Fundamentals Workshop
 
-> Hands-on React workshop.
+_Official workshop description about learning fundamentals of React coming soon!_
 
 ### React Properly
 
@@ -112,7 +127,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 ### Training Juniors
 
-TBD
+_Official talk description about interviewing, hiring and training junior developers coming soon!_
 
 ### You don't need JavaScript for that!
 
