@@ -13,6 +13,16 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
+### [O'Reilly OSCON Austin 2017](http://conferences.oreilly.com/oscon/oscon-tx)
+
+##### Austin, Texas (TBD)
+
+#### [React properly](http://www.benmvp.com/talks/#react-properly)
+
+Wednesday, May 10, 2017 @ 2:35p (TBD)   
+
+----------
+
 ### [Devoxx US 2017](http://devoxx.us/)
 
 ##### San Jose, California (San Jose Convention Center)
