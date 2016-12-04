@@ -83,6 +83,16 @@ Thursday, February 9, 2017
 
 ----------
 
+### [BuzzJS 2017](http://buzzjs.com/)
+
+##### New York City, New York (Microsoft Technology Center)
+
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+
+Friday, January 27, 2017 @ TBD (TBD)   
+
+----------
+
 ### [Hackbright Academy](https://hackbrightacademy.com/)
 
 ##### San Francisco, California (Hackbright Academy)
