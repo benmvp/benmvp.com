@@ -113,11 +113,12 @@ Thursday, January 12, 2017
 #### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Tuesday, December 6, 2016 @ 4p (Pavilion A)  
-🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/sweet-es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 #### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
 
 Monday, December 5, 2016 @ 10a (Pavilion B)  
+🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/flexbox.html)
 
 ----------
 
