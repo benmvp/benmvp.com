@@ -69,7 +69,7 @@ Tuesday, February 21, 2017 @ 7p (TBD)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Tuesday, February 14, 2017 @ 9:20 (DeveloperWeek Main Stage)  
+Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)   
 
 ----------
 
