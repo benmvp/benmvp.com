@@ -81,7 +81,9 @@ _Official talk description about transitioning from React to React Native coming
 
 ### Native Flexbox
 
-_Official talk description about Flexbox layout in React Native coming soon!_
+> React Native is a framework for building truly native mobile apps, allowing web developers to leverage their existing JavaScript and React skills to compose rich iOS and Android user interfaces. React Native also uses CSS for styling, particularly Flexbox for layout. Everything is a flex container!
+>
+> Although CSS Flexbox has been around for over 5 years, Flexbox familiarity is still low because legacy IE browsers have prevented its widespread use. In this session geared towards those already familiar with React Native, let’s deep dive into Flexbox so we can finally get a solid understanding of all its features. Leave confident to begin building flexible layouts in your apps across all screen sizes.
 
 ### Navigating the React Solar System
 
