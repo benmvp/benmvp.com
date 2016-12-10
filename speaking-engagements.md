@@ -15,11 +15,11 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ### [O'Reilly OSCON Austin 2017](http://conferences.oreilly.com/oscon/oscon-tx)
 
-##### Austin, Texas (TBD)
+##### Austin, Texas (Austin Convention Center)
 
 #### [React properly](http://www.benmvp.com/talks/#react-properly)
 
-Wednesday, May 10, 2017 @ 2:35p (TBD)   
+Wednesday, May 10, 2017 @ 2:35p (Ballroom F)  
 
 ----------
 
