@@ -29,7 +29,7 @@ Wednesday, May 10, 2017 @ 2:35p (TBD)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-March 21-23, 2017 @ TBD (TBD)   
+March 21, 2017 @ TBD (TBD)   
 
 ----------
 
