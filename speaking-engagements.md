@@ -45,7 +45,7 @@ Friday, March 3, 2017 @ 2:30p (Track B: Web Development)
 
 ### [Forward JS 2017](https://forwardjs.com/)
 
-##### San Francisco, California (TBD)
+##### San Francisco, California (Holiday Inn - Golden Gateway)
 
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
