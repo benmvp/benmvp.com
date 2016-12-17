@@ -89,7 +89,7 @@ Thursday, February 9, 2017
 
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
-Friday, January 27, 2017 @ TBD (TBD)   
+Friday, January 27, 2017 @ 2:50p   
 
 ----------
 
