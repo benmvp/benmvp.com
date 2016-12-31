@@ -1,7 +1,7 @@
 # Site settings
 title: Ben Ilegbodu
-description: "{priorities:['Christ','Family','Work'], work:'@Eventbrite', title:'Sr UI Engineer', tech:['#ES6,'#CSS3','#HTML5'], passions:['#Jesus','@NBA']}"
-url: "https://benmvp.github.io"
+description: "Christ follower, husband & father of ✌. UI Architect & Speaker. ES6+, React & CSS3. Basketball, DIY & movies. Frontend Platform Manager @ Eventbrite"
+url: "http://www.benmvp.com"
 paginate: 4
 paginate_path: "/page/:num/"
 
