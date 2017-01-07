@@ -336,7 +336,7 @@ let fibonacci = {
         return {
             next() {
                 [previous, current] = [current, previous + current];
-                return {value: cur};
+                return {value: current};
             }
         }
     }

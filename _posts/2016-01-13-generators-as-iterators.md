@@ -83,6 +83,7 @@ The subsequent call to `generator.next()` continues execution in the generator f
 This is the barebones of how generator functions work. A generator object can be created in four ways...
 
 From a generator function declaration (same as example above):
+
 ```js
 function* generatorFunc() {
     yield;
@@ -91,6 +92,7 @@ let generator = generatorFunc();
 ```
 
 From a generator function expression:
+
 ```js
 const generatorFunc = function*() {
     yield;
@@ -99,6 +101,7 @@ let generator = generatorFunc();
 ```
 
 From a generator method definition in an object literal:
+
 ```js
 let someObj = {
     *generatorFunc() {
@@ -109,6 +112,7 @@ let generator = someObj.generatorFunc();
 ```
 
 From a generator method definition in a class definition (declaration or expression):
+
 ```js
 class SomeClass {
     *generatorFunc() {
