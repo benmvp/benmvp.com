@@ -100,7 +100,7 @@ Friday, January 27, 2017 @ 2:50p
 #### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Thursday, January 12, 2017  
-🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎞 [Slides](http://www.benmvp.com/slides/2017/hackbright/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
