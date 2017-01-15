@@ -19,7 +19,21 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 #### [React properly](http://www.benmvp.com/talks/#react-properly)
 
-Wednesday, May 10, 2017 @ 2:35p (Ballroom F)  
+Wednesday, May 10, 2017 @ 2:35p (Ballroom F)   
+
+----------
+
+### [JazzCon.Tech 2017](http://jazzcon.tech/)
+
+##### New Orleans, Louisiana (TBD)
+
+#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+
+March 23/24, 2017 @ TBD (TBD)   
+
+#### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
+
+Wednesday, March 23/24, 2017 @ TBD (TBD)   
 
 ----------
 
@@ -30,6 +44,16 @@ Wednesday, May 10, 2017 @ 2:35p (Ballroom F)
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 March 21, 2017 @ TBD (TBD)   
+
+----------
+
+### [Reactathon](http://reactathon.com/)
+
+##### San Francisco, California
+
+#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+
+Tuesday, March 7, 2017 @ TBD (TBD)  
 
 ----------
 
