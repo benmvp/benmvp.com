@@ -44,7 +44,8 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 ### The async future is present
 
-_Official talk description about ES2017 `async` coming soon!_
+> Event handlers got you feeling “onKeyDown”? Are you stuck in “callback hell”? Promises leaving you a bit “unfulfilled”? Well, “await” no further. The async future is here. Let’s deep dive into the new ES2017 async functions: what they are, why we should use them, where they are most useful, and how they will dramatically change our approach to asynchronous JavaScript programming. You’ll never want to pass a callback or handle a promise again.
+
 
 ### Demystifying Conference Speaking
 
