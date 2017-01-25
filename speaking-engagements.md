@@ -63,7 +63,7 @@ Tuesday, March 7, 2017 @ TBD (TBD)
 
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
-Friday, March 3, 2017 @ 2:30p (Track B: Web Development)   
+Friday, March 3, 2017 @ 10:30a (Track B: Web Development)   
 
 ----------
 
