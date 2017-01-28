@@ -47,6 +47,16 @@ March 21, 2017 @ TBD (TBD)
 
 ----------
 
+### [React Conf 2017](http://conf.reactjs.org/)
+
+##### Santa Clara, California (Marriott Santa Clara)
+
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+
+March 13/14, 2017 @ TBD (TBD)   
+
+----------
+
 ### [Reactathon](http://reactathon.com/)
 
 ##### San Francisco, California
