@@ -13,6 +13,16 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
+### [O'Reily Fluent 2017](https://conferences.oreilly.com/fluent/fl-ca)
+
+##### San Jose, California (TBD)
+
+#### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
+
+June 21/22, 2017 @ TBD (TBD)   
+
+----------
+
 ### [O'Reilly OSCON Austin 2017](http://conferences.oreilly.com/oscon/oscon-tx)
 
 ##### Austin, Texas (Austin Convention Center)
@@ -33,7 +43,7 @@ March 23/24, 2017 @ TBD (TBD)
 
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
-Wednesday, March 23/24, 2017 @ TBD (TBD)   
+March 23/24, 2017 @ TBD (TBD)   
 
 ----------
 
@@ -43,7 +53,7 @@ Wednesday, March 23/24, 2017 @ TBD (TBD)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-March 21, 2017 @ TBD (TBD)   
+Tuesday, March 21, 2017 @ TBD (TBD)   
 
 ----------
 
@@ -93,7 +103,7 @@ Wednesday, March 1, 2017 @ TBD (TBD)
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
-Tuesday, February 21, 2017 @ 7p (TBD)  
+Tuesday, February 21, 2017 @ 7p  
 
 ----------
 
@@ -113,7 +123,7 @@ Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)
 
 #### [React exposed! 😮](http://www.benmvp.com/#react-exposed-)
 
-Thursday, February 9, 2017  
+Thursday, February 9, 2017 @ 7p   
 
 ----------
 
