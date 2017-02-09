@@ -44,6 +44,7 @@ March 23/24, 2017 @ TBD (TBD)
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
 March 23/24, 2017 @ TBD (TBD)   
+🖥 [Code examples](https://github.com/benmvp/react-exposed
 
 ----------
 
@@ -64,6 +65,7 @@ Tuesday, March 21, 2017 @ TBD (TBD)
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 March 13/14, 2017 @ TBD (TBD)   
+🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
@@ -94,6 +96,7 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
 Wednesday, March 1, 2017 @ TBD (TBD)   
+🖥 [Code examples](https://github.com/benmvp/react-exposed
 
 ----------
 
@@ -124,6 +127,7 @@ Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)
 #### [React exposed! 😮](http://www.benmvp.com/#react-exposed-)
 
 Thursday, February 9, 2017 @ 7p   
+🎞 [Slides](http://www.benmvp.com/slides/2017/reactsf/react-exposed.html) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
 
@@ -134,6 +138,7 @@ Thursday, February 9, 2017 @ 7p
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Friday, January 27, 2017 @ 2:50p   
+🎞 [Slides](http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
