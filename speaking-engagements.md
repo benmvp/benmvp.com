@@ -119,7 +119,6 @@ Tuesday, February 21, 2017 @ 7p
 Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)   
 🎞 [Slides](http://www.benmvp.com/slides/2017/devweek/nav-react.html)
 
-
 ----------
 
 ### [ReactJS San Francisco Bay Area Meetup](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
