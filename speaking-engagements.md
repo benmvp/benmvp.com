@@ -117,6 +117,7 @@ Tuesday, February 21, 2017 @ 7p
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/devweek/nav-react.html)
 
 ----------
 
