@@ -15,11 +15,11 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ### [O'Reily Fluent 2017](https://conferences.oreilly.com/fluent/fl-ca)
 
-##### San Jose, California (TBD)
+##### San Jose, California (San Jose Convention Center)
 
 #### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
 
-June 21/22, 2017 @ TBD (TBD)   
+Thursday June 22, 2017 @ 11a (210 CG)   
 
 ----------
 
@@ -33,9 +33,19 @@ Wednesday, May 10, 2017 @ 2:35p (Ballroom F)
 
 ----------
 
+### [Render Conference 2017](http://2017.render-conf.com/)
+
+##### Oxford, United Kingdom (The King's Centre)
+
+#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+
+Thursday, March 30, 2017 @ TBD (TBD)   
+
+----------
+
 ### [JazzCon.Tech 2017](http://jazzcon.tech/)
 
-##### New Orleans, Louisiana (TBD)
+##### New Orleans, Louisiana (New Orleans Downtown Marriott at the Convention Center)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
@@ -44,7 +54,7 @@ March 23/24, 2017 @ TBD (TBD)
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
 March 23/24, 2017 @ TBD (TBD)   
-🖥 [Code examples](https://github.com/benmvp/react-exposed
+🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
 
@@ -54,7 +64,7 @@ March 23/24, 2017 @ TBD (TBD)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Tuesday, March 21, 2017 @ TBD (TBD)   
+Tuesday, March 21, 2017 @ 4:30p (Room 9)   
 
 ----------
 
@@ -64,7 +74,7 @@ Tuesday, March 21, 2017 @ TBD (TBD)
 
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
-March 13/14, 2017 @ TBD (TBD)   
+Monday, March 13, 2017 @ 12:30p   
 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
@@ -75,7 +85,7 @@ March 13/14, 2017 @ TBD (TBD)
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
-Tuesday, March 7, 2017 @ TBD (TBD)  
+Tuesday, March 7, 2017 @ 9a (Eventbrite)  
 
 ----------
 
@@ -95,8 +105,8 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
-Wednesday, March 1, 2017 @ TBD (TBD)   
-🖥 [Code examples](https://github.com/benmvp/react-exposed
+Wednesday, March 1, 2017 @ 3:45p (Emerald)   
+🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
 
