@@ -9,7 +9,7 @@ redirect_from: /speak
 
 <p style="font-style:italic;text-align:right;margin-top:0">Source: <a href="http://JoeThePhotographyGuy.com">Joe The Photography Guy</a></p>
 
-Every opportunity I get to share my knowledge and experience with others is a blessing! I'm just getting started with speaking publicly about what I've learned in the realm of frontend engineering and have thoroughly enjoyed it thus far. I look forward to where this journey will take me.
+Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. I haven't been speaking publicly for long, but I've thoroughly enjoyed it thus far. I look forward to where this journey will take me!
 
 ## 2017
 
@@ -23,6 +23,16 @@ Thursday June 22, 2017 @ 11a (210 CG)
 
 ----------
 
+### [Modern Web Meetup](https://www.meetup.com/modernweb/)
+
+##### TBD (TBD)
+
+#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+
+Tuesday, May 23, 2017 @ TBD   
+
+----------
+
 ### [O'Reilly OSCON Austin 2017](http://conferences.oreilly.com/oscon/oscon-tx)
 
 ##### Austin, Texas (Austin Convention Center)
@@ -30,6 +40,16 @@ Thursday June 22, 2017 @ 11a (210 CG)
 #### [React properly](http://www.benmvp.com/talks/#react-properly)
 
 Wednesday, May 10, 2017 @ 2:35p (Ballroom F)   
+
+----------
+
+### [Fog City Ruby Meetup](https://www.meetup.com/fogcityruby/)
+
+##### San Francisco, California (TBD)
+
+#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+
+Tuesday, April 11, 2017 @ TBD   
 
 ----------
 
