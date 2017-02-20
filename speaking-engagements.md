@@ -59,7 +59,7 @@ Tuesday, April 11, 2017 @ TBD
 
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
-Thursday, March 30, 2017 @ TBD (TBD)   
+Thursday, March 30, 2017 @ 11:55a   
 
 ----------
 
