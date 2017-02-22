@@ -13,6 +13,16 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
+### [Full Stack Toronto 2017](http://2017.fsto.co/)
+
+##### Toronto, Canada (Historic Automotive Building at Exhibition Place )
+
+#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+
+October 23/24, 2017 @ TBD (TBD)   
+
+----------
+
 ### [O'Reily Fluent 2017](https://conferences.oreilly.com/fluent/fl-ca)
 
 ##### San Jose, California (San Jose Convention Center)
