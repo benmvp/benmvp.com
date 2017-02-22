@@ -106,6 +106,7 @@ Monday, March 13, 2017 @ 12:30p
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
 Tuesday, March 7, 2017 @ 9a (Eventbrite)  
+🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
 
@@ -137,6 +138,7 @@ Wednesday, March 1, 2017 @ 3:45p (Emerald)
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
 Tuesday, February 21, 2017 @ 7p  
+🎞 [Slides](http://www.benmvp.com/slides/2017/sabio/esnext.html) | 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
 
