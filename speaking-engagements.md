@@ -133,7 +133,7 @@ Wednesday, March 1, 2017 @ 3:45p (Emerald)
 
 ### [Sabio](http://www.sabio.la/)
 
-##### Los Angeles, California
+##### Los Angeles, California (Antioch University)
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
