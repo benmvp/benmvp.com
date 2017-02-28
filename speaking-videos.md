@@ -7,6 +7,16 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### [React + ES.next = ♥](/talks/#react--esnext--)
+
+#### BuzzJS 2.0 2017
+
+January 27, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fXWvcmrbX5M" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### Evolution of Javascript IV
 
 #### NodeSummit 2016

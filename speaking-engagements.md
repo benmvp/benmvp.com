@@ -174,14 +174,14 @@ Thursday, February 9, 2017 @ 7p
 
 ----------
 
-### [BuzzJS 2017](http://buzzjs.com/)
+### [BuzzJS 2.0 2017](http://buzzjs.com/)
 
 ##### New York City, New York (Microsoft Technology Center)
 
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Friday, January 27, 2017 @ 2:50p   
-🎞 [Slides](http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎥 [Video](https://www.youtube.com/watch?v=fXWvcmrbX5M) | 🎞 [Slides](http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
