@@ -33,6 +33,21 @@ Thursday June 22, 2017 @ 11a (210 CG)
 
 ----------
 
+### [RevolutionConf 2017](http://revolutionconf.com/)
+
+##### Virginia Beach, Virginia (Wyndham Virginia Beach Oceanfront)
+
+#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+
+June 2, 2017 @ TBD (TBD)   
+
+#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+
+June 1, 2017 @ TBD (TBD)   
+🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
+
+----------
+
 ### [Modern Web Meetup](https://www.meetup.com/modernweb/)
 
 ##### TBD (TBD)
@@ -60,6 +75,7 @@ Wednesday, May 10, 2017 @ 2:35p (Ballroom F)
 #### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Tuesday, April 11, 2017 @ TBD   
+🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
