@@ -137,7 +137,7 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
 Wednesday, March 1, 2017 @ 3:45p (Emerald)   
-🖥 [Code examples](https://github.com/benmvp/react-exposed)
+🎞 [Slides](http://www.benmvp.com/slides/2017/forwardjs/react-exposed.html) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
 
