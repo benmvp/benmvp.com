@@ -95,12 +95,17 @@ Thursday, March 30, 2017 @ 11:55a
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-March 23/24, 2017 @ TBD (TBD)   
+Thursday, March 23, 2017 @ 10a (ReactJS track)   
 
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
-March 23/24, 2017 @ TBD (TBD)   
+Thursday, March 23, 2017 @ 1p (ReactJS track)   
 🖥 [Code examples](https://github.com/benmvp/react-exposed)
+
+#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+
+Friday, March 24, 2017 @ 10a (ReactJS track)   
+🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
@@ -143,7 +148,7 @@ Tuesday, March 7, 2017 @ 9a (Eventbrite)
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Friday, March 3, 2017 @ 10:30a (Track B: Web Development)   
-🎞 [Slides](http://www.benmvp.com/slides/2017/mwdcon/react-esnext.html) 
+🎞 [Slides](http://www.benmvp.com/slides/2017/mwdcon/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
