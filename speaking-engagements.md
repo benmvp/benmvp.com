@@ -143,6 +143,7 @@ Tuesday, March 7, 2017 @ 9a (Eventbrite)
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Friday, March 3, 2017 @ 10:30a (Track B: Web Development)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/mwdcon/react-esnext.html) 
 
 ----------
 
