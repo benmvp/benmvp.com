@@ -126,7 +126,7 @@ Tuesday, March 21, 2017 @ 4:30p (Room 9)
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Monday, March 13, 2017 @ 12:30p   
-[Slides](http://www.benmvp.com/slides/2017/reactconf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎞 [Slides](http://www.benmvp.com/slides/2017/reactconf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
@@ -137,7 +137,7 @@ Monday, March 13, 2017 @ 12:30p
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
 Tuesday, March 7, 2017 @ 9a (Eventbrite)  
-[Slides](http://www.benmvp.com/slides/2017/reactathon/esnext.html) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎞 [Slides](http://www.benmvp.com/slides/2017/reactathon/esnext.html) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
