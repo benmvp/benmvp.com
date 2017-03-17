@@ -9,21 +9,21 @@ Check out all the videos of my talks from my [speaking engagements](/speaking-en
 
 ### [React + ES.next = ♥](/talks/#react--esnext--)
 
+#### ReactConf 2017
+
+March 13, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=jh_Qzi-yHU0" frameborder="0" allowfullscreen></iframe>
+
+----------
+
+### [React + ES.next = ♥](/talks/#react--esnext--)
+
 #### BuzzJS 2.0 2017
 
 January 27, 2017
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fXWvcmrbX5M" frameborder="0" allowfullscreen></iframe>
-
-----------
-
-### Evolution of Javascript IV
-
-#### NodeSummit 2016
-
-July 28, 2016
-
-<iframe src="https://player.vimeo.com/video/180426378?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ----------
 
@@ -34,6 +34,16 @@ July 28, 2016
 October 18, 2016
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_bfZHCSkT3Q" frameborder="0" allowfullscreen></iframe>
+
+----------
+
+### Evolution of Javascript IV
+
+#### NodeSummit 2016
+
+July 28, 2016
+
+<iframe src="https://player.vimeo.com/video/180426378?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ----------
 

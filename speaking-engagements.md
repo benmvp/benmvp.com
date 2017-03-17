@@ -126,7 +126,7 @@ Tuesday, March 21, 2017 @ 4:30p (Room 9)
 #### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Monday, March 13, 2017 @ 12:30p   
-🎞 [Slides](http://www.benmvp.com/slides/2017/reactconf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎥 [Video](https://www.youtube.com/watch?v=jh_Qzi-yHU0) | 🎞 [Slides](http://www.benmvp.com/slides/2017/reactconf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
