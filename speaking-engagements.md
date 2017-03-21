@@ -115,7 +115,7 @@ Thursday, March 23, 2017 @ 10a (ReactJS track)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Tuesday, March 21, 2017 @ 4:30p (Room 9)   
+Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)   
 🎞 [Slides](http://www.benmvp.com/slides/2017/devoxxus/nav-react.html)
 
 ----------
