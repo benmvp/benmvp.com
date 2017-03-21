@@ -9,7 +9,7 @@ redirect_from: /speak
 
 <p style="font-style:italic;text-align:right;margin-top:0">Source: <a href="http://JoeThePhotographyGuy.com">Joe The Photography Guy</a></p>
 
-Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. I haven't been speaking publicly for long, but I've thoroughly enjoyed it thus far. I look forward to where this journey will take me! 
+Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. I haven't been speaking publicly for long, but I've thoroughly enjoyed it thus far. I look forward to where this journey will take me!
 
 ## 2017
 
@@ -116,6 +116,7 @@ Thursday, March 23, 2017 @ 10a (ReactJS track)
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 Tuesday, March 21, 2017 @ 4:30p (Room 9)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/devoxxus/nav-react.html)
 
 ----------
 
