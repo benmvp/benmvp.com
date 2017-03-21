@@ -13,7 +13,7 @@ Check out all the videos of my talks from my [speaking engagements](/speaking-en
 
 March 13, 2017
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=jh_Qzi-yHU0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jh_Qzi-yHU0" frameborder="0" allowfullscreen></iframe>
 
 ----------
 
