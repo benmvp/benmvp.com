@@ -57,6 +57,16 @@ July 19, 2016
 
 ----------
 
+### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
+
+#### NDC Oslo 2016
+
+June 10, 2016
+
+<iframe src="https://player.vimeo.com/video/171319733" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+----------
+
 ### [Sweet ES6](/talks/#sweet-es6)
 
 #### NationJS Node Day 2016
@@ -74,13 +84,3 @@ March 11, 2016
 November 14, 2015
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x1BvUqmn8xA" frameborder="0" allowfullscreen></iframe>
-
-----------
-
-### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
-
-#### NDC Oslo 2016
-
-June 10, 2016
-
-<iframe src="https://player.vimeo.com/video/171319733" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
