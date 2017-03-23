@@ -93,19 +93,15 @@ Thursday, March 30, 2017 @ 11:55a
 
 ##### New Orleans, Louisiana (New Orleans Downtown Marriott at the Convention Center)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
-
-Friday, March 24, 2017 @ 10a (ReactJS track)   
-🖥 [Code examples](https://github.com/benmvp/react-esnext)
-
 #### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
 
-Thursday, March 23, 2017 @ 1p (ReactJS track)   
+Friday, March 24, 2017 @ 10a (ReactJS track)   
 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Thursday, March 23, 2017 @ 10a (ReactJS track)   
+Thursday, March 23, 2017 @ 1p (ReactJS track)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/nav-react.html)
 
 ----------
 
