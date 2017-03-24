@@ -97,6 +97,7 @@ Thursday, March 30, 2017 @ 11:55a
 
 Friday, March 24, 2017 @ 10a (ReactJS track)   
 🖥 [Code examples](https://github.com/benmvp/react-exposed)
+🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/react-exposed.html)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
