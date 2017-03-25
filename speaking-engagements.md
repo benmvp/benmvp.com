@@ -19,7 +19,17 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
-October 23/24, 2017 @ TBD (TBD)   
+Monday, October 23, 2017 @ 4p (Room 206AB)   
+
+----------
+
+### [Chain React 2017](https://infinite.red/ChainReactConf)
+
+##### Portland, Oregon (The Armory)
+
+#### [React Native + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+
+July 10/11, 2017 @ TBD   
 
 ----------
 
@@ -39,11 +49,11 @@ Thursday June 22, 2017 @ 11a (210 CG)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-June 2, 2017 @ TBD (TBD)   
+Friday, June 2, 2017 @ TBD (TBD)   
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
-June 1, 2017 @ TBD (TBD)   
+Thursday, June 1, 2017 @ TBD (TBD)   
 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
@@ -85,7 +95,7 @@ Tuesday, April 11, 2017 @ TBD
 
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
-Thursday, March 30, 2017 @ 11:55a   
+Thursday, 30 March 2017 @ 11:55   
 
 ----------
 
