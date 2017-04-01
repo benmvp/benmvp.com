@@ -217,7 +217,7 @@ function* awesomeGeneratorFunc() {
     yield 'are';
 
     console.log('third yield');
-    yield 'cool!';
+    yield 'awesome!';
 
     console.log('all done!');
 
