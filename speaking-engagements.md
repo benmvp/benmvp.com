@@ -80,11 +80,11 @@ Wednesday, May 10, 2017 @ 2:35p (Ballroom F)
 
 ### [Fog City Ruby Meetup](https://www.meetup.com/fogcityruby/)
 
-##### San Francisco, California (TBD)
+##### San Francisco, California (Braintree)
 
 #### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
-Tuesday, April 11, 2017 @ TBD   
+Tuesday, April 11, 2017 @ 7:15p   
 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
