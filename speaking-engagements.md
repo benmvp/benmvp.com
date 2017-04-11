@@ -85,7 +85,7 @@ Wednesday, May 10, 2017 @ 2:35p (Ballroom F)
 #### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
 
 Tuesday, April 11, 2017 @ 7:15p   
-🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎞 [Slides](http://www.benmvp.com/slides/2017/fogcityruby/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
