@@ -7,6 +7,16 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
+
+#### Render Conference 2017
+
+30 March 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zxtcr8Zuvfs" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [React + ES.next = ♥](/talks/#react--esnext--)
 
 #### ReactConf 2017

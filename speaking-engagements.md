@@ -96,7 +96,7 @@ Tuesday, April 11, 2017 @ 7:15p
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
 Thursday, 30 March 2017 @ 11:55   
-🎞 [Slides](http://www.benmvp.com/slides/2017/render/iso-react.html)
+🎥 [Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞 [Slides](http://www.benmvp.com/slides/2017/render/iso-react.html)
 
 ----------
 
