@@ -134,7 +134,7 @@ _Official talk description about transitioning from React to React Native coming
 ### React Fundamentals Workshop
 
 > React is a JavaScript UI library that makes creating reusable components easy and efficient. In this workshop, we’ll cover the critical concepts of React via a series of targeted exercises. We’ll learn how to:
-> 
+>
 > - Write readable, reusable and composable components
 > - Use JSX syntax
 > - Work with the Virtual DOM

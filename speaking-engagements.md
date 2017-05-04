@@ -15,11 +15,21 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ### [Full Stack Toronto 2017](http://2017.fsto.co/)
 
-##### Toronto, Canada (Historic Automotive Building at Exhibition Place )
+##### Toronto, Canada (Historic Automotive Building at Exhibition Place)
 
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
 Monday, October 23, 2017 @ 4p (Room 206AB)   
+
+----------
+
+### [React Rally 2017](http://www.reactrally.com/)
+
+##### Salt Lake City, Utah (Sheraton Salt Lake City Hotel)
+
+#### [Layperson’s guide to React Fiber](http://www.benmvp.com/talks/#laypersons-guide-to-react-fiber)
+
+August 24/25, 2017 @ TBD   
 
 ----------
 
@@ -58,13 +68,13 @@ Thursday, June 1, 2017 @ TBD (TBD)
 
 ----------
 
-### [Modern Web Meetup](https://www.meetup.com/modernweb/)
+### [Modern Web Meetup](https://www.meetup.com/modernweb/events/239003827/)
 
-##### TBD (TBD)
+##### Mountain View, California (Shape Security)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Tuesday, May 23, 2017 @ TBD   
+Tuesday, May 23, 2017 @ 8p   
 
 ----------
 
@@ -72,13 +82,13 @@ Tuesday, May 23, 2017 @ TBD
 
 ##### Austin, Texas (Austin Convention Center)
 
-#### [React properly](http://www.benmvp.com/talks/#react-properly)
+#### [React Properly](http://www.benmvp.com/talks/#react-properly)
 
 Wednesday, May 10, 2017 @ 2:35p (Ballroom F)   
 
 ----------
 
-### [Fog City Ruby Meetup](https://www.meetup.com/fogcityruby/)
+### [Fog City Ruby Meetup](https://www.meetup.com/fogcityruby/events/238787325/)
 
 ##### San Francisco, California (Braintree)
 
