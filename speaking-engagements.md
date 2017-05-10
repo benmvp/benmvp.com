@@ -39,7 +39,7 @@ August 24/25, 2017 @ TBD
 
 #### [React Native + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
-July 10/11, 2017 @ TBD   
+Monday, July 10, 2017 @ 11:30a   
 
 ----------
 
@@ -49,7 +49,7 @@ July 10/11, 2017 @ TBD
 
 #### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
 
-Thursday June 22, 2017 @ 11a (210 CG)   
+Thursday, June 22, 2017 @ 11a (210 CG)   
 
 ----------
 
