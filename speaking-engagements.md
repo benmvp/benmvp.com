@@ -84,7 +84,8 @@ Tuesday, May 23, 2017 @ 8p
 
 #### [React Properly](http://www.benmvp.com/talks/#react-properly)
 
-Wednesday, May 10, 2017 @ 2:35p (Ballroom F)   
+Wednesday, May 10, 2017 @ 2:35p (Meeting Room 12)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/oscon/react-properly.html)
 
 ----------
 
