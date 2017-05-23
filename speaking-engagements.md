@@ -59,11 +59,11 @@ Thursday, June 22, 2017 @ 11a (210 CG)
 
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
-Friday, June 2, 2017 @ TBD (TBD)   
+Friday, June 2, 2017 @ 2:30p (Atlantic Ballroom)   
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
-Thursday, June 1, 2017 @ TBD (TBD)   
+Thursday, June 1, 2017 @ 2:30p (Mariner A)   
 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
