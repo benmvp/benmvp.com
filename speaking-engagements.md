@@ -75,6 +75,7 @@ Thursday, June 1, 2017 @ TBD (TBD)
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 Tuesday, May 23, 2017 @ 8p   
+🎞 [Slides](http://www.benmvp.com/slides/2017/modernweb/nav-react.html)
 
 ----------
 
