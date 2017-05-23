@@ -27,6 +27,16 @@ March 13, 2017
 
 ----------
 
+### [[React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
+
+#### Forward JS 2017
+
+March 1, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cAYMqBU7Qko" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [React + ES.next = ♥](/talks/#react--esnext--)
 
 #### BuzzJS 2.0 2017
