@@ -23,6 +23,16 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 ----------
 
+### [Strange Loop 2017](https://thestrangeloop.com/)
+
+##### St. Louis, Missouri (Peabody Opera House)
+
+#### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
+
+Monday, August 28, 2017 @ 12:30p   
+
+----------
+
 ### [React Rally 2017](http://www.reactrally.com/)
 
 ##### Salt Lake City, Utah (Sheraton Salt Lake City Hotel)
