@@ -29,7 +29,7 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 #### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
 
-Monday, August 28, 2017 @ 12:30p   
+Monday, September 28, 2017 @ 12:30p   
 
 ----------
 
