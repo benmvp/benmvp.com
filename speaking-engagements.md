@@ -74,7 +74,7 @@ Friday, June 2, 2017 @ 2:30p (Atlantic Ballroom)
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
 Thursday, June 1, 2017 @ 2:30p (Mariner A)   
-🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
+🎞 [Slides](http://www.benmvp.com/slides/2017/revconf/esnext.html) | 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
 
