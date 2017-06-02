@@ -70,6 +70,7 @@ Thursday, June 22, 2017 @ 11a (210 CG)
 #### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
 
 Friday, June 2, 2017 @ 2:30p (Atlantic Ballroom)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/revconf/nav-react.html)
 
 #### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
 
