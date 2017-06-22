@@ -60,6 +60,7 @@ Monday, July 10, 2017 @ 11:30a
 #### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
 
 Thursday, June 22, 2017 @ 11a (210 CG)   
+🎞 [Slides](http://www.benmvp.com/slides/2017/fluent/flexbox.html)
 
 ----------
 
