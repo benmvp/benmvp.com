@@ -27,6 +27,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [React + ES.next = ♥](#react--esnext--)
 - [React Exposed! 😮](#react-exposed-)
 - [React Fundamentals Workshop](#react-fundamentals-workshop)
+- [React in style 😎](#react-in-style-)
 - [React Properly](#react-properly)
 - [Sweet ES6](#sweet-es6)
 - [Wait... the Web can do what?1?!](#wait-the-web-can-do-what1)
@@ -146,6 +147,10 @@ _Official talk description about transitioning from React to React Native coming
 > - And more...
 >
 > Prior experience with React is not necessary, but experience with building JavaScript applications will be helpful to hit the ground running. You’ll leave the workshop with all the fundamentals you need to build your own apps with React.
+
+### React in style 😎
+
+> React is a JavaScript UI library that makes creating reusable components easy and efficient. However, there is no single approach for styling these components. “Css-in-js” libraries like glamorous and styled-components are the new hotness, but there are other viable approaches for beautifying our React apps as well. So let’s walk through these options for styling components. Familiarity with React will help you get the most out of this session. And by the end, you’ll have a solid understanding of the various approaches to make an informed styling decision in your React project.
 
 ### React Properly
 
