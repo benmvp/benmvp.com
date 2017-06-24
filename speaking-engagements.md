@@ -43,6 +43,16 @@ August 24/25, 2017 @ TBD
 
 ----------
 
+### [Node Summit 2017](http://www.nodesummit.com/)
+
+##### San Francisco, California (Mission Bay Conference Center)
+
+#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+
+July 25-27, 2017 @ TBD (TBD)   
+
+----------
+
 ### [Chain React 2017](https://infinite.red/ChainReactConf)
 
 ##### Portland, Oregon (The Armory)
