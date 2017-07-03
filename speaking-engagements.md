@@ -39,7 +39,7 @@ Monday, September 28, 2017 @ 12:30p
 
 #### [Layperson’s guide to React Fiber](http://www.benmvp.com/talks/#laypersons-guide-to-react-fiber)
 
-August 24/25, 2017 @ TBD   
+Thursday, August 24, 2017 @ 2p   
 
 ----------
 
@@ -49,7 +49,7 @@ August 24/25, 2017 @ TBD
 
 #### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
 
-July 25-27, 2017 @ TBD (TBD)   
+Thursday, July 27, 2017 @ 12p (Fisher East)   
 
 ----------
 
