@@ -60,6 +60,7 @@ Thursday, July 27, 2017 @ 12p (Fisher East)
 #### [React Native + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
 
 Monday, July 10, 2017 @ 11:30a   
+🎞 [Slides](http://benmvp.com/slides/2017/chainreact/react-native-esnext.html)
 
 ----------
 
