@@ -29,7 +29,17 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 #### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
 
-Monday, September 28, 2017 @ 12:30p   
+Thursday, September 28, 2017 @ 12:30p   
+
+----------
+
+### [React Boston 2017](http://www.reactboston.com/)
+
+##### Boston, Massachusetts (Wayfair)
+
+#### Talk TBD
+
+Sunday, September 24, 2017 @ TBD   
 
 ----------
 
