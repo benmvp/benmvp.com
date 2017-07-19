@@ -35,6 +35,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 #### CSS
 
 - [Flexing your Flexbox muscles](#flexing-your-flexbox-muscles)
+- [You don't need JavaScript for that!](#you-dont-need-javascript-for-that)
 
 #### Career/Leadership
 
@@ -70,6 +71,8 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 > These are just some of the reasons that keep potential speakers from sharing their knowledge by giving a talk. Conference speaking is great for networking, personal growth, as well as conquering fears. But when you're an aspiring speaker, the process to become one is unclear. In this session, let's debunk myths about conference speaking by learning what it takes to go from wanting to speak at conferences to actually delivering your first conference talk.
 
 ### Demystifying ES6
+
+_(Retired)_
 
 > [Archived] Features from ECMAScript 6, our latest version of JavaScript, have been in browsers since early 2012, and even more functionality is now available in a vast majority of engines in our modern browsers and servers. We've all seen ES6 syntax used in talks and presentations to make the code more compact, but can it really be used right now for cross-browser compatible production code? And what's all the fuss about it anyway?
 >
@@ -119,6 +122,8 @@ _Official talk description about transitioning from React to React Native coming
 
 ### React + ES.next = ♥
 
+_(Retired)_
+
 > JavaScript is evolving quickly. The ES6 specification was released back in 2015 and has been implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
 >
 > Experience with React will help you get the most out of this session, but you don't have to have a JavaScript black belt to leave feeling confident in using ES.next with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don't worry if you don't understand all of those terms — you soon will after this session!
@@ -159,11 +164,15 @@ _Official talk description about transitioning from React to React Native coming
 
 ### Sugar & Spice and everything nice about ES6
 
+_(Retired)_
+
 > [Archived] ECMAScript 6 is the new version of JavaScript making its way into the engines of our modern browsers and servers. Some of its features appear to be no more than a little syntax sugar — making development we already do in JavaScript a bit easier. Others add brand new functionality long missing in JavaScript, which allow us to spice up our code without having to include yet another library.
 >
 > Experience with JavaScript will help you get the most out of this session, but you don't have to be a JS ninja to leave confident to begin using ES6 right now. Let's walk through all the sugar and spice of ES6 and what makes it just so nice for code readability. Along the way, you'll learn about arrow functions, destructuring, rest parameters, and other features. We'll also see strategies for how we can circumvent that pesky issue of cross-browser compatibility. Oh, and don't worry if you didn't understand any of those terms — you will after the session.
 
 ### Sweet ES6
+
+_(Retired)_
 
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don't have to have a JavaScript black belt to leave feeling confident in ES6.
 >
@@ -182,6 +191,8 @@ _Official talk description about transitioning from React to React Native coming
 > In this session geared towards frontend engineers of all skill levels, let’s learn about some Web APIs that you may have never heard of before! We’ll look at audio, video, interaction, and device diagnostic APIs — where they are supported and how you can apply them in your next project.
 
 ### You don't need JavaScript for that!
+
+_(Retired)_
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should've made old development strategies obsolete, and yet we're still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
 >

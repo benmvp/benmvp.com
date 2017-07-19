@@ -7,6 +7,16 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### [React Native + ES.next = ♥](/talks/#react--esnext--)
+
+#### Chain React 2017
+
+July 10, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nbtEwjRJXLo" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 #### Render Conference 2017
@@ -27,7 +37,7 @@ March 13, 2017
 
 ----------
 
-### [[React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
+### [[React Exposed! 😮](talks/#react-exposed-)
 
 #### Forward JS 2017
 

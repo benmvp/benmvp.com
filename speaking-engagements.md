@@ -17,9 +17,9 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ##### Toronto, Canada (Historic Automotive Building at Exhibition Place)
 
-#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+#### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
-Monday, October 23, 2017 @ 4p (Room 206AB)   
+Monday, October 23, 2017 @ 4p (Room 206AB)  
 
 ----------
 
@@ -27,9 +27,9 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 ##### St. Louis, Missouri (Peabody Opera House)
 
-#### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
+#### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
-Thursday, September 28, 2017 @ 12:30p   
+Thursday, September 28, 2017 @ 12:30p  
 
 ----------
 
@@ -39,7 +39,7 @@ Thursday, September 28, 2017 @ 12:30p
 
 #### Talk TBD
 
-Sunday, September 24, 2017 @ TBD   
+Sunday, September 24, 2017 @ TBD  
 
 ----------
 
@@ -47,9 +47,9 @@ Sunday, September 24, 2017 @ TBD
 
 ##### Salt Lake City, Utah (Sheraton Salt Lake City Hotel)
 
-#### [Layperson’s guide to React Fiber](http://www.benmvp.com/talks/#laypersons-guide-to-react-fiber)
+#### [Layperson’s guide to React Fiber](/talks/#laypersons-guide-to-react-fiber)
 
-Thursday, August 24, 2017 @ 2p   
+Thursday, August 24, 2017 @ 2p  
 
 ----------
 
@@ -57,9 +57,9 @@ Thursday, August 24, 2017 @ 2p
 
 ##### San Francisco, California (Mission Bay Conference Center)
 
-#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+#### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
-Thursday, July 27, 2017 @ 12p (Fisher East)   
+Thursday, July 27, 2017 @ 12p (Fisher East)  
 
 ----------
 
@@ -67,10 +67,10 @@ Thursday, July 27, 2017 @ 12p (Fisher East)
 
 ##### Portland, Oregon (The Armory)
 
-#### [React Native + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React Native + ES.next = ♥](/talks/#react--esnext--)
 
-Monday, July 10, 2017 @ 11:30a   
-🎞 [Slides](http://benmvp.com/slides/2017/chainreact/react-native-esnext.html)
+Monday, July 10, 2017 @ 11:30a  
+🎥 [Video](https://www.youtube.com/watch?v=nbtEwjRJXLo) | 🎞 [Slides](http://benmvp.com/slides/2017/chainreact/react-native-esnext.html)
 
 ----------
 
@@ -78,9 +78,9 @@ Monday, July 10, 2017 @ 11:30a
 
 ##### San Jose, California (San Jose Convention Center)
 
-#### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
+#### [Flexing your Flexbox muscles](/talks/#flexing-your-flexbox-muscles)
 
-Thursday, June 22, 2017 @ 11a (210 CG)   
+Thursday, June 22, 2017 @ 11a (210 CG)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/fluent/flexbox.html)
 
 ----------
@@ -89,14 +89,14 @@ Thursday, June 22, 2017 @ 11a (210 CG)
 
 ##### Virginia Beach, Virginia (Wyndham Virginia Beach Oceanfront)
 
-#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Friday, June 2, 2017 @ 2:30p (Atlantic Ballroom)   
+Friday, June 2, 2017 @ 2:30p (Atlantic Ballroom)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/revconf/nav-react.html)
 
-#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+#### [ES.next Fundamentals Workshop](/talks/#esnext-fundamentals-workshop)
 
-Thursday, June 1, 2017 @ 2:30p (Mariner A)   
+Thursday, June 1, 2017 @ 2:30p (Mariner A)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/revconf/esnext.html) | 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
 ----------
@@ -105,9 +105,9 @@ Thursday, June 1, 2017 @ 2:30p (Mariner A)
 
 ##### Mountain View, California (Shape Security)
 
-#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Tuesday, May 23, 2017 @ 8p   
+Tuesday, May 23, 2017 @ 8p  
 🎞 [Slides](http://www.benmvp.com/slides/2017/modernweb/nav-react.html)
 
 ----------
@@ -116,9 +116,9 @@ Tuesday, May 23, 2017 @ 8p
 
 ##### Austin, Texas (Austin Convention Center)
 
-#### [React Properly](http://www.benmvp.com/talks/#react-properly)
+#### [React Properly](/talks/#react-properly)
 
-Wednesday, May 10, 2017 @ 2:35p (Meeting Room 12)   
+Wednesday, May 10, 2017 @ 2:35p (Meeting Room 12)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/oscon/react-properly.html)
 
 ----------
@@ -127,9 +127,9 @@ Wednesday, May 10, 2017 @ 2:35p (Meeting Room 12)
 
 ##### San Francisco, California (Braintree)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
-Tuesday, April 11, 2017 @ 7:15p   
+Tuesday, April 11, 2017 @ 7:15p  
 🎞 [Slides](http://www.benmvp.com/slides/2017/fogcityruby/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
@@ -138,9 +138,9 @@ Tuesday, April 11, 2017 @ 7:15p
 
 ##### Oxford, United Kingdom (The King's Centre)
 
-#### [Isomorphic React sans Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+#### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
-Thursday, 30 March 2017 @ 11:55   
+Thursday, 30 March 2017 @ 11:55  
 🎥 [Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞 [Slides](http://www.benmvp.com/slides/2017/render/iso-react.html)
 
 ----------
@@ -149,15 +149,15 @@ Thursday, 30 March 2017 @ 11:55
 
 ##### New Orleans, Louisiana (New Orleans Downtown Marriott at the Convention Center)
 
-#### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
+#### [React Exposed! 😮](/talks/#react-exposed-)
 
-Friday, March 24, 2017 @ 10a (ReactJS track)   
+Friday, March 24, 2017 @ 10a (ReactJS track)  
 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/react-exposed.html)
 
-#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Thursday, March 23, 2017 @ 1p (ReactJS track)   
+Thursday, March 23, 2017 @ 1p (ReactJS track)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/nav-react.html)
 
 ----------
@@ -166,9 +166,9 @@ Thursday, March 23, 2017 @ 1p (ReactJS track)
 
 ##### San Jose, California (San Jose Convention Center)
 
-#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)   
+Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/devoxxus/nav-react.html)
 
 ----------
@@ -177,9 +177,9 @@ Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)
 
 ##### Santa Clara, California (Marriott Santa Clara)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
-Monday, March 13, 2017 @ 12:30p   
+Monday, March 13, 2017 @ 12:30p  
 🎥 [Video](https://www.youtube.com/watch?v=jh_Qzi-yHU0) | 🎞 [Slides](http://www.benmvp.com/slides/2017/reactconf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
@@ -188,7 +188,7 @@ Monday, March 13, 2017 @ 12:30p
 
 ##### San Francisco, California
 
-#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+#### [ES.next Fundamentals Workshop](/talks/#esnext-fundamentals-workshop)
 
 Tuesday, March 7, 2017 @ 9a (Eventbrite)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/reactathon/esnext.html) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
@@ -199,9 +199,9 @@ Tuesday, March 7, 2017 @ 9a (Eventbrite)
 
 ##### San Francisco, California (Marines' Memorial Club & Hotel)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
-Friday, March 3, 2017 @ 10:30a (Track B: Web Development)   
+Friday, March 3, 2017 @ 10:30a (Track B: Web Development)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/mwdcon/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
@@ -210,9 +210,9 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 
 ##### San Francisco, California (Holiday Inn - Golden Gateway)
 
-#### [React Exposed! 😮](http://www.benmvp.com/talks/#react-exposed-)
+#### [React Exposed! 😮](/talks/#react-exposed-)
 
-Wednesday, March 1, 2017 @ 3:45p (Emerald)   
+Wednesday, March 1, 2017 @ 3:45p (Emerald)  
 🎥 [Video](https://www.youtube.com/watch?v=cAYMqBU7Qko) | 🎞 [Slides](http://www.benmvp.com/slides/2017/forwardjs/react-exposed.html) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
@@ -221,7 +221,7 @@ Wednesday, March 1, 2017 @ 3:45p (Emerald)
 
 ##### Los Angeles, California (Antioch University)
 
-#### [ES.next Fundamentals Workshop](http://www.benmvp.com/talks/#esnext-fundamentals-workshop)
+#### [ES.next Fundamentals Workshop](/talks/#esnext-fundamentals-workshop)
 
 Tuesday, February 21, 2017 @ 7p  
 🎞 [Slides](http://www.benmvp.com/slides/2017/sabio/esnext.html) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
@@ -232,9 +232,9 @@ Tuesday, February 21, 2017 @ 7p
 
 ##### San Francisco, California (Pier 27)
 
-#### [Navigating the React Solar System](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)   
+Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)  
 🎞 [Slides](http://www.benmvp.com/slides/2017/devweek/nav-react.html)
 
 ----------
@@ -245,7 +245,7 @@ Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)
 
 #### [React exposed! 😮](http://www.benmvp.com/#react-exposed-)
 
-Thursday, February 9, 2017 @ 7p   
+Thursday, February 9, 2017 @ 7p  
 🎞 [Slides](http://www.benmvp.com/slides/2017/reactsf/react-exposed.html) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
@@ -254,9 +254,9 @@ Thursday, February 9, 2017 @ 7p
 
 ##### New York City, New York (Microsoft Technology Center)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
-Friday, January 27, 2017 @ 2:50p   
+Friday, January 27, 2017 @ 2:50p  
 🎥 [Video](https://www.youtube.com/watch?v=fXWvcmrbX5M) | 🎞 [Slides](http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
@@ -265,7 +265,7 @@ Friday, January 27, 2017 @ 2:50p
 
 ##### San Francisco, California (Hackbright Academy)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
 Thursday, January 12, 2017  
 🎞 [Slides](http://www.benmvp.com/slides/2017/hackbright/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
@@ -278,12 +278,12 @@ Thursday, January 12, 2017
 
 ##### Montreal, Canada (Sheraton Vancouver Wall Centre)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
 Tuesday, December 6, 2016 @ 4p (Pavilion A)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/sweet-es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-#### [Flexing your Flexbox muscles](http://www.benmvp.com/talks/#flexing-your-flexbox-muscles)
+#### [Flexing your Flexbox muscles](/talks/#flexing-your-flexbox-muscles)
 
 Monday, December 5, 2016 @ 10a (Pavilion B)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/flexbox.html)
@@ -294,7 +294,7 @@ Monday, December 5, 2016 @ 10a (Pavilion B)
 
 ##### Oklahoma City, Oklahoma (Devon Boathouse)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Thursday, November 3, 2016 @ 4p  
 🎞 [Slides](http://www.benmvp.com/slides/2016/thunderplains/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
@@ -305,12 +305,12 @@ Thursday, November 3, 2016 @ 4p
 
 ##### Atlanta, Georgia (Cobb Galleria Centre)
 
-#### [Isomorphic React w/o Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+#### [Isomorphic React w/o Node??](/talks/#isomorphic-react-sans-node)
 
 Friday, October 21, 2016 @ 5:10p (React.JS track)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/connect/iso-react.html)
 
-#### [Navigating the React Ecosystem](http://www.benmvp.com/talks/#navigating-the-react-solar-system)
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
 Friday, October 21, 2016 @ 11:20a (React.JS track)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/connect/nav-react.html)
@@ -321,7 +321,7 @@ Friday, October 21, 2016 @ 11:20a (React.JS track)
 
 ##### San Francisco, California (Eventbrite)
 
-#### [Isomorphic React w/o Node??](http://www.benmvp.com/talks/#isomorphic-react-sans-node)
+#### [Isomorphic React w/o Node??](/talks/#isomorphic-react-sans-node)
 
 Tuesday, October 18, 2016 @ 6:45p  
 🎥 [Video](https://www.youtube.com/watch?v=_bfZHCSkT3Q) | 🎞 [Slides](http://www.benmvp.com/slides/2016/rwreact/iso-react.html)
@@ -343,7 +343,7 @@ Thursday, July 28, 2016 @ 9:30a (Main Stage)
 
 ##### Austin, Texas (Alamo Theater)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Tuesday, July 19, 2016  
 🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](http://www.benmvp.com/front-porch-austin-2016/)
@@ -354,7 +354,7 @@ Tuesday, July 19, 2016
 
 ##### San Francisco, California (Bleacher Report)
 
-#### [React + ES.next = ♥](http://www.benmvp.com/talks/#react--esnext--)
+#### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Thursday, July 14, 2016 @ 7:30p  
 🎞 [Slides](http://www.benmvp.com/slides/2016/reactsf/react-esnext.html) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
@@ -365,9 +365,9 @@ Thursday, July 14, 2016 @ 7:30p
 
 ##### Oslo, Norway (Oslo Spektrum)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
-Friday, June 10, 2016 @ 1:40p in Room 7   
+Friday, June 10, 2016 @ 1:40p in Room 7  
 🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that) | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
 
 ----------
@@ -376,7 +376,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 
 ##### San Francisco, California
 
-#### [React Fundamentals Workshop](http://www.benmvp.com/talks/#react-fundamentals-workshop)
+#### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ  
 🖥 [Workshop repo](https://github.com/benmvp/react-workshop) | 🎞 [Slides](http://www.benmvp.com/slides/2016/evbeng/react-workshop.html)
@@ -387,12 +387,12 @@ Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
 ##### Charleston, South Carolina (College of Charleston)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 Saturday, May 7, 2016 @ 10:30a (Front-End II)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
 Friday, May 6, 2016 @ 9:30a (Front-End)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/syntaxcon/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
@@ -403,14 +403,14 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 
 ##### Winnipeg, Canada (CanadInns Destination Centre Polo Park)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
 Tuesday, April 12, 2016 @ 1p (Ambassador 2)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
-Monday, April 11, 2016 @ 9:45a (Ambassador 2)   
+Monday, April 11, 2016 @ 9:45a (Ambassador 2)  
 🎞 [Slides](http://www.benmvp.com/slides/2016/prdc/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
 ----------
@@ -419,7 +419,7 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
 ##### Washington, D.C. (Capital One Auditorium)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sweet-es6)
+#### [Sweet ES6](/talks/#sweet-es6)
 
 Friday, March 11, 2016 @ 11:15a  
 🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](http://www.benmvp.com/slides/2016/nationjs/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nationjs-nodeday-2016/)
@@ -430,12 +430,12 @@ Friday, March 11, 2016 @ 11:15a
 
 ##### Montreal, Canada (Bonaventure Hotel)
 
-#### [Demistifying ES6](http://www.benmvp.com/talks/#demystifying-es6)
+#### [Demistifying ES6](/talks/#demystifying-es6)
 
 Thursday, February 25, 2016 @ 3p in Fontaine D  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 Wednesday, February 24, 2016 @ 3p in Hampstead  
 🎞 [Slides](http://www.benmvp.com/slides/2016/confoo/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
@@ -446,7 +446,7 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 
 ##### San Francisco, California (Pier 27)
 
-#### [Sweet ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
+#### [Sweet ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Tuesday, February 16, 2016 @ 3p in Workshop Room 1  
 🎞 [Slides](http://www.benmvp.com/slides/2016/devweek/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
@@ -459,7 +459,7 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 
 ##### Sacramento, California (The Urban Hive)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 Tuesday, November 24, 2015 @ 7p at The Urban Hive  
 🎞 [Slides](http://www.benmvp.com/slides/2015/sacjs/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
@@ -470,7 +470,7 @@ Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
 ##### Orlando, Florida (Hilton Lake Buena Vista)
 
-#### [You don't need JavaScript for that!](http://www.benmvp.com/talks/#you-dont-need-javascript-for-that)
+#### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 Friday, November 20, 2015 @ 2p in Palm 3  
 🎞 [Slides](http://www.benmvp.com/slides/2015/fossetcon/no-js.html) | 🖥 [Code examples](/you-dont-need-js-for-that)
@@ -481,7 +481,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 
 ##### Nashville, Tennessee (Lipscomb University)
 
-#### [Sugar & Spice and everything nice about ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
+#### [Sugar & Spice and everything nice about ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Saturday, November 14, 2015 @ 1p in Ezell 301  
 🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](http://www.benmvp.com/slides/2015/nodevember/es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/nodevember-2015/)
@@ -492,7 +492,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 
 ##### Little Rock, Arkansas (Statehouse Convention Center)
 
-#### [Sugar & Spice and everything nice about ES6](http://www.benmvp.com/talks/#sugar--spice-and-everything-nice-about-es6)
+#### [Sugar & Spice and everything nice about ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Friday, October 16, 2015 @ 1:30p in Fulton  
 🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post](http://www.benmvp.com/little-rock-tech-fest-2015/)
