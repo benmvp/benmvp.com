@@ -23,6 +23,17 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 ----------
 
+### [Hackbright Academy](https://hackbrightacademy.com/)
+
+##### San Francisco, California (Hackbright Academy)
+
+#### [Sweet ES6](/talks/#sweet-es6)
+
+Tuesday, October 17, 2017  
+🖥 [Code examples](https://github.com/benmvp/learning-es6)
+
+----------
+
 ### [Strange Loop 2017](https://thestrangeloop.com/)
 
 ##### St. Louis, Missouri (Peabody Opera House)
@@ -30,6 +41,7 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 #### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Thursday, September 28, 2017 @ 12:30p  
+🖥 [Code examples](https://github.com/benmvp/react-workshop)
 
 ----------
 
@@ -40,6 +52,16 @@ Thursday, September 28, 2017 @ 12:30p
 #### Talk TBD
 
 Sunday, September 24, 2017 @ TBD  
+
+----------
+
+### [Real World React](https://www.meetup.com/Real-World-React/events/242202176/)
+
+##### San Francisco, California (Eventbrite)
+
+#### [An Introduction to React Fiber](/talks/#laypersons-guide-to-react-fiber)
+
+Tuesday, September 19, 2017 @ 7p  
 
 ----------
 
