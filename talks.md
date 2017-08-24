@@ -20,7 +20,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
-- [Layperson’s guide to React Fiber](#laypersons-guide-to-react-fiber)
+- [Layperson's guide to React Fiber](#laypersons-guide-to-react-fiber)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [React + ES.next = ♥](#react--esnext--)
