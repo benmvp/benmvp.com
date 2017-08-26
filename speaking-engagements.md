@@ -15,7 +15,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ### [Nodevember](http://nodevember.org/)
 
-##### Nashville, Tennessee (Vanderbuilt Univrsity)
+##### Nashville, Tennessee (Vanderbilt University)
 
 #### Talk TBD
 
