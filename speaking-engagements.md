@@ -13,6 +13,16 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
+### [Nodevember](http://nodevember.org/)
+
+##### Nashville, Tennessee (Vanderbuilt Univrsity)
+
+#### Talk TBD
+
+Day TBD @ Time TBD (Room TBD)  
+
+----------
+
 ### [Full Stack Toronto 2017](http://2017.fsto.co/)
 
 ##### Toronto, Canada (Historic Automotive Building at Exhibition Place)
