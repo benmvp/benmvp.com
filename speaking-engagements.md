@@ -143,7 +143,7 @@ Thursday, June 1, 2017 @ 2:30p (Mariner A)
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
 Tuesday, May 23, 2017 @ 8p  
-🎞 [Slides](http://www.benmvp.com/slides/2017/modernweb/nav-react.html)
+🎥 [Video](https://www.youtube.com/watch?v=-6gfOJwwXvs&index=10&list=PL-G5r6j4GptGMQWj0ph4FaZqiBnIU9leu) | 🎞 [Slides](http://www.benmvp.com/slides/2017/modernweb/nav-react.html)
 
 ----------
 

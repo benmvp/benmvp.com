@@ -17,6 +17,16 @@ July 10, 2017
 
 ----------
 
+### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
+
+#### Modern Web Meetup
+
+May 23, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-6gfOJwwXvs" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 #### Render Conference 2017
