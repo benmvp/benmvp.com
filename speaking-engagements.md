@@ -67,11 +67,21 @@ Sunday, September 24, 2017 @ TBD
 
 ### [Real World React](https://www.meetup.com/Real-World-React/events/242202176/)
 
-##### San Francisco, California (Eventbrite)
+##### San Francisco, California (StubHub)
 
 #### [An Introduction to React Fiber](/talks/#laypersons-guide-to-react-fiber)
 
 Tuesday, September 19, 2017 @ 7p  
+
+----------
+
+### [OpenRec 2017](http://openrecsf.com/)
+
+##### San Francisco, California (Terra Gallery & Event Venue)
+
+#### Hiring Through Non-Traditional Channels
+
+Wednesday, September 13, 2017 @ 11:25a  
 
 ----------
 
