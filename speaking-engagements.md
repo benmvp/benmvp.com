@@ -61,7 +61,7 @@ Thursday, September 28, 2017 @ 12:30p
 
 #### Talk TBD
 
-Sunday, September 24, 2017 @ TBD  
+Sunday, September 24, 2017 @ 9a  
 
 ----------
 
@@ -92,7 +92,7 @@ Wednesday, September 13, 2017 @ 11:25a
 #### [Layperson’s guide to React Fiber](/talks/#laypersons-guide-to-react-fiber)
 
 Thursday, August 24, 2017 @ 2p  
-🎞 [Slides](http://www.benmvp.com/slides/2017/reactrally/fiber.html)
+🎥 [Video](https://www.youtube.com/watch?v=q6QTxq_pFn0) | 🎞 [Slides](http://www.benmvp.com/slides/2017/reactrally/fiber.html)
 
 ----------
 

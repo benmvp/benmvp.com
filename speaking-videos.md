@@ -7,6 +7,16 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### [Layperson's guide to React Fiber](/talks/#laypersons-guide-to-react-fiber)
+
+#### React Rally 2017
+
+August 24, 2017
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q6QTxq_pFn0" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [React Native + ES.next = ♥](/talks/#react--esnext--)
 
 #### Chain React 2017
