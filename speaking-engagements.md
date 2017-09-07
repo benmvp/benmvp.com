@@ -59,7 +59,7 @@ Thursday, September 28, 2017 @ 12:30p
 
 ##### Boston, Massachusetts (Wayfair)
 
-#### Talk TBD
+#### [React Fiber for the rest of us](/talks/#react-fiber-for-the-rest-of-us)
 
 Sunday, September 24, 2017 @ 9a  
 
@@ -69,7 +69,7 @@ Sunday, September 24, 2017 @ 9a
 
 ##### San Francisco, California (StubHub)
 
-#### [An Introduction to React Fiber](/talks/#laypersons-guide-to-react-fiber)
+#### [React Fiber for the rest of us](/talks/#react-fiber-for-the-rest-of-us)
 
 Tuesday, September 19, 2017 @ 7p  
 
@@ -89,7 +89,7 @@ Wednesday, September 13, 2017 @ 11:25a
 
 ##### Salt Lake City, Utah (Sheraton Salt Lake City Hotel)
 
-#### [Layperson’s guide to React Fiber](/talks/#laypersons-guide-to-react-fiber)
+#### [Layperson’s guide to React Fiber](/talks/#react-fiber-for-the-rest-of-us)
 
 Thursday, August 24, 2017 @ 2p  
 🎥 [Video](https://www.youtube.com/watch?v=q6QTxq_pFn0) | 🎞 [Slides](http://www.benmvp.com/slides/2017/reactrally/fiber.html)

@@ -20,11 +20,11 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
-- [Layperson's guide to React Fiber](#laypersons-guide-to-react-fiber)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [React + ES.next = ♥](#react--esnext--)
 - [React Exposed! 😮](#react-exposed-)
+- [React Fiber for the rest of us](#react-fiber-for-the-rest-of-us)
 - [React Fundamentals Workshop](#react-fundamentals-workshop)
 - [React in style 😎](#react-in-style-)
 - [React Properly](#react-properly)
@@ -104,10 +104,6 @@ _Official talk description about transitioning from React to React Native coming
 >
 > Through missteps and wins, Eventbrite has interviewed, hired and grown the careers of many bootcamp grads. Come and learn some processes we used to successfully bring on junior devs. Or as a junior dev yourself, the types of organizations you should look out for.
 
-### Layperson's guide to React Fiber
-
-> Fiber was introduced in version 16 of React. It is a ground-up rewrite of the React scheduler, typically mis-referred to as the “Virtual DOM.” The Fiber-based scheduler supports “cooperative scheduling” and allows for other output renderers besides the browser DOM. In this session geared towards those familiar with React, let’s learn about what React Fiber is and why it exists through the lens of how it will impact your React development and the performance of your apps at runtime.
-
 ### Native Flexbox
 
 > React Native is a framework for building truly native mobile apps, allowing web developers to leverage their existing JavaScript and React skills to compose rich iOS and Android user interfaces. React Native also uses CSS for styling, particularly Flexbox for layout. Everything is a flex container!
@@ -135,6 +131,10 @@ _(Retired)_
 > Why can't we have "if blocks" in our JSX code? Why do we need to wrap multiple sibling components in a container component? Why do we need to include a "key" attribute on components that are in an array?
 >
 > In this session geared towards those familiar with React, let's answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other "magical" features. Not only will we be able to prevent errors with a clearer understanding of the "magic," but we can potentially boost rendering performance as well.
+
+### React Fiber for the rest of us
+
+> Fiber was introduced in version 16 of React. It is a ground-up rewrite of the React scheduler, typically mis-referred to as the “Virtual DOM.” The Fiber-based scheduler supports “cooperative scheduling” and allows for other output renderers besides the browser DOM. In this session geared towards those familiar with React, let’s learn about what React Fiber is and why it exists through the lens of how it will impact your React development and the performance of your apps at runtime.
 
 ### React Fundamentals Workshop
 
