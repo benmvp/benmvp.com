@@ -13,7 +13,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
-### [Nodevember](http://nodevember.org/)
+### [Nodevember 2017](http://nodevember.org/)
 
 ##### Nashville, Tennessee (Vanderbilt University)
 
@@ -72,6 +72,7 @@ Sunday, September 24, 2017 @ 9a
 #### [React Fiber for the rest of us](/talks/#react-fiber-for-the-rest-of-us)
 
 Tuesday, September 19, 2017 @ 7p  
+🎞 [Slides](http://www.benmvp.com/slides/2017/rwreact/fiber.html)
 
 ----------
 
