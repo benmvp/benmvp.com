@@ -62,6 +62,7 @@ Thursday, September 28, 2017 @ 12:30p
 #### [React Fiber for the rest of us](/talks/#react-fiber-for-the-rest-of-us)
 
 Sunday, September 24, 2017 @ 9a  
+🎞 [Slides](http://www.benmvp.com/slides/2017/reactboston/fiber.html)
 
 ----------
 
