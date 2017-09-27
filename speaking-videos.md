@@ -7,13 +7,23 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
-### [Layperson's guide to React Fiber](/talks/#laypersons-guide-to-react-fiber)
+### [Layperson's guide to React Fiber](/talks/#react-fiber-for-the-rest-of-us)
 
 #### React Rally 2017
 
 August 24, 2017
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/q6QTxq_pFn0" frameborder="0" allowfullscreen></iframe>
+
+----------
+
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
+
+#### NodeSummit 2017
+
+July 27, 2017
+
+<iframe src="https://player.vimeo.com/video/229703092" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ----------
 
@@ -93,7 +103,7 @@ October 18, 2016
 
 July 28, 2016
 
-<iframe src="https://player.vimeo.com/video/180426378?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/180426378" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ----------
 
@@ -113,7 +123,7 @@ July 19, 2016
 
 June 10, 2016
 
-<iframe src="https://player.vimeo.com/video/171319733" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/171319733" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ----------
 
@@ -123,7 +133,7 @@ June 10, 2016
 
 March 11, 2016
 
-<iframe src="https://player.vimeo.com/video/169948346" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/169948346" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ----------
 

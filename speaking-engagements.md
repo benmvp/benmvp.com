@@ -105,7 +105,7 @@ Thursday, August 24, 2017 @ 2p
 #### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 Thursday, July 27, 2017 @ 12p (Fisher East)  
-🎞 [Slides](http://www.benmvp.com/slides/2017/nodesummit/iso-react.html)
+🎥 [Video](https://vimeo.com/229703092) | 🎞 [Slides](http://www.benmvp.com/slides/2017/nodesummit/iso-react.html)
 
 
 ----------
