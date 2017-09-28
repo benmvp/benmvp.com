@@ -51,7 +51,7 @@ Tuesday, October 17, 2017
 #### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Thursday, September 28, 2017 @ 12:30p  
-🖥 [Code examples](https://github.com/benmvp/react-workshop)
+🎞 [Slides](http://www.benmvp.com/slides/2017/strangeloop/react-workshop.html) | 🖥 [Code examples](https://github.com/benmvp/react-workshop)
 
 ----------
 
