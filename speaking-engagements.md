@@ -13,13 +13,23 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2017
 
+### [Hack Reactor](http://hackreactor.cin/)
+
+##### San Francisco California
+
+#### [Why choose React?](/talks/#why-choose-react)
+
+Thursday, December 2, 2017 @ TBD  
+
+----------
+
 ### [Nodevember 2017](http://nodevember.org/)
 
 ##### Nashville, Tennessee (Vanderbilt University)
 
-#### Talk TBD
+#### [Why choose React?](/talks/#why-choose-react)
 
-Day TBD @ Time TBD (Room TBD)  
+Tuesday, November 28, 2017 @ TBD (TBD)  
 
 ----------
 
@@ -40,7 +50,7 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 #### [Sweet ES6](/talks/#sweet-es6)
 
 Tuesday, October 17, 2017  
-🖥 [Code examples](https://github.com/benmvp/learning-es6)
+🎞 [Slides](http://www.benmvp.com/slides/2017/hackbright/sweet-es6.html) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
 ----------
 
