@@ -40,6 +40,7 @@ Tuesday, November 28, 2017 @ TBD (TBD)
 #### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 Monday, October 23, 2017 @ 4p (Room 206AB)  
+🎞 [Slides](http://www.benmvp.com/slides/2017/fstoco/iso-react.html)
 
 ----------
 
