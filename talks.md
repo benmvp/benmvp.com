@@ -18,7 +18,8 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 - [The async future is present](#the-async-future-is-present)
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
-- [ES.next features that’ll make ya 💃🕺🏾](#esnext-features-thatll-make-ya--)
+- [Components of the highest order ⚔ ](#components-of-the-highest-order-)
+- [ES.next features that’ll make ya 💃🕺🏾](#esnext-features-thatll-make-ya-)
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
 - [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
@@ -61,6 +62,10 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 > How do you convince Management that React is the right strategy? Should you transition our app(s) all at once? How do you train up the team? Does your app need to be “isomorphic”? What are some coding best practices to follow?
 >
 > For the past year, Eventbrite has been migrating our frontend stack from one centered around Backbone/Marionette over to React. Learn from both our wins and challenges in switching so that you too can make a successful transition.
+
+### Components of the highest order ⚔ 
+
+_Official talk description about React higher-order components coming soon!_
 
 
 ### Demystifying Conference Speaking
