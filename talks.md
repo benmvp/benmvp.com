@@ -18,7 +18,9 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 - [The async future is present](#the-async-future-is-present)
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
+- [ES.next features that’ll make ya 💃🕺🏾](#esnext-features-thatll-make-ya--)
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
+- [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
@@ -78,6 +80,13 @@ _(Retired)_
 >
 > Experience with JavaScript will help you get the most out of this session, but you don't have to be a JS ninja to leave confident to begin using ES6 right now. We'll cover a little history behind ECMAScript and uncover a broad range of new features, like arrow functions, modules, and rest parameters, that will have you itching to start developing your favorite app in ES6.
 
+### ES.next features that’ll make ya 💃🕺🏾
+
+> JavaScript is evolving quickly. The mega ES6 specification was released back in 2015, with ES2016 and ES2017 coming in following years. New versions of ECMAScript are now released on a yearly basis with new features going through a 4-stage proposal process. But with build tooling like Babel, we can leverage functionality slated for future versions right now to write even clearer and more concise JavaScript code.
+> 
+> Familiarity with modern JavaScript features will help you get the most of this session where we’ll discuss class properties, null property accessing, and more. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
+
+
 ### ES.next Fundamentals Workshop
 
 > JavaScript is evolving quickly. The mega ES6 specification was released in 2015 and is quickly being implemented by modern JS interpreters. New versions of ECMAScript will now be released on a yearly basis with new features going through a 4-stage proposal process. We can leverage features in ES6, ES2016, and those slated for future versions right now to write even clearer and more concise JavaScript code.
@@ -87,6 +96,10 @@ _(Retired)_
 ### Flexing your Flexbox muscles
 
 > Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully the CSS flexible box layout module, aka Flexbox, enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Even Bootstrap and Foundation have included it in the latest versions of their layout systems. Let's deep dive into Flexbox: what it is, why you should use it, how it's configured, and where it's most useful.
+
+### Help! My React app is slowwwww! 🐢
+
+> React’s sophisticated reconciler (aka the “Virtual DOM”) makes updates to the UI feel fast because it optimizes interactions with the DOM. As a result, we no longer have to worry about how to transition our UI from one state to the next. However, the reconciler is not a silver bullet; even the new Fiber Reconciler. Our React apps can still get sluggish, especially as they grow in size and data. Let’s discuss some causes for slow-downs and tools to diagnose problems so that we can speed up our apps.
 
 ### Isomorphic React sans Node??
 
