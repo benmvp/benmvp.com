@@ -11,6 +11,19 @@ redirect_from: /speak
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. I haven't been speaking publicly for long, but I've thoroughly enjoyed it thus far. I look forward to where this journey will take me!
 
+## 2018
+
+### [Sabio](http://www.sabio.la/)
+
+##### Los Angeles, California (Antioch University)
+
+#### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
+
+Tuesday, January 23, 2017 @ 7p  
+🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+
+----------
+
 ## 2017
 
 ### [Hack Reactor](http://hackreactor.cin/)
