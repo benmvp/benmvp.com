@@ -42,7 +42,8 @@ Thursday, December 2, 2017 @ TBD
 
 #### [Why choose React?](/talks/#why-choose-react)
 
-Tuesday, November 28, 2017 @ TBD (TBD)  
+Tuesday, November 28, 2017 @ 5p (Commodore Ballroom)  
+🎞 [Slides](www.benmvp.com/slides/2017/nodevember/why-react.html)
 
 ----------
 
