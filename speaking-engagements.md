@@ -224,8 +224,7 @@ Thursday, 30 March 2017 @ 11:55
 #### [React Exposed! 😮](/talks/#react-exposed-)
 
 Friday, March 24, 2017 @ 10a (ReactJS track)  
-🖥 [Code examples](https://github.com/benmvp/react-exposed)
-🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/react-exposed.html)
+🎞 [Slides](http://www.benmvp.com/slides/2017/jazzcon/react-exposed.html) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
