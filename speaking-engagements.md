@@ -32,7 +32,8 @@ Tuesday, January 23, 2017 @ 7p
 
 #### [Why choose React?](/talks/#why-choose-react)
 
-Thursday, December 7, 2017 @ TBD  
+Thursday, December 7, 2017 @ 8p  
+🎞 [Slides](http://www.benmvp.com/slides/2017/telegraph/why-react.html)
 
 ----------
 
