@@ -23,6 +23,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
 - [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
+- [Let’s web dev like it’s 1999!](#lets-web-dev-like-its-1999)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [React + ES.next = ♥](#react--esnext--)
@@ -47,7 +48,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 
 #### Server-side
 
-- [Isomorphic React sans Node??](#isomorphic-react-sans-node)
+- [Isomorphic React sans Node?? 🤔](#isomorphic-react-sans-node-)
 
 -----
 
@@ -106,7 +107,7 @@ _(Retired)_
 
 > React’s sophisticated reconciler (aka the “Virtual DOM”) makes updates to the UI feel fast because it optimizes interactions with the DOM. As a result, we no longer have to worry about how to transition our UI from one state to the next. However, the reconciler is not a silver bullet; even the new Fiber Reconciler. Our React apps can still get sluggish, especially as they grow in size and data. Let’s discuss some causes for slow-downs and tools to diagnose problems so that we can speed up our apps.
 
-### Isomorphic React sans Node??
+### Isomorphic React sans Node?? 🤔
 
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn't run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
 
@@ -121,6 +122,13 @@ _Official talk description about transitioning from React to React Native coming
 > But how do you interview these junior developers when they don’t have any prior professional experience? And once hired, how do you mentor them in order to set them up for success? What are some ideas for helping them grow in their career. Is it even all worth it?
 >
 > Through missteps and wins, Eventbrite has interviewed, hired and grown the careers of many bootcamp grads. Come and learn some processes we used to successfully bring on junior devs. Or as a junior dev yourself, the types of organizations you should look out for.
+
+### Let’s web dev like it’s 1999!
+
+> When we “view source” our modern web applications, the code looks nothing like what we originally wrote. At a minimum, it’s gone through linting, transpilation, obfuscation, minification, and bundling. And in order to build our beautifully designed apps with sophisticated interactions, we leverage the latest features in HTML, CSS and JavaScript available in our modern evergreen browsers.
+> 
+> However, when web development was in its infancy two decades ago, things were drastically different. Sites had hit counters, used frames for navigation, and were updated manually via FTP. We used the blink tag and scrolling marquees! Let’s take a walk down memory lane (or have a history lesson) and have some laughs cringing at how sites looked, how they were built, and the rudimentary tooling we had to develop them.
+
 
 ### Native Flexbox
 
