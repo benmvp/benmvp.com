@@ -17,7 +17,7 @@ August 24, 2017
 
 ----------
 
-### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node-)
 
 #### NodeSummit 2017
 
@@ -47,7 +47,7 @@ May 23, 2017
 
 ----------
 
-### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node-)
 
 #### Render Conference 2017
 
@@ -67,7 +67,7 @@ March 13, 2017
 
 ----------
 
-### [[React Exposed! 😮](talks/#react-exposed-)
+### [React Exposed! 😮](talks/#react-exposed-)
 
 #### Forward JS 2017
 
@@ -87,7 +87,7 @@ January 27, 2017
 
 ----------
 
-### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
+### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node-)
 
 #### Real World React
 
