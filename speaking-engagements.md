@@ -13,16 +13,36 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2018
 
+### [Reactathon Fundamentals Conference](http://www.reactathon.com/)
+
+##### San Francisco, California (Palace of the Fine Arts)
+
+#### Welcome to React (Opening Keynote)
+
+Tuesday, March 20, 2018 @ TBD  
+
+----------
+
+### [Reactathon Conference](http://www.reactathon.com/)
+
+##### San Francisco, California (TBD)
+
+#### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
+
+TBD @ TBD  
+🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+
+----------
+
 ### [Sabio](http://www.sabio.la/)
 
 ##### Los Angeles, California (Antioch University)
 
 #### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
-Tuesday, January 23, 2017 @ 7p  
+Tuesday, January 23, 2018 @ 7p  
 🖥 [Workshop code](https://github.com/benmvp/react-workshop)
 
-----------
 
 ## 2017
 
@@ -70,7 +90,7 @@ Tuesday, October 17, 2017
 
 ----------
 
-### [Strange Loop 2017](https://thestrangeloop.com/)
+### [Strange Loop 2017](https://www.thestrangeloop.com/2017/sessions.html)
 
 ##### St. Louis, Missouri (Peabody Opera House)
 
