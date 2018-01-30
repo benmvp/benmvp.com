@@ -27,9 +27,9 @@ Tuesday, March 20, 2018 @ TBD
 
 ##### San Francisco, California (TBD)
 
-#### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
+#### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
-TBD @ TBD  
+Monday, March 19, 2018 @ 9a  
 🖥 [Workshop code](https://github.com/benmvp/react-workshop)
 
 ----------

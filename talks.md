@@ -31,7 +31,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [React + ES.next = ♥](#react--esnext--)
 - [React Exposed! 😮](#react-exposed-)
 - [React Fiber for the rest of us](#react-fiber-for-the-rest-of-us)
-- [React Fundamentals Workshop](#react-fundamentals-workshop)
+- [React FUNdamentals Workshop](#react-fundamentals-workshop)
 - [React in style 😎](#react-in-style-)
 - [React Properly](#react-properly)
 - [Sweet ES6](#sweet-es6)
