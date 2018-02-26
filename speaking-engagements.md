@@ -13,19 +13,13 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2018
 
-### [Reactathon Fundamentals Conference](http://www.reactathon.com/)
+### [Reactathon 2018](http://www.reactathon.com/)
 
 ##### San Francisco, California (Palace of the Fine Arts)
 
 #### Welcome to React (Opening Keynote)
 
-Tuesday, March 20, 2018 @ TBD  
-
-----------
-
-### [Reactathon Conference](http://www.reactathon.com/)
-
-##### San Francisco, California (TBD)
+Tuesday, March 20, 2018 @ 9a  
 
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
@@ -34,7 +28,7 @@ Monday, March 19, 2018 @ 9a
 
 ----------
 
-### [Sabio](http://www.sabio.la/)
+### [Sabio LA](http://www.sabio.la/)
 
 ##### Los Angeles, California (Antioch University)
 

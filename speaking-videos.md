@@ -7,6 +7,16 @@ redirect_from: /videos
 
 Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
 
+### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
+
+#### Sabio LA
+
+January 23, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VjI3MoDoJ-o" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [Layperson's guide to React Fiber](/talks/#react-fiber-for-the-rest-of-us)
 
 #### React Rally 2017
