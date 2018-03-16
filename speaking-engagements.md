@@ -13,11 +13,36 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2018
 
+### [Framework Summit 2018](https://www.frameworksummit.com/)
+
+##### Park City, Utah (DoubleTree Inn)
+
+#### Talk TBD
+
+October 2/3, 2018 @ TBD  
+
+----------
+
+### [React Alicante 2018](http://reactalicante.es/)
+
+##### Alicante, Spain (TBD)
+
+#### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
+
+September 14/15, 2018 @ TBD  
+
+#### ["Minimally-painful" React-Redux testing Workshop](/talks/#minimally-painful-react-redux-testing-workshop)
+
+Thursday, September 13, 2018 @ TBD  
+🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+
+----------
+
 ### [Reactathon 2018](http://www.reactathon.com/)
 
 ##### San Francisco, California (Palace of the Fine Arts)
 
-#### Welcome to React (Opening Keynote)
+#### [Why React?](/talks/#why-choose-react)
 
 Tuesday, March 20, 2018 @ 9a  
 
@@ -36,6 +61,8 @@ Monday, March 19, 2018 @ 9a
 
 Tuesday, January 23, 2018 @ 7p  
 🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+
+----------
 
 
 ## 2017

@@ -24,6 +24,7 @@ You can also check out my [Speaking Engagements](/speaking-engagements/) past an
 - [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
 - [isReactDev === isMobileDev](#isreactdev--ismobiledev)
 - [Let's web dev like it's 1999!](#lets-web-dev-like-its-1999)
+- ["Minimally-painful" React-Redux testing Workshop](#minimally-painful-react-redux-testing-workshop)
 - ["Minimally-painful" UI testing in React](#minimally-painful-ui-testing-in-react)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
@@ -130,6 +131,19 @@ _Official talk description about transitioning from React to React Native coming
 > When we “view source” our modern web applications, the code looks nothing like what we originally wrote. At a minimum, it's gone through linting, transpilation, obfuscation, minification, and bundling. And in order to build our beautifully designed apps with sophisticated interactions, we leverage the latest features in HTML, CSS and JavaScript available in our modern evergreen browsers.
 > 
 > However, when web development was in its infancy two decades ago, things were drastically different. Sites had hit counters, used frames for navigation, and were updated manually via FTP. We used the blink tag and scrolling marquees! Let's take a walk down memory lane (or have a history lesson) and have some laughs cringing at how sites looked, how they were built, and the rudimentary tooling we had to develop them.
+
+### "Minimally-painful" React-Redux testing Workshop
+
+> Let’s be honest, no one* enjoys writing unit tests... especially for UI code. However, React’s architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all. In this workshop, we’ll learn to:
+>
+> - Test component rendered UI & event handlers
+> - Test Redux reducers & synchronous/asynchronous actions
+> - Stub libraries that cannot be run outside of the browser
+> - Test the integration of components within entire app
+> - And more...
+> 
+> Prior experience with React is important to hit the ground running. You’ll leave the workshop with all the fundamentals you need to properly test your own apps with React. Testing probably still won’t be glamorous... but with these lessons it shouldn’t be painful either!
+
 
 ### "Minimally-painful" UI testing in React
 
