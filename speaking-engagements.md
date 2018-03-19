@@ -44,12 +44,12 @@ Thursday, September 13, 2018 @ TBD
 
 #### [Why React?](/talks/#why-choose-react)
 
-Tuesday, March 20, 2018 @ 9a  
+Tuesday, March 20, 2018 @ 10:15a  
 
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
-Monday, March 19, 2018 @ 9a  
-🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+Monday, March 19, 2018 @ 10a  
+🖥 [Workshop code](https://github.com/benmvp/react-workshop) | 🎞 [Slides](http://www.benmvp.com/slides/2018/reactathon/react-workshop.html)
 
 ----------
 
@@ -60,7 +60,7 @@ Monday, March 19, 2018 @ 9a
 #### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Tuesday, January 23, 2018 @ 7p  
-🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+🖥 [Workshop code](https://github.com/benmvp/react-workshop) | 🎞 [Slides](http://www.benmvp.com/slides/2018/sabiola/react-workshop.html)
 
 ----------
 
