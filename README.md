@@ -1,3 +1,3 @@
 # Ben Ilegbodu
 
-Jekyll-based blog: http://www.benmvp.com
+Gatsby-based blog: http://www.benmvp.com
