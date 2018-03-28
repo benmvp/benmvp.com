@@ -1,31 +1,31 @@
-const colors = require("../../src/styles/colors");
+const colors = require('../../src/styles/colors')
 
 module.exports = {
-  homeTitle: "Personal blog",
-  siteTitle: "PersonalBlog - a blog starter for GatsbyJS",
-  shortSiteTitle: "PersonalBlog GatsbyJS Starter",
-  siteDescription: "PersonalBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
-  pathPrefix: "",
-  siteImage: "preview.jpg",
-  siteLanguage: "en",
+  homeTitle: 'Ben Ilegbodu',
+  siteTitle: 'Ben Ilegbodu',
+  shortSiteTitle: "Ben Ilegbodu's personal blog",
+  siteDescription:
+    'Christ follower, husband & father of ✌. UI Architect & Speaker. ES6+, React & CSS3. Basketball, DIY & movies. Principal Frontend Engineer @ Eventbrite',
+  siteUrl: 'http://www.benmvp.com',
+  pathPrefix: '',
+  siteImage: 'preview.jpg',
+  siteLanguage: 'en',
   // author
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: 'Ben Ilegbodu',
+  authorTwitterAccount: 'benmvp',
   // info
-  infoTitle: "greg lobinski",
-  infoTitleNote: "personal blog",
+  infoTitle: 'Ben Ilegbodu',
+  infoTitleNote: 'UI Architect',
   // manifest.json
-  manifestName: "PersonalBlog - a blog starter for GatsbyJS",
-  manifestShortName: "PersonalBlog", // max 12 characters
-  manifestStartUrl: "/",
+  manifestName: 'Ben Ilegbodu',
+  manifestShortName: 'BenMVP', // max 12 characters
+  manifestStartUrl: '/',
   manifestBackgroundColor: colors.bg,
   manifestThemeColor: colors.bg,
-  manifestDisplay: "standalone",
+  manifestDisplay: 'standalone',
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
-  ]
-};
+    {name: 'twitter', url: 'https://twitter.com/benmvp'},
+    {name: 'github', url: 'https://github.com/benmvp'},
+  ],
+}

@@ -1,78 +1,78 @@
-import React from "react";
-import PropTypes from "prop-types";
-import injectSheet from "react-jss";
-import { connect } from "react-redux";
-require("core-js/fn/array/find");
+import React from 'react'
+import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
+import {connect} from 'react-redux'
+require('core-js/fn/array/find')
 
-import SocialIcons from "./SocialIcons";
-import InfoMenu from "./InfoMenu";
-import InfoHeader from "./InfoHeader";
-import InfoText from "./InfoText";
-import StackIcons from "./StackIcons";
+import SocialIcons from './SocialIcons'
+import InfoMenu from './InfoMenu'
+import InfoHeader from './InfoHeader'
+import InfoText from './InfoText'
+import StackIcons from './StackIcons'
 
-import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
-import { setNavigatorPosition, setNavigatorShape } from "../../state/store";
+import {featureNavigator, moveNavigatorAside} from './../../utils/shared'
+import {setNavigatorPosition, setNavigatorShape} from '../../state/store'
 
 const styles = theme => ({
   infoBox: {
-    display: "none",
+    display: 'none',
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      display: "block",
+      display: 'block',
       color: theme.info.colors.text,
       background: theme.info.colors.background,
-      position: "absolute",
+      position: 'absolute',
       left: 0,
       top: 0,
       width: `${theme.info.sizes.width}px`,
-      height: "100%",
-      padding: "20px 40px",
-      "&::after": {
+      height: '100%',
+      padding: '20px 40px',
+      '&::after': {
         content: `""`,
-        position: "absolute",
+        position: 'absolute',
         right: 0,
-        top: "20px",
-        bottom: "20px",
-        width: "1px",
-        borderRight: `1px solid ${theme.base.colors.lines}`
-      }
-    }
+        top: '20px',
+        bottom: '20px',
+        width: '1px',
+        borderRight: `1px solid ${theme.base.colors.lines}`,
+      },
+    },
   },
   wrapper: {
-    position: "absolute",
+    position: 'absolute',
     top: `${theme.info.sizes.headerHeight}px`,
     bottom: 0,
     left: 0,
-    width: "100%",
-    padding: "0 40px 0",
-    willChange: "opacity, bottom",
-    transition: "bottom .5s 0s",
+    width: '100%',
+    padding: '0 40px 0',
+    willChange: 'opacity, bottom',
+    transition: 'bottom .5s 0s',
     opacity: 1,
-    transitionTimingFunction: "ease",
-    ".is-aside.closed &": {
-      bottom: `${theme.navigator.sizes.closedHeight}px`
+    transitionTimingFunction: 'ease',
+    '.is-aside.closed &': {
+      bottom: `${theme.navigator.sizes.closedHeight}px`,
     },
-    ".moving-featured &": {
-      bottom: 0
-    }
-  }
-});
+    '.moving-featured &': {
+      bottom: 0,
+    },
+  },
+})
 
 class InfoBox extends React.Component {
-  avatarOnClick = featureNavigator.bind(this);
-  menulinkOnClick = moveNavigatorAside.bind(this);
+  avatarOnClick = featureNavigator.bind(this)
+  menulinkOnClick = moveNavigatorAside.bind(this)
 
   expandOnClick = e => {
-    this.props.setNavigatorShape("closed");
-  };
+    this.props.setNavigatorShape('closed')
+  }
 
   render() {
-    const { classes, parts, pages, navigatorPosition, navigatorShape } = this.props;
-    const info = parts.find(el => el.node.frontmatter.title === "info");
+    const {classes, parts, pages, navigatorPosition, navigatorShape} = this.props
+    const info = parts.find(el => el.node.frontmatter.title === 'info')
 
     return (
       <aside
-        className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ""} 
-        ${navigatorShape ? navigatorShape : ""}`}
+        className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ''} 
+        ${navigatorShape ? navigatorShape : ''}`}
       >
         {info && (
           <InfoHeader
@@ -88,7 +88,7 @@ class InfoBox extends React.Component {
           <StackIcons />
         </div>
       </aside>
-    );
+    )
   }
 }
 
@@ -99,20 +99,20 @@ InfoBox.propTypes = {
   navigatorPosition: PropTypes.string.isRequired,
   navigatorShape: PropTypes.string.isRequired,
   isWideScreen: PropTypes.bool.isRequired,
-  setNavigatorShape: PropTypes.func.isRequired
-};
+  setNavigatorShape: PropTypes.func.isRequired,
+}
 
 const mapStateToProps = (state, ownProps) => {
   return {
     navigatorPosition: state.navigatorPosition,
     navigatorShape: state.navigatorShape,
-    isWideScreen: state.isWideScreen
-  };
-};
+    isWideScreen: state.isWideScreen,
+  }
+}
 
 const mapDispatchToProps = {
   setNavigatorPosition,
-  setNavigatorShape
-};
+  setNavigatorShape,
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBox));
+export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBox))

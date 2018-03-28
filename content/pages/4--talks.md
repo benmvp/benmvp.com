@@ -1,10 +1,8 @@
 ---
-layout: page
 title: Tech Talks
-permalink: /talks/
 ---
 
-![Speaking at NDC Oslo 2016](/img/ndcoslo-closeup.jpg)
+![Speaking at NDC Oslo 2016](./ndcoslo-closeup.jpg)
 
 Below is a list of all of my talks. Most of them I've either given or will give at an upcoming [speaking engagement](/speaking-engagements/). However, there are some that I am still hoping to give at some future conference and/or meetup!
 
@@ -249,6 +247,5 @@ _(Retired)_
 _(Retired)_
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should've made old development strategies obsolete, and yet we're still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
-> 
-> 
+>
 > In this session, let's look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We'll discuss CSS3 transitions & animations, new HTML5 attributes, and other "tricks" to offload JavaScript functionality to the browser's rendering engine for more performant web applications. Whether you're a seasoned JavaScripter or just getting started, you'll leave the session with fresh ideas to work with.
