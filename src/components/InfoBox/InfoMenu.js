@@ -38,13 +38,10 @@ const InfoMenu = props => {
             className={classes.link}
             data-shape="closed"
           >
-            {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
+            {frontmatter.menuTitle || frontmatter.title}
           </Link>
         )
       })}
-      <Link to="/contact/" onClick={linkOnClick} className={classes.link} data-shape="closed">
-        Contact
-      </Link>
     </nav>
   )
 }

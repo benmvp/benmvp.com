@@ -1,65 +1,67 @@
-import React from "react";
-import PropTypes from "prop-types";
-import injectSheet from "react-jss";
+import React from 'react'
+import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
   FacebookShareCount,
-  GooglePlusShareCount,
-  LinkedinShareCount,
   FacebookIcon,
-  TwitterIcon,
+  GooglePlusShareButton,
+  GooglePlusShareCount,
   GooglePlusIcon,
-  LinkedinIcon
-} from "react-share";
+  LinkedinShareButton,
+  LinkedinShareCount,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  EmailShareButton,
+  EmailIcon,
+} from 'react-share'
 
-import config from "../../../content/meta/config";
+import config from '../../../content/meta/config'
 
 const styles = theme => ({
   share: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "1em 0 0",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '1em 0 0',
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      flexDirection: "row"
-    }
+      flexDirection: 'row',
+    },
   },
   links: {
-    display: "flex",
-    flexDirection: "row",
-    "& .SocialMediaShareButton": {
-      margin: "0 .8em",
-      cursor: "pointer"
-    }
+    display: 'flex',
+    flexDirection: 'row',
+    '& .SocialMediaShareButton': {
+      margin: '0 .8em',
+      cursor: 'pointer',
+    },
   },
   label: {
-    fontSize: "1.2em",
-    margin: "0 1em 1em",
+    fontSize: '1.2em',
+    margin: '0 1em 1em',
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      margin: "0 1em"
-    }
-  }
-});
+      margin: '0 1em',
+    },
+  },
+})
 
 class PostShare extends React.Component {
   render() {
-    const { post, classes, slug } = this.props;
-    const { excerpt, frontmatter } = post;
-    const { title } = frontmatter;
-    const url = config.siteUrl + config.pathPrefix + slug;
+    const {post, classes, slug} = this.props
+    const {excerpt, frontmatter} = post
+    const {title} = frontmatter
+    const url = config.siteUrl + config.pathPrefix + slug
 
-    const iconSize = 36;
-    const filter = count => (count > 0 ? count : "");
+    const iconSize = 36
+    const filter = count => (count > 0 ? count : '')
 
     return (
       <div className={classes.share}>
         <span className={classes.label}>SHARE</span>
         <div className={classes.links}>
-          <TwitterShareButton url={url} title={title}>
+          <TwitterShareButton url={url} title={title} via={config.authorTwitterAccount}>
             <TwitterIcon round size={iconSize} />
           </TwitterShareButton>
           <GooglePlusShareButton url={url}>
@@ -84,16 +86,19 @@ class PostShare extends React.Component {
               {count => <div className="share-count">{filter(count)}</div>}
             </LinkedinShareCount>
           </LinkedinShareButton>
+          <EmailShareButton url={url} subject={title}>
+            <EmailIcon round size={iconSize} />
+          </EmailShareButton>
         </div>
       </div>
-    );
+    )
   }
 }
 
 PostShare.propTypes = {
   post: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  slug: PropTypes.string.isRequired
-};
+  slug: PropTypes.string.isRequired,
+}
 
-export default injectSheet(styles)(PostShare);
+export default injectSheet(styles)(PostShare)
