@@ -41,9 +41,6 @@ module.exports = {
         : '',
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : '',
     },
-    facebook: {
-      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : '',
-    },
   },
   plugins: [
     {
@@ -175,7 +172,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        trackingId: 'UA-65375615-1',
       },
     },
     {

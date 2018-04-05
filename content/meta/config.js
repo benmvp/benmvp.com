@@ -28,4 +28,6 @@ module.exports = {
     {name: 'twitter', url: 'https://twitter.com/benmvp'},
     {name: 'github', url: 'https://github.com/benmvp'},
   ],
+  // disqus
+  disqusShortname: 'benmvp',
 }
