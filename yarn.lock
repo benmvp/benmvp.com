@@ -5139,6 +5139,12 @@ gatsby-plugin-svgr@^0.2.1:
   dependencies:
     svgr "*"
 
+gatsby-plugin-twitter@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-1.0.20.tgz#d6985395a51c7803a1fb35e9ef050798551cbea5"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-react-router-scroll@^1.0.12:
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.14.tgz#7e3b59c2266772030c6bfeaa8914c71dd3c12c59"
