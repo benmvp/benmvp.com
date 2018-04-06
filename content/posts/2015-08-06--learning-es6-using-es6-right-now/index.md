@@ -1,18 +1,15 @@
 ---
-layout: post
-title: "Learning ES6: Using ES6 right now"
-date: 2015-08-06
+title: Using ES6 right now
+subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
-categories: learning-es6
+category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, transpilers, babel, traceur]
-permalink: /learning-es6-using-es6-right-now/
-header_image: https://raw.githubusercontent.com/babel/logo/master/babel.png
-redirect_from: /2015/08/learning-es6-using-es6-right-now.html
+cover: https://raw.githubusercontent.com/babel/logo/master/babel.png
 ---
 
-![Babel logo]({{page.header_image}})
-
 So can I use ECMAScript 6 functionality right now? That’s the question everyone is asking these days. Many times when there is new browser functionality (like ES5, HTML5 or CSS3), advocates will spend a lot of time outlining all the new features and how great they are. But then at the end, you find out: "oh, but you can’t really use this functionality yet unless you using the latest Canary build that was just released yesterday." Talk about a letdown.
+
+![Babel logo]({{page.header_image}})
 
 So instead of diving right into each of its features, I would like to first take a look at the various tools we can leverage to start using ES6 right now in a production environment. Then, as we go through each of the ES6 features, we can have conversations about which JavaScript engines or transpilers support the functionality and whether or not it’s safe for us to use. Sound like a plan?
 

@@ -136,7 +136,6 @@ class ListItem extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const {
       classes,
       post: {node: {fields: {slug}, frontmatter: {cover, category, title, subTitle}}},

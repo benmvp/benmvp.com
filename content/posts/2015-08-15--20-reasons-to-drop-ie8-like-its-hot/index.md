@@ -1,18 +1,13 @@
 ---
-layout: post
 title: "20 reasons to drop IE8 like it's hot"
-date: 2015-08-15
-author: Ben Ilegbodu
-categories: web-development
+category: "web-development"
 tags: [browsers, chrome, css3, edge, es5, es6, firefox, html5, ie10, ie8, ie9, javascript, opera, safari]
-permalink: /20-reasons-to-drop-ie8-like-its-hot/
-header_image: http://cdn2.business2community.com/wp-content/uploads/2014/08/rip-IE-8.jpg
-redirect_from: /2015/08/20-reasons-to-drop-ie8-like-its-hot.html
+cover: rip-ie8.jpg
 ---
 
-![RIP IE 8]({{page.header_image}})
-
 Ah, good ol’ IE8. I’m taking a break from the [_Learning ES6_ series](/learning-es6-series/) to talk about how we should stop supporting the browser that everyone loves to hate: Internet Explorer 8. The bane of our collective existence as web developers. Whether you’re a developer, designer or manager, you know you desperately want to stop supporting it. In this blog post I want to build a case against supporting IE8, examining empirical facts as well as qualitative feelings. My hope is that afterwards you will be well-equipped to make a compelling argument for dropping IE8 like it’s hot.
+
+![RIP IE 8](rip-ie8.jpg)
 
 Despite the playful title of this blog post, this topic is serious business. I feel that we as developers are wasting our time supporting IE8. But there are very legitimate reasons why it’s still supported and why it’s difficult to stop supporting it. So instead of just having a soapbox bash-fest complaining about IE8, let’s instead treat this situation like a court case. We’ll present a case so compelling against IE8 that the judge (aka the boss) will have no choice but to rule in our favor. Cue that _Law & Order_ music!
 
@@ -54,7 +49,7 @@ Before we bury Internet Explorer 8 under a mountain of evidence, let’s give it
 
 ### Exhibit 1: Windows XP needs IE8
 
-<img alt="Microsoft Windows XP logo" border="0" src="http://guias.argmu.net/wp-content/uploads/2015/03/xp.png" height="200" title="" width="200" />
+![Microsoft Windows XP logo](windows-xp-logo.png)
 
 Essentially what it boils down to is that Windows XP users cannot upgrade their Internet Explorer browser past IE8. Internet Explorer 9 won’t work on Windows XP. Furthermore, newer versions of Windows have either been terrible (like Windows Vista & Windows 8) or have much higher system requirements (like the new Windows 10). This means that XP users have trouble upgrading to an operating system that supports a higher version of Internet Explorer. Their only option is to get a newer computer, which is costly whether they are an individual or part of a company.
 
@@ -89,7 +84,7 @@ So for those users who are able to switch, but are just unaware that they can do
 
 ### Exhibit 3: IE8 has minimal traffic
 
-<a href="/img/StatCounter-browser_version_partially_combined-ww-quarterly-20152-20153-bar.png"><img alt="Global browser statistics" border="0" height="258" src="/img/StatCounter-browser_version_partially_combined-ww-quarterly-20152-20153-bar.png" title="" width="400" /></a>
+![Top 12 browser versions combining from Q2 to Q3 2015](statcounter-browser-usage-bar-chart.png)
 
 The defense mentioned that IE8 makes up about 2% of traffic. Well, that’s a really tiny percentage! And in fact that actual number is [1.91% of worldwide traffic](http://gs.statcounter.com/#all-browser_version_partially_combined-ww-quarterly-201502-201503-bar) across all devices and is steadily dropping monthly according to StatCounter. It is the 8th most trafficked browser when you group the various Chrome and Firefox evergreen versions together. Other notable stats:
 
@@ -146,8 +141,7 @@ Microsoft on its official ["stop using Windows XP"](https://www.microsoft.com/en
 
 ### Exhibit 7: Windows XP and https don’t mix (well)
 
-<img alt="HTTPS Everywhere logo" border="0" height="65" src="https://www.eff.org/files/https-everywhere2.jpg" title="" width="320" />
-
+![HTTPS Everywhere logo](https-everywhere-logo.jpg)
 
 At [Google I/O 2014](https://www.google.com/events/io), Google called for ["HTTPS everywhere"](https://www.youtube.com/watch?v=cBhZ6S0PFCY) on the web. Every site should provide extra security by running their entire site on https. Gone are the days when log-in and checkout  were the only portions of the site in https. Google is also starting to use [https as a ranking signal](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html).
 
@@ -170,7 +164,7 @@ We also learned in the [Using ES6 right now](/learning-es6-using-es6-right-now/)
 
 ### Exhibit 9: IE8 has no HTML5 support
 
-<img alt="HTML5 logo" border="0" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" height="200" title="" width="200" />
+![HTML5 logo](html5-logo.png)
 
 The fifth revision of the HTML standard (aka [HTML5](https://en.wikipedia.org/wiki/HTML5)) was officially completed and released in October 2014. However a lot of its functionality had made its way to browsers long before. IE8 does not support any HTML5. Neither does IE9. IE10 only supports a little bit.
 
@@ -192,8 +186,7 @@ A lot of these HTML5 features do come with JavaScript shims via external librari
 
 ### Exhibit 10: IE8 has no CSS3 support
 
-<div class="separator" style="clear: both; text-align: center;">
-<img alt="CSS3 logo" border="0" src="http://www.rantech.co.za/ranBlog/wp-content/uploads/2012/08/CSS3_logo.png" height="200" title="" width="140" /></div>
+![CSS3 logo](css3-logo.png)
 
 
 Coupled with HTML5 was CSS3, which greatly expanded the expressiveness and capabilities of CSS. Many things that developers had to resort to coding in JavaScript could now be done more optimally in CSS. Here’s a tasty list:
@@ -214,7 +207,7 @@ Coupled with HTML5 was CSS3, which greatly expanded the expressiveness and capab
 
 ### Exhibit 11: IE8 has no ECMAScript 6 support
 
-<img alt="ES6 logo" border="0" src="http://blog.makersquare.com/wp-content/uploads/2015/06/es6-logo.png" title="" width="188" />
+![ES6 logo](es6-logo.png)
 
 Naturally if IE8 doesn’t support ES5, it’s definitely not going to support ES6. You can find the full features list in the [Goals & Features of ECMAScript 6](http://caniuse.com/#feat=css-animation) blog post. And remember, since IE8 doesn't support ES5 there's a possibility that your transpiled ES6 code will not work in IE8 either. Way to hold the Web back, IE8...
 
@@ -226,7 +219,7 @@ Graceful degradation worked well for what can be described as "icing" features. 
 
 ### Exhibit 13: Mobile first fails</h3>
 
-<img alt="Mobile-first logo" border="0" src="http://blog.usabilla.com/wp-content/uploads/mobile-first.png" height="73" title="" width="320" />
+![Wireframe of a site on different sized devices](mobile-first.png)
 
 Mobile marketshare increases every month as more and more users access their favorite websites on their mobile devices. While StatCounter says about 40% of traffic is non-desktop, many sites are seeing more than half of their traffic come from mobile. This is why [Luke Wroblewski](https://twitter.com/lukew) pushed for [mobile-first design](http://www.lukew.com/ff/entry.asp?933) way back in 2009, publishing his [_Mobile First_](http://abookapart.com/products/mobile-first) book in 2011.
 
@@ -275,7 +268,7 @@ But even if you are able to get a multi-gigabyte VM running or even if you are a
 
 ### Exhibit 18: Debugging visual issues in IE8 is a pain
 
-<img alt="IE7 tax" border="0" height="168" src="https://img.kogan.com/jpsXvP3r-TY3LAla3aJUK61qcqU=/1200x630/https://www.kogan.com/media/files/blog/ie7-tax.jpg" title="" width="320" />
+![Screenshot of IE7 tax site](ie7-tax.jpg)
 
 As a developer, which would you rather be doing? Debugging why a `<div>` that should have some height is collapsed in IE8, or moving on to the next new feature? Yeah, I thought so. In my opinion, the debugging tools in IE browsers are subpar compared to other browsers. And this is particularly true for IE8 and debugging CSS.
 <div>
@@ -284,7 +277,7 @@ The cost in having to fix bugs in a legacy browser is real. So real that a compa
 
 ### Exhibit 19: IE has a bad rep
 
-<img alt="Break up with Internet Explorer 8" border="0" src="http://worthyofnote.co.uk/wp-content/uploads/2015/03/breakup-with-is.jpg" height="217" title="" width="320" />
+![Screenshot of "Break up with Internet Explorer 8" site](breakup-with-ie8.jpg)
 
 All Internet Explorer browsers now have a bad reputation for being terrible browsers. IE11 is actually a pretty good browser. It is as standards compliant as the other modern browsers, but because of IE8 (and its predecessors) it still has the "IE stench." That "stench" is so strong that Microsoft is completely forgoing the Internet Explorer name and rebranding its new browser as [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge). Edge will be an evergreen browser so it’ll always be up to date with the latest features.
 

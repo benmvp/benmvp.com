@@ -1,11 +1,6 @@
 ---
-layout: post
-title: "New Blog!"
-date: 2015-07-20
-author: Ben Ilegbodu
-categories: general
-permalink: /new-blog/
-redirect_from: /2015/07/new-blog.html
+title: New Blog!
+category: general
 ---
 
 Welcome to my newly resurrected blog! The old version of the blog hadn't been touched since late 2011 and focused on my personal life. This new iteration of the blog should focus primarily on my professional life as a Senior Software Engineer. Right now my concentration is on Web Front-End, but I find all sorts of UIs appealing, so I'm in the early stages of getting into Mobile Application development as well.
