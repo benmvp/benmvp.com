@@ -3,7 +3,7 @@ const colors = require('../../src/styles/colors')
 module.exports = {
   homeTitle: 'Ben Ilegbodu',
   siteTitle: 'Ben Ilegbodu',
-  shortSiteTitle: "Ben Ilegbodu's personal blog",
+  shortSiteTitle: 'Ben Ilegbodu',
   siteDescription:
     'Christ follower, husband & father of ✌. UI Architect & Speaker. ES6+, React & CSS3. Basketball, DIY & movies. Principal Frontend Engineer @ Eventbrite',
   siteUrl: 'http://www.benmvp.com',
