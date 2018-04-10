@@ -14,4 +14,4 @@ Ben attended [Stanford University]([@Stanford(http://twitter.com/stanford)]) and
 
 Ben's main focus is in building rich user interactions on the web. He's having fun learning & playing around with [React](https://facebook.github.io/react/) and its ecosystem.
 
-Ben's complete resume is available on [LinkedIn](https://www.linkedin.com/in/benmvp). Follow him on Twitter at [@BenMVP](http://twitter.com/benmvp). Fork him on [Github](https://github.com/benmvp). Track his [speaking engagements](/speaking-engagements). Watch his [speaking videos](/speaking-videos). [Ask him anything](/ama)!
+Ben's complete resume is available on [LinkedIn](https://www.linkedin.com/in/benmvp). Follow him on Twitter at [@BenMVP](http://twitter.com/benmvp). Fork him on [Github](https://github.com/benmvp). Track his [speaking engagements](/speak/). Watch his [speaking videos](/videos/). [Ask him anything](/ama)!

@@ -8,7 +8,7 @@ cover: tips-and-tricks.jpg
 
 ![ES6 tricks](tips-and-tricks.jpg)
 
-I wrapped up the [_Learning ES6_ series](/learning-es6-series/) covering [Generators as Iterators](/learning-es6-generators-as-iterators/) at the beginning of the year. I had considered talking about generators as observers, symbols, and other more advanced uses of ES6, but ended up spending my time preparing for the [speaking engagements](/speaking-engagements/) I had over the year. Sorry if you were waiting!
+I wrapped up the [_Learning ES6_ series](/learning-es6-series/) covering [Generators as Iterators](/learning-es6-generators-as-iterators/) at the beginning of the year. I had considered talking about generators as observers, symbols, and other more advanced uses of ES6, but ended up spending my time preparing for the [speaking engagements](/speak/) I had over the year. Sorry if you were waiting!
 
 There's been a lot of chatter about how ES6 reduces our need for libraries like [underscore.js](http://underscorejs.org/) and [lodash](https://lodash.com/). I want to take a slightly different approach and showcase how ES6 features can be used in "unintended" ways to accomplish certain common-ish tasks. You can call these "ES6 tricks." I've actually already covered all of these "tricks" in their respective article topics, but I wanted to pull them out as a quick reference.
 

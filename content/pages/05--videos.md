@@ -2,7 +2,7 @@
 title: Speaking Videos
 ---
 
-Check out all the videos of my talks from my [speaking engagements](/speaking-engagements/):
+Check out all the videos of my talks from my [speaking engagements](/speak/):
 
 ### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
