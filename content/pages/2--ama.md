@@ -6,8 +6,6 @@ title: Ask me anything!
 
 Anything means anything. Personal questions. Money. Life. Code. Whatever.
 
-![Family after Avery's birth](./family-house-selfie.jpg)
-
 I can also be reached on [Twitter](https://twitter.com/benmvp) and [email](mailto:ben+ama@benmvp.com), but [asking here](https://github.com/benmvp/ama/issues/new) means anyone can read the answer!
 
 ### Guidelines
