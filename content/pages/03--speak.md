@@ -34,6 +34,17 @@ Thursday, September 13, 2018 @ TBD
 
 ----------
 
+### [Music City Code 2018](http://www.musiccitytech.com/conferences/music-city-code/)
+
+##### Nashville, Tennessee (Vanderbilt University)
+
+#### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
+
+Thursday, May 31, 2018 @ TBD  
+🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+
+----------
+
 ### [Reactathon 2018](http://www.reactathon.com/)
 
 ##### San Francisco, California (Palace of the Fine Arts)

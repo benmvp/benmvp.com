@@ -4,7 +4,17 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
-### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
+### [Why React?](/talks/#why-choose-react)
+
+#### Reactathon 2018
+
+March 20, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wfec35hSALc" frameborder="0" allowfullscreen></iframe>
+
+----------
+
+### [React FUNdamentals Workshop](/talks/#react-fundamentals-workshop)
 
 #### Sabio LA
 
