@@ -2,10 +2,9 @@
 title: Speaking Engagements
 ---
 
-![Speaking at Thunder Plains 2016](./thunder-plains.jpg)
-_Source: [Joe The Photography Guy](http://JoeThePhotographyGuy.com)_
+![Ben Ilegbodu speaking at Reactathon 2018](./reactathon.png)
 
-Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. I haven't been speaking publicly for long, but I've thoroughly enjoyed it thus far. I look forward to where this journey will take me!
+Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. If you're interested in having me speak to or hold a workshop with your group, [shoot me an email](mailto:ben@benmvp.com).
 
 ## 2018
 

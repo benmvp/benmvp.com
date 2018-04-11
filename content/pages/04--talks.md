@@ -2,7 +2,7 @@
 title: Tech Talks
 ---
 
-![Speaking at NDC Oslo 2016](./ndcoslo-closeup.jpg)
+![Ben Ilegbodu speaking at React Rally 2017](./react-rally.jpg)
 
 Below is a list of all of my talks. Most of them I've either given or will give at an upcoming [speaking engagement](/speak/). However, there are some that I am still hoping to give at some future conference and/or meetup!
 
