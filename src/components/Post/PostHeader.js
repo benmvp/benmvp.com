@@ -42,12 +42,18 @@ const styles = theme => ({
 
 const PostHeader = props => {
   const {classes, title, subTitle, date} = props
+  const formattedDate = new Date(`${date}T20:00:00.000-08:00`).toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
 
   return (
     <header className={classes.header}>
       <h1 className={classes.title}>{title}</h1>
       <h2 className={classes.subTitle}>{subTitle}</h2>
-      <div className={classes.meta}>{date}</div>
+      <div className={classes.meta}>{formattedDate}</div>
     </header>
   )
 }
