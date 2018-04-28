@@ -6,6 +6,7 @@ import config from '../../../content/meta/config'
 
 import GithubIcon from '../../images/svg-icons/github.svg'
 import TwitterIcon from '../../images/svg-icons/twitter.svg'
+import LinkedinIcon from '../../images/svg-icons/linkedin.svg'
 
 const styles = theme => ({
   social: {
@@ -36,6 +37,7 @@ const Socialcons = props => {
   const icons = {
     twitter: TwitterIcon,
     github: GithubIcon,
+    linkedin: LinkedinIcon,
   }
 
   return (
@@ -49,7 +51,7 @@ const Socialcons = props => {
             className={classes.link}
             target="_blank"
             rel="noopener noreferrer"
-            title={item.name}
+            title={item.title}
           >
             <Icon className={classes.svg} />
           </a>

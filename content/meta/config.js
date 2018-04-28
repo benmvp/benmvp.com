@@ -25,8 +25,9 @@ module.exports = {
   manifestDisplay: 'standalone',
   // social
   authorSocialLinks: [
-    {name: 'twitter', url: 'https://twitter.com/benmvp'},
-    {name: 'github', url: 'https://github.com/benmvp'},
+    {name: 'twitter', url: 'https://twitter.com/benmvp', title: 'Follow Ben Ilegbodu on Twitter'},
+    {name: 'github', url: 'https://github.com/benmvp', title: "Ben Ilegbodu's projects"},
+    {name: 'linkedin', url: 'https://linkedin.com/in/benmvp', title: "Ben Ilegbodu's resume"},
   ],
   // disqus
   disqusShortname: 'benmvp',
