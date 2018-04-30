@@ -20,7 +20,7 @@ const styles = theme => ({
     '& .gatsby-resp-iframe-wrapper': {
       margin: '2em 0',
     },
-    '& .gatsby-resp-image-link': {
+    '& a.gatsby-resp-image-link': {
       margin: '2em -1.5rem',
       border: 'none',
       [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
