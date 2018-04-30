@@ -3,13 +3,13 @@ title: History of ECMAScript
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, history]
-cover: http://blog.makersquare.com/wp-content/uploads/2015/06/es6-logo.png
+cover: ecmascript-logo.png
 ---
 
 
 ECMAScript 6 is the new version of JavaScript making its way into the interpreters of our modern browsers and servers. I’m embarking on the [_Learning ES6_ series](/learning-es6-series/) series to walk through the various features of ES6. We’ll take a look at [arrow functions](/learning-es6-arrow-functions/), modules, rest parameters and a host of other goodies that the ES6 specification brings to the JavaScript that we write on a daily basis.
 
-![ES6 logo](http://blog.makersquare.com/wp-content/uploads/2015/06/es6-logo.png)
+![ECMAScript logo](ecmascript-logo.png)
 
 But before we look at what ECMAScript 6 offers, I’d like to start things off by taking the time to look back on the history of ECMAScript. Like a wise person once said, “You’ll never know where you’re going until you know where you’re coming from.” I really enjoy learning the history of something and seeing how series of events in the past lead to a current situation. ECMAScript 6 is no different. I’m sure you’ll learn some things about JavaScript that you never knew before, particularly why so much time has elapsed between ES5 and ES6. Now buckle your seats as we enter our time machine.
 

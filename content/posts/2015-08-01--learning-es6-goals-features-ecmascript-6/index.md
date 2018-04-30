@@ -4,12 +4,12 @@ subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6]
-cover: http://blog.makersquare.com/wp-content/uploads/2015/06/es6-logo.png
+cover: es6-logo.png
 ---
 
 In this blog post, we’ll take a look at the goals and features of ECMAScript 6. If you haven’t read it already, be sure to check out the first blog post in this [_Learning ES6_ series](/learning-es6-series/) about the [History of ES6](/learning-es6-history-of-ecmascript/) where I walked through the 20-year history of JavaScript and ECMAScript. It really sets the stage of how we’ve gotten to the point we’re at now.
 
-![ES6 logo](http://blog.makersquare.com/wp-content/uploads/2015/06/es6-logo.png)
+![ES6 logo](es6-logo.png)
 
 ## Goals of ES6
 
