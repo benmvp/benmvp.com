@@ -3,6 +3,7 @@
 [X] Set up algolia search
 [X] Add LinkedIn icon for `SocialIcons` section
 [X] Use new pictures for pages
+[X] Markdown needs IDs
 [ ] Add 404 page
 [ ] Figure out twitter embedding plugin
 [ ] Tag mapping to display names? (or just use display names)
