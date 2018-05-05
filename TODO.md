@@ -5,6 +5,7 @@
 [X] Use new pictures for pages
 [X] Markdown needs IDs
 [X] Add 404 page
+[ ] Add .travis.yml for auto-deploying to gh-pages
 [ ] Fix search not posting data that's too big
 [ ] Pass image into `PostHeader` instead of it having `algolia` flag`
 [ ] Figure out twitter embedding plugin
