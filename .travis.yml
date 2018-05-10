@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - gatsby build
+    - npx gh-pages --branch master --dist public
