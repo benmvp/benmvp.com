@@ -2,8 +2,10 @@ language: node_js
 node_js:
   - "node"
 
+cache: yarn
+
 before_deploy:
-  - gatsby build
+  - yarn run build
 
 deploy:
   provider: pages
