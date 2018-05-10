@@ -2,9 +2,14 @@ language: node_js
 node_js:
   - "node"
 
+before_deploy:
+  - gatsby build
+
 deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-    - gatsby build
-    - npx gh-pages --branch master --dist public
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gatsby
+  local-dir: public
+  target-branch: master
