@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "BenMVP.com",
   "scripts": {
     "develop": "gatsby develop",
     "develop-host": "gatsby develop --host 192.168.0.112",

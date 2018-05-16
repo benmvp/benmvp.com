@@ -33,6 +33,16 @@ Thursday, September 13, 2018 @ TBD
 
 ----------
 
+### [React Rally 2018](http://www.reactrally.com/)
+
+##### Salt Lake City, Utah (Sheraton Salt Lake City Hotel)
+
+#### Master of Ceremonies
+
+August 16 & 17, 2018  
+
+----------
+
 ### [Music City Code 2018](http://www.musiccitytech.com/conferences/music-city-code/)
 
 ##### Nashville, Tennessee (Vanderbilt University)
