@@ -29,7 +29,7 @@ September 14/15, 2018 @ TBD
 #### ["Minimally-painful" React-Redux testing Workshop](/talks/#minimally-painful-react-redux-testing-workshop)
 
 Thursday, September 13, 2018 @ TBD  
-🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/testing)
 
 ----------
 
@@ -43,6 +43,16 @@ August 16 & 17, 2018
 
 ----------
 
+### [NEJS 2018](https://2018.nejsconf.com/)
+
+##### Omaha, Nebraska (Holland Performing Arts Center)
+
+#### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
+
+Friday, July 27, 2018 @ TBD  
+
+----------
+
 ### [Music City Code 2018](http://www.musiccitytech.com/conferences/music-city-code/)
 
 ##### Nashville, Tennessee (Vanderbilt University)
@@ -50,7 +60,7 @@ August 16 & 17, 2018
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Thursday, May 31, 2018 @ TBD  
-🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+🎞 [Slides](http://www.benmvp.com/slides/2018/mctech/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
 ----------
 
@@ -66,7 +76,7 @@ Tuesday, March 20, 2018 @ 10:15a
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Monday, March 19, 2018 @ 10a  
-🎞 [Slides](http://www.benmvp.com/slides/2018/reactathon/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+🎞 [Slides](http://www.benmvp.com/slides/2018/reactathon/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
 ----------
 
@@ -77,7 +87,7 @@ Monday, March 19, 2018 @ 10a
 #### [React Fundamentals Workshop](/talks/#react-fundamentals-workshop)
 
 Tuesday, January 23, 2018 @ 7p  
-🎞 [Slides](http://www.benmvp.com/slides/2018/sabiola/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop)
+🎞 [Slides](http://www.benmvp.com/slides/2018/sabiola/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
 ----------
 
