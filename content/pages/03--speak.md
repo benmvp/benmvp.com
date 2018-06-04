@@ -24,7 +24,7 @@ October 2/3, 2018 @ TBD
 
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Thursday, September 20, 2018 @ 10:20 (Room 6)  
+Thursday, September 20, 2018 @ 10:20a (Room 6)  
 
 ----------
 
@@ -69,7 +69,7 @@ Friday, July 27, 2018 @ TBD
 
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
-Thursday, May 31, 2018 @ Cinema  
+Thursday, May 31, 2018 @ 9a (Cinema)  
 🎞 [Slides](http://www.benmvp.com/slides/2018/mctech/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
 ----------
