@@ -18,17 +18,27 @@ October 2/3, 2018 @ TBD
 
 ----------
 
+### [NDC Sydney 2018](https://ndcsydney.com/)
+
+##### Sydney, Australia (Hilton Sydney)
+
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
+
+Thursday, September 20, 2018 @ 10:20 (Room 6)  
+
+----------
+
 ### [React Alicante 2018](http://reactalicante.es/)
 
-##### Alicante, Spain (TBD)
+##### Alicante, Spain (Hotel Meliá)
 
 #### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
 
-September 14/15, 2018 @ TBD  
+Friday, September 14, 2018 @ 16:50  
 
 #### ["Minimally-painful" React-Redux testing Workshop](/talks/#minimally-painful-react-redux-testing-workshop)
 
-Thursday, September 13, 2018 @ TBD  
+Thursday, September 13, 2018 @ 9:00 (Terra Lucis II)  
 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/testing)
 
 ----------
@@ -59,7 +69,7 @@ Friday, July 27, 2018 @ TBD
 
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
-Thursday, May 31, 2018 @ TBD  
+Thursday, May 31, 2018 @ Cinema  
 🎞 [Slides](http://www.benmvp.com/slides/2018/mctech/react-workshop.html) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
 ----------
