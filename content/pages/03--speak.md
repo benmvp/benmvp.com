@@ -63,6 +63,16 @@ Friday, July 27, 2018 @ TBD
 
 ----------
 
+### [Node Summit 2018](http://www.nodesummit.com/)
+
+##### San Francisco, California (Mission Bay Conference Center)
+
+#### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
+
+Tuesday, July 24, 2018 @ 2:55 (Main Stage)  
+
+----------
+
 ### [Music City Code 2018](http://www.musiccitytech.com/conferences/music-city-code/)
 
 ##### Nashville, Tennessee (Vanderbilt University)
