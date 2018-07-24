@@ -59,7 +59,7 @@ August 16 & 17, 2018
 
 #### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
-Friday, July 27, 2018 @ TBD  
+Friday, July 27, 2018 @ 1:30p  
 
 ----------
 
@@ -69,7 +69,13 @@ Friday, July 27, 2018 @ TBD
 
 #### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
 
-Tuesday, July 24, 2018 @ 2:55 (Main Stage)  
+Tuesday, July 24, 2018 @ 2:55p (Main Stage)  
+🎞 [Slides](http://www.benmvp.com/slides/2018/nodesummit/esnext.html)
+
+
+#### Panel: Node in the Enterprise
+
+Tuesday, July 24, 2018 @ 1:30 (Main Stage)  
 
 ----------
 
