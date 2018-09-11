@@ -35,11 +35,13 @@ Thursday, September 20, 2018 @ 10:20a (Room 6)
 #### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
 
 Friday, September 14, 2018 @ 16:50  
+🎞 <a href="http://www.benmvp.com/slides/2018/reactalicante/react-perf.html" target="_blank">Slides</a>
+
 
 #### ["Minimally-painful" React-Redux testing Workshop](/talks/#minimally-painful-react-redux-testing-workshop)
 
 Thursday, September 13, 2018 @ 9:00 (Terra Lucis II)  
-🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/testing)
+🎞 <a href="http://www.benmvp.com/slides/2018/reactalicante/react-workshop.html" target="_blank">Slides</a> | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/testing)
 
 ----------
 
