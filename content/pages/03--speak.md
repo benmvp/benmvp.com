@@ -30,7 +30,7 @@ Thursday, September 20, 2018 @ 10:20a (Room 6)
 
 ### [React Alicante 2018](http://reactalicante.es/)
 
-##### Alicante, Spain (Hotel Meliá)
+##### Alicante, Spain (Hotel Meliã)
 
 #### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
 
