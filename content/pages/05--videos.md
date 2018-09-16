@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
+
+#### NodeSummit 2018
+
+July 24, 2018
+
+<iframe src="https://player.vimeo.com/video/287516810" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [Why React?](/talks/#why-choose-react)
 
 #### Reactathon 2018

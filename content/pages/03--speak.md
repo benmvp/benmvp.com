@@ -22,6 +22,10 @@ October 2/3, 2018 @ TBD
 
 ##### Sydney, Australia (Hilton Sydney)
 
+#### Ask Me Anything! - Build your own React-based stack
+
+Thursday, September 20, 2018 @ 11:40a (Room 8 / Level 4)  
+
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
 Thursday, September 20, 2018 @ 10:20a (Room 6)  
@@ -73,7 +77,7 @@ Friday, July 27, 2018 @ 1:30p
 #### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
 
 Tuesday, July 24, 2018 @ 2:55p (Main Stage)  
-🎞 <a href="http://www.benmvp.com/slides/2018/nodesummit/esnext.html" target="_blank">Slides</a>
+🎥 [Video](https://vimeo.com/287516810) | 🎞 <a href="http://www.benmvp.com/slides/2018/nodesummit/esnext.html" target="_blank">Slides</a>
 
 
 #### Panel: Node in the Enterprise
@@ -217,7 +221,7 @@ Wednesday, September 13, 2017 @ 11:25a
 #### [Layperson’s guide to React Fiber](/talks/#react-fiber-for-the-rest-of-us)
 
 Thursday, August 24, 2017 @ 2p  
-🎥 <a href="http://www.benmvp.com/slides/2017/reactrally/fiber.html" target="_blank">Video](https://www.youtube.com/watch?v=q6QTxq_pFn0) | 🎞 [Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=q6QTxq_pFn0) | 🎞 <a href="http://www.benmvp.com/slides/2017/reactrally/fiber.html" target="_blank">Slides</a>
 
 ----------
 
@@ -228,7 +232,7 @@ Thursday, August 24, 2017 @ 2p
 #### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 Thursday, July 27, 2017 @ 12p (Fisher East)  
-🎥 <a href="http://www.benmvp.com/slides/2017/nodesummit/iso-react.html" target="_blank">Video](https://vimeo.com/229703092) | 🎞 [Slides</a>
+🎥 [Video](https://vimeo.com/229703092) | 🎞 <a href="http://www.benmvp.com/slides/2017/nodesummit/iso-react.html" target="_blank">Slides</a>
 
 
 ----------
@@ -278,7 +282,7 @@ Thursday, June 1, 2017 @ 2:30p (Mariner A)
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
 Tuesday, May 23, 2017 @ 8p  
-🎥 <a href="http://www.benmvp.com/slides/2017/modernweb/nav-react.html" target="_blank">Video](https://www.youtube.com/watch?v=-6gfOJwwXvs&index=10&list=PL-G5r6j4GptGMQWj0ph4FaZqiBnIU9leu) | 🎞 [Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=-6gfOJwwXvs&index=10&list=PL-G5r6j4GptGMQWj0ph4FaZqiBnIU9leu) | 🎞 <a href="http://www.benmvp.com/slides/2017/modernweb/nav-react.html" target="_blank">Slides</a>
 
 ----------
 
@@ -311,7 +315,7 @@ Tuesday, April 11, 2017 @ 7:15p
 #### [Isomorphic React sans Node??](/talks/#isomorphic-react-sans-node)
 
 Thursday, 30 March 2017 @ 11:55  
-🎥 <a href="http://www.benmvp.com/slides/2017/render/iso-react.html" target="_blank">Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞 [Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞  <a href="http://www.benmvp.com/slides/2017/render/iso-react.html" target="_blank">Slides</a>
 
 ----------
 
@@ -349,7 +353,7 @@ Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)
 #### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Monday, March 13, 2017 @ 12:30p  
-🎥 <a href="http://www.benmvp.com/slides/2017/reactconf/react-esnext.html" target="_blank">Video](https://www.youtube.com/watch?v=jh_Qzi-yHU0) | 🎞 [Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎥 [Video](https://www.youtube.com/watch?v=jh_Qzi-yHU0) | 🎞 <a href="http://www.benmvp.com/slides/2017/reactconf/react-esnext.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
@@ -382,7 +386,7 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 #### [React Exposed! 😮](/talks/#react-exposed-)
 
 Wednesday, March 1, 2017 @ 3:45p (Emerald)  
-🎥 <a href="http://www.benmvp.com/slides/2017/forwardjs/react-exposed.html" target="_blank">Video](https://www.youtube.com/watch?v=cAYMqBU7Qko) | 🎞 [Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
+🎥 [Video](https://www.youtube.com/watch?v=cAYMqBU7Qko) | 🎞 <a href="http://www.benmvp.com/slides/2017/forwardjs/react-exposed.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
 ----------
 
@@ -426,7 +430,7 @@ Thursday, February 9, 2017 @ 7p
 #### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Friday, January 27, 2017 @ 2:50p  
-🎥 <a href="http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html" target="_blank">Video](https://www.youtube.com/watch?v=fXWvcmrbX5M) | 🎞 [Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
+🎥 [Video](https://www.youtube.com/watch?v=fXWvcmrbX5M) | 🎞 <a href="http://www.benmvp.com/slides/2017/buzzjs/react-esnext.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
 ----------
 
@@ -493,7 +497,7 @@ Friday, October 21, 2016 @ 11:20a (React.JS track)
 #### [Isomorphic React w/o Node??](/talks/#isomorphic-react-sans-node)
 
 Tuesday, October 18, 2016 @ 6:45p  
-🎥 <a href="http://www.benmvp.com/slides/2016/rwreact/iso-react.html" target="_blank">Video](https://www.youtube.com/watch?v=_bfZHCSkT3Q) | 🎞 [Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=_bfZHCSkT3Q) | 🎞 <a href="http://www.benmvp.com/slides/2016/rwreact/iso-react.html" target="_blank">Slides</a>
 
 ----------
 
@@ -504,7 +508,7 @@ Tuesday, October 18, 2016 @ 6:45p
 #### Evolution of Javascript IV
 
 Thursday, July 28, 2016 @ 9:30a (Main Stage)  
-🎥 <a href="http://www.benmvp.com/nodesummit-2016/" target="_blank">Video](https://vimeo.com/album/4104052/video/180426378) | 📝 [Blog post</a>
+🎥 [Video](https://vimeo.com/album/4104052/video/180426378) |  📝 [Blog post](/nodesummit-2016/)
 
 ----------
 
@@ -515,7 +519,7 @@ Thursday, July 28, 2016 @ 9:30a (Main Stage)
 #### [React + ES.next = ♥](/talks/#react--esnext--)
 
 Tuesday, July 19, 2016  
-🎥 <a href="http://www.benmvp.com/slides/2016/frontporch/react-esnext.html" target="_blank">Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides</a> | 🖥 <a href="http://www.benmvp.com/front-porch-austin-2016/" target="_blank">Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post</a>
+🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 <a href="http://www.benmvp.com/slides/2016/frontporch/react-esnext.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](/front-porch-austin-2016/)
 
 ----------
 
@@ -537,7 +541,7 @@ Thursday, July 14, 2016 @ 7:30p
 #### [You don't need JavaScript for that!](/talks/#you-dont-need-javascript-for-that)
 
 Friday, June 10, 2016 @ 1:40p in Room 7  
-🎥 <a href="http://www.benmvp.com/slides/2016/ndcoslo/no-js.html" target="_blank">Video](https://vimeo.com/171319733) | 🎞 [Slides</a> | 🖥 <a href="http://www.benmvp.com/ndc-oslo-2016/" target="_blank">Code examples](/you-dont-need-js-for-that) | 📝 [Blog post</a>
+🎥 [Video](https://vimeo.com/171319733) | 🎞 <a href="http://www.benmvp.com/slides/2016/ndcoslo/no-js.html" target="_blank">Slides</a> | 🖥 <a href="http://www.benmvp.com/you-dont-need-js-for-that" target="_blank">Code examples</a> | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
 
 ----------
 
@@ -591,7 +595,7 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 #### [Sweet ES6](/talks/#sweet-es6)
 
 Friday, March 11, 2016 @ 11:15a  
-🎥 <a href="http://www.benmvp.com/slides/2016/nationjs/es6.html" target="_blank">Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides</a> | 🖥 <a href="http://www.benmvp.com/nationjs-nodeday-2016/" target="_blank">Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post</a>
+🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 <a href="http://www.benmvp.com/slides/2016/nationjs/es6.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 <a href="/nationjs-nodeday-2016/" target="_blank">Blog post</a>
 
 ----------
 
@@ -653,7 +657,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 #### [Sugar & Spice and everything nice about ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Saturday, November 14, 2015 @ 1p in Ezell 301  
-🎥 <a href="http://www.benmvp.com/slides/2015/nodevember/es6.html" target="_blank">Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides</a> | 🖥 <a href="http://www.benmvp.com/nodevember-2015/" target="_blank">Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post</a>
+🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 <a href="http://www.benmvp.com/slides/2015/nodevember/es6.html" target="_blank">Slides</a> | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 <a href="/nodevember-2015/" target="_blank">Blog post</a>
 
 ----------
 
@@ -664,4 +668,4 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 #### [Sugar & Spice and everything nice about ES6](/talks/#sugar--spice-and-everything-nice-about-es6)
 
 Friday, October 16, 2015 @ 1:30p in Fulton  
-🎥 <a href="http://www.benmvp.com/little-rock-tech-fest-2015/" target="_blank">Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 [Blog post</a>
+🎥 [Video](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6) | 🎞 [Slides](https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 <a href="/little-rock-tech-fest-2015/" target="_blank">Blog post</a>
