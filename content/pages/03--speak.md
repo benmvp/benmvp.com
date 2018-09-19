@@ -28,7 +28,7 @@ Thursday, September 20, 2018 @ 11:40a (Room 8 / Level 4)
 
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-Thursday, September 20, 2018 @ 10:20a (Room 6)  
+Thursday, September 20, 2018 @ 10:20a (Room 5)  
 🎞 <a href="http://www.benmvp.com/slides/2018/ndcsydney/nav-react.html" target="_blank">Slides</a>
 
 ----------
