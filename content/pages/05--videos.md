@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
+
+#### React Alicante 2018
+
+September 14, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LBzJFcZsPBQ" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
 
 #### NodeSummit 2018
