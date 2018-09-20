@@ -12,9 +12,9 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ##### Park City, Utah (DoubleTree Inn)
 
-#### Talk TBD
+#### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
-October 2/3, 2018 @ TBD  
+Wednesday, October 3, 2018 @ 4p    
 
 ----------
 
