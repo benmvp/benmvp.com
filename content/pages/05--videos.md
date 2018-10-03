@@ -14,6 +14,16 @@ September 14, 2018
 
 ----------
 
+### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
+
+#### NEJS 2018
+
+July 27, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6hyIZlaWVmU" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 ### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
 
 #### NodeSummit 2018

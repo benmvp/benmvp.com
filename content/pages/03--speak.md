@@ -67,7 +67,7 @@ August 16 & 17, 2018
 #### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
 Friday, July 27, 2018 @ 1:30p  
-🎞 <a href="http://www.benmvp.com/slides/2018/nejs/webdev.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=6hyIZlaWVmU) | 🎞 <a href="http://www.benmvp.com/slides/2018/nejs/webdev.html" target="_blank">Slides</a>
 
 ----------
 
