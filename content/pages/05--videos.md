@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### Ask Me Anything! - Build your own React-based stack
+
+#### NDC Sydney 2018
+
+September 20, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l36KeNEBL1g?start=10973" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
 
 #### React Alicante 2018

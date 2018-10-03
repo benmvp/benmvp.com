@@ -15,6 +15,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
 Wednesday, October 3, 2018 @ 4p    
+🎞 <a href="http://www.benmvp.com/slides/2018/frameworksummit/nav-react.html" target="_blank">Slides</a>
 
 ----------
 
@@ -25,6 +26,7 @@ Wednesday, October 3, 2018 @ 4p
 #### Ask Me Anything! - Build your own React-based stack
 
 Thursday, September 20, 2018 @ 11:40a (Room 8 / Level 4)  
+🎥 [Video](https://www.youtube.com/watch?v=l36KeNEBL1g&t=3h2m53s)
 
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
