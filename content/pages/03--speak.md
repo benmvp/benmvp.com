@@ -8,6 +8,17 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2018
 
+### [React Net 2018](https://react-next.com/schedule)
+
+##### Tel Aviv, Israel (Dan Panorama Hotel)
+
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+Sunday, November 4, 2018 @ 9:50a    
+🎞 <a href="http://www.benmvp.com/slides/2018/reactnext/react-eco.html" target="_blank">Slides</a>
+
+----------
+
 ### [Framework Summit 2018](https://www.frameworksummit.com/)
 
 ##### Park City, Utah (DoubleTree Inn)
