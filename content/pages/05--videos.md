@@ -40,7 +40,7 @@ July 27, 2018
 
 July 24, 2018
 
-<iframe src="https://player.vimeo.com/video/287516810" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9yK4t2CuIHQ" frameborder="0" allowfullscreen></iframe>
 
 ----------
 
