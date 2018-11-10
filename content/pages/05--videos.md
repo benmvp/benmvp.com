@@ -14,6 +14,16 @@ September 20, 2018
 
 ----------
 
+### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
+
+#### NDC Sydney 2018
+
+September 20, 2018
+
+<iframe src="https://player.vimeo.com/video/297082496" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### [Help! My React app is slowwwww! 🐢](/talks/#help-my-react-app-is-slowwwww-)
 
 #### React Alicante 2018

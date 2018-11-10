@@ -42,7 +42,7 @@ Thursday, September 20, 2018 @ 11:40a (Room 8 / Level 4)
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
 Thursday, September 20, 2018 @ 10:20a (Room 5)  
-🎞 <a href="http://www.benmvp.com/slides/2018/ndcsydney/nav-react.html" target="_blank">Slides</a>
+🎥 [Video](https://vimeo.com/297082496) | 🎞 <a href="http://www.benmvp.com/slides/2018/ndcsydney/nav-react.html" target="_blank">Slides</a>
 
 ----------
 
@@ -91,7 +91,7 @@ Friday, July 27, 2018 @ 1:30p
 #### [ES.next features that'll make ya 💃🕺🏾](/talks/#esnext-features-thatll-make-ya-)
 
 Tuesday, July 24, 2018 @ 2:55p (Main Stage)  
-🎥 [Video](https://vimeo.com/287516810) | 🎞 <a href="http://www.benmvp.com/slides/2018/nodesummit/esnext.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=9yK4t2CuIHQ) | 🎞 <a href="http://www.benmvp.com/slides/2018/nodesummit/esnext.html" target="_blank">Slides</a>
 
 
 #### Panel: Node in the Enterprise
