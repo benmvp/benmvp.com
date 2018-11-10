@@ -97,6 +97,7 @@ Tuesday, July 24, 2018 @ 2:55p (Main Stage)
 #### Panel: Node in the Enterprise
 
 Tuesday, July 24, 2018 @ 1:30 (Main Stage)  
+🎥 [Video](https://vimeo.com/289098128)
 
 ----------
 
