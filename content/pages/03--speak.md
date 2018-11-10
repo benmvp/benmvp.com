@@ -8,7 +8,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2018
 
-### [React Net 2018](https://react-next.com/schedule)
+### [React Next 2018](https://react-next.com/schedule)
 
 ##### Tel Aviv, Israel (Dan Panorama Hotel)
 
