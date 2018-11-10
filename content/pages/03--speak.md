@@ -119,7 +119,7 @@ Thursday, May 31, 2018 @ 9a (Cinema)
 #### [Why React?](/talks/#why-choose-react)
 
 Tuesday, March 20, 2018 @ 10:15a  
-🎞 <a href="http://www.benmvp.com/slides/2018/reactathon/why-react.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=Wfec35hSALc) | 🎞 <a href="http://www.benmvp.com/slides/2018/reactathon/why-react.html" target="_blank">Slides</a>
 
 #### [React FUNndamentals Workshop](/talks/#react-fundamentals-workshop)
 
