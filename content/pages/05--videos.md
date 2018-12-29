@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
+
+#### Reactathon 2019
+
+November 4, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yOWzQOZIANU" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### Ask Me Anything! - Build your own React-based stack
 
 #### NDC Sydney 2018

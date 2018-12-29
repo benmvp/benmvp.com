@@ -6,16 +6,38 @@ title: Speaking Engagements
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. If you're interested in having me speak to or hold a workshop with your group, [shoot me an email](mailto:ben@benmvp.com).
 
+## 2019
+
+### [All Things Open 2019](https://allthingsopen.org/)
+
+##### Raleigh, North Carolina (Raleigh Convention Center)
+
+#### Talk TBD
+
+Tuesday, October 15, 2019 @ TBD    
+
+----------
+
+### [Reactathon 2019](https://www.reactathon.com/)
+
+##### San Francisco, California (Github HQ)
+
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+Sunday, March 31, 2019 @ TBD    
+
+----------
+
 ## 2018
 
 ### [React Next 2018](https://react-next.com/schedule)
 
 ##### Tel Aviv, Israel (Dan Panorama Hotel)
 
-#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system)
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
 
 Sunday, November 4, 2018 @ 9:50a    
-🎞 <a href="http://www.benmvp.com/slides/2018/reactnext/react-eco.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=yOWzQOZIANU) | 🎞 <a href="http://www.benmvp.com/slides/2018/reactnext/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
@@ -37,7 +59,7 @@ Wednesday, October 3, 2018 @ 4p
 #### Ask Me Anything! - Build your own React-based stack
 
 Thursday, September 20, 2018 @ 11:40a (Room 8 / Level 4)  
-🎥 [Video](https://www.youtube.com/watch?v=l36KeNEBL1g&t=3h2m53s)
+🎥 [Video](https://www.youtube.com/watch?v=1KOq5AZS2m8)
 
 #### [Navigating the React Solar System](/talks/#navigating-the-react-solar-system)
 
