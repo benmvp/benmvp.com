@@ -18,13 +18,23 @@ Tuesday, October 15, 2019 @ TBD
 
 ----------
 
+### [CSS Conf EU 2019](https://2019.cssconf.eu/)
+
+##### Berlin, Germany (Arena Berlin)
+
+#### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
+
+Friday, May 31, 2019 @ TBD    
+
+----------
+
 ### [Reactathon 2019](https://www.reactathon.com/)
 
 ##### San Francisco, California (Github HQ)
 
 #### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
-Sunday, March 31, 2019 @ TBD    
+Sunday, March 31, 2019 @ 10:10a    
 
 ----------
 
