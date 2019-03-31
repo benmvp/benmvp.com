@@ -2,9 +2,9 @@
 title: About Ben
 ---
 
-Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father of 2. He lives in Pittsburg, California with his wife Rashida and their daughters Simone and Avery.
+Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father of 3. He lives in Pittsburg, California with his wife Rashida and their children Simone, Avery and Asher.
 
-![Ilegbodu Family](./family-house-selfie.jpg)
+![Ilegbodu Family](./family-with-baby-asher.jpg)
 
 Ben is currently a Senior UI Engineer and manager of the Frontend Platform team at [Eventbrite](https://www.eventbrite.com/) ([@Eventbrite](https://twitter.com/eventbrite)). He originally joined the Listings team at Eventbrite in May 2015, tasked to revamp the event details pages from an archaic MySpace-style design to a modern, fully responsive layout.
 
