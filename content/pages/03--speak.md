@@ -32,9 +32,10 @@ Friday, May 31, 2019 @ TBD
 
 ##### San Francisco, California (Github HQ)
 
-#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system)
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
 
 Sunday, March 31, 2019 @ 10:10a    
+🎞 <a href="http://www.benmvp.com/slides/2019/reactathon/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
