@@ -8,6 +8,16 @@ Check out all the videos of my talks from my [speaking engagements](/speak/):
 
 #### Reactathon 2019
 
+March 32, 2018
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mtjHxwUQUs0?start=183" frameborder="0" allowfullscreen></iframe>
+
+----------
+
+#### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
+
+#### ReactNext 2019
+
 November 4, 2018
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yOWzQOZIANU" frameborder="0" allowfullscreen></iframe>

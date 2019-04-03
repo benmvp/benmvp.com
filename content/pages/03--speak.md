@@ -18,6 +18,16 @@ Tuesday, October 15, 2019 @ TBD
 
 ----------
 
+### [Web Unleashed 2019](https://fitc.ca/event/webu19/)
+
+##### Toronto, Canada (Hilton Toronto)
+
+#### Talk TBD
+
+September 13-14, 2019 @ TBD    
+
+----------
+
 ### [CSS Conf EU 2019](https://2019.cssconf.eu/)
 
 ##### Berlin, Germany (Arena Berlin)
@@ -35,7 +45,7 @@ Friday, May 31, 2019 @ TBD
 #### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
 
 Sunday, March 31, 2019 @ 10:10a    
-🎞 <a href="http://www.benmvp.com/slides/2019/reactathon/react-eco.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=183) | 🎞 <a href="http://www.benmvp.com/slides/2019/reactathon/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
