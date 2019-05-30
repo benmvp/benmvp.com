@@ -22,7 +22,7 @@ Tuesday, October 15, 2019 @ TBD
 
 ##### Toronto, Canada (Hilton Toronto)
 
-#### Talk TBD
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
 September 13-14, 2019 @ TBD    
 
@@ -34,7 +34,8 @@ September 13-14, 2019 @ TBD
 
 #### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
-Friday, May 31, 2019 @ TBD    
+Friday, May 31, 2019 @ 14:20    
+🎞 <a href="http://www.benmvp.com/slides/2019/cssconfeu/webdev.html" target="_blank">Slides</a>
 
 ----------
 
