@@ -5,7 +5,7 @@ module.exports = {
   siteTitle: 'Ben Ilegbodu',
   shortSiteTitle: 'Ben Ilegbodu',
   siteDescription:
-    'Christ follower, husband & father of ✌. UI Architect & Speaker. ES6+, React & CSS3. Basketball, DIY & movies. Principal Frontend Engineer @ Eventbrite',
+    'Christ follower, husband & father of 👌🏾. UI Architect & Speaker. ES6+, React & CSS3. Google Developer Expert & Microsoft MVP. Basketball, DIY & movies. Principal Frontend Engineer @ Eventbrite',
   siteUrl: 'http://www.benmvp.com',
   pathPrefix: '',
   siteImage: 'preview.jpg',
