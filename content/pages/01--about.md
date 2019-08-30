@@ -4,9 +4,9 @@ title: About Ben
 
 Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father of 3. He lives in Pittsburg, California with his wife Rashida and their children Simone, Avery and Asher.
 
-![Ilegbodu Family](./family-with-baby-asher.jpg)
+![Ilegbodu Family Photo](./family-photo-summer-2019.jpg)
 
-Ben is currently a Senior UI Engineer and manager of the Frontend Platform team at [Eventbrite](https://www.eventbrite.com/) ([@Eventbrite](https://twitter.com/eventbrite)). He originally joined the Listings team at Eventbrite in May 2015, tasked to revamp the event details pages from an archaic MySpace-style design to a modern, fully responsive layout.
+Ben is currently a Principal Frontend Engineer at [Eventbrite](https://www.eventbrite.com/) ([@Eventbrite](https://twitter.com/eventbrite)) working on the Creator Activation & Engagement team focused rention of existing Eventbrite creators. Prior to that, he was the Frontend Platform team responsible for building and maintaing Eventbrite's Frontend infrastructure and design system. He originally joined the Listings team at Eventbrite in May 2015, tasked to revamp the event details pages from an archaic MySpace-style design to a modern, fully responsive layout.
 
 Prior to Eventbrite, Ben spent nearly 9 years at [Zazzle](http://www.zazzle.com) ([@Zazzle](https://twitter.com/zazzle)) where he started out as an entry-level UI Engineer straight out of college and grew to eventually become its UI Architect. At Zazzle, Ben implemented multiple iterations of the product details pages and design tools as well as architected and developed Zazzle's server- and client-side UI framework.
 
