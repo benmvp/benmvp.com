@@ -4,11 +4,21 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
+
+#### CSS Conf EU 2019
+
+May 31, 2019
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TJxxzKoaLNE" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
 
 #### Reactathon 2019
 
-March 32, 2018
+March 31, 2018
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mtjHxwUQUs0?start=183" frameborder="0" allowfullscreen></iframe>
 
