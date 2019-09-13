@@ -24,7 +24,7 @@ February 11/12, 202 @ TBD
 
 ##### Raleigh, North Carolina (Raleigh Convention Center)
 
-#### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
 Monday, October 14, 2019 @ 2:15p (306A)
 
@@ -44,9 +44,10 @@ October 19/20, 2019 @ TBD
 
 ##### Toronto, Canada (Hilton Toronto)
 
-#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+#### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
 Friday September 13, 2019 @ 1:30p (Toronto II)
+🎞 <a href="http://www.benmvp.com/slides/2019/webu/webdev.html" target="_blank">Slides</a>
 
 ----------
 
