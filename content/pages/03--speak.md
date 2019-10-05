@@ -20,6 +20,16 @@ February 11/12, 202 @ TBD
 
 ## 2019
 
+### [Silicon Valley Code Camp](https://www.siliconvalley-codecamp.com/)
+
+##### San Jose, California (PayPal Town Hall)
+
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+October 19, 2019 @ 11a (React track)
+
+----------
+
 ### [All Things Open 2019](https://allthingsopen.org/)
 
 ##### Raleigh, North Carolina (Raleigh Convention Center)
@@ -27,16 +37,6 @@ February 11/12, 202 @ TBD
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
 Monday, October 14, 2019 @ 2:15p (306A)
-
-----------
-
-### [Silicon Valley Code Camp](https://www.siliconvalley-codecamp.com/)
-
-##### San Jose, California (PayPal Town Hall)
-
-#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
-
-October 19/20, 2019 @ TBD
 
 ----------
 
