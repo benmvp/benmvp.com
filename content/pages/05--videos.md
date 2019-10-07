@@ -18,7 +18,7 @@ May 31, 2019
 
 #### Reactathon 2019
 
-March 31, 2018
+March 31, 2019
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mtjHxwUQUs0?start=183" frameborder="0" allowfullscreen></iframe>
 
@@ -26,7 +26,7 @@ March 31, 2018
 
 #### [State of the React Ecosystem](/talks/#navigating-the-react-solar-system) (Keynote)
 
-#### ReactNext 2019
+#### ReactNext 2018
 
 November 4, 2018
 
