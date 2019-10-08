@@ -36,7 +36,7 @@ October 19, 2019 @ 11a (React track)
 
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
-Monday, October 14, 2019 @ 2:15p (306A)
+Monday, October 14, 2019 @ 2:15p (Ballroom C)
 
 ----------
 
