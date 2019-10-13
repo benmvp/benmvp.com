@@ -20,7 +20,17 @@ February 11/12, 202 @ TBD
 
 ## 2019
 
-### [Silicon Valley Code Camp](https://www.siliconvalley-codecamp.com/)
+### [NationJS Frontrunners React 2019](http://nationjs.com/)
+
+##### Washington, D.C. (Burke Theater)
+
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+December 6, 2019 @ TBD
+
+----------
+
+### [Silicon Valley Code Camp 2019](https://www.siliconvalley-codecamp.com/)
 
 ##### San Jose, California (PayPal Town Hall)
 
@@ -690,7 +700,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 
 Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
-🖥 <a href="http://www.benmvp.com/slides/2016/evbeng/react-workshop.html" target="_blank">Workshop repo](https://github.com/benmvp/react-workshop) | 🎞 [Slides</a>
+🎞 <a href="http://www.benmvp.com/slides/2016/evbeng/react-workshop.html" target="_blank">Slides</a> | 🖥 [Workshop repo](https://github.com/benmvp/react-workshop)
 
 ----------
 
