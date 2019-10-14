@@ -12,44 +12,49 @@ You can also check out my [Speaking Engagements](/speak/) past and present, as w
 
 -----
 
-#### JavaScript
+#### React
 
-- [The async future is present](#the-async-future-is-present)
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
-- [Components of the highest order ⚔ ](#components-of-the-highest-order-)
-- [ES.next features that'll make ya 💃🕺🏾](#esnext-features-thatll-make-ya-)
-- [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
+- [From Mixins to Custom Hooks: History of sharing in React](#from-mixins-to-custom-hooks-history-of-sharing-in-react)
 - [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
-- [isReactDev === isMobileDev](#isreactdev--ismobiledev)
-- [Let's web dev like it's 1999!](#lets-web-dev-like-its-1999)
 - ["Minimally-painful" React-Redux testing Workshop](#minimally-painful-react-redux-testing-workshop)
 - ["Minimally-painful" UI testing in React](#minimally-painful-ui-testing-in-react)
 - [Native Flexbox](#native-flexbox)
 - [Navigating the React Solar System](#navigating-the-react-solar-system)
 - [A new style of TDD with React and Redux](#a-new-style-of-tdd-with-react-and-redux)
 - [React + ES.next = ♥](#react--esnext--)
+- [React + Web APIs = ❤️](#react--web-apis--)
 - [React Exposed! 😮](#react-exposed-)
 - [React Fiber for the rest of us](#react-fiber-for-the-rest-of-us)
 - [React FUNdamentals Workshop](#react-fundamentals-workshop)
 - [React in style 😎](#react-in-style-)
 - [React Properly](#react-properly)
+- [Why choose React?](#why-choose-react)
+
+#### JavaScript
+
+- [The async future is present](#the-async-future-is-present)
+- [ES.next features that'll make ya 💃🕺🏾](#esnext-features-thatll-make-ya-)
+- [ES.next Fundamentals Workshop](#esnext-fundamentals-workshop)
+- [Future JavaScript: What's left?](#future-javascript-whats-left)
+- [The "perfect" library tooling](#the-perfect-library-tooling)
 - [Sweet ES6](#sweet-es6)
 - [Wait... the Web can do what?1?!](#wait-the-web-can-do-what1)
-- [Why choose React?](#why-choose-react)
 
 #### CSS
 
 - [Flexing your Flexbox muscles](#flexing-your-flexbox-muscles)
+- [Let's web dev like it's 1999!](#lets-web-dev-like-its-1999)
 - [You don't need JavaScript for that!](#you-dont-need-javascript-for-that)
+
+#### Server-side
+
+- [Isomorphic React sans Node?? 🤔](#isomorphic-react-sans-node-)
 
 #### Career/Leadership
 
 - [Demystifying Conference Speaking](#demystifying-conference-speaking)
 - [The Junior Dev Dilemma](#the-junior-dev-dilemma)
-
-#### Server-side
-
-- [Isomorphic React sans Node?? 🤔](#isomorphic-react-sans-node-)
 
 -----
 
@@ -59,23 +64,21 @@ You can also check out my [Speaking Engagements](/speak/) past and present, as w
 
 ### Backbone to React: an epic journey
 
+_(Retired)_
+
 > React has exploded in popularity. Its declarative syntax and DOM abstraction for components make it an obvious choice for client-side development. But switching from your current framework over to a React-based stack leaves a lot of open questions:
 >
 > How do you convince Management that React is the right strategy? Should you transition our app(s) all at once? How do you train up the team? Does your app need to be “isomorphic”? What are some coding best practices to follow?
 >
 > For the past year, Eventbrite has been migrating our frontend stack from one centered around Backbone/Marionette over to React. Learn from both our wins and challenges in switching so that you too can make a successful transition.
 
-### Components of the highest order ⚔ 
-
-_Official talk description about React higher-order components coming soon!_
-
 
 ### Demystifying Conference Speaking
 
-> "I don't know what I'd talk about."  
-"I'm not good enough to compete with the ‘pros'."  
-"Well, I don't even know how the process works."  
-"No one will be interested in what I want to talk about anyway."  
+> "I don't know what I'd talk about."
+"I'm not good enough to compete with the ‘pros'."
+"Well, I don't even know how the process works."
+"No one will be interested in what I want to talk about anyway."
 >
 > These are just some of the reasons that keep potential speakers from sharing their knowledge by giving a talk. Conference speaking is great for networking, personal growth, as well as conquering fears. But when you're an aspiring speaker, the process to become one is unclear. In this session, let's debunk myths about conference speaking by learning what it takes to go from wanting to speak at conferences to actually delivering your first conference talk.
 
@@ -89,8 +92,10 @@ _(Retired)_
 
 ### ES.next features that'll make ya 💃🕺🏾
 
+_(Retired)_
+
 > JavaScript is evolving quickly. The mega ES6 specification was released back in 2015, with ES2016 and ES2017 coming in following years. New versions of ECMAScript are now released on a yearly basis with new features going through a 4-stage proposal process. But with build tooling like Babel, we can leverage functionality slated for future versions right now to write even clearer and more concise JavaScript code.
-> 
+>
 > Familiarity with modern JavaScript features will help you get the most of this session where we'll discuss class properties, null property accessing, and more. Oh, and don't worry if you don't understand all of those terms — you soon will after this session!
 
 
@@ -100,21 +105,36 @@ _(Retired)_
 >
 > Experience with JavaScript will help you get the most out of this hands-on workshop, but you don't have to have a JavaScript black belt to leave feeling confident in "ES.next." Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other ES.next features you're likely to use and benefit from on a daily basis. Oh, and don't worry if you didn't understand any of those terms — you soon will after this workshop.
 
+### From Mixins to Custom Hooks: History of sharing in React
+
+> React’s component-driven design simplifies reusing UI because chunks of markup can be encapsulated into custom components. Likewise, sharing traditional data utilities is straightforward because React is “Just JavaScript”™. But what about sharing non-visual component logic like state shape and lifecycle methods? React has had several approaches over its lifetime to solve this problem: mixins, higher-order components (HOCs), render props, and now hooks, each with their pros and cons.
+>
+> In this session geared towards current React developers, let’s take a history lesson on sharing in React in order to better understand how modern-day custom hooks work and the problems they solve. By the end, not only will we know how hooks function, but we’ll also be equipped to pull out non-visual component logic into easily shareable custom hooks in our apps.
+
+### Future JavaScript: What's left?
+
+> JavaScript has evolved quickly and continues to do so. The mega ES6 specification was released back in 2015, with four more editions released in successive years. New versions of ECMAScript are released on a yearly basis with new features going through a 4-stage proposal process. So what proposals are left? What do we have to look forward to in 2021 and beyond to help us write even clearer and more concise JavaScript code?
+>
+> Familiarity with modern JavaScript will help you get the most of this session where we’ll discuss new features such as optional chaining, nullish coalescing, and more. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
+
+
 ### Flexing your Flexbox muscles
+
+_(Retired)_
 
 > Building linear layouts in CSS has been hard. Tables are bad, inline-block has quirks, and floats are insufficient. Thankfully the CSS flexible box layout module, aka Flexbox, enables us to elegantly solve our layout problems. While the specification has been around for over four years, increased browser support has finally pushed Flexbox mainstream. Even Bootstrap and Foundation have included it in the latest versions of their layout systems. Let's deep dive into Flexbox: what it is, why you should use it, how it's configured, and where it's most useful.
 
 ### Help! My React app is slowwwww! 🐢
 
+_(Retired)_
+
 > React's sophisticated reconciler (aka the “Virtual DOM”) makes updates to the UI feel fast because it optimizes interactions with the DOM. As a result, we no longer have to worry about how to transition our UI from one state to the next. However, the reconciler is not a silver bullet; even the new Fiber Reconciler. Our React apps can still get sluggish, especially as they grow in size and data. Let's discuss some causes for slow-downs and tools to diagnose problems so that we can speed up our apps.
 
 ### Isomorphic React sans Node?? 🤔
 
+_(Retired)_
+
 > React is JavaScript library for building user interfaces that has taken the web development industry by storm. Its declarative syntax and DOM abstraction for components not only make client-side development simple, but also enables server-side rendering of those same components, which enables improved SEO and initial browser load time. But how do you render JavaScript React components server-side if your backend doesn't run on Node? Learn how Eventbrite successfully integrated React with their Python/Django backend so that you can do the same in yours.
-
-### isReactDev === isMobileDev
-
-_Official talk description about transitioning from React to React Native coming soon!_
 
 ### The Junior Dev Dilemma
 
@@ -127,7 +147,7 @@ _Official talk description about transitioning from React to React Native coming
 ### Let's web dev like it's 1999!
 
 > When we “view source” our modern web applications, the code looks nothing like what we originally wrote. At a minimum, it's gone through linting, transpilation, obfuscation, minification, and bundling. And in order to build our beautifully designed apps with sophisticated interactions, we leverage the latest features in HTML, CSS and JavaScript available in our modern evergreen browsers.
-> 
+>
 > However, when web development was in its infancy two decades ago, things were drastically different. Sites had hit counters, used frames for navigation, and were updated manually via FTP. We used the blink tag and scrolling marquees! Let's take a walk down memory lane (or have a history lesson) and have some laughs cringing at how sites looked, how they were built, and the rudimentary tooling we had to develop them.
 
 ### "Minimally-painful" React-Redux testing Workshop
@@ -139,7 +159,7 @@ _Official talk description about transitioning from React to React Native coming
 > - Stub libraries that cannot be run outside of the browser
 > - Test the integration of components within entire app
 > - And more...
-> 
+>
 > Prior experience with React is important to hit the ground running. You’ll leave the workshop with all the fundamentals you need to properly test your own apps with React. Testing probably still won’t be glamorous... but with these lessons it shouldn’t be painful either!
 
 
@@ -150,6 +170,8 @@ _Official talk description about transitioning from React to React Native coming
 > When Eventbrite's Frontend Platform team introduced React to our stack in 2016, we also developed best practices for testing React applications. In this talk, we'll learn some dos and don'ts Eventbrite uses for writing unit tests for React components, including those gnarly complicated cases. Testing probably still won't be glamorous... but with these lessons it shouldn't be painful either!
 
 ### Native Flexbox
+
+_(Retired)_
 
 > React Native is a framework for building truly native mobile apps, allowing web developers to leverage their existing JavaScript and React skills to compose rich iOS and Android user interfaces. React Native also uses CSS for styling, particularly Flexbox for layout. Everything is a flex container!
 >
@@ -163,9 +185,18 @@ _Official talk description about transitioning from React to React Native coming
 
 ### A new style of TDD with React and Redux
 
+_(Retired)_
+
 > We all agree that having automated tests is good for our projects, but we tend to skimp out on them. Who has time, on tight deadlines, to spend even more time writing tests when we've already verified the app works as expected in the browser? Now test-driven development (TDD) aimed to solve this issue by getting us to write the tests before the feature code. But in practice, it can be more trouble than it's worth when we build complex UI applications or simply don't yet know how we'll build the app.
 >
 > So let's learn about a new style of TDD, "test during development," where we verify user interactions by writing tests rather than manually in the browser. The result? Way more tests! And React's architecture separates the component hierarchy from the DOM, making it possible to quickly test the user interactions of our components without needing a browser at all. We'll learn some dos and don'ts for writing unit tests for React components and Redux state, as well as tips and tricks for those gnarly complicated cases. No longer will the tests "come later" (i.e. never).
+
+
+### The "perfect" library tooling
+
+> So you have a great idea for the perfect JS library... but the implementation is only half the battle. You also need to configure the infrastructure to develop, test, build and deploy your package. How do you set up Typescript and other static checking? Do you target ESM or CJS builds? Is integration testing even possible? There’s so much extra to consider!
+>
+> Let’s learn what makes up the “perfect” library tooling. Familiarity with developing JavaScript packages will help you get the most out of this session, but you will gain plenty of helpful insights even if you have yet to build one. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 
 ### React + ES.next = ♥
@@ -176,7 +207,16 @@ _(Retired)_
 >
 > Experience with React will help you get the most out of this session, but you don't have to have a JavaScript black belt to leave feeling confident in using ES.next with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don't worry if you don't understand all of those terms — you soon will after this session!
 
+### React + Web APIs = ❤️
+
+> React is a JavaScript UI library that makes creating reusable components easy and efficient. And modern Web APIs like Fetch, Local storage, and Geolocation when combined with React enable us to create sophisticated user interfaces. But there are even more, lesser-known Web APIs that help us further blur the lines between browser and native apps!
+>
+> In this session geared towards React developers of all skill levels, let’s learn about some Web APIs that you may have never heard of before! We’ll look at device diagnostic, interaction, audio, and video APIs — where they are supported and how you can apply them in your next React project.
+
+
 ### React Exposed! 😮
+
+_(Retired)_
 
 > React's seemingly "magical" features make developing sophisticated web UIs easy by doing so much heavy lifting for us. Unfortunately, without knowing how certain parts of the "magic" work, we run into confusing React warnings/errors.
 >
@@ -185,6 +225,8 @@ _(Retired)_
 > In this session geared towards those familiar with React, let's answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other "magical" features. Not only will we be able to prevent errors with a clearer understanding of the "magic," but we can potentially boost rendering performance as well.
 
 ### React Fiber for the rest of us
+
+_(Retired)_
 
 > Fiber was introduced in version 16 of React. It is a ground-up rewrite of the React scheduler, typically mis-referred to as the “Virtual DOM.” The Fiber-based scheduler supports “cooperative scheduling” and allows for other output renderers besides the browser DOM. In this session geared towards those familiar with React, let's learn about what React Fiber is and why it exists through the lens of how it will impact your React development and the performance of your apps at runtime.
 
@@ -206,9 +248,13 @@ _(Retired)_
 
 ### React in style 😎
 
+_(Retired)_
+
 > React is a JavaScript UI library that makes creating reusable components easy and efficient. However, there is no single approach for styling these components. “Css-in-js” libraries like glamorous and styled-components are the new hotness, but there are other viable approaches for beautifying our React apps as well. So let's walk through these options for styling components. Familiarity with React will help you get the most out of this session. And by the end, you'll have a solid understanding of the various approaches to make an informed styling decision in your React project.
 
 ### React Properly
+
+_(Retired)_
 
 > React is a JavaScript library for building user interfaces. Its declarative JSX syntax and virtual DOM abstraction provide wonderful development ergonomics and great performance. But even with all of the "magic" that React provides, it's still easy to write suboptimal React code.
 >
@@ -231,6 +277,8 @@ _(Retired)_
 > Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don't worry if you didn't understand any of those terms — you soon will after this session.
 
 ### Why choose React?
+
+_(Retired)_
 
 > As the Frontend Platform team at Eventbrite switched from Backbone/Marionette over to React, it had to convince other developers, managers, directors, and non-engineers that React was the right path. And the rationale for moving wasn't just because React is insanely popular. There are many tangible benefits that make the effort of migrating worthwhile.
 >
