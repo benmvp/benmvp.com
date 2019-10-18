@@ -36,7 +36,9 @@ December 6, 2019 @ TBD
 
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
-October 19, 2019 @ 11a (React track)
+October 19, 2019 @ 11a (Fireside A)
+
+🎞 <a href="http://www.benmvp.com/slides/2019/svcc/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
