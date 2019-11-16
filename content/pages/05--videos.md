@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+#### All Things Open 2019
+
+October 14, 2019
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/36pyoPW0-iU" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
 #### CSS Conf EU 2019

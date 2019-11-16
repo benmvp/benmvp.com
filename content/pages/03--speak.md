@@ -50,7 +50,7 @@ October 19, 2019 @ 11a (Fireside A)
 
 Monday, October 14, 2019 @ 2:15p (Ballroom C)
 
-🎞 <a href="http://www.benmvp.com/slides/2019/ato/react-eco.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=36pyoPW0-iU) | 🎞 <a href="http://www.benmvp.com/slides/2019/ato/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
