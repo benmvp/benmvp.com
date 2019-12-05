@@ -26,7 +26,9 @@ February 11/12, 202 @ TBD
 
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
-December 6, 2019 @ TBD
+December 6, 2019 @ 10:35a
+
+🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
