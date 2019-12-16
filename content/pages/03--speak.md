@@ -8,13 +8,35 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2020
 
+### [HalfStack Charlotte 2020](https://halfstackconf.com/charlotte/)
+
+##### Charlotte, North Carolina (TBD)
+
+#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+
+Friday, April 24, 2020 @ TBD
+
+🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
+
+----------
+
 ### [Flashback Conference](http://flashback.dev)
 
 ##### Orlando, Florida (The Abbey)
 
 #### [Let's web dev like it's 1999!](/talks/#lets-web-dev-like-its-1999)
 
-February 11/12, 202 @ TBD
+Monday, February 10, 2020 @ 1:30p
+
+----------
+
+### [JSConf Hawai'i 2020](https://www.jsconfhi.com/)
+
+##### Waikiki, Hawaii (Alohilani Resort)
+
+#### [The "perfect" library tooling](/talks/#the-perfect-library-tooling)
+
+Wednesday, February 5, 2020 @ 11:30a
 
 ----------
 
@@ -24,9 +46,9 @@ February 11/12, 202 @ TBD
 
 ##### Washington, D.C. (Burke Theater)
 
-#### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
+#### [Navigating the Ecosystem](/talks/#navigating-the-react-solar-system)
 
-December 6, 2019 @ 10:35a
+Friday, December 6, 2019 @ 10:35a
 
 🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
 
