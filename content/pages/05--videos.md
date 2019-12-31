@@ -4,6 +4,16 @@ title: Speaking Videos
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):
 
+#### [Navigating the Ecosystem](/talks/#navigating-the-react-solar-system)
+
+#### NationJS Frontrunners React 2019
+
+December 6, 2019
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e4tkunIoWTc" frameborder="0" allowfullscreen></iframe>
+
+----------
+
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
 #### All Things Open 2019

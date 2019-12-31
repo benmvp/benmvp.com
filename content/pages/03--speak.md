@@ -16,7 +16,6 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 Friday, April 24, 2020 @ TBD
 
-🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
@@ -50,7 +49,7 @@ Wednesday, February 5, 2020 @ 11:30a
 
 Friday, December 6, 2019 @ 10:35a
 
-🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
+🎥 [Video](https://www.youtube.com/watch?v=e4tkunIoWTc) | 🎞 <a href="http://www.benmvp.com/slides/2019/nationjs/react-eco.html" target="_blank">Slides</a>
 
 ----------
 
