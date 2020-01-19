@@ -19,6 +19,17 @@ Friday, April 24, 2020 @ TBD
 
 ----------
 
+### [Open Source 101 Austin 2020](https://opensource101.com/events/austin-2020/)
+
+##### Austin, Texas (Hilton Inn)
+
+#### [The "perfect" library tooling](/talks/#the-perfect-library-tooling)
+
+Tuesday, April 14, 2020 @ TBD
+
+
+----------
+
 ### [Flashback Conference](http://flashback.dev)
 
 ##### Orlando, Florida (The Abbey)
