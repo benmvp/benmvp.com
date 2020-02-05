@@ -16,6 +16,7 @@ You can also check out my [Speaking Engagements](/speak/) past and present, as w
 
 - [Backbone to React: an epic journey](#backbone-to-react-an-epic-journey)
 - [From Mixins to Custom Hooks: History of sharing in React](#from-mixins-to-custom-hooks-history-of-sharing-in-react)
+- [Intro to Modern React using Hooks](#intro-to-modern-react-using-hooks)
 - [Help! My React app is slowwwww! 🐢](#help-my-react-app-is-slowwwww-)
 - ["Minimally-painful" React-Redux testing Workshop](#minimally-painful-react-redux-testing-workshop)
 - ["Minimally-painful" UI testing in React](#minimally-painful-ui-testing-in-react)
@@ -129,6 +130,22 @@ _(Retired)_
 _(Retired)_
 
 > React's sophisticated reconciler (aka the “Virtual DOM”) makes updates to the UI feel fast because it optimizes interactions with the DOM. As a result, we no longer have to worry about how to transition our UI from one state to the next. However, the reconciler is not a silver bullet; even the new Fiber Reconciler. Our React apps can still get sluggish, especially as they grow in size and data. Let's discuss some causes for slow-downs and tools to diagnose problems so that we can speed up our apps.
+
+### Intro to Modern React using Hooks
+
+> React is a JavaScript UI library that makes creating reusable components easy and efficient. In this workshop, we’ll cover the critical concepts of modern React while iteratively building an app using hooks. In this workshop, we'll learn how to:
+>
+> - Write readable, reusable and composable components
+> - Use JSX syntax
+> - Work with the Virtual DOM
+> - Handle user interactions and synthetic events
+> - Maintain application state
+> - Make API calls
+> - Apply component styling
+> - Handle HTML forms & form elements
+> - And more...
+>
+> Prior experience with React is not necessary, but experience with building JavaScript applications will be helpful to hit the ground running. You’ll leave the workshop with all the fundamentals you need to build your own modern apps with React using hooks.
 
 ### Isomorphic React sans Node?? 🤔
 

@@ -8,6 +8,17 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2020
 
+### [React Loop 2020](https://reactloop.com/)
+
+##### Chicago, Illinois (Venue SIX10)
+
+#### Talk TBD
+
+Friday, June 19, 2020 @ TBD
+
+
+----------
+
 ### [HalfStack Charlotte 2020](https://halfstackconf.com/charlotte/)
 
 ##### Charlotte, North Carolina (TBD)
@@ -27,6 +38,16 @@ Friday, April 24, 2020 @ TBD
 
 Tuesday, April 14, 2020 @ TBD
 
+
+----------
+
+### [Reactathon](https://www.reactathon.com/)
+
+##### San Francisco, California (TBD)
+
+#### [Intro to Modern React using Hooks](/talks/intro-to-modern-react-using-hooks) (Workshop)
+
+Monday, March 30, 2020 @ 9a
 
 ----------
 
