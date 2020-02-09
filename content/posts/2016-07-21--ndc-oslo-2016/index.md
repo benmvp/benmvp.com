@@ -35,7 +35,7 @@ To close, here's the [video](https://vimeo.com/171319733) of the talk:
 
 <iframe src="https://player.vimeo.com/video/171319733" style="margin-bottom:16px" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-And here's the abstract (don't forget the [slides](http://www.benmvp.com/slides/2016/ndcoslo/no-js.html)!):
+And here's the abstract (don't forget the [slides](http://slides.benmvp.com/2016/ndcoslo/no-js)!):
 
 > We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should’ve made old development strategies obsolete, and yet we’re still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.
 

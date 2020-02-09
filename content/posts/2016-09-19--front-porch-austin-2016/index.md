@@ -29,10 +29,10 @@ To close, here's the [video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PL
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fs4bJr1b7UU" frameborder="0" allowfullscreen></iframe>
 
-And here's the abstract (don't forget the [slides](http://www.benmvp.com/slides/2016/frontporch/react-esnext.html)!):
+And here's the abstract (don't forget the [slides](http://slides.benmvp.com/2016/frontporch/react-esnext)!):
 
 > JavaScript is evolving quickly. The ES6 specification was released in 2015 and is quickly being implemented by modern browsers. New versions of ECMAScript will now be released on a yearly basis. We can leverage ES6 and functionality slated for future versions right now to write even clearer and more concise React code.
-> 
+>
 > Experience with React will help you get the most out of this session, but you don’t have to have a JavaScript black belt to leave feeling confident in using ES6 with React. Learn how to write cleaner code using the new spread operator, classes, modules, destructuring, and other tasty syntactic sugar features being introduced into ECMAScript. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
 
 Many thanks again to [Chris Williams](https://twitter.com/amboy00), [projekt202](https://projekt202.com/), and the rest of the [Front Porch](http://frontporch.io/) team for putting on a fantastic conference!
