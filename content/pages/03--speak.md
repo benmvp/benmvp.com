@@ -16,8 +16,7 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 Friday, June 19, 2020 @ TBD
 
-
-----------
+---
 
 ### [HalfStack Charlotte 2020](https://halfstackconf.com/charlotte/)
 
@@ -27,8 +26,7 @@ Friday, June 19, 2020 @ TBD
 
 Friday, April 24, 2020 @ TBD
 
-
-----------
+---
 
 ### [Open Source 101 Austin 2020](https://opensource101.com/events/austin-2020/)
 
@@ -38,18 +36,17 @@ Friday, April 24, 2020 @ TBD
 
 Tuesday, April 14, 2020 @ TBD
 
-
-----------
+---
 
 ### [Reactathon](https://www.reactathon.com/)
 
 ##### San Francisco, California (TBD)
 
-#### [Intro to Modern React using Hooks](/talks/intro-to-modern-react-using-hooks) (Workshop)
+#### [Intro to Modern React using Hooks](/talks/#intro-to-modern-react-using-hooks) (Workshop)
 
 Monday, March 30, 2020 @ 9a
 
-----------
+---
 
 ### [Flashback Conference](http://flashback.dev)
 
@@ -61,7 +58,7 @@ Monday, February 10, 2020 @ 1:30p
 
 🎞 [Slides](https://slides.benmvp.com/2020/flashback/webdev)
 
-----------
+---
 
 ### [JSConf Hawai'i 2020](https://www.jsconfhi.com/)
 
@@ -73,7 +70,7 @@ Wednesday, February 5, 2020 @ 11:30a
 
 🎞 [Slides](https://slides.benmvp.com/2020/jsconfhi/perfect-lib)
 
-----------
+---
 
 ## 2019
 
@@ -87,7 +84,7 @@ Friday, December 6, 2019 @ 10:35a
 
 🎥 [Video](https://www.youtube.com/watch?v=e4tkunIoWTc) | 🎞 [Slides](https://slides.benmvp.com/2019/nationjs/react-eco)
 
-----------
+---
 
 ### [Silicon Valley Code Camp 2019](https://www.siliconvalley-codecamp.com/)
 
@@ -99,7 +96,7 @@ October 19, 2019 @ 11a (Fireside A)
 
 🎞 [Slides](https://slides.benmvp.com/2019/svcc/react-eco)
 
-----------
+---
 
 ### [All Things Open 2019](https://allthingsopen.org/)
 
@@ -111,7 +108,7 @@ Monday, October 14, 2019 @ 2:15p (Ballroom C)
 
 🎥 [Video](https://www.youtube.com/watch?v=36pyoPW0-iU) | 🎞 [Slides](https://slides.benmvp.com/2019/ato/react-eco)
 
-----------
+---
 
 ### [Web Unleashed 2019](https://fitc.ca/event/webu19/)
 
@@ -123,7 +120,7 @@ Friday September 13, 2019 @ 1:30p (Toronto II)
 
 🎞 [Slides](https://slides.benmvp.com/2019/webu/webdev)
 
-----------
+---
 
 ### [CSS Conf EU 2019](https://2019.cssconf.eu/)
 
@@ -135,7 +132,7 @@ Friday, May 31, 2019 @ 14:20
 
 🎥 [Video](https://www.youtube.com/watch?v=TJxxzKoaLNE) | 🎞 [Slides](https://slides.benmvp.com/2019/cssconfeu/webdev)
 
-----------
+---
 
 ### [Reactathon 2019](https://www.reactathon.com/)
 
@@ -147,7 +144,7 @@ Sunday, March 31, 2019 @ 10:10a
 
 🎥 [Video](https://www.youtube.com/watch?v=mtjHxwUQUs0&t=183) | 🎞 [Slides](https://slides.benmvp.com/2019/reactathon/react-eco)
 
-----------
+---
 
 ## 2018
 
@@ -161,7 +158,7 @@ Sunday, November 4, 2018 @ 9:50a
 
 🎥 [Video](https://www.youtube.com/watch?v=yOWzQOZIANU) | 🎞 [Slides](https://slides.benmvp.com/2018/reactnext/react-eco)
 
-----------
+---
 
 ### [Framework Summit 2018](https://www.frameworksummit.com/)
 
@@ -173,7 +170,7 @@ Wednesday, October 3, 2018 @ 4p
 
 🎞 [Slides](https://slides.benmvp.com/2018/frameworksummit/nav-react)
 
-----------
+---
 
 ### [NDC Sydney 2018](https://ndcsydney.com/)
 
@@ -191,7 +188,7 @@ Thursday, September 20, 2018 @ 10:20a (Room 5)
 
 🎥 [Video](https://vimeo.com/297082496) | 🎞 [Slides](https://slides.benmvp.com/2018/ndcsydney/nav-react)
 
-----------
+---
 
 ### [React Alicante 2018](http://reactalicante.es/)
 
@@ -203,14 +200,13 @@ Friday, September 14, 2018 @ 16:50
 
 🎥 [Video](https://www.youtube.com/watch?v=LBzJFcZsPBQ&list=PLd7nkr8mN0sVTbT644oHYDfWF6G0GwhiX&t=0s&index=12) | 🎞 [Slides](https://slides.benmvp.com/2018/reactalicante/react-perf)
 
-
 #### ["Minimally-painful" React-Redux testing Workshop](/talks/#minimally-painful-react-redux-testing-workshop)
 
 Thursday, September 13, 2018 @ 9:00 (Terra Lucis II)
 
 🎞 [Slides](https://slides.benmvp.com/2018/reactalicante/react-workshop) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/testing)
 
-----------
+---
 
 ### [React Rally 2018](http://www.reactrally.com/)
 
@@ -220,7 +216,7 @@ Thursday, September 13, 2018 @ 9:00 (Terra Lucis II)
 
 August 16 & 17, 2018
 
-----------
+---
 
 ### [NEJS 2018](https://2018.nejsconf.com/)
 
@@ -232,7 +228,7 @@ Friday, July 27, 2018 @ 1:30p
 
 🎥 [Video](https://www.youtube.com/watch?v=6hyIZlaWVmU) | 🎞 [Slides](https://slides.benmvp.com/2018/nejs/webdev)
 
-----------
+---
 
 ### [Node Summit 2018](http://www.nodesummit.com/)
 
@@ -244,14 +240,13 @@ Tuesday, July 24, 2018 @ 2:55p (Main Stage)
 
 🎥 [Video](https://www.youtube.com/watch?v=9yK4t2CuIHQ) | 🎞 [Slides](https://slides.benmvp.com/2018/nodesummit/esnext)
 
-
 #### Panel: Node in the Enterprise
 
 Tuesday, July 24, 2018 @ 1:30 (Main Stage)
 
 🎥 [Video](https://vimeo.com/289098128)
 
-----------
+---
 
 ### [Music City Code 2018](http://www.musiccitytech.com/conferences/music-city-code/)
 
@@ -263,7 +258,7 @@ Thursday, May 31, 2018 @ 9a (Cinema)
 
 🎞 [Slides](https://slides.benmvp.com/2018/mctech/react-workshop) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
-----------
+---
 
 ### [Reactathon 2018](http://www.reactathon.com/)
 
@@ -281,7 +276,7 @@ Monday, March 19, 2018 @ 10a
 
 🎞 [Slides](https://slides.benmvp.com/2018/reactathon/react-workshop) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
-----------
+---
 
 ### [Sabio LA](http://www.sabio.la/)
 
@@ -293,8 +288,7 @@ Tuesday, January 23, 2018 @ 7p
 
 🎞 [Slides](https://slides.benmvp.com/2018/sabiola/react-workshop) | 🖥 [Workshop code](https://github.com/benmvp/react-workshop/tree/master/src/react)
 
-----------
-
+---
 
 ## 2017
 
@@ -308,7 +302,7 @@ Thursday, December 7, 2017 @ 8p
 
 🎞 [Slides](https://slides.benmvp.com/2017/telegraph/why-react)
 
-----------
+---
 
 ### [Nodevember 2017](http://nodevember.org/)
 
@@ -320,7 +314,7 @@ Tuesday, November 28, 2017 @ 5p (Commodore Ballroom)
 
 🎞 [Slides](https://slides.benmvp.com/2017/nodevember/why-react)
 
-----------
+---
 
 ### [Full Stack Toronto 2017](http://2017.fsto.co/)
 
@@ -332,7 +326,7 @@ Monday, October 23, 2017 @ 4p (Room 206AB)
 
 🎞 [Slides](https://slides.benmvp.com/2017/fstoco/iso-react)
 
-----------
+---
 
 ### [Hackbright Academy](https://hackbrightacademy.com/)
 
@@ -344,7 +338,7 @@ Tuesday, October 17, 2017
 
 🎞 [Slides](https://slides.benmvp.com/2017/hackbright/sweet-es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ### [Strange Loop 2017](https://www.thestrangeloop.com/2017/sessions.html)
 
@@ -356,7 +350,7 @@ Thursday, September 28, 2017 @ 12:30p
 
 🎞 [Slides](https://slides.benmvp.com/2017/strangeloop/react-workshop) | 🖥 [Code examples](https://github.com/benmvp/react-workshop)
 
-----------
+---
 
 ### [React Boston 2017](http://www.reactboston.com/)
 
@@ -368,7 +362,7 @@ Sunday, September 24, 2017 @ 9a
 
 🎞 [Slides](https://slides.benmvp.com/2017/reactboston/fiber)
 
-----------
+---
 
 ### [Real World React](https://www.meetup.com/Real-World-React/events/242202176/)
 
@@ -380,7 +374,7 @@ Tuesday, September 19, 2017 @ 7p
 
 🎞 [Slides](https://slides.benmvp.com/2017/rwreact/fiber)
 
-----------
+---
 
 ### [OpenRec 2017](http://openrecsf.com/)
 
@@ -390,7 +384,7 @@ Tuesday, September 19, 2017 @ 7p
 
 Wednesday, September 13, 2017 @ 11:25a
 
-----------
+---
 
 ### [React Rally 2017](http://www.reactrally.com/)
 
@@ -402,7 +396,7 @@ Thursday, August 24, 2017 @ 2p
 
 🎥 [Video](https://www.youtube.com/watch?v=q6QTxq_pFn0) | 🎞 [Slides](https://slides.benmvp.com/2017/reactrally/fiber)
 
-----------
+---
 
 ### [Node Summit 2017](http://www.nodesummit.com/)
 
@@ -414,8 +408,7 @@ Thursday, July 27, 2017 @ 12p (Fisher East)
 
 🎥 [Video](https://vimeo.com/229703092) | 🎞 [Slides](https://slides.benmvp.com/2017/nodesummit/iso-react)
 
-
-----------
+---
 
 ### [Chain React 2017](https://infinite.red/ChainReactConf)
 
@@ -427,7 +420,7 @@ Monday, July 10, 2017 @ 11:30a
 
 🎥 [Video](https://www.youtube.com/watch?v=nbtEwjRJXLo) | 🎞 [Slides](https://slides.benmvp.com/2017/chainreact/react-native-esnext)
 
-----------
+---
 
 ### [O'Reily Fluent 2017](https://conferences.oreilly.com/fluent/fl-ca)
 
@@ -439,7 +432,7 @@ Thursday, June 22, 2017 @ 11a (210 CG)
 
 🎞 [Slides](https://slides.benmvp.com/2017/fluent/flexbox)
 
-----------
+---
 
 ### [RevolutionConf 2017](http://revolutionconf.com/)
 
@@ -457,7 +450,7 @@ Thursday, June 1, 2017 @ 2:30p (Mariner A)
 
 🎞 [Slides](https://slides.benmvp.com/2017/revconf/esnext) | 🖥 [Code examples](https://github.com/kentcdodds/es6-workshop)
 
-----------
+---
 
 ### [Modern Web Meetup](https://www.meetup.com/modernweb/events/239003827/)
 
@@ -469,7 +462,7 @@ Tuesday, May 23, 2017 @ 8p
 
 🎥 [Video](https://www.youtube.com/watch?v=-6gfOJwwXvs&index=10&list=PL-G5r6j4GptGMQWj0ph4FaZqiBnIU9leu) | 🎞 [Slides](https://slides.benmvp.com/2017/modernweb/nav-react)
 
-----------
+---
 
 ### [O'Reilly OSCON Austin 2017](http://conferences.oreilly.com/oscon/oscon-tx)
 
@@ -481,7 +474,7 @@ Wednesday, May 10, 2017 @ 2:35p (Meeting Room 12)
 
 🎞 [Slides](https://slides.benmvp.com/2017/oscon/react-properly)
 
-----------
+---
 
 ### [Fog City Ruby Meetup](https://www.meetup.com/fogcityruby/events/238787325/)
 
@@ -493,7 +486,7 @@ Tuesday, April 11, 2017 @ 7:15p
 
 🎞 [Slides](https://slides.benmvp.com/2017/fogcityruby/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ### [Render Conference 2017](http://2017.render-conf.com/)
 
@@ -503,9 +496,9 @@ Tuesday, April 11, 2017 @ 7:15p
 
 Thursday, 30 March 2017 @ 11:55
 
-🎥 [Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞  [Slides](https://slides.benmvp.com/2017/render/iso-react)
+🎥 [Video](https://www.youtube.com/watch?v=zxtcr8Zuvfs) | 🎞 [Slides](https://slides.benmvp.com/2017/render/iso-react)
 
-----------
+---
 
 ### [JazzCon.Tech 2017](http://jazzcon.tech/)
 
@@ -523,7 +516,7 @@ Thursday, March 23, 2017 @ 1p (ReactJS track)
 
 🎞 [Slides](https://slides.benmvp.com/2017/jazzcon/nav-react)
 
-----------
+---
 
 ### [Devoxx US 2017](http://devoxx.us/)
 
@@ -535,7 +528,7 @@ Tuesday, March 21, 2017 @ 4:30p (Room LL 21C)
 
 🎞 [Slides](https://slides.benmvp.com/2017/devoxxus/nav-react)
 
-----------
+---
 
 ### [React Conf 2017](http://conf.reactjs.org/)
 
@@ -547,7 +540,7 @@ Monday, March 13, 2017 @ 12:30p
 
 🎥 [Video](https://www.youtube.com/watch?v=jh_Qzi-yHU0) | 🎞 [Slides](https://slides.benmvp.com/2017/reactconf/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
-----------
+---
 
 ### [Reactathon](http://reactathon.com/)
 
@@ -559,7 +552,7 @@ Tuesday, March 7, 2017 @ 9a (Eventbrite)
 
 🎞 [Slides](https://slides.benmvp.com/2017/reactathon/esnext) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ### [Mobile+Web DevCon 2017](http://mobilewebdevconference.com/san-francisco-2017/)
 
@@ -571,7 +564,7 @@ Friday, March 3, 2017 @ 10:30a (Track B: Web Development)
 
 🎞 [Slides](https://slides.benmvp.com/2017/mwdcon/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
-----------
+---
 
 ### [Forward JS 2017](https://forwardjs.com/)
 
@@ -583,7 +576,7 @@ Wednesday, March 1, 2017 @ 3:45p (Emerald)
 
 🎥 [Video](https://www.youtube.com/watch?v=cAYMqBU7Qko) | 🎞 [Slides](https://slides.benmvp.com/2017/forwardjs/react-exposed) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
-----------
+---
 
 ### [Sabio](http://www.sabio.la/)
 
@@ -595,7 +588,7 @@ Tuesday, February 21, 2017 @ 7p
 
 🎞 [Slides](https://slides.benmvp.com/2017/sabio/esnext) | 🖥 [Workshop code](https://github.com/kentcdodds/es6-workshop) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ### [DeveloperWeek JavaScript Conference 2017](http://www.developerweek.com/javascript-conference/)
 
@@ -607,7 +600,7 @@ Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)
 
 🎞 [Slides](https://slides.benmvp.com/2017/devweek/nav-react)
 
-----------
+---
 
 ### [ReactJS San Francisco Bay Area Meetup](http://www.meetup.com/ReactJS-San-Francisco/events/232284872/)
 
@@ -619,7 +612,7 @@ Thursday, February 9, 2017 @ 7p
 
 🎞 [Slides](https://slides.benmvp.com/2017/reactsf/react-exposed) | 🖥 [Code examples](https://github.com/benmvp/react-exposed)
 
-----------
+---
 
 ### [BuzzJS 2.0 2017](http://buzzjs.com/)
 
@@ -631,7 +624,7 @@ Friday, January 27, 2017 @ 2:50p
 
 🎥 [Video](https://www.youtube.com/watch?v=fXWvcmrbX5M) | 🎞 [Slides](https://slides.benmvp.com/2017/buzzjs/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
-----------
+---
 
 ### [Hackbright Academy](https://hackbrightacademy.com/)
 
@@ -643,7 +636,7 @@ Thursday, January 12, 2017
 
 🎞 [Slides](https://slides.benmvp.com/2017/hackbright/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ## 2016
 
@@ -663,7 +656,7 @@ Monday, December 5, 2016 @ 10a (Pavilion B)
 
 🎞 [Slides](https://slides.benmvp.com/2016/confoo/flexbox)
 
-----------
+---
 
 ### [Thunder Plains Developer Conference](http://thunderplainsconf.com/)
 
@@ -675,7 +668,7 @@ Thursday, November 3, 2016 @ 4p
 
 🎞 [Slides](https://slides.benmvp.com/2016/thunderplains/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
-----------
+---
 
 ### [Connect.Tech 2016](http://connect.tech/)
 
@@ -693,7 +686,7 @@ Friday, October 21, 2016 @ 11:20a (React.JS track)
 
 🎞 [Slides](https://slides.benmvp.com/2016/connect/nav-react)
 
-----------
+---
 
 ### [Real World React](http://www.meetup.com/Real-World-React/events/232638998/)
 
@@ -705,7 +698,7 @@ Tuesday, October 18, 2016 @ 6:45p
 
 🎥 [Video](https://www.youtube.com/watch?v=_bfZHCSkT3Q) | 🎞 [Slides](https://slides.benmvp.com/2016/rwreact/iso-react)
 
-----------
+---
 
 ### [NodeSummit 2016](http://nodesummit.com/)
 
@@ -715,9 +708,9 @@ Tuesday, October 18, 2016 @ 6:45p
 
 Thursday, July 28, 2016 @ 9:30a (Main Stage)
 
-🎥 [Video](https://vimeo.com/album/4104052/video/180426378) |  📝 [Blog post](/nodesummit-2016/)
+🎥 [Video](https://vimeo.com/album/4104052/video/180426378) | 📝 [Blog post](/nodesummit-2016/)
 
-----------
+---
 
 ### [Front Porch Austin 2016](http://frontporch.io/austin/)
 
@@ -729,7 +722,7 @@ Tuesday, July 19, 2016
 
 🎥 [Video](https://www.youtube.com/watch?v=Fs4bJr1b7UU&list=PLQ0rErbcJANon4Dyy32o2EZnhHr-VWqhL&index=3) | 🎞 [Slides](https://slides.benmvp.com/2016/frontporch/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext) | 📝 [Blog post](/front-porch-austin-2016/)
 
-----------
+---
 
 ### [ReactJS San Francisco Bay Area meetup](http://www.meetup.com/ReactJS-San-Francisco/events/229270590/)
 
@@ -741,7 +734,7 @@ Thursday, July 14, 2016 @ 7:30p
 
 🎞 [Slides](https://slides.benmvp.com/2016/reactsf/react-esnext) | 🖥 [Code examples](https://github.com/benmvp/react-esnext)
 
-----------
+---
 
 ### [NDC Oslo 2016](http://ndcoslo.com/)
 
@@ -753,7 +746,7 @@ Friday, June 10, 2016 @ 1:40p in Room 7
 
 🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](https://slides.benmvp.com/2016/ndcoslo/no-js) | 🖥 <a href="http://www.benmvp.com/you-dont-need-js-for-that" target="_blank">Code examples</a> | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
 
-----------
+---
 
 ### [Eventbrite Engineering](http://www.eventbrite.com/engineering)
 
@@ -765,7 +758,7 @@ Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
 🎞 [Slides](https://slides.benmvp.com/2016/evbeng/react-workshop) | 🖥 [Workshop repo](https://github.com/benmvp/react-workshop)
 
-----------
+---
 
 ### [Syntax Code & Craft Convention 2016](http://2016.syntaxcon.com/)
 
@@ -783,7 +776,7 @@ Friday, May 6, 2016 @ 9:30a (Front-End)
 
 🎞 [Slides](https://slides.benmvp.com/2016/syntaxcon/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
-----------
+---
 
 ### [Prairie Dev Con 2016](http://www.prairiedevcon.com/)
 
@@ -801,7 +794,7 @@ Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
 🎞 [Slides](https://slides.benmvp.com/2016/prdc/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-----------
+---
 
 ### [NationJS Node Day 2016](http://nationnode2016.herokuapp.com/)
 
@@ -813,7 +806,7 @@ Friday, March 11, 2016 @ 11:15a
 
 🎥 [Video](https://vimeopro.com/user24051491/nationjs-node-day-march-11-2016/video/169948346) | 🎞 [Slides](https://slides.benmvp.com/2016/nationjs/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 <a href="/nationjs-nodeday-2016/" target="_blank">Blog post</a>
 
-----------
+---
 
 ### [ConFoo Montreal 2016](http://confoo.ca/en/2016/)
 
@@ -831,7 +824,7 @@ Wednesday, February 24, 2016 @ 3p in Hampstead
 
 🎞 [Slides](https://slides.benmvp.com/2016/confoo/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-----------
+---
 
 ### [DeveloperWeek JavaScript Conference 2016](http://www.developerweek.com/javascript-conference/)
 
@@ -843,7 +836,7 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 
 🎞 [Slides](https://slides.benmvp.com/2016/devweek/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6)
 
------
+---
 
 ## 2015
 
@@ -857,7 +850,7 @@ Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
 🎞 [Slides](https://slides.benmvp.com/2015/sacjs/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-----------
+---
 
 ### [Fossetcon 2015](http://fossetcon.org/2015/)
 
@@ -869,7 +862,7 @@ Friday, November 20, 2015 @ 2p in Palm 3
 
 🎞 [Slides](https://slides.benmvp.com/2015/fossetcon/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
 
-----------
+---
 
 ### [Nodevember 2015](http://nodevember.org/index.html)
 
@@ -881,7 +874,7 @@ Saturday, November 14, 2015 @ 1p in Ezell 301
 
 🎥 [Video](https://www.youtube.com/watch?v=x1BvUqmn8xA) | 🎞 [Slides](https://slides.benmvp.com/2015/nodevember/es6) | 🖥 [Code examples](https://github.com/benmvp/learning-es6) | 📝 <a href="/nodevember-2015/" target="_blank">Blog post</a>
 
-----------
+---
 
 ### [Little Rock Tech Fest 2015](http://lrtechfest.com/)
 
