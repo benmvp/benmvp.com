@@ -18,6 +18,16 @@ Friday, June 19, 2020 @ TBD
 
 ---
 
+### [Developer Week New York 2020](https://www.developerweek.com/NYC/)
+
+##### New York City, New York (Brooklyn Expo Center)
+
+#### [Future JavaScript: What’s left?](/talks/#future-javascript-whats-left)
+
+Wednesday, June 17, 2020 @ TBD
+
+---
+
 ### [HalfStack Charlotte 2020](https://halfstackconf.com/charlotte/)
 
 ##### Charlotte, North Carolina (TBD)
