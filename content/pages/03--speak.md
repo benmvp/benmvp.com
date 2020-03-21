@@ -34,7 +34,7 @@ Wednesday, June 17, 2020 @ TBD
 
 #### [Navigating the React Ecosystem](/talks/#navigating-the-react-solar-system)
 
-Friday, April 24, 2020 @ TBD
+~~Friday, April 24, 2020 @ TBD~~ (Cancelled)
 
 ---
 
@@ -44,13 +44,13 @@ Friday, April 24, 2020 @ TBD
 
 #### [The "perfect" library tooling](/talks/#the-perfect-library-tooling)
 
-Tuesday, April 14, 2020 @ TBD
+~~Tuesday, April 14, 2020 @ TBD~~ (Cancelled)
 
 ---
 
 ### [Reactathon](https://www.reactathon.com/)
 
-##### San Francisco, California (TBD)
+##### Remote
 
 #### [Intro to Modern React using Hooks](/talks/#intro-to-modern-react-using-hooks) (Workshop)
 
