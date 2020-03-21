@@ -78,7 +78,7 @@ Monday, February 10, 2020 @ 1:30p
 
 Wednesday, February 5, 2020 @ 11:30a
 
-🎞 [Slides](https://slides.benmvp.com/2020/jsconfhi/perfect-lib)
+🎥 [Video](https://www.youtube.com/watch?v=kQ4r9OATmB0) | 🎞 [Slides](https://slides.benmvp.com/2020/jsconfhi/perfect-lib)
 
 ---
 
