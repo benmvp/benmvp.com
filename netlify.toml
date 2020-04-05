@@ -4,85 +4,85 @@
 
 # Post redirects from /* to /blog/*
 [[redirects]]
-  from = "/2015-07-20--new-blog/"
+  from = "/new-blog/"
   to = "/blog/new-blog/"
 [[redirects]]
-  from = "/2015-07-29--learning-es6-history-of-ecmascript/"
+  from = "/learning-es6-history-of-ecmascript/"
   to = "/blog/learning-es6-history-of-ecmascript/"
 [[redirects]]
-  from = "/2015-08-01--learning-es6-goals-features-ecmascript-6/"
+  from = "/learning-es6-goals-features-ecmascript-6/"
   to = "/blog/learning-es6-goals-features-ecmascript-6/"
 [[redirects]]
-  from = "/2015-08-06--learning-es6-using-es6-right-now/"
+  from = "/learning-es6-using-es6-right-now/"
   to = "/blog/learning-es6-using-es6-right-now/"
 [[redirects]]
-  from = "/2015-08-15--20-reasons-to-drop-ie8-like-its-hot/"
+  from = "/20-reasons-to-drop-ie8-like-its-hot/"
   to = "/blog/20-reasons-to-drop-ie8-like-its-hot/"
 [[redirects]]
-  from = "/2015-08-23--learning-es6-arrow-functions/"
+  from = "/learning-es6-arrow-functions/"
   to = "/blog/learning-es6-arrow-functions/"
 [[redirects]]
-  from = "/2015-08-30--learning-es6-block-level-scoping-let-const/"
+  from = "/learning-es6-block-level-scoping-let-const/"
   to = "/blog/learning-es6-block-level-scoping-let-const/"
 [[redirects]]
-  from = "/2015-09-02--learning-es6-destructuring/"
+  from = "/learning-es6-destructuring/"
   to = "/blog/learning-es6-destructuring/"
 [[redirects]]
-  from = "/2015-09-02--speaking-at-little-rock-tech-fest-2015/"
+  from = "/speaking-at-little-rock-tech-fest-2015/"
   to = "/blog/speaking-at-little-rock-tech-fest-2015/"
 [[redirects]]
-  from = "/2015-09-11--learning-es6-parameter-handling/"
+  from = "/learning-es6-parameter-handling/"
   to = "/blog/learning-es6-parameter-handling/"
 [[redirects]]
-  from = "/2015-09-13--learning-es6-enhanced-object-literals/"
+  from = "/learning-es6-enhanced-object-literals/"
   to = "/blog/learning-es6-enhanced-object-literals/"
 [[redirects]]
-  from = "/2015-09-17--learning-es6-template-literals-tagged-templates/"
+  from = "/learning-es6-template-literals-tagged-templates/"
   to = "/blog/learning-es6-template-literals-tagged-templates/"
 [[redirects]]
-  from = "/2015-09-27--learning-es6-promises/"
+  from = "/learning-es6-promises/"
   to = "/blog/learning-es6-promises/"
 [[redirects]]
-  from = "/2015-11-22--little-rock-tech-fest-2015/"
+  from = "/little-rock-tech-fest-2015/"
   to = "/blog/little-rock-tech-fest-2015/"
 [[redirects]]
-  from = "/2015-11-22--nodevember-2015/"
+  from = "/nodevember-2015/"
   to = "/blog/nodevember-2015/"
 [[redirects]]
-  from = "/2015-11-30--learning-es6-for-of-loop/"
+  from = "/learning-es6-for-of-loop/"
   to = "/blog/learning-es6-for-of-loop/"
 [[redirects]]
-  from = "/2015-12-11--learning-es6-classes/"
+  from = "/learning-es6-classes/"
   to = "/blog/learning-es6-classes/"
 [[redirects]]
-  from = "/2015-12-20--learning-es6-new-collections/"
+  from = "/learning-es6-new-collections/"
   to = "/blog/learning-es6-new-collections/"
 [[redirects]]
-  from = "/2015-12-27--learning-es6-iterators-iterables/"
+  from = "/learning-es6-iterators-iterables/"
   to = "/blog/learning-es6-iterators-iterables/"
 [[redirects]]
-  from = "/2016-01-13--learning-es6-generators-as-iterators/"
+  from = "/learning-es6-generators-as-iterators/"
   to = "/blog/learning-es6-generators-as-iterators/"
 [[redirects]]
-  from = "/2016-06-12--nationjs-nodeday-2016/"
+  from = "/nationjs-nodeday-2016/"
   to = "/blog/nationjs-nodeday-2016/"
 [[redirects]]
-  from = "/2016-07-21--ndc-oslo-2016/"
+  from = "/ndc-oslo-2016/"
   to = "/blog/ndc-oslo-2016/"
 [[redirects]]
-  from = "/2016-09-19--front-porch-austin-2016/"
+  from = "/front-porch-austin-2016/"
   to = "/blog/front-porch-austin-2016/"
 [[redirects]]
-  from = "/2016-09-23--nodesummit-2016/"
+  from = "/nodesummit-2016/"
   to = "/blog/nodesummit-2016/"
 [[redirects]]
-  from = "/2016-10-25--learning-es6-12-tricks-for-es6-fun/"
+  from = "/learning-es6-12-tricks-for-es6-fun/"
   to = "/blog/learning-es6-12-tricks-for-es6-fun/"
 [[redirects]]
-  from = "/2018-05-04--new-gatsby-blog/"
+  from = "/new-gatsby-blog/"
   to = "/blog/new-gatsby-blog/"
 [[redirects]]
-  from = "/2018-12-01--microsoft-mvp/"
+  from = "/microsoft-mvp/"
   to = "/blog/microsoft-mvp/"
 
 # Slides redirects from /slides to slides.benmvp.com
