@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import {
   makeStyles,
   createStyles,
@@ -15,6 +15,7 @@ import {
   Avatar,
   Box,
   Typography,
+  Link,
 } from '@material-ui/core'
 import logo from './logo.jpg'
 
@@ -37,12 +38,10 @@ const useStyles = makeStyles((theme) =>
     logo: {
       marginRight: theme.spacing(),
     },
-    headerTitle: {
-      color: 'inherit',
-      textDecoration: 'none',
-    },
   }),
 )
+
+const LinkWrapper = ({ href, ...props }) => <GatsbyLink to={href} {...props} />
 
 export default () => {
   const classes = useStyles()
@@ -67,7 +66,12 @@ export default () => {
             <Container>
               <Box component="header">
                 <Toolbar disableGutters>
-                  <Link to="/" aria-label="Go to homepage">
+                  <Link
+                    color="inherit"
+                    href="/"
+                    aria-label="Go to homepage"
+                    component={LinkWrapper}
+                  >
                     <Avatar
                       src={logo}
                       alt="Ben Ilegbodu"
@@ -75,7 +79,7 @@ export default () => {
                     />
                   </Link>
                   <Typography variant="h6">
-                    <Link to="/" className={classes.headerTitle}>
+                    <Link color="inherit" href="/" component={LinkWrapper}>
                       Ben Ilegbodu
                     </Link>
                   </Typography>
