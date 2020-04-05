@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Box, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+import Layout from '../components/Layout'
 
 export default ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
   const { title, subTitle } = frontmatter
 
   return (
-    <Box component="main">
+    <Layout>
       <Typography variant="h3" component="h1">
         {title}
       </Typography>
@@ -20,7 +21,7 @@ export default ({ data }) => {
         component="section"
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </Box>
+    </Layout>
   )
 }
 

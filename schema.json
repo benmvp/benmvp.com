@@ -2684,6 +2684,16 @@
               "defaultValue": null
             },
             {
+              "name": "date",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "DateQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "category",
               "description": "",
               "type": {
@@ -2724,7 +2734,7 @@
               "defaultValue": null
             },
             {
-              "name": "categories",
+              "name": "author",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -2734,7 +2744,7 @@
               "defaultValue": null
             },
             {
-              "name": "author",
+              "name": "categories",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -4863,6 +4873,59 @@
               "deprecationReason": null
             },
             {
+              "name": "date",
+              "description": null,
+              "args": [
+                {
+                  "name": "formatString",
+                  "description": "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "fromNow",
+                  "description": "Returns a string generated with Moment.js' `fromNow` function",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Boolean",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "difference",
+                  "description": "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "locale",
+                  "description": "Configures the locale Moment.js will use to format the date.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Date",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "category",
               "description": null,
               "args": [],
@@ -4915,7 +4978,7 @@
               "deprecationReason": null
             },
             {
-              "name": "categories",
+              "name": "author",
               "description": null,
               "args": [],
               "type": {
@@ -4927,7 +4990,7 @@
               "deprecationReason": null
             },
             {
-              "name": "author",
+              "name": "categories",
               "description": null,
               "args": [],
               "type": {
@@ -5905,6 +5968,12 @@
               "deprecationReason": null
             },
             {
+              "name": "childMarkdownRemark___frontmatter___date",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "childMarkdownRemark___frontmatter___category",
               "description": null,
               "isDeprecated": false,
@@ -6139,13 +6208,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childMarkdownRemark___frontmatter___categories",
+              "name": "childMarkdownRemark___frontmatter___author",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "childMarkdownRemark___frontmatter___author",
+              "name": "childMarkdownRemark___frontmatter___categories",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -13416,6 +13485,12 @@
               "deprecationReason": null
             },
             {
+              "name": "frontmatter___date",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "frontmatter___category",
               "description": null,
               "isDeprecated": false,
@@ -13788,13 +13863,13 @@
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___categories",
+              "name": "frontmatter___author",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___author",
+              "name": "frontmatter___categories",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

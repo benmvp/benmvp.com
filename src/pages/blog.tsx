@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Typography, Box } from '@material-ui/core'
+import Layout from '../components/Layout'
 
 export default ({ data }) => {
   return (
-    <main>
+    <Layout>
       <div>
         <Typography variant="h3" component="h1">
           All posts
@@ -26,7 +27,7 @@ export default ({ data }) => {
           </Box>
         ))}
       </div>
-    </main>
+    </Layout>
   )
 }
 
