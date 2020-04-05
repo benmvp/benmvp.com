@@ -1,4 +1,5 @@
 ---
+date: 2015-08-01
 title: Goals & Features of ECMAScript 6
 subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
@@ -57,7 +58,6 @@ Here’s the long list of 31 features (in alphabetical order):
 - [Weak maps](http://exploringjs.com/es6/ch_maps-sets.html#sec_weakmap)
 - [Weak sets](http://exploringjs.com/es6/ch_maps-sets.html#leanpub-auto-weakset)
 
-
 I’ve seen folks group these features in many different ways, but I like the way [Christian Heilmann](https://twitter.com/codepo8) organized them in his talk about [_Stapling and patching the web of now_](http://www.slideshare.net/cheilmann/stapling-and-patching-the-web-of-now-forwardjs3-san-francisco) at the [ForwardJS 3 conference](http://forwardjs.com/forward3/).
 
 ### Syntactic sugar features
@@ -106,7 +106,6 @@ This last group of features are for the few that build shareable Javascript libr
 - Weak map
 - Weak sets
 
-
 Axel Rauschmayer [asked his followers on Twitter](https://twitter.com/rauschma/status/623111275359379456) which of the ES6 features were their favorites, which resulted in a [top ten list of ES6 features](http://www.2ality.com/2015/07/favorite-es6-features.html?m=1):
 
 - [**Arrow functions**](/learning-es6-arrow-functions/) (sugar) - a short-hand form of an anonymous function
@@ -119,7 +118,6 @@ Axel Rauschmayer [asked his followers on Twitter](https://twitter.com/rauschma/s
 - [**Enhanced object literals**](/learning-es6-enhanced-object-literals/) (sugar) - various shorthand syntaxes for building up object literals
 - [**Block scoping**](/learning-es6-block-level-scoping-let-const/) (apps) - scoping variables to blocks via `let` keyword
 - [**Rest parameters**](/learning-es6-parameter-handling/) (sugar) - allows you to get an array representing the "rest of the parameters," eliminating the need to use `arguments`
-
 
 As you can see, the top 10 features span across all 3 groups. I will definitely be diving deep into each of these 10 features. They will be our main focus. I was surprised to not see default parameters on the list and they’re one of my favorite features, so I’ll dive deep on them when I discuss rest parameters and the spread operator. I’ll try to go deep on classes as well. I would like to take a quick look at the various APIs, maps & sets, and possibly iterators. Everything else, you will have to read up on your own.
 

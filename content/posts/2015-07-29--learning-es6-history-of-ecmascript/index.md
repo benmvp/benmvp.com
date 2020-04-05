@@ -1,11 +1,11 @@
 ---
+date: 2015-07-29
 title: History of ECMAScript
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, history]
 cover: ecmascript-logo.png
 ---
-
 
 ECMAScript 6 is the new version of JavaScript making its way into the interpreters of our modern browsers and servers. I’m embarking on the [_Learning ES6_ series](/learning-es6-series/) series to walk through the various features of ES6. We’ll take a look at [arrow functions](/learning-es6-arrow-functions/), modules, rest parameters and a host of other goodies that the ES6 specification brings to the JavaScript that we write on a daily basis.
 
@@ -19,7 +19,7 @@ JavaScript was created in May 1995 by [Brendan Eich](http://en.wikipedia.org/wik
 
 Some time between 1996 and 1997, Netscape took JavaScript to the [Ecma standards organization](http://www.ecma-international.org/) to carve out and maintain a specification for the language to enable other browser vendors to implement based on the work they had done. The [Ecma Technical Committee 39](http://www.ecma-international.org/memento/TC39.htm) (better known as _TC39_) was created to continue to evolve the language, eventually releasing _ECMA-262 Ed.1_ in June 1997. _ECMAScript_ is name of the official standard with _JavaScript_ being the most well-known implementation of the standard. ActionScript (Macromedia) and JScript (Microsoft) are examples of other implementations.
 
-Versions of JavaScript are defined by the specification that bears the official name of the language. For example, the first standard version of JavaScript was ECMAScript 1. It’s common practice now to abbreviate the standards specification to simply ES_X_, although the _X_ will be changing in 2016 as TC39 shifts to a yearly release cadence. More on that towards the end of this post.
+Versions of JavaScript are defined by the specification that bears the official name of the language. For example, the first standard version of JavaScript was ECMAScript 1. It’s common practice now to abbreviate the standards specification to simply ES*X*, although the _X_ will be changing in 2016 as TC39 shifts to a yearly release cadence. More on that towards the end of this post.
 All features in ECMAScript go through a formal proposal process. A proposal for a new feature, usually originating from the developer community, begins with a sketch or “strawman proposal” that provides an initial description of the proposed feature. If TC39 agrees that the feature is valuable, it will be promoted to official “Proposal” status. The deadline for ES6 proposals was way back in May 2011.
 
 The next status is “In Implementation” where the feature is actually implemented in ideally 2 JavaScript engines. These implementations, as well as developer community feedback, help shape the proposal during its evolution. Finally if the proposal continues to prove to be valuable, TC39 will accept and it will be added to the next version of ECMAScript. It is now a “Standard.”

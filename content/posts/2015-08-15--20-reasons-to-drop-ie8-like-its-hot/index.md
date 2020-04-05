@@ -1,7 +1,24 @@
 ---
+date: 2015-08-15
 title: "20 reasons to drop IE8 like it's hot"
-category: "web-development"
-tags: [browsers, chrome, css3, edge, es5, es6, firefox, html5, ie10, ie8, ie9, javascript, opera, safari]
+category: 'web-development'
+tags:
+  [
+    browsers,
+    chrome,
+    css3,
+    edge,
+    es5,
+    es6,
+    firefox,
+    html5,
+    ie10,
+    ie8,
+    ie9,
+    javascript,
+    opera,
+    safari,
+  ]
 cover: rip-ie8.jpg
 ---
 
@@ -33,7 +50,6 @@ When I arrived at Eventbrite in May, they had only just recently deprecated Inte
 
 At Eventbrite we have a much more formalized process around browser support and deprecation that I really like. Essentially we having a grading system for all browsers:
 
-
 - **"A grade"** - These browsers are supported sitewide. All flows should function according to design and there should be minimal to zero deviations in visual parity to the design. Progressive enhancement for CSS3 features is allowed. These browsers are actively tested.
 - **"B grade"** - All flows should function properly across the site and all content should be accessible. However, only “key” flows need to have visual design parity. These browsers are only occasionally tested.
 - **"C grade"** - Content on “key” flows should be accessible and the page shouldn’t look overtly broken. Design bugs in other parts of the site most likely will not be fixed. Only the “key” flows are tested.
@@ -45,7 +61,7 @@ Unfortunately, you can’t just say "hey, let’s stop supporting IE8!" and it h
 
 ## Arguments for IE8
 
-Before we bury Internet Explorer 8 under a mountain of evidence, let’s give it a chance to mount its own defense.  It can explain why we’re at a place where we’re still supporting a browser in 2015 that was built in 2009 and why it’s not so easy to get rid of it.
+Before we bury Internet Explorer 8 under a mountain of evidence, let’s give it a chance to mount its own defense. It can explain why we’re at a place where we’re still supporting a browser in 2015 that was built in 2009 and why it’s not so easy to get rid of it.
 
 ### Exhibit 1: Windows XP needs IE8
 
@@ -53,7 +69,7 @@ Before we bury Internet Explorer 8 under a mountain of evidence, let’s give it
 
 Essentially what it boils down to is that Windows XP users cannot upgrade their Internet Explorer browser past IE8. Internet Explorer 9 won’t work on Windows XP. Furthermore, newer versions of Windows have either been terrible (like Windows Vista & Windows 8) or have much higher system requirements (like the new Windows 10). This means that XP users have trouble upgrading to an operating system that supports a higher version of Internet Explorer. Their only option is to get a newer computer, which is costly whether they are an individual or part of a company.
 
-And speaking of companies, most IT departments at big organizations prevent employees from installing applications  or new browsers. It’s a "security risk." So even if a work employee wanted to switch to the browser they use at home, they wouldn’t be able to. Therefore they have to wait until their IT department first switches **all** computers onto a newer version of Windows. This is how we’re in a world where we have millions of people on a browser from 2009 running on an OS from 2001.
+And speaking of companies, most IT departments at big organizations prevent employees from installing applications or new browsers. It’s a "security risk." So even if a work employee wanted to switch to the browser they use at home, they wouldn’t be able to. Therefore they have to wait until their IT department first switches **all** computers onto a newer version of Windows. This is how we’re in a world where we have millions of people on a browser from 2009 running on an OS from 2001.
 
 ### Exhibit 2: People are still using IE8
 
@@ -138,12 +154,11 @@ Microsoft on its official ["stop using Windows XP"](https://www.microsoft.com/en
 - **Lack of Independent Software Vendor (ISV) support.** Many software vendors will no longer support their products running on Windows XP as they are unable to receive Windows XP updates. For example, the new Office takes advantage of the modern Windows and will not run on Windows XP.
 - **Hardware manufacturer support.** Most PC hardware manufacturers will stop supporting Windows XP on existing and new hardware. This will also mean that drivers required to run Windows XP on new hardware may not be available.
 
-
 ### Exhibit 7: Windows XP and https don’t mix (well)
 
 ![HTTPS Everywhere logo](https-everywhere-logo.jpg)
 
-At [Google I/O 2014](https://www.google.com/events/io), Google called for ["HTTPS everywhere"](https://www.youtube.com/watch?v=cBhZ6S0PFCY) on the web. Every site should provide extra security by running their entire site on https. Gone are the days when log-in and checkout  were the only portions of the site in https. Google is also starting to use [https as a ranking signal](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html).
+At [Google I/O 2014](https://www.google.com/events/io), Google called for ["HTTPS everywhere"](https://www.youtube.com/watch?v=cBhZ6S0PFCY) on the web. Every site should provide extra security by running their entire site on https. Gone are the days when log-in and checkout were the only portions of the site in https. Google is also starting to use [https as a ranking signal](http://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html).
 
 [SHA-2](https://en.wikipedia.org/wiki/SHA-2) is now the standard for providing https encryption on the web. However, any SHA-2 encrypted website being viewed by IE8 running on XP SP1 or XP SP2 simply won’t work. It only works on Windows XP, Service Pack 3. And only because Windows added it to SP3 after the fact. Apparently Eventbrite ran into this very problem shortly before I started. As a result, Internet Explorer 8 on SP1 or SP2 was officially moved to "Unsupported."
 
@@ -187,7 +202,6 @@ A lot of these HTML5 features do come with JavaScript shims via external librari
 ### Exhibit 10: IE8 has no CSS3 support
 
 ![CSS3 logo](css3-logo.png)
-
 
 Coupled with HTML5 was CSS3, which greatly expanded the expressiveness and capabilities of CSS. Many things that developers had to resort to coding in JavaScript could now be done more optimally in CSS. Here’s a tasty list:
 
@@ -271,6 +285,7 @@ But even if you are able to get a multi-gigabyte VM running or even if you are a
 ![Screenshot of IE7 tax site](ie7-tax.jpg)
 
 As a developer, which would you rather be doing? Debugging why a `<div>` that should have some height is collapsed in IE8, or moving on to the next new feature? Yeah, I thought so. In my opinion, the debugging tools in IE browsers are subpar compared to other browsers. And this is particularly true for IE8 and debugging CSS.
+
 <div>
 
 The cost in having to fix bugs in a legacy browser is real. So real that a company called Kogan in Australia implemented the world’s first [Internet Explorer 7 Tax](https://www.kogan.com/au/blog/new-internet-explorer-7-tax/) back in 2012 for IE7 users. At the time, they added a 6.8% surcharge on all purchases "by anyone still insistent on using the antique browser."
