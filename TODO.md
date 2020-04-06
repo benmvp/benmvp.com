@@ -1,8 +1,9 @@
 # To Add
 
 - [x] Move blog posts to `/blog/`
-- [ ] Page layout
+- [x] Page layout
 - [ ] Style blog posts + byline + footer
+- [ ] Fix links in blog posts to be `/blog/`
 - [ ] Talks/videos/speak as markdown
 - [ ] Build new home page
 - [ ] Build site footer

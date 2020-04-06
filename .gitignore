@@ -69,3 +69,6 @@ yarn-error.log
 # editors
 .idea/
 .vscode
+
+# Auto-generated TypeScript types for your GraphQL queries
+schema.json
