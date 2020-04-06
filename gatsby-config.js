@@ -12,9 +12,21 @@ module.exports = {
         path: `${__dirname}/content/posts/`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-code-buttons',
+        ],
+      },
+    },
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
     'gatsby-plugin-material-ui',
+    'gatsby-plugin-catch-links',
   ],
 }
