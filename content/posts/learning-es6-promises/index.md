@@ -256,7 +256,7 @@ A promise can be in one of the following three states:
 
 A promise is settled (the async operation has completed) if it is either fulfilled or rejected. A promise can only transition from unsettled to settled **one** time and it remains settled. Attempting to settle an already settled promise does nothing. Here's a visualization of the (short) lifecycle of a promise from [Axel Rauschmayer](http://exploringjs.com/es6/ch_promises.html):
 
-![lifecyle of a promise](http://exploringjs.com/es6/images/promises----promise_states_simple.jpg)
+![lifecyle of a promise](https://exploringjs.com/es6/images/promises----promise_states_simple.jpg)
 
 Let's take a look again at the `Promise` constructor in our promised-back `fetch` function:
 

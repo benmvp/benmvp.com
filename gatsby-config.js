@@ -17,11 +17,17 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              buttonText: '',
+              tooltipText: 'Copy',
+            },
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 912,
               backgroundColor: 'transparent',
-              linkImagesToOriginal: true,
             },
           },
           {
@@ -34,7 +40,6 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-code-buttons',
         ],
       },
     },

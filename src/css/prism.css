@@ -41,3 +41,8 @@
 .gatsby-highlight pre[class*='language-'].line-numbers {
   padding-left: 2.8em;
 }
+
+/* Copy button */
+.gatsby-code-button {
+  margin-right: 1em;
+}
