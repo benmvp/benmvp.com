@@ -16,7 +16,21 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 912,
+              backgroundColor: 'transparent',
+              linkImagesToOriginal: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true,
+            },
+          },
+          'gatsby-remark-responsive-iframe',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
@@ -24,9 +38,12 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
     'gatsby-plugin-material-ui',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-twitter',
   ],
 }

@@ -1,4 +1,4 @@
-import React, { useMemo, ReactElement } from 'react'
+import React, { useMemo, ReactNode } from 'react'
 import {
   colors,
   makeStyles,
@@ -23,7 +23,7 @@ import Link from '../components/Link'
 import logo from './logo.jpg'
 
 interface ChildrenProps {
-  children: ReactElement
+  children: ReactNode
 }
 
 const HideOnScroll = ({ children }: ChildrenProps) => {
@@ -97,7 +97,7 @@ export default ({ children }: ChildrenProps) => {
       <ThemeProvider theme={theme}>
         <HideOnScroll>
           <AppBar>
-            <Container>
+            <Container maxWidth="md">
               <Box component="header">
                 <Toolbar disableGutters>
                   <Link color="inherit" href="/" aria-label="Go to homepage">
@@ -117,7 +117,7 @@ export default ({ children }: ChildrenProps) => {
             </Container>
           </AppBar>
         </HideOnScroll>
-        <Container>
+        <Container maxWidth="md">
           <Toolbar id="back-to-top-anchor" />
           <Box component="main" my={2}>
             {children}
