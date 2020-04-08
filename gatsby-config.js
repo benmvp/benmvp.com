@@ -5,6 +5,7 @@ module.exports = {
     title: 'Ben Ilegbodu',
   },
   plugins: [
+    'gatsby-theme-material-ui',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -47,7 +48,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
-    'gatsby-plugin-material-ui',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
   ],

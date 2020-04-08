@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Typography, Box } from '@material-ui/core'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 
 export default ({ data }) => {

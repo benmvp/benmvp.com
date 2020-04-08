@@ -19,7 +19,7 @@ import {
   Zoom,
 } from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
-import Link from '../components/Link'
+import { Link } from 'gatsby-theme-material-ui'
 import logo from './logo.jpg'
 
 interface ChildrenProps {
@@ -100,7 +100,7 @@ export default ({ children }: ChildrenProps) => {
             <Container maxWidth="md">
               <Box component="header">
                 <Toolbar disableGutters>
-                  <Link color="inherit" href="/" aria-label="Go to homepage">
+                  <Link color="inherit" to="/" aria-label="Go to homepage">
                     <Avatar
                       src={logo}
                       alt="Ben Ilegbodu"
@@ -108,7 +108,7 @@ export default ({ children }: ChildrenProps) => {
                     />
                   </Link>
                   <Typography variant="h6">
-                    <Link color="inherit" href="/">
+                    <Link color="inherit" to="/">
                       Ben Ilegbodu
                     </Link>
                   </Typography>
