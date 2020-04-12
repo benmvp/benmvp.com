@@ -1,4 +1,4 @@
-import CONFIG from '../../content/meta/config'
+import SITE_CONFIG from '../../config/site'
 
 export const getUrl = (path: string) =>
-  `${CONFIG.siteUrl}${CONFIG.pathPrefix}${path}`
+  `${SITE_CONFIG.siteUrl}${SITE_CONFIG.pathPrefix}${path}`

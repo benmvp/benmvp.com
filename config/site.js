@@ -1,4 +1,4 @@
-const { getTheme } = require('../../src/styles')
+const { getTheme } = require('./theme')
 
 const THEME = getTheme(false)
 

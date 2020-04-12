@@ -14,7 +14,7 @@ import {
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import { Fab } from 'gatsby-theme-material-ui'
 import Header from './Header'
-import { getTheme } from '../styles'
+import { getTheme } from '../../config/theme'
 
 interface ChildrenProps {
   children: ReactNode

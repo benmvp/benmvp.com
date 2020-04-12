@@ -13,7 +13,7 @@ import {
   EmailShareButton,
   EmailIcon,
 } from 'react-share'
-import CONFIG from '../../content/meta/config'
+import SITE_CONFIG from '../../config/site'
 
 const ICON_SIZE = 48
 
@@ -48,7 +48,7 @@ export default ({ url, tags, title, summary }: Props) => {
         <TwitterShareButton
           url={url}
           title={title}
-          via={CONFIG.twitterHandle}
+          via={SITE_CONFIG.twitterHandle}
           hashtags={tags || []}
           aria-label="Share on Twitter"
           className={classes.shareButton}
@@ -78,7 +78,7 @@ export default ({ url, tags, title, summary }: Props) => {
           url={url}
           title={title}
           summary={summary}
-          source={CONFIG.siteTitle}
+          source={SITE_CONFIG.siteTitle}
           aria-label="Share on LinkedIn"
           className={classes.shareButton}
         >

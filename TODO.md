@@ -25,3 +25,4 @@
 - [ ] Talks/videos/speak as data-driven pages
 - [ ] Learning ES5 page data-driven w/ experts
 - [ ] Algolia search
+- [ ] Category filtering on `/blog/`
