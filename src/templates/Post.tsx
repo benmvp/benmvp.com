@@ -100,7 +100,7 @@ const Post = ({ data }) => {
           </Typography>
         )}
         <Typography variant="subtitle2" component="p" gutterBottom>
-          {date} · {timeToRead}-min read
+          {date} · {timeToRead} min read
         </Typography>
       </Box>
       {hero && (
