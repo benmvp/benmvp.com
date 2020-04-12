@@ -6,7 +6,7 @@
 - [x] Page layout
 - [x] Style blog posts
 - [x] Add blog post byline + footer
-- [ ] Fix links in blog posts to be `/blog/`
+- [x] Fix links in blog posts to be `/blog/`
 - [ ] Style `/blog/`
 - [ ] Talks/videos/speak as markdown
 - [ ] Build new home page
@@ -14,6 +14,7 @@
 - [ ] Build site footer
 - [ ] Add SEO
 - [ ] Google Analytics
+- [ ] Add `learning-es6.benmvp.com` to Google Domains
 - [ ] Add night mode switch to header
 - [ ] 404 page
 - [ ] Re-launch website
@@ -22,4 +23,5 @@
 
 - [ ] Add minishops section
 - [ ] Talks/videos/speak as data-driven pages
+- [ ] Learning ES5 page data-driven w/ experts
 - [ ] Algolia search

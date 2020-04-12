@@ -9,7 +9,7 @@ cover: block-scope.png
 
 ![block scoping](block-scope.png)
 
-Coming off the heels of discussing [arrow functions](/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
+Coming off the heels of discussing [arrow functions](/blog/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
 
 ## TL;DR
 
@@ -51,13 +51,13 @@ function simpleExample(value) {
 simpleExample(2)
 ```
 
-Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
+Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](https://learning-es6.benmvp.com/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
 You just _know_ you’re interested, so keep on reading!
 
 ## A quick look at `var`
 
-Before we jump into `let` and `const`, let’s remind ourselves about how `var` works. In the [History of ECMAScript](/learning-es6-history-of-ecmascript/), we learned that Brandon Eich supposedly created JavaScript in 10 days. I still find that hard to believe, but the way `var` declarations work in JavaScript may very well be the proof that it really was developed that quickly.
+Before we jump into `let` and `const`, let’s remind ourselves about how `var` works. In the [History of ECMAScript](/blog/learning-es6-history-of-ecmascript/), we learned that Brandon Eich supposedly created JavaScript in 10 days. I still find that hard to believe, but the way `var` declarations work in JavaScript may very well be the proof that it really was developed that quickly.
 
 [Nicholas C. Zakas](https://twitter.com/slicknet) explains it best in his book [_Understanding ECMAScript 6_](https://leanpub.com/understandinges6/):
 
@@ -458,7 +458,7 @@ The most notable missing engine is Safari. Of course IE 11 and lower do not supp
 
 ## Additional resources
 
-You can check out the [_Learning ES6_ examples page](/learning-es6/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support `let` and `const`). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support `let` and `const`). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 
@@ -469,4 +469,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-We will be continuing the [_Learning ES6_ series](/learning-es6-series/) by looking at the fun new [_destructuring_](/learning-es6-destructuring/) techniques introduced with ES6. Until then...
+We will be continuing the [_Learning ES6_ series](/learning-es6-series/) by looking at the fun new [_destructuring_](/blog/learning-es6-destructuring/) techniques introduced with ES6. Until then...

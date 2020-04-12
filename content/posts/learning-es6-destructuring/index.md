@@ -9,7 +9,7 @@ cover: pass-baton.jpg
 
 ![Passing the baton](pass-baton.jpg)
 
-After learning all about [arrow functions](/learning-es6-arrow-functions/) and [block-level scoping](/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
+After learning all about [arrow functions](/blog/learning-es6-arrow-functions/) and [block-level scoping](/blog/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
 
 ## TL;DR
 
@@ -29,7 +29,7 @@ console.log(lName + ', ' + fName)
 console.log(third, second, first)
 ```
 
-As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](/learning-es6/#destructuring) which are part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
+As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](https://learning-es6.benmvp.com/#destructuring) which are part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
 If you're finding destructuring intriguing (which you should), keep on reading for a more in-depth explanation.
 
@@ -361,11 +361,11 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
 - Firefox (does support default values in destructure patterns yet)
 - Safari (partial support)
 
-It's surprising to see that Chrome doesn't yet support destructuring. Neither does node.js or io.js. This is also the first feature we've covered that Microsoft's Edge doesn't support either. My guess is that this feature may be low priority for these vendors since it's basically 100% syntactic sugar. At least [arrow functions](/learning-es6-arrow-functions/) providing proper `this` binding and [block-scoping](/learning-es6-block-level-scoping-let-const/) fixed variable hoisting.
+It's surprising to see that Chrome doesn't yet support destructuring. Neither does node.js or io.js. This is also the first feature we've covered that Microsoft's Edge doesn't support either. My guess is that this feature may be low priority for these vendors since it's basically 100% syntactic sugar. At least [arrow functions](/blog/learning-es6-arrow-functions/) providing proper `this` binding and [block-scoping](/blog/learning-es6-block-level-scoping-let-const/) fixed variable hoisting.
 
 ## Additional resources
 
-You can check out the [_Learning ES6_ examples page](/learning-es6/#destructuring) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support destructuring). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#destructuring) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support destructuring). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 
@@ -375,4 +375,4 @@ Other super helpful resources:
 
 ## Coming up next...
 
-As promised, the [_Learning ES6_ series](/learning-es6-series/) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](/learning-es6-parameter-handling/). Until then...
+As promised, the [_Learning ES6_ series](/learning-es6-series/) continues with a deep look at all the new ECMAScript 6 features for [parameter handling](/blog/learning-es6-parameter-handling/). Until then...

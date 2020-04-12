@@ -20,7 +20,7 @@ cover: electric-generator.jpg
 
 I feel like all the articles in the [_Learning ES6_ series](/learning-es6-series/) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!
 
-Generators can be used both as data producers and data consumers. In this article, we're going to look at how generator functions are a much more convenient way to produce data and and create iterators. It's the simpler way to use generators. In the last article we covered [iterators & iterables](/learning-es6-iterators-iterables/), so you may need to familiarize yourself with that before looking at generators as iterators.
+Generators can be used both as data producers and data consumers. In this article, we're going to look at how generator functions are a much more convenient way to produce data and and create iterators. It's the simpler way to use generators. In the last article we covered [iterators & iterables](/blog/learning-es6-iterators-iterables/), so you may need to familiarize yourself with that before looking at generators as iterators.
 
 ## TL;DR
 
@@ -38,7 +38,7 @@ for (let teenageYear of range(13, 7)) {
 }
 ```
 
-Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](/learning-es6/#generators) page showing them off in greater detail.
+Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [generators code examples](https://learning-es6.benmvp.com/#generators) page showing them off in greater detail.
 
 With out further ado, let's keep reading.
 
@@ -129,7 +129,7 @@ let someObj = new SomeClass()
 let generator = someObj.generatorFunc()
 ```
 
-The most basic form of a generator object acts as a data producer, aka an iterator. It returns a value for each iteration. If you haven't had a chance to read up on [iterators & iterables](/learning-es6-iterators-iterables/), you probably should do that first. Everything we'll cover in this section builds upon that knowledge.
+The most basic form of a generator object acts as a data producer, aka an iterator. It returns a value for each iteration. If you haven't had a chance to read up on [iterators & iterables](/blog/learning-es6-iterators-iterables/), you probably should do that first. Everything we'll cover in this section builds upon that knowledge.
 
 As the article on iterators mentioned, we most likely won't be implementing iterators directly because of generators. Generator functions make it dead simple to create iterators (although understanding them isn't quite so simple). All we have to do is write the looping behavior because all generators have built-in implementations for `.next()` and `[Symbol.iterator]()`. This makes generators both iterators as well as iterables. As a refresher, here's the iterable interface written using [TypeScript](http://typescriptlang.org/):
 
@@ -211,7 +211,7 @@ Wow! We just spent many articles going through the syntactic sugar features of E
 
 ## Consuming a generator
 
-In the article on [iterators & iterators](/learning-es6-iterators-iterables/#other-consumers-of-iterators), we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
+In the article on [iterators & iterators](/blog/learning-es6-iterators-iterables/#other-consumers-of-iterators), we looked at consumers of iterators. Those same consumers work with generators as well since they are in fact iterators. Let's look at the different ways we can consume the generator created by the following function:
 
 ```js
 function* awesomeGeneratorFunc() {
@@ -298,7 +298,7 @@ The `for-of` operator calls `.next()` on the `generatorObj` automatically and as
 
 ### Consuming a generator with destructuring
 
-By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring](/learning-es6-destructuring/) article to ramp up. We can use destructuring to consume part of the generator values:
+By now you should be familiar with destructuring. If you aren't, take a look at the [destructuring](/blog/learning-es6-destructuring/) article to ramp up. We can use destructuring to consume part of the generator values:
 
 ```js
 let generatorObj = awesomeGeneratorFunc()
@@ -320,7 +320,7 @@ With destructuring we don't have to consume the entire generator. We can just pu
 
 ### Consuming a generator with the spread operator
 
-We've already learned that we can use the [spread operator](/learning-es6-parameter-handling/#spread-operator) as a shorthand for converting any iterable into an `Array` object. A generator object is an iterable too!
+We've already learned that we can use the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator) as a shorthand for converting any iterable into an `Array` object. A generator object is an iterable too!
 
 ```js
 let generatorObj = awesomeGeneratorFunc()
@@ -574,7 +574,7 @@ According to the [ECMAScript 6 Compatibility table](http://kangax.github.io/comp
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#generators) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#generators) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
 
 For more on using generators as iterators feel free to read:
 

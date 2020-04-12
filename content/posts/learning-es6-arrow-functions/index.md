@@ -9,7 +9,7 @@ cover: sign-arrow-right.jpg
 
 ![right arrow sign](sign-arrow-right.jpg)
 
-After looking at the [history of ECMAScript](/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/learning-es6-using-es6-right-now/), the first actual feature we'll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as "fat arrow" functions.
+After looking at the [history of ECMAScript](/blog/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/blog/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/blog/learning-es6-using-es6-right-now/), the first actual feature we'll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as "fat arrow" functions.
 
 ## TL;DR
 
@@ -317,7 +317,7 @@ The notable missing engines are Safari and Node.js. We of course know IE 11 and 
 
 Additional Resources
 
-You can check out the [_Learning ES6_ examples page](/learning-es6/#arrow-functions) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support arrow functions). There are also examples running through Babel and Traceur transpilation.
+You can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#arrow-functions) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser (for those that support arrow functions). There are also examples running through Babel and Traceur transpilation.
 
 Other super helpful resources:
 
@@ -327,4 +327,4 @@ Other super helpful resources:
 
 ## Coming up next…
 
-We will be continuing the [_Learning ES6_](/learning-es6-series/) series by looking at [block-level scoping](/learning-es6-block-level-scoping-let-const/) using the new `let` and `const` keywords. Until then...
+We will be continuing the [_Learning ES6_](/learning-es6-series/) series by looking at [block-level scoping](/blog/learning-es6-block-level-scoping-let-const/) using the new `let` and `const` keywords. Until then...

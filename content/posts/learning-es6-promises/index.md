@@ -43,7 +43,7 @@ wait(3000)
   })
 ```
 
-Did you notice the use of [default parameters](/learning-es6-parameter-handling/) and [arrow functions](/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](/learning-es6/#promises) page showing off the features in greater detail.
+Did you notice the use of [default parameters](/blog/learning-es6-parameter-handling/) and [arrow functions](/blog/learning-es6-arrow-functions/) too? If you're unfamiliar with those ES6 features, you should check out the articles detailing how they work. Interested in learning more about ES6 promises? Clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [promises code examples](https://learning-es6.benmvp.com/#promises) page showing off the features in greater detail.
 
 Well you've come this far. You might as well keep going!
 
@@ -449,7 +449,7 @@ Promise.resolve({
 })
 ```
 
-The `thenable` object in this example is just a simple object literal (using [object method shorthand](/learning-es6-enhanced-object-literals/#method-definition-shorthand)). It's not at all like a full-fledged `Promise` object except for the fact that it has a `then()` method. It implements the "`IThenable`" interface.
+The `thenable` object in this example is just a simple object literal (using [object method shorthand](/blog/learning-es6-enhanced-object-literals/#method-definition-shorthand)). It's not at all like a full-fledged `Promise` object except for the fact that it has a `then()` method. It implements the "`IThenable`" interface.
 
 And thenables are not limited to object literals. _Any_ object that has a Promise-style `then()` method is a `thenable`, including the jQuery [Deferred object](http://api.jquery.com/deferred.then/):
 
@@ -545,7 +545,7 @@ Promise.resolve('Ben')
   })
 ```
 
-Notice the use of [ES6 string interpolation](/learning-es6-template-literals-tagged-templates/#template-literal-interpolation)! Of course this is a very contrived example, but passing values can be useful if you need to take the result of a settled promise, process that result and create a new promise from it. If the processing can potentially throw errors, you'll be able to easily catch those errors along with any other errors happening in the promise chain. You can jump ahead to [Error handling](#error-handling) if you're interested.
+Notice the use of [ES6 string interpolation](/blog/learning-es6-template-literals-tagged-templates/#template-literal-interpolation)! Of course this is a very contrived example, but passing values can be useful if you need to take the result of a settled promise, process that result and create a new promise from it. If the processing can potentially throw errors, you'll be able to easily catch those errors along with any other errors happening in the promise chain. You can jump ahead to [Error handling](#error-handling) if you're interested.
 
 You're more likely to want to return a `Promise` (or `thenable`) than actual values. More than likely you could do all of your value processing in a single `then()` reaction. But if you wanted to make sequential async operations (like XHR requests that depend on the response of a previous request), after getting the response of the first operation, you would kick off the next operation based on data from the first and return the second operation's `Promise`. We saw an example of this earlier:
 
@@ -704,7 +704,7 @@ fetchAll(
 })
 ```
 
-Much easier, huh? Much more readable too. The example also leverages [rest parameters](/learning-es6-parameter-handling/#rest-parameters). I like to think of it as somewhat analogous to [`Array.prototype.every`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), which returns `true` (success) if all of the elements of the array pass the test implemented in the callback.
+Much easier, huh? Much more readable too. The example also leverages [rest parameters](/blog/learning-es6-parameter-handling/#rest-parameters). I like to think of it as somewhat analogous to [`Array.prototype.every`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), which returns `true` (success) if all of the elements of the array pass the test implemented in the callback.
 
 If any of the promises are rejected (i.e. fail), then the aggregator `Promise` from `Promise.all` also is rejected. You can use the `catch()` reaction to catch these failures.
 
@@ -840,7 +840,7 @@ If you need support for `Promise` in an older browser, however, check out the [`
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#promises) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#promises) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
 
 I've got two great web tools for you to play around with ES6 Promises. First there are the [ES6 Katas](http://es6katas.org/) that you've come to know and love. But there's also [Promisees: A Visualization Playground for Promises](http://bevacqua.github.io/promisees/) by [Nicolas Bevacqua](https://twitter.com/nzgb). It's pretty cool!
 

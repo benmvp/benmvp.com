@@ -7,7 +7,7 @@ tags: [ecmascript-6, es6, javascript, learning-es6, history]
 cover: ecmascript-logo.png
 ---
 
-ECMAScript 6 is the new version of JavaScript making its way into the interpreters of our modern browsers and servers. I’m embarking on the [_Learning ES6_ series](/learning-es6-series/) series to walk through the various features of ES6. We’ll take a look at [arrow functions](/learning-es6-arrow-functions/), modules, rest parameters and a host of other goodies that the ES6 specification brings to the JavaScript that we write on a daily basis.
+ECMAScript 6 is the new version of JavaScript making its way into the interpreters of our modern browsers and servers. I’m embarking on the [_Learning ES6_ series](/learning-es6-series/) series to walk through the various features of ES6. We’ll take a look at [arrow functions](/blog/learning-es6-arrow-functions/), modules, rest parameters and a host of other goodies that the ES6 specification brings to the JavaScript that we write on a daily basis.
 
 ![ECMAScript logo](ecmascript-logo.png)
 
@@ -80,4 +80,4 @@ Work on ECMAScript 7 has already begun and the [current proposals](https://githu
 
 More than you ever wanted to know about JavaScript huh? But if that only left you hungry for more ECMAScript history, I highly suggest reading Axel Rauschmayer’s book [_Exploring ES6_](http://exploringjs.com/es6/) where a lot of the content of this post was gleaned and mixed with a much shorter [history of JavaScript](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript) from W3C.
 
-For the remainder of [this series](/learning-es6-series/), we’ll zero in on ECMAScript 6 (ECMAScript 2015 to be absolutely correct), starting with an [overview of its goals and features](/learning-es6-goals-features-ecmascript-6/) coming up next.
+For the remainder of [this series](/learning-es6-series/), we’ll zero in on ECMAScript 6 (ECMAScript 2015 to be absolutely correct), starting with an [overview of its goals and features](/blog/learning-es6-goals-features-ecmascript-6/) coming up next.

@@ -9,7 +9,7 @@ cover: object-literal.png
 
 ![object literals](object-literal.png)
 
-Wow, we're making some good progress covering ECMAScript 6 features in this [_Learning ES6_](/learning-es6-series/) series. We just covered [parameter handling](/learning-es6-parameter-handling/), and have learned about [destructuring](/learning-es6-destructuring/), [`let` & `const`](/learning-es6-block-level-scoping-let-const/), as well as [arrow functions](/learning-es6-arrow-functions/). Now we zero in on the enhancements to object literals, another piece of ES6 syntactic sugar.
+Wow, we're making some good progress covering ECMAScript 6 features in this [_Learning ES6_](/learning-es6-series/) series. We just covered [parameter handling](/blog/learning-es6-parameter-handling/), and have learned about [destructuring](/blog/learning-es6-destructuring/), [`let` & `const`](/blog/learning-es6-block-level-scoping-let-const/), as well as [arrow functions](/blog/learning-es6-arrow-functions/). Now we zero in on the enhancements to object literals, another piece of ES6 syntactic sugar.
 
 ## TL;DR
 
@@ -55,7 +55,7 @@ car.depreciate()
 console.log(car.value)
 ```
 
-The [enhanced object literals code examples](/learning-es6/#enhanced-object-literals) page has many more examples showing off each feature in more detail. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
+The [enhanced object literals code examples](https://learning-es6.benmvp.com/#enhanced-object-literals) page has many more examples showing off each feature in more detail. There are also some [ES6 katas](http://es6katas.org/) for testing your ES6 enhanced object literal knowledge.
 
 Continue on for more details!
 
@@ -63,7 +63,7 @@ Continue on for more details!
 
 The object literal may very well be one of the best and most popular features in JavaScript. It's a superset of [JSON](http://json.org/), which has now become the de facto standard for data transport on the web, quickly replacing XML. The great thing about object literals is that they make it crazy easy to assemble an arbitrarily nested and dynamic set of data object with a definition syntax that is human-readable because its so succinct.
 
-We actually touched on object literals a little bit, while looking at [object destructuring](/learning-es6-destructuring/#object-destructuring), but now we'll be delving into their enhanced features. ES6 introduces features to make the syntax even more succinct and increasingly more capable of constructing a complex data object in its initialization.
+We actually touched on object literals a little bit, while looking at [object destructuring](/blog/learning-es6-destructuring/#object-destructuring), but now we'll be delving into their enhanced features. ES6 introduces features to make the syntax even more succinct and increasingly more capable of constructing a complex data object in its initialization.
 
 ## Property value shorthand
 
@@ -95,7 +95,7 @@ function getCar(make, model, value) {
 }
 ```
 
-As you can see, the ES6 syntax is a bit more succinct by being less repetitive with the removal of the colon (:) and the matching variable. Declaring an object literal with keys that match variables is actual quite common, so you should find this feature quite useful. You may also notice that this property value shorthand looks remarkably like the object literal destructure pattern shorthand when we discussed [object destructuring](/learning-es6-destructuring/#object-destructuring).
+As you can see, the ES6 syntax is a bit more succinct by being less repetitive with the removal of the colon (:) and the matching variable. Declaring an object literal with keys that match variables is actual quite common, so you should find this feature quite useful. You may also notice that this property value shorthand looks remarkably like the object literal destructure pattern shorthand when we discussed [object destructuring](/blog/learning-es6-destructuring/#object-destructuring).
 
 With this shorthand syntax, the JS engine looks in the containing scope for a variable with the same name. If it is found, that variable's value is assigned to the property. If it is not found, a `ReferenceError` is thrown. It's worth noting that the transpilers will not throw an error at compile time if the variable is not found, but instead will declare an object with the name of the not-found variable. However, when the code runs you will still get the `ReferenceError` since the variable does not exist.
 
@@ -287,7 +287,7 @@ module.exports = { cube, cubeRoot }
 
 We'll be talking about the new ES6 module syntax in a future article.
 
-You may find that the only time you end up adding a function to an object literal is when you're passing a bucket of options in an object to some function and that object can contain a callback function. We actually saw an example of this when we discussed destructured parameters in the [parameter handling](/learning-es6-parameter-handling/#destructured-parameters) article.
+You may find that the only time you end up adding a function to an object literal is when you're passing a bucket of options in an object to some function and that object can contain a callback function. We actually saw an example of this when we discussed destructured parameters in the [parameter handling](/blog/learning-es6-parameter-handling/#destructured-parameters) article.
 
 ## JavaScript engine support
 
@@ -295,7 +295,7 @@ I'm happy to report that according to the [ECMAScript 6 Compatibility table](htt
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#enhanced-object-literals) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#enhanced-object-literals) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser.
 
 You can also practice everything you've learned on [ES6 Katas](http://es6katas.org/). It uses a TDD (test-driven development) approach for you to implement ES6 features such that all of the tests pass. I highly recommend it!
 
@@ -307,4 +307,4 @@ Lastly, here are a few books and articles that talk about enhanced object litera
 
 ## Coming up next...
 
-Well that was relatively short and sweet. Up next we'll take a look at [template literals](/learning-es6-template-literals-tagged-templates/) which provide a much cleaner way to build up string values. Until then...
+Well that was relatively short and sweet. Up next we'll take a look at [template literals](/blog/learning-es6-template-literals-tagged-templates/) which provide a much cleaner way to build up string values. Until then...

@@ -2,14 +2,14 @@
 date: 2015-12-20
 title: New collections
 subTitle: The Learning ES6 Series
-categories: learning-es6
+category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, map, set, weakmap, weakset]
 cover: many-coins.jpg
 ---
 
 ![A collection of different coins](many-coins.jpg)
 
-Now that we covered [ES6 classes](/learning-es6-classes/) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn. In addition, they are types of _iterables_ which we'll deep dive into in the next article.
+Now that we covered [ES6 classes](/blog/learning-es6-classes/) we should be through all of the syntactic sugar that ECMAScript 6 offers. We can now focus on the new functionality introduced with ES6. The main focus in the next few articles will be all about asynchronous programming. We'll ultimately talk about generators, but there are a few building blocks we need to get through first. The new collections we'll talk about now aren't really building blocks for generators, but I feel that they are important to learn. In addition, they are types of _iterables_ which we'll deep dive into in the next article.
 
 ## TL;DR
 
@@ -62,7 +62,7 @@ let clickedDomNodes = new WeakSet()
 clickedDomNodes.add($leftButton)
 ```
 
-The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](/learning-es6/#new-collections) page showing off the features in greater detail.
+The differences between the 4 collection types are subtle but important. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [new collections code examples](https://learning-es6.benmvp.com/#new-collections) page showing off the features in greater detail.
 
 To learn _how_ to use these collections you could just read documentation because they are just new APIs. However, to know _why_ you would want to use each one, I suggest you keep reading.
 
@@ -247,7 +247,7 @@ for (let [player, count] of allStarVotes) {
 }
 ```
 
-And since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
+And since the constructor takes any iterable, we can also easily merge raw data with `Map` objects to create a new object by using the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator):
 
 ```js
 let durant = new Player('Kevin Durant')
@@ -282,7 +282,7 @@ allStarVotes.forEach((count, player, map) => {
 })
 ```
 
-The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](/learning-es6-arrow-functions/) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in handy.
+The third parameter passed to the function by `Map.prototype.forEach()` (`map` in the above example) is a reference back to the map object. In the case of the [arrow function](/blog/learning-es6-arrow-functions/) we used above, it wouldn't be necessary because `allStartVotes` is still in scope. But if we were instead passing a named function, having that third map reference parameter could come in handy.
 
 Although `Map` does have `forEach`, it doesn't have `filter` or `map`. You will first have to convert the `Map` object to an array of `[key, value]` pairs (using the spread operator like `[...allStarVotes]`), do the `filter`/`map` operation, and then construct a new `Map` object from the result. Hopefully this functionality will be added in the future.
 
@@ -557,7 +557,7 @@ And because the `WeakSet` holds onto its references _weakly_, if a DOM node is r
 
 ## Inheriting from collections
 
-So let's wrap up our discussion and talk about creating derived classes from these new collection objects. We learned in the article on [classes](/learning-es6-classes/#inheritable-built-ins) that native classes can now be derived in ES6.
+So let's wrap up our discussion and talk about creating derived classes from these new collection objects. We learned in the article on [classes](/blog/learning-es6-classes/#inheritable-built-ins) that native classes can now be derived in ES6.
 
 We may want to derive from `Map` to add the following functionality:
 
@@ -586,7 +586,7 @@ All of the modern browsers and servers support all 4 collections, so this is the
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#new-collections) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 collections using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#new-collections) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 collections using [ES6 Katas](http://es6katas.org/).
 
 There is also lots of great reading to deep dive into these ES6 collections:
 

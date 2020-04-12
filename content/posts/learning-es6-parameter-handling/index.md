@@ -19,7 +19,7 @@ cover: spread-butter.jpg
 
 ![Spreading button on a piece of toast](spread-butter.jpg)
 
-This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/learning-es6-arrow-functions/), [block-level scoping](/learning-es6-block-level-scoping-let-const/) and [destructuring](/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
+This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/blog/learning-es6-arrow-functions/), [block-level scoping](/blog/learning-es6-block-level-scoping-let-const/) and [destructuring](/blog/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
 
 ## TL;DR
 
@@ -87,7 +87,7 @@ ajax('http://api.eventbrite.com/get', {
 })
 ```
 
-These quick examples are just a tip of the iceberg. Be sure to check out the full suite of [parameter handling code examples](/learning-es6/#parameter-handling) (a part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
+These quick examples are just a tip of the iceberg. Be sure to check out the full suite of [parameter handling code examples](https://learning-es6.benmvp.com/#parameter-handling) (a part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
 
 ## Default parameters
 
@@ -281,7 +281,7 @@ Last thing on default parameters. They also can also be used with arrow function
 console.log([1, undefined, 5].map((x = 100) => x * 2))
 ```
 
-If you recall in the article on [arrow functions](/learning-es6-arrow-functions/), we learned that when arrow function just has one parameter that's an identifier we can omit the parentheses around it. However, that rule only applies when that parameter is _only_ an identifier. If it has a default value, as in our example above, parenthesis are needed.
+If you recall in the article on [arrow functions](/blog/learning-es6-arrow-functions/), we learned that when arrow function just has one parameter that's an identifier we can omit the parentheses around it. However, that rule only applies when that parameter is _only_ an identifier. If it has a default value, as in our example above, parenthesis are needed.
 
 ## Rest parameters
 
@@ -366,7 +366,7 @@ max(1, 2, 3)
 max(1, 2, 3, 4)
 ```
 
-The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](/learning-es6-destructuring/).
+The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](/blog/learning-es6-destructuring/).
 
 We could clean things up a little bit:
 
@@ -534,7 +534,7 @@ The spread operator replaces the need to call `concat`. The spread operator spli
 
 ## Destructured parameters
 
-We've already learned all about [destructuring](/learning-es6-destructuring/), but in that article we didn't talk about destructuring function parameters because it uses some of the parameter handling features we've just learned.
+We've already learned all about [destructuring](/blog/learning-es6-destructuring/), but in that article we didn't talk about destructuring function parameters because it uses some of the parameter handling features we've just learned.
 
 Let's pretend we needed to implement an `ajax` method that takes the URL endpoint as well as a bucket of configuration options. In ES5, this would look something like:
 
@@ -655,11 +655,11 @@ Good news! According to the [ECMAScript 6 Compatibility table](http://kangax.git
 - Safari (spread operator & destructured parameters only)
 - Node 4 (rest parameters & spread operator only)
 
-If it wasn't apparent from the previous articles that [transpilation](/learning-es6-using-es6-right-now/) is the only viable solution for production-ready code, it should be obvious now. There is just too much variance in native support among the JS engines, so we can only rely on the transpilers.
+If it wasn't apparent from the previous articles that [transpilation](/blog/learning-es6-using-es6-right-now/) is the only viable solution for production-ready code, it should be obvious now. There is just too much variance in native support among the JS engines, so we can only rely on the transpilers.
 
 ## Additional Resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#parameter-handling) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser for those that support all of the parameter handling features. Unfortunately, there isn't a browser that supports all of the features, so you will need to use the examples running through Babel and Traceur transpilation.
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#parameter-handling) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser for those that support all of the parameter handling features. Unfortunately, there isn't a browser that supports all of the features, so you will need to use the examples running through Babel and Traceur transpilation.
 
 You can also practice everything you've learned on [ES6 Katas](http://es6katas.org/). It uses a TDD (test-driven development) approach for you to implement ES6 features such that all of the tests pass. I highly recommend it!
 
@@ -671,4 +671,4 @@ Finally, if this information wasn't enough, there is even more you can read conc
 
 ## Coming up next...
 
-Phew! The parameter handling features are pretty simple, but there's just so much you can do with them, that it takes some time to explain. Up next we'll take a look at [enhancements to object literals](/learning-es6-enhanced-object-literals/) as the [_Learning ES6_ series](/learning-es6-series/) rolls on. Until then...
+Phew! The parameter handling features are pretty simple, but there's just so much you can do with them, that it takes some time to explain. Up next we'll take a look at [enhancements to object literals](/blog/learning-es6-enhanced-object-literals/) as the [_Learning ES6_ series](/learning-es6-series/) rolls on. Until then...

@@ -14,7 +14,7 @@ So can I use ECMAScript 6 functionality right now? That’s the question everyon
 
 So instead of diving right into each of its features, I would like to first take a look at the various tools we can leverage to start using ES6 right now in a production environment. Then, as we go through each of the ES6 features, we can have conversations about which JavaScript engines or transpilers support the functionality and whether or not it’s safe for us to use. Sound like a plan?
 
-If you haven’t already, you should read the previous posts in this [_Learning ES6_ series](/learning-es6-series/) where we’ve learned about the [history of ECMAScript](/learning-es6-history-of-ecmascript/) as well as the [goals and features of ES6](/learning-es6-goals-features-ecmascript-6/).
+If you haven’t already, you should read the previous posts in this [_Learning ES6_ series](/learning-es6-series/) where we’ve learned about the [history of ECMAScript](/blog/learning-es6-history-of-ecmascript/) as well as the [goals and features of ES6](/blog/learning-es6-goals-features-ecmascript-6/).
 
 ## TL;DR
 
@@ -48,13 +48,13 @@ The final group comprises the hundreds of millions (billions?) users of the Web.
 
 ## Using ES6 natively
 
-Like I just mentioned, in order to use ES6 natively, the JavaScript engine executing your code has to understand the JavaScript syntax you’re using. An ES5 engine will not “fail gracefully” when asked to execute ES6 code. It will throw lots and lots of errors. ES6 is a superset of ES5, however, so all of your existing ES5 code _will_ work in an ES6-based JavaScript engine, making it easy to get started with ES6. You could start using ES6 simply by using only one of its features, like [arrow functions](/learning-es6-arrow-functions/).
+Like I just mentioned, in order to use ES6 natively, the JavaScript engine executing your code has to understand the JavaScript syntax you’re using. An ES5 engine will not “fail gracefully” when asked to execute ES6 code. It will throw lots and lots of errors. ES6 is a superset of ES5, however, so all of your existing ES5 code _will_ work in an ES6-based JavaScript engine, making it easy to get started with ES6. You could start using ES6 simply by using only one of its features, like [arrow functions](/blog/learning-es6-arrow-functions/).
 
 Kangax maintains a living [ES6 compatibility table](http://kangax.github.io/compat-table/es6/) that details the ES6 features each JavaScript engine supports. The table illuminates a couple of problems with supporting ES6 natively:
 
 - While support is growing on a weekly basis, it is nowhere near 100% in any browser. As of writing, the top engine is (surprisingly) Microsoft’s Edge browser with only 68% support.
 - There is only a small handful of features that are commonly supported across all of the engines, limiting the features you can “safely” use.
-- None of the Internet Explorer browsers (from 11 on down) significantly support any ES6 features (and never plan to either). [IE8 and below don’t even support ES5!](/20-reasons-to-drop-ie8-like-its-hot/)
+- None of the Internet Explorer browsers (from 11 on down) significantly support any ES6 features (and never plan to either). [IE8 and below don’t even support ES5!](/blog/20-reasons-to-drop-ie8-like-its-hot/)
 
 One would think: “hey, maybe if I limit the scope of my ES6 functionality to just the server that I have full control over I should be good!” In theory that would be a good idea, but as of now the JS-based servers (like [Node.js](https://nodejs.org/) & [io.js](https://iiojs.org/)) have the poorest level of ES6 support.
 
@@ -103,7 +103,7 @@ Transpiling is great because it allows us to use ES6 features today even before 
 - Unlike code minification which just strips unnecessary whitespace and shortens local variables, transpiled code can be dramatically different than the original source code. A few lines of ES6 code can be dozens of lines of ES5 code and still need a polyfill to make it all work. So basically you’re running code in production that you didn’t write, which of course comes with some measure of risk. We’re accustomed to using libraries that we didn’t write, but not our own code. This risk should be mitigated by the fact that these transpilers are very well tested both by unit tests and by the developer community at large.
 - Debugging and error handling is harder because exceptions and other errors in your source ES6 code will actually be reported in the transpiled ES5 code. [JavaScript source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) can help with this problem, however, by effectively mapping lines in the transpiled ES5 code to lines in the source ES6 code. Most modern browsers support source maps, but you may need to turn on the feature in your developer tools console. All of the transpilers have options to generate source maps as well.
 - Some ES6 functionality simply cannot be transpiled faithfully or without an additional large library. Features like `let`, `const`, and [symbols](http://exploringjs.com/es6/ch_symbols.html) come to mind.
-- IE8 does not support ES5. [You shouldn't be supporting IE8](/20-reasons-to-drop-ie8-like-its-hot/), but if you are, your transpiled ES5 code may not work
+- IE8 does not support ES5. [You shouldn't be supporting IE8](/blog/20-reasons-to-drop-ie8-like-its-hot/), but if you are, your transpiled ES5 code may not work
 - Lastly, if everyone is transpiling their code in order to be cross-browser compatible, the browsers themselves are never getting their ES6 features exercised; they are effectively still running ES5 code. Now I’m sure the browser vendors have their own plethora of tests that they run, but there’s huge value in having thousands of developers testing the browser by developing against the features. And until all of the non-ES6 browsers die out (which will be a while), it’s likely that the browsers’ ES6 features won’t get fully exercised for quite some time.
 
 ## ES6 REPLs

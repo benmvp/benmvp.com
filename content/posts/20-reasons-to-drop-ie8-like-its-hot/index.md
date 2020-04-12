@@ -164,7 +164,7 @@ At [Google I/O 2014](https://www.google.com/events/io), Google called for ["HTTP
 
 ### Exhibit 8: IE8 has no ECMAScript 5 support
 
-As we learned in the [History of ECMAScript](/learning-es6-history-of-ecmascript/) blog post, ECMAScript 5 was released in December 2009, nine months after Internet Explorer 8. Therefore, IE8 doesn’t have any ES5 support. Quick overview on [ES5 features lacking in IE8](http://caniuse.com/#feat=es5):
+As we learned in the [History of ECMAScript](/blog/learning-es6-history-of-ecmascript/) blog post, ECMAScript 5 was released in December 2009, nine months after Internet Explorer 8. Therefore, IE8 doesn’t have any ES5 support. Quick overview on [ES5 features lacking in IE8](http://caniuse.com/#feat=es5):
 
 - [Strict mode](http://caniuse.com/#feat=use-strict)
 - Array methods like `indexOf`, `forEach`, `map` & `filter`
@@ -175,7 +175,7 @@ As we learned in the [History of ECMAScript](/learning-es6-history-of-ecmascript
 - Allowance for dangling commas (can be fixed by JS minifiers)
 - [JSON `parse` & `stringify`](http://caniuse.com/#feat=json) (technically works but IE8 has to be in [standards mode](https://msdn.microsoft.com/en-us/library/cc288325.aspx)
 
-We also learned in the [Using ES6 right now](/learning-es6-using-es6-right-now/) blog post that the best way to use ES6 is to transpile it down to ES5. But IE8 doesn’t support ES5 So there’s a good chance that our transpiled code won’t be able to run successfully in IE8. Stop holding us back IE8!
+We also learned in the [Using ES6 right now](/blog/learning-es6-using-es6-right-now/) blog post that the best way to use ES6 is to transpile it down to ES5. But IE8 doesn’t support ES5 So there’s a good chance that our transpiled code won’t be able to run successfully in IE8. Stop holding us back IE8!
 
 ### Exhibit 9: IE8 has no HTML5 support
 

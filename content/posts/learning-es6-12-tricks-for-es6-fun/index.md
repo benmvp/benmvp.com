@@ -9,7 +9,7 @@ cover: tips-and-tricks.jpg
 
 ![ES6 tricks](tips-and-tricks.jpg)
 
-I wrapped up the [_Learning ES6_ series](/learning-es6-series/) covering [Generators as Iterators](/learning-es6-generators-as-iterators/) at the beginning of the year. I had considered talking about generators as observers, symbols, and other more advanced uses of ES6, but ended up spending my time preparing for the [speaking engagements](/speak/) I had over the year. Sorry if you were waiting!
+I wrapped up the [_Learning ES6_ series](/learning-es6-series/) covering [Generators as Iterators](/blog/learning-es6-generators-as-iterators/) at the beginning of the year. I had considered talking about generators as observers, symbols, and other more advanced uses of ES6, but ended up spending my time preparing for the [speaking engagements](/blog/speak/) I had over the year. Sorry if you were waiting!
 
 There's been a lot of chatter about how ES6 reduces our need for libraries like [underscore.js](http://underscorejs.org/) and [lodash](https://lodash.com/). I want to take a slightly different approach and showcase how ES6 features can be used in "unintended" ways to accomplish certain common-ish tasks. You can call these "ES6 tricks." I've actually already covered all of these "tricks" in their respective article topics, but I wanted to pull them out as a quick reference.
 
@@ -17,7 +17,7 @@ Without further ado...
 
 #### 1. Quickly logging to the console
 
-We can use [object literal shorthand](/learning-es6-enhanced-object-literals/#property-value-shorthand) to quickly log a variable with a label to the console:
+We can use [object literal shorthand](/blog/learning-es6-enhanced-object-literals/#property-value-shorthand) to quickly log a variable with a label to the console:
 
 ```js
 let myVar = 'foo'
@@ -32,7 +32,7 @@ By using object literal shorthand, we create an object literal that is immediate
 
 #### 2. Coercing to a string
 
-We can quickly coerce a value to a string by wrapping it in a [template literal](/learning-es6-template-literals-tagged-templates/#simple-template-literal):
+We can quickly coerce a value to a string by wrapping it in a [template literal](/blog/learning-es6-template-literals-tagged-templates/#simple-template-literal):
 
 ```js
 let num = 2
@@ -56,7 +56,7 @@ console.log({ num, numString })
 
 #### 3. Swapping variables
 
-We can quickly swap two variables without a temporary one using [array destructuring](/learning-es6-destructuring/):
+We can quickly swap two variables without a temporary one using [array destructuring](/blog/learning-es6-destructuring/):
 
 ```js
 let a = 1
@@ -69,7 +69,7 @@ First we constructed an array using the array literal syntax with two elements: 
 
 #### 4. Simulating named parameters
 
-We can simulate named parameters with [object destructuring](/learning-es6-destructuring/#object-destructuring) and [default values](/learning-es6-parameter-handling/#default-parameters) in a function header:
+We can simulate named parameters with [object destructuring](/blog/learning-es6-destructuring/#object-destructuring) and [default values](/blog/learning-es6-parameter-handling/#default-parameters) in a function header:
 
 ```js
 const notify = (msg, { type = 'info', timeout, close = true } = {}) => {
@@ -85,7 +85,7 @@ The entire object (the second parameter) is defaulted to `{}` when `undefined`/u
 
 #### 5. Copying an array
 
-We can quickly copy an array using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
+We can quickly copy an array using the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator):
 
 ```js
 const manipulateList = (list) => {
@@ -98,7 +98,7 @@ const manipulateList = (list) => {
 
 #### 6. Concatenating arrays
 
-We can quickly concatenate multiple arrays together using the [spread operator](/learning-es6-parameter-handling/#spread-operator):
+We can quickly concatenate multiple arrays together using the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator):
 
 ```js
 let start = ['do', 're', 'mi']
@@ -111,7 +111,7 @@ console.log(scaleFromLiteral)
 
 #### 7. De-duping an array
 
-We can combine [`Set`](/learning-es6-new-collections/#set)'s de-duping nature with the [spread operator](/learning-es6-parameter-handling/#spread-operator) to create a de-dupe array helper:
+We can combine [`Set`](/blog/learning-es6-new-collections/#set)'s de-duping nature with the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator) to create a de-dupe array helper:
 
 ```js
 function dedupe(array) {
@@ -128,7 +128,7 @@ Creating the `Set` from the `array` will result in duplicates removed, and the s
 
 #### 8. Enforcing required parameters
 
-We can use the fact that a [default value](/learning-es6-parameter-handling/#required-parameters) can be the result of a function call to enforce required parameters:
+We can use the fact that a [default value](/blog/learning-es6-parameter-handling/#required-parameters) can be the result of a function call to enforce required parameters:
 
 ```js
 // Gets called if a parameter is missing and the expression
@@ -145,7 +145,7 @@ If `requiredParam` is unspecified or `undefined`, an `Error` will be thrown, whi
 
 #### 9. Enforcing maximum arity
 
-ES6 unfortunately doesn't provide a mechanism for enforcing a maximum arity (number of passed parameters) of a function. However, you can leverage [rest parameters](/learning-es6-parameter-handling/#rest-parameters) to hack around the lack of support.
+ES6 unfortunately doesn't provide a mechanism for enforcing a maximum arity (number of passed parameters) of a function. However, you can leverage [rest parameters](/blog/learning-es6-parameter-handling/#rest-parameters) to hack around the lack of support.
 
 ```js
 function max(...values) {
@@ -168,7 +168,7 @@ max(1, 2, 3)
 max(1, 2, 3, 4)
 ```
 
-The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](/learning-es6-destructuring/).
+The problem with this approach is that the function actually wants to define `a`, `b` and `c` as its parameters, but because it needs to do arity validation, those variables are instead assigned in the function body using [destructuring](/blog/learning-es6-destructuring/).
 
 We could clean things up a little bit:
 
@@ -191,7 +191,7 @@ This is a little better, but introduces a 4th parameter, `shouldBeEmpty`, that's
 
 #### 10. Timing out fetch
 
-We can easily provide timeout support to the new [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) by including it in a call to [`Promise.race`](/learning-es6-promises/#promise-race) with a promise-based timeout function:
+We can easily provide timeout support to the new [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) by including it in a call to [`Promise.race`](/blog/learning-es6-promises/#promise-race) with a promise-based timeout function:
 
 ```js
 // Wrap `setTimeout` in a promise such that if
@@ -232,7 +232,7 @@ fetchWithTimeout('/json/data.json', 1000)
 
 #### 11. Defining an abstract base class
 
-An abstract base class is a type of class that is exclusively intended to be inherited. It cannot be directly constructed. The main use case is for the inherited classes to have a common interface. Unfortunately, [classes](/learning-es6-classes/) don't yet leverage the `abstract` keyword to make abstract base classes, but you _can_ use `new.target` introduced with classes to simulate it.
+An abstract base class is a type of class that is exclusively intended to be inherited. It cannot be directly constructed. The main use case is for the inherited classes to have a common interface. Unfortunately, [classes](/blog/learning-es6-classes/) don't yet leverage the `abstract` keyword to make abstract base classes, but you _can_ use `new.target` introduced with classes to simulate it.
 
 ```js
 class Note {
@@ -249,7 +249,7 @@ let colorNote = new ColorNote() // ok
 
 #### 12. Defining lazy range function
 
-We can use [generators](/learning-es6-generators-as-iterators/) to create a lazy range function:
+We can use [generators](/blog/learning-es6-generators-as-iterators/) to create a lazy range function:
 
 ```js
 // Return a new generator that will iterate from `start` for

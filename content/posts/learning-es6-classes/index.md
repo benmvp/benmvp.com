@@ -9,7 +9,7 @@ cover: oop-scrabble-tiles.jpg
 
 ![O-O-P Scrabble tiles](oop-scrabble-tiles.jpg)
 
-At the end of our discussion of the [new `for-of` operator](/learning-es6-for-of-loop/) I mentioned that I would next talk about either the new collections or iterators & iterables. Well, it turns out today, we'll be talking about neither! Instead I want to deep dive into ES6 classes. Let's go!
+At the end of our discussion of the [new `for-of` operator](/blog/learning-es6-for-of-loop/) I mentioned that I would next talk about either the new collections or iterators & iterables. Well, it turns out today, we'll be talking about neither! Instead I want to deep dive into ES6 classes. Let's go!
 
 ## TL;DR
 
@@ -113,9 +113,9 @@ console.log(`${colorNote}`)
 console.log(Note.get('note0') === colorNote)
 ```
 
-This is just a quick example of how ES6 classes work. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [classes code examples](/learning-es6/#classes) page showing off the features in greater detail.
+This is just a quick example of how ES6 classes work. Be sure to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) and take a look at the [classes code examples](https://learning-es6.benmvp.com/#classes) page showing off the features in greater detail.
 
-The example also uses default parameters, rest parameters, and the spread operator so you may want to revisit the [parameter handling](/learning-es6-parameter-handling/) article if you're not familiar. It also makes use of [template strings](/learning-es6-template-literals-tagged-templates/) for string interpolation, so you should read up on that as well.
+The example also uses default parameters, rest parameters, and the spread operator so you may want to revisit the [parameter handling](/blog/learning-es6-parameter-handling/) article if you're not familiar. It also makes use of [template strings](/blog/learning-es6-template-literals-tagged-templates/) for string interpolation, so you should read up on that as well.
 
 ## What’s all the fuss?
 
@@ -266,7 +266,7 @@ let colorNote = new ColorNote() // ok
 
 ## Instance methods
 
-The syntax for defining methods in ES6 classes has been streamlined and resembles [object literal method shorthand](/learning-es6-enhanced-object-literals/#method-definition-shorthand) (but without the comma separators):
+The syntax for defining methods in ES6 classes has been streamlined and resembles [object literal method shorthand](/blog/learning-es6-enhanced-object-literals/#method-definition-shorthand) (but without the comma separators):
 
 ```js
 class Note {
@@ -555,7 +555,7 @@ Will talk more about mixing ES6 and ES5 classes in the upcoming [interoperabilit
 
 Let's take a short break from syntactic sugar and talk about some new functionality introduced with ES6. Before in JavaScript, it wasn't (easily) possible to inherit from one of the built-in classes like `Array`, `RegEx`, `String`, etc. The most common class to inherit was `Array` in order to create stacks, queues, and other list-like data structures. Or you may want to create your own fancy array that inherits from `Array` in order to add helper methods like `first`, `last`, `take`, etc. that you find in libraries like [underscore.js](http://underscorejs.org/) and [lodash](https://lodash.com/). Imagine if the `jQuery` object actually inherited from `Array` instead of just being array-like. It'd be even more powerful.
 
-We can also inherit from the new ES6 APIs like [`Promise`](/learning-es6-promises/) which we've already discussed and the new collections (`Map`, `Set`, `WeakMap` & `WeakSet`) that we'll be talking about soon.
+We can also inherit from the new ES6 APIs like [`Promise`](/blog/learning-es6-promises/) which we've already discussed and the new collections (`Map`, `Set`, `WeakMap` & `WeakSet`) that we'll be talking about soon.
 
 One super useful class to inherit from is the `Error` class that is thrown with exceptions. Now when you need to throw an exception, you're no longer limited to the handful of native `Error` classes. You can create your own custom `Error` subclass. Remember our example from earlier to create an abstract base class? Instead of just throwing a generic `Error`, we can throw a custom-created `Error` subclass:
 
@@ -588,7 +588,7 @@ The only gotcha with inheritable built-ins is that they cannot be transpiled nor
 
 I've mentioned a few times how ES6 classes are just syntactic sugar over ES5 prototype constructor functions, but there actually are some differences between them that are worth talking about.
 
-First, class declarations, unlike function declarations, are not hoisted to the top of their enclosing scope. Class declarations act like block-scoped variables so they exist in the [temporal dead zone](/learning-es6-block-level-scoping-let-const/#entering-the-temporal-dead-zone) until execution reaches the declaration. You cannot reference a class before it's declared.
+First, class declarations, unlike function declarations, are not hoisted to the top of their enclosing scope. Class declarations act like block-scoped variables so they exist in the [temporal dead zone](/blog/learning-es6-block-level-scoping-let-const/#entering-the-temporal-dead-zone) until execution reaches the declaration. You cannot reference a class before it's declared.
 
 Second, all code inside of class declarations runs in strict mode automatically. There’s no way to opt-out of strict mode inside of classes.
 
@@ -667,7 +667,7 @@ I already mentioned that the transpilers cannot support inheritable built-ins. U
 
 ## Additional resources
 
-As always, you can check out the [_Learning ES6_ examples page](/learning-es6/#classes) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
+As always, you can check out the [_Learning ES6_ examples page](https://learning-es6.benmvp.com/#classes) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6) where you will find all of the code used in this article running natively in the browser. You can also get some practice with ES6 classes using [ES6 Katas](http://es6katas.org/).
 
 There is also lots of great reading to deep dive into ES6 classes:
 

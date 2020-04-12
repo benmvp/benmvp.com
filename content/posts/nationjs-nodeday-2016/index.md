@@ -8,7 +8,7 @@ cover: nationjs-nodeday-crowd.jpg
 
 ![NationJS Node Day](nationjs-logo.jpg)
 
-Back in March, I had the pleasure of speaking at the [NationJS Node Day Conference](http://nationjs.com/) on my talk entitled [_Sweet ES6_](http://nationjs.com/program#ben_ilegbodu). It was adaptation of the _Sugar & Spice and everything nice about ES6_ talk I had given at [Nodevember 2015](/nodevember-2015/), [Little Rock Tech Fest 2015](/little-rock-tech-fest-2015/), and others. I had basically already decided to focus solely on the syntactic sugar features introduced in ES6, so I renamed the talk and description accordingly.
+Back in March, I had the pleasure of speaking at the [NationJS Node Day Conference](http://nationjs.com/) on my talk entitled [_Sweet ES6_](http://nationjs.com/program#ben_ilegbodu). It was adaptation of the _Sugar & Spice and everything nice about ES6_ talk I had given at [Nodevember 2015](/blog/nodevember-2015/), [Little Rock Tech Fest 2015](/blog/little-rock-tech-fest-2015/), and others. I had basically already decided to focus solely on the syntactic sugar features introduced in ES6, so I renamed the talk and description accordingly.
 
 NationJS Node Day was a fun conference to speak at. It was my first single-track conference, so everyone who attended the conference _had_ to hear me speak. Both exciting and nerve-racking at the same time! Also, the venue was huge with stadium seating and a wide stage:
 
@@ -30,7 +30,7 @@ Thankfully the conference came to my aid 😀:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/benmvp">@benmvp</a> is going longer to replace a cancelled talk.</p>&mdash; RubyNation Jun 3-4 (@rubynation) <a href="https://twitter.com/rubynation/status/708336135794102272">March 11, 2016</a></blockquote>
 
-In the end, the talk was very well-received. I got to chat with folks during lunch who said they learned lots of new concepts in the talk. It seems that they way I presented the information was really helpful in enabling the attendees to grasp the direct application of the features. [Destructuring](/learning-es6-destructuring/) seems to be everyone's favorite:
+In the end, the talk was very well-received. I got to chat with folks during lunch who said they learned lots of new concepts in the talk. It seems that they way I presented the information was really helpful in enabling the attendees to grasp the direct application of the features. [Destructuring](/blog/learning-es6-destructuring/) seems to be everyone's favorite:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/benmvp">@benmvp</a> did I see that right?Destructuring in a let statement?? <a href="https://twitter.com/hashtag/awesomeness?src=hash">#awesomeness</a> <a href="https://twitter.com/nationjs">@nationjs</a></p>&mdash; Juan Caicedo (@_juancaicedo) <a href="https://twitter.com/_juancaicedo/status/708331603207004161">March 11, 2016</a></blockquote>
 
