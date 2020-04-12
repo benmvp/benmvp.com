@@ -123,7 +123,7 @@ const Post = ({ data }) => {
         <Divider className={classes.divider} />
         <Typography align="center" variant="h6" component="p">
           <Link
-            href={`https://twiter.com/search?q=${url}`}
+            href={`https://twitter.com/search?q=${url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -135,7 +135,7 @@ const Post = ({ data }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Edit post on Github
+            Edit on Github
           </Link>
         </Typography>
       </Box>
