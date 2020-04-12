@@ -61,6 +61,9 @@ const useStyles = makeStyles((theme) =>
         // iframes (video embeds)
         margin: theme.spacing(0, 0, 3, 2),
       },
+      '& .twitter-tweet': {
+        margin: `0 auto ${theme.spacing(2)}px auto`,
+      },
     },
     divider: {
       marginTop: theme.spacing(2),
