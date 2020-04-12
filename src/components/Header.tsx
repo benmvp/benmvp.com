@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-export default () => {
+const Header = () => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
     query {
@@ -115,3 +115,5 @@ export default () => {
     </HideOnScroll>
   )
 }
+
+export default Header

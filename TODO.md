@@ -7,7 +7,7 @@
 - [x] Style blog posts
 - [x] Add blog post byline + footer
 - [x] Fix links in blog posts to be `/blog/`
-- [ ] Style `/blog/`
+- [x] Style `/blog/`
 - [ ] Talks/videos/speak as markdown
 - [ ] Build new home page
 - [ ] Add links to header

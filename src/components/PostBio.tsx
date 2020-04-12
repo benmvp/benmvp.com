@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default ({ html }: Props) => {
+const PostBio = ({ html }: Props) => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
     query {
@@ -46,3 +46,5 @@ export default ({ html }: Props) => {
     </Grid>
   )
 }
+
+export default PostBio

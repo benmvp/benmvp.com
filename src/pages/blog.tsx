@@ -1,50 +1,60 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Typography, Box } from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import { Grid } from '@material-ui/core'
 import Layout from '../components/Layout'
+import PostCard from '../components/PostCard'
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
+  const { posts } = data
+
   return (
     <Layout>
-      <div>
-        <Typography variant="h3" component="h1">
-          All posts
-        </Typography>
-        <Typography variant="subtitle1" component="h4">
-          {data.allMarkdownRemark.totalCount} Posts
-        </Typography>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Box component="section" key={node.id}>
-            <Link to={`/blog/${node.fields.slug}`}>
-              <Typography variant="h4" component="h2">
-                {node.frontmatter.title}{' '}
-                <Typography style={{ color: '#555' }}>
-                  — {node.frontmatter.date}
-                </Typography>
-              </Typography>
-              <Typography variant="body1">{node.excerpt}</Typography>
-            </Link>
-          </Box>
+      <Grid container spacing={2}>
+        {posts.edges.map(({ node }) => (
+          <Grid key={node.fields.slug} item xs={12} sm={6}>
+            <PostCard
+              slug={node.fields.slug}
+              title={node.frontmatter.title}
+              tags={node.frontmatter.tags}
+              date={node.frontmatter.date}
+              excerpt={node.excerpt}
+              hero={node.frontmatter.hero}
+              heroAlt={node.frontmatter.heroAlt}
+            />
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </Layout>
   )
 }
 
+export default Blog
+
 export const query = graphql`
   query {
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "//posts//" } }
     ) {
       totalCount
       edges {
         node {
-          id
           frontmatter {
             title
+            tags
             date(formatString: "DD MMMM YYYY")
+            hero {
+              childImageSharp {
+                fluid(
+                  maxWidth: 550
+                  traceSVG: { color: "#3f51b5" }
+                  quality: 50
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            heroAlt
           }
           fields {
             slug

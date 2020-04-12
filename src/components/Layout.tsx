@@ -62,7 +62,7 @@ const ScrollTop = ({ children }: ChildrenProps) => {
   )
 }
 
-export default ({ children }: ChildrenProps) => {
+const Layout = ({ children }: ChildrenProps) => {
   const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
@@ -92,3 +92,5 @@ export default ({ children }: ChildrenProps) => {
     </>
   )
 }
+
+export default Layout

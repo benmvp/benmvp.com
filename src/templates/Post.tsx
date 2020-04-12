@@ -69,6 +69,9 @@ const useStyles = makeStyles((theme) =>
         margin: `0 auto ${theme.spacing(2)}px auto`,
       },
     },
+    footer: {
+      marginTop: theme.spacing(3),
+    },
     divider: {
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(2),
@@ -77,7 +80,7 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-export default ({ data }) => {
+const Post = ({ data }) => {
   const classes = useStyles()
   const { post, bio } = data
   const { html, fields, frontmatter, excerpt, timeToRead } = post
@@ -113,7 +116,7 @@ export default ({ data }) => {
         dangerouslySetInnerHTML={{ __html: html }}
         className={classes.content}
       />
-      <Box component="footer">
+      <Box component="footer" className={classes.footer}>
         <Share url={url} title={title} summary={excerpt} tags={tags} />
         <Divider className={classes.divider} />
         <PostBio html={bio.html} />
@@ -139,6 +142,8 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default Post
 
 export const query = graphql`
   query($slug: String!) {
