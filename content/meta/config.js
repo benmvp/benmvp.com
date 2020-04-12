@@ -1,4 +1,6 @@
-const colors = require('../../src/styles/colors')
+const { getTheme } = require('../../src/styles')
+
+const THEME = getTheme(false)
 
 module.exports = {
   homeTitle: 'Ben Ilegbodu',
@@ -10,9 +12,6 @@ module.exports = {
   pathPrefix: '',
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
-  // author
-  authorName: 'Ben Ilegbodu',
-  authorTwitterAccount: 'benmvp',
   // info
   infoTitle: 'Ben Ilegbodu',
   infoTitleNote: 'UI Architect',
@@ -20,15 +19,26 @@ module.exports = {
   manifestName: 'Ben Ilegbodu',
   manifestShortName: 'BenMVP', // max 12 characters
   manifestStartUrl: '/',
-  manifestBackgroundColor: colors.bg,
-  manifestThemeColor: colors.bg,
+  manifestBackgroundColor: THEME.palette.background.default,
+  manifestThemeColor: THEME.palette.background.default,
   manifestDisplay: 'standalone',
   // social
+  twitterHandle: 'benmvp',
   authorSocialLinks: [
-    {name: 'twitter', url: 'https://twitter.com/benmvp', title: 'Follow Ben Ilegbodu on Twitter'},
-    {name: 'github', url: 'https://github.com/benmvp', title: "Ben Ilegbodu's projects"},
-    {name: 'linkedin', url: 'https://linkedin.com/in/benmvp', title: "Ben Ilegbodu's resume"},
+    {
+      name: 'twitter',
+      url: 'https://twitter.com/benmvp',
+      title: 'Follow Ben Ilegbodu on Twitter',
+    },
+    {
+      name: 'github',
+      url: 'https://github.com/benmvp',
+      title: "Ben Ilegbodu's projects",
+    },
+    {
+      name: 'linkedin',
+      url: 'https://linkedin.com/in/benmvp',
+      title: "Ben Ilegbodu's resume",
+    },
   ],
-  // disqus
-  disqusShortname: 'benmvp',
 }

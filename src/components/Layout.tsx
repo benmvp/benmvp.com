@@ -1,50 +1,37 @@
 import React, { useMemo, ReactNode } from 'react'
 import {
-  colors,
   makeStyles,
   createStyles,
-  createMuiTheme,
   ThemeProvider,
   useMediaQuery,
   CssBaseline,
   useScrollTrigger,
-  Slide,
-  AppBar,
   Toolbar,
   Container,
-  Avatar,
   Box,
-  Typography,
-  Fab,
   Zoom,
 } from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
-import { Link } from 'gatsby-theme-material-ui'
-import logo from './logo.jpg'
+import { Fab } from 'gatsby-theme-material-ui'
+import Header from './Header'
+import { getTheme } from '../styles'
 
 interface ChildrenProps {
   children: ReactNode
 }
 
-const HideOnScroll = ({ children }: ChildrenProps) => {
-  const trigger = useScrollTrigger()
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  )
-}
-
 const useStyles = makeStyles((theme) =>
   createStyles({
-    logo: {
-      marginRight: theme.spacing(),
+    root: {
+      backgroundColor: theme.palette.background.default,
     },
     toTop: {
       position: 'fixed',
       bottom: theme.spacing(2),
       right: theme.spacing(2),
+    },
+    backToTopAnchor: {
+      height: 104,
     },
   }),
 )
@@ -78,56 +65,29 @@ const ScrollTop = ({ children }: ChildrenProps) => {
 export default ({ children }: ChildrenProps) => {
   const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-
-  const theme = useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          primary: colors.indigo,
-          secondary: colors.teal,
-          type: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  )
+  const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
 
   return (
     <>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <HideOnScroll>
-          <AppBar>
-            <Container maxWidth="md">
-              <Box component="header">
-                <Toolbar disableGutters>
-                  <Link color="inherit" to="/" aria-label="Go to homepage">
-                    <Avatar
-                      src={logo}
-                      alt="Ben Ilegbodu"
-                      className={classes.logo}
-                    />
-                  </Link>
-                  <Typography variant="h6">
-                    <Link color="inherit" to="/">
-                      Ben Ilegbodu
-                    </Link>
-                  </Typography>
-                </Toolbar>
-              </Box>
-            </Container>
-          </AppBar>
-        </HideOnScroll>
-        <Container maxWidth="md">
-          <Toolbar id="back-to-top-anchor" />
-          <Box component="main" my={2}>
-            {children}
-          </Box>
-        </Container>
-        <ScrollTop>
-          <Fab color="secondary" size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollTop>
+        <Box component="section" className={classes.root}>
+          <Header />
+          <Container maxWidth="md">
+            <Toolbar
+              id="back-to-top-anchor"
+              className={classes.backToTopAnchor}
+            />
+            <Box component="main" my={2}>
+              {children}
+            </Box>
+          </Container>
+          <ScrollTop>
+            <Fab color="secondary" size="small" aria-label="scroll back to top">
+              <KeyboardArrowUpIcon />
+            </Fab>
+          </ScrollTop>
+        </Box>
       </ThemeProvider>
     </>
   )

@@ -5,7 +5,7 @@
 - [x] Move blog posts to `/blog/`
 - [x] Page layout
 - [x] Style blog posts
-- [ ] Add blog post byline + footer
+- [x] Add blog post byline + footer
 - [ ] Fix links in blog posts to be `/blog/`
 - [ ] Style `/blog/`
 - [ ] Talks/videos/speak as markdown

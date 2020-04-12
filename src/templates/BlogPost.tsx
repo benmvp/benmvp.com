@@ -1,7 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { makeStyles, createStyles, Typography, Box } from '@material-ui/core'
+import {
+  makeStyles,
+  createStyles,
+  Typography,
+  Box,
+  Divider,
+  Link,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
+import Share from '../components/Share'
+import PostBio from '../components/PostBio'
+import { getUrl } from '../utils'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -16,17 +26,20 @@ const useStyles = makeStyles((theme) =>
       '& h6': theme.typography.h6,
       '& p': {
         ...theme.typography.body1,
-        margin: `0 0 ${theme.spacing(2)}px 0`,
+        margin: theme.spacing(0, 0, 2, 0),
+      },
+      '& img': {
+        maxWidth: '100%',
       },
       '& ul': {
         listStyle: 'circle',
-        padding: `0 0 0 ${theme.spacing(3)}px`,
+        padding: theme.spacing(0, 0, 0, 3),
         [theme.breakpoints.up('md')]: {
-          padding: `0 0 0 ${theme.spacing(4)}px`,
+          padding: theme.spacing(0, 0, 0, 4),
         },
       },
       '& li': {
-        margin: `0 0 ${theme.spacing(1)}px 0`,
+        margin: theme.spacing(0, 0, 1, 0),
       },
       '& a:not(.anchor)': {
         color: theme.palette.primary.main,
@@ -34,9 +47,7 @@ const useStyles = makeStyles((theme) =>
       '& blockquote': {
         borderLeft: `5px solid ${theme.palette.secondary.main}`,
         fontStyle: 'italic',
-        margin: `${theme.spacing(2.5)}px 0 ${theme.spacing(
-          2.5,
-        )}px ${theme.spacing(5)}px`,
+        margin: theme.spacing(2.5, 0, 2.5, 5),
         padding: theme.spacing(1.5),
         '& p': {
           margin: 0,
@@ -44,20 +55,28 @@ const useStyles = makeStyles((theme) =>
       },
       '& .gatsby-highlight': {
         // code blocks
-        margin: `0 0 ${theme.spacing(3)}px ${theme.spacing(2)}px`,
+        margin: theme.spacing(0, 0, 3, 2),
       },
       '& .gatsby-resp-iframe-wrapper': {
         // iframes (video embeds)
-        margin: `0 0 ${theme.spacing(3)}px ${theme.spacing(2)}px`,
+        margin: theme.spacing(0, 0, 3, 2),
       },
+    },
+    divider: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+      width: '60%',
     },
   }),
 )
 
 export default ({ data }) => {
   const classes = useStyles()
-  const { html, frontmatter } = data.markdownRemark
-  const { title, subTitle, date } = frontmatter
+  const { post, bio } = data
+  const { html, fields, frontmatter, excerpt, timeToRead } = post
+  const { title, subTitle, date, tags } = frontmatter
+  const { slug } = fields
+  const url = getUrl(`/blog${slug}`)
 
   return (
     <Layout>
@@ -71,7 +90,7 @@ export default ({ data }) => {
           </Typography>
         )}
         <Typography variant="subtitle2" component="p" gutterBottom>
-          {date}
+          {date} · {timeToRead}-min read
         </Typography>
       </Box>
       <Typography
@@ -80,19 +99,51 @@ export default ({ data }) => {
         dangerouslySetInnerHTML={{ __html: html }}
         className={classes.content}
       />
+      <Box component="footer">
+        <Share url={url} title={title} summary={excerpt} tags={tags} />
+        <Divider className={classes.divider} />
+        <PostBio html={bio.html} />
+        <Divider className={classes.divider} />
+        <Typography align="center" variant="h6" component="p">
+          <Link
+            href={`https://twiter.com/search?q=${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Discuss on Twitter
+          </Link>{' '}
+          //{' '}
+          <Link
+            href={`https://github.com/benmvp/benmvp.com/edit/master/content/posts${slug}index.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Edit post on Github
+          </Link>
+        </Typography>
+      </Box>
     </Layout>
   )
 }
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
+      timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         subTitle
+        tags
         date(formatString: "DD MMMM YYYY")
       }
+    }
+    bio: markdownRemark(fields: { slug: { eq: "/bio/" } }) {
+      html
     }
   }
 `
