@@ -3,12 +3,11 @@ date: 2018-12-01
 title: MVP! MVP! MVP!
 category: speaking
 tags: [microsoft, mvp, award, developer-technologies]
-cover: official-microsoft-mvp-logo-avatar.png
+hero: official-microsoft-mvp-logo-avatar.png
+heroAlt: Official Microsoft Most Valuable Professional award
 ---
 
 This morning I received the email I've been waiting for. I received the 2019-2020 [Microsoft Most Valuable Professional (MVP) award](https://mvp.microsoft.com/) "in recognition of [my] exceptional technical community leadership" in the area of **Developer Technologies**!
-
-![Official Microsoft Most Valuable Professional award](official-microsoft-mvp-horizontal-banner.png)
 
 I've been using the handle **benmvp** since the 7th grade when I was chosen as the Most Valuable Player of our basketball team. And now 20 years later, I've got another reason to be an MVP. 😄
 

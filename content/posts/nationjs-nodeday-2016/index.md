@@ -3,10 +3,9 @@ date: 2016-06-12
 title: NationJS Node Day 2016
 category: speaking
 tags: [conferences, es6, speaking, talks]
-cover: nationjs-nodeday-crowd.jpg
+hero: nationjs-nodeday-crowd.jpg
+heroAlt: NationJS Node Day
 ---
-
-![NationJS Node Day](nationjs-logo.jpg)
 
 Back in March, I had the pleasure of speaking at the [NationJS Node Day Conference](http://nationjs.com/) on my talk entitled [_Sweet ES6_](http://nationjs.com/program#ben_ilegbodu). It was adaptation of the _Sugar & Spice and everything nice about ES6_ talk I had given at [Nodevember 2015](/blog/nodevember-2015/), [Little Rock Tech Fest 2015](/blog/little-rock-tech-fest-2015/), and others. I had basically already decided to focus solely on the syntactic sugar features introduced in ES6, so I renamed the talk and description accordingly.
 

@@ -13,10 +13,9 @@ tags:
     rest-operator,
     spread-operator,
   ]
-cover: little-rock-tech-fest-2015-banner.png
+hero: little-rock-tech-fest-2015-banner.png
+heroAlt: Little Rock Tech Fest 2015 banner
 ---
-
-![Little Rock Tech Fest 2015 banner](little-rock-tech-fest-2015-banner.png)
 
 I have been invited to speak at [Little Rock Tech Fest 2015](http://lrtechfest.com/) on October 16th! My talk is entitled [_Sugar & Spice and Everything nice about ES6_](http://lrtechfest.com/speakerdetails#Ben-Ilegbodu). It'll be a recap of the [_Learning ES6_ series](/learning-es6-series/) I've been writing in detail about.
 

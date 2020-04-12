@@ -3,10 +3,9 @@ date: 2015-11-22
 title: Nodevember 2015
 category: speaking
 tags: [conferences, es6, speaking, talks]
-cover: nodevember-2015-logo.png
+hero: nodevember-2015-logo.png
+heroAlt: Nodevember 2015
 ---
-
-![Nodevember 2015](nodevember-2015-logo.png)
 
 I'm just returning from speaking at [Nodevember 2015](http://nodevember.org/), a community-driven Node and JavaScript conference in Nashville, TN. It was such a blessing to have the opportunity to speak at such an awesome conference along some amazing speakers. My talk was entitled _Sugar & Spice and Everything nice about ES6_ and it was based on the [_Learning ES6 series_](/learning-es6-series/).
 

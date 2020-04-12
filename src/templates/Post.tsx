@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import {
   makeStyles,
   createStyles,
@@ -17,6 +18,9 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     header: {
       marginBottom: theme.spacing(5),
+    },
+    image: {
+      margin: theme.spacing(0, 0, 3, 0),
     },
     content: {
       '& h2': theme.typography.h4,
@@ -77,7 +81,7 @@ export default ({ data }) => {
   const classes = useStyles()
   const { post, bio } = data
   const { html, fields, frontmatter, excerpt, timeToRead } = post
-  const { title, subTitle, date, tags } = frontmatter
+  const { title, subTitle, date, tags, hero, heroAlt } = frontmatter
   const { slug } = fields
   const url = getUrl(`/blog${slug}`)
 
@@ -96,6 +100,13 @@ export default ({ data }) => {
           {date} · {timeToRead}-min read
         </Typography>
       </Box>
+      {hero && (
+        <Img
+          fluid={hero.childImageSharp.fluid}
+          alt={heroAlt}
+          className={classes.image}
+        />
+      )}
       <Typography
         variant="body1"
         component="article"
@@ -143,6 +154,14 @@ export const query = graphql`
         subTitle
         tags
         date(formatString: "DD MMMM YYYY")
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 912, traceSVG: { color: "#3f51b5" }, quality: 75) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        heroAlt
       }
     }
     bio: markdownRemark(fields: { slug: { eq: "/bio/" } }) {

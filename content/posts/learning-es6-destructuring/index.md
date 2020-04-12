@@ -4,10 +4,9 @@ title: Destructuring
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, destructuring]
-cover: pass-baton.jpg
+hero: pass-baton.jpg
+heroAlt: Passing the baton
 ---
-
-![Passing the baton](pass-baton.jpg)
 
 After learning all about [arrow functions](/blog/learning-es6-arrow-functions/) and [block-level scoping](/blog/learning-es6-block-level-scoping-let-const/), let's continue the syntactic sugar train in our [_Learning ES6_ series](/learning-es6-series/) with _destructuring_ in ECMAScript 6.
 

@@ -4,10 +4,9 @@ title: Iterators & iterables
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, iterables, iterators, javascript, learning-es6]
-cover: iterators-gonna-iterate.png
+hero: iterators-gonna-iterate.png
+heroAlt: iterators
 ---
-
-![iterators](iterators-gonna-iterate.png)
 
 We've talked about the new [`for-of` operator](/blog/learning-es6-for-of-loop/) and [new collection APIs](/blog/learning-es6-new-collections/), so now we're finally going to talk about iterators & iterables. We've been bringing them up in passing in the last couple of articles, so it's about time we talk about them deeply.
 

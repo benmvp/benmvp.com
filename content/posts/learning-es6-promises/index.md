@@ -4,10 +4,9 @@ title: Promises
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, promises, deferreds]
-cover: pinky-promise.jpg
+hero: pinky-promise.jpg
+heroAlt: Pinky promise fingers
 ---
-
-![Pinky promise fingers](pinky-promise.jpg)
 
 Like clockwork the [_Learning ES6_ series](/learning-es6-series/) continues on, looking at _promises_. It will be the first feature we've looked at in this series that is more than syntactic sugar. But promises aren't new to JavaScript. They've existed for quite some time in helper libraries. ECMAScript 6 now brings native promise support to JavaScript via the `Promise` API. Let's jump right in!
 

@@ -4,10 +4,9 @@ title: Classes
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, classes]
-cover: oop-scrabble-tiles.jpg
+hero: oop-scrabble-tiles.jpg
+heroAlt: O-O-P Scrabble tiles
 ---
-
-![O-O-P Scrabble tiles](oop-scrabble-tiles.jpg)
 
 At the end of our discussion of the [new `for-of` operator](/blog/learning-es6-for-of-loop/) I mentioned that I would next talk about either the new collections or iterators & iterables. Well, it turns out today, we'll be talking about neither! Instead I want to deep dive into ES6 classes. Let's go!
 

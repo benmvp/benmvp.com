@@ -13,10 +13,9 @@ tags:
     javascript,
     learning-es6,
   ]
-cover: electric-generator.jpg
+hero: electric-generator.jpg
+heroAlt: electric generator
 ---
-
-![electric generator](electric-generator.jpg)
 
 I feel like all the articles in the [_Learning ES6_ series](/learning-es6-series/) have been leading up to generators. They really are the feature most JavaScript developers are excited about in ECMAScript 6. They very well may be the future of asynchronous programming in JavaScript. That's definitely something to get excited about!
 

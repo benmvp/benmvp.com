@@ -12,10 +12,9 @@ tags:
     template-literals,
     tagged-templates,
   ]
-cover: backtick.png
+hero: backtick.png
+heroAlt: 'Backtick - powerful commands, just one tick away'
 ---
-
-![Backtick - powerful commands, just one tick away](backtick.png)
 
 Template literals and tagged templates comprise topic #6 in the [_Learning ES6_ series](/learning-es6-series/). If you're new to the series, we most recently covered [enhanced object literals](/blog/learning-es6-enhanced-object-literals/) and [parameter handling](/blog/learning-es6-parameter-handling/).
 

@@ -4,10 +4,9 @@ title: 12 tricks for ES6 fun
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, tricks]
-cover: tips-and-tricks.jpg
+hero: tips-and-tricks.jpg
+heroAlt: ES6 tricks
 ---
-
-![ES6 tricks](tips-and-tricks.jpg)
 
 I wrapped up the [_Learning ES6_ series](/learning-es6-series/) covering [Generators as Iterators](/blog/learning-es6-generators-as-iterators/) at the beginning of the year. I had considered talking about generators as observers, symbols, and other more advanced uses of ES6, but ended up spending my time preparing for the [speaking engagements](/blog/speak/) I had over the year. Sorry if you were waiting!
 

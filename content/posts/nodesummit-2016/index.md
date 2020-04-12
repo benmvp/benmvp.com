@@ -3,12 +3,11 @@ date: 2016-09-23
 title: Speaking at NodeSummit 2016
 category: speaking
 tags: [conferences, es6, speaking, talks]
-cover: nodesummit-side.jpg
+hero: nodesummit-side.jpg
+heroAlt: 'Ben Ilegbodu @ NodeSummit 2016 side shot'
 ---
 
 About 10 days after returning from speaking at [Front Porch Austin 2016](/blog/front-porch-austin-2016/), I spoke on the _Evolution of JavaScript IV_ panel at [NodeSummit 2016](http://nodesummit.com/). A friend of mine, [Jem Young](https://twitter.com/JemYoung), introduced me to his manager at Netflix, [Chris Saint-Amant](https://twitter.com/csaintamant), who was moderating the panel. [Last year's panel](http://nodesummit.com/media/evolution-of-javascript-iii/) had Brendan Eich, Ariya Hidayat, Jafar Husain, and Yehuda Katz and focused more on the creation of the ECMAScript/JavaScript standards. Instead of discussing with creators again, Chris chose to have implementors and users instead.
-
-![Ben Ilegbodu @ NodeSummit 2016 side shot](./nodesummit-side.jpg)
 
 On this year's panel was [Brandon Cannaday](https://twitter.com/TheReddest) (CPO @ Losant), [Stephen Fluin](https://twitter.com/stephenfluin) (Developer Advocate @ Google), [Amanda Silver](https://twitter.com/amandaksilver) (Director of Program Management @ Microsoft), and myself. We all had very unique experiences and perspectives. I would argue that Amanda's was the most intriguing because she works with the [Chakra](https://github.com/Microsoft/ChakraCore) team, Microsoft's JavaScript engine. She had lots of very cool insights about the future of JavaScript because her team actually has to implement the standards (and efficiently too). And the day before the panel, Microsoft announced that [ChakraCore](https://github.com/Microsoft/ChakraCore) had just been released for MacOS & Linux. This isn't your grandfather's Microsoft. 😂
 

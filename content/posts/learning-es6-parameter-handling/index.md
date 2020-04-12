@@ -14,10 +14,9 @@ tags:
     rest-operator,
     spread-operator,
   ]
-cover: spread-butter.jpg
+hero: spread-butter.jpg
+heroAlt: Spreading button on a piece of toast
 ---
-
-![Spreading button on a piece of toast](spread-butter.jpg)
 
 This article is all about the new features added to JavaScript via ECMAScript 6 to improve the handling of function parameters. More specifically we'll be talking about default parameters, rest parameters using the rest operator, the spread operator, and finally destructured parameter values. We'll also be using features previously covered in our discussion about [arrow functions](/blog/learning-es6-arrow-functions/), [block-level scoping](/blog/learning-es6-block-level-scoping-let-const/) and [destructuring](/blog/learning-es6-destructuring/), so if you're unfamiliar with those topics you may want to read up on them first.
 

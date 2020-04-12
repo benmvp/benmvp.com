@@ -3,10 +3,9 @@ date: 2016-09-19
 title: Front Porch Austin 2016
 category: speaking
 tags: [conferences, react, es6, speaking, talks]
-cover: front-porch-austin-closeup.jpg
+hero: front-porch-austin-closeup.jpg
+heroAlt: 'Ben Ilegbodu @ Front Porch Austin 2016 Closeup'
 ---
-
-![Ben Ilegbodu @ Front Porch Austin 2016 Closeup](front-porch-austin-closeup.jpg)
 
 Back in July I was invited to speak at [Front Porch Austin 2016](http://frontporch.io/austin/) and gave a talk called "React + ES.next = ♥". The main Front Porch conference actually takes place in [Dallas](http://frontporch.io/dallas/) in October, but they decided to launch a new conference in July to which I was invited!
 

@@ -4,10 +4,9 @@ title: Enhanced object literals
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, object-literals]
-cover: object-literal.png
+hero: object-literal.png
+heroAlt: object literals
 ---
-
-![object literals](object-literal.png)
 
 Wow, we're making some good progress covering ECMAScript 6 features in this [_Learning ES6_](/learning-es6-series/) series. We just covered [parameter handling](/blog/learning-es6-parameter-handling/), and have learned about [destructuring](/blog/learning-es6-destructuring/), [`let` & `const`](/blog/learning-es6-block-level-scoping-let-const/), as well as [arrow functions](/blog/learning-es6-arrow-functions/). Now we zero in on the enhancements to object literals, another piece of ES6 syntactic sugar.
 

@@ -5,12 +5,11 @@ subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, transpilers, babel, traceur]
-cover: babel-logo.png
+hero: babel-logo.png
+heroAlt: Babel logo
 ---
 
 So can I use ECMAScript 6 functionality right now? That’s the question everyone is asking these days. Many times when there is new browser functionality (like ES5, HTML5 or CSS3), advocates will spend a lot of time outlining all the new features and how great they are. But then at the end, you find out: "oh, but you can’t really use this functionality yet unless you using the latest Canary build that was just released yesterday." Talk about a letdown.
-
-![Babel logo](babel-logo.png)
 
 So instead of diving right into each of its features, I would like to first take a look at the various tools we can leverage to start using ES6 right now in a production environment. Then, as we go through each of the ES6 features, we can have conversations about which JavaScript engines or transpilers support the functionality and whether or not it’s safe for us to use. Sound like a plan?
 

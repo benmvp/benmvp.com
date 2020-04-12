@@ -3,10 +3,9 @@ date: 2015-11-22
 title: Little Rock Tech Fest 2015
 category: speaking
 tags: [conferences, es6, speaking, talks]
-cover: ../2015-09-02--speaking-at-little-rock-tech-fest-2015/little-rock-tech-fest-2015-banner.png
+hero: ../speaking-at-little-rock-tech-fest-2015/little-rock-tech-fest-2015-banner.png
+heroAlt: Little Rock Tech Fest 2015
 ---
-
-![Little Rock Tech Fest 2015](../2015-09-02--speaking-at-little-rock-tech-fest-2015/little-rock-tech-fest-2015-banner.png)
 
 Last month on October 16th I had the opportunity to give my first technical talk in a public setting at the [Little Rock Tech Fest 2015](http://lrtechfest.com/). My talk was entitled _Sugar & Spice and Everything nice about ES6_ and it was based on the [_Learning ES6 series_](/learning-es6-series/).
 

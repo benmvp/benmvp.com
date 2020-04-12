@@ -4,10 +4,9 @@ title: Arrow functions
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, arrow-functions, fat-arrow]
-cover: sign-arrow-right.jpg
+hero: sign-arrow-right.jpg
+heroAlt: right arrow sign
 ---
-
-![right arrow sign](sign-arrow-right.jpg)
 
 After looking at the [history of ECMAScript](/blog/learning-es6-history-of-ecmascript/), the [goals of ECMAScript 6](/blog/learning-es6-goals-features-ecmascript-6/) and [using ES6 right now](/blog/learning-es6-using-es6-right-now/), the first actual feature we'll look at in our [_Learning ES6_](/learning-es6-series/) series is going to be arrow functions, which are also known as "fat arrow" functions.
 

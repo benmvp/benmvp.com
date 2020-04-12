@@ -19,12 +19,11 @@ tags:
     opera,
     safari,
   ]
-cover: rip-ie8.jpg
+hero: rip-ie8.jpg
+heroAlt: RIP IE 8
 ---
 
 Ah, good ol’ IE8. I’m taking a break from the [_Learning ES6_ series](/learning-es6-series/) to talk about how we should stop supporting the browser that everyone loves to hate: Internet Explorer 8. The bane of our collective existence as web developers. Whether you’re a developer, designer or manager, you know you desperately want to stop supporting it. In this blog post I want to build a case against supporting IE8, examining empirical facts as well as qualitative feelings. My hope is that afterwards you will be well-equipped to make a compelling argument for dropping IE8 like it’s hot.
-
-![RIP IE 8](rip-ie8.jpg)
 
 Despite the playful title of this blog post, this topic is serious business. I feel that we as developers are wasting our time supporting IE8. But there are very legitimate reasons why it’s still supported and why it’s difficult to stop supporting it. So instead of just having a soapbox bash-fest complaining about IE8, let’s instead treat this situation like a court case. We’ll present a case so compelling against IE8 that the judge (aka the boss) will have no choice but to rule in our favor. Cue that _Law & Order_ music!
 

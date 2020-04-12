@@ -4,10 +4,9 @@ title: Block-level scoping with let and const
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, block-scoping, const, let]
-cover: block-scope.png
+hero: block-scope.png
+heroAlt: block scoping
 ---
-
-![block scoping](block-scope.png)
 
 Coming off the heels of discussing [arrow functions](/blog/learning-es6-arrow-functions/), let’s continue the [_Learning ES6_](/learning-es6-series/) series talking about block-level scoping in ECMAScript 6.
 

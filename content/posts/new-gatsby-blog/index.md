@@ -2,10 +2,9 @@
 date: 2018-05-04
 title: New Gatsby Blog!
 category: general
-cover: gatsby-logo-square.png
+hero: gatsby-logo-square.png
+heroAlt: Gatsby logo
 ---
-
-![Gatsby logo](gatsby-logo-wide.png)
 
 Nearly [3 years ago](/blog/new-blog/), I reinvented [benmvp.com](benmvp.com) to be my professional-focused blog. For a while, I was writing a lot, mostly working on the [_Learning ES6_](/learning-es6-series/) series. I learned so much writing posts for each of the ES6 features. But then towards the end of 2015 and early 2016, I started getting accepted to speak at conferences like [Nodevember](/blog/nodevember-2015/), [NationJS](/blog/nationjs-nodeday-2016/), [NDC Oslo](/blog/ndc-oslo-2016/), [Front Porch Austin](/blog/front-porch-austin-2016/) and [NodeSummit](/blog/nodesummit-2016/). I no longer really had time to blog because my time was spent prepping for [conference talks](/blog/speak/). I didn't even blog in 2017!
 

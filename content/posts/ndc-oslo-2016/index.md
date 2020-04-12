@@ -3,10 +3,9 @@ date: 2016-07-21
 title: NDC Oslo 2016
 category: speaking
 tags: [conferences, html5, css3, speaking, talks]
-cover: ndc-oslo-birds-eye.jpg
+hero: ndc-oslo-birds-eye.jpg
+heroAlt: NDC Oslo Logo
 ---
-
-![NDC Oslo Logo](ndc-oslo-logo.png)
 
 I'm finally a truly international speaker! Last month I flew all the way to Oslo, Norway to speak at [NDC Oslo 2016](http://ndcoslo.com/) on my talk entitled [_You Don't Need JavaScript for That!_](http://ndcoslo.com/talk/you-dont-need-javascript-for-that/) It was all about how we can leverage HTML5 and CSS3 to avoid using JavaScript whenever possible. Technically I've already spoken internationally at [Prairie Dev Con 2016](http://www.prairiedevcon.com/) (Winnipeg, Canada) and [ConFoo Montreal 2016](http://confoo.ca/en/2016/), but Canada doesn't really count. From the Bay Area, it takes longer to get to Florida than it does Canada.
 

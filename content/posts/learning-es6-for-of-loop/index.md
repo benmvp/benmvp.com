@@ -4,10 +4,9 @@ title: for-of loop
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, for-of]
-cover: merry-go-round.jpg
+hero: merry-go-round.jpg
+heroAlt: Spinning Merry-go-round
 ---
-
-![Spinning Merry-go-round](merry-go-round.jpg)
 
 It's been a long time... I shouldn't have left you... without a dope post to step to... It's been nearly 2 months since I wrote the last article about [ES6 promises](/blog/learning-es6-promises/) in late September. Since then I've been able to share what I've learned about ES6, speaking at [Nodevember 2015](https://www.youtube.com/watch?v=x1BvUqmn8xA) and [Little Rock Tech Fest 2015](http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6).
 
