@@ -13,7 +13,7 @@
 - [x] Fix links in blog posts to be `/blog/`
 - [x] Style `/blog/`
   - [x] Make cards `<a>`
-- [ ] Talks/videos/speak/es6 as markdown
+- [x] Talks/videos/speak/es6 as markdown
 - [ ] Update header
   - [ ] Add links to pages (collapsed on mobile)
   - [ ] Optimize logo
@@ -31,6 +31,7 @@
 - [ ] Add night mode switch to header
 - [ ] 404 page
 - [ ] Write blog post on `npx kill-port`
+- [ ] Rewrite about page
 - [ ] Re-launch website
 
 ## Data-driven

@@ -1,10 +1,10 @@
 ---
 title: Ask me anything!
+hero: ./render-conf.jpg
+heroAlt: Ben Ilegbodu speaking at Render Conf 2017
 ---
 
-![Ben Ilegbodu speaking at Render Conf 2017](./render-conf.jpg)
-
-### [Ask a question](https://github.com/benmvp/ama/issues/new) | [Read questions](https://github.com/benmvp/ama/issues?q=is%3Aissue+is%3Aclosed)
+## [Ask a question](https://github.com/benmvp/ama/issues/new) | [Read questions](https://github.com/benmvp/ama/issues?q=is%3Aissue+is%3Aclosed)
 
 Anything means anything. Personal questions. Money. Life. Code. Whatever.
 

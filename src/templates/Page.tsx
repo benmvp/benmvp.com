@@ -2,11 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { makeStyles, createStyles } from '@material-ui/core'
 import Layout from '../components/Layout'
-import PostHeader from '../components/PostHeader'
+import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
-import PostFooter from '../components/PostFooter'
-import { getBlogUrl } from '../utils'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -16,29 +14,18 @@ const useStyles = makeStyles((theme) =>
     image: {
       marginBottom: theme.spacing(3),
     },
-    footer: {
-      marginTop: theme.spacing(3),
-    },
   }),
 )
 
-const Post = ({ data }) => {
+const Page = ({ data }) => {
   const classes = useStyles()
-  const { post, bio } = data
-  const { html, fields, frontmatter, excerpt, timeToRead } = post
-  const { title, subTitle, date, tags, hero, heroAlt } = frontmatter
-  const { slug } = fields
-  const url = getBlogUrl(slug)
+  const { page } = data
+  const { html, frontmatter } = page
+  const { title, hero, heroAlt } = frontmatter
 
   return (
     <Layout>
-      <PostHeader
-        className={classes.header}
-        title={title}
-        subTitle={subTitle}
-        timeToRead={timeToRead}
-        date={date}
-      />
+      <PageHeader className={classes.header} title={title} />
       {hero && (
         <HeroImage
           fluid={hero.childImageSharp.fluid}
@@ -47,35 +34,21 @@ const Post = ({ data }) => {
         />
       )}
       <Content>{html}</Content>
-      <PostFooter
-        bioHtml={bio.html}
-        className={classes.footer}
-        url={url}
-        slug={slug}
-        title={title}
-        excerpt={excerpt}
-        tags={tags}
-      />
     </Layout>
   )
 }
 
-export default Post
+export default Page
 
 export const query = graphql`
   query($slug: String!) {
-    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      excerpt
-      timeToRead
       fields {
         slug
       }
       frontmatter {
         title
-        subTitle
-        tags
-        date(formatString: "DD MMMM YYYY")
         hero {
           childImageSharp {
             fluid(maxWidth: 960, traceSVG: { color: "#3f51b5" }, quality: 75) {
@@ -85,9 +58,6 @@ export const query = graphql`
         }
         heroAlt
       }
-    }
-    bio: markdownRemark(fields: { slug: { eq: "/bio/" } }) {
-      html
     }
   }
 `

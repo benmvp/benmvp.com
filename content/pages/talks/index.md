@@ -1,16 +1,16 @@
 ---
 title: Tech Talks
+hero: ./react-rally.jpg
+heroAlt: Ben Ilegbodu speaking at React Rally 2017
 ---
-
-![Ben Ilegbodu speaking at React Rally 2017](./react-rally.jpg)
 
 Below is a list of all of my talks. Most of them I've either given or will give at an upcoming [speaking engagement](/speak/). However, there are some that I am still hoping to give at some future conference and/or meetup!
 
-I am open to speak about anything I write about here in [my blog](/) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
+I am open to speak about anything I write about here in [my blog](/blog/) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
 
 You can also check out my [Speaking Engagements](/speak/) past and present, as well as my past [Speaking Videos](/videos/).
 
------
+---
 
 #### React
 
@@ -57,7 +57,7 @@ You can also check out my [Speaking Engagements](/speak/) past and present, as w
 - [Demystifying Conference Speaking](#demystifying-conference-speaking)
 - [The Junior Dev Dilemma](#the-junior-dev-dilemma)
 
------
+---
 
 ### The async future is present
 
@@ -73,13 +73,12 @@ _(Retired)_
 >
 > For the past year, Eventbrite has been migrating our frontend stack from one centered around Backbone/Marionette over to React. Learn from both our wins and challenges in switching so that you too can make a successful transition.
 
-
 ### Demystifying Conference Speaking
 
 > "I don't know what I'd talk about."
-"I'm not good enough to compete with the ‘pros'."
-"Well, I don't even know how the process works."
-"No one will be interested in what I want to talk about anyway."
+> "I'm not good enough to compete with the ‘pros'."
+> "Well, I don't even know how the process works."
+> "No one will be interested in what I want to talk about anyway."
 >
 > These are just some of the reasons that keep potential speakers from sharing their knowledge by giving a talk. Conference speaking is great for networking, personal growth, as well as conquering fears. But when you're an aspiring speaker, the process to become one is unclear. In this session, let's debunk myths about conference speaking by learning what it takes to go from wanting to speak at conferences to actually delivering your first conference talk.
 
@@ -99,7 +98,6 @@ _(Retired)_
 >
 > Familiarity with modern JavaScript features will help you get the most of this session where we'll discuss class properties, null property accessing, and more. Oh, and don't worry if you don't understand all of those terms — you soon will after this session!
 
-
 ### ES.next Fundamentals Workshop
 
 > JavaScript is evolving quickly. The mega ES6 specification was released in 2015 and is quickly being implemented by modern JS interpreters. New versions of ECMAScript will now be released on a yearly basis with new features going through a 4-stage proposal process. We can leverage features in ES6, ES2016, and those slated for future versions right now to write even clearer and more concise JavaScript code.
@@ -117,7 +115,6 @@ _(Retired)_
 > JavaScript has evolved quickly and continues to do so. The mega ES6 specification was released back in 2015, with four more editions released in successive years. New versions of ECMAScript are released on a yearly basis with new features going through a 4-stage proposal process. So what proposals are left? What do we have to look forward to in 2021 and beyond to help us write even clearer and more concise JavaScript code?
 >
 > Familiarity with modern JavaScript will help you get the most of this session where we’ll discuss new features such as optional chaining, nullish coalescing, and more. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
-
 
 ### Flexing your Flexbox muscles
 
@@ -169,7 +166,7 @@ _(Retired)_
 
 ### "Minimally-painful" React-Redux testing Workshop
 
-> Let’s be honest, no one* enjoys writing unit tests... especially for UI code. However, React’s architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all. In this workshop, we’ll learn to:
+> Let’s be honest, no one\* enjoys writing unit tests... especially for UI code. However, React’s architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all. In this workshop, we’ll learn to:
 >
 > - Test component rendered UI & event handlers
 > - Test Redux reducers & synchronous/asynchronous actions
@@ -179,10 +176,9 @@ _(Retired)_
 >
 > Prior experience with React is important to hit the ground running. You’ll leave the workshop with all the fundamentals you need to properly test your own apps with React. Testing probably still won’t be glamorous... but with these lessons it shouldn’t be painful either!
 
-
 ### "Minimally-painful" UI testing in React
 
-> Let's be honest, no one* enjoys writing unit tests... especially for UI code. JavaScript frameworks traditionally have been heavily tied to the DOM. The only way we could test our components was to run unit tests within headless browsers, or resort to much slower end-to-end tests. However, React's architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all.
+> Let's be honest, no one\* enjoys writing unit tests... especially for UI code. JavaScript frameworks traditionally have been heavily tied to the DOM. The only way we could test our components was to run unit tests within headless browsers, or resort to much slower end-to-end tests. However, React's architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all.
 >
 > When Eventbrite's Frontend Platform team introduced React to our stack in 2016, we also developed best practices for testing React applications. In this talk, we'll learn some dos and don'ts Eventbrite uses for writing unit tests for React components, including those gnarly complicated cases. Testing probably still won't be glamorous... but with these lessons it shouldn't be painful either!
 
@@ -208,13 +204,11 @@ _(Retired)_
 >
 > So let's learn about a new style of TDD, "test during development," where we verify user interactions by writing tests rather than manually in the browser. The result? Way more tests! And React's architecture separates the component hierarchy from the DOM, making it possible to quickly test the user interactions of our components without needing a browser at all. We'll learn some dos and don'ts for writing unit tests for React components and Redux state, as well as tips and tricks for those gnarly complicated cases. No longer will the tests "come later" (i.e. never).
 
-
 ### The "perfect" library tooling
 
 > So you have a great idea for the perfect JS library... but the implementation is only half the battle. You also need to configure the infrastructure to develop, test, build and deploy your package. How do you set up Typescript and other static checking? Do you target ESM or CJS builds? Is integration testing even possible? There’s so much extra to consider!
 >
 > Let’s learn what makes up the “perfect” library tooling. Familiarity with developing JavaScript packages will help you get the most out of this session, but you will gain plenty of helpful insights even if you have yet to build one. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!
-
 
 ### React + ES.next = ♥
 
@@ -229,7 +223,6 @@ _(Retired)_
 > React is a JavaScript UI library that makes creating reusable components easy and efficient. And modern Web APIs like Fetch, Local storage, and Geolocation when combined with React enable us to create sophisticated user interfaces. But there are even more, lesser-known Web APIs that help us further blur the lines between browser and native apps!
 >
 > In this session geared towards React developers of all skill levels, let’s learn about some Web APIs that you may have never heard of before! We’ll look at device diagnostic, interaction, audio, and video APIs — where they are supported and how you can apply them in your next React project.
-
 
 ### React Exposed! 😮
 

@@ -78,9 +78,7 @@ const Layout = ({ children }: ChildrenProps) => {
               id="back-to-top-anchor"
               className={classes.backToTopAnchor}
             />
-            <Box component="main" my={2}>
-              {children}
-            </Box>
+            <Box component="main">{children}</Box>
           </Container>
           <ScrollTop>
             <Fab color="secondary" size="small" aria-label="scroll back to top">

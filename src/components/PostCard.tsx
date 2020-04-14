@@ -14,10 +14,10 @@ import {
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
-import { getUrl } from '../utils'
+import { getBlogUrl } from '../utils'
 
 interface Props {
-  hero: object
+  hero: any
   heroAlt: string
   title: string
   date: string
@@ -51,7 +51,7 @@ const PostCard = ({
   const [copyStatus, setCopyStatus] = useState<
     'inactive' | 'copied' | 'failed'
   >('inactive')
-  const url = getUrl(`/blog${slug}`)
+  const url = getBlogUrl(slug)
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout

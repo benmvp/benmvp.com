@@ -1,8 +1,8 @@
 ---
 title: Speaking Engagements
+hero: ./reactathon.png
+heroAlt: Ben Ilegbodu speaking at Reactathon 2018
 ---
-
-![Ben Ilegbodu speaking at Reactathon 2018](./reactathon.png)
 
 Every opportunity I get to share my knowledge and experience with others is a blessing! My hope is that every time I give a talk the attendees learn something new that will make them a better developer. If you're interested in having me speak to or hold a workshop with your group, [shoot me an email](mailto:ben@benmvp.com).
 

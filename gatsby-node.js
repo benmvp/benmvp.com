@@ -20,9 +20,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//posts//" } }) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
+      ) {
         edges {
           node {
+            fileAbsolutePath
             fields {
               slug
             }
@@ -33,13 +36,23 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const slug = node.fields.slug
+    const isPage = /pages/.test(node.fileAbsolutePath)
+    let component = resolve('./src/templates/Post.tsx')
+    let path = join('/blog', slug)
+
+    if (isPage) {
+      component = resolve('./src/templates/Page.tsx')
+      path = slug
+    }
+
     createPage({
-      path: join('/blog', node.fields.slug),
-      component: resolve(`./src/templates/Post.tsx`),
+      path,
+      component,
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
-        slug: node.fields.slug,
+        slug,
       },
     })
   })
