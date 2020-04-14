@@ -1,5 +1,5 @@
 ---
-title: Speaking Videos
+title: Tech Videos
 ---
 
 Check out all the videos of my talks from my [speaking engagements](/speak/):

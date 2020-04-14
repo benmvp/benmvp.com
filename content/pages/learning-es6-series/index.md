@@ -19,7 +19,7 @@ JavaScript was created in May 1995 by [Brendan Eich](https://twitter.com/brendan
 
 Some time between 1996 and 1997, Netscape took JavaScript to the [Ecma standards organization](http://www.ecma-international.org/) to carve out and maintain a specification for the language to enable other browser vendors to implement based on the work they had done. The [Ecma Technical Committee 39](http://www.ecma-international.org/memento/TC39.htm) (better known as TC39) was created to continue to evolve the language, eventually releasing _ECMA-262 Ed.1_ in June 1997. _ECMAScript_ is name of the official standard with _JavaScript_ being the most well-known implementation of the standard. _ActionScript_ (Macromedia) and _JScript_ (Microsoft) are examples of other implementations.
 
-[Read the full article...](/learning-es6-history-of-ecmascript/)
+[Read the full article...](/blog/learning-es6-history-of-ecmascript/)
 
 ---
 
@@ -29,7 +29,7 @@ The main goal for the [ES6 / Harmony project](http://wiki.ecmascript.org/doku.ph
 
 They also wanted to make JavaScript a better language for writing code. They realized that applications written in JavaScript have become quite large over the years and wanted JavaScript to be better for writing these complex apps. So they added native modules to ES6. Modules also helped the committee make the shared JavaScript libraries used by all those complex applications easier to write as well.
 
-[Read the full article...](/learning-es6-goals-features-ecmascript-6/)
+[Read the full article...](/blog/learning-es6-goals-features-ecmascript-6/)
 
 ---
 
@@ -43,7 +43,7 @@ Support for ES6 functionality in JS engines is growing every week and kept up to
 
 As a result, you cannot yet reliable run ES6 natively client- or server-side. Your best bet is compiling your ES6 code down to ES5 using transpilation tools like [Babel](https://babeljs.io/), [Traceur](https://github.com/google/traceur-compiler) or [TypeScript](http://www.typescriptlang.org/) as part of your build process.
 
-[Read the full article...](/learning-es6-using-es6-right-now/)
+[Read the full article...](/blog/learning-es6-using-es6-right-now/)
 
 ---
 
@@ -67,7 +67,7 @@ As you can see a lot of the verbosity of old-style function expressions is remov
 
 You’ll find the greatest utility in arrow functions in places where functions take a callback function, like event handlers (such as `onClick`, `$.ajax`, etc.) and array processors (such as `map`, `sort`, etc.)
 
-[Read the full article...](/learning-es6-arrow-functions/)
+[Read the full article...](/blog/learning-es6-arrow-functions/)
 
 ---
 
@@ -113,7 +113,7 @@ simpleExample(2)
 
 Variables declared via `let` are not available outside of the block in which they are declared. Variables declared via `const` also cannot be updated. You can find more examples in the [block-level scoping code examples](https://learning-es6.benmvp.com/#block-scoping) for the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
-[Read the full article...](/learning-es6-block-level-scoping-let-const/)
+[Read the full article...](/blog/learning-es6-block-level-scoping-let-const/)
 
 ---
 
@@ -137,7 +137,7 @@ console.log(third, second, first)
 
 As you can see, we can store properties of an object or elements of an array using pattern matching. You can find many more examples in the [destructuring code examples](https://learning-es6.benmvp.com/#destructuring) which are part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6).
 
-[Read the full article...](/learning-es6-destructuring/)
+[Read the full article...](/blog/learning-es6-destructuring/)
 
 ---
 
@@ -209,7 +209,7 @@ ajax('http://api.eventbrite.com/get', {
 
 These quick examples are just a tip of the iceberg. Be sure to check out the full suite of [parameter handling code examples](https://learning-es6.benmvp.com/#parameter-handling) (a part of the [_Learning ES6_ Github repo](https://github.com/benmvp/learning-es6)) and keep reading.
 
-[Read the full article...](/learning-es6-parameter-handling/)
+[Read the full article...](/blog/learning-es6-parameter-handling/)
 
 ---
 
@@ -260,7 +260,7 @@ The [enhanced object literals code examples](https://learning-es6.benmvp.com/#en
 
 Continue on for more details!
 
-[Read the full article...](/learning-es6-enhanced-object-literals/)
+[Read the full article...](/blog/learning-es6-enhanced-object-literals/)
 
 ---
 
@@ -329,7 +329,7 @@ Intrigued by template literals? Confused about tagged templates? Feel free to ch
 
 But don't stop now. Keep on reading!
 
-[Read the full article...](/learning-es6-template-literals-tagged-templates/)
+[Read the full article...](/blog/learning-es6-template-literals-tagged-templates/)
 
 ---
 
@@ -369,7 +369,7 @@ Did you notice the use of [default parameters](/learning-es6-parameter-handling/
 
 Well you've come this far. You might as well keep going!
 
-[Read the full article...](/learning-es6-promises/)
+[Read the full article...](/blog/learning-es6-promises/)
 
 ---
 
@@ -389,7 +389,7 @@ For the most part, there's nothing really too earth-shattering here. We just now
 
 But keep on readin' to learn the ins and outs!
 
-[Read the full article...](/learning-es6-for-of-loop/)
+[Read the full article...](/blog/learning-es6-for-of-loop/)
 
 ---
 
@@ -503,7 +503,7 @@ This is just a quick example of how ES6 classes work. Be sure to clone the [_Lea
 
 The example also uses default parameters, rest parameters, and the spread operator so may want to revisit the [parameter handling](/learning-es6-parameter-handling/) article if you're not familiar. It also makes use of [template strings](/learning-es6-template-literals-tagged-templates/) for string interpolation, so you should read up on that as well.
 
-[Read the full article...](/learning-es6-classes/)
+[Read the full article...](/blog/learning-es6-classes/)
 
 ---
 
@@ -562,7 +562,7 @@ The differences between the 4 collection types are subtle but important. Be sure
 
 To learn _how_ to use these collections you could just read documentation because they are just new APIs. However, to know _why_ you would want to use each one, I suggest you keep reading.
 
-[Read the full article...](/learning-es6-new-collections/)
+[Read the full article...](/blog/learning-es6-new-collections/)
 
 ---
 
@@ -638,7 +638,7 @@ Iterables are important to know because a lot of the APIs moving forward will ac
 
 Let's get this party started.
 
-[Read the full article...](/learning-es6-iterators-iterables/)
+[Read the full article...](/blog/learning-es6-iterators-iterables/)
 
 ---
 
@@ -662,7 +662,7 @@ Feel free to clone the [_Learning ES6_ Github repo](https://github.com/benmvp/le
 
 With out further ado, let's keep reading.
 
-[Read the full article...](/learning-es6-generators-as-iterators/)
+[Read the full article...](/blog/learning-es6-generators-as-iterators/)
 
 ## Upcoming Articles
 
