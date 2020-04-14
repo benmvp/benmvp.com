@@ -12,6 +12,7 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
+import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
 import { getUrl } from '../utils'
 
@@ -90,19 +91,30 @@ const PostCard = ({
 
   return (
     <Card>
-      <CardActionArea onClick={() => navigate(`/blog/${slug}`)}>
+      <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
         {hero && (
           <CardMedia
+            component="img"
             image={hero.childImageSharp.fluid.src}
             title={heroAlt}
             className={classes.media}
           />
         )}
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            gutterBottom
+            variant="h5"
+            color="textPrimary"
+            component="h2"
+          >
             {title}
           </Typography>
-          <Typography gutterBottom variant="subtitle2" component="h3">
+          <Typography
+            gutterBottom
+            variant="subtitle2"
+            color="textPrimary"
+            component="h3"
+          >
             {date}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
