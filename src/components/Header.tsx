@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { Link as GatsbyLink, graphql, useStaticQuery } from 'gatsby'
 import {
   makeStyles,
@@ -9,9 +9,57 @@ import {
   Slide,
   Toolbar,
   Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
 } from '@material-ui/core'
-import { Link, Button } from 'gatsby-theme-material-ui'
+import MenuIcon from '@material-ui/icons/Menu'
+import { Link, Button, IconButton } from 'gatsby-theme-material-ui'
 import logo from './logo.jpg'
+
+const NAV_LINKS = [
+  {
+    to: '/speak/',
+    title: 'Speak',
+    label: "Check out Ben's speaking engagements",
+  },
+  { to: '/videos/', title: 'Videos', label: "Watch Ben's past tech talks" },
+  { to: '/talks/', title: 'Talks', label: "Browse all of Ben's tech talks" },
+  { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
+  { to: '/about/', title: 'About', label: 'Learn more about Ben' },
+]
+
+interface MenuProps {
+  open: boolean
+  onClose: () => void
+}
+const Menu = ({ open, onClose }: MenuProps) => (
+  <Drawer anchor="right" open={open} onClose={onClose}>
+    <Box width="250px">
+      <List component="nav" aria-label="main site navigation links">
+        {NAV_LINKS.map(({ to, title, label }) => (
+          <ListItem
+            key={title}
+            component={Link}
+            to={to}
+            aria-label={label}
+            underline="none"
+          >
+            <ListItemText
+              primaryTypographyProps={{
+                color: 'textPrimary',
+                variant: 'h4',
+              }}
+            >
+              {title}
+            </ListItemText>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  </Drawer>
+)
 
 interface ChildrenProps {
   children: ReactElement
@@ -30,35 +78,40 @@ const HideOnScroll = ({ children }: ChildrenProps) => {
 const useStyles = makeStyles((theme) =>
   createStyles({
     toolbar: {
+      justifyContent: 'space-between',
+
       [theme.breakpoints.up('sm')]: {
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
       },
     },
     logo: {
       marginRight: theme.spacing(),
       width: 60,
       height: 60,
-      flex: 0,
-      [theme.breakpoints.up('sm')]: {
-        marginRight: 0,
-      },
     },
     name: {
       flex: 1,
-      display: 'none',
       [theme.breakpoints.up('sm')]: {
-        display: 'inherit',
+        flex: 'unset',
       },
     },
     navLinks: {
       flex: 1,
+      display: 'none',
 
-      display: 'flex',
-      justifyContent: 'flex-end',
+      [theme.breakpoints.up('sm')]: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+      },
     },
     activeLink: {
       border: '1px solid currentcolor',
-      padding: theme.spacing(1, 3),
+      padding: theme.spacing(1),
+    },
+    menuButton: {
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
+      },
     },
   }),
 )
@@ -74,45 +127,72 @@ const Header = () => {
       }
     }
   `)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
-    <HideOnScroll>
-      <AppBar>
-        <Box component="section" mx={{ xs: 1, sm: 2 }} my={1}>
-          <Toolbar disableGutters className={classes.toolbar}>
-            <Link
-              variant="h5"
-              color="inherit"
-              to="/"
-              underline="none"
-              className={classes.name}
-              aria-label="Go to homepage"
-            >
-              {site.siteMetadata.title}
-            </Link>
-            <Link color="inherit" to="/" aria-label="Go to homepage">
-              <Avatar
-                src={logo}
-                alt={site.siteMetadata.title}
-                className={classes.logo}
-              />
-            </Link>
-            <Box component="nav" className={classes.navLinks}>
-              <Button
-                component={GatsbyLink}
+    <>
+      <HideOnScroll>
+        <AppBar>
+          <Box component="section" mx={{ xs: 1, sm: 2 }} my={1}>
+            <Toolbar disableGutters className={classes.toolbar}>
+              <Link color="inherit" to="/" aria-label="Go to homepage">
+                <Avatar
+                  src={logo}
+                  alt={site.siteMetadata.title}
+                  className={classes.logo}
+                />
+              </Link>
+              <Link
+                variant="h5"
                 color="inherit"
-                to="/blog/"
-                activeClassName={classes.activeLink}
-                partiallyActive
-                aria-label="View Ben's blog posts"
+                to="/"
+                underline="none"
+                className={classes.name}
+                aria-label="Go to homepage"
               >
-                Blog
-              </Button>
-            </Box>
-          </Toolbar>
-        </Box>
-      </AppBar>
-    </HideOnScroll>
+                {site.siteMetadata.title}
+              </Link>
+              <Box
+                component="nav"
+                className={classes.navLinks}
+                aria-label="main site navigation links"
+              >
+                {NAV_LINKS.map(({ to, title, label }) => (
+                  <Button
+                    key={title}
+                    component={GatsbyLink}
+                    color="inherit"
+                    to={to}
+                    activeClassName={classes.activeLink}
+                    partiallyActive
+                    aria-label={label}
+                  >
+                    {title}
+                  </Button>
+                ))}
+              </Box>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open navigation menu"
+                onClick={() => {
+                  setMenuIsOpen(true)
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Toolbar>
+          </Box>
+        </AppBar>
+      </HideOnScroll>
+      <Menu
+        open={menuIsOpen}
+        onClose={() => {
+          setMenuIsOpen(false)
+        }}
+      />
+    </>
   )
 }
 

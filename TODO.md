@@ -14,13 +14,13 @@
 - [x] Style `/blog/`
   - [x] Make cards `<a>`
 - [x] Talks/videos/speak/es6 as markdown
-- [ ] Update header
-  - [ ] Add links to pages (collapsed on mobile)
-  - [ ] Optimize logo
+- [x] Update header
+  - [x] Add links to pages (collapsed on mobile)
 - [ ] Add site footer
 - [ ] Add SEO to pages
 - [ ] Build new home page
-  - [ ] Hero image
+  - [ ] Hero image (optimized)
+  - [ ] Optimize logos
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks
