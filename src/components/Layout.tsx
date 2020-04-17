@@ -14,6 +14,7 @@ import {
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import { Fab } from 'gatsby-theme-material-ui'
 import Header from './Header'
+import Footer from './Footer'
 import { getTheme } from '../../config/theme'
 
 interface ChildrenProps {
@@ -80,6 +81,7 @@ const Layout = ({ children }: ChildrenProps) => {
             />
             <Box component="main">{children}</Box>
           </Container>
+          <Footer />
           <ScrollTop>
             <Fab color="secondary" size="small" aria-label="scroll back to top">
               <KeyboardArrowUpIcon />

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) =>
 
 const Post = ({ data }) => {
   const classes = useStyles()
-  const { post, bio } = data
+  const { post } = data
   const { html, fields, frontmatter, excerpt, timeToRead } = post
   const { title, subTitle, date, tags, hero, heroAlt } = frontmatter
   const { slug } = fields
@@ -48,7 +48,6 @@ const Post = ({ data }) => {
       )}
       <Content>{html}</Content>
       <PostFooter
-        bioHtml={bio.html}
         className={classes.footer}
         url={url}
         slug={slug}
@@ -85,9 +84,6 @@ export const query = graphql`
         }
         heroAlt
       }
-    }
-    bio: markdownRemark(fields: { slug: { eq: "/bio/" } }) {
-      html
     }
   }
 `

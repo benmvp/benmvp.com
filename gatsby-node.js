@@ -1,16 +1,16 @@
 require('ts-node').register({ files: true })
 
-const { join, resolve } = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { join, resolve } = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode })
 
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug,
     })
   }

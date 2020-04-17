@@ -3,10 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { makeStyles, Grid, Avatar } from '@material-ui/core'
 import logo from './logo.jpg'
 
-interface Props {
-  html: string
-}
-
 const useStyles = makeStyles({
   avatar: {
     width: 64,
@@ -15,13 +11,16 @@ const useStyles = makeStyles({
   },
 })
 
-const PostBio = ({ html }: Props) => {
+const PostBio = () => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
+          author {
+            name
+            bio
+          }
         }
       }
     }
@@ -32,7 +31,7 @@ const PostBio = ({ html }: Props) => {
       <Grid item xs={12} sm={2} component="aside">
         <Avatar
           src={logo}
-          alt={site.siteMetadata.title}
+          alt={site.siteMetadata.author.name}
           className={classes.avatar}
         />
       </Grid>
@@ -41,7 +40,7 @@ const PostBio = ({ html }: Props) => {
         xs={12}
         sm={10}
         component="article"
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: site.siteMetadata.author.bio }}
       />
     </Grid>
   )

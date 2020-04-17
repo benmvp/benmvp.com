@@ -1,12 +1,12 @@
 # To Add
 
-## Initial re-launch
+## Relaunch MVP
 
 - [x] Move blog posts to `/blog/`
 - [x] Page layout
 - [x] Style blog posts
 - [x] Add blog post footer
-  - [ ] First-person by-line
+  - [x] First-person by-line
   - [x] Share
   - [x] Discuss
   - [x] Edit on Github
@@ -16,11 +16,12 @@
 - [x] Talks/videos/speak/es6 as markdown
 - [x] Update header
   - [x] Add links to pages (collapsed on mobile)
-- [ ] Add site footer
+  - [x] See through version for home page
+- [x] Add site footer
 - [ ] Add SEO to pages
 - [ ] Build new home page
-  - [ ] Hero image (optimized)
-  - [ ] Optimize logos
+  - [ ] Optimized hero image (like https://jennielakenan.com/ or https://csswizardry.com/)
+  - [ ] Optimize header & blog footer logos
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks
@@ -30,16 +31,22 @@
 - [ ] Add `learning-es6.benmvp.com` to Google Domains
 - [ ] Add night mode switch to header
 - [ ] 404 page
+- [ ] Write blog post about Google Developer Expert
 - [ ] Write blog post on `npx kill-port`
 - [ ] Rewrite about page
 - [ ] Re-launch website
 
-## Data-driven
+## Post-MVP
 
 - [ ] Add minishops section
+  - Let's learn together without having to leave your house!
+- [ ] Write blog post about minishops
 - [ ] Talks/videos/speak as data-driven pages
-- [ ] Learning ES5 page data-driven w/ experts
+- [ ] Upcoming minishops in blog post footer
+- [ ] Learning ES6 page data-driven w/ experts
+- [ ] Related blog posts in blog post footer
+- [ ] Add Contact page
 - [ ] Interactive bio (like https://chriscoyier.net/)
 - [ ] Hi-rest photos page (like https://chriscoyier.net/photos/)
-- [ ] Algolia search
+- [ ] Algolia search (like https://docs.pact.io/)
 - [ ] Category filtering on `/blog/`

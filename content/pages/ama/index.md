@@ -20,6 +20,6 @@ I can also be reached on [Twitter](https://twitter.com/benmvp) and [email](mailt
 
 ### Links
 
-- [Read other AMAs](https://github.com/sindresorhus/amas)
+- [Read other AMAs](https://github.com/kentcdodds/amas)
 - [Create your own AMA](https://github.com/benmvp/ama/fork)
 - [What's an AMA?](https://en.wikipedia.org/wiki/Reddit#IAmA_and_AMA)

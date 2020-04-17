@@ -29,6 +29,7 @@ const NAV_LINKS = [
   { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
   { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
+const MENU_BP = 'md'
 
 interface MenuProps {
   open: boolean
@@ -80,7 +81,7 @@ const useStyles = makeStyles((theme) =>
     toolbar: {
       justifyContent: 'space-between',
 
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up(MENU_BP)]: {
         justifyContent: 'flex-start',
       },
     },
@@ -91,7 +92,7 @@ const useStyles = makeStyles((theme) =>
     },
     name: {
       flex: 1,
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up(MENU_BP)]: {
         flex: 'unset',
       },
     },
@@ -99,17 +100,20 @@ const useStyles = makeStyles((theme) =>
       flex: 1,
       display: 'none',
 
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up(MENU_BP)]: {
         display: 'flex',
         justifyContent: 'flex-end',
       },
+    },
+    navButton: {
+      marginLeft: theme.spacing(1),
     },
     activeLink: {
       border: '1px solid currentcolor',
       padding: theme.spacing(1),
     },
     menuButton: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up(MENU_BP)]: {
         display: 'none',
       },
     },
@@ -163,6 +167,7 @@ const Header = () => {
                     component={GatsbyLink}
                     color="inherit"
                     to={to}
+                    className={classes.navButton}
                     activeClassName={classes.activeLink}
                     partiallyActive
                     aria-label={label}

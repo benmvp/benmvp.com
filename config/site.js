@@ -3,18 +3,23 @@ const { getTheme } = require('./theme')
 const THEME = getTheme(false)
 
 module.exports = {
-  homeTitle: 'Ben Ilegbodu',
   siteTitle: 'Ben Ilegbodu',
-  shortSiteTitle: 'Ben Ilegbodu',
-  siteDescription:
-    'Christ follower, husband & father of 👌🏾. UI Architect & Speaker. ES6+, React & CSS3. Google Developer Expert & Microsoft MVP. Basketball, DIY & movies. Principal Frontend Engineer @ Eventbrite',
-  siteUrl: 'http://www.benmvp.com',
+  siteUrl: process.env.ROOT_URL || 'http://www.benmvp.com', // Domain of your site. No trailing slash!
   pathPrefix: '',
-  siteImage: 'preview.jpg',
-  siteLanguage: 'en',
-  // info
-  infoTitle: 'Ben Ilegbodu',
-  infoTitleNote: 'UI Architect',
+  // siteImage: 'preview.jpg',
+  siteLanguage: 'en', // Language Tag on <html> element
+  keywords: [
+    'Frontend Software Engineer',
+    'React Training',
+    'JavaScript Training',
+    'TypeScript Training',
+  ],
+
+  // author info
+  author: 'Ben Ilegbodu',
+  authorBio:
+    'Hi, I\'m <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I\'m a Christian, husband, and father of 3, with 15 years of professional experience developing user interfaces for the Web. I\'m a Principal Frontend Engineer at Stitch Fix, frontend software teacher, Google Developer Expert, and Microsoft MVP.',
+
   // manifest.json
   manifestName: 'Ben Ilegbodu',
   manifestShortName: 'BenMVP', // max 12 characters
@@ -22,23 +27,12 @@ module.exports = {
   manifestBackgroundColor: THEME.palette.background.default,
   manifestThemeColor: THEME.palette.background.default,
   manifestDisplay: 'standalone',
+
+  rss: 'https://benmvp.com/blog/rss.xml',
+
   // social
   twitterHandle: 'benmvp',
-  authorSocialLinks: [
-    {
-      name: 'twitter',
-      url: 'https://twitter.com/benmvp',
-      title: 'Follow Ben Ilegbodu on Twitter',
-    },
-    {
-      name: 'github',
-      url: 'https://github.com/benmvp',
-      title: "Ben Ilegbodu's projects",
-    },
-    {
-      name: 'linkedin',
-      url: 'https://linkedin.com/in/benmvp',
-      title: "Ben Ilegbodu's resume",
-    },
-  ],
+  twitter: 'https://twitter.com/benmvp',
+  github: 'https://github.com/benmvp',
+  linkedIn: 'https://linkedin.com/in/benmvp',
 }

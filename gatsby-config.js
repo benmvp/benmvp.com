@@ -1,8 +1,20 @@
 require('ts-node').register({ files: true })
 
+const SITE_CONFIG = require('./config/site')
+
 module.exports = {
   siteMetadata: {
-    title: 'Ben Ilegbodu',
+    title: SITE_CONFIG.siteTitle,
+    author: {
+      name: SITE_CONFIG.author,
+      bio: SITE_CONFIG.authorBio,
+    },
+    social: {
+      twitterHandle: SITE_CONFIG.twitterHandle,
+      twitter: SITE_CONFIG.twitter,
+      github: SITE_CONFIG.github,
+      linkedIn: SITE_CONFIG.linkedIn,
+    },
   },
   plugins: [
     'gatsby-theme-material-ui',
@@ -18,13 +30,6 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/content/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'parts',
-        path: `${__dirname}/content/parts/`,
       },
     },
     {
