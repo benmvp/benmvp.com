@@ -1,19 +1,18 @@
 import React from 'react'
-import { makeStyles, createStyles, Box } from '@material-ui/core'
+import { makeStyles, Box } from '@material-ui/core'
 import { GitHub, LinkedIn, Twitter } from '@material-ui/icons'
 import { IconButton } from 'gatsby-theme-material-ui'
 import { graphql, useStaticQuery } from 'gatsby'
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-    },
-    item: {
-      listStyle: 'none',
-    },
-  }),
-)
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  item: {
+    listStyle: 'none',
+  },
+})
 
 const SocialIcons = () => {
   const classes = useStyles()

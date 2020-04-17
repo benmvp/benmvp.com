@@ -12,7 +12,7 @@ const Footer = () => {
       p={5}
       mt={5}
     >
-      <Typography variant="h4">
+      <Typography variant="h4" align="right">
         Ben Ilegbodu
       </Typography>
       <SocialIcons />
