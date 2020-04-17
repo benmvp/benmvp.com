@@ -5,6 +5,7 @@
 - [x] Move blog posts to `/blog/`
 - [x] Page layout
 - [x] Style blog posts
+  - [x] Include hero credit
 - [x] Add blog post footer
   - [x] First-person by-line
   - [x] Share
@@ -25,10 +26,10 @@
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks
-  - [ ] Recent blog posts
+  - [ ] Recent blog posts (not excerpt)
   - [ ] Twitter mentions (like swyx.io)
 - [ ] Google Analytics
-- [ ] Add `learning-es6.benmvp.com` to Google Domains
+- [x] Add `learning-es6.benmvp.com` to Google Domains
 - [ ] Add night mode switch to header
 - [ ] 404 page
 - [ ] Write blog post about Google Developer Expert
@@ -38,9 +39,12 @@
 
 ## Post-MVP
 
-- [ ] Add minishops section
+- [ ] Add minishops pages
+  - [ ] Add mailing list option for those interested
+- [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
 - [ ] Write blog post about minishops
+- [ ] Write blog post on new blog (again)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Talks/videos/speak as data-driven pages
 - [ ] Upcoming minishops in blog post footer

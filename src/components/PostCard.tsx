@@ -106,6 +106,7 @@ const PostCard = ({
             variant="h5"
             color="textPrimary"
             component="h2"
+            noWrap
           >
             {title}
           </Typography>

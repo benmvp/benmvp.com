@@ -26,7 +26,7 @@ const Post = ({ data }) => {
   const classes = useStyles()
   const { post } = data
   const { html, fields, frontmatter, excerpt, timeToRead } = post
-  const { title, subTitle, date, tags, hero, heroAlt } = frontmatter
+  const { title, subTitle, date, tags, hero, heroAlt, heroCredit } = frontmatter
   const { slug } = fields
   const url = getBlogUrl(slug)
 
@@ -43,6 +43,7 @@ const Post = ({ data }) => {
         <HeroImage
           fluid={hero.childImageSharp.fluid}
           alt={heroAlt}
+          credit={heroCredit}
           className={classes.image}
         />
       )}
@@ -83,6 +84,7 @@ export const query = graphql`
           }
         }
         heroAlt
+        heroCredit
       }
     }
   }
