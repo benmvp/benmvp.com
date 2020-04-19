@@ -19,7 +19,7 @@
   - [x] Add links to pages (collapsed on mobile)
   - [x] See through version for home page
 - [x] Add site footer
-- [ ] Add SEO to pages
+- [x] Add SEO to pages
 - [ ] Build new home page
   - [ ] Optimized hero image (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [ ] Optimize header & blog footer logos
@@ -28,7 +28,7 @@
   - [ ] Card link to talks
   - [ ] Recent blog posts (not excerpt)
   - [ ] Twitter mentions (like swyx.io)
-- [ ] Google Analytics
+- [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains
 - [ ] Add night mode switch to header
 - [ ] 404 page

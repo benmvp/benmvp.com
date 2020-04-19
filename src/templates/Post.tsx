@@ -6,6 +6,7 @@ import PostHeader from '../components/PostHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
+import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
 
 const useStyles = makeStyles((theme) =>
@@ -24,14 +25,39 @@ const useStyles = makeStyles((theme) =>
 
 const Post = ({ data }) => {
   const classes = useStyles()
-  const { post } = data
+  const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead } = post
-  const { title, subTitle, date, tags, hero, heroAlt, heroCredit } = frontmatter
+  const {
+    title,
+    subTitle,
+    date,
+    dateIso,
+    tags,
+    hero,
+    heroAlt,
+    heroCredit,
+  } = frontmatter
   const { slug } = fields
   const url = getBlogUrl(slug)
 
   return (
     <Layout>
+      <Seo
+        title={title}
+        description={excerpt}
+        url={url}
+        image={hero?.childImageSharp?.fluid?.src}
+        type="article"
+        meta={[
+          { property: 'og:article:published_time', content: dateIso },
+          {
+            property: 'og:article:author',
+            content: site.siteMetadata.author.name,
+          },
+          { property: 'og:author:section', content: 'Technology' },
+          ...tags.map((tag) => ({ property: 'og:article:tag', content: tag })),
+        ]}
+      />
       <PostHeader
         className={classes.header}
         title={title}
@@ -76,6 +102,7 @@ export const query = graphql`
         subTitle
         tags
         date(formatString: "DD MMMM YYYY")
+        dateIso: date(formatString: "YYYY-MM-DD")
         hero {
           childImageSharp {
             fluid(maxWidth: 960, traceSVG: { color: "#3f51b5" }, quality: 75) {
@@ -85,6 +112,13 @@ export const query = graphql`
         }
         heroAlt
         heroCredit
+      }
+    }
+    site {
+      siteMetadata {
+        author {
+          name
+        }
       }
     }
   }

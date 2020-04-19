@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
+import Seo from '../components/Seo'
+import { getUrl } from '../utils'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -20,11 +22,19 @@ const useStyles = makeStyles((theme) =>
 const Page = ({ data }) => {
   const classes = useStyles()
   const { page } = data
-  const { html, frontmatter } = page
+  const { html, excerpt, frontmatter, fields } = page
   const { title, hero, heroAlt } = frontmatter
+  const { slug } = fields
+  const url = getUrl(slug)
 
   return (
     <Layout>
+      <Seo
+        title={title}
+        url={url}
+        description={excerpt}
+        image={hero?.childImageSharp?.fluid?.src}
+      />
       <PageHeader className={classes.header} title={title} />
       {hero && (
         <HeroImage
@@ -44,6 +54,7 @@ export const query = graphql`
   query($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       fields {
         slug
       }
