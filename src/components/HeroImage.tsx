@@ -13,17 +13,11 @@ interface Props {
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {
+    image: {
       ...getFullWidthImageStyles(theme),
-      position: 'relative',
     },
     credit: {
-      backgroundColor: 'rgba(255, 255, 255, 0.75)',
-      bottom: 0,
-      padding: theme.spacing(0, 2),
-      position: 'absolute',
       textAlign: 'right',
-      width: '100%',
     },
   }),
 )
@@ -32,10 +26,14 @@ const HeroImage = ({ alt, credit, className, fluid }: Props) => {
   const classes = useStyles()
 
   return (
-    <Box className={`${classes.root} ${className}`} component="section">
-      <Img fluid={fluid} alt={alt} />
+    <Box className={className} component="section">
+      <Img fluid={fluid} alt={alt} className={classes.image} />
       {credit && (
-        <Typography variant="h6" className={classes.credit} component="footer">
+        <Typography
+          variant="caption"
+          className={classes.credit}
+          component="footer"
+        >
           <Markdown source={credit} />
         </Typography>
       )}
