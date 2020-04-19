@@ -7,7 +7,7 @@ import { getFullWidthImageStyles } from '../styles'
 interface Props {
   alt: string
   className: string
-  credit: string
+  credit?: string
   fluid: any
 }
 

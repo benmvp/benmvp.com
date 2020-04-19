@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) =>
     root: {
       backgroundColor: theme.palette.background.default,
     },
+    container: {
+      minHeight: '100vh',
+    },
     toTop: {
       position: 'fixed',
       bottom: theme.spacing(2),
@@ -74,7 +77,7 @@ const Layout = ({ children }: ChildrenProps) => {
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
           <Header />
-          <Container maxWidth="md">
+          <Container maxWidth="md" className={classes.container}>
             <Toolbar
               id="back-to-top-anchor"
               className={classes.backToTopAnchor}
