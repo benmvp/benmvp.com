@@ -18,11 +18,11 @@ const PostHeader = ({
 }: Props) => {
   return (
     <Box component="header" className={className}>
-      <Typography variant="h3" component="h1" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom>
         {title}
       </Typography>
       {subTitle && (
-        <Typography variant="h5" component="h2" gutterBottom>
+        <Typography variant="h6" component="h2" gutterBottom>
           {subTitle}
         </Typography>
       )}
