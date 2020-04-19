@@ -26,7 +26,7 @@
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks
-  - [ ] Recent blog posts (not excerpt)
+  - [ ] Recent blog posts (no excerpt)
   - [ ] Twitter mentions (like swyx.io)
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains

@@ -48,7 +48,7 @@ const Seo = ({
     `,
   )
 
-  const htmlLang = lang || site.siteMetaData.lang
+  const htmlLang = lang || site.siteMetadata.lang
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || site.siteMetadata.image
 
@@ -61,7 +61,7 @@ const Seo = ({
       <title>{title}</title>
 
       <meta name="description" content={metaDescription} />
-      <meta name="keywords" content={keywords.join(' ')} />
+      <meta name="keywords" content={site.siteMetadata.keywords.join(' ')} />
       <meta name="image" content={metaImage} />
 
       <meta property="og:type" content={type} />
