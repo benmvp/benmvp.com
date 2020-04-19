@@ -55,7 +55,10 @@ const Post = ({ data }) => {
             content: site.siteMetadata.author.name,
           },
           { property: 'og:author:section', content: 'Technology' },
-          ...tags.map((tag) => ({ property: 'og:article:tag', content: tag })),
+          ...(tags || []).map((tag) => ({
+            property: 'og:article:tag',
+            content: tag,
+          })),
         ]}
       />
       <PostHeader
