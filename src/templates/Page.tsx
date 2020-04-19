@@ -51,7 +51,7 @@ const Page = ({ data }) => {
 export default Page
 
 export const query = graphql`
-  query($slug: String!) {
+  query PageInfo($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
