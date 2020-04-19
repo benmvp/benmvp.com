@@ -64,7 +64,7 @@ Before we jump into `let` and `const`, let’s remind ourselves about how `var` 
 
 Most of the time we don’t run into any problems with `var`, but when we accidentally do, the resulting bugs can be hair-pulling:
 
-```javascript
+```js
 function varExample() {
   var myVar = 7
 
@@ -116,7 +116,7 @@ You can imagine if your function was more complicated how you could accidentally
 
 `let` works similarly to `var`, but the variable it declares is block-scoped; it _only_ exists within the current block.
 
-```javascript
+```js
 function letExample(value) {
   if (value) {
     let letValue = value
@@ -157,7 +157,7 @@ However, accessing `letValue` out of block scope is a different story. The [tran
 
 We saw in the `varExample` earlier that when you redeclare a variable with `var` in a nested scope (such as an `if`-block), the variable isn’t actually redeclared. Since the variables had the same name, the second declaration just resulted in the variable’s value being reassigned. This isn’t the case with `let`:
 
-```javascript
+```js
 function letShadowExample() {
   let x = 15
 
@@ -183,7 +183,7 @@ Within the nested scope of the `if`-block, the `let` declaration of `x` is diffe
 
 A `const` declaration works much like `let` except you _must_ initialize the variable immediately with a value. And that value cannot be changed afterwards. You will get a `SyntaxError` if you either fail to initialize the variable at declaration or if you try to reassign its value. Let’s take a look at a quick example:
 
-```javascript
+```js
 function constExample() {
 	const NAME_KEY = 'name';
 	const UNFROZEN_OBJ_CONST = { key: 'adam', val: 'eve' };
@@ -221,7 +221,7 @@ As shown in the code, a variable declared via `const` means that it cannot be a 
 
 The _temporal dead zone_ (TDZ) is just a fancy term used for the time period where code execution is in the scope of a variable declared by `let` or `const`, but _before_ it is actually declared. The variable is in scope, but not yet initialized. Accessing an uninitialized variable is a `ReferenceError`. Let’s take a look at some example code:
 
-```javascript
+```js
 {
 	// Uninitialized “binding” for `disciple` variable is created
 	// upon entering scope. TDZ for `disciple` variable begins
@@ -244,7 +244,7 @@ The _temporal dead zone_ (TDZ) is just a fancy term used for the time period whe
 
 So why is it called the _temporal_ dead zone? It’s because the dead zone is based on the period of code execution _time_ versus where the code actually resides:
 
-```javascript
+```js
 function temporalDeadZoneExample() {
   // TDZ for `value` begins
 
@@ -275,7 +275,7 @@ Variables declared by `var` don’t have a TDZ because the variables are “hois
 
 Unbeknownst to most JavaScript developers, the iteration variable declared with `var` within the head of `for`-loops (such as `for (var i = 0; i < 5; i++)`) is available outside of the `for`-loop. Because of block-level scoping, with `let` this is no longer the case.
 
-```javascript
+```js
 function simpleLoopExample() {
   for (var i = 0; i < 5; i++) {
     console.log('i=', i)
@@ -297,7 +297,7 @@ simpleLoopExample()
 
 In practice, this typically is not a problem because we would rarely try to access a loop iteration variable outside of a `for`-loop. However, this issue can crop up when newbie JavaScript developers create callback functions within loops.
 
-```javascript
+```js
 function callbackLoopVarExample() {
   var $body = $('body')
 
@@ -322,7 +322,7 @@ For those not too familiar with JavaScript development, it may not be immediatel
 
 The ES3/ES5 way of solving this problem was to use a separate named function or an IIFE that would create a new scope for the iteration variable such that each callback function would be bound to its own version. Here’s an example:
 
-```javascript
+```js
 function callbackLoopNamedFunctionExample() {
   var $body = $('body')
 
@@ -352,7 +352,7 @@ callbackLoopNamedFunctionExample()
 
 Now when we click each button, the appropriate message is displayed. This problem could have also been solved by having an IIFE defined within the `for`-loop in much the way our `loop` function variable was defined. The need for this sort of workaround goes away when declaring the iteration variable via `let`:
 
-```javascript
+```js
 function callbackLoopLetExample() {
   let $body = $('body')
 
@@ -384,7 +384,7 @@ Final note on loops. Variables declared by `let` work the same way with `for-in`
 
 Declaring a variable with `let` with the same name as a function parameter is a `TypeError`:
 
-```javascript
+```js
 function sellFruits(fruits) {
   let fruits = []
 }
@@ -392,7 +392,7 @@ function sellFruits(fruits) {
 
 However, if that `let` declaration happens within a nested scope (such as an `if`-block), then the variable will be [shadowed](#shadowing-variables-with-let):
 
-```javascript
+```js
 function sellFruits(fruits) {
   // create a simple code block
   {
@@ -410,7 +410,7 @@ function sellFruits(fruits) {
 
 And like all of the examples prior, `var` does not act this way. When a parameter is redeclared using `var` with the same, whether at the top-level function scope or within a nested block, nothing happens. Due to `var` declarations being functioned scoped, it's as if those declarations weren't even there because the parameter has already declared the variable in the scope.
 
-```javascript
+```js
 function sellFruits(fruits) {
   // this declaration does nothing
   var fruits

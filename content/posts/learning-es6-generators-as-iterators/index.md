@@ -132,21 +132,21 @@ The most basic form of a generator object acts as a data producer, aka an iterat
 
 As the article on iterators mentioned, we most likely won't be implementing iterators directly because of generators. Generator functions make it dead simple to create iterators (although understanding them isn't quite so simple). All we have to do is write the looping behavior because all generators have built-in implementations for `.next()` and `[Symbol.iterator]()`. This makes generators both iterators as well as iterables. As a refresher, here's the iterable interface written using [TypeScript](http://typescriptlang.org/):
 
-```
+```typescript
 interface Iterable {
-    // default iterator
-    [System.iterator]() : Iterator;
+  // default iterator
+  [System.iterator](): Iterator
 }
 interface Iterator {
-    // next method to continue iteration
-    next() : IteratorResult;
+  // next method to continue iteration
+  next(): IteratorResult
 
-    // optional return method
-    return?(value? : any) : IteratorResult;
+  // optional return method
+  return?(value?: any): IteratorResult
 }
 interface IteratorResult {
-    value : any;
-    done : boolean;
+  value: any
+  done: boolean
 }
 ```
 

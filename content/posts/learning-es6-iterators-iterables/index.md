@@ -90,10 +90,10 @@ The default `@@iterator` returns an object that implements the iterator "interfa
 
 Here's the iterable interface explained using [TypeScript](http://typescriptlang.org/):
 
-```
+```typescript
 interface Iterable {
-    // default iterator
-    [System.iterator]() : Iterator;
+  // default iterator
+  [System.iterator](): Iterator
 }
 ```
 
@@ -272,21 +272,21 @@ Now our object iterator object can be used directly in constructs like `for-of` 
 
 The full iteration protocol is as follows (once again using [TypeScript](http://typescriptlang.org/) for clarity only):
 
-```
+```typescript
 interface Iterable {
-    // default iterator
-    [System.iterator]() : Iterator;
+  // default iterator
+  [System.iterator](): Iterator
 }
 interface Iterator {
-    // next method to continue iteration
-    next() : IteratorResult;
+  // next method to continue iteration
+  next(): IteratorResult
 
-    // optional return method
-    return?(value? : any) : IteratorResult;
+  // optional return method
+  return?(value?: any): IteratorResult
 }
 interface IteratorResult {
-    value : any;
-    done : boolean;
+  value: any
+  done: boolean
 }
 ```
 
