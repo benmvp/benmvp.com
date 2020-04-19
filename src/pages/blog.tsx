@@ -31,7 +31,7 @@ const Blog = ({ data }) => {
 export default Blog
 
 export const query = graphql`
-  query {
+  query BlogPosts {
     posts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "//posts//" } }

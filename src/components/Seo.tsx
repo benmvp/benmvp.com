@@ -27,7 +27,7 @@ const Seo = ({
 }: Props) => {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      query SeoSiteInfo {
         site {
           siteMetadata {
             title

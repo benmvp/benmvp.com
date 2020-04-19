@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 const PostBio = () => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
-    query {
+    query PostSiteInfo {
       site {
         siteMetadata {
           author {

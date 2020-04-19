@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) =>
 const Header = () => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
-    query {
+    query HeaderSiteInfo {
       site {
         siteMetadata {
           title

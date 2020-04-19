@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) =>
 const SocialIcons = () => {
   const classes = useStyles()
   const { site } = useStaticQuery(graphql`
-    query {
+    query SocialSiteInfo {
       site {
         siteMetadata {
           social {
