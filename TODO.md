@@ -20,6 +20,8 @@
   - [x] See through version for home page
 - [x] Add site footer
 - [x] Add SEO to pages
+  - [ ] Add schema.org
+  - [ ] Add canonical URL
 - [ ] Build new home page
   - [ ] Optimized hero image (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [ ] Optimize header & blog footer logos

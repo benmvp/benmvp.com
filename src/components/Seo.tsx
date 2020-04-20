@@ -63,6 +63,7 @@ const Seo = ({
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={site.siteMetadata.keywords.join(' ')} />
       <meta name="image" content={metaImage} />
+      <link rel="canonical" href={url} />
 
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
