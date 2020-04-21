@@ -8,10 +8,10 @@ const Blog = ({ data }) => {
   const { posts } = data
 
   return (
-    <Layout>
+    <Layout maxWidth="lg">
       <Grid container spacing={2}>
         {posts.edges.map(({ node }) => (
-          <Grid key={node.fields.slug} item xs={12} sm={6}>
+          <Grid key={node.fields.slug} item xs={12} sm={6} lg={4}>
             <PostCard
               slug={node.fields.slug}
               title={node.frontmatter.title}

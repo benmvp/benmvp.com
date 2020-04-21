@@ -71,9 +71,10 @@ const ScrollToTop = ({ children }: ScrollToTopProps) => {
 interface Props {
   children: ReactNode
   masthead?: boolean
+  maxWidth?: 'md' | 'lg'
 }
 
-const Layout = ({ children, masthead = false }: Props) => {
+const Layout = ({ children, masthead = false, maxWidth = 'md' }: Props) => {
   const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
@@ -88,7 +89,7 @@ const Layout = ({ children, masthead = false }: Props) => {
 
           {masthead && <Masthead />}
           <Container
-            maxWidth="md"
+            maxWidth={maxWidth}
             className={classes.container}
             id="back-to-top-anchor"
           >
