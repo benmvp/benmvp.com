@@ -4,7 +4,7 @@ const THEME = getTheme(false)
 
 module.exports = {
   siteTitle: 'Ben Ilegbodu',
-  siteUrl: process.env.ROOT_URL || 'http://www.benmvp.com', // Domain of your site. No trailing slash!
+  siteUrl: process.env.ROOT_URL || 'https://www.benmvp.com', // Domain of your site. No trailing slash!
   siteImage: '/icons/icon-512x512.png',
   siteDescription:
     'Ben Ilegbodu provides content to help you become a better frontend engineer.',

@@ -616,7 +616,7 @@ Tuesday, February 14, 2017 @ 10a (DeveloperWeek Expo Stage 1)
 
 ##### San Francisco, California (Eventbrite)
 
-#### <a href="http://www.benmvp.com/#react-exposed-" target="_blank">React exposed! 😮</a>
+#### [React Exposed! 😮](/talks/#react-exposed-)
 
 Thursday, February 9, 2017 @ 7p
 
@@ -754,7 +754,7 @@ Thursday, July 14, 2016 @ 7:30p
 
 Friday, June 10, 2016 @ 1:40p in Room 7
 
-🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](https://slides.benmvp.com/2016/ndcoslo/no-js) | 🖥 <a href="http://www.benmvp.com/you-dont-need-js-for-that" target="_blank">Code examples</a> | 📝 [Blog post](http://www.benmvp.com/ndc-oslo-2016/)
+🎥 [Video](https://vimeo.com/171319733) | 🎞 [Slides](https://slides.benmvp.com/2016/ndcoslo/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/) | 📝 [Blog post](/blog/ndc-oslo-2016/)
 
 ---
 
@@ -778,7 +778,7 @@ Thursday, May 26, 2016 @ 9:30a at Eventbrite HQ
 
 Saturday, May 7, 2016 @ 10:30a (Front-End II)
 
-🎞 [Slides](https://slides.benmvp.com/2016/syntaxcon/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎞 [Slides](https://slides.benmvp.com/2016/syntaxcon/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/)
 
 #### [Sweet ES6](/talks/#sweet-es6)
 
@@ -802,7 +802,7 @@ Tuesday, April 12, 2016 @ 1p (Ambassador 2)
 
 Monday, April 11, 2016 @ 9:45a (Ambassador 2)
 
-🎞 [Slides](https://slides.benmvp.com/2016/prdc/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎞 [Slides](https://slides.benmvp.com/2016/prdc/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/)
 
 ---
 
@@ -832,7 +832,7 @@ Thursday, February 25, 2016 @ 3p in Fontaine D
 
 Wednesday, February 24, 2016 @ 3p in Hampstead
 
-🎞 [Slides](https://slides.benmvp.com/2016/confoo/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎞 [Slides](https://slides.benmvp.com/2016/confoo/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/)
 
 ---
 
@@ -858,7 +858,7 @@ Tuesday, February 16, 2016 @ 3p in Workshop Room 1
 
 Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
-🎞 [Slides](https://slides.benmvp.com/2015/sacjs/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎞 [Slides](https://slides.benmvp.com/2015/sacjs/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/)
 
 ---
 
@@ -870,7 +870,7 @@ Tuesday, November 24, 2015 @ 7p at The Urban Hive
 
 Friday, November 20, 2015 @ 2p in Palm 3
 
-🎞 [Slides](https://slides.benmvp.com/2015/fossetcon/no-js) | 🖥 [Code examples](/you-dont-need-js-for-that)
+🎞 [Slides](https://slides.benmvp.com/2015/fossetcon/no-js) | 🖥 [Code examples](https://you-dont-need-js-for-that.benmvp.com/)
 
 ---
 

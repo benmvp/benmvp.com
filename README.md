@@ -1,3 +1,3 @@
 # Ben Ilegbodu
 
-Gatsby-based blog: http://www.benmvp.com
+Gatsby-based blog hosted on Netlify: https://www.benmvp.com/

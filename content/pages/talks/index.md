@@ -6,7 +6,7 @@ heroAlt: Ben Ilegbodu speaking at React Rally 2017
 
 Below is a list of all of my talks. Most of them I've either given or will give at an upcoming [speaking engagement](/speak/). However, there are some that I am still hoping to give at some future conference and/or meetup!
 
-I am open to speak about anything I write about here in [my blog](/blog/) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](http://www.benmvp.com/ama).
+I am open to speak about anything I write about here in [my blog](/blog/) or that I have previously spoken about. I also have plenty of experience not currently expressed in a blog post or previous talk. If you're interested in having me speak to or hold a workshop with your group, thank you! That means a lot that you find me worthy enough to share with your group. Please feel free to contact me via [Twitter](https://twitter.com/benmvp), [email](mailto:ben@benmvp.com) or [AMA](/ama/).
 
 You can also check out my [Speaking Engagements](/speak/) past and present, as well as my past [Speaking Videos](/videos/).
 

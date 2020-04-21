@@ -2,6 +2,14 @@
   command = "npm run build"
   publish = "public/"
 
+# Redirects from subfolders to subdomains
+[[redirects]]
+  from = "/learning-es6"
+  to = "https://learning-es6.benmvp.com/"
+[[redirects]]
+  from = "/you-dont-need-js-for-that"
+  to = "https://you-dont-need-js-for-that.benmvp.com/"
+
 # Post redirects from /* to /blog/*
 [[redirects]]
   from = "/new-blog/"
