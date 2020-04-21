@@ -23,8 +23,9 @@
   - [ ] Add schema.org
   - [ ] Add canonical URL
 - [ ] Build new home page
-  - [ ] Optimized hero image (like https://jennielakenan.com/ or https://csswizardry.com/)
-  - [ ] Optimize header & blog footer logos
+  - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
+  - [x] Optimize header & blog footer logos
+  - [ ] Masthead message
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks

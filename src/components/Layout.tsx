@@ -15,11 +15,8 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import { Fab } from 'gatsby-theme-material-ui'
 import Header from './Header'
 import Footer from './Footer'
+import Masthead from './Masthead'
 import { getTheme } from '../../config/theme'
-
-interface ChildrenProps {
-  children: ReactNode
-}
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -28,6 +25,7 @@ const useStyles = makeStyles((theme) =>
     },
     container: {
       minHeight: '100vh',
+      marginTop: theme.spacing(2),
     },
     toTop: {
       position: 'fixed',
@@ -35,12 +33,16 @@ const useStyles = makeStyles((theme) =>
       right: theme.spacing(2),
     },
     backToTopAnchor: {
-      height: 104,
+      height: 82,
     },
   }),
 )
 
-const ScrollTop = ({ children }: ChildrenProps) => {
+interface ScrollToTopProps {
+  children: ReactNode
+}
+
+const ScrollToTop = ({ children }: ScrollToTopProps) => {
   const classes = useStyles()
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -66,7 +68,12 @@ const ScrollTop = ({ children }: ChildrenProps) => {
   )
 }
 
-const Layout = ({ children }: ChildrenProps) => {
+interface Props {
+  children: ReactNode
+  masthead?: boolean
+}
+
+const Layout = ({ children, masthead = false }: Props) => {
   const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
@@ -77,19 +84,22 @@ const Layout = ({ children }: ChildrenProps) => {
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
           <Header />
-          <Container maxWidth="md" className={classes.container}>
-            <Toolbar
-              id="back-to-top-anchor"
-              className={classes.backToTopAnchor}
-            />
+          <Toolbar className={classes.backToTopAnchor} />
+
+          {masthead && <Masthead />}
+          <Container
+            maxWidth="md"
+            className={classes.container}
+            id="back-to-top-anchor"
+          >
             <Box component="main">{children}</Box>
           </Container>
           <Footer />
-          <ScrollTop>
+          <ScrollToTop>
             <Fab color="secondary" size="small" aria-label="scroll back to top">
               <KeyboardArrowUpIcon />
             </Fab>
-          </ScrollTop>
+          </ScrollToTop>
         </Box>
       </ThemeProvider>
     </>

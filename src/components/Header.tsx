@@ -5,7 +5,6 @@ import {
   createStyles,
   useScrollTrigger,
   AppBar,
-  Avatar,
   Slide,
   Toolbar,
   Box,
@@ -16,7 +15,7 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link, Button, IconButton } from 'gatsby-theme-material-ui'
-import logo from './logo.jpg'
+import Img from 'gatsby-image'
 
 const NAV_LINKS = [
   {
@@ -62,11 +61,11 @@ const Menu = ({ open, onClose }: MenuProps) => (
   </Drawer>
 )
 
-interface ChildrenProps {
+interface HideOnScrollProps {
   children: ReactElement
 }
 
-const HideOnScroll = ({ children }: ChildrenProps) => {
+const HideOnScroll = ({ children }: HideOnScrollProps) => {
   const trigger = useScrollTrigger()
 
   return (
@@ -86,6 +85,7 @@ const useStyles = makeStyles((theme) =>
       },
     },
     logo: {
+      borderRadius: '50%',
       marginRight: theme.spacing(),
       width: 60,
       height: 60,
@@ -122,11 +122,18 @@ const useStyles = makeStyles((theme) =>
 
 const Header = () => {
   const classes = useStyles()
-  const { site } = useStaticQuery(graphql`
+  const { site, logo } = useStaticQuery(graphql`
     query HeaderSiteInfo {
       site {
         siteMetadata {
           title
+        }
+      }
+      logo: file(relativePath: { eq: "ben-ilegbodu.jpg" }) {
+        childImageSharp {
+          fixed(width: 60, height: 60) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -140,8 +147,8 @@ const Header = () => {
           <Box component="section" mx={{ xs: 1, sm: 2 }} my={1}>
             <Toolbar disableGutters className={classes.toolbar}>
               <Link color="inherit" to="/" aria-label="Go to homepage">
-                <Avatar
-                  src={logo}
+                <Img
+                  fixed={logo.childImageSharp.fixed}
                   alt={site.siteMetadata.title}
                   className={classes.logo}
                 />
