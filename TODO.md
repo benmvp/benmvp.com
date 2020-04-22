@@ -14,7 +14,7 @@
 - [x] Fix links in blog posts to be `/blog/`
 - [x] Style `/blog/`
   - [x] Make cards `<a>`
-  - [ ] Default hero image
+  - [ ] Add fallback hero image
 - [x] Talks/videos/speak/es6 as markdown
 - [x] Update header
   - [x] Add links to pages (collapsed on mobile)
@@ -22,7 +22,7 @@
 - [x] Add site footer
 - [x] Add SEO to pages
   - [ ] Add schema.org
-  - [ ] Add canonical URL
+  - [x] Add canonical URL
 - [ ] Build new home page
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos

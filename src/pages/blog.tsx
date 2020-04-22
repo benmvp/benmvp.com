@@ -3,12 +3,19 @@ import { graphql } from 'gatsby'
 import { Grid } from '@material-ui/core'
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
+import Seo from '../components/Seo'
+import { getBlogUrl } from '../utils'
 
 const Blog = ({ data }) => {
   const { posts } = data
 
   return (
     <Layout maxWidth="lg">
+      <Seo
+        url={getBlogUrl()}
+        title="Blog"
+        description="Browse through Ben Ilegbodu's blog posts to keep learn more about React and other frontend topics"
+      />
       <Grid container spacing={2}>
         {posts.edges.map(({ node }) => (
           <Grid key={node.fields.slug} item xs={12} sm={6} lg={4}>
