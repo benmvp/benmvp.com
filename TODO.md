@@ -14,6 +14,7 @@
 - [x] Fix links in blog posts to be `/blog/`
 - [x] Style `/blog/`
   - [x] Make cards `<a>`
+  - [ ] Default hero image
 - [x] Talks/videos/speak/es6 as markdown
 - [x] Update header
   - [x] Add links to pages (collapsed on mobile)

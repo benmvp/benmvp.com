@@ -1,5 +1,5 @@
 ---
-title: All about Ben
+title: All About Ben
 hero: ./family-photo-summer-2019.jpg
 heroAlt: Ilegbodu Family Photo
 ---

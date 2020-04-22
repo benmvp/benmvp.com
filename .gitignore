@@ -72,3 +72,4 @@ yarn-error.log
 
 # Auto-generated TypeScript types for your GraphQL queries
 schema.json
+*.d.ts
