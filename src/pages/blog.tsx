@@ -34,7 +34,10 @@ export const query = graphql`
   query BlogPosts {
     posts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
+      filter: {
+        fileAbsolutePath: { regex: "//posts//" }
+        frontmatter: { published: { ne: false } }
+      }
     ) {
       totalCount
       edges {
