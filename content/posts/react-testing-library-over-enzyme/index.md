@@ -122,4 +122,4 @@ Enzyme feels more lower level, as if React Testing Library would be built on top
 
 By the way, there are certainly more nuances around React Testing Library that help prevent you from testing implementation details. This is certainly by no means exhaustive. But all that is for another blog post. Actually, one has already been written. Read Kent's blog post on [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details). 🙃
 
-Keep learning my friends.
+Keep learning my friends. 🤓

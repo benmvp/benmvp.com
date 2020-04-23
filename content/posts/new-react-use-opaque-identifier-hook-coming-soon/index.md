@@ -53,4 +53,4 @@ And of course Twitter came to the rescue:
 
 I still feel that `useOpaqueIdentifier` has crossed the line into being too "technically correct" where it doesn't convey the actual use case. However, I'm still glad the feature exists! 🎉
 
-Keep learning my friends.
+Keep learning my friends. 🤓

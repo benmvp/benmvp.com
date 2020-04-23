@@ -9,4 +9,4 @@ heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
 published: false
 ---
 
-Keep learning my friends.
+Keep learning my friends. 🤓
