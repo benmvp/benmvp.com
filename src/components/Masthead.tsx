@@ -76,11 +76,12 @@ const Masthead = () => {
       <Img
         fluid={masthead.childImageSharp.fluid}
         className={classes.masthead}
+        alt="A cropped image of Ben Ilegbodu speaking at a conference"
       />
       <Box className={classes.textShell}>
         <Typography component="h1" variant="inherit" className={classes.text}>
-          Hi, I'm <strong>Ben Ilegbodu</strong>. I'm a UI Architect helping
-          engineers level up their frontend skills.
+          Hi, I'm <strong>Ben Ilegbodu</strong>. I help devs level up their
+          frontend skills.
         </Typography>
       </Box>
     </Box>
