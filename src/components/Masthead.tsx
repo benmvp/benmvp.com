@@ -1,11 +1,14 @@
 import React from 'react'
-import Img, { FluidObject } from 'gatsby-image'
-import { makeStyles, createStyles } from '@material-ui/core'
+import Img from 'gatsby-image'
+import { makeStyles, createStyles, Box, Typography } from '@material-ui/core'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    wrapper: {
+    root: {
+      position: 'relative',
+    },
+    masthead: {
       maxHeight: 300,
 
       [theme.breakpoints.up('sm')]: {
@@ -14,6 +17,36 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.up('md')]: {
         maxHeight: 'inherit',
         height: 'calc(100vh - 82px)',
+      },
+    },
+    textShell: {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '50%',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    text: {
+      color: theme.palette.primary.contrastText,
+
+      marginLeft: theme.spacing(1),
+      ...theme.typography.h6,
+
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(2),
+        ...theme.typography.h4,
+      },
+
+      [theme.breakpoints.up('md')]: {
+        marginLeft: theme.spacing(3),
+        ...theme.typography.h3,
+      },
+
+      [theme.breakpoints.up('lg')]: {
+        marginLeft: theme.spacing(4),
+        ...theme.typography.h2,
       },
     },
   }),
@@ -39,7 +72,18 @@ const Masthead = () => {
   `)
 
   return (
-    <Img fluid={masthead.childImageSharp.fluid} className={classes.wrapper} />
+    <Box className={classes.root}>
+      <Img
+        fluid={masthead.childImageSharp.fluid}
+        className={classes.masthead}
+      />
+      <Box className={classes.textShell}>
+        <Typography component="h1" variant="inherit" className={classes.text}>
+          Hi, I'm <strong>Ben Ilegbodu</strong>. I'm a UI Architect helping
+          others level up their frontend skills.
+        </Typography>
+      </Box>
+    </Box>
   )
 }
 

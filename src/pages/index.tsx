@@ -8,9 +8,6 @@ export default () => {
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl()} />
-      <Typography variant="h3" component="h1">
-        Welcome!
-      </Typography>
     </Layout>
   )
 }

@@ -19,6 +19,7 @@
 - [x] Update header
   - [x] Add links to pages (collapsed on mobile)
   - [x] See through version for home page
+  - [ ] Add hidden "skip navigation"
 - [x] Add site footer
 - [x] Add SEO to pages
   - [ ] Add schema.org
@@ -26,7 +27,7 @@
 - [ ] Build new home page
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos
-  - [ ] Masthead message
+  - [x] Masthead text
   - [ ] Card link to upcoming speaking engagements
   - [ ] Card link to videos
   - [ ] Card link to talks
@@ -34,6 +35,7 @@
   - [ ] Twitter mentions (like swyx.io)
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains
+- [ ] Add Netlify plugins (gatsby caching)
 - [ ] Add night mode switch to header
 - [ ] 404 page
 - [ ] Write blog post about Google Developer Expert
@@ -45,6 +47,7 @@
 
 - [ ] Add minishops pages
   - [ ] Add mailing list option for those interested
+  - [ ] Share (top and bottom)
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
 - [ ] Write blog post about minishops
