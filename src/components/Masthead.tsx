@@ -80,7 +80,7 @@ const Masthead = () => {
       <Box className={classes.textShell}>
         <Typography component="h1" variant="inherit" className={classes.text}>
           Hi, I'm <strong>Ben Ilegbodu</strong>. I'm a UI Architect helping
-          others level up their frontend skills.
+          engineers level up their frontend skills.
         </Typography>
       </Box>
     </Box>
