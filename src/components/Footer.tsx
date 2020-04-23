@@ -56,7 +56,7 @@ const Footer = () => {
         </GatsbyLink>
       </Typography>
       <Typography variant="body2" align="center">
-        © 2015-{new Date().getFullYear()}, Ben Ilegbodu. All rights reserved.{' '}
+        © 2015 — {new Date().getFullYear()}, Ben Ilegbodu. All rights reserved.{' '}
         <Link
           href="https://www.biblegateway.com/passage/?search=2%20cor%205%3A17&version=NLT;NTV"
           target="_blank"

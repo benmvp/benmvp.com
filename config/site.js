@@ -7,7 +7,7 @@ module.exports = {
   siteUrl: process.env.ROOT_URL || 'https://www.benmvp.com', // Domain of your site. No trailing slash!
   siteImage: '/icons/icon-512x512.png',
   siteDescription:
-    'Ben Ilegbodu provides quality content to help you become a better frontend engineer.',
+    'Ben Ilegbodu uses his many years of frontend development experience to provide quality content to help you become a better frontend engineer.',
   siteLanguage: 'en', // Language Tag on <html> element
   keywords: [
     'Frontend Software Engineer',
@@ -20,7 +20,7 @@ module.exports = {
   // author info
   author: 'Ben Ilegbodu',
   authorBio:
-    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15 years of professional experience developing user interfaces for the Web. I'm a Principal Frontend Engineer at Stitch Fix, frontend software teacher, Google Developer Expert, and Microsoft MVP.",
+    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Principal Frontend Engineer at Stitch Fix, frontend development teacher, Google Developer Expert, and Microsoft MVP. I love helping developers level up their frontend skills.",
 
   // manifest.json
   manifestShortName: 'benmvp', // max 12 characters
