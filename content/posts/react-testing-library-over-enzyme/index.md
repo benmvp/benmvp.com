@@ -120,6 +120,6 @@ Just like with Interacting, the Asserting phase for both React Testing Library a
 
 Enzyme feels more lower level, as if React Testing Library would be built on top of it (it isn't by the way). So even though 2 of the 3 phases are more or less the same between the Enzyme and React Testing Library, I'm finding React Testing Library helps me approach testing differently. I test higher in the component tree to avoid testing implementation details. And it's _that_ difference that makes all the difference. 😄
 
-By the way, there are certainly more nuances around React Testing Library preventing you from testing implementation details. This is certainly by no means exhaustive. But all that is for another blog post. Actually, one has already been written. Read Kent's blog post on [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details). 🙃
+By the way, there are certainly more nuances around React Testing Library that help prevent you from testing implementation details. This is certainly by no means exhaustive. But all that is for another blog post. Actually, one has already been written. Read Kent's blog post on [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details). 🙃
 
 Keep learning my friends.

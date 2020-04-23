@@ -8,3 +8,5 @@ heroAlt: Blue anchor stenciled on the wall
 heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
 published: false
 ---
+
+Keep learning my friends.
