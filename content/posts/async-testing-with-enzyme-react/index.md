@@ -6,6 +6,7 @@ tags: [react, testing]
 hero: wait-sign-kai-pilger-1k3vsv7iIIc-unsplash.jpeg
 heroAlt: Wait crosswalk sign in New York City
 heroCredit: 'Photo by [Kai Pilger](https://unsplash.com/@kaip)'
+published: false
 ---
 
 Yesterday I wrote a blog post about how I would [choose React Testing Library over Enzyme](/blog/react-testing-library-over-enzyme/). At the end, I mentioned that there were many other "nuances about [React Testing Library](https://testing-library.com/react) that help prevent you from testing implementation details." I was planning to just leave it at that, but today I ran into one such nuance while working in a codebase that used [Enzyme](https://enzymejs.github.io/enzyme/). And I just **had** to share it.

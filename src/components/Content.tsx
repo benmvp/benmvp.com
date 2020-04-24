@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) =>
         margin: theme.spacing(0, 0, 2, 0),
       },
       '& img': {
-        // maxWidth: '100%',
         ...getFullWidthImageStyles(theme),
       },
       '& ul': {
