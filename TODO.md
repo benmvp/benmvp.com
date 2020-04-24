@@ -28,11 +28,11 @@
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos
   - [x] Masthead text
-  - [ ] Card link to upcoming speaking engagements
-  - [ ] Card link to videos
-  - [ ] Card link to talks
-  - [ ] Recent blog posts (no excerpt)
-  - [ ] Twitter mentions (like swyx.io)
+  - [ ] Cards for upcoming speaking engagements ("Learn")
+  - [ ] Embed of recent video ("Watch")
+  - [ ] ~Card link to talks~
+  - [ ] Recent blog posts (no excerpt) ("Read")
+  - [ ] Twitter mentions (like swyx.io) ("Engage")
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains
 - [ ] Add Netlify plugins (gatsby caching)
@@ -46,10 +46,11 @@
 ## Post-MVP
 
 - [ ] Add minishops pages
-  - [ ] Add mailing list option for those interested
+  - [ ] Add mailing list option for those interested at bottom
   - [ ] Share (top and bottom)
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
+- [ ] Upcoming minishops on home page ("Develop")
 - [ ] Write blog post about minishops
 - [ ] Write blog post on new blog (again)
 - [ ] More #TIL blog posts (back-date from twitter)

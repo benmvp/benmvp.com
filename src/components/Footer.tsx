@@ -9,6 +9,13 @@ import {
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import SocialIcons from './SocialIcons'
 
+const LINKS = [
+  { to: '/learning-es6-series/', title: 'Learning ES6 series' },
+  { to: '/talks/', title: 'Tech Talks' },
+  { to: '/ama/', title: 'AMA' },
+  { to: '/blog/rss.xml', title: 'RSS' },
+]
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     name: {
@@ -43,17 +50,14 @@ const Footer = () => {
       </Typography>
       <SocialIcons />
       <Typography variant="body1" align="center" className={classes.links}>
-        <GatsbyLink
-          to="/learning-es6-series/"
-          color="inherit"
-          underline="hover"
-        >
-          Learning ES6 series
-        </GatsbyLink>{' '}
-        |{' '}
-        <GatsbyLink to="/ama/" color="inherit" underline="hover">
-          AMA
-        </GatsbyLink>
+        {LINKS.map(({ to, title }, index) => (
+          <>
+            <GatsbyLink key={to} to={to} color="inherit" underline="hover">
+              {title}
+            </GatsbyLink>
+            {index < LINKS.length - 1 ? ' | ' : ''}
+          </>
+        ))}
       </Typography>
       <Typography variant="body2" align="center">
         © 2015 — {new Date().getFullYear()}, Ben Ilegbodu. All rights reserved.{' '}

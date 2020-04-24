@@ -2,7 +2,7 @@
 date: 2020-04-23
 title: Check out react-jsonschema-form
 category: react
-tags: [react, forms, json-schema]
+tags: [TIL, react, forms, json-schema]
 hero: document-helloquence-OQMZwNd3ThU-unsplash.jpeg
 heroAlt: Man filling out a document
 heroCredit: 'Photo by [Helloquence](https://unsplash.com/@helloquence)'

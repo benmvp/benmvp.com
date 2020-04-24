@@ -23,9 +23,8 @@ const NAV_LINKS = [
     title: 'Speak',
     label: "Check out Ben's speaking engagements",
   },
-  { to: '/videos/', title: 'Videos', label: "Watch Ben's past tech talks" },
-  { to: '/talks/', title: 'Talks', label: "Browse all of Ben's tech talks" },
   { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
+  { to: '/videos/', title: 'Videos', label: "Watch Ben's past tech talks" },
   { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 'md'
