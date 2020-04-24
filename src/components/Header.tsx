@@ -27,7 +27,7 @@ const NAV_LINKS = [
   { to: '/videos/', title: 'Videos', label: "Watch Ben's past tech talks" },
   { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
-const MENU_BP = 'md'
+const MENU_BP = 'sm'
 
 interface MenuProps {
   open: boolean
