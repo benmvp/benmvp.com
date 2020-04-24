@@ -57,6 +57,7 @@
 - [ ] Talks/videos/speak as data-driven pages
 - [ ] Upcoming minishops in blog post footer
 - [ ] Learning ES6 page data-driven w/ experts
+- [ ] Add blog post category pages
 - [ ] Related blog posts in blog post footer
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
