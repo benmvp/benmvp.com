@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { navigate } from 'gatsby'
+import { graphql } from 'gatsby'
 import {
   makeStyles,
   createStyles,
@@ -21,7 +21,7 @@ interface Props {
   heroAlt: string
   title: string
   date: string
-  excerpt: string
+  summary: string
   slug: string
   tags?: string[]
 }
@@ -43,7 +43,7 @@ const PostCard = ({
   heroAlt,
   title,
   date,
-  excerpt,
+  summary,
   slug,
   tags,
 }: Props) => {
@@ -105,7 +105,7 @@ const PostCard = ({
             gutterBottom
             variant="h5"
             color="textPrimary"
-            component="h2"
+            component="h3"
             noWrap
           >
             {title}
@@ -114,12 +114,12 @@ const PostCard = ({
             gutterBottom
             variant="subtitle2"
             color="textPrimary"
-            component="h3"
+            component="h4"
           >
             {date}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {excerpt}
+            {summary}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -131,7 +131,7 @@ const PostCard = ({
         </Box>
         <Share
           iconSize={32}
-          summary={excerpt}
+          summary={summary}
           tags={tags}
           title={title}
           url={url}
@@ -143,3 +143,26 @@ const PostCard = ({
 }
 
 export default PostCard
+
+export const dataFragment = graphql`
+  fragment PostCardInfo on MarkdownRemark {
+    frontmatter {
+      title
+      description
+      tags
+      date(formatString: "DD MMMM YYYY")
+      hero {
+        childImageSharp {
+          fluid(maxWidth: 550, traceSVG: { color: "#3f51b5" }, quality: 50) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      heroAlt
+    }
+    fields {
+      slug
+    }
+    excerpt
+  }
+`

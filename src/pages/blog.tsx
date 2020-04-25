@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Grid } from '@material-ui/core'
 import Layout from '../components/Layout'
-import PostCard from '../components/PostCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
+import PostList from '../components/PostList'
 
 const Blog = ({ data }) => {
   const { posts } = data
@@ -16,21 +15,7 @@ const Blog = ({ data }) => {
         title="Blog"
         description="Browse through Ben Ilegbodu's blog posts to keep learn more about React and other frontend topics"
       />
-      <Grid container spacing={2}>
-        {posts.edges.map(({ node }) => (
-          <Grid key={node.fields.slug} item xs={12} sm={6} lg={4}>
-            <PostCard
-              slug={node.fields.slug}
-              title={node.frontmatter.title}
-              tags={node.frontmatter.tags}
-              date={node.frontmatter.date}
-              excerpt={node.excerpt}
-              hero={node.frontmatter.hero}
-              heroAlt={node.frontmatter.heroAlt}
-            />
-          </Grid>
-        ))}
-      </Grid>
+      <PostList posts={posts} />
     </Layout>
   )
 }
@@ -46,30 +31,10 @@ export const query = graphql`
         frontmatter: { published: { ne: false } }
       }
     ) {
-      totalCount
       edges {
         node {
-          frontmatter {
-            title
-            tags
-            date(formatString: "DD MMMM YYYY")
-            hero {
-              childImageSharp {
-                fluid(
-                  maxWidth: 550
-                  traceSVG: { color: "#3f51b5" }
-                  quality: 50
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-            heroAlt
-          }
-          fields {
-            slug
-          }
-          excerpt
+          id
+          ...PostCardInfo
         }
       }
     }

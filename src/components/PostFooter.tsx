@@ -12,7 +12,7 @@ import PostBio from './PostBio'
 
 interface Props {
   className?: string
-  excerpt: string
+  summary: string
   slug: string
   tags?: string[]
   title: string
@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => {
   })
 })
 
-const PostFooter = ({ className, excerpt, slug, tags, title, url }: Props) => {
+const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
   const classes = useStyles()
 
   return (
     <Box component="footer" className={className}>
-      <Share url={url} title={title} summary={excerpt} tags={tags} />
+      <Share url={url} title={title} summary={summary} tags={tags} />
       <Divider className={classes.divider} variant="middle" />
       <PostBio />
       <Divider className={classes.divider} variant="middle" />

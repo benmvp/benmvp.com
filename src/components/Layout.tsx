@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
     },
     container: {
       minHeight: '100vh',
-      marginTop: theme.spacing(2),
+      marginTop: ({ masthead }) => (masthead ? undefined : theme.spacing(2)),
     },
     toTop: {
       position: 'fixed',

@@ -32,19 +32,21 @@ const Post = ({ data }) => {
     subTitle,
     date,
     dateIso,
+    description,
     tags,
     hero,
     heroAlt,
     heroCredit,
   } = frontmatter
   const { slug } = fields
+  const summary = description || excerpt
   const url = getBlogUrl(slug)
 
   return (
     <Layout>
       <Seo
         title={title}
-        description={excerpt}
+        description={summary}
         url={url}
         image={hero?.childImageSharp?.fluid?.src}
         type="article"
@@ -82,7 +84,7 @@ const Post = ({ data }) => {
         url={url}
         slug={slug}
         title={title}
-        excerpt={excerpt}
+        summary={summary}
         tags={tags}
       />
     </Layout>
@@ -103,6 +105,7 @@ export const query = graphql`
       frontmatter {
         title
         subTitle
+        description
         tags
         date(formatString: "DD MMMM YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")

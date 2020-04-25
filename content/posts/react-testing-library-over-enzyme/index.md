@@ -1,6 +1,7 @@
 ---
 date: 2020-04-21
 title: React Testing Library over Enzyme
+description: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: react
 tags: [react, testing, react testing library, enzyme, RTL]
 hero: brown-goat-peter-neumann-mUtYXnpW1ts-unsplash.jpeg
