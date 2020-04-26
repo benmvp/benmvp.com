@@ -2,12 +2,13 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import PostCard from '../components/PostCard'
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, mode = 'full' }) => {
   return (
     <Grid container spacing={2}>
       {posts.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12} sm={6} lg={4}>
           <PostCard
+            mode={mode}
             slug={node.fields.slug}
             title={node.frontmatter.title}
             tags={node.frontmatter.tags}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { graphql } from 'gatsby'
 import {
   makeStyles,
@@ -16,42 +16,12 @@ import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
 import { getBlogUrl } from '../utils'
 
-interface Props {
-  hero: any
-  heroAlt: string
-  title: string
-  date: string
-  summary: string
-  slug: string
-  tags?: string[]
-}
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    media: {
-      height: 140,
-    },
-    buttons: {
-      flex: 1,
-      marginRight: theme.spacing(2),
-    },
-  }),
-)
-
-const PostCard = ({
-  hero,
-  heroAlt,
-  title,
-  date,
-  summary,
-  slug,
-  tags,
-}: Props) => {
-  const classes = useStyles()
+const useCopyUrl = (
+  url: string,
+): [{ copyText: string; copyButtonColor: string }, () => void] => {
   const [copyStatus, setCopyStatus] = useState<
     'inactive' | 'copied' | 'failed'
   >('inactive')
-  const url = getBlogUrl(slug)
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout
@@ -67,7 +37,7 @@ const PostCard = ({
     }
   }, [copyStatus])
 
-  const copy = () => {
+  const copy = useCallback(() => {
     navigator.clipboard.writeText(url).then(
       () => {
         setCopyStatus('copied')
@@ -76,7 +46,7 @@ const PostCard = ({
         setCopyStatus('failed')
       },
     )
-  }
+  }, [url])
 
   let copyText = 'Copy URL'
   let copyButtonColor = 'primary'
@@ -89,10 +59,53 @@ const PostCard = ({
     copyButtonColor = 'default'
   }
 
+  return [{ copyText, copyButtonColor }, copy]
+}
+
+interface Props {
+  date: string
+  hero: any
+  heroAlt: string
+  mode?: 'min' | 'full'
+  slug: string
+  summary: string
+  tags?: string[]
+  title: string
+}
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    media: {
+      height: 140,
+    },
+    buttons: {
+      flex: 1,
+      marginRight: theme.spacing(2),
+    },
+  }),
+)
+
+const PostCard = ({
+  date,
+  hero,
+  heroAlt,
+  mode = 'full',
+  slug,
+  summary,
+  tags,
+  title,
+}: Props) => {
+  const classes = useStyles()
+  const url = getBlogUrl(slug)
+  const [{ copyText, copyButtonColor }, copy] = useCopyUrl(url)
+  const showHero = mode !== 'min'
+  const showDate = mode !== 'min'
+  const showShare = mode !== 'min'
+
   return (
     <Card>
       <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
-        {hero && (
+        {hero && showHero && (
           <CardMedia
             component="img"
             image={hero.childImageSharp.fluid.src}
@@ -110,34 +123,38 @@ const PostCard = ({
           >
             {title}
           </Typography>
-          <Typography
-            gutterBottom
-            variant="subtitle2"
-            color="textPrimary"
-            component="h4"
-          >
-            {date}
-          </Typography>
+          {showDate && (
+            <Typography
+              gutterBottom
+              variant="subtitle2"
+              color="textPrimary"
+              component="h4"
+            >
+              {date}
+            </Typography>
+          )}
           <Typography variant="body2" color="textSecondary" component="p">
             {summary}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Box className={classes.buttons}>
-          <Button size="small" color={copyButtonColor} onClick={copy}>
-            {copyText}
-          </Button>
-        </Box>
-        <Share
-          iconSize={32}
-          summary={summary}
-          tags={tags}
-          title={title}
-          url={url}
-          options={new Set(['twitter', 'facebook', 'pocket'])}
-        />
-      </CardActions>
+      {showShare && (
+        <CardActions>
+          <Box className={classes.buttons}>
+            <Button size="small" color={copyButtonColor} onClick={copy}>
+              {copyText}
+            </Button>
+          </Box>
+          <Share
+            iconSize={32}
+            summary={summary}
+            tags={tags}
+            title={title}
+            url={url}
+            options={new Set(['twitter', 'facebook', 'pocket'])}
+          />
+        </CardActions>
+      )}
     </Card>
   )
 }

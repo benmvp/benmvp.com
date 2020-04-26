@@ -38,21 +38,17 @@ const Menu = ({ open, onClose }: MenuProps) => (
     <Box width="250px">
       <List component="nav" aria-label="main site navigation links">
         {NAV_LINKS.map(({ to, title, label }) => (
-          <ListItem
-            key={title}
-            component={Link}
-            to={to}
-            aria-label={label}
-            underline="none"
-          >
-            <ListItemText
-              primaryTypographyProps={{
-                color: 'textPrimary',
-                variant: 'h4',
-              }}
-            >
-              {title}
-            </ListItemText>
+          <ListItem key={title} aria-label={label} underline="none">
+            <Link to={to}>
+              <ListItemText
+                primaryTypographyProps={{
+                  color: 'textPrimary',
+                  variant: 'h4',
+                }}
+              >
+                {title}
+              </ListItemText>
+            </Link>
           </ListItem>
         ))}
       </List>

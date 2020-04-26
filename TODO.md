@@ -24,14 +24,14 @@
 - [x] Add SEO to pages
   - [ ] Add schema.org
   - [x] Add canonical URL
+  - [ ] Masthead as social image
 - [ ] Build new home page
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos
   - [x] Masthead text
   - [ ] Cards for upcoming speaking engagements ("Learn")
   - [ ] Embed of recent video ("Watch")
-  - [ ] ~Card link to talks~
-  - [ ] Recent blog posts (no excerpt) ("Read")
+  - [x] Recent blog posts (no excerpt) ("Read")
   - [ ] Twitter mentions (like swyx.io) ("Engage")
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains

@@ -16,7 +16,7 @@ export default ({ data }) => {
         <Typography variant="h3" component="h2" gutterBottom>
           Read...
         </Typography>
-        <PostList posts={recentPosts} />
+        <PostList posts={recentPosts} mode="min" />
       </Box>
     </Layout>
   )
