@@ -7,7 +7,6 @@ tags: [TIL, react, forms, json-schema]
 hero: document-helloquence-OQMZwNd3ThU-unsplash.jpeg
 heroAlt: Man filling out a document
 heroCredit: 'Photo by [Helloquence](https://unsplash.com/@helloquence)'
-published: true
 ---
 
 Lately, I've been spending a lot of time figuring out how to validate a UI with an API, specifically that the format of the request/response that the UI expects matches that of the API. [GraphQL](https://graphql.org/) naturally solves this problems (and many other problems as well), but not everyone can immediately switch from [REST](https://restfulapi.net/) to GraphQL.

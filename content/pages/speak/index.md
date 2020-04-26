@@ -8,23 +8,23 @@ Every opportunity I get to share my knowledge and experience with others is a bl
 
 ## 2020
 
-### [React Loop 2020](https://reactloop.com/)
-
-##### Chicago, Illinois (Venue SIX10)
-
-#### Talk TBD
-
-Friday, June 19, 2020 @ TBD
-
----
-
 ### [Developer Week New York 2020](https://www.developerweek.com/NYC/)
 
 ##### New York City, New York (Brooklyn Expo Center)
 
 #### [Future JavaScript: What’s left?](/talks/#future-javascript-whats-left)
 
-Wednesday, June 17, 2020 @ TBD
+Wednesday, December 9, 2020 @ TBD
+
+---
+
+### [React Loop 2020](https://reactloop.com/)
+
+##### Chicago, Illinois (Venue SIX10)
+
+#### [TypeScript + React = ❤️](/talks/#typescript--react--)
+
+~~Friday, June 19, 2020 @ TBD~~ (Cancelled)
 
 ---
 

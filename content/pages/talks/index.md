@@ -30,6 +30,7 @@ You can also check out my [Speaking Engagements](/speak/) past and present, as w
 - [React FUNdamentals Workshop](#react-fundamentals-workshop)
 - [React in style 😎](#react-in-style-)
 - [React Properly](#react-properly)
+- [TypeScript + React = ❤️](#typescript--react--)
 - [Why choose React?](#why-choose-react)
 
 #### JavaScript
@@ -285,6 +286,12 @@ _(Retired)_
 > ECMAScript 6 is the new version of JavaScript and is already available in the engines of our modern browsers and servers. Many of its features are just a little syntactic sugar to help make our JavaScript code clearer and more concise. Experience with JavaScript will help you get the most out of this session, but you don't have to have a JavaScript black belt to leave feeling confident in ES6.
 >
 > Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other sweet ES6 features. Oh, and don't worry if you didn't understand any of those terms — you soon will after this session.
+
+### TypeScript + React = ❤️
+
+> TypeScript is a JavaScript superset that compiles down to vanilla JavaScript and has become increasingly popular. TypeScript proponents proclaim that it eliminates entire classes of bugs that affect our applications. But what exactly are those bugs? Which ones are particular to building React components and applications? Is TypeScript worth the learning curve?
+>
+> In this session geared towards devs with prior experience building React applications, let’s answer those questions. We’ll walk through the common bugs that infect our apps and learn how the use of strong types with TypeScript can help prevent them. After the session, you’ll be itching to try it out in your next project!
 
 ### Why choose React?
 
