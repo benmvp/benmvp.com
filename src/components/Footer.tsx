@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import {
   createStyles,
   makeStyles,
@@ -51,12 +51,12 @@ const Footer = () => {
       <SocialIcons />
       <Typography variant="body1" align="center" className={classes.links}>
         {LINKS.map(({ to, title }, index) => (
-          <>
+          <Fragment key={to}>
             <GatsbyLink key={to} to={to} color="inherit" underline="hover">
               {title}
             </GatsbyLink>
             {index < LINKS.length - 1 ? ' | ' : ''}
-          </>
+          </Fragment>
         ))}
       </Typography>
       <Typography variant="body2" align="center">
