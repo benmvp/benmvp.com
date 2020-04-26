@@ -114,6 +114,16 @@ const PostCard = ({
           />
         )}
         <CardContent>
+          {showDate && (
+            <Typography
+              gutterBottom
+              variant="subtitle2"
+              color="textSecondary"
+              component="h4"
+            >
+              {date}
+            </Typography>
+          )}
           <Typography
             gutterBottom
             variant="h5"
@@ -123,16 +133,6 @@ const PostCard = ({
           >
             {title}
           </Typography>
-          {showDate && (
-            <Typography
-              gutterBottom
-              variant="subtitle2"
-              color="textPrimary"
-              component="h4"
-            >
-              {date}
-            </Typography>
-          )}
           <Typography variant="body2" color="textSecondary" component="p">
             {summary}
           </Typography>

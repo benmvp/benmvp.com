@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) =>
       backgroundColor: theme.palette.background.default,
     },
     container: {
-      minHeight: '100vh',
+      minHeight: ({ masthead }) => (masthead ? undefined : '100vh'),
       marginTop: ({ masthead }) => (masthead ? undefined : theme.spacing(2)),
     },
     toTop: {
@@ -85,14 +85,13 @@ const Layout = ({ children, masthead = false, maxWidth = 'md' }: Props) => {
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
           <Header />
-          <Toolbar className={classes.backToTopAnchor} />
+          <Toolbar
+            id="back-to-top-anchor"
+            className={classes.backToTopAnchor}
+          />
 
           {masthead && <Masthead />}
-          <Container
-            maxWidth={maxWidth}
-            className={classes.container}
-            id="back-to-top-anchor"
-          >
+          <Container maxWidth={maxWidth} className={classes.container}>
             <Box component="main">{children}</Box>
           </Container>
           <Footer />
