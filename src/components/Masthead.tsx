@@ -56,7 +56,7 @@ const Masthead = () => {
   const classes = useStyles()
   const { masthead } = useStaticQuery(graphql`
     query MastheadInfo {
-      masthead: file(relativePath: { eq: "masthead.jpg" }) {
+      masthead: file(relativePath: { eq: "ben-ilegbodu-masthead.jpg" }) {
         childImageSharp {
           fluid(
             maxWidth: 3000
