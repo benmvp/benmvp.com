@@ -76,7 +76,7 @@ interface Props {
 const useStyles = makeStyles((theme) =>
   createStyles({
     media: {
-      height: 140,
+      height: 266.66667,
     },
     buttons: {
       flex: 1,
