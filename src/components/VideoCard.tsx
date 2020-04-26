@@ -50,7 +50,7 @@ const VideoCard = ({
   const classes = useStyles()
 
   return (
-    <Card className={`${classes.root} ${className}`}>
+    <Card variant="outlined" className={`${classes.root} ${className}`}>
       <CardMedia
         component="iframe"
         src={getEmbedSrc(id, provider)}

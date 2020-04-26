@@ -1,9 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, makeStyles, Box, Typography } from '@material-ui/core'
+import {
+  createStyles,
+  makeStyles,
+  Box,
+  Typography,
+  Grid,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import PostList from '../components/PostList'
+import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
 
@@ -31,7 +37,22 @@ export default ({ data }) => {
         <Typography variant="h3" component="h2" gutterBottom>
           Read...
         </Typography>
-        <PostList posts={recentPosts} mode="min" />
+        <Grid container spacing={2}>
+          {recentPosts.edges.map(({ node }) => (
+            <Grid key={node.id} item xs={12} lg={6}>
+              <PostCard
+                mode="min"
+                slug={node.fields.slug}
+                title={node.frontmatter.title}
+                tags={node.frontmatter.tags}
+                date={node.frontmatter.date}
+                summary={node.frontmatter.description || node.excerpt}
+                hero={node.frontmatter.hero}
+                heroAlt={node.frontmatter.heroAlt}
+              />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
       <Box component="section" className={classes.section}>
         <Typography variant="h3" component="h2" gutterBottom>
@@ -59,7 +80,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "//posts//" }
         frontmatter: { published: { ne: false } }
       }
-      limit: 6
+      limit: 4
     ) {
       edges {
         node {

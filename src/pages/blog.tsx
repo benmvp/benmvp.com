@@ -1,9 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Grid } from '@material-ui/core'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import PostCard from '../components/PostCard'
 import { getBlogUrl } from '../utils'
-import PostList from '../components/PostList'
 
 const Blog = ({ data }) => {
   const { posts } = data
@@ -15,7 +16,21 @@ const Blog = ({ data }) => {
         title="Blog"
         description="Browse through Ben Ilegbodu's blog posts to keep learn more about React and other frontend topics"
       />
-      <PostList posts={posts} />
+      <Grid container spacing={2}>
+        {posts.edges.map(({ node }) => (
+          <Grid key={node.id} item xs={12} sm={6} lg={4}>
+            <PostCard
+              slug={node.fields.slug}
+              title={node.frontmatter.title}
+              tags={node.frontmatter.tags}
+              date={node.frontmatter.date}
+              summary={node.frontmatter.description || node.excerpt}
+              hero={node.frontmatter.hero}
+              heroAlt={node.frontmatter.heroAlt}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </Layout>
   )
 }
