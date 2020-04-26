@@ -30,13 +30,12 @@
   - [x] Optimize header & blog footer logos
   - [x] Masthead text
   - [ ] Cards for upcoming speaking engagements ("Learn")
-  - [ ] Embed of recent video ("Watch")
+  - [x] Embed of recent video ("Watch")
   - [x] Recent blog posts (no excerpt) ("Read")
   - [ ] Twitter mentions (like swyx.io) ("Engage")
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains
-- [ ] Add Netlify plugins (gatsby caching)
-- [ ] Add night mode switch to header
+- [x] Add Netlify plugins (gatsby caching)
 - [ ] 404 page
 - [ ] Write blog post about Google Developer Expert
 - [ ] Write blog post on `npx kill-port` (#TIL)
@@ -59,6 +58,7 @@
 - [ ] Learning ES6 page data-driven w/ experts
 - [ ] Add blog post category pages
 - [ ] Related blog posts in blog post footer
+- [ ] Add night mode switch to header
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
 - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
