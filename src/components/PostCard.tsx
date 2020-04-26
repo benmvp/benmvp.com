@@ -98,14 +98,13 @@ const PostCard = ({
   const classes = useStyles()
   const url = getBlogUrl(slug)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(url)
-  const showHero = mode !== 'min'
   const showDate = mode !== 'min'
   const showShare = mode !== 'min'
 
   return (
     <Card>
       <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
-        {hero && showHero && (
+        {hero && (
           <CardMedia
             component="img"
             image={hero.childImageSharp.fluid.src}
@@ -129,6 +128,7 @@ const PostCard = ({
             variant="h5"
             color="textPrimary"
             component="h3"
+            title={title}
             noWrap
           >
             {title}

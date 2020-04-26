@@ -29,7 +29,7 @@
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos
   - [x] Masthead text
-  - [ ] Cards for upcoming speaking engagements ("Learn")
+  - [x] Cards for upcoming speaking engagements ("Attend")
   - [x] Embed of recent video ("Watch")
   - [x] Recent blog posts (no excerpt) ("Read")
   - [ ] Twitter mentions (like swyx.io) ("Engage")

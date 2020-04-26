@@ -9,15 +9,56 @@ import {
 } from '@material-ui/core'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
+
+const SpeakCardList = () => (
+  <Grid container spacing={2}>
+    <Grid item xs={12} sm={6} lg={4}>
+      <SpeakCard
+        conference="Developer Week New York 2020"
+        conferenceUrl="https://www.developerweek.com/NYC/"
+        location="New York City, New York"
+        venue="Brooklyn Expo Center"
+        talks={[
+          {
+            date: 'Wed, 09 December 2020',
+            title: 'Future JavaScript: What’s left?',
+            url: '/talks/#future-javascript-whats-left',
+          },
+        ]}
+      />
+    </Grid>
+  </Grid>
+)
+
+const PostCardList = ({ posts }) => (
+  <Grid container spacing={2}>
+    {posts.edges.map(({ node }) => (
+      <Grid key={node.id} item xs={12} sm={6} lg={4}>
+        <PostCard
+          mode="min"
+          slug={node.fields.slug}
+          title={node.frontmatter.title}
+          tags={node.frontmatter.tags}
+          date={node.frontmatter.date}
+          summary={node.frontmatter.description || node.excerpt}
+          hero={node.frontmatter.hero}
+          heroAlt={node.frontmatter.heroAlt}
+        />
+      </Grid>
+    ))}
+  </Grid>
+)
 
 const useStyles = makeStyles((theme) =>
   createStyles({
     section: {
       '&:not(:first-child)': {
         marginTop: theme.spacing(3),
+        backgroundColor: theme.palette.secondary,
       },
     },
     videoCard: {
@@ -33,29 +74,38 @@ export default ({ data }) => {
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl()} />
+
       <Box component="section" className={classes.section}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Attend one of Ben's future tech talks"
+        >
+          Attend...
+        </Typography>
+        <SpeakCardList />
+      </Box>
+
+      <Box component="section" className={classes.section}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Read one of Ben's recent blog posts"
+        >
           Read...
         </Typography>
-        <Grid container spacing={2}>
-          {recentPosts.edges.map(({ node }) => (
-            <Grid key={node.id} item xs={12} lg={6}>
-              <PostCard
-                mode="min"
-                slug={node.fields.slug}
-                title={node.frontmatter.title}
-                tags={node.frontmatter.tags}
-                date={node.frontmatter.date}
-                summary={node.frontmatter.description || node.excerpt}
-                hero={node.frontmatter.hero}
-                heroAlt={node.frontmatter.heroAlt}
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <PostCardList posts={recentPosts} />
       </Box>
+
       <Box component="section" className={classes.section}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Watch Ben's most recent tech talk video"
+        >
           Watch...
         </Typography>
         <VideoCard
@@ -80,7 +130,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "//posts//" }
         frontmatter: { published: { ne: false } }
       }
-      limit: 4
+      limit: 6
     ) {
       edges {
         node {
