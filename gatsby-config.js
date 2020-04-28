@@ -24,39 +24,13 @@ module.exports = {
   },
 
   plugins: [
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-codegen',
     'gatsby-theme-material-ui',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/content/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/content/images/`,
-      },
-    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-code-buttons',
-            options: {
-              buttonText: '',
-              tooltipText: 'Copy',
-            },
-          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -70,6 +44,13 @@ module.exports = {
               showLineNumbers: true,
             },
           },
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              buttonText: '',
+              tooltipText: 'Copy',
+            },
+          },
           'gatsby-remark-responsive-iframe',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -79,8 +60,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-codegen',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     {
@@ -114,6 +93,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-feed',
       options: {
@@ -125,10 +105,11 @@ module.exports = {
 
                 return {
                   ...edge.node.frontmatter,
-                  description: edge.node.excerpt,
+                  description:
+                    edge.node.frontmatter.description || edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url,
-                  guid: url,
+                  guid: edge.node.id,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 }
               })
@@ -137,15 +118,20 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fileAbsolutePath: { regex: "//posts//" } }
+                  filter: {
+                    fileAbsolutePath: { regex: "//posts//" }
+                    frontmatter: { published: { ne: false } }
+                  }
                 ) {
                   edges {
                     node {
+                      id
                       excerpt
                       html
                       fields { slug }
                       frontmatter {
                         title
+                        description
                         date
                       }
                     }
@@ -157,6 +143,24 @@ module.exports = {
             title: 'Ben Ilegbodu Blog RSS Feed',
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/images/`,
       },
     },
   ],
