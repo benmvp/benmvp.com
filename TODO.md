@@ -19,12 +19,9 @@
 - [x] Update header
   - [x] Add links to pages (collapsed on mobile)
   - [x] See through version for home page
-  - [ ] Add hidden "skip navigation"
 - [x] Add site footer
 - [x] Add SEO to pages
-  - [ ] Add schema.org
   - [x] Add canonical URL
-  - [ ] Masthead as social image
 - [x] Build new home page
   - [x] Optimized masthead (like https://jennielakenan.com/ or https://csswizardry.com/)
   - [x] Optimize header & blog footer logos
@@ -36,22 +33,25 @@
 - [x] Add `learning-es6.benmvp.com` to Google Domains
 - [x] Add Netlify plugins (gatsby caching)
 - [x] 404 page
-- [ ] Write blog post about Google Developer Expert
-- [ ] Write blog post on `npx kill-port` (#TIL)
+- [x] Write blog post about Google Developer Expert
 - [x] Rewrite about page (see https://www.sarasoueidan.com/about/)
-- [ ] Re-launch website
+- [x] Re-launch website
 
 ## Post-MVP
 
+- [ ] Write blog post on new blog (again)
 - [ ] Talks/videos/speak as data-driven pages
 - [ ] Add minishops pages
   - [ ] Add mailing list option for those interested at bottom
   - [ ] Share (top and bottom)
+  - [ ] Add schema.org
+  - [ ] Masthead as social image
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
 - [ ] Upcoming minishops on home page ("Develop")
+  - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
-- [ ] Write blog post on new blog (again)
+- [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer
 - [ ] Learning ES6 page data-driven w/ excerpts
