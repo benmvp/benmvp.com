@@ -49,7 +49,7 @@ const SpeakCard = ({
   venue,
 }: Props) => {
   const classes = useStyles()
-  const locationName = `${location}${venue && ` (${venue})`}`
+  const fullLocation = `${location}${venue && ` (${venue})`}`
 
   return (
     <Card>
@@ -59,10 +59,10 @@ const SpeakCard = ({
           variant="subtitle2"
           color="textSecondary"
           component="h4"
-          title={locationName}
+          title={fullLocation}
           noWrap
         >
-          {locationName}
+          {fullLocation}
         </Typography>
         <Typography
           gutterBottom
