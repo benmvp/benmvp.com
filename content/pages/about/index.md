@@ -1,17 +1,19 @@
 ---
 title: All About Ben
 hero: ./family-photo-summer-2019.jpg
-heroAlt: Ilegbodu Family Photo
+heroAlt: Ilegbodu Family Photo 2019
 ---
 
-Ben Ilegbodu is a Jesus follower (aka a [Christian](http://www.aweandreverence.com/gospel/what-is-the-gospel/248)), a husband, and a father of 3. He lives in Pittsburg, California with his wife Rashida and their children Simone, Avery and Asher.
+## Hey y'all, I'm Ben! 👋🏾
 
-Ben joined [Stitch Fix](https://www.stitchfix.com/) ([@stitchfix](https://twitter.com/stitchfix)) in October 2019 as a Principal Frontend Engineer, tasked with building a new React-based Design System and helping to raise the level of frontend within the customer-facing organization.
+I am a Jesus follower (aka a [Christian](https://bibleproject.com/explore/gospel-kingdom/)) living in the San Francisco Bay Area, California with my wife Rashida and our 3 children Simone, Avery and Asher. I was born and raised in the great city of Houston, Texas.
 
-Prior to Stitch Fix, he spent over 4 years at [Eventbrite](https://www.eventbrite.com/) ([@eventbrite](https://twiter.com/eventbrite)) as a Principal Frontend Engineer and nearly 9 years at [Zazzle](http://www.zazzle.com) ([@Zazzle](https://twitter.com/zazzle)) as UI Architect.
+In addition to my handful of [open source projects](https://github.com/benmvp), **I love teaching others to help them grow.** I've given 150+ [talks and workshops](/speak/) that have helped thousands all over the world level up their JavaScript, React, and overall frontend skills. I'm also a [Google Developer Expert](https://developers.google.com/community/experts) and [Microsoft MVP](https://mvp.microsoft.com/).
 
-Ben attended [Stanford University](https://www.stanford.edu/) ([@stanford](http://twitter.com/stanford)) and received both a B.S. and M.S. in Computer Science with an HCI concentration. His strong computer science background, coupled with his HCI training and passion for building web sites, has provided him with a unique set of skills where he is able to get nitty gritty with hardcore back-end developers as well as work through challenging UX issues with designers and product managers.
+From the time I built my [first website](https://bgo.benmvp.com/) in 1998, I've been super passionate about the Web. I graduated from [Stanford University](https://www.stanford.edu/) and received my B.S. and M.S. degrees in Computer Science with concentrations in Human-Computer Interaction (the closest I could get to web development).
 
-Ben is passionate about building frontend systems. On the UI side that results in [React](https://reactjs.org/)-based component libraries, but he also spends a lot of time with frontend "divops" (Babel, Webpack, ESLint, packaging libraries, CI, etc.). He also loves teaching others in order to level up their JavaScript and React skills.
+Currently, I'm particularly passionate about building frontend systems. On the UI side that's [React](https://reactjs.org/)-based component libraries. But I also spend a lot of time working on frontend ["divops"](https://www.jonathancreamer.com/announcing-div-ops/) (aka Babel, Webpack, ESLint, packaging libraries, CI, etc).
 
-Ben's complete resume is available on [LinkedIn](https://www.linkedin.com/in/benmvp). Follow him on Twitter at [@BenMVP](http://twitter.com/benmvp). Fork him on [Github](https://github.com/benmvp). Track his [speaking engagements](/speak/). Watch his [speaking videos](/videos/). [Ask him anything](/ama/)!
+I joined [Stitch Fix](https://www.stitchfix.com/) in October 2019 as a Principal Frontend Engineer, tasked with building a new React-based Design System and helping to raise the level of frontend within the customer-facing organization. I've also worked for [Eventbrite](https://www.eventbrite.com/) (4.5 years), [Zazzle](http://www.zazzle.com) (9 years), [Yahoo](https://www.yahoo.com/) (summer), [Amazon](https://www.amazon.com/) (summer), [Microsoft](https://www.microsoft.com/) (summer), [Rice University](https://eceweb.rice.edu/) (summer), and Stanford (various times).
+
+My complete resume is available on [LinkedIn](https://www.linkedin.com/in/benmvp). Follow me on Twitter at [@benmvp](http://twitter.com/benmvp). Check out my open source work on [Github](https://github.com/benmvp). Track my [speaking engagements](/speak/) and watch my [speaking videos](/videos/). Lastly, [ask me anything](/ama/)!

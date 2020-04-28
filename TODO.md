@@ -38,7 +38,7 @@
 - [x] 404 page
 - [ ] Write blog post about Google Developer Expert
 - [ ] Write blog post on `npx kill-port` (#TIL)
-- [ ] Rewrite about page (see https://www.sarasoueidan.com/about/)
+- [x] Rewrite about page (see https://www.sarasoueidan.com/about/)
 - [ ] Re-launch website
 
 ## Post-MVP
