@@ -1,6 +1,105 @@
 [build]
-  command = "yarn run build"
+  command = "npm run build"
   publish = "public/"
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
+
+[[plugins]]
+package = "netlify-plugin-no-more-404"
+
+# Redirects from subfolders to subdomains
+[[redirects]]
+  from = "/learning-es6"
+  to = "https://learning-es6.benmvp.com/"
+[[redirects]]
+  from = "/you-dont-need-js-for-that"
+  to = "https://you-dont-need-js-for-that.benmvp.com/"
+
+# Post redirects from /* to /blog/*
+[[redirects]]
+  from = "/new-blog/"
+  to = "/blog/new-blog/"
+[[redirects]]
+  from = "/learning-es6-history-of-ecmascript/"
+  to = "/blog/learning-es6-history-of-ecmascript/"
+[[redirects]]
+  from = "/learning-es6-goals-features-ecmascript-6/"
+  to = "/blog/learning-es6-goals-features-ecmascript-6/"
+[[redirects]]
+  from = "/learning-es6-using-es6-right-now/"
+  to = "/blog/learning-es6-using-es6-right-now/"
+[[redirects]]
+  from = "/20-reasons-to-drop-ie8-like-its-hot/"
+  to = "/blog/20-reasons-to-drop-ie8-like-its-hot/"
+[[redirects]]
+  from = "/learning-es6-arrow-functions/"
+  to = "/blog/learning-es6-arrow-functions/"
+[[redirects]]
+  from = "/learning-es6-block-level-scoping-let-const/"
+  to = "/blog/learning-es6-block-level-scoping-let-const/"
+[[redirects]]
+  from = "/learning-es6-destructuring/"
+  to = "/blog/learning-es6-destructuring/"
+[[redirects]]
+  from = "/speaking-at-little-rock-tech-fest-2015/"
+  to = "/blog/speaking-at-little-rock-tech-fest-2015/"
+[[redirects]]
+  from = "/learning-es6-parameter-handling/"
+  to = "/blog/learning-es6-parameter-handling/"
+[[redirects]]
+  from = "/learning-es6-enhanced-object-literals/"
+  to = "/blog/learning-es6-enhanced-object-literals/"
+[[redirects]]
+  from = "/learning-es6-template-literals-tagged-templates/"
+  to = "/blog/learning-es6-template-literals-tagged-templates/"
+[[redirects]]
+  from = "/learning-es6-promises/"
+  to = "/blog/learning-es6-promises/"
+[[redirects]]
+  from = "/little-rock-tech-fest-2015/"
+  to = "/blog/little-rock-tech-fest-2015/"
+[[redirects]]
+  from = "/nodevember-2015/"
+  to = "/blog/nodevember-2015/"
+[[redirects]]
+  from = "/learning-es6-for-of-loop/"
+  to = "/blog/learning-es6-for-of-loop/"
+[[redirects]]
+  from = "/learning-es6-classes/"
+  to = "/blog/learning-es6-classes/"
+[[redirects]]
+  from = "/learning-es6-new-collections/"
+  to = "/blog/learning-es6-new-collections/"
+[[redirects]]
+  from = "/learning-es6-iterators-iterables/"
+  to = "/blog/learning-es6-iterators-iterables/"
+[[redirects]]
+  from = "/learning-es6-generators-as-iterators/"
+  to = "/blog/learning-es6-generators-as-iterators/"
+[[redirects]]
+  from = "/nationjs-nodeday-2016/"
+  to = "/blog/nationjs-nodeday-2016/"
+[[redirects]]
+  from = "/ndc-oslo-2016/"
+  to = "/blog/ndc-oslo-2016/"
+[[redirects]]
+  from = "/front-porch-austin-2016/"
+  to = "/blog/front-porch-austin-2016/"
+[[redirects]]
+  from = "/nodesummit-2016/"
+  to = "/blog/nodesummit-2016/"
+[[redirects]]
+  from = "/learning-es6-12-tricks-for-es6-fun/"
+  to = "/blog/learning-es6-12-tricks-for-es6-fun/"
+[[redirects]]
+  from = "/new-gatsby-blog/"
+  to = "/blog/new-gatsby-blog/"
+[[redirects]]
+  from = "/microsoft-mvp/"
+  to = "/blog/microsoft-mvp/"
+
+# Slides redirects from /slides to slides.benmvp.com
 
 [[redirects]]
   from = "/slides/confoo2016-es6.html"
