@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { makeStyles, createStyles, Box, Typography } from '@material-ui/core'
 import Markdown from 'react-markdown'
@@ -42,3 +43,13 @@ const HeroImage = ({ alt, credit, className, fluid }: Props) => {
 }
 
 export default HeroImage
+
+export const fragment = graphql`
+  fragment HeroFluid960 on File {
+    childImageSharp {
+      fluid(maxWidth: 960, traceSVG: { color: "#3f51b5" }, quality: 75) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+`

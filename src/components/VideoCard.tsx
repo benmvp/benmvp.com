@@ -54,6 +54,7 @@ const VideoCard = ({
       <CardMedia
         component="iframe"
         src={getEmbedSrc(id, provider)}
+        title={title}
         className={classes.media}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

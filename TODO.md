@@ -35,7 +35,7 @@
 - [x] Google Analytics
 - [x] Add `learning-es6.benmvp.com` to Google Domains
 - [x] Add Netlify plugins (gatsby caching)
-- [ ] 404 page
+- [x] 404 page
 - [ ] Write blog post about Google Developer Expert
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] Rewrite about page (see https://www.sarasoueidan.com/about/)

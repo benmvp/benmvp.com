@@ -110,11 +110,7 @@ export const query = graphql`
         date(formatString: "DD MMMM YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")
         hero {
-          childImageSharp {
-            fluid(maxWidth: 960, traceSVG: { color: "#3f51b5" }, quality: 75) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
+          ...HeroFluid960
         }
         heroAlt
         heroCredit

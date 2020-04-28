@@ -2,12 +2,12 @@ import React from 'react'
 import { Typography, Box } from '@material-ui/core'
 
 interface Props {
-  className: string
+  className?: string
   subTitle?: string
   title: string
 }
 
-const PostHeader = ({ className, subTitle, title }: Props) => {
+const PageHeader = ({ className, subTitle, title }: Props) => {
   return (
     <Box component="header" className={className}>
       <Typography variant="h3" component="h1" gutterBottom>
@@ -22,4 +22,4 @@ const PostHeader = ({ className, subTitle, title }: Props) => {
   )
 }
 
-export default PostHeader
+export default PageHeader

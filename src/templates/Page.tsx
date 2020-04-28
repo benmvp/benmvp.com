@@ -61,11 +61,7 @@ export const query = graphql`
       frontmatter {
         title
         hero {
-          childImageSharp {
-            fluid(maxWidth: 960, traceSVG: { color: "#3f51b5" }, quality: 75) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
+          ...HeroFluid960
         }
         heroAlt
       }
