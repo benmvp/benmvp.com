@@ -18,8 +18,11 @@ const useStyles = makeStyles((theme) =>
         ...theme.typography.body1,
         margin: theme.spacing(0, 0, 2, 0),
       },
-      '& img': {
-        ...getFullWidthImageStyles(theme),
+      '& p > img': {
+        display: 'block',
+        margin: '0 auto',
+        maxWidth: 800,
+        width: '100%',
       },
       '& ul': {
         listStyle: 'circle',
