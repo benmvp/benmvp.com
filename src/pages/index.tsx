@@ -7,6 +7,7 @@ import {
   Typography,
   Grid,
 } from '@material-ui/core'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import SpeakCard from '../components/SpeakCard'
@@ -31,6 +32,17 @@ const SpeakCardList = () => (
         ]}
       />
     </Grid>
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/speak/" variant="h6">
+          View all speaking engagements
+        </Link>
+      </Box>
+    </Grid>
   </Grid>
 )
 
@@ -50,6 +62,17 @@ const PostCardList = ({ posts }) => (
         />
       </Grid>
     ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/blog/" variant="h6">
+          View all posts
+        </Link>
+      </Box>
+    </Grid>
   </Grid>
 )
 
@@ -117,6 +140,15 @@ export default ({ data }) => {
           url="/speak/#jsconf-hawaii-2020"
           className={classes.videoCard}
         />
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          mt={1}
+        >
+          <Link href="/videos/" variant="h6">
+            View all videos
+          </Link>
+        </Box>
       </Box>
     </Layout>
   )

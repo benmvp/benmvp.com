@@ -2,7 +2,8 @@
 
 ## Post-MVP
 
-- [ ] Write blog post on new blog (again)
+- [x] Write blog post on new blog (again)
+- [x] Add "View all" links for home page sections
 - [ ] Talks/videos/speak as data-driven pages
 - [ ] Add minishops pages
   - [ ] Add mailing list option for those interested at bottom
@@ -12,7 +13,6 @@
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
 - [ ] Upcoming minishops on home page ("Develop")
-  - [ ] Add "View all" links for other sections
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
 - [ ] Write blog post on `npx kill-port` (#TIL)
