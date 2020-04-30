@@ -22,6 +22,10 @@ If you can't watch the video, here are the steps:
 1. Choose "Capture **node** screenshot"
 1. Save the file
 
-That's it! Now all of your PRs will get immediate 🚢 thanks to your beautiful screenshots. 😂
+That's it!
+
+But it gets even better because this process is even **easier** in Firefox. Once in the Element inspector, right-click on the element. There's a "Screenshot Node" option right there in the menu! 🎉
+
+Now all of your PRs will get immediate 🚢 thanks to your beautiful screenshots. 😂
 
 Keep learning my friends. 🤓
