@@ -18,3 +18,5 @@ The evaluation process wasn't too bad really. The hardest part is getting past q
 Anyway, I'm looking forward to what all being a part of the program offers. To start, check out this awesome animation they included in the email!
 
 !["I'm a Google Developer expert" welcome animation](google-developer-expert-welcome-animation.gif)
+
+Keep learning my friends. 🤓
