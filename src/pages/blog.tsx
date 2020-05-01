@@ -14,7 +14,7 @@ const Blog = ({ data }) => {
       <Seo
         url={getBlogUrl()}
         title="Blog"
-        description="Browse through Ben Ilegbodu's blog posts to keep learn more about React and other frontend topics"
+        description="Browse through Ben Ilegbodu's blog posts to learn more about React and other frontend topics"
       />
       <Grid container spacing={2}>
         {posts.edges.map(({ node }) => (

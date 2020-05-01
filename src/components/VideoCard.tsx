@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import {
   makeStyles,
-  createStyles,
   Card,
   CardActionArea,
   CardContent,
@@ -16,6 +15,9 @@ const getEmbedSrc = (id: string, provider: Provider) => {
   if (provider === 'youtube') {
     return `https://www.youtube.com/embed/${id}`
   }
+  if (provider === 'vimeo') {
+    return `https://player.vimeo.com/video/${id}`
+  }
 }
 
 const useStyles = makeStyles({
@@ -28,14 +30,17 @@ const useStyles = makeStyles({
   },
 })
 
-interface Props {
-  className?: string
+export interface VideoInfo {
   conference: string
   date: string
   id: string
   provider?: Provider
   title: string
-  url: string
+  url?: string
+}
+
+interface Props extends VideoInfo {
+  className?: string
 }
 
 const VideoCard = ({
@@ -48,6 +53,21 @@ const VideoCard = ({
   url,
 }: Props) => {
   const classes = useStyles()
+  const ContentWrapper = ({
+    children: wrapperChildren,
+  }: {
+    children: ReactNode
+  }) => {
+    if (url) {
+      return (
+        <CardActionArea component={Link} to={url} underline="none">
+          {wrapperChildren}
+        </CardActionArea>
+      )
+    }
+
+    return <>{wrapperChildren}</>
+  }
 
   return (
     <Card variant="outlined" className={`${classes.root} ${className}`}>
@@ -60,7 +80,7 @@ const VideoCard = ({
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-      <CardActionArea component={Link} to={url} underline="none">
+      <ContentWrapper>
         <CardContent>
           <Typography
             gutterBottom
@@ -83,7 +103,7 @@ const VideoCard = ({
             {date}
           </Typography>
         </CardContent>
-      </CardActionArea>
+      </ContentWrapper>
     </Card>
   )
 }
