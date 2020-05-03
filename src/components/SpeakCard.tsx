@@ -11,6 +11,7 @@ import {
   Button,
 } from '@material-ui/core'
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import { genSpeakSlug } from '../utils'
 
 interface Props {
   conference: string
@@ -84,7 +85,7 @@ const SpeakCard = ({
 
         {talks.map(({ date, links, room, time, title, url }, index) => (
           <Fragment key={title}>
-            <Typography variant="body1">
+            <Typography id={genSpeakSlug(title)} variant="body1">
               <GatsbyLink to={url} color="inherit">
                 {title}
               </GatsbyLink>

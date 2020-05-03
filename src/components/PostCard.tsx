@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
-import { getBlogUrl } from '../utils'
+import { getBlogUrl, genPostSlug } from '../utils'
 
 const useCopyUrl = (
   url: string,
@@ -101,7 +101,7 @@ const PostCard = ({
   const showShare = mode !== 'min'
 
   return (
-    <Card>
+    <Card id={genPostSlug(title)}>
       <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
         {hero && (
           <CardMedia

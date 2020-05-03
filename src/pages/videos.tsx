@@ -1,5 +1,6 @@
 import React from 'react'
-import { createStyles, makeStyles, Box } from '@material-ui/core'
+import { createStyles, makeStyles, Box, Typography } from '@material-ui/core'
+import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) =>
       marginBottom: theme.spacing(5),
     },
     videoCard: {
-      margin: theme.spacing(0, 'auto', 3),
+      margin: theme.spacing(3, 'auto', 0),
     },
   }),
 )
@@ -32,6 +33,13 @@ const Videos = () => {
         description="Watch videos of some of Ben Ilegbodu's past tech talks to keep up to date with the latest in React and frontend web development best practices."
       />
       <PageHeader className={classes.header} title={PAGE_TITLE} />
+      <Typography variant="body1">
+        I have been blessed with the opportunity to travel throughout the United
+        States and all over the world to share my knowledge to help other
+        developers grow in their skills. Check out some of the videos from my
+        past <GatsbyLink href="/speak/">speaking engagements</GatsbyLink> that
+        can help you level up your frontend skills.
+      </Typography>
       {VIDEOS_INFO.map((videoInfo) => (
         <Box key={videoInfo.id}>
           <VideoCard {...videoInfo} className={classes.videoCard} />

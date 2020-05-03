@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import { format as formatDate, parse as parseDate } from 'date-fns'
 import {
   makeStyles,
   Card,
@@ -8,6 +9,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
+import { genVideoSlug } from '../utils'
 
 type Provider = 'youtube' | 'vimeo'
 
@@ -53,6 +55,11 @@ const VideoCard = ({
   url,
 }: Props) => {
   const classes = useStyles()
+  const formattedDate = formatDate(
+    parseDate(date, 'MMMM d, yyyy', new Date()),
+    'dd MMMM yyyy',
+  )
+
   const ContentWrapper = ({
     children: wrapperChildren,
   }: {
@@ -70,7 +77,11 @@ const VideoCard = ({
   }
 
   return (
-    <Card variant="outlined" className={`${classes.root} ${className}`}>
+    <Card
+      id={genVideoSlug(title)}
+      variant="outlined"
+      className={`${classes.root} ${className}`}
+    >
       <CardMedia
         component="iframe"
         src={getEmbedSrc(id, provider)}
@@ -100,7 +111,7 @@ const VideoCard = ({
             {conference}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {date}
+            {formattedDate}
           </Typography>
         </CardContent>
       </ContentWrapper>
