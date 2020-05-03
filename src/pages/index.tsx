@@ -12,8 +12,11 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
-import VideoCard from '../components/VideoCard'
+import VideoCard, { VideoInfo } from '../components/VideoCard'
 import { getUrl } from '../utils'
+import VIDEOS from '../../content/pages/videos.json'
+
+const MOST_RECENT_VIDEO = VIDEOS[0] as VideoInfo
 
 const SpeakCardList = () => (
   <Grid container spacing={2}>
@@ -131,15 +134,7 @@ export default ({ data }) => {
         >
           Watch...
         </Typography>
-        <VideoCard
-          conference="JSConf Hawai’i 2020"
-          date="05 February 2020"
-          id="kQ4r9OATmB0"
-          provider="youtube"
-          title="The “perfect” library tooling"
-          url="/speak/#jsconf-hawaii-2020"
-          className={classes.videoCard}
-        />
+        <VideoCard {...MOST_RECENT_VIDEO} className={classes.videoCard} />
         <Box
           display="flex"
           justifyContent={{ xs: 'center', sm: 'flex-end' }}

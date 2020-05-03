@@ -1,7 +1,5 @@
 # To Add
 
-## Post-MVP
-
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
 - [ ] Talks/videos/speak as data-driven pages
@@ -15,6 +13,7 @@
 - [ ] Upcoming minishops on home page ("Develop")
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
+- [ ] Pull out fragments into separate file
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer
