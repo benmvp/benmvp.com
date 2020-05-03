@@ -12,7 +12,7 @@ tags:
     template-literals,
     tagged-templates,
   ]
-hero: backtick.png
+hero: ./backtick.png
 heroAlt: 'Backtick - powerful commands, just one tick away'
 ---
 

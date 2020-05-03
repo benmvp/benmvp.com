@@ -4,7 +4,7 @@ title: Enhanced object literals
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, object-literals]
-hero: object-literal.png
+hero: ./object-literal.png
 heroAlt: object literals
 ---
 

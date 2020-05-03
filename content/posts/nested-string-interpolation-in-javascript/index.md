@@ -4,7 +4,7 @@ title: Nested string interpolation in JavaScript
 description: A quick look at how nested string interpolation within template literals is possible with ES6
 category: learning-es6
 tags: [es6, strings, javascript, interpolation, template, literals]
-hero: russian-nesting-dolls-blake-weyland-9hhOVsf1lpU-unsplash.jpg
+hero: ./russian-nesting-dolls-blake-weyland-9hhOVsf1lpU-unsplash.jpg
 heroAlt: Three assorted Russian nesting dolls
 heroCredit: 'Photo by [Blake Weyland](https://unsplash.com/@blakeweyland)'
 ---

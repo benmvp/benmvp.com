@@ -5,7 +5,7 @@ subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6]
-hero: es6-logo.png
+hero: ./es6-logo.png
 heroAlt: ES6 logo
 ---
 

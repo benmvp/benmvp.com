@@ -4,7 +4,7 @@ title: Capture DOM element screenshots in Chrome
 description: How to create a screenshot of a DOM element in Chromium-based DevTools
 category: devtools
 tags: [devtools, chrome, edge, chromium]
-hero: polaroid-picture-adrien-olichon-5C9CWNaH5Pk-unsplash.jpeg
+hero: ./polaroid-picture-adrien-olichon-5C9CWNaH5Pk-unsplash.jpeg
 heroAlt: Picture of a polaroid of Amsterdam, Netherlands
 heroCredit: 'Photo by [Adrien Olichon](https://unsplash.com/@adrienolichon)'
 ---

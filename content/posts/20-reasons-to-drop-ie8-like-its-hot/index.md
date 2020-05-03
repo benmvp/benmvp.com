@@ -19,7 +19,7 @@ tags:
     opera,
     safari,
   ]
-hero: rip-ie8.jpg
+hero: ./rip-ie8.jpg
 heroAlt: RIP IE 8
 ---
 

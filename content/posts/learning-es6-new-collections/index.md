@@ -4,7 +4,7 @@ title: New collections
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, map, set, weakmap, weakset]
-hero: many-coins.jpg
+hero: ./many-coins.jpg
 heroAlt: A collection of different coins
 ---
 

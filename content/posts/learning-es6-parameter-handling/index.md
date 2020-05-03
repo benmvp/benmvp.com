@@ -14,7 +14,7 @@ tags:
     rest-operator,
     spread-operator,
   ]
-hero: spread-butter.jpg
+hero: ./spread-butter.jpg
 heroAlt: Spreading button on a piece of toast
 ---
 

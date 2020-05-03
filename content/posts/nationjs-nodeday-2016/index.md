@@ -3,7 +3,7 @@ date: 2016-06-12
 title: NationJS Node Day 2016
 category: speaking
 tags: [conferences, es6, speaking, talks]
-hero: nationjs-logo.jpg
+hero: ./nationjs-logo.jpg
 heroAlt: NationJS Node Day
 ---
 

@@ -4,7 +4,7 @@ title: Iterators & iterables
 subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, iterables, iterators, javascript, learning-es6]
-hero: iterators-gonna-iterate.png
+hero: ./iterators-gonna-iterate.png
 heroAlt: iterators
 ---
 

@@ -3,7 +3,7 @@ date: 2020-04-22
 title: Async testing with Enzyme & React
 category: react
 tags: [react, testing]
-hero: wait-sign-kai-pilger-1k3vsv7iIIc-unsplash.jpeg
+hero: ./wait-sign-kai-pilger-1k3vsv7iIIc-unsplash.jpeg
 heroAlt: Wait crosswalk sign in New York City
 heroCredit: 'Photo by [Kai Pilger](https://unsplash.com/@kaip)'
 published: false

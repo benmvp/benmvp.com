@@ -2,7 +2,7 @@
 date: 2018-05-04
 title: New Gatsby Blog!
 category: general
-hero: gatsby-logo-wide.png
+hero: ./gatsby-logo-wide.png
 heroAlt: Gatsby logo
 ---
 

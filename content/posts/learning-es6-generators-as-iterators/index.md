@@ -13,7 +13,7 @@ tags:
     javascript,
     learning-es6,
   ]
-hero: electric-generator.jpg
+hero: ./electric-generator.jpg
 heroAlt: electric generator
 ---
 

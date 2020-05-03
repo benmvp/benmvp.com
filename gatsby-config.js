@@ -1,7 +1,7 @@
 require('ts-node').register({ files: true })
 
 const SITE_CONFIG = require('./config/site')
-const { getUrl } = require('./src/utils')
+const { getBlogUrl } = require('./src/utils')
 
 module.exports = {
   siteMetadata: {
@@ -24,42 +24,26 @@ module.exports = {
   },
 
   plugins: [
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-codegen',
-    'gatsby-theme-material-ui',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 800,
-              backgroundColor: 'transparent',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              showLineNumbers: true,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-code-buttons',
-            options: {
-              buttonText: '',
-              tooltipText: 'Copy',
-            },
-          },
-          'gatsby-remark-responsive-iframe',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-autolink-headers',
-        ],
-      },
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/images/`,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     {
@@ -76,6 +60,9 @@ module.exports = {
         icon: `static${SITE_CONFIG.siteImage}`,
       },
     },
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-codegen',
+    'gatsby-theme-material-ui',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
@@ -101,7 +88,7 @@ module.exports = {
           {
             serialize: ({ query: { allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map((edge) => {
-                const url = getUrl(edge.node.fields.slug)
+                const url = getBlogUrl(edge.node.fields.slug)
 
                 return {
                   ...edge.node.frontmatter,
@@ -146,21 +133,34 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-transformer-remark',
       options: {
-        path: `${__dirname}/content/posts/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/images/`,
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              backgroundColor: 'transparent',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              buttonText: '',
+              tooltipText: 'Copy',
+            },
+          },
+          'gatsby-remark-responsive-iframe',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
+        ],
       },
     },
   ],

@@ -5,7 +5,7 @@ subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, transpilers, babel, traceur]
-hero: babel-logo.png
+hero: ./babel-logo.png
 heroAlt: Babel logo
 ---
 
