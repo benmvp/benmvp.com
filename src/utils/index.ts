@@ -1,4 +1,5 @@
 import slugify from 'slugify'
+import { parse } from 'date-fns'
 import SITE_CONFIG from '../../config/site'
 
 export const getUrl = (path = '/') => `${SITE_CONFIG.siteUrl}${path}`
@@ -11,3 +12,7 @@ const genSlug = (title: string): string =>
 export const genSpeakSlug = (title: string) => genSlug(`speak-${title}`)
 export const genPostSlug = (title: string) => genSlug(`post-${title}`)
 export const genVideoSlug = (title: string) => genSlug(`video-${title}`)
+
+const NOW = Date.now()
+export const parseDate = (date: string): Date =>
+  parse(date, 'dd MMMM yyyy', NOW)
