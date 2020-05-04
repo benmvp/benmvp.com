@@ -4,11 +4,10 @@ import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
-import VideoCard, { VideoInfo } from '../components/VideoCard'
+import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
-import VIDEOS from '../../content/pages/videos.json'
+import { getVideos } from '../utils/video'
 
-const VIDEOS_INFO = VIDEOS as VideoInfo[]
 const PAGE_TITLE = 'Tech Videos'
 
 const useStyles = makeStyles((theme) =>
@@ -40,9 +39,9 @@ const Videos = () => {
         past <GatsbyLink href="/speak/">speaking engagements</GatsbyLink> that
         can help you level up your frontend skills.
       </Typography>
-      {VIDEOS_INFO.map((videoInfo) => (
-        <Box key={videoInfo.id}>
-          <VideoCard {...videoInfo} className={classes.videoCard} />
+      {getVideos().map((video) => (
+        <Box key={video.id}>
+          <VideoCard {...video} className={classes.videoCard} />
         </Box>
       ))}
     </Layout>

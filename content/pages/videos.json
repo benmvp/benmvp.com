@@ -3,7 +3,7 @@
     "title": "The \"perfect\" library tooling",
     "url": "/talks/#the-perfect-library-tooling",
     "conference": "JSConf Hawai'i 2020",
-    "date": "February 5, 2020",
+    "date": "05 February 2020",
     "provider": "youtube",
     "id": "kQ4r9OATmB0"
   },
@@ -11,7 +11,7 @@
     "title": "Navigating the Ecosystem",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "NationJS Frontrunners React 2019",
-    "date": "December 6, 2019",
+    "date": "06 December 2019",
     "provider": "youtube",
     "id": "e4tkunIoWTc"
   },
@@ -19,7 +19,7 @@
     "title": "Navigating the React Ecosystem",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "All Things Open 2019",
-    "date": "October 14, 2019",
+    "date": "14 October 2019",
     "provider": "youtube",
     "id": "36pyoPW0"
   },
@@ -27,7 +27,7 @@
     "title": "Let's web dev like it's 1999!",
     "url": "/talks/#lets-web-dev-like-its-1999",
     "conference": "CSS Conf EU 2019",
-    "date": "May 31, 2019",
+    "date": "31 May 2019",
     "provider": "youtube",
     "id": "TJxxzKoaLNE"
   },
@@ -35,7 +35,7 @@
     "title": "State of the React Ecosystem (Keynote)",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "Reactathon 2019",
-    "date": "March 31, 2019",
+    "date": "31 March 2019",
     "provider": "youtube",
     "id": "mtjHxwUQUs0"
   },
@@ -43,14 +43,14 @@
     "title": "State of the React Ecosystem (Keynote)",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "ReactNext 2018",
-    "date": "November 4, 2018",
+    "date": "04 November 2018",
     "provider": "youtube",
     "id": "yOWzQOZIANU"
   },
   {
     "title": "Ask Me Anything! - Build your own React-based stack",
     "conference": "NDC Sydney 2018",
-    "date": "September 20, 2018",
+    "date": "20 September 2018",
     "provider": "youtube",
     "id": "1KOq5AZS2m8"
   },
@@ -58,7 +58,7 @@
     "title": "Navigating the React Solar System",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "NDC Sydney 2018",
-    "date": "September 20, 2018",
+    "date": "20 September 2018",
     "provider": "vimeo",
     "id": "297082496"
   },
@@ -66,7 +66,7 @@
     "title": "Help! My React app is slowwwww! 🐢",
     "url": "/talks/#help-my-react-app-is-slowwwww-",
     "conference": "React Alicante 2018",
-    "date": "September 14, 2018",
+    "date": "14 September 2018",
     "provider": "youtube",
     "id": "LBzJFcZsPBQ"
   },
@@ -74,7 +74,7 @@
     "title": "Let's web dev like it's 1999!",
     "url": "/talks/#lets-web-dev-like-its-1999",
     "conference": "NEJS 2018",
-    "date": "July 27, 2018",
+    "date": "27 July 2018",
     "provider": "youtube",
     "id": "6hyIZlaWVmU"
   },
@@ -82,7 +82,7 @@
     "title": "ES.next features that'll make ya 💃🕺🏾",
     "url": "/talks/#esnext-features-thatll-make-ya-",
     "conference": "NodeSummit 2018",
-    "date": "July 24, 2018",
+    "date": "24 July 2018",
     "provider": "youtube",
     "id": "9yK4t2CuIHQ"
   },
@@ -90,7 +90,7 @@
     "title": "Why React?",
     "url": "/talks/#why-choose-react",
     "conference": "Reactathon 2018",
-    "date": "March 20, 2018",
+    "date": "20 March 2018",
     "provider": "youtube",
     "id": "Wfec35hSALc"
   },
@@ -98,7 +98,7 @@
     "title": "React FUNdamentals Workshop",
     "url": "/talks/#react-fundamentals-workshop",
     "conference": "Sabio LA",
-    "date": "January 23, 2018",
+    "date": "23 January 2018",
     "provider": "youtube",
     "id": "VjI3MoDoJ"
   },
@@ -106,7 +106,7 @@
     "title": "Layperson's guide to React Fiber",
     "url": "/talks/#react-fiber-for-the-rest-of-us",
     "conference": "React Rally 2017",
-    "date": "August 24, 2017",
+    "date": "24 August 2017",
     "provider": "youtube",
     "id": "q6QTxq_pFn0"
   },
@@ -114,7 +114,7 @@
     "title": "Isomorphic React sans Node??",
     "url": "/talks/#isomorphic-react-sans-node-",
     "conference": "NodeSummit 2017",
-    "date": "July 27, 2017",
+    "date": "27 July 2017",
     "provider": "vimeo",
     "id": "229703092"
   },
@@ -122,7 +122,7 @@
     "title": "React Native + ES.next = ♥",
     "url": "/talks/#react--esnext--",
     "conference": "Chain React 2017",
-    "date": "July 10, 2017",
+    "date": "10 July 2017",
     "provider": "youtube",
     "id": "nbtEwjRJXLo"
   },
@@ -130,7 +130,7 @@
     "title": "Navigating the React Solar System",
     "url": "/talks/#navigating-the-react-solar-system",
     "conference": "Modern Web Meetup",
-    "date": "May 23, 2017",
+    "date": "23 May 2017",
     "provider": "youtube",
     "id": "-6gfOJwwXvs"
   },
@@ -138,7 +138,7 @@
     "title": "Isomorphic React sans Node??",
     "url": "/talks/#isomorphic-react-sans-node-",
     "conference": "Render Conference 2017",
-    "date": "March 30, 2017",
+    "date": "30 March 2017",
     "provider": "youtube",
     "id": "zxtcr8Zuvfs"
   },
@@ -146,7 +146,7 @@
     "title": "React + ES.next = ♥",
     "url": "/talks/#react--esnext--",
     "conference": "ReactConf 2017",
-    "date": "March 13, 2017",
+    "date": "13 March 2017",
     "provider": "youtube",
     "id": "jh_Qzi"
   },
@@ -154,7 +154,7 @@
     "title": "React Exposed! 😮",
     "url": "talks/#react-exposed-",
     "conference": "Forward JS 2017",
-    "date": "March 1, 2017",
+    "date": "01 March 2017",
     "provider": "youtube",
     "id": "cAYMqBU7Qko"
   },
@@ -162,7 +162,7 @@
     "title": "React + ES.next = ♥",
     "url": "/talks/#react--esnext--",
     "conference": "BuzzJS 2.0 2017",
-    "date": "January 27, 2017",
+    "date": "27 January 2017",
     "provider": "youtube",
     "id": "fXWvcmrbX5M"
   },
@@ -170,14 +170,14 @@
     "title": "Isomorphic React sans Node??",
     "url": "/talks/#isomorphic-react-sans-node-",
     "conference": "Real World React",
-    "date": "October 18, 2016",
+    "date": "18 October 2016",
     "provider": "youtube",
     "id": "_bfZHCSkT3Q"
   },
   {
     "title": "Evolution of Javascript IV",
     "conference": "NodeSummit 2016",
-    "date": "July 28, 2016",
+    "date": "28 July 2016",
     "provider": "vimeo",
     "id": "180426378"
   },
@@ -185,7 +185,7 @@
     "title": "React + ES.next = ♥",
     "url": "/talks/#react--esnext--",
     "conference": "Front Porch Austin 2016",
-    "date": "July 19, 2016",
+    "date": "19 July 2016",
     "provider": "youtube",
     "id": "Fs4bJr1b7UU"
   },
@@ -193,7 +193,7 @@
     "title": "You don't need JavaScript for that!",
     "url": "/talks/#you-dont-need-javascript-for-that",
     "conference": "NDC Oslo 2016",
-    "date": "June 10, 2016",
+    "date": "10 June 2016",
     "provider": "vimeo",
     "id": "171319733"
   },
@@ -201,7 +201,7 @@
     "title": "Sweet ES6",
     "url": "/talks/#sweet-es6",
     "conference": "NationJS Node Day 2016",
-    "date": "March 11, 2016",
+    "date": "11 March 2016",
     "provider": "vimeo",
     "id": "169948346"
   },
@@ -209,7 +209,7 @@
     "title": "Sugar & Spice and everything nice about ES6",
     "url": "/talks/#sugar--spice-and-everything-nice-about-es6",
     "conference": "Nodevember 2015",
-    "date": "November 14, 2015",
+    "date": "14 November 2015",
     "provider": "youtube",
     "id": "x1BvUqmn8xA"
   }
