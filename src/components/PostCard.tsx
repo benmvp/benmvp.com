@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { graphql } from 'gatsby'
 import {
   makeStyles,
   createStyles,
@@ -160,26 +159,3 @@ const PostCard = ({
 }
 
 export default PostCard
-
-export const dataFragment = graphql`
-  fragment PostCardInfo on MarkdownRemark {
-    frontmatter {
-      title
-      description
-      tags
-      date(formatString: "DD MMMM YYYY")
-      hero {
-        childImageSharp {
-          fluid(maxWidth: 550, traceSVG: { color: "#3f51b5" }, quality: 50) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      heroAlt
-    }
-    fields {
-      slug
-    }
-    excerpt
-  }
-`
