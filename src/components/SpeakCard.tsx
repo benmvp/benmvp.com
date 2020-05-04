@@ -12,27 +12,21 @@ import {
 } from '@material-ui/core'
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import { genSpeakSlug } from '../utils'
+import { SpeakingEngagement } from '../utils/speaking-engagement'
 
-interface Props {
-  conference: string
-  conferenceUrl: string
-  location: string
-  talks: {
-    date: string
-    isCancelled?: boolean
-    links?: { label: string; url: string }[]
-    room?: string
-    time?: string
-    title: string
-    url: string
-  }[]
-  venue?: string
-}
+interface Props extends SpeakingEngagement {}
 
 const useStyles = makeStyles((theme) =>
   createStyles({
+    card: {
+      opacity: (props: Props) => (props.isCancelled ? 0.5 : undefined),
+    },
+    divider: {
+      margin: theme.spacing(2, 0),
+    },
     talksDivider: {
-      margin: theme.spacing(1, 0),
+      margin: theme.spacing(1, 0, 1, 'auto'),
+      width: '50%',
     },
     link: {
       '&:not(:first-child)': {
@@ -42,18 +36,20 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const SpeakCard = ({
-  conference,
-  conferenceUrl,
-  location,
-  talks,
-  venue,
-}: Props) => {
-  const classes = useStyles()
-  const fullLocation = `${location}${venue && ` (${venue})`}`
+const SpeakCard = (props: Props) => {
+  const classes = useStyles(props)
+  const {
+    conference,
+    conferenceUrl,
+    isCancelled,
+    location,
+    talks,
+    venue,
+  } = props
+  const fullLocation = `${location}${venue ? ` (${venue})` : ''}`
 
   return (
-    <Card>
+    <Card className={classes.card}>
       <CardContent>
         <Typography
           gutterBottom
@@ -69,7 +65,7 @@ const SpeakCard = ({
           gutterBottom
           variant="h5"
           color="textPrimary"
-          component="h3"
+          component={isCancelled ? 's' : 'h3'}
           title={conference}
           noWrap
         >
@@ -81,11 +77,19 @@ const SpeakCard = ({
           >
             {conference}
           </Link>
+          {isCancelled ? ' (Cancelled)' : ''}
         </Typography>
+
+        <Divider className={classes.divider} />
 
         {talks.map(({ date, links, room, time, title, url }, index) => (
           <Fragment key={title}>
-            <Typography id={genSpeakSlug(title)} variant="body1">
+            <Typography
+              id={genSpeakSlug(title)}
+              variant="body1"
+              title={title}
+              noWrap
+            >
               <GatsbyLink to={url} color="inherit">
                 {title}
               </GatsbyLink>
@@ -95,7 +99,7 @@ const SpeakCard = ({
               {time && ` @ ${time}`}
               {room && ` (${room})`}
             </Typography>
-            <Box display="flex" justifyContent="flex-end">
+            <Box display="flex" justifyContent="flex-end" flexWrap="wrap">
               {links?.map(({ label, url }) => (
                 <Button
                   href={url}
