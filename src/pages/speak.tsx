@@ -8,7 +8,7 @@ import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import SpeakCard from '../components/SpeakCard'
 import { getUrl } from '../utils'
-import { getSpeakingEngagements } from '../utils/speaking-engagement'
+import { getEngagements } from '../utils/speaking-engagement'
 
 const PAGE_TITLE = 'Speaking Engagements'
 
@@ -65,7 +65,7 @@ const SpeakingEngagements = ({ data }) => {
         <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
       </Typography>
       <Grid container spacing={2}>
-        {getSpeakingEngagements().map((speak) => (
+        {getEngagements().map((speak) => (
           <Grid key={speak.id} item xs={12}>
             <SpeakCard {...speak} />
           </Grid>

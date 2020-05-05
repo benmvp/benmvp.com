@@ -5,7 +5,7 @@ import { getTalk, Talk } from './talk'
 
 import SPEAKING_ENGAGEMENTS from '../../content/pages/speaking-engagements.json'
 
-interface SpeakTalk extends Talk {
+interface EngagementTalk extends Talk {
   date: string
   id?: string
   links?: { label: string; url: string }[]
@@ -19,17 +19,17 @@ export interface SpeakingEngagement {
   url: string
   isCancelled?: boolean
   location: string
-  talks: SpeakTalk[]
+  talks: EngagementTalk[]
   venue?: string
 }
 
-export const getSpeakingEngagements = () =>
+export const getEngagements = () =>
   SPEAKING_ENGAGEMENTS.map(
     (speakInfo): SpeakingEngagement => ({
       ...speakInfo,
       id: slugify(speakInfo.name),
       talks: speakInfo.talks.map(
-        (talk): SpeakTalk => {
+        (talk): EngagementTalk => {
           const parsedDate = Date.parse(talk.date)
 
           return {
@@ -41,17 +41,17 @@ export const getSpeakingEngagements = () =>
         },
       ),
     }),
+  ).sort((engagementA, engagementB) =>
+    differenceInMilliseconds(
+      Date.parse(engagementB?.talks?.[0].date),
+      Date.parse(engagementA?.talks?.[0].date),
+    ),
   )
 
-export const getUpcomingSpeakingEngagements = () =>
-  getSpeakingEngagements()
+export const getUpcomingEngagements = () =>
+  getEngagements()
     .filter(({ talks }) =>
       talks?.some(({ date }) => isFuture(Date.parse(date))),
     )
     .filter(({ isCancelled }) => !isCancelled)
-    .sort((speakA, speakB) =>
-      differenceInMilliseconds(
-        Date.parse(speakA?.talks?.[0].date),
-        Date.parse(speakB?.talks?.[0].date),
-      ),
-    )
+    .reverse()

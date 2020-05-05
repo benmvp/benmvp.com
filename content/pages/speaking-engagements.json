@@ -1,13 +1,13 @@
 [
   {
-    "name": "Open Source 101 Austin 2020",
+    "name": "Open Source 101 Austin 2021",
     "url": "https://opensource101.com/events/austin-2021/",
     "location": "Austin, Texas",
     "venue": "Austin Convention Center",
     "talks": [
       {
         "id": "perfect-lib",
-        "date": "February 24-25 2021"
+        "date": "02/24/2021"
       }
     ]
   },
@@ -31,7 +31,7 @@
     "talks": [
       {
         "id": "future-javascript",
-        "date": "December 8-10, 2020"
+        "date": "12/09/2020"
       }
     ]
   },

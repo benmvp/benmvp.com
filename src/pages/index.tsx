@@ -15,12 +15,9 @@ import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
 import { getVideos } from '../utils/video'
-import { getUpcomingSpeakingEngagements } from '../utils/speaking-engagement'
+import { getUpcomingEngagements } from '../utils/speaking-engagement'
 
-const UPCOMING_SPEAKING_ENGAGEMENTS = getUpcomingSpeakingEngagements().slice(
-  0,
-  6,
-)
+const UPCOMING_ENGAGEMENTS = getUpcomingEngagements().slice(0, 2)
 const RECENT_VIDEOS = getVideos().slice(0, 2)
 
 const useStyles = makeStyles((theme) =>
@@ -39,8 +36,8 @@ const useStyles = makeStyles((theme) =>
 
 const SpeakCardList = () => (
   <Grid container spacing={2}>
-    {UPCOMING_SPEAKING_ENGAGEMENTS.map((speak) => (
-      <Grid key={speak.id} item xs={12} sm={6} lg={4}>
+    {UPCOMING_ENGAGEMENTS.map((speak) => (
+      <Grid key={speak.id} item xs={12} md={6}>
         <SpeakCard {...speak} />
       </Grid>
     ))}

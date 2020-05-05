@@ -1,4 +1,4 @@
-import { getSpeakingEngagements } from './speaking-engagement'
+import { getEngagements } from './speaking-engagement'
 import { genTalkSlug } from '.'
 
 type Provider = 'youtube' | 'vimeo'
@@ -32,7 +32,7 @@ const getProviderData = (
 }
 
 export const getVideos = () =>
-  getSpeakingEngagements()
+  getEngagements()
     .map((engagement): Video | undefined => {
       const talkWithVideo = engagement.talks.find(({ links }) =>
         links?.some(({ label }) => label === 'Video'),
