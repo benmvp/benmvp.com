@@ -4,9 +4,9 @@ title: My advice to bootcamp graduates
 description: My advice to developers just graduating from a bootcamp on finding a good first job and successfully growing their career from the start
 category: career
 tags: [bootcamp, advice, grad, graduate]
-hero: blue-anchor-on-wall.jpg
-heroAlt: Blue anchor stenciled on the wall
-heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
+# hero: ./blue-anchor-on-wall.jpg
+# heroAlt: Blue anchor stenciled on the wall
+# heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
 published: false
 ---
 
