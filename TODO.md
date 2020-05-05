@@ -13,7 +13,7 @@
 - [ ] Upcoming minishops on home page ("Develop")
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
-- [ ] Pull out fragments into separate file
+- [x] Pull out fragments into separate file
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer

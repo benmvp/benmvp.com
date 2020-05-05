@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { createStyles, makeStyles, Typography, Grid } from '@material-ui/core'
+import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
@@ -46,14 +47,26 @@ const SpeakingEngagements = ({ data }) => {
       />
       <Typography variant="body1" gutterBottom>
         Every opportunity I get to share my knowledge and experience with others
-        is a blessing! My hope is that every time I give a talk the attendees
-        learn something new that will make them a better developer. If you're
-        interested in having me speak to or hold a workshop with your group,{' '}
-        <a href="mailto:ben@benmvp.com">shoot me an email</a>.
+        is a blessing! My hope is that when I give a talk, the attendees will
+        learn something new that will make them a better developer.
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        If you're interested in having me speak to or hold a workshop with your
+        group, thank you! It means a lot that you entrust me with with leveling
+        up your group. Please feel free to contact me via{' '}
+        <a
+          href="https://twitter.com/benmvp)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Twitter
+        </a>
+        , <a href="mailto:ben@benmvp.com">email</a> or{' '}
+        <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
       </Typography>
       <Grid container spacing={2}>
         {getSpeakingEngagements().map((speak) => (
-          <Grid key={speak.conference} item xs={12}>
+          <Grid key={speak.id} item xs={12}>
             <SpeakCard {...speak} />
           </Grid>
         ))}

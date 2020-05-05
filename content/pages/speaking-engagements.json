@@ -1,66 +1,61 @@
 [
   {
-    "conference": "Open Source 101 Austin 2020",
-    "conferenceUrl": "https://opensource101.com/events/austin-2021/",
+    "name": "Open Source 101 Austin 2020",
+    "url": "https://opensource101.com/events/austin-2021/",
     "location": "Austin, Texas",
     "venue": "Austin Convention Center",
     "talks": [
       {
-        "title": "The \"perfect\" library tooling",
-        "url": "/talks/#the-perfect-library-tooling",
-        "date": "24 February 2021"
+        "id": "perfect-lib",
+        "date": "February 24-25 2021"
       }
     ]
   },
   {
-    "conference": "HalfStack Charlotte 2020",
-    "conferenceUrl": "https://halfstackconf.com/charlotte/",
+    "name": "HalfStack Charlotte 2020",
+    "url": "https://halfstackconf.com/charlotte/",
     "location": "Charlotte, North Carolina",
     "venue": "TBD",
     "talks": [
       {
-        "title": "Navigating the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system",
-        "date": "11 December 2020"
+        "id": "react-eco",
+        "date": "12/11/2020"
       }
     ]
   },
   {
-    "conference": "Developer Week New York 2020",
-    "conferenceUrl": "https://www.developerweek.com/NYC/",
+    "name": "DeveloperWeek NY JavaScript Conference 2020",
+    "url": "https://www.developerweek.com/NYC/",
     "location": "New York City, New York",
     "venue": "Brooklyn Expo Center",
     "talks": [
       {
-        "title": "Future JavaScript: What’s left?",
-        "url": "/talks/#future-javascript-whats-left",
-        "date": "09 December 2020"
+        "id": "future-javascript",
+        "date": "December 8-10, 2020"
       }
     ]
   },
   {
-    "conference": "React Loop 2020",
-    "conferenceUrl": "https://reactloop.com/",
+    "name": "React Loop 2020",
+    "url": "https://reactloop.com/",
     "isCancelled": true,
     "location": "Chicago, Illinois",
     "venue": "Venue SIX10",
     "talks": [
       {
-        "title": "TypeScript + React = ❤️",
-        "url": "/talks/#typescript--react--",
-        "date": "19 June 2020"
+        "id": "typescript-react",
+        "date": "06/19/2020"
       }
     ]
   },
   {
-    "conference": "Reactathon",
-    "conferenceUrl": "https://www.reactathon.com/",
+    "name": "Reactathon 2020",
+    "url": "https://www.reactathon.com/",
     "location": "Remote",
     "talks": [
       {
-        "title": "Intro to Modern React using Hooks Workshop",
-        "url": "/talks/#intro-to-modern-react-using-hooks-workshop",
-        "date": "30 March 2020",
+        "id": "react-workshop-hooks",
+        "date": "03/30/2020",
         "time": "9a",
         "links": [
           {
@@ -72,15 +67,14 @@
     ]
   },
   {
-    "conference": "Flashback Conference",
-    "conferenceUrl": "http://flashback.dev",
+    "name": "Flashback Conference 2020",
+    "url": "http://flashback.dev",
     "location": "Orlando, Florida",
     "venue": "The Abbey",
     "talks": [
       {
-        "title": "Let's web dev like it's 1999!",
-        "url": "/talks/#lets-web-dev-like-its-1999",
-        "date": "10 February 2020",
+        "id": "web-dev",
+        "date": "02/10/2020",
         "time": "1:30p",
         "links": [
           {
@@ -92,17 +86,20 @@
     ]
   },
   {
-    "conference": "JSConf Hawai'i 2020",
-    "conferenceUrl": "https://www.jsconfhi.com/",
+    "name": "JSConf Hawai'i 2020",
+    "url": "https://www.jsconfhi.com/",
     "location": "Waikiki, Hawai'i",
     "venue": "'Alohilani Resort",
     "talks": [
       {
-        "title": "The \"perfect\" library tooling",
-        "url": "/talks/#the-perfect-library-tooling",
-        "date": "05 February 2020",
+        "id": "perfect-lib",
+        "date": "02/05/2020",
         "time": "11:30a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=kQ4r9OATmB0"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/jsconfhi/perfect-lib"
@@ -112,17 +109,21 @@
     ]
   },
   {
-    "conference": "NationJS Frontrunners React 2019",
-    "conferenceUrl": "http://nationjs.com/",
+    "name": "NationJS Frontrunners React 2019",
+    "url": "http://nationjs.com/",
     "location": "Washington, D.C.",
     "venue": "Burke Theater",
     "talks": [
       {
+        "id": "react-eco",
         "title": "Navigating the Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system",
         "date": "06 December 2019",
         "time": "10:35a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=e4tkunIoWTc"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2019/nationjs/react-eco"
@@ -132,14 +133,13 @@
     ]
   },
   {
-    "conference": "Silicon Valley Code Camp 2019",
-    "conferenceUrl": "https://www.siliconvalley-codecamp.com/",
+    "name": "Silicon Valley Code Camp 2019",
+    "url": "https://www.siliconvalley-codecamp.com/",
     "location": "San Jose, California",
     "venue": "PayPal Town Hall",
     "talks": [
       {
-        "title": "Navigating the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "react-eco",
         "date": "19 October 2019",
         "time": "11a",
         "room": "Fireside A",
@@ -153,18 +153,21 @@
     ]
   },
   {
-    "conference": "All Things Open 2019",
-    "conferenceUrl": "https://allthingsopen.org/",
+    "name": "All Things Open 2019",
+    "url": "https://allthingsopen.org/",
     "location": "Raleigh, North Carolina",
     "venue": "Raleigh Convention Center",
     "talks": [
       {
-        "title": "Navigating the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "react-eco",
         "date": "14 October 2019",
         "time": "2:15p",
         "room": "Ballroom C",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=36pyoPW0-iU"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2019/ato/react-eco"
@@ -174,14 +177,13 @@
     ]
   },
   {
-    "conference": "Web Unleashed 2019",
-    "conferenceUrl": "https://fitc.ca/event/webu19/",
+    "name": "Web Unleashed 2019",
+    "url": "https://fitc.ca/event/webu19/",
     "location": "Toronto, Canada",
     "venue": "Hilton Toronto",
     "talks": [
       {
-        "title": "Let's web dev like it's 1999!",
-        "url": "/talks/#lets-web-dev-like-its-1999",
+        "id": "web-dev",
         "date": "13 September 2019",
         "time": "1:30p",
         "room": "Toronto II",
@@ -195,17 +197,20 @@
     ]
   },
   {
-    "conference": "CSS Conf EU 2019",
-    "conferenceUrl": "https://2019.cssconf.eu/",
+    "name": "CSS Conf EU 2019",
+    "url": "https://2019.cssconf.eu/",
     "location": "Berlin, Germany",
     "venue": "Arena Berlin",
     "talks": [
       {
-        "title": "Let's web dev like it's 1999!",
-        "url": "/talks/#lets-web-dev-like-its-1999",
+        "id": "web-dev",
         "date": "31 May 2019",
         "time": "14:20",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=TJxxzKoaLNE"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2019/cssconfeu/webdev"
@@ -215,17 +220,21 @@
     ]
   },
   {
-    "conference": "Reactathon 2019",
-    "conferenceUrl": "https://www.reactathon.com/",
+    "name": "Reactathon 2019",
+    "url": "https://www.reactathon.com/",
     "location": "San Francisco, California",
     "venue": "Github HQ",
     "talks": [
       {
-        "title": "State of the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system) (Keynote",
+        "id": "react-eco",
+        "title": "State of the React Ecosystem (Keynote)",
         "date": "31 March 2019",
         "time": "10:10a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=mtjHxwUQUs0&t=183"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2019/reactathon/react-eco"
@@ -235,17 +244,21 @@
     ]
   },
   {
-    "conference": "React Next 2018",
-    "conferenceUrl": "https://react-next.com/schedule",
+    "name": "React Next 2018",
+    "url": "https://react-next.com/schedule",
     "location": "Tel Aviv, Israel",
     "venue": "Dan Panorama Hotel",
     "talks": [
       {
+        "id": "react-eco",
         "title": "State of the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system) (Keynote",
         "date": "04 November 2018",
         "time": "9:50a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=yOWzQOZIANU"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/reactnext/react-eco"
@@ -255,14 +268,13 @@
     ]
   },
   {
-    "conference": "Framework Summit 2018",
-    "conferenceUrl": "https://www.frameworksummit.com/",
+    "name": "Framework Summit 2018",
+    "url": "https://www.frameworksummit.com/",
     "location": "Park City, Utah",
     "venue": "DoubleTree Inn",
     "talks": [
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "03 October 2018",
         "time": "4p",
         "links": [
@@ -275,8 +287,8 @@
     ]
   },
   {
-    "conference": "NDC Sydney 2018",
-    "conferenceUrl": "https://ndcsydney.com/",
+    "name": "NDC Sydney 2018",
+    "url": "https://ndcsydney.com/",
     "location": "Sydney, Australia",
     "venue": "Hilton Sydney",
     "talks": [
@@ -293,12 +305,12 @@
         ]
       },
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "20 September 2018",
         "time": "10:20a",
         "room": "Room 5",
         "links": [
+          { "label": "Video", "url": "https://vimeo.com/297082496" },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/ndcsydney/nav-react"
@@ -308,17 +320,20 @@
     ]
   },
   {
-    "conference": "React Alicante 2018",
-    "conferenceUrl": "http://reactalicante.es/",
+    "name": "React Alicante 2018",
+    "url": "http://reactalicante.es/",
     "location": "Alicante, Spain",
     "venue": "Hotel Meliã",
     "talks": [
       {
-        "title": "Help! My React app is slowwwww! 🐢",
-        "url": "/talks/#help-my-react-app-is-slowwwww-",
+        "id": "react-perf",
         "date": "14 September 2018",
         "time": "16:50",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=LBzJFcZsPBQ"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/reactalicante/react-perf"
@@ -326,12 +341,15 @@
         ]
       },
       {
-        "title": "\"Minimally-painful\" React-Redux testing Workshop",
-        "url": "/talks/#minimally-painful-react-redux-testing-workshop",
+        "id": "redux-testing-workshop",
         "date": "13 September 2018",
         "time": "9:00",
         "room": "Terra Lucis II",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2018/reactalicante/react-workshop"
+          },
           {
             "label": "Workshop code",
             "url": "https://github.com/benmvp/react-workshop/tree/email-based/src/testing"
@@ -341,8 +359,8 @@
     ]
   },
   {
-    "conference": "React Rally 2018",
-    "conferenceUrl": "http://www.reactrally.com/",
+    "name": "React Rally 2018",
+    "url": "http://www.reactrally.com/",
     "location": "Salt Lake City, Utah",
     "venue": "Sheraton Salt Lake City Hotel",
     "talks": [
@@ -353,17 +371,20 @@
     ]
   },
   {
-    "conference": "NEJS 2018",
-    "conferenceUrl": "https://2018.nejsconf.com/",
+    "name": "NEJS 2018",
+    "url": "https://2018.nejsconf.com/",
     "location": "Omaha, Nebraska",
     "venue": "Holland Performing Arts Center",
     "talks": [
       {
-        "title": "Let's web dev like it's 1999!",
-        "url": "/talks/#lets-web-dev-like-its-1999",
+        "id": "web-dev",
         "date": "27 July 2018",
         "time": "1:30p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=6hyIZlaWVmU"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/nejs/webdev"
@@ -373,18 +394,21 @@
     ]
   },
   {
-    "conference": "Node Summit 2018",
-    "conferenceUrl": "http://www.nodesummit.com/",
+    "name": "Node Summit 2018",
+    "url": "http://www.nodesummit.com/",
     "location": "San Francisco, California",
     "venue": "Mission Bay Conference Center",
     "talks": [
       {
-        "title": "ES.next features that'll make ya 💃🕺🏾",
-        "url": "/talks/#esnext-features-thatll-make-ya-",
+        "id": "esnext",
         "date": "24 July 2018",
         "time": "2:55p",
         "room": "Main Stage",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=9yK4t2CuIHQ"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/nodesummit/esnext"
@@ -401,18 +425,21 @@
     ]
   },
   {
-    "conference": "Music City Code 2018",
-    "conferenceUrl": "http://www.musiccitytech.com/conferences/music-city-code/",
+    "name": "Music City Code 2018",
+    "url": "http://www.musiccitytech.com/conferences/music-city-code/",
     "location": "Nashville, Tennessee",
     "venue": "Vanderbilt University",
     "talks": [
       {
-        "title": "React FUNndamentals Workshop",
-        "url": "/talks/#react-fundamentals-workshop",
+        "id": "react-workshop",
         "date": "31 May 2018",
         "time": "9a",
         "room": "Cinema",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2018/mctech/react-workshop"
+          },
           {
             "label": "Workshop code",
             "url": "https://github.com/benmvp/react-workshop/tree/email-based/src/react"
@@ -422,17 +449,20 @@
     ]
   },
   {
-    "conference": "Reactathon 2018",
-    "conferenceUrl": "http://www.reactathon.com/",
+    "name": "Reactathon 2018",
+    "url": "http://www.reactathon.com/",
     "location": "San Francisco, California",
     "venue": "Palace of the Fine Arts",
     "talks": [
       {
-        "title": "Why React?",
-        "url": "/talks/#why-choose-react",
+        "id": "why-react",
         "date": "20 March 2018",
         "time": "10:15a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=Wfec35hSALc"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2018/reactathon/why-react"
@@ -440,31 +470,14 @@
         ]
       },
       {
-        "title": "React FUNndamentals Workshop",
-        "url": "/talks/#react-fundamentals-workshop",
+        "id": "react-workshop",
         "date": "19 March 2018",
         "time": "10a",
         "links": [
           {
-            "label": "Workshop code",
-            "url": "https://github.com/benmvp/react-workshop/tree/email-based/src/react"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "conference": "Sabio LA",
-    "conferenceUrl": "http://www.sabio.la/",
-    "location": "Los Angeles, California",
-    "venue": "Antioch University",
-    "talks": [
-      {
-        "title": "React Fundamentals Workshop",
-        "url": "/talks/#react-fundamentals-workshop",
-        "date": "23 January 2018",
-        "time": "7p",
-        "links": [
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2018/reactathon/react-workshop"
+          },
           {
             "label": "Workshop code",
             "url": "https://github.com/benmvp/react-workshop/tree/email-based/src/react"
@@ -474,13 +487,39 @@
     ]
   },
   {
-    "conference": "Hack Reactor",
-    "conferenceUrl": "http://hackreactor.cin/",
+    "name": "Sabio LA 2018",
+    "url": "http://www.sabio.la/",
+    "location": "Los Angeles, California",
+    "venue": "Antioch University",
+    "talks": [
+      {
+        "id": "react-workshop",
+        "date": "23 January 2018",
+        "time": "7p",
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=VjI3MoDoJ"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2018/sabiola/react-workshop"
+          },
+          {
+            "label": "Workshop code",
+            "url": "https://github.com/benmvp/react-workshop/tree/email-based/src/react"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hack Reactor 2017",
+    "url": "http://hackreactor.com/",
     "location": "San Francisco California",
     "talks": [
       {
-        "title": "Why choose React?",
-        "url": "/talks/#why-choose-react",
+        "id": "why-react",
         "date": "07 December 2017",
         "time": "8p",
         "links": [
@@ -493,14 +532,13 @@
     ]
   },
   {
-    "conference": "Nodevember 2017",
-    "conferenceUrl": "http://nodevember.org/",
+    "name": "Nodevember 2017",
+    "url": "http://nodevember.org/",
     "location": "Nashville, Tennessee",
     "venue": "Vanderbilt University",
     "talks": [
       {
-        "title": "Why choose React?",
-        "url": "/talks/#why-choose-react",
+        "id": "why-react",
         "date": "28 November 2017",
         "time": "5p",
         "room": "Commodore Ballroom",
@@ -514,14 +552,13 @@
     ]
   },
   {
-    "conference": "Full Stack Toronto 2017",
-    "conferenceUrl": "http://2017.fsto.co/",
+    "name": "Full Stack Toronto 2017",
+    "url": "http://2017.fsto.co/",
     "location": "Toronto, Canada",
     "venue": "Historic Automotive Building at Exhibition Place",
     "talks": [
       {
-        "title": "Isomorphic React sans Node??",
-        "url": "/talks/#isomorphic-react-sans-node",
+        "id": "iso-react",
         "date": "23 October 2017",
         "time": "4p",
         "room": "Room 206AB",
@@ -535,16 +572,19 @@
     ]
   },
   {
-    "conference": "Hackbright Academy",
-    "conferenceUrl": "https://hackbrightacademy.com/",
+    "name": "Hackbright Academy October 2017",
+    "url": "https://hackbrightacademy.com/",
     "location": "San Francisco, California",
     "venue": "Hackbright Academy",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
-        "date": "Tuesday",
+        "id": "sweet-es6",
+        "date": "17 October 2017",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/hackbright/sweet-es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -554,17 +594,20 @@
     ]
   },
   {
-    "conference": "Strange Loop 2017",
-    "conferenceUrl": "https://www.thestrangeloop.com/2017/sessions.html",
+    "name": "Strange Loop 2017",
+    "url": "https://www.thestrangeloop.com/2017/sessions.html",
     "location": "St. Louis, Missouri",
     "venue": "Peabody Opera House",
     "talks": [
       {
-        "title": "React Fundamentals Workshop",
-        "url": "/talks/#react-fundamentals-workshop",
+        "id": "react-workshop",
         "date": "28 September 2017",
         "time": "12:30p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/strangeloop/react-workshop"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-workshop"
@@ -574,14 +617,13 @@
     ]
   },
   {
-    "conference": "React Boston 2017",
-    "conferenceUrl": "http://www.reactboston.com/",
+    "name": "React Boston 2017",
+    "url": "http://www.reactboston.com/",
     "location": "Boston, Massachusetts",
     "venue": "Wayfair",
     "talks": [
       {
-        "title": "React Fiber for the rest of us",
-        "url": "/talks/#react-fiber-for-the-rest-of-us",
+        "id": "react-fiber",
         "date": "24 September 2017",
         "time": "9a",
         "links": [
@@ -594,14 +636,13 @@
     ]
   },
   {
-    "conference": "Real World React",
-    "conferenceUrl": "https://www.meetup.com/Real-World-React/events/242202176/",
+    "name": "Real World React September 2017",
+    "url": "https://www.meetup.com/Real-World-React/events/242202176/",
     "location": "San Francisco, California",
     "venue": "StubHub",
     "talks": [
       {
-        "title": "React Fiber for the rest of us",
-        "url": "/talks/#react-fiber-for-the-rest-of-us",
+        "id": "react-fiber",
         "date": "19 September 2017",
         "time": "7p",
         "links": [
@@ -614,8 +655,8 @@
     ]
   },
   {
-    "conference": "OpenRec 2017",
-    "conferenceUrl": "http://openrecsf.com/",
+    "name": "OpenRec 2017",
+    "url": "http://openrecsf.com/",
     "location": "San Francisco, California",
     "venue": "Terra Gallery & Event Venue",
     "talks": [
@@ -627,17 +668,21 @@
     ]
   },
   {
-    "conference": "React Rally 2017",
-    "conferenceUrl": "http://www.reactrally.com/",
+    "name": "React Rally 2017",
+    "url": "http://www.reactrally.com/",
     "location": "Salt Lake City, Utah",
     "venue": "Sheraton Salt Lake City Hotel",
     "talks": [
       {
+        "id": "react-fiber",
         "title": "Layperson’s guide to React Fiber",
-        "url": "/talks/#react-fiber-for-the-rest-of-us",
         "date": "24 August 2017",
         "time": "2p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=q6QTxq_pFn0"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2017/reactrally/fiber"
@@ -647,18 +692,18 @@
     ]
   },
   {
-    "conference": "Node Summit 2017",
-    "conferenceUrl": "http://www.nodesummit.com/",
+    "name": "Node Summit 2017",
+    "url": "http://www.nodesummit.com/",
     "location": "San Francisco, California",
     "venue": "Mission Bay Conference Center",
     "talks": [
       {
-        "title": "Isomorphic React sans Node??",
-        "url": "/talks/#isomorphic-react-sans-node",
+        "id": "iso-react",
         "date": "27 July 2017",
         "time": "12p",
         "room": "Fisher East",
         "links": [
+          { "label": "Video", "url": "https://vimeo.com/229703092" },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2017/nodesummit/iso-react"
@@ -668,17 +713,21 @@
     ]
   },
   {
-    "conference": "Chain React 2017",
-    "conferenceUrl": "https://infinite.red/ChainReactConf",
+    "name": "Chain React 2017",
+    "url": "https://infinite.red/ChainReactConf",
     "location": "Portland, Oregon",
     "venue": "The Armory",
     "talks": [
       {
+        "id": "react-esnext",
         "title": "React Native + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
         "date": "10 July 2017",
         "time": "11:30a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=nbtEwjRJXLo"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2017/chainreact/react-native-esnext"
@@ -688,14 +737,13 @@
     ]
   },
   {
-    "conference": "O'Reily Fluent 2017",
-    "conferenceUrl": "https://conferences.oreilly.com/fluent/fl-ca",
+    "name": "O'Reily Fluent 2017",
+    "url": "https://conferences.oreilly.com/fluent/fl-ca",
     "location": "San Jose, California",
     "venue": "San Jose Convention Center",
     "talks": [
       {
-        "title": "Flexing your Flexbox muscles",
-        "url": "/talks/#flexing-your-flexbox-muscles",
+        "id": "flexbox",
         "date": "22 June 2017",
         "time": "11a",
         "room": "210 CG",
@@ -709,14 +757,13 @@
     ]
   },
   {
-    "conference": "RevolutionConf 2017",
-    "conferenceUrl": "http://revolutionconf.com/",
+    "name": "RevolutionConf 2017",
+    "url": "http://revolutionconf.com/",
     "location": "Virginia Beach, Virginia",
     "venue": "Wyndham Virginia Beach Oceanfront",
     "talks": [
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "02 June 2017",
         "time": "2:30p",
         "room": "Atlantic Ballroom",
@@ -728,12 +775,15 @@
         ]
       },
       {
-        "title": "ES.next Fundamentals Workshop",
-        "url": "/talks/#esnext-fundamentals-workshop",
+        "id": "es6-workshop",
         "date": "01 June 2017",
         "time": "2:30p",
         "room": "Mariner A",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/revconf/esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/kentcdodds/es6-workshop"
@@ -743,17 +793,20 @@
     ]
   },
   {
-    "conference": "Modern Web Meetup",
-    "conferenceUrl": "https://www.meetup.com/modernweb/events/239003827/",
+    "name": "Modern Web Meetup May 2017",
+    "url": "https://www.meetup.com/modernweb/events/239003827/",
     "location": "Mountain View, California",
     "venue": "Shape Security",
     "talks": [
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "23 May 2017",
         "time": "8p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=-6gfOJwwXvs"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2017/modernweb/nav-react"
@@ -763,14 +816,13 @@
     ]
   },
   {
-    "conference": "O'Reilly OSCON Austin 2017",
-    "conferenceUrl": "http://conferences.oreilly.com/oscon/oscon-tx",
+    "name": "O'Reilly OSCON Austin 2017",
+    "url": "http://conferences.oreilly.com/oscon/oscon-tx",
     "location": "Austin, Texas",
     "venue": "Austin Convention Center",
     "talks": [
       {
-        "title": "React Properly",
-        "url": "/talks/#react-properly",
+        "id": "react-properly",
         "date": "10 May 2017",
         "time": "2:35p",
         "room": "Meeting Room 12",
@@ -784,17 +836,20 @@
     ]
   },
   {
-    "conference": "Fog City Ruby Meetup",
-    "conferenceUrl": "https://www.meetup.com/fogcityruby/events/238787325/",
+    "name": "Fog City Ruby Meetup April 2017",
+    "url": "https://www.meetup.com/fogcityruby/events/238787325/",
     "location": "San Francisco, California",
     "venue": "Braintree",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "11 April 2017",
         "time": "7:15p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/fogcityruby/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -804,17 +859,20 @@
     ]
   },
   {
-    "conference": "Render Conference 2017",
-    "conferenceUrl": "http://2017.render-conf.com/",
+    "name": "Render Conference 2017",
+    "url": "http://2017.render-conf.com/",
     "location": "Oxford, United Kingdom",
     "venue": "The King's Centre",
     "talks": [
       {
-        "title": "Isomorphic React sans Node??",
-        "url": "/talks/#isomorphic-react-sans-node",
+        "id": "iso-react",
         "date": "30 March 2017",
         "time": "11:55",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=zxtcr8Zuvfs"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2017/render/iso-react"
@@ -824,18 +882,21 @@
     ]
   },
   {
-    "conference": "JazzCon.Tech 2017",
-    "conferenceUrl": "http://jazzcon.tech/",
+    "name": "JazzCon.Tech 2017",
+    "url": "http://jazzcon.tech/",
     "location": "New Orleans, Louisiana",
     "venue": "New Orleans Downtown Marriott at the Convention Center",
     "talks": [
       {
-        "title": "React Exposed! 😮",
-        "url": "/talks/#react-exposed-",
+        "id": "react-exposed",
         "date": "24 March 2017",
         "time": "10a",
         "room": "ReactJS track",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/jazzcon/react-exposed"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-exposed"
@@ -843,8 +904,7 @@
         ]
       },
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "23 March 2017",
         "time": "1p",
         "room": "ReactJS track",
@@ -858,14 +918,13 @@
     ]
   },
   {
-    "conference": "Devoxx US 2017",
-    "conferenceUrl": "http://devoxx.us/",
+    "name": "Devoxx US 2017",
+    "url": "http://devoxx.us/",
     "location": "San Jose, California",
     "venue": "San Jose Convention Center",
     "talks": [
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "21 March 2017",
         "time": "4:30p",
         "room": "Room LL 21C",
@@ -879,17 +938,24 @@
     ]
   },
   {
-    "conference": "React Conf 2017",
-    "conferenceUrl": "http://conf.reactjs.org/",
+    "name": "React Conf 2017",
+    "url": "http://conf.reactjs.org/",
     "location": "Santa Clara, California",
     "venue": "Marriott Santa Clara",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "13 March 2017",
         "time": "12:30p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=jh_Qzi-yHU0"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/reactconf/react-esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-esnext"
@@ -899,17 +965,24 @@
     ]
   },
   {
-    "conference": "Reactathon",
-    "conferenceUrl": "http://reactathon.com/",
+    "name": "Reactathon 2017",
+    "url": "http://reactathon.com/",
     "location": "San Francisco, California",
     "venue": "Eventbrite",
     "talks": [
       {
-        "title": "ES.next Fundamentals Workshop",
-        "url": "/talks/#esnext-fundamentals-workshop",
+        "id": "es6-workshop",
         "date": "07 March 2017",
         "time": "9a",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/reactathon/esnext"
+          },
+          {
+            "label": "Workshop code",
+            "url": "https://github.com/kentcdodds/es6-workshop"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -919,18 +992,21 @@
     ]
   },
   {
-    "conference": "Mobile+Web DevCon 2017",
-    "conferenceUrl": "http://mobilewebdevconference.com/san-francisco-2017/",
+    "name": "Mobile+Web DevCon 2017",
+    "url": "http://mobilewebdevconference.com/san-francisco-2017/",
     "location": "San Francisco, California",
     "venue": "Marines' Memorial Club & Hotel",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "03 March 2017",
         "time": "10:30a",
         "room": "Track B: Web Development",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/mwdcon/react-esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-esnext"
@@ -940,18 +1016,25 @@
     ]
   },
   {
-    "conference": "Forward JS 2017",
-    "conferenceUrl": "https://forwardjs.com/",
+    "name": "Forward JS 2017",
+    "url": "https://forwardjs.com/",
     "location": "San Francisco, California",
     "venue": "Holiday Inn - Golden Gateway",
     "talks": [
       {
-        "title": "React Exposed! 😮",
-        "url": "/talks/#react-exposed-",
+        "id": "react-exposed",
         "date": "01 March 2017",
         "time": "3:45p",
         "room": "Emerald",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=cAYMqBU7Qko"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/forwardjs/react-exposed"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-exposed"
@@ -961,17 +1044,24 @@
     ]
   },
   {
-    "conference": "Sabio",
-    "conferenceUrl": "http://www.sabio.la/",
+    "name": "Sabio LA 2017",
+    "url": "http://www.sabio.la/",
     "location": "Los Angeles, California",
     "venue": "Antioch University",
     "talks": [
       {
-        "title": "ES.next Fundamentals Workshop",
-        "url": "/talks/#esnext-fundamentals-workshop",
+        "id": "es6-workshop",
         "date": "21 February 2017",
         "time": "7p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/sabio/esnext"
+          },
+          {
+            "label": "Workshop code",
+            "url": "https://github.com/kentcdodds/es6-workshop"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -981,14 +1071,13 @@
     ]
   },
   {
-    "conference": "DeveloperWeek JavaScript Conference 2017",
-    "conferenceUrl": "http://www.developerweek.com/javascript-conference/",
+    "name": "DeveloperWeek JavaScript Conference 2017",
+    "url": "http://www.developerweek.com/javascript-conference/",
     "location": "San Francisco, California",
     "venue": "Pier 27",
     "talks": [
       {
-        "title": "Navigating the React Solar System",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "nav-react",
         "date": "14 February 2017",
         "time": "10a",
         "room": "DeveloperWeek Expo Stage 1",
@@ -1002,17 +1091,20 @@
     ]
   },
   {
-    "conference": "ReactJS San Francisco Bay Area Meetup",
-    "conferenceUrl": "http://www.meetup.com/ReactJS-San-Francisco/events/232284872/",
+    "name": "ReactJS San Francisco Bay Area Meetup 2017",
+    "url": "http://www.meetup.com/ReactJS-San-Francisco/events/232284872/",
     "location": "San Francisco, California",
     "venue": "Eventbrite",
     "talks": [
       {
-        "title": "React Exposed! 😮",
-        "url": "/talks/#react-exposed-",
+        "id": "react-exposed",
         "date": "09 February 2017",
         "time": "7p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/reactsf/react-exposed"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-exposed"
@@ -1022,17 +1114,24 @@
     ]
   },
   {
-    "conference": "BuzzJS 2.0 2017",
-    "conferenceUrl": "http://buzzjs.com/",
+    "name": "BuzzJS 2.0 2017",
+    "url": "http://buzzjs.com/",
     "location": "New York City, New York",
     "venue": "Microsoft Technology Center",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "27 January 2017",
         "time": "2:50p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=fXWvcmrbX5M"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2017/buzzjs/react-esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-esnext"
@@ -1042,14 +1141,13 @@
     ]
   },
   {
-    "conference": "Hackbright Academy",
-    "conferenceUrl": "https://hackbrightacademy.com/",
+    "name": "Hackbright Academy January 2017",
+    "url": "https://hackbrightacademy.com/",
     "location": "San Francisco, California",
     "venue": "Hackbright Academy",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "12 January 2017",
         "links": [
           {
@@ -1065,18 +1163,21 @@
     ]
   },
   {
-    "conference": "ConFoo Vancouver 2016",
-    "conferenceUrl": "https://confoo.ca/en/yvr2016",
+    "name": "ConFoo Vancouver 2016",
+    "url": "https://confoo.ca/en/yvr2016",
     "location": "Montreal, Canada",
     "venue": "Sheraton Vancouver Wall Centre",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "06 December 2016",
         "time": "4p",
         "room": "Pavilion A",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/confoo/sweet-es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1084,8 +1185,7 @@
         ]
       },
       {
-        "title": "Flexing your Flexbox muscles",
-        "url": "/talks/#flexing-your-flexbox-muscles",
+        "id": "flexbox",
         "date": "05 December 2016",
         "time": "10a",
         "room": "Pavilion B",
@@ -1099,17 +1199,20 @@
     ]
   },
   {
-    "conference": "Thunder Plains Developer Conference",
-    "conferenceUrl": "http://thunderplainsconf.com/",
+    "name": "Thunder Plains Developer Conference 2016",
+    "url": "http://thunderplainsconf.com/",
     "location": "Oklahoma City, Oklahoma",
     "venue": "Devon Boathouse",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "03 November 2016",
         "time": "4p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/thunderplains/react-esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-esnext"
@@ -1119,14 +1222,14 @@
     ]
   },
   {
-    "conference": "Connect.Tech 2016",
-    "conferenceUrl": "http://connect.tech/",
+    "name": "Connect.Tech 2016",
+    "url": "http://connect.tech/",
     "location": "Atlanta, Georgia",
     "venue": "Cobb Galleria Centre",
     "talks": [
       {
+        "id": "iso-react",
         "title": "Isomorphic React w/o Node??",
-        "url": "/talks/#isomorphic-react-sans-node",
         "date": "21 October 2016",
         "time": "5:10p",
         "room": "React.JS track",
@@ -1138,8 +1241,7 @@
         ]
       },
       {
-        "title": "Navigating the React Ecosystem",
-        "url": "/talks/#navigating-the-react-solar-system",
+        "id": "react-eco",
         "date": "21 October 2016",
         "time": "11:20a",
         "room": "React.JS track",
@@ -1153,17 +1255,21 @@
     ]
   },
   {
-    "conference": "Real World React",
-    "conferenceUrl": "http://www.meetup.com/Real-World-React/events/232638998/",
+    "name": "Real World React 2016",
+    "url": "http://www.meetup.com/Real-World-React/events/232638998/",
     "location": "San Francisco, California",
     "venue": "Eventbrite",
     "talks": [
       {
+        "id": "iso-react",
         "title": "Isomorphic React w/o Node??",
-        "url": "/talks/#isomorphic-react-sans-node",
         "date": "18 October 2016",
         "time": "6:45p",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=_bfZHCSkT3Q"
+          },
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2016/rwreact/iso-react"
@@ -1173,8 +1279,8 @@
     ]
   },
   {
-    "conference": "NodeSummit 2016",
-    "conferenceUrl": "http://nodesummit.com/",
+    "name": "NodeSummit 2016",
+    "url": "http://nodesummit.com/",
     "location": "San Francisco, California",
     "venue": "The Village",
     "talks": [
@@ -1183,19 +1289,24 @@
         "date": "28 July 2016",
         "time": "9:30a",
         "room": "Main Stage",
-        "links": [{ "label": "Blog post", "url": "/nodesummit-2016/" }]
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://vimeo.com/180426378"
+          },
+          { "label": "Blog post", "url": "/nodesummit-2016/" }
+        ]
       }
     ]
   },
   {
-    "conference": "Front Porch Austin 2016",
-    "conferenceUrl": "http://frontporch.io/austin/",
+    "name": "Front Porch Austin 2016",
+    "url": "http://frontporch.io/austin/",
     "location": "Austin, Texas",
     "venue": "Alamo Theater",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "19 July 2016",
         "links": [
           {
@@ -1216,17 +1327,20 @@
     ]
   },
   {
-    "conference": "ReactJS San Francisco Bay Area meetup",
-    "conferenceUrl": "http://www.meetup.com/ReactJS-San-Francisco/events/229270590/",
+    "name": "ReactJS San Francisco Bay Area Meetup 2016",
+    "url": "http://www.meetup.com/ReactJS-San-Francisco/events/229270590/",
     "location": "San Francisco, California",
     "venue": "Bleacher Report",
     "talks": [
       {
-        "title": "React + ES.next = ♥",
-        "url": "/talks/#react--esnext--",
+        "id": "react-esnext",
         "date": "14 July 2016",
         "time": "7:30p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/reactsf/react-esnext"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/react-esnext"
@@ -1236,33 +1350,46 @@
     ]
   },
   {
-    "conference": "NDC Oslo 2016",
-    "conferenceUrl": "http://ndcoslo.com/",
+    "name": "NDC Oslo 2016",
+    "url": "http://ndcoslo.com/",
     "location": "Oslo, Norway",
     "venue": "Oslo Spektrum",
     "talks": [
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "10 June 2016",
         "time": "1:40p",
         "room": "Room 7",
-        "links": [{ "label": "Blog post", "url": "/blog/ndc-oslo-2016/" }]
+        "links": [
+          { "label": "Video", "url": "https://vimeo.com/171319733" },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/ndcoslo/no-js"
+          },
+          {
+            "label": "Code examples",
+            "url": "https://you-dont-need-js-for-that.benmvp.com/"
+          },
+          { "label": "Blog post", "url": "/blog/ndc-oslo-2016/" }
+        ]
       }
     ]
   },
   {
-    "conference": "Eventbrite Engineering",
-    "conferenceUrl": "http://www.eventbrite.com/engineering",
+    "name": "Eventbrite Engineering 2016",
+    "url": "http://www.eventbrite.com/engineering",
     "location": "San Francisco, California",
     "talks": [
       {
-        "title": "React Fundamentals Workshop",
-        "url": "/talks/#react-fundamentals-workshop",
+        "id": "react-workshop",
         "date": "26 May 2016",
         "time": "9:30a",
         "room": "Eventbrite HQ",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/evbeng/react-workshop"
+          },
           {
             "label": "Workshop repo",
             "url": "https://github.com/benmvp/react-workshop"
@@ -1272,32 +1399,38 @@
     ]
   },
   {
-    "conference": "Syntax Code & Craft Convention 2016",
-    "conferenceUrl": "http://2016.syntaxcon.com/",
+    "name": "Syntax Code & Craft Convention 2016",
+    "url": "http://2016.syntaxcon.com/",
     "location": "Charleston, South Carolina",
     "venue": "College of Charleston",
     "talks": [
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "07 May 2016",
         "time": "10:30a",
         "room": "Front-End II",
         "links": [
           {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/syntaxcon/no-js"
+          },
+          {
             "label": "Code examples",
             "url": "https://you-dont-need-js-for-that.benmvp.com/"
           }
         ]
       },
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "06 May 2016",
         "time": "9:30a",
         "room": "Front-End",
         "links": [
           {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/syntaxcon/es6"
+          },
+          {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
           }
@@ -1306,18 +1439,21 @@
     ]
   },
   {
-    "conference": "Prairie Dev Con 2016",
-    "conferenceUrl": "http://www.prairiedevcon.com/",
+    "name": "Prairie Dev Con 2016",
+    "url": "http://www.prairiedevcon.com/",
     "location": "Winnipeg, Canada",
     "venue": "CanadInns Destination Centre Polo Park",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "12 April 2016",
         "time": "1p",
         "room": "Ambassador 2",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/prdc/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1325,12 +1461,15 @@
         ]
       },
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "11 April 2016",
         "time": "9:45a",
         "room": "Ambassador 2",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/prdc/no-js"
+          },
           {
             "label": "Code examples",
             "url": "https://you-dont-need-js-for-that.benmvp.com/"
@@ -1340,17 +1479,24 @@
     ]
   },
   {
-    "conference": "NationJS Node Day 2016",
-    "conferenceUrl": "http://nationnode2016.herokuapp.com/",
+    "name": "NationJS Node Day 2016",
+    "url": "http://nationnode2016.herokuapp.com/",
     "location": "Washington, D.C.",
     "venue": "Capital One Auditorium",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sweet-es6",
+        "id": "sweet-es6",
         "date": "11 March 2016",
         "time": "11:15a",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://vimeo.com/169948346"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/nationjs/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1361,18 +1507,21 @@
     ]
   },
   {
-    "conference": "ConFoo Montreal 2016",
-    "conferenceUrl": "http://confoo.ca/en/2016/",
+    "name": "ConFoo Montreal 2016",
+    "url": "http://confoo.ca/en/2016/",
     "location": "Montreal, Canada",
     "venue": "Bonaventure Hotel",
     "talks": [
       {
-        "title": "Demistifying ES6",
-        "url": "/talks/#demystifying-es6",
+        "id": "demystifying-es6",
         "date": "25 February 2016",
         "time": "3p",
         "room": "Fontaine D",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/confoo/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1380,12 +1529,15 @@
         ]
       },
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "24 February 2016",
         "time": "3p",
         "room": "Hampstead",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/confoo/no-js"
+          },
           {
             "label": "Code examples",
             "url": "https://you-dont-need-js-for-that.benmvp.com/"
@@ -1395,18 +1547,21 @@
     ]
   },
   {
-    "conference": "DeveloperWeek JavaScript Conference 2016",
-    "conferenceUrl": "http://www.developerweek.com/javascript-conference/",
+    "name": "DeveloperWeek JavaScript Conference 2016",
+    "url": "http://www.developerweek.com/javascript-conference/",
     "location": "San Francisco, California",
     "venue": "Pier 27",
     "talks": [
       {
-        "title": "Sweet ES6",
-        "url": "/talks/#sugar--spice-and-everything-nice-about-es6",
+        "id": "sweet-es6",
         "date": "16 February 2016",
         "time": "3p",
         "room": "Workshop Room 1",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2016/devweek/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1416,17 +1571,20 @@
     ]
   },
   {
-    "conference": "Sacramento JavaScript Meetup",
-    "conferenceUrl": "http://www.meetup.com/The-Sacramento-Javascript-Meetup/",
+    "name": "Sacramento JavaScript Meetup November 2015",
+    "url": "http://www.meetup.com/The-Sacramento-Javascript-Meetup/",
     "location": "Sacramento, California",
     "venue": "The Urban Hive",
     "talks": [
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "24 November 2015",
         "time": "7p",
         "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2015/sacjs/no-js"
+          },
           {
             "label": "Code examples",
             "url": "https://you-dont-need-js-for-that.benmvp.com/"
@@ -1436,19 +1594,22 @@
     ]
   },
   {
-    "conference": "Fossetcon 2015",
-    "conferenceUrl": "http://fossetcon.org/2015/",
+    "name": "Fossetcon 2015",
+    "url": "http://fossetcon.org/2015/",
     "location": "Orlando, Florida",
     "venue": "Hilton Lake Buena Vista",
     "talks": [
       {
-        "title": "You don't need JavaScript for that!",
-        "url": "/talks/#you-dont-need-javascript-for-that",
+        "id": "no-js",
         "date": "20 November 2015",
         "time": "2p",
         "room": "Palm 3",
         "links": [
           {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2015/fossetcon/no-js"
+          },
+          {
             "label": "Code examples",
             "url": "https://you-dont-need-js-for-that.benmvp.com/"
           }
@@ -1457,18 +1618,25 @@
     ]
   },
   {
-    "conference": "Nodevember 2015",
-    "conferenceUrl": "http://nodevember.org/index.html",
+    "name": "Nodevember 2015",
+    "url": "http://nodevember.org/index.html",
     "location": "Nashville, Tennessee",
     "venue": "Lipscomb University",
     "talks": [
       {
-        "title": "Sugar & Spice and everything nice about ES6",
-        "url": "/talks/#sugar--spice-and-everything-nice-about-es6",
+        "id": "es6",
         "date": "14 November 2015",
         "time": "1p",
         "room": "Ezell 301",
         "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=x1BvUqmn8xA"
+          },
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2015/nodevember/es6"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"
@@ -1479,18 +1647,25 @@
     ]
   },
   {
-    "conference": "Little Rock Tech Fest 2015",
-    "conferenceUrl": "http://lrtechfest.com/",
+    "name": "Little Rock Tech Fest 2015",
+    "url": "http://lrtechfest.com/",
     "location": "Little Rock, Arkansas",
     "venue": "Statehouse Convention Center",
     "talks": [
       {
-        "title": "Sugar & Spice and everything nice about ES6",
-        "url": "/talks/#sugar--spice-and-everything-nice-about-es6",
+        "id": "es6",
         "date": "16 October 2015",
         "time": "1:30p",
         "room": "Fulton",
         "links": [
+          {
+            "label": "Video",
+            "url": "http://usergroup.tv/videos/sugar-spice-and-everything-nice-about-es6"
+          },
+          {
+            "label": "Slides",
+            "url": "https://drive.google.com/file/d/0B3vWDhvtt22UNW9qQzlNb09JRDA/view"
+          },
           {
             "label": "Code examples",
             "url": "https://github.com/benmvp/learning-es6"

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { isFuture, differenceInMilliseconds } from 'date-fns'
 import {
   createStyles,
   makeStyles,
@@ -14,26 +13,34 @@ import Seo from '../components/Seo'
 import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
-import { getUrl, parseDate } from '../utils'
+import { getUrl } from '../utils'
 import { getVideos } from '../utils/video'
-import { getSpeakingEngagements } from '../utils/speaking-engagement'
+import { getUpcomingSpeakingEngagements } from '../utils/speaking-engagement'
 
-const UPCOMING_SPEAKING_ENGAGEMENTS = getSpeakingEngagements()
-  .filter(({ talks }) => talks?.some(({ date }) => isFuture(parseDate(date))))
-  .filter(({ isCancelled }) => !isCancelled)
-  .sort((speakA, speakB) =>
-    differenceInMilliseconds(
-      parseDate(speakA?.talks?.[0].date),
-      parseDate(speakB?.talks?.[0].date),
-    ),
-  )
-  .slice(0, 6)
+const UPCOMING_SPEAKING_ENGAGEMENTS = getUpcomingSpeakingEngagements().slice(
+  0,
+  6,
+)
 const RECENT_VIDEOS = getVideos().slice(0, 2)
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    section: {
+      '&:not(:first-child)': {
+        marginTop: theme.spacing(3),
+        backgroundColor: theme.palette.secondary,
+      },
+    },
+    video: {
+      margin: '0 auto',
+    },
+  }),
+)
 
 const SpeakCardList = () => (
   <Grid container spacing={2}>
     {UPCOMING_SPEAKING_ENGAGEMENTS.map((speak) => (
-      <Grid key={speak.conference} item xs={12} sm={6} lg={4}>
+      <Grid key={speak.id} item xs={12} sm={6} lg={4}>
         <SpeakCard {...speak} />
       </Grid>
     ))}
@@ -81,37 +88,30 @@ const PostCardList = ({ posts }) => (
   </Grid>
 )
 
-const VideoCardList = () => (
-  <Grid container spacing={2}>
-    {RECENT_VIDEOS.map((video) => (
-      <Grid key={video.id} item xs={12} lg={6}>
-        <VideoCard {...video} />
-      </Grid>
-    ))}
-    <Grid item xs={12}>
-      <Box
-        display="flex"
-        justifyContent={{ xs: 'center', sm: 'flex-end' }}
-        width="100%"
-      >
-        <Link href="/videos/" variant="h6">
-          View all videos
-        </Link>
-      </Box>
-    </Grid>
-  </Grid>
-)
+const VideoCardList = () => {
+  const classes = useStyles()
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    section: {
-      '&:not(:first-child)': {
-        marginTop: theme.spacing(3),
-        backgroundColor: theme.palette.secondary,
-      },
-    },
-  }),
-)
+  return (
+    <Grid container spacing={2}>
+      {RECENT_VIDEOS.map((video) => (
+        <Grid key={video.id} item xs={12} lg={6}>
+          <VideoCard {...video} className={classes.video} />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href="/videos/" variant="h6">
+            View all videos
+          </Link>
+        </Box>
+      </Grid>
+    </Grid>
+  )
+}
 
 export default ({ data }) => {
   const { recentPosts } = data

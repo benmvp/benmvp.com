@@ -10,8 +10,6 @@ import {
   Divider,
   Button,
 } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
-import { genSpeakSlug } from '../utils'
 import { SpeakingEngagement } from '../utils/speaking-engagement'
 
 interface Props extends SpeakingEngagement {}
@@ -38,18 +36,11 @@ const useStyles = makeStyles((theme) =>
 
 const SpeakCard = (props: Props) => {
   const classes = useStyles(props)
-  const {
-    conference,
-    conferenceUrl,
-    isCancelled,
-    location,
-    talks,
-    venue,
-  } = props
+  const { id, name, url, isCancelled, location, talks, venue } = props
   const fullLocation = `${location}${venue ? ` (${venue})` : ''}`
 
   return (
-    <Card className={classes.card}>
+    <Card id={id} className={classes.card}>
       <CardContent>
         <Typography
           gutterBottom
@@ -66,41 +57,34 @@ const SpeakCard = (props: Props) => {
           variant="h5"
           color="textPrimary"
           component={isCancelled ? 's' : 'h3'}
-          title={conference}
+          title={name}
           noWrap
         >
           <Link
-            href={conferenceUrl}
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
             color="inherit"
           >
-            {conference}
+            {name}
           </Link>
           {isCancelled ? ' (Cancelled)' : ''}
         </Typography>
 
         <Divider className={classes.divider} />
 
-        {talks.map(({ date, links, room, time, title, url }, index) => (
-          <Fragment key={title}>
-            <Typography
-              id={genSpeakSlug(title)}
-              variant="body1"
-              title={title}
-              noWrap
-            >
-              <GatsbyLink to={url} color="inherit">
-                {title}
-              </GatsbyLink>
+        {talks.map((talkInfo, index) => (
+          <Fragment key={talkInfo.id || talkInfo.title}>
+            <Typography variant="body1" title={talkInfo.title} noWrap>
+              {talkInfo.title}
             </Typography>
             <Typography variant="body2" color="textSecondary">
-              {date}
-              {time && ` @ ${time}`}
-              {room && ` (${room})`}
+              {talkInfo.date}
+              {talkInfo.time && ` @ ${talkInfo.time}`}
+              {talkInfo.room && ` (${talkInfo.room})`}
             </Typography>
             <Box display="flex" justifyContent="flex-end" flexWrap="wrap">
-              {links?.map(({ label, url }) => (
+              {talkInfo.links?.map(({ label, url }) => (
                 <Button
                   href={url}
                   color="primary"
