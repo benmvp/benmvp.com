@@ -36,7 +36,7 @@ interface Props extends Video {
 
 const VideoCard = ({
   className,
-  conference,
+  engagement,
   date,
   id,
   provider = 'youtube',
@@ -63,7 +63,7 @@ const VideoCard = ({
 
   return (
     <Card
-      id={genVideoSlug(title)}
+      id={genVideoSlug(id)}
       variant="outlined"
       className={`${classes.root} ${className}`}
     >
@@ -93,7 +93,7 @@ const VideoCard = ({
             color="textPrimary"
             component="h4"
           >
-            {conference}
+            {engagement}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {date}
