@@ -43,7 +43,7 @@ export const getSpeakingEngagements = () =>
     }),
   )
 
-const getUpcomingSpeakingEngagements = () =>
+export const getUpcomingSpeakingEngagements = () =>
   getSpeakingEngagements()
     .filter(({ talks }) =>
       talks?.some(({ date }) => isFuture(Date.parse(date))),
