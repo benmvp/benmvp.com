@@ -9,8 +9,70 @@ import {
   Box,
   Divider,
   Button,
+  Chip,
 } from '@material-ui/core'
-import { SpeakingEngagement } from '../utils/speaking-engagement'
+import {
+  SpeakingEngagement,
+  EngagementTalk,
+} from '../utils/speaking-engagement'
+
+const useTalkStyles = makeStyles((theme) =>
+  createStyles({
+    category: {
+      marginBottom: theme.spacing(0.5),
+      '&:not(:last-child)': {
+        marginRight: theme.spacing(1),
+      },
+    },
+    link: {
+      marginBottom: theme.spacing(0.5),
+      '&:not(:last-child)': {
+        marginRight: theme.spacing(1),
+      },
+    },
+  }),
+)
+
+interface TalkProps extends EngagementTalk {}
+
+const Talk = ({ title, date, time, room, links, categories }: TalkProps) => {
+  const classes = useTalkStyles()
+
+  return (
+    <>
+      <Typography variant="body1" title={title} noWrap>
+        {title}
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+        {date}
+        {time && ` @ ${time}`}
+        {room && ` (${room})`}
+      </Typography>
+      <Box mt={1}>
+        {categories?.map((category) => (
+          <Chip label={category} size="small" className={classes.category} />
+        ))}
+      </Box>
+      <Box display="flex" justifyContent="space-between" mt={1}>
+        <Box>
+          {links?.map(({ label, url }) => (
+            <Button
+              variant="contained"
+              size="small"
+              href={url}
+              color="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              {label}
+            </Button>
+          ))}
+        </Box>
+      </Box>
+    </>
+  )
+}
 
 interface Props extends SpeakingEngagement {}
 
@@ -25,11 +87,6 @@ const useStyles = makeStyles((theme) =>
     talksDivider: {
       margin: theme.spacing(1, 0, 1, 'auto'),
       width: '50%',
-    },
-    link: {
-      '&:not(:first-child)': {
-        marginLeft: theme.spacing(1),
-      },
     },
   }),
 )
@@ -79,27 +136,7 @@ const SpeakCard = (props: Props) => {
 
         {talks.map((talkInfo, index) => (
           <Fragment key={talkInfo.id || talkInfo.title}>
-            <Typography variant="body1" title={talkInfo.title} noWrap>
-              {talkInfo.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              {talkInfo.date}
-              {talkInfo.time && ` @ ${talkInfo.time}`}
-              {talkInfo.room && ` (${talkInfo.room})`}
-            </Typography>
-            <Box display="flex" justifyContent="flex-end" flexWrap="wrap">
-              {talkInfo.links?.map(({ label, url }) => (
-                <Button
-                  href={url}
-                  color="primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.link}
-                >
-                  {label}
-                </Button>
-              ))}
-            </Box>
+            <Talk {...talkInfo} />
 
             {index < talks.length - 1 && (
               <Divider variant="inset" className={classes.talksDivider} />

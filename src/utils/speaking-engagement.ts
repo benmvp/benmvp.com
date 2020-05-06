@@ -5,9 +5,10 @@ import { getTalk, Talk } from './talk'
 
 import SPEAKING_ENGAGEMENTS from '../../content/pages/speaking-engagements.json'
 
-interface EngagementTalk extends Talk {
+export interface EngagementTalk extends Partial<Talk> {
   date: string
   id?: string
+  title: string
   links?: { label: string; url: string }[]
   room?: string
   time?: string

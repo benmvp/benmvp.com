@@ -129,7 +129,7 @@
     "retired": true,
     "description": "React's seemingly \"magical\" features make developing sophisticated web UIs easy by doing so much heavy lifting for us. Unfortunately, without knowing how certain parts of the \"magic\" work, we run into confusing React warnings/errors.\n\nWhy can't we have \"if blocks\" in our JSX code? Why do we need to wrap multiple sibling components in a container component? Why do we need to include a \"key\" attribute on components that are in an array?\n\nIn this session geared towards those familiar with React, let's answer these questions by digging deeper into JSX syntax, virtual DOM diffing and other \"magical\" features. Not only will we be able to prevent errors with a clearer understanding of the \"magic,\" but we can potentially boost rendering performance as well."
   },
-  "fiber": {
+  "react-fiber": {
     "title": "React Fiber for the rest of us",
     "categories": ["react"],
     "retired": true,
