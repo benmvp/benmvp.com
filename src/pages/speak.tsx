@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import { createStyles, makeStyles, Typography, Grid } from '@material-ui/core'
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
@@ -7,7 +7,7 @@ import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import SpeakCard from '../components/SpeakCard'
-import { getUrl } from '../utils'
+import { getUrl, getDateYear } from '../utils'
 import { getEngagements } from '../utils/speaking-engagement'
 
 const PAGE_TITLE = 'Speaking Engagements'
@@ -20,12 +20,17 @@ const useStyles = makeStyles((theme) =>
     image: {
       marginBottom: theme.spacing(3),
     },
+    year: {
+      marginTop: theme.spacing(3),
+    },
   }),
 )
 
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
   const { hero } = data
+  const engagements = getEngagements()
+  let curYear = getDateYear(engagements[0].talks[0].date) + 1
 
   return (
     <Layout>
@@ -65,11 +70,31 @@ const SpeakingEngagements = ({ data }) => {
         <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
       </Typography>
       <Grid container spacing={2}>
-        {getEngagements().map((speak) => (
-          <Grid key={speak.id} item xs={12}>
-            <SpeakCard {...speak} />
-          </Grid>
-        ))}
+        {engagements.map((engagement) => {
+          const engagementYear = getDateYear(engagement.talks[0].date)
+          let dateDisplay
+
+          if (engagementYear < curYear) {
+            curYear = engagementYear
+
+            dateDisplay = (
+              <Grid item xs={12} className={classes.year}>
+                <Typography id={curYear} variant="h3">
+                  {curYear}
+                </Typography>
+              </Grid>
+            )
+          }
+
+          return (
+            <Fragment key={engagement.id}>
+              {dateDisplay}
+              <Grid key={engagement.id} item xs={12}>
+                <SpeakCard {...engagement} />
+              </Grid>
+            </Fragment>
+          )
+        })}
       </Grid>
     </Layout>
   )

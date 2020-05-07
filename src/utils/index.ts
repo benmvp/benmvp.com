@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { format } from 'date-fns'
+import { format, getYear } from 'date-fns'
 import SITE_CONFIG from '../../config/site'
 
 export const getUrl = (path = '/') => `${SITE_CONFIG.siteUrl}${path}`
@@ -11,5 +11,14 @@ const genSlug = (title: string): string =>
 export const genPostSlug = (title: string) => genSlug(`post-${title}`)
 export const genVideoSlug = (id: string) => genSlug(`video-${id}`)
 
-export const formatDate = (date: Date | number): string =>
-  format(date, 'dd MMMM yyyy')
+export const formatDate = (date: string) => {
+  const parsedDate = Date.parse(date)
+
+  return parsedDate ? format(parsedDate, 'dd MMMM yyyy') : date
+}
+
+export const getDateYear = (date: string) => {
+  const parsedDate = Date.parse(date)
+
+  return parsedDate ? getYear(Date.parse(date)) : Number.NaN
+}

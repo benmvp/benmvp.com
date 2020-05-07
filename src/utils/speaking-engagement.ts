@@ -31,13 +31,11 @@ export const getEngagements = () =>
       id: slugify(speakInfo.name),
       talks: speakInfo.talks.map(
         (talk): EngagementTalk => {
-          const parsedDate = Date.parse(talk.date)
-
           return {
             ...getTalk(talk.id),
             id: talk.id,
             ...talk,
-            date: parsedDate ? formatDate(parsedDate) : talk.date,
+            date: formatDate(talk.date),
           }
         },
       ),
