@@ -37,13 +37,13 @@ const SpeakingEngagements = ({ data }) => {
       <Seo
         url={getUrl('speak')}
         title={PAGE_TITLE}
-        description="Check out Ben Ilegbodu's upcoming and past speaking engagements for React and frontend web development. The links to videos and slides should help you keep up to date with the latest best practices."
+        description="Check out Ben Ilegbodu's upcoming and previous speaking engagements for React and frontend web development. The links to videos and slides should help you keep up to date with the latest best practices."
         image={hero.childImageSharp.fluid.src}
       />
       <PageHeader
         className={classes.header}
         title={PAGE_TITLE}
-        subTitle="Ben's upcoming and past speaking engagements"
+        subTitle="Ben's upcoming and previous speaking engagements"
       />
       <HeroImage
         fluid={hero.childImageSharp.fluid}
