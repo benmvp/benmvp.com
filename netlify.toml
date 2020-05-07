@@ -3,10 +3,14 @@
   publish = "public/"
 
 [[plugins]]
-package = "netlify-plugin-gatsby-cache"
-
+  package = "netlify-plugin-gatsby-cache"
 [[plugins]]
-package = "netlify-plugin-no-more-404"
+  package = "netlify-plugin-no-more-404"
+
+# Redirects for removed pages
+[[redirects]]
+  from = "/talks/"
+  to = "/speak/"
 
 # Redirects from subfolders to subdomains
 [[redirects]]
@@ -15,6 +19,9 @@ package = "netlify-plugin-no-more-404"
 [[redirects]]
   from = "/you-dont-need-js-for-that"
   to = "https://you-dont-need-js-for-that.benmvp.com/"
+[[redirects]]
+  from = "/react-exposed"
+  to = "https://benmvp.github.io/react-exposed/"
 
 # Post redirects from /* to /blog/*
 [[redirects]]
@@ -98,6 +105,7 @@ package = "netlify-plugin-no-more-404"
 [[redirects]]
   from = "/microsoft-mvp/"
   to = "/blog/microsoft-mvp/"
+
 
 # Slides redirects from /slides to slides.benmvp.com
 

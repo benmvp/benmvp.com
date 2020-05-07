@@ -1,10 +1,8 @@
 # To Add
 
-## Post-MVP
-
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
-- [ ] Talks/videos/speak as data-driven pages
+- [x] Talks/videos/speak as data-driven pages
 - [ ] Add minishops pages
   - [ ] Add mailing list option for those interested at bottom
   - [ ] Share (top and bottom)
@@ -15,16 +13,18 @@
 - [ ] Upcoming minishops on home page ("Develop")
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
+- [x] Pull out fragments into separate file
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer
-- [ ] Learning ES6 page data-driven w/ excerpts
-- [ ] Add blog post category pages
-- [ ] Related blog posts in blog post footer
-- [ ] Add night mode switch to header
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
-- [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
+  - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
+- [ ] Learning ES6 page data-driven w/ excerpts
+- [ ] Add blog post category pages
+  - [ ] Category filtering on `/blog/`
+- [ ] Add speaking engagement category pages
+- [ ] Related blog posts in blog post footer
+- [ ] Add night mode switch to header
 - [ ] Algolia search (like https://docs.pact.io/)
-- [ ] Category filtering on `/blog/`
 - [ ] Speaker rider (like https://github.com/cassidoo/talks/blob/master/speaker-rider.md)

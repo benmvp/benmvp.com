@@ -11,7 +11,6 @@ import SocialIcons from './SocialIcons'
 
 const LINKS = [
   { to: '/learning-es6-series/', title: 'Learning ES6' },
-  { to: '/talks/', title: 'Tech Talks' },
   { to: '/ama/', title: 'AMA' },
   { to: '/blog/rss.xml', title: 'RSS' },
 ]

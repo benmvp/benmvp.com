@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import {
   makeStyles,
-  createStyles,
   Card,
   CardActionArea,
   CardContent,
@@ -9,12 +8,15 @@ import {
   Typography,
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
-
-type Provider = 'youtube' | 'vimeo'
+import { genVideoSlug } from '../utils'
+import { Video } from '../utils/video'
 
 const getEmbedSrc = (id: string, provider: Provider) => {
   if (provider === 'youtube') {
     return `https://www.youtube.com/embed/${id}`
+  }
+  if (provider === 'vimeo') {
+    return `https://player.vimeo.com/video/${id}`
   }
 }
 
@@ -28,19 +30,13 @@ const useStyles = makeStyles({
   },
 })
 
-interface Props {
+interface Props extends Video {
   className?: string
-  conference: string
-  date: string
-  id: string
-  provider?: Provider
-  title: string
-  url: string
 }
 
 const VideoCard = ({
   className,
-  conference,
+  engagement,
   date,
   id,
   provider = 'youtube',
@@ -49,8 +45,28 @@ const VideoCard = ({
 }: Props) => {
   const classes = useStyles()
 
+  const ContentWrapper = ({
+    children: wrapperChildren,
+  }: {
+    children: ReactNode
+  }) => {
+    if (url) {
+      return (
+        <CardActionArea component={Link} to={url} underline="none">
+          {wrapperChildren}
+        </CardActionArea>
+      )
+    }
+
+    return <>{wrapperChildren}</>
+  }
+
   return (
-    <Card variant="outlined" className={`${classes.root} ${className}`}>
+    <Card
+      id={genVideoSlug(id)}
+      variant="outlined"
+      className={`${classes.root} ${className}`}
+    >
       <CardMedia
         component="iframe"
         src={getEmbedSrc(id, provider)}
@@ -60,7 +76,7 @@ const VideoCard = ({
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-      <CardActionArea component={Link} to={url} underline="none">
+      <ContentWrapper>
         <CardContent>
           <Typography
             gutterBottom
@@ -77,13 +93,13 @@ const VideoCard = ({
             color="textPrimary"
             component="h4"
           >
-            {conference}
+            {engagement}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {date}
           </Typography>
         </CardContent>
-      </CardActionArea>
+      </ContentWrapper>
     </Card>
   )
 }

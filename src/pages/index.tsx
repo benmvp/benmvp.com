@@ -14,24 +14,33 @@ import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
+import { getVideos } from '../utils/video'
+import { getUpcomingEngagements } from '../utils/speaking-engagement'
+
+const UPCOMING_ENGAGEMENTS = getUpcomingEngagements().slice(0, 2)
+const RECENT_VIDEOS = getVideos().slice(0, 2)
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    section: {
+      '&:not(:first-child)': {
+        marginTop: theme.spacing(3),
+        backgroundColor: theme.palette.secondary,
+      },
+    },
+    video: {
+      margin: '0 auto',
+    },
+  }),
+)
 
 const SpeakCardList = () => (
   <Grid container spacing={2}>
-    <Grid item xs={12} sm={6} lg={4}>
-      <SpeakCard
-        conference="Developer Week New York 2020"
-        conferenceUrl="https://www.developerweek.com/NYC/"
-        location="New York City, New York"
-        venue="Brooklyn Expo Center"
-        talks={[
-          {
-            date: 'Wed, 09 December 2020',
-            title: 'Future JavaScript: What’s left?',
-            url: '/talks/#future-javascript-whats-left',
-          },
-        ]}
-      />
-    </Grid>
+    {UPCOMING_ENGAGEMENTS.map((speak) => (
+      <Grid key={speak.id} item xs={12} md={6}>
+        <SpeakCard {...speak} mode="min" />
+      </Grid>
+    ))}
     <Grid item xs={12}>
       <Box
         display="flex"
@@ -39,7 +48,7 @@ const SpeakCardList = () => (
         width="100%"
       >
         <Link href="/speak/" variant="h6">
-          View all speaking engagements
+          View all speaking engagements >
         </Link>
       </Box>
     </Grid>
@@ -69,26 +78,37 @@ const PostCardList = ({ posts }) => (
         width="100%"
       >
         <Link href="/blog/" variant="h6">
-          View all posts
+          View all posts >
         </Link>
       </Box>
     </Grid>
   </Grid>
 )
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    section: {
-      '&:not(:first-child)': {
-        marginTop: theme.spacing(3),
-        backgroundColor: theme.palette.secondary,
-      },
-    },
-    videoCard: {
-      margin: '0 auto',
-    },
-  }),
-)
+const VideoCardList = () => {
+  const classes = useStyles()
+
+  return (
+    <Grid container spacing={2}>
+      {RECENT_VIDEOS.map((video) => (
+        <Grid key={video.id} item xs={12} lg={6}>
+          <VideoCard {...video} className={classes.video} />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href="/videos/" variant="h6">
+            View all videos >
+          </Link>
+        </Box>
+      </Grid>
+    </Grid>
+  )
+}
 
 export default ({ data }) => {
   const { recentPosts } = data
@@ -131,24 +151,7 @@ export default ({ data }) => {
         >
           Watch...
         </Typography>
-        <VideoCard
-          conference="JSConf Hawai’i 2020"
-          date="05 February 2020"
-          id="kQ4r9OATmB0"
-          provider="youtube"
-          title="The “perfect” library tooling"
-          url="/speak/#jsconf-hawaii-2020"
-          className={classes.videoCard}
-        />
-        <Box
-          display="flex"
-          justifyContent={{ xs: 'center', sm: 'flex-end' }}
-          mt={1}
-        >
-          <Link href="/videos/" variant="h6">
-            View all videos
-          </Link>
-        </Box>
+        <VideoCardList />
       </Box>
     </Layout>
   )

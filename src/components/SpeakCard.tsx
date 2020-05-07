@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
+import classNames from 'classnames'
 import {
   makeStyles,
   createStyles,
@@ -9,50 +10,171 @@ import {
   Box,
   Divider,
   Button,
+  Chip,
+  IconButton,
+  Collapse,
 } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import { ExpandMore } from '@material-ui/icons'
+import Markdown from 'react-markdown'
+import {
+  SpeakingEngagement,
+  EngagementTalk,
+} from '../utils/speaking-engagement'
 
-interface Props {
-  conference: string
-  conferenceUrl: string
-  location: string
-  talks: {
-    date: string
-    isCancelled?: boolean
-    links?: { label: string; url: string }[]
-    room?: string
-    time?: string
-    title: string
-    url: string
-  }[]
-  venue?: string
-}
-
-const useStyles = makeStyles((theme) =>
+const useTalkStyles = makeStyles((theme) =>
   createStyles({
-    talksDivider: {
-      margin: theme.spacing(1, 0),
+    category: {
+      marginBottom: theme.spacing(0.5),
+      '&:not(:last-child)': {
+        marginRight: theme.spacing(1),
+      },
     },
     link: {
-      '&:not(:first-child)': {
-        marginLeft: theme.spacing(1),
+      marginBottom: theme.spacing(0.5),
+      '&:not(:last-child)': {
+        marginRight: theme.spacing(1),
       },
+    },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
     },
   }),
 )
 
-const SpeakCard = ({
-  conference,
-  conferenceUrl,
-  location,
-  talks,
-  venue,
-}: Props) => {
-  const classes = useStyles()
-  const fullLocation = `${location}${venue && ` (${venue})`}`
+interface TalkProps extends EngagementTalk {
+  mode: 'min' | 'full'
+}
+
+const Talk = ({
+  title,
+  date,
+  time,
+  room,
+  links,
+  categories,
+  description,
+  mode,
+}: TalkProps) => {
+  const classes = useTalkStyles()
+  const [expanded, setExpanded] = useState(false)
 
   return (
-    <Card>
+    <>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="flex-start"
+      >
+        <Box>
+          <Typography variant="body1" title={title}>
+            {title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary">
+            {date}
+            {time && ` @ ${time}`}
+            {room && ` (${room})`}
+          </Typography>
+        </Box>
+
+        {mode === 'full' && description && (
+          <Box>
+            <IconButton
+              className={classNames(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={() => setExpanded((prevExpanded) => !prevExpanded)}
+              aria-expanded={expanded}
+              aria-label="show talk description"
+            >
+              <ExpandMore />
+            </IconButton>
+          </Box>
+        )}
+      </Box>
+
+      <Box mt={1}>
+        {categories?.map((category) => (
+          <Chip
+            key={category}
+            label={category}
+            size="small"
+            className={classes.category}
+          />
+        ))}
+      </Box>
+      <Box mt={1}>
+        {links?.map(({ label, url }) => (
+          <Button
+            key={label}
+            variant="contained"
+            size="small"
+            href={url}
+            color="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+          >
+            {label}
+          </Button>
+        ))}
+      </Box>
+
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Typography variant="body2">
+          <Markdown>{description}</Markdown>
+        </Typography>
+      </Collapse>
+    </>
+  )
+}
+
+interface Props extends SpeakingEngagement {
+  mode?: 'min' | 'full'
+}
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    card: {
+      opacity: (props: Props) => (props.isCancelled ? 0.5 : undefined),
+    },
+    divider: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+    },
+    talksDivider: {
+      margin: theme.spacing(1, 'auto', 1, 0),
+      width: '50%',
+    },
+  }),
+)
+
+const SpeakCard = (props: Props) => {
+  const classes = useStyles(props)
+  const {
+    id,
+    name,
+    url,
+    isCancelled,
+    location,
+    talks,
+    venue,
+    mode = 'full',
+  } = props
+  const fullLocation = `${location}${venue ? ` (${venue})` : ''}`
+
+  // TODO:
+  // - Add `mode` (mini or full))
+  // - Add categories & description
+
+  return (
+    <Card id={id} className={classes.card}>
       <CardContent>
         <Typography
           gutterBottom
@@ -68,45 +190,26 @@ const SpeakCard = ({
           gutterBottom
           variant="h5"
           color="textPrimary"
-          component="h3"
-          title={conference}
+          component={isCancelled ? 's' : 'h3'}
+          title={name}
           noWrap
         >
           <Link
-            href={conferenceUrl}
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
             color="inherit"
           >
-            {conference}
+            {name}
           </Link>
+          {isCancelled ? ' (Cancelled)' : ''}
         </Typography>
 
-        {talks.map(({ date, links, room, time, title, url }, index) => (
-          <Fragment key={title}>
-            <Typography variant="body1">
-              <GatsbyLink to={url} color="inherit">
-                {title}
-              </GatsbyLink>
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              {date}
-              {time && ` @ ${time}`}
-              {room && ` (${room})`}
-            </Typography>
-            <Box display="flex" justifyContent="flex-end">
-              {links?.map(({ label, url }) => (
-                <Button
-                  href={url}
-                  color="primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.link}
-                >
-                  {label}
-                </Button>
-              ))}
-            </Box>
+        <Divider className={classes.divider} />
+
+        {talks.map((talkInfo, index) => (
+          <Fragment key={talkInfo.id || talkInfo.title}>
+            <Talk {...talkInfo} mode={mode} />
 
             {index < talks.length - 1 && (
               <Divider variant="inset" className={classes.talksDivider} />
