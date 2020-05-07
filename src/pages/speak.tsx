@@ -52,8 +52,9 @@ const SpeakingEngagements = ({ data }) => {
       />
       <Typography variant="body1" gutterBottom>
         Every opportunity I get to share my knowledge and experience with others
-        is a blessing! My hope is that when I give a talk, the attendees will
-        learn something new that will make them a better developer.
+        is a blessing! My hope is that when I give a talk, host a workshop or
+        participate in a panel, the attendees will learn something new that will
+        make them a better developer.
       </Typography>
       <Typography variant="body1" gutterBottom>
         If you're interested in having me speak to or hold a workshop with your
