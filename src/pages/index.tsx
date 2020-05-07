@@ -48,7 +48,7 @@ const SpeakCardList = () => (
         width="100%"
       >
         <Link href="/speak/" variant="h6">
-          View all speaking engagements
+          View all speaking engagements >
         </Link>
       </Box>
     </Grid>
@@ -78,7 +78,7 @@ const PostCardList = ({ posts }) => (
         width="100%"
       >
         <Link href="/blog/" variant="h6">
-          View all posts
+          View all posts >
         </Link>
       </Box>
     </Grid>
@@ -102,7 +102,7 @@ const VideoCardList = () => {
           width="100%"
         >
           <Link href="/videos/" variant="h6">
-            View all videos
+            View all videos >
           </Link>
         </Box>
       </Grid>
