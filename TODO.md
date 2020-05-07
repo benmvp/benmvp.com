@@ -2,7 +2,7 @@
 
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
-- [ ] Talks/videos/speak as data-driven pages
+- [x] Talks/videos/speak as data-driven pages
 - [ ] Add minishops pages
   - [ ] Add mailing list option for those interested at bottom
   - [ ] Share (top and bottom)

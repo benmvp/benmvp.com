@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
+import classNames from 'classnames'
 import {
   makeStyles,
   createStyles,
@@ -10,7 +11,11 @@ import {
   Divider,
   Button,
   Chip,
+  IconButton,
+  Collapse,
 } from '@material-ui/core'
+import { ExpandMore } from '@material-ui/icons'
+import Markdown from 'react-markdown'
 import {
   SpeakingEngagement,
   EngagementTalk,
@@ -30,51 +35,109 @@ const useTalkStyles = makeStyles((theme) =>
         marginRight: theme.spacing(1),
       },
     },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
   }),
 )
 
-interface TalkProps extends EngagementTalk {}
+interface TalkProps extends EngagementTalk {
+  mode: 'min' | 'full'
+}
 
-const Talk = ({ title, date, time, room, links, categories }: TalkProps) => {
+const Talk = ({
+  title,
+  date,
+  time,
+  room,
+  links,
+  categories,
+  description,
+  mode,
+}: TalkProps) => {
   const classes = useTalkStyles()
+  const [expanded, setExpanded] = useState(false)
 
   return (
     <>
-      <Typography variant="body1" title={title} noWrap>
-        {title}
-      </Typography>
-      <Typography variant="body2" color="textSecondary">
-        {date}
-        {time && ` @ ${time}`}
-        {room && ` (${room})`}
-      </Typography>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="flex-start"
+      >
+        <Box>
+          <Typography variant="body1" title={title}>
+            {title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary">
+            {date}
+            {time && ` @ ${time}`}
+            {room && ` (${room})`}
+          </Typography>
+        </Box>
+
+        {mode === 'full' && description && (
+          <Box>
+            <IconButton
+              className={classNames(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={() => setExpanded((prevExpanded) => !prevExpanded)}
+              aria-expanded={expanded}
+              aria-label="show talk description"
+            >
+              <ExpandMore />
+            </IconButton>
+          </Box>
+        )}
+      </Box>
+
       <Box mt={1}>
         {categories?.map((category) => (
-          <Chip label={category} size="small" className={classes.category} />
+          <Chip
+            key={category}
+            label={category}
+            size="small"
+            className={classes.category}
+          />
         ))}
       </Box>
-      <Box display="flex" justifyContent="space-between" mt={1}>
-        <Box>
-          {links?.map(({ label, url }) => (
-            <Button
-              variant="contained"
-              size="small"
-              href={url}
-              color="primary"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.link}
-            >
-              {label}
-            </Button>
-          ))}
-        </Box>
+      <Box mt={1}>
+        {links?.map(({ label, url }) => (
+          <Button
+            key={label}
+            variant="contained"
+            size="small"
+            href={url}
+            color="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+          >
+            {label}
+          </Button>
+        ))}
       </Box>
+
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Typography variant="body2">
+          <Markdown>{description}</Markdown>
+        </Typography>
+      </Collapse>
     </>
   )
 }
 
-interface Props extends SpeakingEngagement {}
+interface Props extends SpeakingEngagement {
+  mode?: 'min' | 'full'
+}
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -82,10 +145,11 @@ const useStyles = makeStyles((theme) =>
       opacity: (props: Props) => (props.isCancelled ? 0.5 : undefined),
     },
     divider: {
-      margin: theme.spacing(2, 0),
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
     },
     talksDivider: {
-      margin: theme.spacing(1, 0, 1, 'auto'),
+      margin: theme.spacing(1, 'auto', 1, 0),
       width: '50%',
     },
   }),
@@ -93,7 +157,16 @@ const useStyles = makeStyles((theme) =>
 
 const SpeakCard = (props: Props) => {
   const classes = useStyles(props)
-  const { id, name, url, isCancelled, location, talks, venue } = props
+  const {
+    id,
+    name,
+    url,
+    isCancelled,
+    location,
+    talks,
+    venue,
+    mode = 'full',
+  } = props
   const fullLocation = `${location}${venue ? ` (${venue})` : ''}`
 
   // TODO:
@@ -136,7 +209,7 @@ const SpeakCard = (props: Props) => {
 
         {talks.map((talkInfo, index) => (
           <Fragment key={talkInfo.id || talkInfo.title}>
-            <Talk {...talkInfo} />
+            <Talk {...talkInfo} mode={mode} />
 
             {index < talks.length - 1 && (
               <Divider variant="inset" className={classes.talksDivider} />

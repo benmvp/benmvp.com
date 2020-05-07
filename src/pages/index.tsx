@@ -38,7 +38,7 @@ const SpeakCardList = () => (
   <Grid container spacing={2}>
     {UPCOMING_ENGAGEMENTS.map((speak) => (
       <Grid key={speak.id} item xs={12} md={6}>
-        <SpeakCard {...speak} />
+        <SpeakCard {...speak} mode="min" />
       </Grid>
     ))}
     <Grid item xs={12}>
