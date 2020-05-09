@@ -63,8 +63,8 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
     'gatsby-theme-material-ui',
-    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
