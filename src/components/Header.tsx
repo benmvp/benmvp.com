@@ -29,7 +29,7 @@ const NAV_LINKS = [
     title: 'Videos',
     label: "Watch Ben's past tech talks",
   },
-  { to: '/about/'), title: 'About', label: 'Learn more about Ben' },
+  { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 'sm'
 
