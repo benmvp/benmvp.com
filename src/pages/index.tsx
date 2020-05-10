@@ -47,7 +47,7 @@ const SpeakCardList = () => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href={getUrl('/speak/')} variant="h6">
+        <Link href="/speak/" variant="h6">
           View all speaking engagements >
         </Link>
       </Box>
@@ -77,7 +77,7 @@ const PostCardList = ({ posts }) => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href={getBlogUrl()} variant="h6">
+        <Link href="/blog/" variant="h6">
           View all posts >
         </Link>
       </Box>
@@ -101,7 +101,7 @@ const VideoCardList = () => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href={getUrl('/videos/')} variant="h6">
+          <Link href="/videos/" variant="h6">
             View all videos >
           </Link>
         </Box>

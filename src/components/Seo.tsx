@@ -54,14 +54,14 @@ const Seo = ({
   const metaImage = `${site.siteMetadata.siteUrl}${
     image || site.siteMetadata.image
   }`
+  const fullTitle = title
+    ? `${title} | ${site.siteMetadata.title}`
+    : site.siteMetadata.title
 
   return (
-    <Helmet
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      defaultTitle={site.siteMetadata.title}
-    >
+    <Helmet>
       <html lang={htmlLang} />
-      <title>{title}</title>
+      <title>{fullTitle}</title>
 
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={site.siteMetadata.keywords.join(' ')} />
@@ -70,7 +70,7 @@ const Seo = ({
 
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
 
@@ -79,7 +79,7 @@ const Seo = ({
         name="twitter:creator"
         content={site.siteMetadata.social.twitterHandle}
       />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
 

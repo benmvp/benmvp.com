@@ -1,4 +1,4 @@
-# To Add
+# Minishops MVP
 
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
@@ -7,16 +7,19 @@
   - [x] Add form for those interested at bottom
   - [x] Share (top and bottom)
   - [x] Masthead as social image
-  - [ ] Write descriptions
-- [ ] Add minishops home page (using tagline)
-  - Let's learn together without having to leave your house!
+  - [ ] Write descriptions for 3 or 4 minishops
+  - [ ] Add minishops home page (using tagline)
+    - Let's learn together without having to leave your house!
+  - [ ] Write blog post about minishops
 - [ ] Create Eventbrite event for a minishop
   - [ ] Add schema.org (+ events SMO)
   - [ ] Upcoming minishops on home page ("Develop")
   - [ ] Display upcoming minishops at the top
   - [ ] Add hidden "skip navigation" in header
-- [ ] Write blog post about minishops
 - [x] Pull out fragments into separate file
+
+## Post-MVP
+
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer

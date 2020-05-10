@@ -16,21 +16,20 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link, Button, IconButton } from 'gatsby-theme-material-ui'
 import Img from 'gatsby-image'
-import { getUrl, getBlogUrl } from '../utils'
 
 const NAV_LINKS = [
   {
-    to: getUrl('/speak/'),
+    to: '/speak/',
     title: 'Speak',
     label: "Check out Ben's speaking engagements",
   },
-  { to: getBlogUrl(), title: 'Blog', label: "View Ben's blog posts" },
+  { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
   {
-    to: getUrl('/videos/'),
+    to: '/videos/',
     title: 'Videos',
     label: "Watch Ben's past tech talks",
   },
-  { to: getUrl('/about/'), title: 'About', label: 'Learn more about Ben' },
+  { to: '/about/'), title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 'sm'
 
@@ -146,7 +145,7 @@ const Header = () => {
         <AppBar>
           <Box component="section" mx={{ xs: 1, sm: 2 }} my={1}>
             <Toolbar disableGutters className={classes.toolbar}>
-              <Link color="inherit" to={getUrl()} aria-label="Go to homepage">
+              <Link color="inherit" to="/" aria-label="Go to homepage">
                 <Img
                   fixed={logo.childImageSharp.fixed}
                   alt={site.siteMetadata.title}
@@ -156,7 +155,7 @@ const Header = () => {
               <Link
                 variant="h5"
                 color="inherit"
-                to={getUrl()}
+                to="/"
                 underline="none"
                 className={classes.name}
                 aria-label="Go to homepage"

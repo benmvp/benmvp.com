@@ -36,9 +36,8 @@ const Videos = () => {
         I have been blessed with the opportunity to travel throughout the United
         States and all over the world to share my knowledge to help other
         developers grow in their skills. Check out some of the videos from my
-        past{' '}
-        <GatsbyLink href={getUrl('/speak/')}>speaking engagements</GatsbyLink>{' '}
-        that can help you level up your frontend skills.
+        past <GatsbyLink href="/speak/">speaking engagements</GatsbyLink> that
+        can help you level up your frontend skills.
       </Typography>
       {getVideos().map((video) => (
         <Box key={video.id}>
