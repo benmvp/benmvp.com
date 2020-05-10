@@ -57,7 +57,6 @@ const MinishopForm = ({ slug, title }: Props) => {
       >
         <TextField
           id="minishop-form-name"
-          name="name"
           label="Name"
           variant="outlined"
           required
@@ -73,7 +72,6 @@ const MinishopForm = ({ slug, title }: Props) => {
         />
         <TextField
           id="minishop-form-email"
-          name="email"
           type="email"
           label="Email"
           variant="outlined"
@@ -90,7 +88,6 @@ const MinishopForm = ({ slug, title }: Props) => {
         />
         <TextField
           id="minishop-form-learn"
-          name="learn"
           label="Share 1 or 2 things you'd like to learn"
           variant="outlined"
           fullWidth
