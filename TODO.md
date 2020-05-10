@@ -6,12 +6,14 @@
 - [ ] Add minishops pages
   - [x] Add form for those interested at bottom
   - [x] Share (top and bottom)
-  - [ ] Masthead as social image
+  - [x] Masthead as social image
+  - [ ] Write descriptions
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
 - [ ] Create Eventbrite event for a minishop
   - [ ] Add schema.org (+ events SMO)
   - [ ] Upcoming minishops on home page ("Develop")
+  - [ ] Display upcoming minishops at the top
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
 - [x] Pull out fragments into separate file

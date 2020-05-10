@@ -32,7 +32,7 @@ const Minishop = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={fullTitle} url={url} description={summary} />
+      <Seo title={`${fullTitle}/Workshop`} url={url} description={summary} />
       <PageHeader
         className={classes.header}
         title={fullTitle}

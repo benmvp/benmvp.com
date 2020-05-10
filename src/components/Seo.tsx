@@ -30,6 +30,7 @@ const Seo = ({
       query SeoSiteInfo {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             image
@@ -50,7 +51,9 @@ const Seo = ({
 
   const htmlLang = lang || site.siteMetadata.lang
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const metaImage = `${site.siteMetadata.siteUrl}${
+    image || site.siteMetadata.image
+  }`
 
   return (
     <Helmet

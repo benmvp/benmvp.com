@@ -1,5 +1,11 @@
 require('ts-node').register({ files: true })
 
+// load environment-specific .env file to read
+// those values into `process.env`
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const SITE_CONFIG = require('./config/site')
 const { getBlogUrl } = require('./src/utils')
 
@@ -63,14 +69,14 @@ module.exports = {
         background_color: SITE_CONFIG.manifestBackgroundColor,
         theme_color: SITE_CONFIG.manifestThemeColor,
         display: SITE_CONFIG.manifestDisplay,
-        icon: `static${SITE_CONFIG.siteImage}`,
+        icon: SITE_CONFIG.manifestIcon,
       },
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
     'gatsby-theme-material-ui',
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
