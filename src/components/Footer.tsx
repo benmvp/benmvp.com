@@ -8,11 +8,12 @@ import {
 } from '@material-ui/core'
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import SocialIcons from './SocialIcons'
+import { getUrl, getBlogUrl } from '../utils'
 
 const LINKS = [
-  { to: '/learning-es6-series/', title: 'Learning ES6' },
-  { to: '/ama/', title: 'AMA' },
-  { to: '/blog/rss.xml', title: 'RSS' },
+  { to: getUrl('/learning-es6-series/'), title: 'Learning ES6' },
+  { to: getUrl('/ama/'), title: 'AMA' },
+  { to: getBlogUrl('/rss.xml'), title: 'RSS' },
 ]
 
 const useStyles = makeStyles((theme) =>

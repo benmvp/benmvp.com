@@ -68,7 +68,7 @@ const SpeakingEngagements = ({ data }) => {
           Twitter
         </a>
         , <a href="mailto:ben@benmvp.com">email</a> or{' '}
-        <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
+        <GatsbyLink href={getUrl('/ama/')}>my AMA</GatsbyLink>.
       </Typography>
       <Grid container spacing={2}>
         {engagements.map((engagement) => {

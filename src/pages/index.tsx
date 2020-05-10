@@ -13,7 +13,7 @@ import Seo from '../components/Seo'
 import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
-import { getUrl } from '../utils'
+import { getUrl, getBlogUrl } from '../utils'
 import { getVideos } from '../utils/video'
 import { getUpcomingEngagements } from '../utils/speaking-engagement'
 
@@ -47,7 +47,7 @@ const SpeakCardList = () => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href="/speak/" variant="h6">
+        <Link href={getUrl('/speak/')} variant="h6">
           View all speaking engagements >
         </Link>
       </Box>
@@ -77,7 +77,7 @@ const PostCardList = ({ posts }) => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href="/blog/" variant="h6">
+        <Link href={getBlogUrl()} variant="h6">
           View all posts >
         </Link>
       </Box>
@@ -101,7 +101,7 @@ const VideoCardList = () => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href="/videos/" variant="h6">
+          <Link href={getUrl('/videos/')} variant="h6">
             View all videos >
           </Link>
         </Box>
@@ -162,7 +162,7 @@ export const query = graphql`
     recentPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fileAbsolutePath: { regex: "//posts//" }
+        fileAbsolutePath: { regex: "//content/posts//" }
         frontmatter: { published: { ne: false } }
       }
       limit: 6
