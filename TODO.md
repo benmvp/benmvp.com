@@ -4,13 +4,14 @@
 - [x] Add "View all" links for home page sections
 - [x] Talks/videos/speak as data-driven pages
 - [ ] Add minishops pages
-  - [ ] Add mailing list option for those interested at bottom
-  - [ ] Share (top and bottom)
-  - [ ] Add schema.org
+  - [x] Add form for those interested at bottom
+  - [x] Share (top and bottom)
   - [ ] Masthead as social image
 - [ ] Add minishops home page (using tagline)
   - Let's learn together without having to leave your house!
-- [ ] Upcoming minishops on home page ("Develop")
+- [ ] Create Eventbrite event for a minishop
+  - [ ] Add schema.org (+ events SMO)
+  - [ ] Upcoming minishops on home page ("Develop")
   - [ ] Add hidden "skip navigation" in header
 - [ ] Write blog post about minishops
 - [x] Pull out fragments into separate file

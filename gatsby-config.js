@@ -29,6 +29,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/content/minishops/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/content/posts/`,
       },
     },
@@ -106,7 +112,7 @@ module.exports = {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: {
-                    fileAbsolutePath: { regex: "//posts//" }
+                    fileAbsolutePath: { regex: "//content/posts//" }
                     frontmatter: { published: { ne: false } }
                   }
                 ) {

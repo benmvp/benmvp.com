@@ -18,42 +18,83 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const result = await graphql(`
-    query Pages {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
+  const { data, errors } = await graphql(`
+    fragment MarkdownPageInfo on MarkdownRemark {
+      fields {
+        slug
+      }
+    }
+    query {
+      minishops: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//content/minishops//" } }
       ) {
         edges {
           node {
-            fileAbsolutePath
-            fields {
-              slug
-            }
+            ...MarkdownPageInfo
+          }
+        }
+      }
+      posts: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//content/posts//" } }
+      ) {
+        edges {
+          node {
+            ...MarkdownPageInfo
+          }
+        }
+      }
+      pages: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//content/pages//" } }
+      ) {
+        edges {
+          node {
+            ...MarkdownPageInfo
           }
         }
       }
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const slug = node.fields.slug
-    const isPage = /pages/.test(node.fileAbsolutePath)
-    let component = resolve('./src/templates/Post.tsx')
-    let path = join('/blog', slug)
+  if (errors) {
+    return Promise.reject(errors)
+  }
 
-    if (isPage) {
-      component = resolve('./src/templates/Page.tsx')
-      path = slug
-    }
+  const { minishops, posts, pages } = data
 
-    createPage({
-      path,
-      component,
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug,
-      },
+  const createPages = ({ allMarkdownRemark, component, getPath }) => {
+    allMarkdownRemark.edges.forEach(({ node }) => {
+      const slug = node.fields.slug
+
+      createPage({
+        path: getPath(slug),
+        component,
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug,
+        },
+      })
     })
+  }
+
+  // create minishop pages
+  createPages({
+    allMarkdownRemark: minishops,
+    component: resolve('./src/templates/Minishop.tsx'),
+    getPath: (slug) => join('/minishops', slug),
+  })
+
+  // create blog post pages
+  createPages({
+    allMarkdownRemark: posts,
+    component: resolve('./src/templates/Post.tsx'),
+    getPath: (slug) => join('/blog', slug),
+  })
+
+  // create generic pages
+  createPages({
+    allMarkdownRemark: pages,
+    component: resolve('./src/templates/Page.tsx'),
+    getPath: (slug) => slug,
   })
 }
