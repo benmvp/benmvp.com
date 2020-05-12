@@ -39,6 +39,6 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 
 ## What is a "minishop"?
 
-A minishop is a fully-remote workshop that lasts only 3 hours long. It’s highly-focused, covering only the concepts you want to learn so that you can get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in the way.
+A minishop by Ben Ilegbodu is a fully-remote workshop that lasts only 3 hours long. It’s highly-focused, covering only the concepts you want to learn so that you can get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in the way.
 
 To learn more about minishops, read the [Introducing Minishops]() blog post.
