@@ -19,6 +19,11 @@ import Img from 'gatsby-image'
 
 const NAV_LINKS = [
   {
+    to: '/minishops/',
+    title: 'Minishops',
+    label: "Attend one of Ben's remote minishop",
+  },
+  {
     to: '/speak/',
     title: 'Speak',
     label: "Check out Ben's speaking engagements",
