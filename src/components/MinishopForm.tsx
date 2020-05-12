@@ -7,6 +7,7 @@ import {
   TextField,
   Button,
   InputAdornment,
+  Paper,
 } from '@material-ui/core'
 import EmailIcon from '@material-ui/icons/Email'
 import PersonIcon from '@material-ui/icons/Person'
@@ -20,6 +21,12 @@ interface Props {
 
 const useStyles = makeStyles((theme) => {
   return createStyles({
+    root: {
+      textAlign: 'center',
+      maxWidth: '500px',
+      margin: theme.spacing(5, 'auto'),
+      padding: theme.spacing(4),
+    },
     button: {
       marginTop: theme.spacing(3),
     },
@@ -30,23 +37,13 @@ const MinishopForm = ({ slug, title }: Props) => {
   const classes = useStyles()
 
   return (
-    <Box
-      component="section"
-      border={3}
-      borderColor="secondary.main"
-      borderRadius="borderRadius"
-      textAlign="center"
-      maxWidth="500px"
-      mx="auto"
-      my={5}
-      p={4}
-    >
+    <Paper component="section" elevation={5} className={classes.root}>
       <Typography variant="h5" component="h1" gutterBottom>
-        <strong>{title}</strong> is not currently scheduled
+        <strong>{title}</strong> has not been rescheduled
       </Typography>
       <Typography variant="body1" gutterBottom>
-        Provide your email to be notified when the next minishop is scheduled so
-        you can ensure you get a spot and get the best price.
+        Provide your email to be notified when the next one is scheduled so you
+        can ensure you get a spot and the best price.
       </Typography>
       <Box
         component="form"
@@ -55,21 +52,6 @@ const MinishopForm = ({ slug, title }: Props) => {
         name="minishop"
         data-netlify="true"
       >
-        <TextField
-          id="minishop-form-name"
-          label="Name"
-          variant="outlined"
-          required
-          fullWidth
-          margin="normal"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <PersonIcon />
-              </InputAdornment>
-            ),
-          }}
-        />
         <TextField
           id="minishop-form-email"
           type="email"
@@ -82,6 +64,21 @@ const MinishopForm = ({ slug, title }: Props) => {
             startAdornment: (
               <InputAdornment position="start">
                 <EmailIcon />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <TextField
+          id="minishop-form-name"
+          label="Name"
+          variant="outlined"
+          required
+          fullWidth
+          margin="normal"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <PersonIcon />
               </InputAdornment>
             ),
           }}
@@ -116,7 +113,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         <input type="hidden" name="slug" value={slug} />
         <input type="hidden" name="form-name" value="minishop" />
       </Box>
-    </Box>
+    </Paper>
   )
 }
 
