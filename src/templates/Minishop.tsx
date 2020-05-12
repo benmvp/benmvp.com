@@ -28,19 +28,11 @@ const Minishop = ({ data }) => {
   const classes = useStyles()
   const { minishop } = data
   const { html, excerpt, frontmatter, fields } = minishop
-  const {
-    title,
-    subTitle,
-    description,
-    tags,
-    hero,
-    heroAlt,
-    heroCredit,
-  } = frontmatter
+  const { title, subTitle, tags, hero, heroAlt, heroCredit } = frontmatter
   const { slug } = fields
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
-  const summary = description || excerpt
+  const summary = subTitle || excerpt
 
   return (
     <Layout>
@@ -91,7 +83,6 @@ export const query = graphql`
       frontmatter {
         title
         subTitle
-        description
         tags
         hero {
           ...HeroFluid960
