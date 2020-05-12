@@ -39,7 +39,7 @@ const MinishopForm = ({ slug, title }: Props) => {
   return (
     <Paper component="section" elevation={5} className={classes.root}>
       <Typography variant="h5" component="h1" gutterBottom>
-        <strong>{title}</strong> has not yet been rescheduled
+        The next <strong>{title}</strong> is coming soon!
       </Typography>
       <Typography variant="body1" gutterBottom>
         Provide your email to be notified when the next one is scheduled so you
@@ -54,6 +54,7 @@ const MinishopForm = ({ slug, title }: Props) => {
       >
         <TextField
           id="minishop-form-email"
+          name="email"
           type="email"
           label="Email"
           variant="outlined"
@@ -70,6 +71,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         />
         <TextField
           id="minishop-form-name"
+          name="name"
           label="Name"
           variant="outlined"
           required
@@ -85,6 +87,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         />
         <TextField
           id="minishop-form-learn"
+          name="learn"
           label="Share 1 or 2 things you'd like to learn"
           variant="outlined"
           fullWidth
