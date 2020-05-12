@@ -9,6 +9,7 @@ type Meta =
 interface Props {
   description?: string
   image?: string
+  imageAlt?: string
   lang?: string
   meta?: Meta[]
   title?: string
@@ -19,6 +20,7 @@ interface Props {
 const Seo = ({
   description,
   image,
+  imageAlt,
   lang,
   meta = [],
   title,
@@ -68,6 +70,7 @@ const Seo = ({
       <meta name="image" content={metaImage} />
       <link rel="canonical" href={url} />
 
+      <meta property="og:site_name" content={site.siteMetadata.title} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
@@ -76,12 +79,17 @@ const Seo = ({
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta
+        name="twitter:site"
+        content={site.siteMetadata.social.twitterHandle}
+      />
+      <meta
         name="twitter:creator"
         content={site.siteMetadata.social.twitterHandle}
       />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
 
       {meta.map((metaInfo) => (
         <meta

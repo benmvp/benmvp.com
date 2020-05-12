@@ -49,6 +49,7 @@ const Minishop = ({ data }) => {
         url={url}
         description={summary}
         image={hero?.childImageSharp?.fluid?.src}
+        imageAlt={heroAlt}
       />
       <PageHeader
         className={classes.header}

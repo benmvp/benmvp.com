@@ -58,7 +58,11 @@ const NotFound = ({ data }) => {
 
   return (
     <Layout maxWidth="lg">
-      <Seo title={PAGE_TITLE} url={getUrl('/404/')} />
+      <Seo
+        title={PAGE_TITLE}
+        url={getUrl('/404/')}
+        image={hero?.childImageSharp?.fluid?.src}
+      />
       <PageHeader title={PAGE_TITLE} />
 
       <HeroImage

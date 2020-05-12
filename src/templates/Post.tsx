@@ -49,6 +49,7 @@ const Post = ({ data }) => {
         description={summary}
         url={url}
         image={hero?.childImageSharp?.fluid?.src}
+        imageAlt={heroAlt}
         type="article"
         meta={[
           { property: 'og:article:published_time', content: dateIso },

@@ -34,6 +34,7 @@ const Page = ({ data }) => {
         url={url}
         description={excerpt}
         image={hero?.childImageSharp?.fluid?.src}
+        imageAlt={heroAlt}
       />
       <PageHeader className={classes.header} title={title} />
       {hero && (
