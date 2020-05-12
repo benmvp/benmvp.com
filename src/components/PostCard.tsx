@@ -102,7 +102,7 @@ const PostCard = ({
 
   return (
     <Card id={genPostSlug(title)}>
-      <CardActionArea component={Link} to={getBlogUrl(slug)} underline="none">
+      <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
         {hero && (
           <CardMedia
             component="img"
