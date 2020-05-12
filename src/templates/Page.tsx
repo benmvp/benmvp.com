@@ -23,7 +23,7 @@ const Page = ({ data }) => {
   const classes = useStyles()
   const { page } = data
   const { html, excerpt, frontmatter, fields } = page
-  const { title, hero, heroAlt } = frontmatter
+  const { title, hero, heroAlt, heroCredit } = frontmatter
   const { slug } = fields
   const url = getUrl(slug)
 
@@ -40,6 +40,7 @@ const Page = ({ data }) => {
         <HeroImage
           fluid={hero.childImageSharp.fluid}
           alt={heroAlt}
+          credit={heroCredit}
           className={classes.image}
         />
       )}
@@ -64,6 +65,7 @@ export const query = graphql`
           ...HeroFluid960
         }
         heroAlt
+        heroCredit
       }
     }
   }
