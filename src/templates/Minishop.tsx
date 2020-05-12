@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { makeStyles, createStyles, Box } from '@material-ui/core'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
+import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import Seo from '../components/Seo'
 import MinishopForm from '../components/MinishopForm'
@@ -14,6 +15,9 @@ const useStyles = makeStyles((theme) =>
     header: {
       marginBottom: theme.spacing(5),
     },
+    image: {
+      marginBottom: theme.spacing(3),
+    },
     footer: {
       marginTop: theme.spacing(5),
     },
@@ -24,7 +28,15 @@ const Minishop = ({ data }) => {
   const classes = useStyles()
   const { minishop } = data
   const { html, excerpt, frontmatter, fields } = minishop
-  const { title, subTitle, description, tags } = frontmatter
+  const {
+    title,
+    subTitle,
+    description,
+    tags,
+    hero,
+    heroAlt,
+    heroCredit,
+  } = frontmatter
   const { slug } = fields
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
@@ -32,12 +44,25 @@ const Minishop = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={`${fullTitle}/Workshop`} url={url} description={summary} />
+      <Seo
+        title={`${fullTitle}/Workshop`}
+        url={url}
+        description={summary}
+        image={hero?.childImageSharp?.fluid?.src}
+      />
       <PageHeader
         className={classes.header}
         title={fullTitle}
         subTitle={subTitle}
       />
+      {hero && (
+        <HeroImage
+          fluid={hero.childImageSharp.fluid}
+          alt={heroAlt}
+          credit={heroCredit}
+          className={classes.image}
+        />
+      )}
       <Content>{html}</Content>
       <Box component="footer" className={classes.footer}>
         <Share
@@ -67,6 +92,11 @@ export const query = graphql`
         subTitle
         description
         tags
+        hero {
+          ...HeroFluid960
+        }
+        heroAlt
+        heroCredit
       }
     }
   }
