@@ -37,7 +37,7 @@ const MinishopForm = ({ slug, title }: Props) => {
   const classes = useStyles()
 
   return (
-    <Paper component="section" elevation={5} className={classes.root}>
+    <Paper component="section" elevation={3} className={classes.root}>
       <Typography variant="h5" component="h1" gutterBottom>
         The next <strong>{title}</strong> is coming soon!
       </Typography>
