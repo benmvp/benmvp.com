@@ -37,8 +37,8 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 - Already have some experience using TypeScript in React
 - Don’t yet have experience using hooks in React (consider the [React Component Classes to Hooks]() minishop instead)
 
-## What is a "minishop"?
+## What are "minishops"?
 
-A minishop by Ben Ilegbodu is a fully-remote workshop that lasts only 3 hours long. It’s highly-focused, covering only the concepts you want to learn so that you can get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in the way.
+Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in the way.
 
 To learn more about minishops, read the [Introducing Minishops]() blog post.
