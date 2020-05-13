@@ -8,8 +8,6 @@ import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import { getMinishopUrl } from '../utils'
 
-const PAGE_TITLE = 'Minishops'
-
 const useStyles = makeStyles((theme) =>
   createStyles({
     header: {
@@ -29,19 +27,19 @@ const SpeakingEngagements = ({ data }) => {
     <Layout maxWidth="lg">
       <Seo
         url={getMinishopUrl()}
-        title={PAGE_TITLE}
-        description="Minishops by Ben Ilegbodu are fully-remote workshops that last only 3 hours long. They're highly-focused, covering only the concepts you want to learn so that you can get on with the rest of your day."
+        title="Minishops"
+        description="Minishops by Ben Ilegbodu are fully-remote workshops that last only 3 hours long. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day."
         image={hero.childImageSharp.fluid.src}
       />
       <PageHeader
         className={classes.header}
-        title={PAGE_TITLE}
-        subTitle="Let's learn together without having to leave your house!"
+        title="Minishops with Ben"
+        subTitle="Let's learn together without having to leave your house! Use remote minishops by Ben Ilegbodu to level up your JavaScript, React and frontend skills."
       />
       <HeroImage
         fluid={hero.childImageSharp.fluid}
         alt="Picture of a remote working environment with a monitor with code and a mug that says 'Life begins at the end of your comfort zone'"
-        credit="'Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)'"
+        credit="Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)"
         className={classes.image}
       />
     </Layout>
