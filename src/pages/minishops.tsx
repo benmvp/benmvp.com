@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
   const { hero, minishops } = data
-  console.log({ minishops })
+
   return (
     <Layout>
       <Seo
