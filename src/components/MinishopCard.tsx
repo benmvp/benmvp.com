@@ -72,7 +72,7 @@ const MinishopCard = ({ mode = 'full', slug, summary, tags, title }: Props) => {
             iconSize={32}
             summary={summary}
             tags={tags}
-            title={title}
+            title={`${title} Minishop`}
             url={url}
             options={new Set(['twitter', 'facebook', 'linkedin'])}
           />

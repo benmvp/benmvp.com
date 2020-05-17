@@ -40,7 +40,7 @@ module.exports = {
   manifestIcon: 'static/icons/icon-512x512.png',
 
   // social
-  twitterHandle: '@benmvp',
+  twitterHandle: 'benmvp',
   twitter: 'https://twitter.com/benmvp',
   github: 'https://github.com/benmvp',
   linkedIn: 'https://linkedin.com/in/benmvp',

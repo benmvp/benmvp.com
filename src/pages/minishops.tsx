@@ -30,7 +30,7 @@ const SpeakingEngagements = ({ data }) => {
     <Layout>
       <Seo
         url={getMinishopUrl()}
-        title="Minishops"
+        title="Remote Minishops"
         description="Minishops by Ben Ilegbodu are fully-remote workshops that last only 3 hours long. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day."
         image={hero.childImageSharp.fluid.src}
       />
@@ -76,6 +76,7 @@ export const query = graphql`
       ...HeroFluid960
     }
     minishops: allMarkdownRemark(
+      sort: { fields: [frontmatter___title], order: ASC }
       filter: {
         fileAbsolutePath: { regex: "//content/minishops//" }
         frontmatter: { published: { ne: false } }

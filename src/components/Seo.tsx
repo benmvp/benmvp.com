@@ -80,11 +80,11 @@ const Seo = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:site"
-        content={site.siteMetadata.social.twitterHandle}
+        content={`@${site.siteMetadata.social.twitterHandle}`}
       />
       <meta
         name="twitter:creator"
-        content={site.siteMetadata.social.twitterHandle}
+        content={`@${site.siteMetadata.social.twitterHandle}`}
       />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
