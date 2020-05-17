@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { createStyles, makeStyles, Typography, Grid } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
+import MinishopCard from '../components/MinishopCard'
 import { getMinishopUrl } from '../utils'
 
 const useStyles = makeStyles((theme) =>
@@ -16,15 +16,18 @@ const useStyles = makeStyles((theme) =>
     image: {
       marginBottom: theme.spacing(3),
     },
+    grid: {
+      marginTop: theme.spacing(3),
+    },
   }),
 )
 
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
-  const { hero } = data
-
+  const { hero, minishops } = data
+  console.log({ minishops })
   return (
-    <Layout maxWidth="lg">
+    <Layout>
       <Seo
         url={getMinishopUrl()}
         title="Minishops"
@@ -42,6 +45,21 @@ const SpeakingEngagements = ({ data }) => {
         credit="Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)"
         className={classes.image}
       />
+      <Typography component="h3" variant="h4">
+        Available Minishops
+      </Typography>
+      <Grid container spacing={2} className={classes.grid}>
+        {minishops.edges.map(({ node }) => (
+          <Grid key={node.id} item xs={12} sm={6}>
+            <MinishopCard
+              slug={node.fields.slug}
+              title={node.frontmatter.title}
+              tags={node.frontmatter.tags}
+              summary={node.frontmatter.subTitle || node.excerpt}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </Layout>
   )
 }
@@ -56,6 +74,19 @@ export const query = graphql`
       }
     ) {
       ...HeroFluid960
+    }
+    minishops: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "//content/minishops//" }
+        frontmatter: { published: { ne: false } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          ...PostCardInfo
+        }
+      }
     }
   }
 `

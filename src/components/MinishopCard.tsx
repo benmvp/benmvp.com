@@ -6,20 +6,16 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  CardMedia,
   Button,
   Typography,
   Box,
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
-import { getBlogUrl, genPostSlug } from '../utils'
+import { getMinishopUrl, genMinishopSlug } from '../utils'
 import useCopyUrl from '../utils/useCopyUrl'
 
 interface Props {
-  date: string
-  hero: any
-  heroAlt: string
   mode?: 'min' | 'full'
   slug: string
   summary: string
@@ -29,9 +25,6 @@ interface Props {
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    media: {
-      height: 266.66667,
-    },
     buttons: {
       flex: 1,
       marginRight: theme.spacing(2),
@@ -39,44 +32,20 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const PostCard = ({
-  date,
-  hero,
-  heroAlt,
-  mode = 'full',
-  slug,
-  summary,
-  tags,
-  title,
-}: Props) => {
+const MinishopCard = ({ mode = 'full', slug, summary, tags, title }: Props) => {
   const classes = useStyles()
-  const url = getBlogUrl(slug)
+  const url = getMinishopUrl(slug)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(url)
-  const showDate = mode !== 'min'
   const showShare = mode !== 'min'
 
   return (
-    <Card id={genPostSlug(title)}>
-      <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
-        {hero && (
-          <CardMedia
-            component="img"
-            image={hero.childImageSharp.fluid.src}
-            title={heroAlt}
-            className={classes.media}
-          />
-        )}
+    <Card id={genMinishopSlug(title)}>
+      <CardActionArea
+        component={Link}
+        to={`/minishops${slug}`}
+        underline="none"
+      >
         <CardContent>
-          {showDate && (
-            <Typography
-              gutterBottom
-              variant="subtitle2"
-              color="textSecondary"
-              component="h4"
-            >
-              {date}
-            </Typography>
-          )}
           <Typography
             gutterBottom
             variant="h5"
@@ -105,7 +74,7 @@ const PostCard = ({
             tags={tags}
             title={title}
             url={url}
-            options={new Set(['twitter', 'facebook', 'pocket'])}
+            options={new Set(['twitter', 'facebook', 'linkedin'])}
           />
         </CardActions>
       )}
@@ -113,4 +82,4 @@ const PostCard = ({
   )
 }
 
-export default PostCard
+export default MinishopCard
