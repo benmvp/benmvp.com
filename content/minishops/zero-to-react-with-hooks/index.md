@@ -31,13 +31,13 @@ Whatever the case may be, you’ll leave the minishop with all the fundamentals 
 - Experience building web user interfaces with HTML, CSS, and JavaScript DOM APIs
 - Experience with modern JavaScript syntax and asynchronous patterns like `Promise` & `async`/`await`
 
-## This may not be for you if you...
+## This minishop may not be for you if you...
 
-- Already have experience developing in React with class components (consider the [React Component Classes to Hooks]() minishop instead)
-- Already have dabbled with hooks in React (consider the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop instead)
+- Already have experience developing in React with class components (consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
+- Already have dabbled with React Hooks (consider the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop instead)
 
-## What are "minishops"?
+## What are “minishops”?
 
-Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in the way.
+Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in your way.
 
 To learn more about minishops, read the [Introducing Minishops]() blog post.
