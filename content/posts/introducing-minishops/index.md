@@ -45,7 +45,7 @@ I've got about 10 minishops in mind, but I'm not releasing them all at once. I'm
 
 I want to see if these minishops are something that stick and I should continue pursuing. I spent the last month or so [redesigning my site](/blog/new-gatsby-site/) in part to enable these minishops, so I'm hoping that it all works out well.
 
-As of right now, I'm still deciding on which of the 3 minishops will be the first one I schedule. If you have a preference, feel free to fill out the form at the bottom of the minishop page and I'll notify you when it is scheduled next.
+As of right now, I'm still finalizing which minishop I will schedule first, as well as its cost. If you have a minishop you'd like to attend, feel free to fill out the form at the bottom of that minishop's page and I'll notify you when it is scheduled next.
 
 Some other minishop ideas to pique your interest:
 
