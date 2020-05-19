@@ -40,4 +40,4 @@ Whatever the case may be, you’ll leave the minishop with all the fundamentals 
 
 Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in your way.
 
-To learn more about minishops, read the [Introducing Minishops]() blog post.
+To learn more about minishops, read the [Introducing Minishops](/blog/introducing-minishops/) blog post.

@@ -3,18 +3,18 @@
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
 - [x] Talks/videos/speak as data-driven pages
-- [ ] Add minishops pages
+- [x] Add minishops pages
   - [x] Add form for those interested at bottom
   - [x] Share (top and bottom)
   - [x] Masthead as social image
-  - [ ] Write descriptions for 3 or 4 minishops
-  - [ ] Add minishops home page (using tagline)
+  - [x] Write descriptions for 3 or 4 minishops
+  - [x] Add minishops home page (using tagline)
     - Let's learn together without having to leave your house!
-  - [ ] Write blog post about minishops
+  - [x] Write blog post about minishops
 - [ ] Create Eventbrite event for a minishop
   - [ ] Add schema.org (+ events SMO)
   - [ ] Upcoming minishops on home page ("Develop")
-  - [ ] Display upcoming minishops at the top
+  - [ ] Display upcoming minishops at the top of home page
   - [ ] Add hidden "skip navigation" in header
 - [x] Pull out fragments into separate file
 

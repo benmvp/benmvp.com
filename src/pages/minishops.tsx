@@ -46,7 +46,7 @@ const SpeakingEngagements = ({ data }) => {
         className={classes.image}
       />
       <Typography component="h3" variant="h4">
-        Available Minishops
+        All Minishops
       </Typography>
       <Grid container spacing={2} className={classes.grid}>
         {minishops.edges.map(({ node }) => (
