@@ -13,11 +13,11 @@ If you haven't realized yet, I enjoy teaching. Up until this point, it's come in
 
 Well, this global pandemic that's forcing most of us to shelter-in-place has canceled all of my conference speaking for the foreseeable future. This has opened up the time that I normally devoted to prepping for talks. I've used some of that time to return to [blogging](/blog/), but the majority I've put into transforming my in-person workshops into remote workshops.
 
-I call these remote workshops **"minishops"** because they are short (aka "mini") workshops. These minishops will last only about 3 hours so that they can be very focused on just a couple of topics instead of covering many different topics to fill a whole day workshop.
+I call these remote workshops [**"minishops"**](/minishops/) because they are short (aka "mini") workshops. These minishops will last only about 3 hours so that they can be very focused on just a couple of topics instead of covering many different topics to fill a whole day workshop.
 
 ---
 
-Full-day or multi-day workshops work for many people (myself included), but they do not work for everyone.
+Full-day or multi-day workshops work for many people (myself included), but they do not work for everyone. My goal is to provide another style of workshop that hopefully will be better suited for a different group of learners.
 
 ## Learning
 
