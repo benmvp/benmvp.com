@@ -12,7 +12,7 @@ import SocialIcons from './SocialIcons'
 const LINKS = [
   { to: '/learning-es6-series/', title: 'Learning ES6' },
   { to: '/ama/', title: 'AMA' },
-  { to: '/rss.xml', title: 'RSS' },
+  { to: '/blog/rss.xml', title: 'RSS' },
 ]
 
 const useStyles = makeStyles((theme) =>
