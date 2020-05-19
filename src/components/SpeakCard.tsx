@@ -169,10 +169,6 @@ const SpeakCard = (props: Props) => {
   } = props
   const fullLocation = `${location}${venue ? ` (${venue})` : ''}`
 
-  // TODO:
-  // - Add `mode` (mini or full))
-  // - Add categories & description
-
   return (
     <Card id={id} className={classes.card}>
       <CardContent>

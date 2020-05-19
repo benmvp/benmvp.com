@@ -34,7 +34,7 @@ const HeroImage = ({ alt, credit, className, fluid }: Props) => {
           className={classes.credit}
           component="footer"
         >
-          <Markdown source={credit} />
+          <Markdown source={credit} linkTarget="_blank" />
         </Typography>
       )}
     </Box>

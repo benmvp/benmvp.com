@@ -1,6 +1,19 @@
 import { graphql } from 'gatsby'
 
 export const fragments = graphql`
+  fragment MinishopCardInfo on MarkdownRemark {
+    frontmatter {
+      title
+      subTitle
+      category
+      tags
+    }
+    fields {
+      slug
+    }
+    excerpt
+  }
+
   fragment PostCardInfo on MarkdownRemark {
     frontmatter {
       title

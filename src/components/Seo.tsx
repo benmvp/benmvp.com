@@ -9,6 +9,7 @@ type Meta =
 interface Props {
   description?: string
   image?: string
+  imageAlt?: string
   lang?: string
   meta?: Meta[]
   title?: string
@@ -19,6 +20,7 @@ interface Props {
 const Seo = ({
   description,
   image,
+  imageAlt,
   lang,
   meta = [],
   title,
@@ -30,6 +32,7 @@ const Seo = ({
       query SeoSiteInfo {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             image
@@ -50,35 +53,43 @@ const Seo = ({
 
   const htmlLang = lang || site.siteMetadata.lang
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const metaImage = `${site.siteMetadata.siteUrl}${
+    image || site.siteMetadata.image
+  }`
+  const fullTitle = title
+    ? `${title} | ${site.siteMetadata.title}`
+    : site.siteMetadata.title
 
   return (
-    <Helmet
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      defaultTitle={site.siteMetadata.title}
-    >
+    <Helmet>
       <html lang={htmlLang} />
-      <title>{title}</title>
+      <title>{fullTitle}</title>
 
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={site.siteMetadata.keywords.join(' ')} />
       <meta name="image" content={metaImage} />
       <link rel="canonical" href={url} />
 
+      <meta property="og:site_name" content={site.siteMetadata.title} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta
-        name="twitter:creator"
-        content={site.siteMetadata.social.twitterHandle}
+        name="twitter:site"
+        content={`@${site.siteMetadata.social.twitterHandle}`}
       />
-      <meta name="twitter:title" content={title} />
+      <meta
+        name="twitter:creator"
+        content={`@${site.siteMetadata.social.twitterHandle}`}
+      />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
 
       {meta.map((metaInfo) => (
         <meta

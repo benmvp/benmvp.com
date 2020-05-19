@@ -1,5 +1,11 @@
 require('ts-node').register({ files: true })
 
+// load environment-specific .env file to read
+// those values into `process.env`
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const SITE_CONFIG = require('./config/site')
 const { getBlogUrl } = require('./src/utils')
 
@@ -26,6 +32,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/minishops/`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -57,14 +69,14 @@ module.exports = {
         background_color: SITE_CONFIG.manifestBackgroundColor,
         theme_color: SITE_CONFIG.manifestThemeColor,
         display: SITE_CONFIG.manifestDisplay,
-        icon: `static${SITE_CONFIG.siteImage}`,
+        icon: SITE_CONFIG.manifestIcon,
       },
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-codegen',
     'gatsby-theme-material-ui',
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
@@ -106,7 +118,7 @@ module.exports = {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: {
-                    fileAbsolutePath: { regex: "//posts//" }
+                    fileAbsolutePath: { regex: "//content/posts//" }
                     frontmatter: { published: { ne: false } }
                   }
                 ) {
@@ -160,6 +172,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
+          'gatsby-remark-external-links',
         ],
       },
     },

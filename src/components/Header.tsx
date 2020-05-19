@@ -19,12 +19,21 @@ import Img from 'gatsby-image'
 
 const NAV_LINKS = [
   {
+    to: '/minishops/',
+    title: 'Minishops',
+    label: "Attend one of Ben's remote minishop",
+  },
+  {
     to: '/speak/',
     title: 'Speak',
     label: "Check out Ben's speaking engagements",
   },
   { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
-  { to: '/videos/', title: 'Videos', label: "Watch Ben's past tech talks" },
+  {
+    to: '/videos/',
+    title: 'Videos',
+    label: "Watch Ben's past tech talks",
+  },
   { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 'sm'

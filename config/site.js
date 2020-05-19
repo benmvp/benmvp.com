@@ -1,11 +1,20 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = process.env.ROOT_URL || 'https://www.benmvp.com', // Domain of your site. No trailing slash!
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 const { getTheme } = require('./theme')
 
 const THEME = getTheme(false)
 
 module.exports = {
   siteTitle: 'Ben Ilegbodu',
-  siteUrl: process.env.ROOT_URL || 'https://www.benmvp.com', // Domain of your site. No trailing slash!
-  siteImage: '/icons/icon-512x512.png',
+  siteUrl,
+  siteImage: '/ben-ilegbodu.png',
   siteDescription:
     'Ben Ilegbodu uses his many years of frontend development experience to provide quality content to help you become a better frontend engineer.',
   siteLanguage: 'en', // Language Tag on <html> element
@@ -28,6 +37,7 @@ module.exports = {
   manifestBackgroundColor: THEME.palette.background.default,
   manifestThemeColor: THEME.palette.primary.main,
   manifestDisplay: 'standalone',
+  manifestIcon: 'static/icons/icon-512x512.png',
 
   // social
   twitterHandle: 'benmvp',

@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) =>
           margin: 0,
         },
       },
+      '& hr': {
+        margin: theme.spacing(2, 0),
+      },
       '& .gatsby-highlight': {
         // code blocks
         margin: theme.spacing(0, 0, 3, 2),

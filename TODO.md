@@ -1,25 +1,33 @@
-# To Add
+# Minishops MVP
 
 - [x] Write blog post on new blog (again)
 - [x] Add "View all" links for home page sections
 - [x] Talks/videos/speak as data-driven pages
-- [ ] Add minishops pages
-  - [ ] Add mailing list option for those interested at bottom
-  - [ ] Share (top and bottom)
-  - [ ] Add schema.org
-  - [ ] Masthead as social image
-- [ ] Add minishops home page (using tagline)
-  - Let's learn together without having to leave your house!
-- [ ] Upcoming minishops on home page ("Develop")
+- [x] Add minishops pages
+  - [x] Add form for those interested at bottom
+  - [x] Share (top and bottom)
+  - [x] Masthead as social image
+  - [x] Write descriptions for 3 or 4 minishops
+  - [x] Add minishops home page (using tagline)
+    - Let's learn together without having to leave your house!
+  - [x] Write blog post about minishops
+- [ ] Create Eventbrite event for a minishop
+  - [ ] Add schema.org (+ events SMO)
+  - [ ] Upcoming minishops on home page ("Develop")
+  - [ ] Display upcoming minishops at the top of home page
   - [ ] Add hidden "skip navigation" in header
-- [ ] Write blog post about minishops
 - [x] Pull out fragments into separate file
+
+## Post-MVP
+
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
   - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
+- [ ] Animated masthead (like https://fizbuz.com/)
+  - frontend skills, JavaScript skills, development skills, React skills
 - [ ] Learning ES6 page data-driven w/ excerpts
 - [ ] Add blog post category pages
   - [ ] Category filtering on `/blog/`

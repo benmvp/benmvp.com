@@ -13,7 +13,7 @@ import Seo from '../components/Seo'
 import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
-import { getUrl } from '../utils'
+import { getUrl, getBlogUrl } from '../utils'
 import { getVideos } from '../utils/video'
 import { getUpcomingEngagements } from '../utils/speaking-engagement'
 
@@ -162,7 +162,7 @@ export const query = graphql`
     recentPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fileAbsolutePath: { regex: "//posts//" }
+        fileAbsolutePath: { regex: "//content/posts//" }
         frontmatter: { published: { ne: false } }
       }
       limit: 6

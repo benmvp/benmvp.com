@@ -58,7 +58,11 @@ const NotFound = ({ data }) => {
 
   return (
     <Layout maxWidth="lg">
-      <Seo title={PAGE_TITLE} url={getUrl('/404/')} />
+      <Seo
+        title={PAGE_TITLE}
+        url={getUrl('/404/')}
+        image={hero?.childImageSharp?.fluid?.src}
+      />
       <PageHeader title={PAGE_TITLE} />
 
       <HeroImage
@@ -95,7 +99,7 @@ export const query = graphql`
     recentPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fileAbsolutePath: { regex: "//posts//" }
+        fileAbsolutePath: { regex: "//content/posts//" }
         frontmatter: { published: { ne: false } }
       }
       limit: 6
