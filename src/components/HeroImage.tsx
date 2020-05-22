@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) =>
     },
     credit: {
       textAlign: 'right',
+      fontStyle: 'italic',
     },
   }),
 )

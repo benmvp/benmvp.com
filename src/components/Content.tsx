@@ -24,6 +24,13 @@ const useStyles = makeStyles((theme) =>
         maxWidth: 800,
         width: '100%',
       },
+      '& p > .gatsby-resp-image-wrapper + em': {
+        ...theme.typography.caption,
+        display: 'block',
+        textAlign: 'right',
+        maxWidth: 800,
+        margin: theme.spacing(1, 2),
+      },
       '& ul': {
         listStyle: 'circle',
         padding: theme.spacing(0, 0, 0, 3),
@@ -47,7 +54,11 @@ const useStyles = makeStyles((theme) =>
         },
       },
       '& hr': {
-        margin: theme.spacing(2, 0),
+        border: 'none',
+        height: 1,
+        width: '50%',
+        backgroundColor: theme.palette.divider,
+        margin: theme.spacing(4, 'auto'),
       },
       '& .gatsby-highlight': {
         // code blocks
