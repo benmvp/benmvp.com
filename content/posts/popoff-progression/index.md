@@ -1,5 +1,5 @@
 ---
-date: 2020-05-21
+date: 2020-05-22
 title: The Popoff Progression
 subTitle: A plan for new software engineering grads to focus on gaining depth in a single technical area to help grow their career
 description: A plan for new software engineering grads to focus on gaining depth in a single technical area to help grow their career
