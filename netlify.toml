@@ -21,7 +21,7 @@
   to = "https://you-dont-need-js-for-that.benmvp.com/"
 [[redirects]]
   from = "/react-exposed"
-  to = "https://benmvp.github.io/react-exposed/"
+  to = "https://react-exposed.benmvp.com/"
 
 # Post redirects from /* to /blog/*
 [[redirects]]
