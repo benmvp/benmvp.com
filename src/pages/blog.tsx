@@ -7,7 +7,7 @@ import PostCard from '../components/PostCard'
 import { getBlogUrl } from '../utils'
 
 const Blog = ({ data }) => {
-  const { posts } = data
+  const { posts, site } = data
 
   return (
     <Layout maxWidth="lg">
@@ -15,6 +15,13 @@ const Blog = ({ data }) => {
         url={getBlogUrl()}
         title="Blog"
         description="Browse through Ben Ilegbodu's blog posts to learn more about React and other frontend topics"
+        schemaOrg={{
+          '@type': 'Blog',
+          author: {
+            '@type': 'Person',
+            name: site.siteMetadata.author.name,
+          },
+        }}
       />
       <Grid container spacing={2}>
         {posts.edges.map(({ node }) => (
@@ -50,6 +57,13 @@ export const query = graphql`
         node {
           id
           ...PostCardInfo
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author {
+          name
         }
       }
     }

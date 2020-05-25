@@ -12,6 +12,7 @@ interface Props {
   imageAlt?: string
   lang?: string
   meta?: Meta[]
+  schemaOrg?: any
   title?: string
   type?: string
   url: string
@@ -23,6 +24,7 @@ const Seo = ({
   imageAlt,
   lang,
   meta = [],
+  schemaOrg,
   title,
   type = 'website',
   url,
@@ -56,27 +58,48 @@ const Seo = ({
   const metaImage = `${site.siteMetadata.siteUrl}${
     image || site.siteMetadata.image
   }`
-  const fullTitle = title
-    ? `${title} | ${site.siteMetadata.title}`
-    : site.siteMetadata.title
+  const siteTitle = site.siteMetadata.title
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
+  const keywords = site.siteMetadata.keywords.join(' ')
+  const siteSchemaOrg = {
+    '@context': 'http://schema.org/',
+    '@type': 'WebSite',
+    url,
+    name: fullTitle,
+    alternateName: siteTitle,
+    copyrightHolder: site.siteMetadata.author.name,
+    copyrightYear: 2015,
+    description: metaDescription,
+    image: {
+      '@type': 'ImageObject',
+      url: metaImage,
+    },
+    keywords,
+    ...schemaOrg,
+  }
 
   return (
     <Helmet>
       <html lang={htmlLang} />
       <title>{fullTitle}</title>
 
+      {/* General tags */}
       <meta name="description" content={metaDescription} />
-      <meta name="keywords" content={site.siteMetadata.keywords.join(' ')} />
+      <meta name="keywords" content={keywords} />
       <meta name="image" content={metaImage} />
       <link rel="canonical" href={url} />
 
-      <meta property="og:site_name" content={site.siteMetadata.title} />
+      {/* OpenGraph tags */}
+      <meta property="og:site_name" content={siteTitle} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:locale" content="en_US" />
 
+      {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:site"
@@ -91,12 +114,18 @@ const Seo = ({
       <meta name="twitter:image" content={metaImage} />
       <meta name="twitter:image:alt" content={imageAlt} />
 
+      {/* Additional tags */}
       {meta.map((metaInfo) => (
         <meta
           key={`${metaInfo.name || metaInfo.property}${metaInfo.content}`}
           {...metaInfo}
         />
       ))}
+
+      {/* schema.org */}
+      <script type="application/ld+json">
+        {JSON.stringify(siteSchemaOrg)}
+      </script>
     </Helmet>
   )
 }

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) =>
 const Post = ({ data }) => {
   const classes = useStyles()
   const { post, site } = data
-  const { html, fields, frontmatter, excerpt, timeToRead } = post
+  const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const {
     title,
     subTitle,
@@ -34,6 +34,7 @@ const Post = ({ data }) => {
     dateIso,
     description,
     tags,
+    category,
     hero,
     heroAlt,
     heroCredit,
@@ -63,6 +64,23 @@ const Post = ({ data }) => {
             content: tag,
           })),
         ]}
+        schemaOrg={{
+          '@type': 'BlogPosting',
+          headline: subTitle,
+          articleBody: html,
+          author: {
+            '@type': 'Person',
+            name: site.siteMetadata.author.name,
+          },
+          datePublished: dateIso,
+          publisher: {
+            '@type': 'Person',
+            name: site.siteMetadata.author.name,
+          },
+          teaches: category,
+          timeRequired: `PT${timeToRead}M`,
+          wordCount: wordCount.words,
+        }}
       />
       <PostHeader
         className={classes.header}
@@ -100,6 +118,9 @@ export const query = graphql`
       html
       excerpt
       timeToRead
+      wordCount {
+        words
+      }
       fields {
         slug
       }
@@ -108,6 +129,7 @@ export const query = graphql`
         subTitle
         description
         tags
+        category
         date(formatString: "DD MMMM YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")
         hero {

@@ -28,7 +28,16 @@ const Minishop = ({ data }) => {
   const classes = useStyles()
   const { minishop } = data
   const { html, excerpt, frontmatter, fields } = minishop
-  const { title, subTitle, tags, hero, heroAlt, heroCredit } = frontmatter
+  const {
+    title,
+    subTitle,
+    category,
+    level,
+    tags,
+    hero,
+    heroAlt,
+    heroCredit,
+  } = frontmatter
   const { slug } = fields
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
@@ -42,6 +51,16 @@ const Minishop = ({ data }) => {
         description={summary}
         image={hero?.childImageSharp?.fluid?.src}
         imageAlt={heroAlt}
+        type="events.event"
+        schemaOrg={{
+          '@type': 'EducationEvent',
+          eventAttendanceMode: 'OnlineEventAttendanceMode',
+          educationLevel: level,
+          location: {
+            '@type': 'VirtualLocation',
+          },
+          teaches: category,
+        }}
       />
       <PageHeader
         className={classes.header}
@@ -83,6 +102,8 @@ export const query = graphql`
       frontmatter {
         title
         subTitle
+        category
+        level
         tags
         hero {
           ...HeroFluid960

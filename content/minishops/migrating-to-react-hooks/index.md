@@ -2,6 +2,7 @@
 title: Migrating to React Hooks
 subTitle: Learn how to migrate to React Hooks from classes for a better way to develop components and manage state in React applications
 category: react
+level: intermediate
 tags: [react, hooks, classes, state]
 hero: ./lines-of-code-artem-sapegin-b18TRXc8UPQ-unsplash.jpg
 heroAlt: Close up shot of a Macbook Pro with lines of React code

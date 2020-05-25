@@ -1,5 +1,4 @@
 import { getEngagements } from './speaking-engagement'
-import { genTalkSlug } from '.'
 
 type Provider = 'youtube' | 'vimeo'
 
