@@ -3,8 +3,6 @@
   publish = "public/"
 
 [[plugins]]
-  package = "netlify-plugin-gatsby-cache"
-[[plugins]]
   package = "netlify-plugin-no-more-404"
 
 # Redirects for removed pages
