@@ -8,7 +8,6 @@ import {
   Paper,
   Typography,
 } from '@material-ui/core'
-import Helmet from 'react-helmet'
 
 interface Props {
   event: {
@@ -37,12 +36,40 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
   const buttonId = `eventbrite-checkout-${event.id}-${isTop ? 'top' : 'bottom'}`
 
   useEffect(() => {
-    window.EBWidgets?.createWidget({
-      widgetType: 'checkout',
-      eventId: event.id,
-      modal: true,
-      modalTriggerElementId: buttonId,
-    })
+    const createWidget = () => {
+      window.EBWidgets?.createWidget({
+        widgetType: 'checkout',
+        eventId: event.id,
+        modal: true,
+        modalTriggerElementId: buttonId,
+      })
+    }
+
+    let widgetsScript = document.getElementById('eb_widgets')
+
+    // create the widgets script if it doesn't already exists
+    if (!widgetsScript) {
+      widgetsScript = document.createElement('script')
+
+      widgetsScript.id = 'eb_widgets'
+      widgetsScript.async = true
+      widgetsScript.src =
+        'https://www.eventbrite.com/static/widgets/eb_widgets.js'
+      widgetsScript.type = 'text/javascript'
+
+      document.body.appendChild(widgetsScript)
+    }
+
+    // notify when it's finally loaded
+    widgetsScript?.addEventListener('load', createWidget)
+
+    return () => {
+      widgetsScript?.removeEventListener('load', createWidget)
+
+      if (widgetsScript) {
+        document.body.removeChild(widgetsScript)
+      }
+    }
   }, [event, buttonId])
 
   return (
@@ -68,21 +95,17 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
             </Typography>
           </Box>
           <Box>
-            <Button variant="contained" color="secondary" id={buttonId}>
+            <Button
+              variant="contained"
+              color="secondary"
+              id={buttonId}
+              href={`https://www.eventbrite.com/e/${event.id}`}
+            >
               Register now
             </Button>
           </Box>
         </Box>
       </Paper>
-
-      <Helmet>
-        {isTop && (
-          <script
-            src="https://www.eventbrite.com/static/widgets/eb_widgets.js"
-            type="text/javascript"
-          />
-        )}
-      </Helmet>
     </>
   )
 }
