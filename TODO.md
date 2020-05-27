@@ -11,18 +11,20 @@
   - [x] Add minishops home page (using tagline)
     - Let's learn together without having to leave your house!
   - [x] Write blog post about minishops
-- [ ] Create Eventbrite event for a minishop
-  - [ ] Add schema.org (+ events SMO)
-  - [ ] Upcoming minishops on home page ("Develop")
-  - [ ] Display upcoming minishops at the top of home page
-  - [ ] Add hidden "skip navigation" in header
+- [x] Create Eventbrite event for a minishop
+  - [x] Add schema.org (+ events SMO)
+  - [x] Upcoming minishops on home page ("Develop")
+  - [x] Display upcoming minishops at the top of minishops page
+  - [x] Add hidden "skip navigation" in header
 - [x] Pull out fragments into separate file
 
 ## Post-MVP
 
 - [ ] Write blog post on `npx kill-port` (#TIL)
-- [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Upcoming minishops in blog post footer
+  - [ ] Upcoming minishops on non-active minishop pages
+- [ ] Add bugsnag
+- [ ] More #TIL blog posts (back-date from twitter)
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
   - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)

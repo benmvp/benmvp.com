@@ -18,32 +18,22 @@ import Footer from './Footer'
 import Masthead from './Masthead'
 import { getTheme } from '../../config/theme'
 
-const useStyles = makeStyles((theme) =>
+interface ScrollToTopProps {
+  children: ReactNode
+}
+
+const useScrollToTopStyles = makeStyles((theme) =>
   createStyles({
-    root: {
-      backgroundColor: theme.palette.background.default,
-    },
-    container: {
-      minHeight: ({ masthead }) => (masthead ? undefined : '100vh'),
-      marginTop: ({ masthead }) => (masthead ? undefined : theme.spacing(2)),
-    },
     toTop: {
       position: 'fixed',
       bottom: theme.spacing(2),
       right: theme.spacing(2),
     },
-    backToTopAnchor: {
-      height: 82,
-    },
   }),
 )
 
-interface ScrollToTopProps {
-  children: ReactNode
-}
-
 const ScrollToTop = ({ children }: ScrollToTopProps) => {
-  const classes = useStyles()
+  const classes = useScrollToTopStyles()
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -74,8 +64,38 @@ interface Props {
   maxWidth?: 'md' | 'lg'
 }
 
-const Layout = ({ children, masthead = false, maxWidth = 'md' }: Props) => {
-  const classes = useStyles()
+const useMainStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      backgroundColor: theme.palette.background.default,
+    },
+    skipNav: {
+      position: 'absolute',
+      left: -10000,
+      top: 'auto',
+      width: 1,
+      height: 1,
+      overflow: 'hidden',
+    },
+    container: {
+      minHeight: ({ masthead }: Props) => (masthead ? undefined : '100vh'),
+      marginTop: ({ masthead }: Props) =>
+        masthead ? undefined : theme.spacing(2),
+    },
+    toTop: {
+      position: 'fixed',
+      bottom: theme.spacing(2),
+      right: theme.spacing(2),
+    },
+    backToTopAnchor: {
+      height: 82,
+    },
+  }),
+)
+
+const Layout = (props: Props) => {
+  const classes = useMainStyles(props)
+  const { children, masthead = false, maxWidth = 'md' } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
 
@@ -84,6 +104,9 @@ const Layout = ({ children, masthead = false, maxWidth = 'md' }: Props) => {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
+          <a href="#skip-heading" className={classes.skipNav}>
+            Skip Main Navigation
+          </a>
           <Header />
           <Toolbar
             id="back-to-top-anchor"
@@ -91,7 +114,11 @@ const Layout = ({ children, masthead = false, maxWidth = 'md' }: Props) => {
           />
 
           {masthead && <Masthead />}
-          <Container maxWidth={maxWidth} className={classes.container}>
+          <Container
+            id="skip-heading"
+            maxWidth={maxWidth}
+            className={classes.container}
+          >
             <Box component="main">{children}</Box>
           </Container>
           <Footer />

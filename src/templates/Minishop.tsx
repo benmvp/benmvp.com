@@ -6,6 +6,7 @@ import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import Seo from '../components/Seo'
+import MinishopRegister from '../components/MinishopRegister'
 import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
 import { getMinishopUrl } from '../utils'
@@ -37,6 +38,7 @@ const Minishop = ({ data }) => {
     hero,
     heroAlt,
     heroCredit,
+    event,
   } = frontmatter
   const { slug } = fields
   const url = getMinishopUrl(slug)
@@ -52,6 +54,14 @@ const Minishop = ({ data }) => {
         image={hero?.childImageSharp?.fluid?.src}
         imageAlt={heroAlt}
         type="events.event"
+        meta={[
+          ...(event
+            ? [
+                { property: 'event:start_time', content: event.start },
+                { property: 'event:end_time', content: event.end },
+              ]
+            : []),
+        ]}
         schemaOrg={{
           '@type': 'EducationEvent',
           eventAttendanceMode: 'OnlineEventAttendanceMode',
@@ -60,6 +70,12 @@ const Minishop = ({ data }) => {
             '@type': 'VirtualLocation',
           },
           teaches: category,
+          ...(event
+            ? {
+                startDate: event.start,
+                endDate: event.end,
+              }
+            : {}),
         }}
       />
       <PageHeader
@@ -75,7 +91,9 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
+      {event && <MinishopRegister event={event} isTop />}
       <Content>{html}</Content>
+      {event && <MinishopRegister event={event} />}
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
@@ -83,7 +101,7 @@ const Minishop = ({ data }) => {
           summary={summary}
           tags={tags}
         />
-        <MinishopForm slug={slug} title={title} />
+        {!event && <MinishopForm slug={slug} title={title} />}
       </Box>
     </Layout>
   )
@@ -110,6 +128,10 @@ export const query = graphql`
         }
         heroAlt
         heroCredit
+        event {
+          id
+          start
+        }
       }
     }
   }

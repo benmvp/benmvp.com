@@ -92,7 +92,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-feed',
       options: {

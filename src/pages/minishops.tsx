@@ -1,6 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, makeStyles, Typography, Grid } from '@material-ui/core'
+import {
+  createStyles,
+  makeStyles,
+  Typography,
+  Grid,
+  Divider,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
@@ -19,12 +25,22 @@ const useStyles = makeStyles((theme) =>
     grid: {
       marginTop: theme.spacing(3),
     },
+    divider: {
+      margin: theme.spacing(5, 'auto'),
+      width: '50%',
+    },
   }),
 )
 
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
   const { hero, minishops } = data
+  const upcomingMinishops = minishops.edges.filter(
+    ({ node }) => node.frontmatter.event?.start,
+  )
+  const remainingMinishops = minishops.edges.filter(
+    ({ node }) => !node.frontmatter.event?.start,
+  )
 
   return (
     <Layout>
@@ -45,17 +61,39 @@ const SpeakingEngagements = ({ data }) => {
         credit="Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)"
         className={classes.image}
       />
+      {upcomingMinishops.length && (
+        <>
+          <Typography component="h3" variant="h4">
+            Upcoming Minishops
+          </Typography>
+          <Grid container spacing={2} className={classes.grid}>
+            {upcomingMinishops.map(({ node }) => (
+              <Grid key={node.id} item xs={12}>
+                <MinishopCard
+                  slug={node.fields.slug}
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  summary={node.frontmatter.subTitle || node.excerpt}
+                  event={node.frontmatter.event}
+                />
+              </Grid>
+            ))}
+          </Grid>
+          <Divider variant="middle" className={classes.divider} />
+        </>
+      )}
       <Typography component="h3" variant="h4">
         All Minishops
       </Typography>
       <Grid container spacing={2} className={classes.grid}>
-        {minishops.edges.map(({ node }) => (
+        {remainingMinishops.map(({ node }) => (
           <Grid key={node.id} item xs={12} sm={6}>
             <MinishopCard
               slug={node.fields.slug}
               title={node.frontmatter.title}
               tags={node.frontmatter.tags}
               summary={node.frontmatter.subTitle || node.excerpt}
+              event={node.frontmatter.event}
             />
           </Grid>
         ))}
@@ -85,7 +123,7 @@ export const query = graphql`
       edges {
         node {
           id
-          ...PostCardInfo
+          ...MinishopCardInfo
         }
       }
     }
