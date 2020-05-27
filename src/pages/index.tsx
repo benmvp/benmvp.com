@@ -151,7 +151,7 @@ export default ({ data }) => {
           gutterBottom
           aria-label="Join one of Ben's upcoming minishops"
         >
-          Develop...
+          Develop
         </Typography>
         <MinishopCardList
           minishops={upcomingMinishops.edges.filter(
@@ -167,7 +167,7 @@ export default ({ data }) => {
           gutterBottom
           aria-label="Attend one of Ben's future tech talks"
         >
-          Attend...
+          Attend
         </Typography>
         <SpeakCardList />
       </Box>
@@ -179,7 +179,7 @@ export default ({ data }) => {
           gutterBottom
           aria-label="Read one of Ben's recent blog posts"
         >
-          Read...
+          Read
         </Typography>
         <PostCardList posts={recentPosts.edges} />
       </Box>
@@ -191,7 +191,7 @@ export default ({ data }) => {
           gutterBottom
           aria-label="Watch Ben's most recent tech talk video"
         >
-          Watch...
+          Watch
         </Typography>
         <VideoCardList />
       </Box>
