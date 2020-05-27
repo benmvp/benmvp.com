@@ -10,6 +10,7 @@ heroCredit: 'Photo by [Caspar Camille Rubin](https://unsplash.com/@casparrubin)'
 event:
   id: '106686762980'
   start: 2020-06-25T09:00:00-07:00
+  end: 2020-06-25T12:00:00-07:00
 ---
 
 TypeScript is a JavaScript superset that compiles down to vanilla JavaScript and has become increasingly popular. TypeScript offers strong typing and compile-time verification to our React applications. As a result, using TypeScript helps eliminate entire classes of bugs that commonly affect our apps.

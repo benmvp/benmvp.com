@@ -55,8 +55,12 @@ const Minishop = ({ data }) => {
         imageAlt={heroAlt}
         type="events.event"
         meta={[
-          { property: 'event:start_time', content: event.startDateTime },
-          { property: 'event:end_time', content: event.endDateTime },
+          ...(event
+            ? [
+                { property: 'event:start_time', content: event.start },
+                { property: 'event:end_time', content: event.end },
+              ]
+            : []),
         ]}
         schemaOrg={{
           '@type': 'EducationEvent',
@@ -65,9 +69,13 @@ const Minishop = ({ data }) => {
           location: {
             '@type': 'VirtualLocation',
           },
-          startDate: event.startDateTime,
-          endDate: event.endDateTime,
           teaches: category,
+          ...(event
+            ? {
+                startDate: event.start,
+                endDate: event.end,
+              }
+            : {}),
         }}
       />
       <PageHeader
@@ -83,9 +91,9 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
-      <MinishopRegister event={event} isTop />
+      {event && <MinishopRegister event={event} isTop />}
       <Content>{html}</Content>
-      <MinishopRegister event={event} />
+      {event && <MinishopRegister event={event} />}
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
