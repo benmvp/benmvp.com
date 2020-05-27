@@ -68,7 +68,7 @@ const SpeakingEngagements = ({ data }) => {
           </Typography>
           <Grid container spacing={2} className={classes.grid}>
             {upcomingMinishops.map(({ node }) => (
-              <Grid key={node.id} item xs={12} sm={6}>
+              <Grid key={node.id} item xs={12}>
                 <MinishopCard
                   slug={node.fields.slug}
                   title={node.frontmatter.title}

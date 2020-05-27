@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) =>
 const MinishopCardList = ({ minishops }) => (
   <Grid container spacing={2}>
     {minishops.map(({ node }) => (
-      <Grid key={node.id} item xs={12} sm={6}>
+      <Grid key={node.id} item xs={12} lg={6}>
         <MinishopCard
           mode="min"
           slug={node.fields.slug}
