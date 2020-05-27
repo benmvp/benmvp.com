@@ -20,7 +20,7 @@ interface Props {
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
-      margin: theme.spacing(5, 0),
+      margin: theme.spacing(5, 0, 1),
       padding: theme.spacing(2),
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.secondary.contrastText,
@@ -90,9 +90,9 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
             textAlign={{ xs: 'center', sm: 'left' }}
           >
             <Typography variant="h6" component="h3">
-              Next Minishop
+              Next Online Minishop*
             </Typography>
-            <Typography variant="h5" component="span">
+            <Typography variant="h5" component="p">
               {formattedDate} @ {formattedTime}
             </Typography>
           </Box>
@@ -108,6 +108,11 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
           </Box>
         </Box>
       </Paper>
+      <Box textAlign={{ xs: 'center', sm: 'left' }} mb={5}>
+        <Typography variant="caption" component="p">
+          * You will receive a link to the Zoom meeting the night before
+        </Typography>
+      </Box>
     </>
   )
 }
