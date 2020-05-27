@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import formatDate from 'date-fns-tz/format'
 import {
   makeStyles,
@@ -36,12 +36,14 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
   const formattedTime = formatDate(startDate, 'h:mm b z')
   const buttonId = `eventbrite-checkout-${event.id}-${isTop ? 'top' : 'bottom'}`
 
-  const widgetProperties = {
-    widgetType: 'checkout',
-    eventId: event.id,
-    modal: true,
-    modalTriggerElementId: buttonId,
-  }
+  useEffect(() => {
+    window.EBWidgets?.createWidget({
+      widgetType: 'checkout',
+      eventId: event.id,
+      modal: true,
+      modalTriggerElementId: buttonId,
+    })
+  }, [event, buttonId])
 
   return (
     <>
@@ -81,9 +83,6 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
           />
         )}
       </Helmet>
-      <script type="text/javascript">
-        {`window.EBWidgets.createWidget(${JSON.stringify(widgetProperties)});`}
-      </script>
     </>
   )
 }
