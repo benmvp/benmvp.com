@@ -6,6 +6,7 @@ import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import Seo from '../components/Seo'
+import MinishopRegister from '../components/MinishopRegister'
 import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
 import { getMinishopUrl } from '../utils'
@@ -37,6 +38,7 @@ const Minishop = ({ data }) => {
     hero,
     heroAlt,
     heroCredit,
+    event,
   } = frontmatter
   const { slug } = fields
   const url = getMinishopUrl(slug)
@@ -52,6 +54,10 @@ const Minishop = ({ data }) => {
         image={hero?.childImageSharp?.fluid?.src}
         imageAlt={heroAlt}
         type="events.event"
+        meta={[
+          { property: 'event:start_time', content: event.startDateTime },
+          { property: 'event:end_time', content: event.endDateTime },
+        ]}
         schemaOrg={{
           '@type': 'EducationEvent',
           eventAttendanceMode: 'OnlineEventAttendanceMode',
@@ -59,6 +65,8 @@ const Minishop = ({ data }) => {
           location: {
             '@type': 'VirtualLocation',
           },
+          startDate: event.startDateTime,
+          endDate: event.endDateTime,
           teaches: category,
         }}
       />
@@ -75,7 +83,9 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
+      <MinishopRegister event={event} isTop />
       <Content>{html}</Content>
+      <MinishopRegister event={event} />
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
@@ -83,7 +93,7 @@ const Minishop = ({ data }) => {
           summary={summary}
           tags={tags}
         />
-        <MinishopForm slug={slug} title={title} />
+        {!event && <MinishopForm slug={slug} title={title} />}
       </Box>
     </Layout>
   )
@@ -110,6 +120,10 @@ export const query = graphql`
         }
         heroAlt
         heroCredit
+        event {
+          id
+          start
+        }
       }
     }
   }

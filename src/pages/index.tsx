@@ -10,10 +10,11 @@ import {
 import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
+import MinishopCard from '../components/MinishopCard'
 import SpeakCard from '../components/SpeakCard'
 import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
-import { getUrl, getBlogUrl } from '../utils'
+import { getUrl } from '../utils'
 import { getVideos } from '../utils/video'
 import { getUpcomingEngagements } from '../utils/speaking-engagement'
 
@@ -23,15 +24,40 @@ const RECENT_VIDEOS = getVideos().slice(0, 2)
 const useStyles = makeStyles((theme) =>
   createStyles({
     section: {
-      '&:not(:first-child)': {
-        marginTop: theme.spacing(3),
-        backgroundColor: theme.palette.secondary,
-      },
+      marginTop: theme.spacing(3),
     },
     video: {
       margin: '0 auto',
     },
   }),
+)
+
+const MinishopCardList = ({ minishops }) => (
+  <Grid container spacing={2}>
+    {minishops.map(({ node }) => (
+      <Grid key={node.id} item xs={12} sm={6}>
+        <MinishopCard
+          mode="min"
+          slug={node.fields.slug}
+          title={node.frontmatter.title}
+          tags={node.frontmatter.tags}
+          summary={node.frontmatter.subTitle || node.excerpt}
+          event={node.frontmatter.event}
+        />
+      </Grid>
+    ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/minishops/" variant="h6">
+          View all minishops >
+        </Link>
+      </Box>
+    </Grid>
+  </Grid>
 )
 
 const SpeakCardList = () => (
@@ -57,7 +83,7 @@ const SpeakCardList = () => (
 
 const PostCardList = ({ posts }) => (
   <Grid container spacing={2}>
-    {posts.edges.map(({ node }) => (
+    {posts.map(({ node }) => (
       <Grid key={node.id} item xs={12} sm={6} lg={4}>
         <PostCard
           mode="min"
@@ -111,12 +137,28 @@ const VideoCardList = () => {
 }
 
 export default ({ data }) => {
-  const { recentPosts } = data
+  const { upcomingMinishops, recentPosts } = data
   const classes = useStyles()
 
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl()} />
+
+      <Box component="section" className={classes.section}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Join one of Ben's upcoming minishops"
+        >
+          Develop...
+        </Typography>
+        <MinishopCardList
+          minishops={upcomingMinishops.edges.filter(
+            ({ node }) => node.frontmatter.event?.start,
+          )}
+        />
+      </Box>
 
       <Box component="section" className={classes.section}>
         <Typography
@@ -139,7 +181,7 @@ export default ({ data }) => {
         >
           Read...
         </Typography>
-        <PostCardList posts={recentPosts} />
+        <PostCardList posts={recentPosts.edges} />
       </Box>
 
       <Box component="section" className={classes.section}>
@@ -159,6 +201,21 @@ export default ({ data }) => {
 
 export const query = graphql`
   query HomePageInfo {
+    upcomingMinishops: allMarkdownRemark(
+      sort: { fields: [frontmatter___event___start], order: ASC }
+      filter: {
+        fileAbsolutePath: { regex: "//content/minishops//" }
+        frontmatter: { published: { ne: false } }
+      }
+      limit: 6
+    ) {
+      edges {
+        node {
+          id
+          ...MinishopCardInfo
+        }
+      }
+    }
     recentPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {

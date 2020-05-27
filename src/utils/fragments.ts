@@ -7,6 +7,10 @@ export const fragments = graphql`
       subTitle
       category
       tags
+      event {
+        id
+        start
+      }
     }
     fields {
       slug

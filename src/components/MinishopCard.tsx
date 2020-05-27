@@ -1,4 +1,5 @@
 import React from 'react'
+import formatDate from 'date-fns-tz/format'
 import {
   makeStyles,
   createStyles,
@@ -16,6 +17,10 @@ import { getMinishopUrl, genMinishopSlug } from '../utils'
 import useCopyUrl from '../utils/useCopyUrl'
 
 interface Props {
+  event: {
+    id: string
+    start: string
+  }
   mode?: 'min' | 'full'
   slug: string
   summary: string
@@ -32,11 +37,27 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const MinishopCard = ({ mode = 'full', slug, summary, tags, title }: Props) => {
+const MinishopCard = ({
+  event,
+  mode = 'full',
+  slug,
+  summary,
+  tags,
+  title,
+}: Props) => {
   const classes = useStyles()
   const url = getMinishopUrl(slug)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(url)
   const showShare = mode !== 'min'
+  let fullDate
+
+  if (event?.start) {
+    const startDate = Date.parse(event.start)
+    const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
+    const formattedTime = formatDate(startDate, 'h:mm b z')
+
+    fullDate = `${formattedDate} @ ${formattedTime}`
+  }
 
   return (
     <Card id={genMinishopSlug(title)}>
@@ -46,6 +67,18 @@ const MinishopCard = ({ mode = 'full', slug, summary, tags, title }: Props) => {
         underline="none"
       >
         <CardContent>
+          {fullDate && (
+            <Typography
+              gutterBottom
+              variant="subtitle2"
+              color="textSecondary"
+              component="h4"
+              title={fullDate}
+              noWrap
+            >
+              {fullDate}
+            </Typography>
+          )}
           <Typography
             gutterBottom
             variant="h5"
