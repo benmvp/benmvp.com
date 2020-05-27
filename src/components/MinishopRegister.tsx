@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) =>
     root: {
       margin: theme.spacing(5, 0),
       padding: theme.spacing(2),
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.primary.contrastText,
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.contrastText,
     },
   }),
 )
@@ -46,6 +46,7 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
     }
 
     let widgetsScript = document.getElementById('eb_widgets')
+    let added = false
 
     // create the widgets script if it doesn't already exists
     if (!widgetsScript) {
@@ -58,6 +59,7 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
       widgetsScript.type = 'text/javascript'
 
       document.body.appendChild(widgetsScript)
+      added = true
     }
 
     // notify when it's finally loaded
@@ -66,7 +68,7 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
     return () => {
       widgetsScript?.removeEventListener('load', createWidget)
 
-      if (widgetsScript) {
+      if (widgetsScript && added) {
         document.body.removeChild(widgetsScript)
       }
     }
@@ -97,9 +99,9 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
           <Box>
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
+              size="large"
               id={buttonId}
-              href={`https://www.eventbrite.com/e/${event.id}`}
             >
               Register now
             </Button>
