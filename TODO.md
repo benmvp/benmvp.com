@@ -21,6 +21,7 @@
 ## Post-MVP
 
 - [ ] Write blog post on `npx kill-port` (#TIL)
+- [ ] Minishop code of conduct
 - [ ] Upcoming minishops in blog post footer
   - [ ] Upcoming minishops on non-active minishop pages
 - [ ] Add bugsnag

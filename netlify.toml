@@ -4,6 +4,11 @@
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+    checkExternal = true
+    followSourceMaps = true
 
 # Redirects for removed pages
 [[redirects]]
