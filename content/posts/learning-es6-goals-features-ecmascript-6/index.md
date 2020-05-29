@@ -113,7 +113,7 @@ Axel Rauschmayer [asked his followers on Twitter](https://twitter.com/rauschma/s
 - **Generators** (apps) - specialized functions that create iterators using `yield` keyword
 - [**Promises**](/blog/learning-es6-promises/) (apps) - an alternative to callback functions for handling asynchronous operations
 - [**Template literals**](/blog/learning-es6-template-literals-tagged-templates/) (sugar) - much cleaner way to build up string values
-- [**Spread operator **](/blog/learning-es6-parameter-handling/) (sugar) - turns elements of an array into arguments of a function call
+- [**Spread operator**](/blog/learning-es6-parameter-handling/) (sugar) - turns elements of an array into arguments of a function call
 - [**Enhanced object literals**](/blog/learning-es6-enhanced-object-literals/) (sugar) - various shorthand syntaxes for building up object literals
 - [**Block scoping**](/blog/learning-es6-block-level-scoping-let-const/) (apps) - scoping variables to blocks via `let` keyword
 - [**Rest parameters**](/blog/learning-es6-parameter-handling/) (sugar) - allows you to get an array representing the "rest of the parameters," eliminating the need to use `arguments`
