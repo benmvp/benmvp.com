@@ -26,7 +26,7 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 ## Get ready to...
 
 - Learn basic TypeScript types and syntax
-- Definite fully type-safe component props
+- Define fully type-safe component props
 - Type common React hooks
 - Handle forms and other events
 - Leverage generics to provide parameterized props
