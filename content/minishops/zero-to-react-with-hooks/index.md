@@ -39,7 +39,7 @@ Whatever the case may be, you’ll leave the minishop with all the fundamentals 
 
 ## Code of Conduct
 
-By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/conduct/).
+By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/minishops/conduct/).
 
 ## What are “minishops”?
 

@@ -44,7 +44,7 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 
 ## Code of Conduct
 
-By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/conduct/).
+By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/minishops/conduct/).
 
 ## What are “minishops”?
 

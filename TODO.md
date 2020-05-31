@@ -3,7 +3,7 @@
 - [x] Minishop code of conduct
 - [x] Upcoming minishops in blog post footer
   - [x] Upcoming minishops on non-active minishop pages
-- [ ] Minishop thank you page
+- [x] Minishop thank you page
 - [ ] Add bugsnag
 - [ ] Setup Mailchimp (Reactathon + Github emails)
 - [ ] Write blog post on `npx kill-port` (#TIL)

@@ -42,6 +42,9 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
         eventId: event.id,
         modal: true,
         modalTriggerElementId: buttonId,
+        onOrderComplete: () => {
+          window.location.assign('/minishops/thank-you/')
+        },
       })
     }
 
@@ -110,7 +113,7 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
       </Paper>
       <Box textAlign={{ xs: 'center', sm: 'left' }} mb={5}>
         <Typography variant="caption" component="p">
-          * You will receive a link to the Zoom meeting the night before
+          * You will receive a link to the Zoom meeting a few days before
         </Typography>
       </Box>
     </>

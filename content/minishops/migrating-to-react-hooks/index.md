@@ -44,7 +44,7 @@ Hi, I’m Ben Ilegbodu 👋🏾. In this minishop, not only will you learn the i
 
 ## Code of Conduct
 
-By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/conduct/).
+By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/minishops/conduct/).
 
 ## What are “minishops”?
 
