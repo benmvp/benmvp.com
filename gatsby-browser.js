@@ -9,7 +9,7 @@ require('./src/css/prism.css')
 Bugsnag.start({
   apiKey: process.env.BUGSNAG_API_KEY,
   plugins: [new BugsnagPluginReact()],
-  releaseStage: process.env.NODE_ENV,
+  releaseStage: process.env.CONTEXT || process.env.NODE_ENV,
   appVersion: process.env.DEPLOY_ID,
 })
 

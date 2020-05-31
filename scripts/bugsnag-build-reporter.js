@@ -11,7 +11,7 @@ const reportBugsnagBuild = async () => {
     await reportBuild({
       apiKey: process.env.BUGSNAG_API_KEY,
       appVersion: process.env.DEPLOY_ID,
-      releaseStage: process.env.NODE_ENV,
+      releaseStage: process.env.CONTEXT || process.env.NODE_ENV,
       sourceControl: {
         provider: 'github',
         repository: process.env.REPOSITORY_URL,
