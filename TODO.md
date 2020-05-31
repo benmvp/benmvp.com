@@ -4,7 +4,7 @@
 - [x] Upcoming minishops in blog post footer
   - [x] Upcoming minishops on non-active minishop pages
 - [x] Minishop thank you page
-- [ ] Add bugsnag
+- [x] Add bugsnag
 - [ ] Setup Mailchimp (Reactathon + Github emails)
 - [ ] Write blog post on `npx kill-port` (#TIL)
 - [ ] More #TIL blog posts (back-date from twitter)
