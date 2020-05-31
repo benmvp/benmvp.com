@@ -17,7 +17,7 @@ import { getMinishopUrl, genMinishopSlug } from '../utils'
 import useCopyUrl from '../utils/useCopyUrl'
 
 interface Props {
-  event: {
+  event?: {
     id: string
     start: string
   }

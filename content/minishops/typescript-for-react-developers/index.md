@@ -42,6 +42,10 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 - Already have some experience using TypeScript in React
 - Don’t yet have experience using hooks in React (consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
 
+## Code of Conduct
+
+By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/minishops/conduct/).
+
 ## What are “minishops”?
 
 Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in your way.

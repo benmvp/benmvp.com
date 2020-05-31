@@ -42,6 +42,10 @@ Hi, I’m Ben Ilegbodu 👋🏾. In this minishop, not only will you learn the i
 - Are still new to React (consider the [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) minishop instead)
 - Already have dabbled with React Hooks (consider the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop instead)
 
+## Code of Conduct
+
+By participating in this minishop, you are agreeing to the [Minishop Code of Conduct](/minishops/conduct/).
+
 ## What are “minishops”?
 
 Minishops by Ben Ilegbodu are fully-remote workshops that last about 3 hours. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. By keeping it short, you’re able to absorb and retain the information before fatigue sets in and other distractions get in your way.

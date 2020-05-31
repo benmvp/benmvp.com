@@ -1,6 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { makeStyles, createStyles, Box } from '@material-ui/core'
+import {
+  makeStyles,
+  createStyles,
+  Box,
+  Grid,
+  Typography,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
@@ -9,7 +15,9 @@ import Seo from '../components/Seo'
 import MinishopRegister from '../components/MinishopRegister'
 import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
+import MinishopCard from '../components/MinishopCard'
 import { getMinishopUrl } from '../utils'
+import useMinishops from '../utils/useMinishops'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -22,13 +30,19 @@ const useStyles = makeStyles((theme) =>
     footer: {
       marginTop: theme.spacing(5),
     },
+    minishops: {
+      marginTop: theme.spacing(5),
+    },
+    minishopsGrid: {
+      marginTop: theme.spacing(2),
+    },
   }),
 )
 
 const Minishop = ({ data }) => {
   const classes = useStyles()
   const { minishop } = data
-  const { html, excerpt, frontmatter, fields } = minishop
+  const { id, html, excerpt, frontmatter, fields } = minishop
   const {
     title,
     subTitle,
@@ -41,6 +55,7 @@ const Minishop = ({ data }) => {
     event,
   } = frontmatter
   const { slug } = fields
+  const { upcoming: upcomingMinishops } = useMinishops(id)
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
   const summary = subTitle || excerpt
@@ -102,6 +117,27 @@ const Minishop = ({ data }) => {
           tags={tags}
         />
         {!event && <MinishopForm slug={slug} title={title} />}
+        {upcomingMinishops.length && (
+          <Box component="section" className={classes.minishops}>
+            <Typography component="h3" variant="h5">
+              Other upcoming minishops
+            </Typography>
+            <Grid container spacing={2} className={classes.minishopsGrid}>
+              {upcomingMinishops.map((node) => (
+                <Grid key={node.id} item xs={12}>
+                  <MinishopCard
+                    mode="min"
+                    slug={node.fields.slug}
+                    title={node.frontmatter.title}
+                    tags={node.frontmatter.tags}
+                    summary={node.frontmatter.subTitle || node.excerpt}
+                    event={node.frontmatter.event}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        )}
       </Box>
     </Layout>
   )
@@ -112,6 +148,7 @@ export default Minishop
 export const query = graphql`
   query MinishopInfo($slug: String!) {
     minishop: markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
       html
       excerpt
       fields {
