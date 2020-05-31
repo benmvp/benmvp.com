@@ -1,13 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { makeStyles, createStyles } from '@material-ui/core'
+import {
+  makeStyles,
+  createStyles,
+  Grid,
+  Typography,
+  Box,
+  Divider,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
 import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
+import MinishopCard from '../components/MinishopCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
+import useMinishops from '../utils/useMinishops'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -20,11 +29,22 @@ const useStyles = makeStyles((theme) =>
     footer: {
       marginTop: theme.spacing(3),
     },
+    minishops: {
+      marginTop: theme.spacing(2),
+    },
+    minishopsDivider: {
+      margin: theme.spacing(0, 'auto', 5),
+      width: '50%',
+    },
+    minishopsGrid: {
+      marginTop: theme.spacing(2),
+    },
   }),
 )
 
 const Post = ({ data }) => {
   const classes = useStyles()
+  const { upcoming: upcomingMinishops } = useMinishops()
   const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const {
@@ -106,6 +126,28 @@ const Post = ({ data }) => {
         summary={summary}
         tags={tags}
       />
+      {upcomingMinishops.length && (
+        <Box component="section" className={classes.minishops}>
+          <Divider className={classes.minishopsDivider} />
+          <Typography component="h3" variant="h5">
+            Attend upcoming minishops
+          </Typography>
+          <Grid container spacing={2} className={classes.minishopsGrid}>
+            {upcomingMinishops.map((node) => (
+              <Grid key={node.id} item xs={12}>
+                <MinishopCard
+                  mode="min"
+                  slug={node.fields.slug}
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  summary={node.frontmatter.subTitle || node.excerpt}
+                  event={node.frontmatter.event}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      )}
     </Layout>
   )
 }

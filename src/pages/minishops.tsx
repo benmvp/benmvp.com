@@ -13,6 +13,7 @@ import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import MinishopCard from '../components/MinishopCard'
 import { getMinishopUrl } from '../utils'
+import useMinishops from '../utils/useMinishops'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -32,15 +33,10 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const SpeakingEngagements = ({ data }) => {
+const Minishops = ({ data }) => {
   const classes = useStyles()
-  const { hero, minishops } = data
-  const upcomingMinishops = minishops.edges.filter(
-    ({ node }) => node.frontmatter.event?.start,
-  )
-  const remainingMinishops = minishops.edges.filter(
-    ({ node }) => !node.frontmatter.event?.start,
-  )
+  const { upcoming, remaining } = useMinishops()
+  const { hero } = data
 
   return (
     <Layout>
@@ -61,13 +57,13 @@ const SpeakingEngagements = ({ data }) => {
         credit="Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)"
         className={classes.image}
       />
-      {upcomingMinishops.length && (
+      {upcoming.length && (
         <>
           <Typography component="h3" variant="h4">
             Upcoming Minishops
           </Typography>
           <Grid container spacing={2} className={classes.grid}>
-            {upcomingMinishops.map(({ node }) => (
+            {upcoming.map((node) => (
               <Grid key={node.id} item xs={12}>
                 <MinishopCard
                   slug={node.fields.slug}
@@ -79,30 +75,34 @@ const SpeakingEngagements = ({ data }) => {
               </Grid>
             ))}
           </Grid>
-          <Divider variant="middle" className={classes.divider} />
         </>
       )}
-      <Typography component="h3" variant="h4">
-        All Minishops
-      </Typography>
-      <Grid container spacing={2} className={classes.grid}>
-        {remainingMinishops.map(({ node }) => (
-          <Grid key={node.id} item xs={12} sm={6}>
-            <MinishopCard
-              slug={node.fields.slug}
-              title={node.frontmatter.title}
-              tags={node.frontmatter.tags}
-              summary={node.frontmatter.subTitle || node.excerpt}
-              event={node.frontmatter.event}
-            />
+      {upcoming.length && remaining && <Divider className={classes.divider} />}
+      {remaining.length && (
+        <>
+          <Typography component="h3" variant="h4">
+            {upcoming.length ? 'Remaining' : 'All'} Minishops
+          </Typography>
+          <Grid container spacing={2} className={classes.grid}>
+            {remaining.map((node) => (
+              <Grid key={node.id} item xs={12} sm={6}>
+                <MinishopCard
+                  slug={node.fields.slug}
+                  title={node.frontmatter.title}
+                  tags={node.frontmatter.tags}
+                  summary={node.frontmatter.subTitle || node.excerpt}
+                  event={node.frontmatter.event}
+                />
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
+        </>
+      )}
     </Layout>
   )
 }
 
-export default SpeakingEngagements
+export default Minishops
 
 export const query = graphql`
   query MinishopsInfo {
@@ -112,20 +112,6 @@ export const query = graphql`
       }
     ) {
       ...HeroFluid960
-    }
-    minishops: allMarkdownRemark(
-      sort: { fields: [frontmatter___title], order: ASC }
-      filter: {
-        fileAbsolutePath: { regex: "//content/minishops//" }
-        frontmatter: { published: { ne: false } }
-      }
-    ) {
-      edges {
-        node {
-          id
-          ...MinishopCardInfo
-        }
-      }
     }
   }
 `

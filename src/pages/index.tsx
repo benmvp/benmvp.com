@@ -17,6 +17,7 @@ import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
 import { getVideos } from '../utils/video'
 import { getUpcomingEngagements } from '../utils/speaking-engagement'
+import useMinishops from '../utils/useMinishops'
 
 const UPCOMING_ENGAGEMENTS = getUpcomingEngagements().slice(0, 2)
 const RECENT_VIDEOS = getVideos().slice(0, 2)
@@ -32,33 +33,37 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const MinishopCardList = ({ minishops }) => (
-  <Grid container spacing={2}>
-    {minishops.map(({ node }) => (
-      <Grid key={node.id} item xs={12} lg={6}>
-        <MinishopCard
-          mode="min"
-          slug={node.fields.slug}
-          title={node.frontmatter.title}
-          tags={node.frontmatter.tags}
-          summary={node.frontmatter.subTitle || node.excerpt}
-          event={node.frontmatter.event}
-        />
+const MinishopCardList = () => {
+  const { upcoming } = useMinishops()
+
+  return (
+    <Grid container spacing={2}>
+      {upcoming.map((node) => (
+        <Grid key={node.id} item xs={12} lg={6}>
+          <MinishopCard
+            mode="min"
+            slug={node.fields.slug}
+            title={node.frontmatter.title}
+            tags={node.frontmatter.tags}
+            summary={node.frontmatter.subTitle || node.excerpt}
+            event={node.frontmatter.event}
+          />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href="/minishops/" variant="h6">
+            View all minishops >
+          </Link>
+        </Box>
       </Grid>
-    ))}
-    <Grid item xs={12}>
-      <Box
-        display="flex"
-        justifyContent={{ xs: 'center', sm: 'flex-end' }}
-        width="100%"
-      >
-        <Link href="/minishops/" variant="h6">
-          View all minishops >
-        </Link>
-      </Box>
     </Grid>
-  </Grid>
-)
+  )
+}
 
 const SpeakCardList = () => (
   <Grid container spacing={2}>
@@ -137,7 +142,7 @@ const VideoCardList = () => {
 }
 
 export default ({ data }) => {
-  const { upcomingMinishops, recentPosts } = data
+  const { recentPosts } = data
   const classes = useStyles()
 
   return (
@@ -153,11 +158,7 @@ export default ({ data }) => {
         >
           Develop
         </Typography>
-        <MinishopCardList
-          minishops={upcomingMinishops.edges.filter(
-            ({ node }) => node.frontmatter.event?.start,
-          )}
-        />
+        <MinishopCardList />
       </Box>
 
       <Box component="section" className={classes.section}>
@@ -201,21 +202,6 @@ export default ({ data }) => {
 
 export const query = graphql`
   query HomePageInfo {
-    upcomingMinishops: allMarkdownRemark(
-      sort: { fields: [frontmatter___event___start], order: ASC }
-      filter: {
-        fileAbsolutePath: { regex: "//content/minishops//" }
-        frontmatter: { published: { ne: false } }
-      }
-      limit: 6
-    ) {
-      edges {
-        node {
-          id
-          ...MinishopCardInfo
-        }
-      }
-    }
     recentPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {

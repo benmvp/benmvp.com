@@ -1,5 +1,22 @@
 import { graphql } from 'gatsby'
 
+export interface MinishopCardInfo {
+  frontmatter: {
+    title: string
+    subTitle?: string
+    category: string
+    tags: string[]
+    event?: {
+      id: string
+      start: string
+    }
+  }
+  fields: {
+    slug: string
+  }
+  excerpt: string
+}
+
 export const fragments = graphql`
   fragment MinishopCardInfo on MarkdownRemark {
     frontmatter {
