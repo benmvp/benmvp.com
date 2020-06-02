@@ -10,7 +10,7 @@ type Minishops = {
   }[]
 }
 
-const useMinishops = (idToFilter: string) => {
+const useMinishops = (idToFilter?: string) => {
   const { minishops } = useStaticQuery<{ minishops: Minishops }>(
     graphql`
       query Minishops {

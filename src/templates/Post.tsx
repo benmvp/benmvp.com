@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) =>
       marginTop: theme.spacing(2),
     },
     minishopsDivider: {
-      margin: theme.spacing(0, 'auto', 5),
+      margin: theme.spacing(0, 'auto', 3),
       width: '50%',
     },
     minishopsGrid: {
@@ -129,8 +129,14 @@ const Post = ({ data }) => {
       {upcomingMinishops.length && (
         <Box component="section" className={classes.minishops}>
           <Divider className={classes.minishopsDivider} />
-          <Typography component="h3" variant="h5">
+          <Typography component="h3" variant="h5" gutterBottom>
             Attend upcoming minishops
+          </Typography>
+          <Typography variant="body1">
+            Minishops by Ben Ilegbodu are fully-remote workshops that last about
+            3 hours. They’re highly-focused, covering only the concepts you want
+            to learn so that you can level up your skills and get on with the
+            rest of your day.
           </Typography>
           <Grid container spacing={2} className={classes.minishopsGrid}>
             {upcomingMinishops.map((node) => (
