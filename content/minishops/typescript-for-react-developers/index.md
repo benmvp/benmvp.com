@@ -29,7 +29,6 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 - Define fully type-safe component props
 - Type common React hooks
 - Handle forms and other events
-- Leverage generics to provide parameterized props
 - ...and many more features that help you write quality code
 
 ## You’ll need to have...
