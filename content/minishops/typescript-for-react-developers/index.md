@@ -35,12 +35,12 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 ## You’ll need to have...
 
 - No prior experience with TypeScript is necessary! 🙌🏾
-- Attended the [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) minishop or have similar experience building React applications using hooks
+- Experience building React applications using hooks (consider taking the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) or [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) minishops first)
 
 ## This minishop may not be for you if you...
 
 - Already have some experience using TypeScript in React
-- Don’t yet have experience using hooks in React (consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
+- Have React experience, but don’t yet have experience using hooks (again consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
 
 ## Code of Conduct
 

@@ -34,7 +34,7 @@ Hi, I’m Ben Ilegbodu 👋🏾. In this minishop, not only will you learn the i
 
 ## You’ll need to have...
 
-- Prior experience building React applications specifically using classes
+- Prior experience building React applications, specifically using classes
 - Experience with modern JavaScript syntax and asynchronous patterns like `Promise` & `async`/`await`
 
 ## This minishop may not be for you if you...
