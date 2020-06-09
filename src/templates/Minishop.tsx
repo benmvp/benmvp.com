@@ -16,7 +16,7 @@ import MinishopRegister from '../components/MinishopRegister'
 import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
 import MinishopCard from '../components/MinishopCard'
-import { getMinishopUrl } from '../utils'
+import { getUrl, getMinishopUrl } from '../utils'
 import useMinishops from '../utils/useMinishops'
 
 const useStyles = makeStyles((theme) =>
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) =>
 
 const Minishop = ({ data }) => {
   const classes = useStyles()
-  const { minishop } = data
+  const { minishop, site } = data
   const { id, html, excerpt, frontmatter, fields } = minishop
   const {
     title,
@@ -79,16 +79,24 @@ const Minishop = ({ data }) => {
         ]}
         schemaOrg={{
           '@type': 'EducationEvent',
+          name: fullTitle,
           eventAttendanceMode: 'OnlineEventAttendanceMode',
           educationLevel: level,
           location: {
             '@type': 'VirtualLocation',
+            url,
+          },
+          organizer: {
+            '@type': 'Person',
+            name: site.siteMetadata.author.name,
+            url: getUrl(),
           },
           teaches: category,
           ...(event
             ? {
                 startDate: event.start,
                 endDate: event.end,
+                eventStatus: 'EventScheduled',
               }
             : {}),
         }}
@@ -168,6 +176,13 @@ export const query = graphql`
         event {
           id
           start
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author {
+          name
         }
       }
     }
