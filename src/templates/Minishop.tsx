@@ -125,7 +125,7 @@ const Minishop = ({ data }) => {
           tags={tags}
         />
         {!event && <MinishopForm slug={slug} title={title} />}
-        {upcomingMinishops.length && (
+        {!!upcomingMinishops.length && (
           <Box component="section" className={classes.minishops}>
             <Typography component="h3" variant="h5">
               Other upcoming minishops
