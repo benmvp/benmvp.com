@@ -15,7 +15,10 @@ const useMinishops = (idToFilter?: string) => {
     graphql`
       query Minishops {
         minishops: allMarkdownRemark(
-          sort: { fields: [frontmatter___title], order: ASC }
+          sort: {
+            fields: [frontmatter___event___start, frontmatter___title]
+            order: [ASC, ASC]
+          }
           filter: {
             fileAbsolutePath: { regex: "//content/minishops//" }
             frontmatter: { published: { ne: false } }
@@ -42,7 +45,7 @@ const useMinishops = (idToFilter?: string) => {
 
       return { upcoming, remaining }
     },
-    { upcoming: [] as Node[], remaining: [] as Node[] },
+    { upcoming: [] as Minishop[], remaining: [] as Minishop[] },
   )
 }
 

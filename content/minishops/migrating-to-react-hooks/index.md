@@ -7,6 +7,10 @@ tags: [react, hooks, classes, state]
 hero: ./lines-of-code-artem-sapegin-b18TRXc8UPQ-unsplash.jpg
 heroAlt: Close up shot of a Macbook Pro with lines of React code
 heroCredit: 'Photo by [Artem Sapegin](https://unsplash.com/@sapegin)'
+event:
+  id: '109337938718'
+  start: 2020-07-21T08:30:00-07:00
+  end: 2020-07-21T11:30:00-07:00
 ---
 
 React is continually improving and evolving. React Hooks are a leap forward in how we develop components and manage state in our React applications. Now you can use state and other React features without having to write a class!
