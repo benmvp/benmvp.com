@@ -11,12 +11,29 @@ import {
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
+import MinishopCard from '../components/MinishopCard'
 import PostCard from '../components/PostCard'
 import Seo from '../components/Seo'
 import { getUrl } from '../utils'
+import useMinishops, { Minishop } from '../utils/useMinishops'
 
 const PAGE_TITLE = 'Page Not Found'
 
+const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
+  <Grid container spacing={2}>
+    {minishops.map((minishop) => (
+      <Grid key={minishop.id} item xs={12} lg={6}>
+        <MinishopCard
+          slug={minishop.fields.slug}
+          title={minishop.frontmatter.title}
+          tags={minishop.frontmatter.tags}
+          summary={minishop.frontmatter.subTitle || minishop.excerpt}
+          event={minishop.frontmatter.event}
+        />
+      </Grid>
+    ))}
+  </Grid>
+)
 const PostCardList = ({ posts }) => (
   <Grid container spacing={2}>
     {posts.edges.map(({ node }) => (
@@ -55,6 +72,7 @@ const useStyles = makeStyles((theme) =>
 const NotFound = ({ data }) => {
   const classes = useStyles()
   const { recentPosts, hero } = data
+  const { upcoming: upcomingMinishops } = useMinishops()
 
   return (
     <Layout maxWidth="lg">
@@ -74,6 +92,20 @@ const NotFound = ({ data }) => {
       <Typography variant="h5" component="p" align="center">
         Sorry, but the page you were trying to view does not exist!
       </Typography>
+
+      <Divider variant="middle" className={classes.divider} />
+
+      <Box component="section" className={classes.section}>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          aria-label="Join one of Ben's upcoming minishops"
+        >
+          Upcoming minishops
+        </Typography>
+        <MinishopList minishops={upcomingMinishops} />
+      </Box>
 
       <Divider variant="middle" className={classes.divider} />
 
