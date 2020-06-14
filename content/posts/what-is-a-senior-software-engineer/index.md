@@ -12,7 +12,7 @@ published: false
 
 - 3 criteria for a software engineer
   - Results
-  - Behavior (it's not about not being a erk)
+  - Behavior (it's not about not being a jerk)
   - Sphere of impact
 - Senior engineer
   - Impacts the team, starts reaching outside

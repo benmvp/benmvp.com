@@ -8,6 +8,7 @@ import {
   Box,
   Divider,
 } from '@material-ui/core'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
 import HeroImage from '../components/HeroImage'
@@ -150,10 +151,10 @@ const Post = ({ data }) => {
             Attend upcoming minishops
           </Typography>
           <Typography variant="body1" className={classes.minishopsDescription}>
-            Minishops by Ben Ilegbodu are fully-remote workshops that last about
-            3 hours. They’re highly-focused, covering only the concepts you want
-            to learn so that you can level up your skills and get on with the
-            rest of your day.
+            <Link to="/minishops/">Minishops by Ben Ilegbodu</Link> are
+            fully-remote workshops that last about 3 hours. They’re
+            highly-focused, covering only the concepts you want to learn so that
+            you can level up your skills and get on with the rest of your day.
           </Typography>
           <MinishopList minishops={upcomingMinishops} />
         </Box>

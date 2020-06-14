@@ -5,9 +5,7 @@
   - [x] Upcoming minishops on non-active minishop pages
 - [x] Minishop thank you page
 - [x] Add bugsnag
-- [ ] Setup Mailchimp (Reactathon + Github emails)
-- [ ] Write blog post on `npx kill-port` (#TIL)
-- [ ] More #TIL blog posts (back-date from twitter)
+- [x] Setup Mailchimp (Reactathon + Github emails)
 
 ## Site improvements
 
@@ -20,10 +18,10 @@
 
 ## Data-driven features
 
+- [ ] Algolia search (like https://docs.pact.io/)
 - [ ] Learning ES6 page data-driven w/ excerpts
 - [ ] Add blog post category pages
   - [ ] Category filtering on `/blog/`
 - [ ] Add speaking engagement category pages
 - [ ] Related blog posts in blog post footer
 - [ ] Add night mode switch to header
-- [ ] Algolia search (like https://docs.pact.io/)

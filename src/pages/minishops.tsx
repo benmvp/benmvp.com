@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) =>
     image: {
       marginBottom: theme.spacing(3),
     },
+    description: {
+      marginBottom: theme.spacing(3),
+    },
     grid: {
       marginTop: theme.spacing(3),
     },
@@ -57,6 +60,12 @@ const Minishops = ({ data }) => {
         credit="Photo by [Tudor Baciu](https://unsplash.com/@baciutudor)"
         className={classes.image}
       />
+      <Typography variant="body1" className={classes.description}>
+        Minishops by Ben Ilegbodu are fully-remote workshops that last about 3
+        hours. They’re highly-focused, covering only the concepts you want to
+        learn so that you can level up your skills and get on with the rest of
+        your day.
+      </Typography>
       {upcoming.length && (
         <>
           <Typography component="h3" variant="h4">
