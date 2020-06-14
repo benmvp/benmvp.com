@@ -1,12 +1,12 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import type { MinishopCardInfo } from './fragments'
 
-interface Node extends MinishopCardInfo {
+export interface Minishop extends MinishopCardInfo {
   id: string
 }
 type Minishops = {
   edges: {
-    node: Node
+    node: Minishop
   }[]
 }
 

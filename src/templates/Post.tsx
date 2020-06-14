@@ -16,7 +16,24 @@ import PostFooter from '../components/PostFooter'
 import MinishopCard from '../components/MinishopCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
-import useMinishops from '../utils/useMinishops'
+import useMinishops, { Minishop } from '../utils/useMinishops'
+
+const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
+  <Grid container spacing={2}>
+    {minishops.map((minishop) => (
+      <Grid key={minishop.id} item xs={12}>
+        <MinishopCard
+          mode="min"
+          slug={minishop.fields.slug}
+          title={minishop.frontmatter.title}
+          tags={minishop.frontmatter.tags}
+          summary={minishop.frontmatter.subTitle || minishop.excerpt}
+          event={minishop.frontmatter.event}
+        />
+      </Grid>
+    ))}
+  </Grid>
+)
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -36,8 +53,8 @@ const useStyles = makeStyles((theme) =>
       margin: theme.spacing(0, 'auto', 3),
       width: '50%',
     },
-    minishopsGrid: {
-      marginTop: theme.spacing(2),
+    minishopsDescription: {
+      marginBottom: theme.spacing(2),
     },
   }),
 )
@@ -132,26 +149,13 @@ const Post = ({ data }) => {
           <Typography component="h3" variant="h5" gutterBottom>
             Attend upcoming minishops
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" className={classes.minishopsDescription}>
             Minishops by Ben Ilegbodu are fully-remote workshops that last about
             3 hours. They’re highly-focused, covering only the concepts you want
             to learn so that you can level up your skills and get on with the
             rest of your day.
           </Typography>
-          <Grid container spacing={2} className={classes.minishopsGrid}>
-            {upcomingMinishops.map((node) => (
-              <Grid key={node.id} item xs={12}>
-                <MinishopCard
-                  mode="min"
-                  slug={node.fields.slug}
-                  title={node.frontmatter.title}
-                  tags={node.frontmatter.tags}
-                  summary={node.frontmatter.subTitle || node.excerpt}
-                  event={node.frontmatter.event}
-                />
-              </Grid>
-            ))}
-          </Grid>
+          <MinishopList minishops={upcomingMinishops} />
         </Box>
       )}
     </Layout>
