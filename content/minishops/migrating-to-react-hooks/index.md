@@ -44,7 +44,7 @@ Hi, I’m Ben Ilegbodu 👋🏾. In this minishop, not only will you learn the i
 ## This minishop may not be for you if you...
 
 - Are still new to React (consider the [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) minishop instead)
-- Already have dabbled with React Hooks (consider the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop instead)
+- Already have dabbled with React Hooks (unless you are looking for a full refresher)
 
 ## Code of Conduct
 

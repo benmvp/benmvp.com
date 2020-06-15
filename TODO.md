@@ -1,12 +1,3 @@
-## Minishops phase 2
-
-- [x] Minishop code of conduct
-- [x] Upcoming minishops in blog post footer
-  - [x] Upcoming minishops on non-active minishop pages
-- [x] Minishop thank you page
-- [x] Add bugsnag
-- [x] Setup Mailchimp (Reactathon + Github emails)
-
 ## Site improvements
 
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
@@ -15,6 +6,7 @@
 - [ ] Animated masthead (like https://fizbuz.com/)
   - frontend skills, JavaScript skills, development skills, React skills
 - [ ] Speaker rider (like https://github.com/cassidoo/talks/blob/master/speaker-rider.md)
+- [ ] Breadcrumbs (to easily jump to category pages like /minishops/ or /blog/)
 
 ## Data-driven features
 
