@@ -76,7 +76,7 @@ module.exports = {
     'gatsby-plugin-codegen',
     'gatsby-theme-material-ui',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
