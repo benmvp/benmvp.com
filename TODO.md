@@ -1,3 +1,8 @@
+## Minishops
+
+- [ ] Display past events
+- [ ] Display testimonials
+
 ## Site improvements
 
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)

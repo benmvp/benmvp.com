@@ -1,4 +1,5 @@
 import React from 'react'
+import { isFuture } from 'date-fns'
 import formatDate from 'date-fns-tz/format'
 import {
   makeStyles,
@@ -51,7 +52,7 @@ const MinishopCard = ({
   const showShare = mode !== 'min'
   let fullDate
 
-  if (event?.start) {
+  if (event?.start && isFuture(Date.parse(event?.start))) {
     const startDate = Date.parse(event.start)
     const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
     const formattedTime = formatDate(startDate, 'h:mm b z')

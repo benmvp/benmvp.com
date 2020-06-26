@@ -1,4 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
+import { isFuture } from 'date-fns'
 import type { MinishopCardInfo } from './fragments'
 
 export interface Minishop extends MinishopCardInfo {
@@ -37,7 +38,11 @@ const useMinishops = (idToFilter?: string) => {
 
   return minishops.edges.reduce(
     ({ upcoming, remaining }, { node }) => {
-      const list = node.frontmatter.event?.start ? upcoming : remaining
+      const eventStartDate = node.frontmatter.event?.start
+      const isFutureEvent = eventStartDate
+        ? isFuture(Date.parse(eventStartDate))
+        : false
+      const list = isFutureEvent ? upcoming : remaining
 
       if (node.id !== idToFilter) {
         list.push(node)

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { isFuture } from 'date-fns'
 import {
   makeStyles,
   createStyles,
@@ -59,6 +60,9 @@ const Minishop = ({ data }) => {
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
   const summary = subTitle || excerpt
+  const isUpcomingEvent = event?.start
+    ? isFuture(Date.parse(event.start))
+    : false
 
   return (
     <Layout>
@@ -114,9 +118,9 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
-      {event && <MinishopRegister event={event} isTop />}
+      {isUpcomingEvent && <MinishopRegister event={event} isTop />}
       <Content>{html}</Content>
-      {event && <MinishopRegister event={event} />}
+      {isUpcomingEvent && <MinishopRegister event={event} />}
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
@@ -124,7 +128,7 @@ const Minishop = ({ data }) => {
           summary={summary}
           tags={tags}
         />
-        {!event && <MinishopForm slug={slug} title={title} />}
+        {!isUpcomingEvent && <MinishopForm slug={slug} title={title} />}
         {!!upcomingMinishops.length && (
           <Box component="section" className={classes.minishops}>
             <Typography component="h3" variant="h5">
