@@ -36,6 +36,17 @@
     ]
   },
   {
+    "name": "Junior Developer Happy Hour July 2020",
+    "url": "https://www.meetup.com/es/Junior-Developer-Happy-Hour/events/271574913/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "JDHH with special guest Ben Ilegbodu",
+        "date": "07/18/2020"
+      }
+    ]
+  },
+  {
     "name": "React Loop 2020",
     "url": "https://reactloop.com/",
     "isCancelled": true,
@@ -45,6 +56,24 @@
       {
         "id": "typescript-react",
         "date": "06/19/2020"
+      }
+    ]
+  },
+  {
+    "name": "Reactive Online Meetup",
+    "url": "https://twitter.com/ReactiveMeetups/status/1270298765514203136",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "#BlackLivesMatter #MetaTalk w/ Pariss & Ben",
+        "date": "06/09/2020",
+        "time": "10a",
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=5JY7tmT3htg"
+          }
+        ]
       }
     ]
   },
