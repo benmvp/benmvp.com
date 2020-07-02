@@ -2,7 +2,7 @@
 date: 2020-06-29
 title: The best way to learn React
 description: The best way to learn React depends on how you learn best
-category: react
+category: career
 tags: [react, learning, tutorial, workshops, courses]
 hero: ./html-css-javascript-books-greg-rakozy-vw3Ahg4x1tY-unsplash.jpg
 heroAlt: HTML + CSS & JavaScript + jQuery books on a shelf next to a small cactus plant
@@ -73,9 +73,9 @@ Similarly, it’s at this point where you can start watching videos of different
 
 ## Minishops by Ben Ilegbodu
 
-I mentioned it before, but I’d be remiss if I didn’t use the opportunity to give a plug for my [minishops](/minishops/). They are fully-remote workshops that last about 3 hours. They’re highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. I just finished giving the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop where we learned how to use strong types with TypeScript in React applications to prevent common bugs that infect our apps.
+I mentioned it before, but I’d be remiss if I didn’t use the opportunity to give a plug for my [minishops](/minishops/). They are fully-remote workshops that last about 3 hours. They’re highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day. I gave a full explanation of minishops in my [Introducing Minishops](/blog/introducing-minishops/) post a few months back.
 
-Coming next is the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop to learn how to **move away from class components** in order to manage state better in React apps. I also have an introductory minishop called [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) that could be a perfect way for you to learn React. That will be announced soon. I plan to add other React & JavaScript minishops in the near future.
+I just finished giving the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop where we learned how to use strong types with TypeScript in React applications to prevent common bugs that infect our apps. Coming next is the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop to learn how to **move away from class components** in order to manage state better in React apps. I also have an introductory minishop called [Zero to React with Hooks](/minishops/zero-to-react-with-hooks/) that could be a perfect way for you to learn React. That will be announced soon. I plan to add other React & JavaScript minishops in the near future.
 
 Be sure to check them all out while you’re here!
 

@@ -10,6 +10,8 @@ tags: [testing, async, react]
 published: false
 ---
 
+- Code snippet to clear all promises
+
 - Jest has several ways to write tests for asynchronous code
 - Sometimes we mess up and don't write the test correctly
   - Jest by default passes tests even if no assertions happen
