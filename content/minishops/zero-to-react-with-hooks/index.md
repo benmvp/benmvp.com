@@ -9,7 +9,7 @@ heroAlt: A wide computer monitor with some React code on it
 heroCredit: 'Photo by [Filiberto Santillán](https://unsplash.com/@filisantillan)'
 event:
   id: '112503352556'
-  start: 2020-08-20T09:30:00-07:00
+  start: 2020-08-20T09:00:00-07:00
   end: 2020-08-20T12:00:00-07:00
 ---
 
