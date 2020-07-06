@@ -7,6 +7,10 @@ tags: [react, react hooks, useState, useEffect, jsx]
 hero: ./react-code-filiberto-santillan-1HCb2gPk3ik-unsplash.jpg
 heroAlt: A wide computer monitor with some React code on it
 heroCredit: 'Photo by [Filiberto Santillán](https://unsplash.com/@filisantillan)'
+event:
+  id: '112503352556'
+  start: 2020-08-20T09:30:00-07:00
+  end: 2020-08-20T12:00:00-07:00
 ---
 
 React is a JavaScript UI library that makes creating reusable components easy and efficient. It’s critical to understand the fundamentals of creating custom configurable components, fetching and maintaining state, and rendering UI based upon that state and component configurations.
@@ -24,7 +28,7 @@ Whatever the case may be, you’ll leave the minishop with all the fundamentals 
 - Maintain application state using hooks
 - Make API calls using hooks
 - Apply component styling
-- ..and many more tidbits and nuances of quality React development
+- ...and many more tidbits and nuances of quality React development
 
 ## You’ll need to have...
 
