@@ -88,7 +88,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         <TextField
           id="minishop-form-learn"
           name="learn"
-          label="Share 1 or 2 things you'd like to learn"
+          label="Share 1 or 2 things you'd like to learn in the minishop"
           variant="outlined"
           fullWidth
           margin="normal"
