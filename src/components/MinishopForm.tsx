@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core'
 import EmailIcon from '@material-ui/icons/Email'
 import PersonIcon from '@material-ui/icons/Person'
-import SchoolIcon from '@material-ui/icons/School'
+import ScheduleIcon from '@material-ui/icons/Schedule'
 import SendIcon from '@material-ui/icons/Send'
 
 interface Props {
@@ -88,7 +88,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         <TextField
           id="minishop-form-learn"
           name="learn"
-          label="Share 1 or 2 things you'd like to learn in the minishop"
+          label="What days & times work for you?"
           variant="outlined"
           fullWidth
           margin="normal"
@@ -96,7 +96,7 @@ const MinishopForm = ({ slug, title }: Props) => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <SchoolIcon />
+                <ScheduleIcon />
               </InputAdornment>
             ),
           }}
