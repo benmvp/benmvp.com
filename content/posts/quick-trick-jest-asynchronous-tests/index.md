@@ -10,12 +10,14 @@ tags: [testing, async, react]
 published: false
 ---
 
-- Code snippet to clear all promises
+- Reference post on async testing
 
 - Jest has several ways to write tests for asynchronous code
 - Sometimes we mess up and don't write the test correctly
   - Jest by default passes tests even if no assertions happen
   - Tests pass even though the test never runs your assertions
+  - Forget to set up the test correctly
+  - Expecting an error case, but it passes
 - There is `expect.hasAssertions` you can use to make sure a case ran at least one assertion
 - Don't want to have to put that into _every_ test
 - In Jest config you can add a `beforeEach` with `expect.hasAssertions()` and it'll run for **all** tests
