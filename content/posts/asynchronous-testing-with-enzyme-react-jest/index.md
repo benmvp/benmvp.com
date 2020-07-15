@@ -1,5 +1,5 @@
 ---
-date: 2020-07-16
+date: 2020-07-15
 title: Asynchronous testing with Enzyme & React in Jest
 category: react
 tags: [react, testing, async]
