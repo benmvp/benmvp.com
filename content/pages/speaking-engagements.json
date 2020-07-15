@@ -36,13 +36,25 @@
     ]
   },
   {
+    "name": "All Things Open 2020",
+    "url": "https://2020.allthingsopen.org/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "perfect-lib",
+        "date": "10/19/2020"
+      }
+    ]
+  },
+  {
     "name": "Junior Developer Happy Hour July 2020",
     "url": "https://www.meetup.com/es/Junior-Developer-Happy-Hour/events/271574913/",
     "location": "Remote",
     "talks": [
       {
         "title": "JDHH with special guest Ben Ilegbodu",
-        "date": "07/18/2020"
+        "date": "07/18/2020",
+        "time": "12p"
       }
     ]
   },
