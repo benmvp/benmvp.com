@@ -170,7 +170,7 @@ We return a `Promise` that is resolved, when the `setImmediate` callback is call
 
 As I mentioned in my previous article, React Testing Library is all about testing the UI from the user's experience. Our users aren't submitting the form and then waiting for promises to resolve. No, **they are waiting for the UI to update**! Even though we avoided using `component.instance()` with the Enzyme-based test, we're still kind of testing implementation details knowing that we have to `runAllPromises.`
 
-To promote user-centric testing, React Testing Library has [async utilities](https://testing-library.com/docs/dom-testing-library/api-async) that mimic the user behavior of waiting. Specifically, there is a `waitFor()` method that allows you to _wait_ until the UI is ready. Our test would look something like this:
+To promote user-centric testing, React Testing Library has [async utilities](https://testing-library.com/docs/dom-testing-library/api-async) that mimic the user behavior of waiting. Specifically, there is a `waitFor()` method that allows you to _wait_ until the UI is ready. Using `waitFor`, our Enzyme test would look something like this:
 
 ```js
 import { mount } from 'enzyme'
@@ -244,7 +244,9 @@ The way this works is that the Jest assertions, like `.toHaveLength()`, will thr
 
 By using `await`, we wait on that promise to resolve and we've waited just like our users would wait. And if the assertion continues to fail, we'll eventually hit our timeout and the promise will be rejected. And the rejected promise will throw an `Error`, so the test case will fail just like other failed assertions.
 
-After writing `waitFor`, I went into the [source code](https://github.com/testing-library/dom-testing-library/blob/aa7ed18486c3ab92141d54819eb7f213ddc6efb4/src/wait-for.js) to see how it was implemented in React Testing Library and its surprisingly different. Outside of the additional functionality it provides, they used a `setInterval` instead of successive `setTimeout` statements like I did. I went with the `setTimeout` route because I felt it was easier to manage the final timeout that way. It proves that **there's never a single "right way."**
+After writing `waitFor`, I went into the [source code](https://github.com/testing-library/dom-testing-library/blob/aa7ed18486c3ab92141d54819eb7f213ddc6efb4/src/wait-for.js) to see how it was implemented in React Testing Library and its surprisingly different. Outside of the additional functionality it provides, they used a `setInterval` instead of successive `setTimeout` statements like I did. I went with the `setTimeout` route because I felt it was easier to manage the final timeout that way, but I wonder if there's an override in making lots of `setTimeout` calls? It proves that **there's never a single "right way."**
+
+One final note, in React Testing Library the [`findBy*`](https://testing-library.com/docs/dom-testing-library/api-queries#findby) queries return a promise which resolves when an element is found that matches the given query. **The `findBy` query is basically a convenience wrapper around [`waitFor`](https://testing-library.com/docs/api-async#waitfor)**. In Enzyme we could similarly create a wrapper over our `waitFor` implementation, but I still feel that `runAllPromises` solution is probably simpler, and obviously less code.
 
 ---
 
