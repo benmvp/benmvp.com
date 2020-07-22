@@ -45,8 +45,8 @@ const Minishops = ({ data }) => {
     <Layout>
       <Seo
         url={getMinishopUrl()}
-        title="Remote Minishops"
-        description="Minishops by Ben Ilegbodu are fully-remote workshops that last only 3 hours long. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day."
+        title="Remote Minishops, Online Workshops, Virtual Training"
+        description="Minishops by Ben Ilegbodu are 3-hour, fully-remote workshops that focus on frontend technologies like React, TypeScript and testing. They're highly-focused, covering only the concepts you want to learn so that you can level up your skills and get on with the rest of your day."
         image={hero.childImageSharp.fluid.src}
       />
       <PageHeader
@@ -61,10 +61,10 @@ const Minishops = ({ data }) => {
         className={classes.image}
       />
       <Typography variant="body1" className={classes.description}>
-        Minishops by Ben Ilegbodu are fully-remote workshops that last about 3
-        hours. They’re highly-focused, covering only the concepts you want to
-        learn so that you can level up your skills and get on with the rest of
-        your day.
+        Minishops by Ben Ilegbodu are 3-hour, fully-remote workshops that focus
+        on frontend technologies like React, TypeScript and testing. They're
+        highly-focused, covering only the concepts you want to learn so that you
+        can level up your skills and get on with the rest of your day.
       </Typography>
       {upcoming.length && (
         <>
