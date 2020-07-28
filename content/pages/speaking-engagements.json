@@ -47,6 +47,18 @@
     ]
   },
   {
+    "name": "Learn With Jason",
+    "url": "https://www.learnwithjason.dev/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Build an app with TypeScript & React",
+        "date": "09/17/2020",
+        "time": "9:30am"
+      }
+    ]
+  },
+  {
     "name": "Junior Developer Happy Hour July 2020",
     "url": "https://www.meetup.com/es/Junior-Developer-Happy-Hour/events/271574913/",
     "location": "Remote",
