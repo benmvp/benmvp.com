@@ -17,6 +17,7 @@ import MinishopRegister from '../components/MinishopRegister'
 import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
 import MinishopCard from '../components/MinishopCard'
+import MinishopTestimonials from '../components/MinishopTestimonials'
 import { getUrl, getMinishopUrl } from '../utils'
 import useMinishops from '../utils/useMinishops'
 
@@ -120,6 +121,7 @@ const Minishop = ({ data }) => {
       )}
       {isUpcomingEvent && <MinishopRegister event={event} isTop />}
       <Content>{html}</Content>
+      <MinishopTestimonials slug={slug} title={title} />
       {isUpcomingEvent && <MinishopRegister event={event} />}
       <Box component="footer" className={classes.footer}>
         <Share
