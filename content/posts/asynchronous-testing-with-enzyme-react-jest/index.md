@@ -2,8 +2,8 @@
 date: 2020-07-15
 title: Asynchronous testing with Enzyme & React in Jest
 description: How to use Enzyme to test UI updates after asynchronous events in React components
-category: react
-tags: [react, testing, async]
+category: testing
+tags: [react, async, enzyme, react-testing-library]
 hero: ./wait-sign-kai-pilger-1k3vsv7iIIc-unsplash.jpeg
 heroAlt: Wait crosswalk sign in New York City
 heroCredit: 'Photo by [Kai Pilger](https://unsplash.com/@kaip)'
