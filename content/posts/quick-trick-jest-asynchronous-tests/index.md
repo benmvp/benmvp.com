@@ -25,7 +25,7 @@ it('returns a rejected promise when the count is 1', async () => {
 })
 ```
 
-There are [several ways to test asynchronous code in Jest](https://jestjs.io/docs/en/asynchronous) and the above follows the example given for using `async`/`await`. I'm trying to assert that when `getItems(1)` is called that the rejected promise returns an object with a `message` of `'Invalid request'`. It turned out that my `getItems` code had a bug. It wasn't returning a rejected promise, but a resolved promise in this case. But even though the test never executed the assertion within the `catch` handler, **the test still passed.**
+There are [several ways to test asynchronous code in Jest](https://jestjs.io/docs/en/asynchronous) and the above follows the example given for using `async`/`await`. I'm trying to assert that when `getItems(1)` is called that the rejected promise returns an object with a `message` of `'Invalid request'`. It turned out that my `getItems` code had a bug. It wasn't returning a rejected promise, but a resolved promise in this case. But even though the test never executed the assertion within the `catch` handler, **the test still passed**.
 
 Similarly here's another test that passed when it shouldn't have:
 
