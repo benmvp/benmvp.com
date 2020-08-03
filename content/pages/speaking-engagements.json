@@ -66,7 +66,13 @@
       {
         "title": "JDHH with special guest Ben Ilegbodu",
         "date": "07/18/2020",
-        "time": "12p"
+        "time": "12p",
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=s0ax5_WvDKM"
+          }
+        ]
       }
     ]
   },
