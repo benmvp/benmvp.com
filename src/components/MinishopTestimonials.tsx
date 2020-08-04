@@ -43,6 +43,10 @@ const MinishopTestimonials = ({ slug, title }: Props) => {
     Testimonial[]
   >
 
+  if (!testimonials.length) {
+    return null
+  }
+
   return (
     <Paper component="section" elevation={1}>
       <Typography variant="h5" component="h1" className={classes.title}>

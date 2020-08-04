@@ -7,10 +7,6 @@ tags: [react, typescript, hooks, generics]
 hero: ./home-office-caspar-camille-rubin-0qvBNep1Y04-unsplash.jpg
 heroAlt: A photo of a home office with a super-wide monitor w/ code on it
 heroCredit: 'Photo by [Caspar Camille Rubin](https://unsplash.com/@casparrubin)'
-event:
-  id: '106686762980'
-  start: 2020-06-25T09:00:00-07:00
-  end: 2020-06-25T12:00:00-07:00
 ---
 
 TypeScript is a JavaScript superset that compiles down to vanilla JavaScript and has become increasingly popular. TypeScript offers strong typing and compile-time verification to our React applications. As a result, using TypeScript helps eliminate entire classes of bugs that commonly affect our apps.
@@ -38,7 +34,7 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 
 ## This minishop may not be for you if you...
 
-- Already have some experience using TypeScript in React
+- Already have some experience using TypeScript in React (try [Sharing React Component Logic](/minishops/sharing-react-component-logic/))
 - Have React experience, but don’t yet have experience using hooks (again consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
 
 ## Code of Conduct
