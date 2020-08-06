@@ -33,7 +33,6 @@ const Blog = ({ data }) => {
               date={node.frontmatter.date}
               summary={node.frontmatter.description || node.excerpt}
               hero={node.frontmatter.hero}
-              heroAlt={node.frontmatter.heroAlt}
             />
           </Grid>
         ))}

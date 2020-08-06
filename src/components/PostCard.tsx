@@ -19,7 +19,6 @@ import useCopyUrl from '../utils/useCopyUrl'
 interface Props {
   date: string
   hero: any
-  heroAlt: string
   mode?: 'min' | 'full'
   slug: string
   summary: string
@@ -42,7 +41,6 @@ const useStyles = makeStyles((theme) =>
 const PostCard = ({
   date,
   hero,
-  heroAlt,
   mode = 'full',
   slug,
   summary,
@@ -62,7 +60,7 @@ const PostCard = ({
           <CardMedia
             component="img"
             image={hero.childImageSharp.fluid.src}
-            title={heroAlt}
+            title={title}
             className={classes.media}
           />
         )}
