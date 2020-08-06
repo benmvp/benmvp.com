@@ -113,6 +113,8 @@ A complete test would look like:
 const oldWindowLocation = window.location
 
 beforeAll(() => {
+  delete window.location
+
   window.location = Object.defineProperties(
     {},
     {
@@ -150,6 +152,8 @@ I had a number of test files that needed this mocking of `window.location.assign
 const oldWindowLocation = window.location
 
 beforeAll(() => {
+  delete window.location
+
   window.location = Object.defineProperties(
     {},
     {
