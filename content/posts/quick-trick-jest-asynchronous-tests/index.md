@@ -9,7 +9,7 @@ heroAlt: Joker cards sitting on a bed of cards
 heroCredit: 'Photo by [Toni Reed](https://unsplash.com/@trfotos)'
 ---
 
-Two weeks ago I wrote a post on [Asynchronous testing with Enzyme & React in Jest](/asynchronous-testing-with-enzyme-react-jest/). It covered the challenge of testing an async React component when we need to wait until all of the promises have resolved before we can assert on the updated UI. I want to talk about async testing in Jest again, but this time not specifically dealing with UI testing.
+Two weeks ago I wrote a post on [Asynchronous testing with Enzyme & React in Jest](/blog/asynchronous-testing-with-enzyme-react-jest/). It covered the challenge of testing an async React component when we need to wait until all of the promises have resolved before we can assert on the updated UI. I want to talk about async testing in Jest again, but this time not specifically dealing with UI testing.
 
 Recently I was writing unit tests for an API wrapper and I wanted to test an error case:
 
