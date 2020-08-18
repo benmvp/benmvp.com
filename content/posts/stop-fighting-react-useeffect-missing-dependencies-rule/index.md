@@ -18,9 +18,10 @@ published: false
   - defined as inner functions w/in the component
   - seems weird to add those, but it's important
   - several fixes:
-    - move the function outside of the component and pass the needed params
-    - move the function w/in the `useEffect` and set its scope props as dependencies
-    - don't use a helper function and move all the code w/in
+    - don't use a helper function and move all the code w/in (if only being used once)
+    - move the function w/in the `useEffect` and set its scope props as dependencies (if only being used once)
+    - move the function outside of the component and pass the needed params (if not using other hooks)
+    - Use useCallback (least favorite option because it involves the most work)
 - Also have objects being created on every render
   - if those are used in `useEffect`, it'll cause unnecessary effect calls
   - the object has changed on successive renders (just like the function)
