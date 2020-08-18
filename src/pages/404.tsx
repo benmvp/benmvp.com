@@ -71,7 +71,13 @@ const useStyles = makeStyles((theme) =>
 const NotFound = ({ data }) => {
   const classes = useStyles()
   const { recentPosts, hero } = data
-  const { upcoming: upcomingMinishops } = useMinishops()
+  const {
+    upcoming: upcomingMinishops,
+    remaining: remainingMinishops,
+  } = useMinishops()
+  const minishops = upcomingMinishops.length
+    ? upcomingMinishops
+    : remainingMinishops
 
   return (
     <Layout maxWidth="lg">
@@ -103,7 +109,7 @@ const NotFound = ({ data }) => {
         >
           Upcoming minishops
         </Typography>
-        <MinishopList minishops={upcomingMinishops} />
+        <MinishopList minishops={minishops} />
       </Box>
 
       <Divider variant="middle" className={classes.divider} />

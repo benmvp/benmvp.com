@@ -34,11 +34,12 @@ const useStyles = makeStyles((theme) =>
 )
 
 const MinishopCardList = () => {
-  const { upcoming } = useMinishops()
+  const { upcoming, remaining } = useMinishops()
+  const minishops = upcoming.length ? upcoming : remaining
 
   return (
     <Grid container spacing={2}>
-      {upcoming.map((node) => (
+      {minishops.map((node) => (
         <Grid key={node.id} item xs={12} lg={6}>
           <MinishopCard
             mode="min"

@@ -62,7 +62,13 @@ const useStyles = makeStyles((theme) =>
 
 const Post = ({ data }) => {
   const classes = useStyles()
-  const { upcoming: upcomingMinishops } = useMinishops()
+  const {
+    upcoming: upcomingMinishops,
+    remaining: remainingMinishops,
+  } = useMinishops()
+  const otherMinishops = upcomingMinishops.length
+    ? upcomingMinishops
+    : remainingMinishops
   const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const {
@@ -144,7 +150,7 @@ const Post = ({ data }) => {
         summary={summary}
         tags={tags}
       />
-      {upcomingMinishops.length && (
+      {!!otherMinishops.length && (
         <Box component="section" className={classes.minishops}>
           <Divider className={classes.minishopsDivider} />
           <Typography component="h3" variant="h5" gutterBottom>
@@ -156,7 +162,7 @@ const Post = ({ data }) => {
             highly-focused, covering only the concepts you want to learn so that
             you can level up your skills and get on with the rest of your day.
           </Typography>
-          <MinishopList minishops={upcomingMinishops} />
+          <MinishopList minishops={otherMinishops} />
         </Box>
       )}
     </Layout>

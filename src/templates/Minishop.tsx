@@ -57,7 +57,13 @@ const Minishop = ({ data }) => {
     event,
   } = frontmatter
   const { slug } = fields
-  const { upcoming: upcomingMinishops } = useMinishops(id)
+  const {
+    upcoming: upcomingMinishops,
+    remaining: remainingMinishops,
+  } = useMinishops(id)
+  const otherMinishops = upcomingMinishops.length
+    ? upcomingMinishops
+    : remainingMinishops
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
   const summary = subTitle || excerpt
@@ -131,13 +137,13 @@ const Minishop = ({ data }) => {
           tags={tags}
         />
         {!isUpcomingEvent && <MinishopForm slug={slug} title={title} />}
-        {!!upcomingMinishops.length && (
+        {!!otherMinishops.length && (
           <Box component="section" className={classes.minishops}>
             <Typography component="h3" variant="h5">
               Other upcoming minishops
             </Typography>
             <Grid container spacing={2} className={classes.minishopsGrid}>
-              {upcomingMinishops.map((node) => (
+              {otherMinishops.map((node) => (
                 <Grid key={node.id} item xs={12}>
                   <MinishopCard
                     mode="min"
