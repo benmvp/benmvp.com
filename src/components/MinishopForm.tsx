@@ -86,8 +86,8 @@ const MinishopForm = ({ slug, title }: Props) => {
           }}
         />
         <TextField
-          id="minishop-form-learn"
-          name="learn"
+          id="minishop-form-when"
+          name="when"
           label="What days & times work for you?"
           variant="outlined"
           fullWidth
