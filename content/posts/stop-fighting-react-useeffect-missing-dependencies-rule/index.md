@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
 title: Stop fighting against the React useEffect missing dependencies rule
-# description: Some reasons why I choose React Testing Library over Enzyme for testing React components
+description: How to deal with helper functions listed as useEffect dependencies
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
