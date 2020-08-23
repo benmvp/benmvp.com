@@ -33,6 +33,17 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
         />
       </Grid>
     ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/minishops/" variant="h6">
+          View all minishops >
+        </Link>
+      </Box>
+    </Grid>
   </Grid>
 )
 

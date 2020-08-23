@@ -8,6 +8,7 @@ import {
   Grid,
   Divider,
 } from '@material-ui/core'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
@@ -32,6 +33,17 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
         />
       </Grid>
     ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/minishops/" variant="h6">
+          View all minishops >
+        </Link>
+      </Box>
+    </Grid>
   </Grid>
 )
 const PostCardList = ({ posts }) => (
