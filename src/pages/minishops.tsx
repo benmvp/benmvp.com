@@ -66,7 +66,7 @@ const Minishops = ({ data }) => {
         highly-focused, covering only the concepts you want to learn so that you
         can level up your skills and get on with the rest of your day.
       </Typography>
-      {upcoming.length && (
+      {upcoming.length > 0 && (
         <>
           <Typography component="h3" variant="h4">
             Upcoming Minishops
@@ -86,8 +86,10 @@ const Minishops = ({ data }) => {
           </Grid>
         </>
       )}
-      {upcoming.length && remaining && <Divider className={classes.divider} />}
-      {remaining.length && (
+      {upcoming.length > 0 && remaining && (
+        <Divider className={classes.divider} />
+      )}
+      {remaining.length > 0 && (
         <>
           <Typography component="h3" variant="h4">
             {upcoming.length ? 'Remaining' : 'All'} Minishops
