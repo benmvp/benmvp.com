@@ -36,6 +36,17 @@
     ]
   },
   {
+    "name": "Global React Meetup November 2020",
+    "url": "https://www.reactjsmeetup.com/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "mixins-to-hooks",
+        "date": "11/12/2020"
+      }
+    ]
+  },
+  {
     "name": "All Things Open 2020",
     "url": "https://2020.allthingsopen.org/",
     "location": "Remote",
@@ -43,6 +54,17 @@
       {
         "id": "perfect-lib",
         "date": "10/19/2020"
+      }
+    ]
+  },
+  {
+    "name": "TSConf 2020",
+    "url": "https://tsconf.io/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "typescript-react",
+        "date": "10/9/2020"
       }
     ]
   },
