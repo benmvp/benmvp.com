@@ -39,7 +39,7 @@ Whatever the case may be, you’ll leave the minishop with all the fundamentals 
 ## This minishop may not be for you if you...
 
 - Already have experience developing in React with class components (consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
-- Already have dabbled with React Hooks (consider the [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishop instead)
+- Already have dabbled with React Hooks (consider the [Sharing React Component Logic](/minishops/sharing-react-component-logic/) or [TypeScript for React Developers](/minishops/typescript-for-react-developers/) minishops instead)
 
 ## Code of Conduct
 

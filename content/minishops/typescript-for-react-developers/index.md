@@ -34,7 +34,7 @@ Whether these are your reasons or you have others, you’ll no doubt leave convi
 
 ## This minishop may not be for you if you...
 
-- Already have some experience using TypeScript in React (try [Sharing React Component Logic](/minishops/sharing-react-component-logic/))
+- Already have some experience using TypeScript in React (try the [Sharing React Component Logic](/minishops/sharing-react-component-logic/) minishop)
 - Have React experience, but don’t yet have experience using hooks (again consider the [Migrating to React Hooks](/minishops/migrating-to-react-hooks/) minishop instead)
 
 ## Code of Conduct

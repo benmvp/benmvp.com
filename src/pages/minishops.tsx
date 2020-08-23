@@ -92,7 +92,7 @@ const Minishops = ({ data }) => {
       {remaining.length > 0 && (
         <>
           <Typography component="h3" variant="h4">
-            {upcoming.length ? 'Remaining' : 'All'} Minishops
+            {upcoming.length > 0 ? 'Remaining' : 'All'} Minishops
           </Typography>
           <Grid container spacing={2} className={classes.grid}>
             {remaining.map((node) => (
