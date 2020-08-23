@@ -15,8 +15,8 @@ import ScheduleIcon from '@material-ui/icons/Schedule'
 import SendIcon from '@material-ui/icons/Send'
 
 interface Props {
-  slug: string
-  title: string
+  slug?: string
+  title?: string
 }
 
 const useStyles = makeStyles((theme) => {
@@ -39,11 +39,18 @@ const MinishopForm = ({ slug, title }: Props) => {
   return (
     <Paper component="section" elevation={3} className={classes.root}>
       <Typography variant="h5" component="h1" gutterBottom>
-        The next <strong>{title}</strong> is coming soon!
+        {slug ? (
+          <>
+            The next <strong>{title}</strong> is coming soon!
+          </>
+        ) : (
+          <>Minishops are regularly scheduled</>
+        )}
       </Typography>
       <Typography variant="body1" gutterBottom>
-        Provide your email to be notified when the next one is scheduled so you
-        can ensure you get a spot and the best price.
+        Provide your email to be notified when the next{' '}
+        {slug ? 'one is' : 'minishops are'} scheduled so you can ensure you get
+        a spot and the best price.
       </Typography>
       <Box
         component="form"
@@ -113,7 +120,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         >
           Notify me
         </Button>
-        <input type="hidden" name="slug" value={slug} />
+        <input type="hidden" name="slug" value={slug || 'any'} />
         <input type="hidden" name="form-name" value="minishop" />
       </Box>
     </Paper>

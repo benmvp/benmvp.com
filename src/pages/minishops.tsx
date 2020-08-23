@@ -12,6 +12,7 @@ import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import MinishopCard from '../components/MinishopCard'
+import MinishopForm from '../components/MinishopForm'
 import { getMinishopUrl } from '../utils'
 import useMinishops from '../utils/useMinishops'
 
@@ -109,6 +110,8 @@ const Minishops = ({ data }) => {
           </Grid>
         </>
       )}
+      <Divider className={classes.divider} />
+      <MinishopForm />
     </Layout>
   )
 }
