@@ -1,10 +1,10 @@
 ## Minishops
 
 - [ ] Display past events
-- [ ] Display testimonials
 
 ## Site improvements
 
+- [ ] Add new logo
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
   - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
