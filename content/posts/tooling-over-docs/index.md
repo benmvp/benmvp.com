@@ -10,6 +10,10 @@ category: training
 published: false
 ---
 
+- I ❤️ docs
+  - MDN docs
+  - `semantic-release` docs
+  - React docs
 - Written thousands of lines of docs outlining best practices over the years at companies
   - Newcomers or casual devs want best practices docs to help them do the right thing **before** PRs
   - They also don't wanna spend countless hours trying to figure out how to do the right thing
@@ -22,6 +26,8 @@ published: false
 - People think tooling is just for making their lives easier
   - Doing heavy lifting for devs
   - CRA, Netlify, Jest, etc.
+- Types of tooling?
+  - Generators (plop or yeoman) replace step by step set ups
 - That's the main use for tooling, but it can also be a teaching tool
 - Linting
   - Many lint rules aren't errors, but best practices to avoid gotchas
