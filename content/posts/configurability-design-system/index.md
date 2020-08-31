@@ -49,6 +49,8 @@ In general, you're going to want body text to always be the same shade of dark g
 
 However, what happens when your app needs to support dark mode? Or what if you want the Admin portal of your app to have a different color palette from the customer-facing side? Your component now can have multiple different color schemes. And now, you're **effectively supporting theming** in your components. You're still not allowing a component to have an arbitrary color palette, but it can indirectly support different colors via a specified or inherited theme.
 
+So instead of the text of a component being explicitly dark gray, it'll instead be an abstracted `text-body-color`. In the default theme, the text will be dark gray, but for the "dark mode" theme it'll likely be white.
+
 **My suggestion:** Approach theming with caution. A theming engine is not only complex to build, but also complex to design & develop components with proper color abstractions. Only build it if your apps really need it. If you find apps having to hack CSS in order to customize colors, then you can consider adding a theming engine.
 
 ## 4. User interaction
@@ -57,7 +59,7 @@ The UI logic is basically how the component works, so **the majority of it shoul
 
 For instance, if you have a text input component that supports validation, you'll likely want to configure whether it does synchronous or asynchronous validation, displays validation errors immediately or on form submit, etc. You'll want to enable the component to be able to be used in its common scenarios. The trick and the difficulty is not to enable all of these "what-if" situations (i.e. [YAGNI](https://martinfowler.com/bliki/Yagni.html)), but instead, **build for known or highly likely scenarios.**
 
-Similarly, for an image carousel, a dev may need to send tracking data every time the user paginates. As a result, the component needs to accept a function that it'll call when the user clicks the next/previous buttons. This gives control back to the dev in order for them to make the track request.
+Similarly, for an image carousel, a dev may need to send tracking data every time the user paginates. As a result, the component needs to accept a function that it'll call when the user clicks the next/previous buttons (i.e. `onNext`/`onPrevious`). This gives control back to the dev in order for them to make the track request.
 
 **My suggestion:** Provide the minimal set of configurations needed to make the component work in its known use cases. The more options, the more complex the component will be to configure for developers and for you to maintain. Also provide **inversion of control through callback functions** that can be triggered at key user interaction moments, enabling devs to handle their special code that should not be baked into the component.
 
