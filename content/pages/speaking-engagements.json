@@ -58,6 +58,17 @@
     ]
   },
   {
+    "name": "React Summit 2020",
+    "url": "https://reactsummit.com/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Migrating to React Hooks Minishop",
+        "date": "10/13/2020"
+      }
+    ]
+  },
+  {
     "name": "TSConf 2020",
     "url": "https://tsconf.io/",
     "location": "Remote",
@@ -74,7 +85,7 @@
     "location": "Remote",
     "talks": [
       {
-        "title": "Build an app with TypeScript & React",
+        "title": "Power up React with TypeScript",
         "date": "09/17/2020",
         "time": "9:30am"
       }
