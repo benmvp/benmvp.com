@@ -53,7 +53,8 @@
     "talks": [
       {
         "id": "perfect-lib",
-        "date": "10/19/2020"
+        "date": "10/19/2020",
+        "time": "10:30a"
       }
     ]
   },
@@ -64,7 +65,12 @@
     "talks": [
       {
         "title": "Migrating to React Hooks Minishop",
-        "date": "10/13/2020"
+        "date": "10/13/2020",
+        "time": "9a"
+      },
+      {
+        "id": "typescript-react",
+        "date": "10/16/2020"
       }
     ]
   },
@@ -87,7 +93,18 @@
       {
         "title": "Power up React with TypeScript",
         "date": "09/17/2020",
-        "time": "9:30am"
+        "time": "9:30a"
+      }
+    ]
+  },
+  {
+    "name": "React Global Online Summit",
+    "url": "https://react.geekle.us/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "perfect-lib",
+        "date": "09/15/2020"
       }
     ]
   },
