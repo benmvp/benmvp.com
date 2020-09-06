@@ -5,7 +5,7 @@
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
-    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint": "eslint . --ext .ts,.tsx,.js --cache",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
