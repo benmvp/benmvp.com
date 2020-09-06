@@ -25,22 +25,18 @@ export interface SpeakingEngagement {
 }
 
 export const getEngagements = () => {
-  const all = SPEAKING_ENGAGEMENTS.map(
-    (speakInfo): SpeakingEngagement => ({
-      ...speakInfo,
-      id: slugify(speakInfo.name),
-      talks: speakInfo.talks.map(
-        (talk): EngagementTalk => {
-          return {
-            ...getTalk(talk.id),
-            id: talk.id,
-            ...talk,
-            date: formatDate(talk.date),
-          }
-        },
-      ),
+  const all: SpeakingEngagement[] = SPEAKING_ENGAGEMENTS.map((speakInfo) => ({
+    ...speakInfo,
+    id: slugify(speakInfo.name),
+    talks: speakInfo.talks.map((talk) => {
+      return {
+        ...getTalk(talk.id),
+        id: talk.id,
+        ...talk,
+        date: formatDate(talk.date),
+      }
     }),
-  ).sort((engagementA, engagementB) =>
+  })).sort((engagementA, engagementB) =>
     differenceInMilliseconds(
       Date.parse(engagementB?.talks?.[0].date),
       Date.parse(engagementA?.talks?.[0].date),
