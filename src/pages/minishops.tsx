@@ -87,7 +87,7 @@ const Minishops = ({ data }) => {
           </Grid>
         </>
       )}
-      {upcoming.length > 0 && remaining && (
+      {upcoming.length > 0 && remaining.length > 0 && (
         <Divider className={classes.divider} />
       )}
       {remaining.length > 0 && (
