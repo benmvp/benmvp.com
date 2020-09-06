@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles, createStyles, Typography } from '@material-ui/core'
-import { getFullWidthImageStyles } from '../styles'
 
 interface Props {
   children: string

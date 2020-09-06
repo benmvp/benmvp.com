@@ -40,7 +40,7 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
         width="100%"
       >
         <Link href="/minishops/" variant="h6">
-          View all minishops >
+          View all minishops &gt;
         </Link>
       </Box>
     </Grid>

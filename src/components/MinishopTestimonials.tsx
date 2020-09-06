@@ -50,7 +50,11 @@ const MinishopTestimonials = ({ slug, title }: Props) => {
   return (
     <Paper component="section" elevation={1}>
       <Typography variant="h5" component="h1" className={classes.title}>
-        Past learners ❤️ <strong>{title}</strong>!
+        Past learners{' '}
+        <span role="img" aria-label="love">
+          ❤️
+        </span>{' '}
+        <strong>{title}</strong>!
       </Typography>
       <List>
         {testimonials.map((testimonial, index) => {

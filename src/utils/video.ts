@@ -56,5 +56,7 @@ export const getVideos = () =>
           }
         }
       }
+
+      return undefined
     })
     .filter((video): video is Video => video !== undefined)

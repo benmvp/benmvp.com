@@ -44,8 +44,8 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
           rel="noopener noreferrer"
         >
           Discuss on Twitter
-        </Link>{' '}
-        //{' '}
+        </Link>
+        {' // '}
         <Link
           href={`https://github.com/benmvp/benmvp.com/edit/master/content/posts${slug}index.md`}
           target="_blank"
