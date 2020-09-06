@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { isFuture, differenceInMilliseconds } from 'date-fns'
+import { isFuture, isPast, differenceInMilliseconds } from 'date-fns'
 import { formatDate } from '.'
 import { getTalk, Talk } from './talk'
 
@@ -24,8 +24,8 @@ export interface SpeakingEngagement {
   venue?: string
 }
 
-export const getEngagements = () =>
-  SPEAKING_ENGAGEMENTS.map(
+export const getEngagements = () => {
+  const all = SPEAKING_ENGAGEMENTS.map(
     (speakInfo): SpeakingEngagement => ({
       ...speakInfo,
       id: slugify(speakInfo.name),
@@ -46,11 +46,14 @@ export const getEngagements = () =>
       Date.parse(engagementA?.talks?.[0].date),
     ),
   )
-
-export const getUpcomingEngagements = () =>
-  getEngagements()
+  const future = all
     .filter(({ talks }) =>
       talks?.some(({ date }) => isFuture(Date.parse(date))),
     )
-    .filter(({ isCancelled }) => !isCancelled)
     .reverse()
+  const past = all.filter(({ talks }) =>
+    talks?.some(({ date }) => isPast(Date.parse(date))),
+  )
+
+  return { all, future, past }
+}

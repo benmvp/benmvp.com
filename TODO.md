@@ -1,11 +1,6 @@
 ## Minishops
 
-- [ ] Add tracking links to EB event descriptions
 - [ ] Display past events
-
-## Speak
-
-- [ ] Split into Upcoming (nearest to latest) & Past sections (nearest to earliest)
 
 ## Site improvements
 

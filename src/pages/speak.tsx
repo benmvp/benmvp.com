@@ -1,6 +1,12 @@
 import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
-import { createStyles, makeStyles, Typography, Grid } from '@material-ui/core'
+import {
+  createStyles,
+  makeStyles,
+  Typography,
+  Grid,
+  Divider,
+} from '@material-ui/core'
 import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
@@ -23,14 +29,18 @@ const useStyles = makeStyles((theme) =>
     year: {
       marginTop: theme.spacing(3),
     },
+    divider: {
+      margin: theme.spacing(5, 'auto'),
+      width: '50%',
+    },
   }),
 )
 
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
   const { hero } = data
-  const engagements = getEngagements()
-  let curYear = getDateYear(engagements[0].talks[0].date) + 1
+  const { future: futureEngagements, past: pastEngagements } = getEngagements()
+  let curYear = getDateYear(pastEngagements[0].talks[0].date) + 1
 
   return (
     <Layout>
@@ -70,8 +80,25 @@ const SpeakingEngagements = ({ data }) => {
         , <a href="mailto:ben@benmvp.com">email</a> or{' '}
         <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
       </Typography>
+
       <Grid container spacing={2}>
-        {engagements.map((engagement) => {
+        <Grid item xs={12} className={classes.year}>
+          <Typography id="upcoming" variant="h3">
+            Upcoming
+          </Typography>
+        </Grid>
+
+        {futureEngagements.map((engagement) => (
+          <Grid key={engagement.id} item xs={12}>
+            <SpeakCard {...engagement} />
+          </Grid>
+        ))}
+      </Grid>
+
+      {futureEngagements.length > 0 && <Divider className={classes.divider} />}
+
+      <Grid container spacing={2}>
+        {pastEngagements.map((engagement) => {
           const engagementYear = getDateYear(engagement.talks[0].date)
           let dateDisplay
 
@@ -90,7 +117,7 @@ const SpeakingEngagements = ({ data }) => {
           return (
             <Fragment key={engagement.id}>
               {dateDisplay}
-              <Grid key={engagement.id} item xs={12}>
+              <Grid item xs={12}>
                 <SpeakCard {...engagement} />
               </Grid>
             </Fragment>

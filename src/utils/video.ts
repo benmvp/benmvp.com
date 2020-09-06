@@ -32,7 +32,7 @@ const getProviderData = (
 
 export const getVideos = () =>
   getEngagements()
-    .map((engagement): Video | undefined => {
+    .all.map((engagement): Video | undefined => {
       const talkWithVideo = engagement.talks.find(({ links }) =>
         links?.some(({ label }) => label === 'Video'),
       )

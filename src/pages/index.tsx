@@ -16,10 +16,13 @@ import PostCard from '../components/PostCard'
 import VideoCard from '../components/VideoCard'
 import { getUrl } from '../utils'
 import { getVideos } from '../utils/video'
-import { getUpcomingEngagements } from '../utils/speaking-engagement'
+import { getEngagements } from '../utils/speaking-engagement'
 import useMinishops from '../utils/useMinishops'
 
-const UPCOMING_ENGAGEMENTS = getUpcomingEngagements().slice(0, 2)
+const UPCOMING_ENGAGEMENTS = getEngagements()
+  .future.filter(({ isCancelled }) => !isCancelled)
+  .slice(0, 2)
+
 const RECENT_VIDEOS = getVideos().slice(0, 2)
 
 const useStyles = makeStyles((theme) =>
