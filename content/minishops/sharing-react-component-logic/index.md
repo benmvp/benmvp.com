@@ -7,10 +7,6 @@ tags: [react, react hooks, render props, hoc, compound component]
 hero: ./laptop-with-code-safar-safarov-MSN8TFhJ0is-unsplash.jpg
 heroAlt: A laptop with code next to some plants
 heroCredit: 'Photo by [Safar Safarov](https://unsplash.com/@codestorm)'
-event:
-  id: '119762937169'
-  start: 2020-12-03T09:00:00-08:00
-  end: 2020-12-03T12:30:00-08:00
 ---
 
 React's component-driven design simplifies reusing UI because blocks of markup can be encapsulated into custom components. Likewise, sharing traditional data utilities is straightforward because React is “Just JavaScript”™. But what about when we want to **share stateful logic and behavior** between components while letting them control some or all of the UI?
