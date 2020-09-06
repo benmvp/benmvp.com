@@ -1,5 +1,6 @@
 ## Minishops
 
+- [ ] Add tracking links to EB event descriptions
 - [ ] Display past events
 
 ## Speak

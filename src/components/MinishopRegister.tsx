@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import formatDate from 'date-fns-tz/format'
+import { formatUrl } from 'url-lib'
 import {
   makeStyles,
   createStyles,
@@ -10,6 +11,7 @@ import {
 } from '@material-ui/core'
 
 interface Props {
+  id: string
   event: {
     id: string
     start: string
@@ -28,22 +30,25 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
+const MinishopRegister = ({ id, event, isTop = false }: Props) => {
   const classes = useStyles()
   const startDate = Date.parse(event.start)
   const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
   const formattedTime = formatDate(startDate, 'h:mm b z')
-  const buttonId = `eventbrite-checkout-${event.id}-${isTop ? 'top' : 'bottom'}`
+  const eventId = event.id
+  const buttonId = `eventbrite-checkout-${eventId}-${isTop ? 'top' : 'bottom'}`
+
+  console.log(formatUrl('/minishops/thank-you/', { id }))
 
   useEffect(() => {
     const createWidget = () => {
       window.EBWidgets?.createWidget({
         widgetType: 'checkout',
-        eventId: event.id,
+        eventId: eventId,
         modal: true,
         modalTriggerElementId: buttonId,
         onOrderComplete: () => {
-          window.location.assign('/minishops/thank-you/')
+          window.location.assign(formatUrl('/minishops/thank-you/', { id }))
         },
       })
     }
@@ -75,7 +80,7 @@ const MinishopRegister = ({ event, isTop: isTop = false }: Props) => {
         document.body.removeChild(widgetsScript)
       }
     }
-  }, [event, buttonId])
+  }, [eventId, buttonId, id])
 
   return (
     <>

@@ -80,7 +80,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-gtag',
       options: {
         trackingId: SITE_CONFIG.gaTrackingId,
       },

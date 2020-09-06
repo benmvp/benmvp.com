@@ -126,10 +126,10 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
-      {isUpcomingEvent && <MinishopRegister event={event} isTop />}
+      {isUpcomingEvent && <MinishopRegister event={event} id={id} isTop />}
       <Content>{html}</Content>
       <MinishopTestimonials slug={slug} title={title} />
-      {isUpcomingEvent && <MinishopRegister event={event} />}
+      {isUpcomingEvent && <MinishopRegister event={event} id={id} />}
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
@@ -163,7 +163,7 @@ const Minishop = ({ data }) => {
                   width="100%"
                 >
                   <Link href="/minishops/" variant="h6">
-                    View all minishops >
+                    View all minishops &gt;
                   </Link>
                 </Box>
               </Grid>
