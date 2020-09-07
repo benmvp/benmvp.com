@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, FormEvent } from 'react'
 import {
   makeStyles,
   createStyles,
@@ -36,6 +36,15 @@ const useStyles = makeStyles((theme) => {
 const MinishopForm = ({ slug, title }: Props) => {
   const classes = useStyles()
 
+  const trackLead = (e: FormEvent) => {
+    window.gtag?.('event', 'generate_lead', {
+      currency: 'USD',
+      value: 100,
+    })
+
+    e.preventDefault()
+  }
+
   return (
     <Paper component="section" elevation={3} className={classes.root}>
       <Typography variant="h5" component="h1" gutterBottom>
@@ -58,6 +67,7 @@ const MinishopForm = ({ slug, title }: Props) => {
         mt={3}
         name="minishop"
         data-netlify="true"
+        onSubmit={trackLead}
       >
         <TextField
           id="minishop-form-email"
