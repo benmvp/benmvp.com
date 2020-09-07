@@ -12,6 +12,7 @@ import {
 
 interface Props {
   id: string
+  title: string
   event: {
     id: string
     start: string
@@ -30,15 +31,13 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const MinishopRegister = ({ id, event, isTop = false }: Props) => {
+const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
   const classes = useStyles()
   const startDate = Date.parse(event.start)
   const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
   const formattedTime = formatDate(startDate, 'h:mm b z')
   const eventId = event.id
   const buttonId = `eventbrite-checkout-${eventId}-${isTop ? 'top' : 'bottom'}`
-
-  console.log(formatUrl('/minishops/thank-you/', { id }))
 
   useEffect(() => {
     const createWidget = () => {
@@ -48,12 +47,20 @@ const MinishopRegister = ({ id, event, isTop = false }: Props) => {
         modal: true,
         modalTriggerElementId: buttonId,
         onOrderComplete: () => {
-          window.location.assign(formatUrl('/minishops/thank-you/', { id }))
+          window.gtag('event', 'purchase', {
+            transaction_id: `${Date.now()}`,
+            affiliation: 'Ben Ilegbodu Minishops',
+            value: 100,
+            currency: 'USD',
+            items: [{ id: eventId, name: title, quantity: 1, price: 100 }],
+          })
         },
       })
     }
 
-    let widgetsScript = document.getElementById('eb_widgets')
+    let widgetsScript: HTMLScriptElement | null = document.getElementById(
+      'eb_widgets',
+    )
     let added = false
 
     // create the widgets script if it doesn't already exists
@@ -80,7 +87,7 @@ const MinishopRegister = ({ id, event, isTop = false }: Props) => {
         document.body.removeChild(widgetsScript)
       }
     }
-  }, [eventId, buttonId, id])
+  }, [eventId, buttonId, title])
 
   return (
     <>

@@ -126,10 +126,14 @@ const Minishop = ({ data }) => {
           className={classes.image}
         />
       )}
-      {isUpcomingEvent && <MinishopRegister event={event} id={id} isTop />}
+      {isUpcomingEvent && (
+        <MinishopRegister event={event} id={id} title={title} isTop />
+      )}
       <Content>{html}</Content>
       <MinishopTestimonials slug={slug} title={title} />
-      {isUpcomingEvent && <MinishopRegister event={event} id={id} />}
+      {isUpcomingEvent && (
+        <MinishopRegister event={event} id={id} title={title} />
+      )}
       <Box component="footer" className={classes.footer}>
         <Share
           url={url}
