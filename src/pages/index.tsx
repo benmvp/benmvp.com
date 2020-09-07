@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import {
   createStyles,
@@ -39,6 +39,20 @@ const useStyles = makeStyles((theme) =>
 const MinishopCardList = () => {
   const { upcoming, remaining } = useMinishops()
   const minishops = upcoming.length ? upcoming : remaining
+
+  useEffect(() => {
+    if (upcoming.length) {
+      window.gtag?.('event', 'view_item_list', {
+        items: upcoming.map((node, index) => ({
+          id: node.frontmatter.event?.id,
+          name: node.frontmatter.title,
+          list_name: 'Home',
+          list_position: index + 1,
+          price: 100,
+        })),
+      })
+    }
+  }, [upcoming])
 
   return (
     <Grid container spacing={2}>

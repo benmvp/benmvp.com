@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import {
   makeStyles,
@@ -97,6 +97,20 @@ const Post = ({ data }) => {
   const { slug } = fields
   const summary = description || excerpt
   const url = getBlogUrl(slug)
+
+  useEffect(() => {
+    if (upcomingMinishops.length) {
+      window.gtag?.('event', 'view_item_list', {
+        items: upcomingMinishops.map((node, index) => ({
+          id: node.frontmatter.event?.id,
+          name: node.frontmatter.title,
+          list_name: 'Post',
+          list_position: index + 1,
+          price: 100,
+        })),
+      })
+    }
+  }, [upcomingMinishops])
 
   return (
     <Layout>

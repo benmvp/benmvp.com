@@ -47,12 +47,10 @@ const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
         modal: true,
         modalTriggerElementId: buttonId,
         onOrderComplete: () => {
-          window.gtag('event', 'purchase', {
-            transaction_id: `${Date.now()}`,
-            affiliation: 'Ben Ilegbodu Minishops',
+          window.gtag?.('event', 'purchase', {
             value: 100,
             currency: 'USD',
-            items: [{ id: eventId, name: title, quantity: 1, price: 100 }],
+            items: [{ id: eventId, name: title, price: 100 }],
           })
         },
       })
@@ -117,6 +115,20 @@ const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
               color="primary"
               size="large"
               id={buttonId}
+              onClick={() => {
+                window.gtag?.('event', 'add_to_cart', {
+                  value: 100,
+                  currency: 'USD',
+                  items: [
+                    {
+                      id: eventId,
+                      name: title,
+                      list_position: isTop ? 1 : 2,
+                      price: 100,
+                    },
+                  ],
+                })
+              }}
             >
               Register now
             </Button>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import {
   createStyles,
@@ -41,6 +41,20 @@ const Minishops = ({ data }) => {
   const classes = useStyles()
   const { upcoming, remaining } = useMinishops()
   const { hero } = data
+
+  useEffect(() => {
+    if (upcoming.length) {
+      window.gtag?.('event', 'view_item_list', {
+        items: upcoming.map((node, index) => ({
+          id: node.frontmatter.event?.id,
+          name: node.frontmatter.title,
+          list_name: 'Minishops',
+          list_position: index + 1,
+          price: 100,
+        })),
+      })
+    }
+  }, [upcoming])
 
   return (
     <Layout>

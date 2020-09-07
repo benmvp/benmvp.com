@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import {
   makeStyles,
@@ -90,6 +90,20 @@ const NotFound = ({ data }) => {
   const minishops = upcomingMinishops.length
     ? upcomingMinishops
     : remainingMinishops
+
+  useEffect(() => {
+    if (upcomingMinishops.length) {
+      window.gtag?.('event', 'view_item_list', {
+        items: upcomingMinishops.map((node, index) => ({
+          id: node.frontmatter.event?.id,
+          name: node.frontmatter.title,
+          list_name: '404',
+          list_position: index + 1,
+          price: 100,
+        })),
+      })
+    }
+  }, [upcomingMinishops])
 
   return (
     <Layout maxWidth="lg">

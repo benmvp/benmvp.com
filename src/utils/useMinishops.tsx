@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { isFuture } from 'date-fns'
 import type { MinishopCardInfo } from './fragments'
@@ -36,22 +37,24 @@ const useMinishops = (idToFilter?: string) => {
     `,
   )
 
-  return minishops.edges.reduce(
-    ({ upcoming, remaining }, { node }) => {
-      const eventStartDate = node.frontmatter.event?.start
-      const isFutureEvent = eventStartDate
-        ? isFuture(Date.parse(eventStartDate))
-        : false
-      const list = isFutureEvent ? upcoming : remaining
+  return useMemo(() => {
+    return minishops.edges.reduce(
+      ({ upcoming, remaining }, { node }) => {
+        const eventStartDate = node.frontmatter.event?.start
+        const isFutureEvent = eventStartDate
+          ? isFuture(Date.parse(eventStartDate))
+          : false
+        const list = isFutureEvent ? upcoming : remaining
 
-      if (node.id !== idToFilter) {
-        list.push(node)
-      }
+        if (node.id !== idToFilter) {
+          list.push(node)
+        }
 
-      return { upcoming, remaining }
-    },
-    { upcoming: [] as Minishop[], remaining: [] as Minishop[] },
-  )
+        return { upcoming, remaining }
+      },
+      { upcoming: [] as Minishop[], remaining: [] as Minishop[] },
+    )
+  }, [minishops, idToFilter])
 }
 
 export default useMinishops
