@@ -104,6 +104,7 @@ const PostCard = ({
             title={title}
             url={url}
             options={new Set(['twitter', 'facebook', 'pocket'])}
+            type="post"
           />
         </CardActions>
       )}

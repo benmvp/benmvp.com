@@ -33,7 +33,13 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
 
   return (
     <Box component="footer" className={className}>
-      <Share url={url} title={title} summary={summary} tags={tags} />
+      <Share
+        url={url}
+        title={title}
+        summary={summary}
+        tags={tags}
+        type="post"
+      />
       <Divider className={classes.divider} variant="middle" />
       <PostBio />
       <Divider className={classes.divider} variant="middle" />

@@ -109,6 +109,7 @@ const MinishopCard = ({
             title={`${title} Minishop`}
             url={url}
             options={new Set(['twitter', 'facebook', 'linkedin'])}
+            type="minishop"
           />
         </CardActions>
       )}

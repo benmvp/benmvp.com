@@ -48,6 +48,7 @@ interface Props {
   summary: string
   tags?: string[]
   title: string
+  type: 'minishop' | 'post'
   url: string
 }
 
@@ -57,9 +58,18 @@ const Share = ({
   url,
   tags,
   title,
+  type,
   summary,
 }: Props) => {
   const classes = useStyles()
+
+  const handleShare = (method) => {
+    window.gtag?.('event', 'share', {
+      content_type: type,
+      item_id: url,
+      method,
+    })
+  }
 
   return (
     <div>
@@ -72,6 +82,7 @@ const Share = ({
             hashtags={tags || []}
             aria-label="Share on Twitter"
             className={classes.shareButton}
+            onShareWindowClose={() => handleShare('Twitter')}
           >
             <TwitterIcon round size={iconSize} />
           </TwitterShareButton>
@@ -82,6 +93,7 @@ const Share = ({
             quote={`${title} - ${summary}`}
             aria-label="Share on Facebook"
             className={classes.shareButton}
+            onShareWindowClose={() => handleShare('Facebook')}
           >
             <FacebookIcon round size={iconSize} />
             <FacebookShareCount url={url}>
@@ -95,6 +107,7 @@ const Share = ({
             title={title}
             aria-label="Save to Pocket"
             className={classes.shareButton}
+            onShareWindowClose={() => handleShare('Pocket')}
           >
             <PocketIcon round size={iconSize} />
           </PocketShareButton>
@@ -107,6 +120,7 @@ const Share = ({
             source={SITE_CONFIG.siteTitle}
             aria-label="Share on LinkedIn"
             className={classes.shareButton}
+            onShareWindowClose={() => handleShare('LinkedIn')}
           >
             <LinkedinIcon round size={iconSize} />
           </LinkedinShareButton>
@@ -118,6 +132,7 @@ const Share = ({
             body={`Here's an summary:\n\n${summary}`}
             aria-label="Share by email"
             className={classes.shareButton}
+            onShareWindowClose={() => handleShare('Email')}
           >
             <EmailIcon round size={iconSize} />
           </EmailShareButton>

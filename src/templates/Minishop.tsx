@@ -162,6 +162,7 @@ const Minishop = ({ data }) => {
           title={`${fullTitle} by Ben Ilegbodu`}
           summary={summary}
           tags={tags}
+          type="minishop"
         />
         {!isUpcomingEvent && <MinishopForm slug={slug} title={title} />}
         {!!otherMinishops.length && (
