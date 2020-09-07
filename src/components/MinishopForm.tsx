@@ -36,13 +36,16 @@ const useStyles = makeStyles((theme) => {
 const MinishopForm = ({ slug, title }: Props) => {
   const classes = useStyles()
 
-  const trackLead = (e: FormEvent) => {
-    window.gtag?.('event', 'generate_lead', {
-      currency: 'USD',
-      value: 100,
-    })
-
-    e.preventDefault()
+  const trackLead = () => {
+    // Use a setTimeout w/o a preventDefault to allow
+    // the netlify handler to do its thing while we
+    // track the lead
+    setTimeout(() => {
+      window.gtag?.('event', 'generate_lead', {
+        currency: 'USD',
+        value: 100,
+      })
+    }, 100)
   }
 
   return (
