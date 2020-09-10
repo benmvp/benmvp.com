@@ -54,7 +54,7 @@
       {
         "id": "perfect-lib",
         "date": "10/19/2020",
-        "time": "10:30a"
+        "time": "10:30a PDT"
       }
     ]
   },
@@ -66,7 +66,7 @@
       {
         "title": "Migrating to React Hooks Minishop",
         "date": "10/13/2020",
-        "time": "9a"
+        "time": "9a PDT"
       },
       {
         "id": "typescript-react",
@@ -93,7 +93,7 @@
       {
         "title": "Power up React with TypeScript",
         "date": "09/17/2020",
-        "time": "9:30a"
+        "time": "9:30a PDT"
       }
     ]
   },
@@ -104,7 +104,8 @@
     "talks": [
       {
         "id": "perfect-lib",
-        "date": "09/15/2020"
+        "date": "09/15/2020",
+        "time": "5:20p PDT"
       }
     ]
   },
@@ -116,7 +117,7 @@
       {
         "title": "JDHH with special guest Ben Ilegbodu",
         "date": "07/18/2020",
-        "time": "12p",
+        "time": "12p PDT",
         "links": [
           {
             "label": "Video",
@@ -147,7 +148,7 @@
       {
         "title": "#BlackLivesMatter #MetaTalk w/ Pariss & Ben",
         "date": "06/09/2020",
-        "time": "10a",
+        "time": "10a PDT",
         "links": [
           {
             "label": "Video",
@@ -165,7 +166,7 @@
       {
         "id": "react-workshop-hooks",
         "date": "03/30/2020",
-        "time": "9a",
+        "time": "9a PST",
         "links": [
           {
             "label": "Workshop code",
