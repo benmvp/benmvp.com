@@ -70,6 +70,7 @@ yarn-error.log
 .idea/
 .vscode
 
-# Auto-generated TypeScript types for your GraphQL queries
+# Auto-generated TypeScript/GraphQL
 schema.json
 *.d.ts
+apollo.config.js

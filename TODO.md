@@ -1,6 +1,7 @@
 ## Minishops
 
 - [ ] Display past events
+- [ ] Minishops w/o testimonials are marked NEW!
 
 ## Site improvements
 

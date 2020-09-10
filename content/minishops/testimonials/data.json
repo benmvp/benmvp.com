@@ -82,6 +82,16 @@
       "message": "The material was presented clearly and in a great detailed fashion. The examples and exercises were very good and engaging ways to apply what we'd just learned... You've created a great resource with which to learn modern React concepts, and I intend to continue referencing and practicing the lessons in the repository in the forthcoming while.",
       "name": "Dennis",
       "image": "https://media-exp1.licdn.com/dms/image/C4E03AQHRObtCvrgUiQ/profile-displayphoto-shrink_800_800/0?e=1601510400&v=beta&t=D9WDR9bskwWD536R06hWEbvihXtBSk8qd6QrhXxkg-0"
+    },
+    {
+      "date": "08/20/2020",
+      "message": "Everything was great! Very engaging – I've had trouble following some other tutorials and videos, but your content is very well structured, well explained, and the code was a great size for reading on screen. I also liked the stretch-goals, keeps things interesting when devs are \"in the flow\" and get through the initial task quickly.",
+      "name": "Phillip"
+    },
+    {
+      "date": "08/20/2020",
+      "message": "Excellent job. I felt like the 3hr class was the right pace for me didn't zone out at all. I have been totally lost in other React Training's. Definitely the right pace for someone new to React",
+      "name": "Timothy"
     }
   ]
 }
