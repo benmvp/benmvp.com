@@ -86,6 +86,18 @@
     ]
   },
   {
+    "name": "ui.dev Events",
+    "url": "https://ui.dev/events/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "typescript-react",
+        "date": "10/1/2020",
+        "time": "11:00a PDT"
+      }
+    ]
+  },
+  {
     "name": "Learn With Jason",
     "url": "https://www.learnwithjason.dev/",
     "location": "Remote",
