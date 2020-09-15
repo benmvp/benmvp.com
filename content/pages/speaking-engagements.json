@@ -111,14 +111,20 @@
     ]
   },
   {
-    "name": "React Global Online Summit",
+    "name": "React Global Online Summit 2020",
     "url": "https://react.geekle.us/",
     "location": "Remote",
     "talks": [
       {
         "id": "perfect-lib",
         "date": "09/15/2020",
-        "time": "5:20p PDT"
+        "time": "5:20p PDT",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2020/reactglobal/perfect-lib.html"
+          }
+        ]
       }
     ]
   },
