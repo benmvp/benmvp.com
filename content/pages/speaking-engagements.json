@@ -100,6 +100,7 @@
   {
     "name": "Learn With Jason",
     "url": "https://www.learnwithjason.dev/",
+    "isCancelled": true,
     "location": "Remote",
     "talks": [
       {
