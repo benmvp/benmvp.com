@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatUrl } from 'url-lib'
 import { makeStyles, createStyles } from '@material-ui/core'
 import {
   FacebookShareButton,
@@ -62,6 +63,10 @@ const Share = ({
   summary,
 }: Props) => {
   const classes = useStyles()
+  const socialUrl = formatUrl(url, {
+    utm_medium: 'social',
+    utm_campaign: 'share',
+  })
 
   const handleShare = (method) => {
     window.gtag?.('event', 'share', {
@@ -76,7 +81,7 @@ const Share = ({
       <div className={classes.links}>
         {options.has('twitter') && (
           <TwitterShareButton
-            url={url}
+            url={formatUrl(socialUrl, { utm_source: 'twitter' })}
             title={title}
             via={SITE_CONFIG.twitterHandle}
             hashtags={tags || []}
@@ -89,7 +94,7 @@ const Share = ({
         )}
         {options.has('facebook') && (
           <FacebookShareButton
-            url={url}
+            url={formatUrl(socialUrl, { utm_source: 'facebook' })}
             quote={`${title} - ${summary}`}
             aria-label="Share on Facebook"
             className={classes.shareButton}
@@ -103,7 +108,7 @@ const Share = ({
         )}
         {options.has('pocket') && (
           <PocketShareButton
-            url={url}
+            url={formatUrl(socialUrl, { utm_source: 'pocket' })}
             title={title}
             aria-label="Save to Pocket"
             className={classes.shareButton}
@@ -114,7 +119,7 @@ const Share = ({
         )}
         {options.has('linkedin') && (
           <LinkedinShareButton
-            url={url}
+            url={formatUrl(socialUrl, { utm_source: 'linkedin' })}
             title={title}
             summary={summary}
             source={SITE_CONFIG.siteTitle}
@@ -127,7 +132,7 @@ const Share = ({
         )}
         {options.has('email') && (
           <EmailShareButton
-            url={url}
+            url={formatUrl(socialUrl, { utm_source: 'email' })}
             subject={`Check out "${title}"`}
             body={`Here's an summary:\n\n${summary}`}
             aria-label="Share by email"
