@@ -81,7 +81,25 @@
     "talks": [
       {
         "id": "typescript-react",
-        "date": "10/9/2020"
+        "date": "10/9/2020",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2020/tsconf/react.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Learn With Jason",
+    "url": "https://www.learnwithjason.dev/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Power up React with TypeScript",
+        "date": "10/8/2020",
+        "time": "9:30a PDT"
       }
     ]
   },
@@ -94,19 +112,6 @@
         "id": "typescript-react",
         "date": "10/1/2020",
         "time": "11:00a PDT"
-      }
-    ]
-  },
-  {
-    "name": "Learn With Jason",
-    "url": "https://www.learnwithjason.dev/",
-    "isCancelled": true,
-    "location": "Remote",
-    "talks": [
-      {
-        "title": "Power up React with TypeScript",
-        "date": "09/17/2020",
-        "time": "9:30a PDT"
       }
     ]
   },
