@@ -47,6 +47,17 @@
     ]
   },
   {
+    "name": "QCon Plus 2020",
+    "url": "https://plus.qconferences.com/plus2020/track/clientside-wasm-browser-applications",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "mixins-to-hooks",
+        "date": "11/5/2020"
+      }
+    ]
+  },
+  {
     "name": "All Things Open 2020",
     "url": "https://2020.allthingsopen.org/",
     "location": "Remote",

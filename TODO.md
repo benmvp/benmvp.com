@@ -3,6 +3,10 @@
 - [ ] Display past events
 - [ ] Minishops w/o testimonials are marked NEW!
 
+## Blog Posts
+
+- [ ] Advanced TS prop patterns (1 each from slides)
+
 ## Site improvements
 
 - [ ] Add new logo
