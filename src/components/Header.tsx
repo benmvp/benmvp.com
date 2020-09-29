@@ -133,7 +133,7 @@ const Header = () => {
           title
         }
       }
-      logo: file(relativePath: { eq: "ben-ilegbodu-logo.jpg" }) {
+      logo: file(relativePath: { eq: "benmvp-logo.png" }) {
         childImageSharp {
           fixed(width: 60, height: 60) {
             ...GatsbyImageSharpFixed

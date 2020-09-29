@@ -37,7 +37,7 @@ module.exports = {
   manifestBackgroundColor: THEME.palette.background.default,
   manifestThemeColor: THEME.palette.primary.main,
   manifestDisplay: 'standalone',
-  manifestIcon: 'static/icons/icon-512x512.png',
+  manifestIcon: 'static/icons/benmvp-logo.png',
 
   // social
   twitterHandle: 'benmvp',
