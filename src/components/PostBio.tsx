@@ -9,8 +9,8 @@ const useStyles = makeStyles({
   },
   avatar: {
     borderRadius: '50%',
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 80,
     margin: '0 auto',
   },
 })
@@ -27,9 +27,9 @@ const PostBio = () => {
           }
         }
       }
-      logo: file(relativePath: { eq: "ben-ilegbodu-logo.jpg" }) {
+      logo: file(relativePath: { eq: "benmvp-logo.png" }) {
         childImageSharp {
-          fixed(width: 60, height: 60) {
+          fixed(width: 80, height: 80) {
             ...GatsbyImageSharpFixed
           }
         }
