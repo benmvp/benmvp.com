@@ -9,7 +9,6 @@
 
 ## Site improvements
 
-- [ ] Add new logo
 - [ ] Auto generate social images (https://www.learnwithjason.dev/blog/auto-generate-social-image/)
   - Use new logo as part of the template
 - [ ] Add Error Boundary
