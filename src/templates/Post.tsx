@@ -17,6 +17,7 @@ import PostFooter from '../components/PostFooter'
 import MinishopCard from '../components/MinishopCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
+import generateSocialImage from '../utils/generate-social-image'
 import useMinishops, { Minishop } from '../utils/useMinishops'
 
 const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
@@ -97,6 +98,12 @@ const Post = ({ data }) => {
   const { slug } = fields
   const summary = description || excerpt
   const url = getBlogUrl(slug)
+  const seoImageUrl = generateSocialImage({
+    title,
+    tagline: tags.join(' '),
+  })
+
+  console.log(seoImageUrl)
 
   useEffect(() => {
     if (upcomingMinishops.length) {
