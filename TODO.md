@@ -9,8 +9,6 @@
 
 ## Site improvements
 
-- [ ] Auto generate social images (https://www.learnwithjason.dev/blog/auto-generate-social-image/)
-  - Use new logo as part of the template
 - [ ] Add Error Boundary
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
