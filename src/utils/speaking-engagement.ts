@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { isFuture, isPast, differenceInMilliseconds } from 'date-fns'
+import { isFuture, isPast, differenceInMilliseconds, addDays } from 'date-fns'
 import { formatDate } from '.'
 import { getTalk, Talk } from './talk'
 
@@ -44,11 +44,11 @@ export const getEngagements = () => {
   )
   const future = all
     .filter(({ talks }) =>
-      talks?.some(({ date }) => isFuture(Date.parse(date))),
+      talks?.some(({ date }) => isFuture(addDays(Date.parse(date), 1))),
     )
     .reverse()
   const past = all.filter(({ talks }) =>
-    talks?.some(({ date }) => isPast(Date.parse(date))),
+    talks?.some(({ date }) => isPast(addDays(Date.parse(date), 1))),
   )
 
   return { all, future, past }
