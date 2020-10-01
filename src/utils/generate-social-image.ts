@@ -1,6 +1,6 @@
 interface Config {
   title: string
-  tagline: string
+  tagline?: string
   imagePublicID?: string
   cloudName?: string
   version?: string | null
@@ -20,19 +20,19 @@ interface Config {
 const generateSocialImage = ({
   title,
   tagline,
-  imagePublicID = 'benmvp/blog-post-template',
-  version = 'v1601356888',
+  imagePublicID = 'benmvp/blog-post-template_xz3hus',
+  version = 'v1601530635',
   titleFont = 'roboto',
-  taglineFont = 'roboto%20condensed',
+  taglineFont = 'roboto',
   imageWidth = 1280,
   imageHeight = 669,
-  textAreaWidth = 660,
-  textLeftOffset = 580,
-  titleBottomOffset = 254,
-  taglineTopOffset = 445,
+  textAreaWidth = 666,
+  textLeftOffset = 550,
+  titleBottomOffset = 327,
+  taglineTopOffset = 370,
   textColor = 'ffffff',
-  titleFontSize = 64,
-  taglineFontSize = 48,
+  titleFontSize = 70,
+  taglineFontSize = 40,
 }: Config): string => {
   // configure social media image dimensions, quality, and format
   const imageConfig = [
@@ -51,19 +51,25 @@ const generateSocialImage = ({
     'g_south_west',
     `x_${textLeftOffset}`,
     `y_${titleBottomOffset}`,
-    `l_text:${titleFont}_${titleFontSize}:${encodeURIComponent(title)}`,
+    `l_text:${encodeURIComponent(
+      titleFont,
+    )}_${titleFontSize}_bold:${encodeURIComponent(title)}`,
   ].join(',')
 
   // configure the tagline text
-  const taglineConfig = [
-    `w_${textAreaWidth}`,
-    'c_fit',
-    `co_rgb:${textColor}`,
-    'g_north_west',
-    `x_${textLeftOffset}`,
-    `y_${taglineTopOffset}`,
-    `l_text:${taglineFont}_${taglineFontSize}:${encodeURIComponent(tagline)}`,
-  ].join(',')
+  const taglineConfig = tagline
+    ? [
+        `w_${textAreaWidth}`,
+        'c_fit',
+        `co_rgb:${textColor}`,
+        'g_north_west',
+        `x_${textLeftOffset}`,
+        `y_${taglineTopOffset}`,
+        `l_text:${encodeURIComponent(
+          taglineFont,
+        )}_${taglineFontSize}_light:${encodeURIComponent(tagline)}`,
+      ].join(',')
+    : ''
 
   // combine all the pieces required to generate a Cloudinary URL
   const urlParts = [

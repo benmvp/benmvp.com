@@ -100,10 +100,8 @@ const Post = ({ data }) => {
   const url = getBlogUrl(slug)
   const seoImageUrl = generateSocialImage({
     title,
-    tagline: tags.join(' '),
+    tagline: description || subTitle,
   })
-
-  console.log(seoImageUrl)
 
   useEffect(() => {
     if (upcomingMinishops.length) {
@@ -125,8 +123,8 @@ const Post = ({ data }) => {
         title={title}
         description={summary}
         url={url}
-        image={hero?.childImageSharp?.fluid?.src}
-        imageAlt={heroAlt}
+        image={seoImageUrl}
+        imageAlt={title}
         type="article"
         meta={[
           { property: 'og:article:published_time', content: dateIso },

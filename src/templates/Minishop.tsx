@@ -20,6 +20,7 @@ import Share from '../components/Share'
 import MinishopCard from '../components/MinishopCard'
 import MinishopTestimonials from '../components/MinishopTestimonials'
 import { getUrl, getMinishopUrl } from '../utils'
+import generateSocialImage from '../utils/generate-social-image'
 import useMinishops from '../utils/useMinishops'
 
 const useStyles = makeStyles((theme) =>
@@ -68,6 +69,10 @@ const Minishop = ({ data }) => {
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
   const summary = subTitle || excerpt
+  const seoImageUrl = generateSocialImage({
+    title: fullTitle,
+    tagline: subTitle,
+  })
   const isUpcomingEvent = event?.start
     ? isFuture(Date.parse(event.start))
     : false
@@ -100,8 +105,8 @@ const Minishop = ({ data }) => {
         title={`${fullTitle}/Workshop`}
         url={url}
         description={summary}
-        image={hero?.childImageSharp?.fluid?.src}
-        imageAlt={heroAlt}
+        image={seoImageUrl}
+        imageAlt={fullTitle}
         type="events.event"
         meta={[
           ...(event
