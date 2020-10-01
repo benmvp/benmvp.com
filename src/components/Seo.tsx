@@ -55,9 +55,10 @@ const Seo = ({
 
   const htmlLang = lang || site.siteMetadata.lang
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = `${site.siteMetadata.siteUrl}${
-    image || site.siteMetadata.image
-  }`
+  const metaImage = image || site.siteMetadata.image
+  const metaImageFull = metaImage.startsWith('http')
+    ? metaImage
+    : `${site.siteMetadata.siteUrl}${metaImage}`
   const siteTitle = site.siteMetadata.title
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
   const keywords = site.siteMetadata.keywords.join(' ')
@@ -72,7 +73,7 @@ const Seo = ({
     description: metaDescription,
     image: {
       '@type': 'ImageObject',
-      url: metaImage,
+      url: metaImageFull,
     },
     keywords,
     ...schemaOrg,
@@ -86,7 +87,7 @@ const Seo = ({
       {/* General tags */}
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
-      <meta name="image" content={metaImage} />
+      <meta name="image" content={metaImageFull} />
       <link rel="canonical" href={url} />
 
       {/* OpenGraph tags */}
@@ -95,7 +96,7 @@ const Seo = ({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={metaImage} />
+      <meta property="og:image" content={metaImageFull} />
       <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:locale" content="en_US" />
 
@@ -111,7 +112,7 @@ const Seo = ({
       />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={metaImage} />
+      <meta name="twitter:image" content={metaImageFull} />
       <meta name="twitter:image:alt" content={imageAlt} />
 
       {/* Additional tags */}
