@@ -14,9 +14,10 @@ published: false
   - almost never want that functionality
   - so can pass dependencies array to run on changes
   - no real concept of "on mount" w/ hooks cuz there are no lifecycle methods
-- But some times you have helper functions that are being called
-  - defined as inner functions w/in the component
-  - seems weird to add those, but it's important
+- But sometimes you have helper functions that are being called
+  - defined as inner functions w/in the component when they depends on props and/or state
+  - seems weird to add those as, but it's important to avoid stale props/state
+    - the `exhaustive-deps` eslint rule from `eslint-plugin-react-hooks` tells you that you need it
   - several fixes:
     - don't use a helper function and move all the code w/in (if only being used once)
     - move the function w/in the `useEffect` and set its scope props as dependencies (if only being used once)
@@ -28,6 +29,7 @@ published: false
   - several fixes:
     - serialize the object in dependencies list
     - create variables outside of `useEffect` of the object properties you need & use those in dependencies list
+    - use [`useDeepCompareEffect`](https://github.com/streamich/react-use/blob/master/docs/useDeepCompareEffect.md), [`useShallowCompareEffect`](https://github.com/streamich/react-use/blob/master/docs/useShallowCompareEffect.md) or [`useCustomCompareEffect`](https://github.com/streamich/react-use/blob/master/docs/useCustomCompareEffect.md) custom hooks from `react-use`
 - There are a list of hooks in `react-use` to simulate lifecycle methods if you really miss them
 
 Keep learning my friends. 🤓

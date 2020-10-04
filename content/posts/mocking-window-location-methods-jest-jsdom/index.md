@@ -7,7 +7,6 @@ tags: [mock, react]
 hero: ./compass-jordan-madrid-iDzKdNI7Qgc-unsplash.jpg
 heroAlt: Compass on a window sill
 heroCredit: 'Photo by [Jordan Madrid](https://unsplash.com/@jordanmadrid)'
-published: true
 ---
 
 Well it looks like I'm going to continue my streak about sharing helpful tips around JavaScript testing in [Jest](https://jestjs.io/en/). Previously I shared about avoiding gotchas while [testing async JavaScript code](/blog/quick-trick-jest-asynchronous-tests/) and specifically how to [write tests for async React components](/blog/asynchronous-testing-with-enzyme-react-jest/) in Jest.

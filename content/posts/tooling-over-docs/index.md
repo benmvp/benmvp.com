@@ -14,6 +14,7 @@ published: false
   - MDN docs
   - `semantic-release` docs
   - React docs
+  - Storybook migration docs
 - Written thousands of lines of docs outlining best practices over the years at companies
   - Newcomers or casual devs want best practices docs to help them do the right thing **before** PRs
   - They also don't wanna spend countless hours trying to figure out how to do the right thing
