@@ -29,7 +29,7 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
           slug={minishop.fields.slug}
           title={minishop.frontmatter.title}
           tags={minishop.frontmatter.tags}
-          summary={minishop.frontmatter.subTitle || minishop.excerpt}
+          summary={minishop.frontmatter.shortDescription || minishop.excerpt}
           event={minishop.frontmatter.event}
         />
       </Grid>
@@ -85,10 +85,9 @@ const Post = ({ data }) => {
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const {
     title,
-    subTitle,
     date,
     dateIso,
-    description,
+    shortDescription,
     tags,
     category,
     hero,
@@ -96,11 +95,11 @@ const Post = ({ data }) => {
     heroCredit,
   } = frontmatter
   const { slug } = fields
-  const summary = description || excerpt
+  const summary = shortDescription || excerpt
   const url = getBlogUrl(slug)
   const seoImageUrl = generateSocialImage({
     title,
-    tagline: description || subTitle,
+    tagline: shortDescription,
   })
 
   useEffect(() => {
@@ -140,7 +139,7 @@ const Post = ({ data }) => {
         ]}
         schemaOrg={{
           '@type': 'BlogPosting',
-          headline: subTitle,
+          headline: shortDescription,
           articleBody: html,
           author: {
             '@type': 'Person',
@@ -159,7 +158,7 @@ const Post = ({ data }) => {
       <PostHeader
         className={classes.header}
         title={title}
-        subTitle={subTitle}
+        subTitle={shortDescription}
         timeToRead={timeToRead}
         date={date}
       />
@@ -215,8 +214,7 @@ export const query = graphql`
       }
       frontmatter {
         title
-        subTitle
-        description
+        shortDescription
         tags
         category
         date(formatString: "DD MMMM YYYY")

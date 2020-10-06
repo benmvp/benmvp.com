@@ -1,7 +1,7 @@
 ---
 date: 2020-06-11
 title: React Prop Types with TypeScript
-description: A guide comparing React Prop Types to their equivalent TypeScript definitions
+shortDescription: A guide comparing React Prop Types to their equivalent TypeScript definitions
 category: react
 tags: [react, typescript, props]
 hero: ./mixing-console-abigail-keenan-QdEn9s5Q_4w-unsplash.jpg

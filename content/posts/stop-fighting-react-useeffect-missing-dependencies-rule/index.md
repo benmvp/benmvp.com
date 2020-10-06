@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
 title: Stop fighting against the React useEffect missing dependencies rule
-description: How to deal with helper functions listed as useEffect dependencies
+shortDescription: How to deal with helper functions listed as useEffect dependencies
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg

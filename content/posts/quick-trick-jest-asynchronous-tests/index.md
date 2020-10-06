@@ -1,7 +1,7 @@
 ---
 date: 2020-07-29
 title: A quick trick for Jest asynchronous tests
-description: A small configuration you can add to Jest to reduce false positives for async tests
+shortDescription: A small configuration you can add to Jest to reduce false positives for async tests
 category: testing
 tags: [async, await, promises]
 hero: ./joker-card-toni-reed-VupdxmowTDg-unsplash.jpg

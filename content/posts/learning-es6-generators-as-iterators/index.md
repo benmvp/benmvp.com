@@ -1,7 +1,6 @@
 ---
 date: 2016-01-13
 title: Generators as iterators
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags:
   [

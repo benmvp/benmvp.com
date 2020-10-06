@@ -63,7 +63,7 @@ const MinishopCardList = () => {
             slug={node.fields.slug}
             title={node.frontmatter.title}
             tags={node.frontmatter.tags}
-            summary={node.frontmatter.subTitle || node.excerpt}
+            summary={node.frontmatter.shortDescription || node.excerpt}
             event={node.frontmatter.event}
           />
         </Grid>
@@ -114,7 +114,7 @@ const PostCardList = ({ posts }) => (
           title={node.frontmatter.title}
           tags={node.frontmatter.tags}
           date={node.frontmatter.date}
-          summary={node.frontmatter.description || node.excerpt}
+          summary={node.frontmatter.shortDescription || node.excerpt}
           hero={node.frontmatter.hero}
         />
       </Grid>

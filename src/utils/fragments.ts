@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 export interface MinishopCardInfo {
   frontmatter: {
     title: string
-    subTitle?: string
+    shortDescription?: string
     category: string
     tags: string[]
     event?: {
@@ -21,7 +21,7 @@ export const fragments = graphql`
   fragment MinishopCardInfo on MarkdownRemark {
     frontmatter {
       title
-      subTitle
+      shortDescription
       category
       tags
       event {
@@ -38,7 +38,7 @@ export const fragments = graphql`
   fragment PostCardInfo on MarkdownRemark {
     frontmatter {
       title
-      description
+      shortDescription
       tags
       date(formatString: "DD MMMM YYYY")
       hero {

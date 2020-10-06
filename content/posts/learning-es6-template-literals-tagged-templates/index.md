@@ -1,7 +1,6 @@
 ---
 date: 2015-09-17
 title: Template literals & tagged templates
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags:
   [

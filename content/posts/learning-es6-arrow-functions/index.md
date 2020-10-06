@@ -1,7 +1,6 @@
 ---
 date: 2015-08-23
 title: Arrow functions
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, arrow-functions, fat-arrow]
 hero: ./sign-arrow-right.jpg

@@ -1,7 +1,7 @@
 ---
 date: 2020-06-05
 title: Integrating Bugsnag into GatsbyJS and Netlify
-description: Code snippets on how to hook up Bugsnag into a Gatsby app and enrich the integration through Netlify
+shortDescription: Code snippets on how to hook up Bugsnag into a Gatsby app and enrich the integration through Netlify
 category: divops
 tags: [react, gatsby, netlify]
 hero: ./dung-beetle-paulo-ziemer-oV3zTK7vuP0-unsplash.jpg

@@ -1,7 +1,7 @@
 ---
 date: 2020-07-15
 title: Asynchronous testing with Enzyme & React in Jest
-description: How to use Enzyme to test UI updates after asynchronous events in React components
+shortDescription: How to use Enzyme to test UI updates after asynchronous events in React components
 category: testing
 tags: [react, async, enzyme, react-testing-library]
 hero: ./wait-sign-kai-pilger-1k3vsv7iIIc-unsplash.jpeg

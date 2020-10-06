@@ -1,7 +1,6 @@
 ---
 date: 2015-09-02
 title: Destructuring
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, destructuring]
 hero: ./pass-baton.jpg

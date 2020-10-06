@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
 title: Picking the right React pattern
-description: Advice on how to choose between hooks, render props, compound components and other React patterns
+shortDescription: Advice on how to choose between hooks, render props, compound components and other React patterns
 category: react
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg

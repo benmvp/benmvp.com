@@ -1,7 +1,7 @@
 ---
 date: 2020-10-03
 title: Four characters can optimize your React component
-description: How making use of useState lazy initialization can speed up your React function component
+shortDescription: How making use of useState lazy initialization can speed up your React function component
 category: react
 tags: [react, hooks, useState, performance]
 hero: ./light-speed-marc-sendra-martorell--Vqn2WrfxTQ-unsplash.jpg

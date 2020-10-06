@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
 title: Template
-# description: Some reasons why I choose React Testing Library over Enzyme for testing React components
+# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg

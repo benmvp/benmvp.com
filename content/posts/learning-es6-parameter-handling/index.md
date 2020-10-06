@@ -1,7 +1,6 @@
 ---
 date: 2015-09-11
 title: Parameter handling
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags:
   [

@@ -1,7 +1,7 @@
 ---
 date: 2020-04-29
 title: New Gatsby site!
-description: Why I decided to redesign benmvp.com from being a blog site to being a site that contains a blog
+shortDescription: Why I decided to redesign benmvp.com from being a blog site to being a site that contains a blog
 category: general
 tags: [gatsby, performance, website]
 hero: ./benmvp-masthead.png

@@ -1,6 +1,6 @@
 ---
 title: TypeScript for React Developers
-subTitle: Learn how to use strong types with TypeScript in React applications to prevent common bugs that infect our apps
+shortDescription: Learn how to use strong types with TypeScript in React applications to prevent common bugs that infect our apps
 category: react
 level: intermediate
 tags: [react, typescript, hooks, generics]

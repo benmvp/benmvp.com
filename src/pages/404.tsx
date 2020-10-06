@@ -28,7 +28,7 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
           slug={minishop.fields.slug}
           title={minishop.frontmatter.title}
           tags={minishop.frontmatter.tags}
-          summary={minishop.frontmatter.subTitle || minishop.excerpt}
+          summary={minishop.frontmatter.shortDescription || minishop.excerpt}
           event={minishop.frontmatter.event}
         />
       </Grid>
@@ -55,7 +55,7 @@ const PostCardList = ({ posts }) => (
           title={node.frontmatter.title}
           tags={node.frontmatter.tags}
           date={node.frontmatter.date}
-          summary={node.frontmatter.description || node.excerpt}
+          summary={node.frontmatter.shortDescription || node.excerpt}
           hero={node.frontmatter.hero}
         />
       </Grid>
