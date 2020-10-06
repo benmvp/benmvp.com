@@ -9,6 +9,8 @@ heroAlt: 'Ben Ilegbodu @ Front Porch Austin 2016 Closeup'
 
 Back in July I was invited to speak at [Front Porch Austin 2016](http://frontporch.io/austin/) and gave a talk called "React + ES.next = ♥". The main Front Porch conference actually takes place in [Dallas](http://frontporch.io/dallas/) in October, but they decided to launch a new conference in July to which I was invited!
 
+![Ben Ilegbodu @ Front Porch Austin 2016 Close-up shot](front-porch-austin-closeup.jpg)
+
 It was really nice to be able to speak back in my home state. I _really_ want to speak in my home city (Houston), but this was awfully close. So close, in fact, that my mom and sister made the 3-hour drive from Houston to Austin to visit and watch me speak for the very first time. I was speaking about React & ES.next so they literally had no idea what I was talking about, but they were proud nonetheless!
 
 ![Ben Ilegbodu @ Front Porch Austin 2016 Side Shot](front-porch-austin-side.jpg)

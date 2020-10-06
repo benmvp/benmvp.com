@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import formatDate from 'date-fns-tz/format'
-import { formatUrl } from 'url-lib'
 import {
   makeStyles,
   createStyles,

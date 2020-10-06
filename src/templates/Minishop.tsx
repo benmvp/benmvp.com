@@ -11,7 +11,6 @@ import {
 import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
-import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import Seo from '../components/Seo'
 import MinishopRegister from '../components/MinishopRegister'
@@ -27,9 +26,6 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     header: {
       marginBottom: theme.spacing(5),
-    },
-    image: {
-      marginBottom: theme.spacing(3),
     },
     footer: {
       marginTop: theme.spacing(5),
@@ -47,17 +43,7 @@ const Minishop = ({ data }) => {
   const classes = useStyles()
   const { minishop, site } = data
   const { id, html, excerpt, frontmatter, fields } = minishop
-  const {
-    title,
-    shortDescription,
-    category,
-    level,
-    tags,
-    hero,
-    heroAlt,
-    heroCredit,
-    event,
-  } = frontmatter
+  const { title, shortDescription, category, level, tags, event } = frontmatter
   const { slug } = fields
   const {
     upcoming: upcomingMinishops,
@@ -145,14 +131,6 @@ const Minishop = ({ data }) => {
         title={fullTitle}
         subTitle={shortDescription}
       />
-      {hero && (
-        <HeroImage
-          fluid={hero.childImageSharp.fluid}
-          alt={heroAlt}
-          credit={heroCredit}
-          className={classes.image}
-        />
-      )}
       {isUpcomingEvent && (
         <MinishopRegister event={event} id={id} title={title} isTop />
       )}
@@ -224,11 +202,6 @@ export const query = graphql`
         category
         level
         tags
-        hero {
-          ...HeroFluid960
-        }
-        heroAlt
-        heroCredit
         event {
           id
           start
