@@ -1,7 +1,6 @@
 ---
 date: 2015-07-29
 title: History of ECMAScript
-subTitle: The Learning ES6 Series
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, history]
 hero: ./ecmascript-logo.png

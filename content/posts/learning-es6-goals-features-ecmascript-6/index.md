@@ -1,7 +1,6 @@
 ---
 date: 2015-08-01
 title: Goals & Features of ECMAScript 6
-subTitle: The Learning ES6 Series
 author: Ben Ilegbodu
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6]
