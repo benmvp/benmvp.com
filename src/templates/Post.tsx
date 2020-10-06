@@ -11,7 +11,6 @@ import {
 import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
-import HeroImage from '../components/HeroImage'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
 import MinishopCard from '../components/MinishopCard'
@@ -53,9 +52,6 @@ const useStyles = makeStyles((theme) =>
     header: {
       marginBottom: theme.spacing(5),
     },
-    image: {
-      marginBottom: theme.spacing(3),
-    },
     footer: {
       marginTop: theme.spacing(3),
     },
@@ -83,17 +79,7 @@ const Post = ({ data }) => {
     : remainingMinishops
   const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
-  const {
-    title,
-    date,
-    dateIso,
-    shortDescription,
-    tags,
-    category,
-    hero,
-    heroAlt,
-    heroCredit,
-  } = frontmatter
+  const { title, date, dateIso, shortDescription, tags, category } = frontmatter
   const { slug } = fields
   const summary = shortDescription || excerpt
   const url = getBlogUrl(slug)
@@ -162,14 +148,6 @@ const Post = ({ data }) => {
         timeToRead={timeToRead}
         date={date}
       />
-      {hero && (
-        <HeroImage
-          fluid={hero.childImageSharp.fluid}
-          alt={heroAlt}
-          credit={heroCredit}
-          className={classes.image}
-        />
-      )}
       <Content>{html}</Content>
       <PostFooter
         className={classes.footer}
@@ -219,11 +197,6 @@ export const query = graphql`
         category
         date(formatString: "DD MMMM YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")
-        hero {
-          ...HeroFluid960
-        }
-        heroAlt
-        heroCredit
       }
     }
     site {
