@@ -79,14 +79,7 @@ const Post = ({ data }) => {
     : remainingMinishops
   const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
-  const {
-    title,
-    date,
-    dateIso,
-    shortDescription,
-    tags,
-    category,
-  } = frontmatter
+  const { title, date, dateIso, shortDescription, tags, category } = frontmatter
   const { slug } = fields
   const summary = shortDescription || excerpt
   const url = getBlogUrl(slug)
