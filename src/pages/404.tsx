@@ -28,7 +28,7 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
           slug={minishop.fields.slug}
           title={minishop.frontmatter.title}
           tags={minishop.frontmatter.tags}
-          summary={minishop.frontmatter.subTitle || minishop.excerpt}
+          summary={minishop.frontmatter.shortDescription || minishop.excerpt}
           event={minishop.frontmatter.event}
         />
       </Grid>

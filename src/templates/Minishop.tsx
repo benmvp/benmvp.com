@@ -49,7 +49,7 @@ const Minishop = ({ data }) => {
   const { id, html, excerpt, frontmatter, fields } = minishop
   const {
     title,
-    subTitle,
+    shortDescription,
     category,
     level,
     tags,
@@ -68,10 +68,10 @@ const Minishop = ({ data }) => {
     : remainingMinishops
   const url = getMinishopUrl(slug)
   const fullTitle = `${title} Minishop`
-  const summary = subTitle || excerpt
+  const summary = shortDescription || excerpt
   const seoImageUrl = generateSocialImage({
     title: fullTitle,
-    tagline: subTitle,
+    tagline: shortDescription,
   })
   const isUpcomingEvent = event?.start
     ? isFuture(Date.parse(event.start))
@@ -143,7 +143,7 @@ const Minishop = ({ data }) => {
       <PageHeader
         className={classes.header}
         title={fullTitle}
-        subTitle={subTitle}
+        subTitle={shortDescription}
       />
       {hero && (
         <HeroImage
@@ -183,7 +183,7 @@ const Minishop = ({ data }) => {
                     slug={node.fields.slug}
                     title={node.frontmatter.title}
                     tags={node.frontmatter.tags}
-                    summary={node.frontmatter.subTitle || node.excerpt}
+                    summary={node.frontmatter.shortDescription || node.excerpt}
                     event={node.frontmatter.event}
                   />
                 </Grid>
@@ -220,7 +220,7 @@ export const query = graphql`
       }
       frontmatter {
         title
-        subTitle
+        shortDescription
         category
         level
         tags
