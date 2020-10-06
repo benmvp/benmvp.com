@@ -104,7 +104,7 @@ module.exports = {
                 return {
                   ...edge.node.frontmatter,
                   description:
-                    edge.node.frontmatter.description || edge.node.excerpt,
+                    edge.node.frontmatter.shortDescription || edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url,
                   guid: edge.node.id,
@@ -129,7 +129,7 @@ module.exports = {
                       fields { slug }
                       frontmatter {
                         title
-                        description
+                        shortDescription
                         date
                       }
                     }
