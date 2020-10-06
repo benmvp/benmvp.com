@@ -38,7 +38,7 @@ export const fragments = graphql`
   fragment PostCardInfo on MarkdownRemark {
     frontmatter {
       title
-      description
+      shortDescription
       tags
       date(formatString: "DD MMMM YYYY")
       hero {

@@ -88,7 +88,7 @@ const Post = ({ data }) => {
     subTitle,
     date,
     dateIso,
-    description,
+    shortDescription,
     tags,
     category,
     hero,
@@ -96,11 +96,11 @@ const Post = ({ data }) => {
     heroCredit,
   } = frontmatter
   const { slug } = fields
-  const summary = description || excerpt
+  const summary = shortDescription || excerpt
   const url = getBlogUrl(slug)
   const seoImageUrl = generateSocialImage({
     title,
-    tagline: description || subTitle,
+    tagline: shortDescription || subTitle,
   })
 
   useEffect(() => {
@@ -216,7 +216,7 @@ export const query = graphql`
       frontmatter {
         title
         subTitle
-        description
+        shortDescription
         tags
         category
         date(formatString: "DD MMMM YYYY")

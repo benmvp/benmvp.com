@@ -1,7 +1,7 @@
 ---
 date: 2020-06-29
 title: The best way to learn React
-description: The best way to learn React depends on how you learn best
+shortDescription: The best way to learn React depends on how you learn best
 category: career
 tags: [react, learning, tutorial, workshops, courses]
 hero: ./html-css-javascript-books-greg-rakozy-vw3Ahg4x1tY-unsplash.jpg

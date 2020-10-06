@@ -1,7 +1,7 @@
 ---
 date: 2020-08-27
 title: Configurability in a Design System
-description: Thoughts on how developers prioritize flexibility when using your JS component library
+shortDescription: Thoughts on how developers prioritize flexibility when using your JS component library
 category: design-system
 tags: [react, design-system, javascript, components]
 hero: ./mac-option-key-hannah-joshua-46T6nVjRc2w-unsplash.jpg

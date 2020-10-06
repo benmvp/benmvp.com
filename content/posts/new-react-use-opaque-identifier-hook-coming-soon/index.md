@@ -1,7 +1,7 @@
 ---
 date: 2020-04-17
 title: New React useOpaqueIdentifier hook coming soon
-description: A quick overview of the newly implemented useOpaqueIdentifier hook and when you would want to use it
+shortDescription: A quick overview of the newly implemented useOpaqueIdentifier hook and when you would want to use it
 category: react
 tags: [react, hooks]
 hero: ./blue-anchor-on-wall.jpg

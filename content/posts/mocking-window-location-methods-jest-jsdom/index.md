@@ -1,7 +1,7 @@
 ---
 date: 2020-08-06
 title: Mocking window.location methods in Jest & jsdom
-description: A way to successfully mock the locked Location object from jsdom in Jest
+shortDescription: A way to successfully mock the locked Location object from jsdom in Jest
 category: testing
 tags: [mock, react]
 hero: ./compass-jordan-madrid-iDzKdNI7Qgc-unsplash.jpg

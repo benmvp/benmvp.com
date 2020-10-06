@@ -1,7 +1,7 @@
 ---
 date: 2020-05-29
 title: ECMAScript pattern matching proposal
-description: Analyzing a potential future feature of JavaScript that could make testing object contents much easier
+shortDescription: Analyzing a potential future feature of JavaScript that could make testing object contents much easier
 category: javascript
 tags: [javascript, ecmascript, proposals, til]
 hero: ./pattern-quilt-rug-raul-cacho-oses-z4x9ITBe040-unsplash.jpg

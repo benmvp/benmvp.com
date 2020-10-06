@@ -55,7 +55,7 @@ const PostCardList = ({ posts }) => (
           title={node.frontmatter.title}
           tags={node.frontmatter.tags}
           date={node.frontmatter.date}
-          summary={node.frontmatter.description || node.excerpt}
+          summary={node.frontmatter.shortDescription || node.excerpt}
           hero={node.frontmatter.hero}
         />
       </Grid>

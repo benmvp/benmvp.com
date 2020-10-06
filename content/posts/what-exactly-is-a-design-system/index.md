@@ -1,7 +1,7 @@
 ---
 date: 2020-05-08
 title: What exactly is a "Design System"?
-description: My opinion on the key pieces that make up a design system and high-level overview of how to go about building one
+shortDescription: My opinion on the key pieces that make up a design system and high-level overview of how to go about building one
 category: design-system
 tags: [design-system, react, material-ui, figma, css, typography, brand]
 hero: ./design-system-lee-campbell-DtDlVpy-vvQ-unsplash.jpg

@@ -1,7 +1,7 @@
 ---
 date: 2020-05-18
 title: Introducing Minishops
-description: The rationale behind and explanation of my new venture to offer short, remote-only workshops called "minishops"
+shortDescription: The rationale behind and explanation of my new venture to offer short, remote-only workshops called "minishops"
 category: minishops
 tags: [learning, react, workshops]
 hero: ./love-to-learn-tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg
