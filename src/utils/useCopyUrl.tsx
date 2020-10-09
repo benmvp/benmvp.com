@@ -1,8 +1,14 @@
 import { useState, useEffect, useCallback } from 'react'
+import { formatUrl } from 'url-lib'
 
 const useCopyUrl = (
   url: string,
 ): [{ copyText: string; copyButtonColor: string }, () => void] => {
+  const trackedUrl = formatUrl(url, {
+    utm_source: 'copy',
+    utm_medium: 'social',
+    utm_campaign: 'share',
+  })
   const [copyStatus, setCopyStatus] = useState<
     'inactive' | 'copied' | 'failed'
   >('inactive')
@@ -22,7 +28,7 @@ const useCopyUrl = (
   }, [copyStatus])
 
   const copy = useCallback(() => {
-    navigator.clipboard.writeText(url).then(
+    navigator.clipboard.writeText(trackedUrl).then(
       () => {
         setCopyStatus('copied')
       },
@@ -30,7 +36,7 @@ const useCopyUrl = (
         setCopyStatus('failed')
       },
     )
-  }, [url])
+  }, [trackedUrl])
 
   let copyText = 'Copy URL'
   let copyButtonColor = 'primary'
