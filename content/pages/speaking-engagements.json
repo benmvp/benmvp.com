@@ -90,13 +90,23 @@
   },
   {
     "name": "Learn With Jason",
-    "url": "https://www.learnwithjason.dev/",
+    "url": "https://www.learnwithjason.dev/power-up-react-with-typescript",
     "location": "Remote",
     "talks": [
       {
         "title": "Power up React with TypeScript",
         "date": "10/8/2020",
-        "time": "9:30a PDT"
+        "time": "9:30a PDT",
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=4PduzmHf1YQ"
+          },
+          {
+            "label": "Twitch",
+            "url": "https://www.twitch.tv/videos/764289820"
+          }
+        ]
       }
     ]
   },
