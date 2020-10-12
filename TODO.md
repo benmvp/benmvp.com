@@ -6,6 +6,7 @@
 ## Blog Posts
 
 - [ ] Advanced TS prop patterns (1 each from slides)
+- [ ] useMemo & useCallback explained
 
 ## Site improvements
 

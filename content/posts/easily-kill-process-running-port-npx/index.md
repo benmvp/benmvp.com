@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
-title: Easily kill the process running on a port with npx kill-port
-# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
+title: Easily kill process running on a port
+shortDescription: How to use the kill-port package to quickly the process running on a given port
 category: divops
 tags: [bash, command-line, npx, til]
 # hero: ./blue-anchor-on-wall.jpg
