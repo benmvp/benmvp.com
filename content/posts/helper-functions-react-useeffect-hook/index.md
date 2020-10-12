@@ -1,7 +1,7 @@
 ---
 date: 2020-10-11
 title: Helper functions in the React useEffect hook
-shortDescription: How to deal with helper functions listed as dependencies in the useEffect hook
+shortDescription: Four options for dealing with helper functions listed as dependencies in the useEffect hook
 category: react
 tags: [react, hooks, useEffect, memoization]
 hero: ./boxing-gloves-neonbrand-WwrQnL0Gi1c-unsplash.jpg
