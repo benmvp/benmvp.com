@@ -43,7 +43,13 @@
       {
         "id": "perfect-lib",
         "date": "10/20/2020",
-        "time": "10:30a PDT"
+        "time": "10:30a PDT",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2020/ato/perfect-lib.html"
+          }
+        ]
       }
     ]
   },
