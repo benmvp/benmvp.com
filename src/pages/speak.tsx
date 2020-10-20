@@ -71,7 +71,7 @@ const SpeakingEngagements = ({ data }) => {
         group, thank you! It means a lot that you entrust me with with leveling
         up your group. Please feel free to contact me via{' '}
         <a
-          href="https://twitter.com/benmvp)"
+          href="https://twitter.com/benmvp"
           target="_blank"
           rel="noopener noreferrer"
         >
