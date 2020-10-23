@@ -78,6 +78,24 @@
     ]
   },
   {
+    "name": "JS Party",
+    "url": "https://changelog.com/jsparty/149",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Bringing it back to TypeScript",
+        "date": "10/15/2020",
+        "time": "10a PDT",
+        "links": [
+          {
+            "label": "Podcast",
+            "url": "https://changelog.com/jsparty/149"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "TSConf 2020",
     "url": "https://tsconf.io/",
     "location": "Remote",
