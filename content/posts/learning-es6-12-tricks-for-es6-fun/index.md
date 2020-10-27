@@ -1,6 +1,7 @@
 ---
 date: 2016-10-25
 title: 12 tricks for ES6 fun
+shortDescription: A quick look at using ES6 to solve "common-ish" tasks in JavaScript
 category: learning-es6
 tags: [ecmascript-6, es6, javascript, learning-es6, tricks]
 hero: ./tips-and-tricks.jpg
@@ -18,8 +19,8 @@ Without further ado...
 We can use [object literal shorthand](/blog/learning-es6-enhanced-object-literals/#property-value-shorthand) to quickly log a variable with a label to the console:
 
 ```js
-let myVar = 'foo'
-let otherVar = 2
+const myVar = 'foo'
+const otherVar = 2
 
 // output:
 // {myVar: "foo", otherVar: 2}
@@ -33,8 +34,8 @@ By using object literal shorthand, we create an object literal that is immediate
 We can quickly coerce a value to a string by wrapping it in a [template literal](/blog/learning-es6-template-literals-tagged-templates/#simple-template-literal):
 
 ```js
-let num = 2
-let numString = `${num}`
+const num = 2
+const numString = `${num}`
 
 // output:
 // {num: 2, numString: "2"}
@@ -44,8 +45,8 @@ console.log({ num, numString })
 This replaces my previous favorite way of string coercion (concatenating an empty string):
 
 ```js
-let num = 2
-let numString = num + ''
+const num = 2
+const numString = num + ''
 
 // output:
 // {num: 2, numString: "2"}
@@ -57,8 +58,8 @@ console.log({ num, numString })
 We can quickly swap two variables without a temporary one using [array destructuring](/blog/learning-es6-destructuring/):
 
 ```js
-let a = 1
-let b = 2
+const a = 1
+const b = 2
 
 ;[b, a] = [a, b]
 ```
@@ -88,7 +89,7 @@ We can quickly copy an array using the [spread operator](/blog/learning-es6-para
 ```js
 const manipulateList = (list) => {
   // defensively copy list
-  let copiedList = [...list]
+  const copiedList = [...list]
 
   // do something with copiedList
 }
@@ -99,9 +100,9 @@ const manipulateList = (list) => {
 We can quickly concatenate multiple arrays together using the [spread operator](/blog/learning-es6-parameter-handling/#spread-operator):
 
 ```js
-let start = ['do', 're', 'mi']
-let end = ['la', 'ti']
-let scaleFromLiteral = [...start, 'fa', 'so', ...end]
+const start = ['do', 're', 'mi']
+const end = ['la', 'ti']
+const scaleFromLiteral = [...start, 'fa', 'so', ...end]
 
 // output: ['do', 're', 'mi', 'fa', 'so', 'la', 'ti']
 console.log(scaleFromLiteral)
@@ -116,7 +117,7 @@ function dedupe(array) {
   return [...new Set(array)]
 }
 
-let noDupesArray = dedupe([1, 2, 1, 4, 7, 3, 1])
+const noDupesArray = dedupe([1, 2, 1, 4, 7, 3, 1])
 
 // output: [1, 2, 4, 7, 3]
 console.log(noDupesArray)
@@ -149,11 +150,13 @@ ES6 unfortunately doesn't provide a mechanism for enforcing a maximum arity (num
 function max(...values) {
   // only want as many a 3 parameters
   // so throw error if over
-  if (values.length > 3) throw Error('max 3 parameters allowed!')
+  if (values.length > 3) {
+    throw Error('max 3 parameters allowed!')
+  }
 
   // use destructuring to get values
   // into variables
-  let [a, b, c] = values
+  const [a, b, c] = values
 
   return Math.max(a, b, c)
 }
@@ -172,7 +175,9 @@ We could clean things up a little bit:
 
 ```js
 function max(a, b, c, ...shouldBeEmpty) {
-  if (shouldBeEmpty.length > 0) throw Error('max 3 parameters allowed!')
+  if (shouldBeEmpty.length > 0) {
+    throw Error('max 3 parameters allowed!')
+  }
 
   return Math.max(a, b, c)
 }
@@ -196,7 +201,7 @@ We can easily provide timeout support to the new [Fetch API](https://developer.m
 // the timeout completes, the promise is rejected
 const timeout = (delay = 30000) => {
   return new Promise((resolve, reject) => {
-    let rejectWithError = () => {
+    const rejectWithError = () => {
       reject(new Error('Timed out!'))
     }
 
@@ -241,8 +246,8 @@ class Note {
   }
 }
 class ColorNote extends Note {}
-let note = new Note() // error!
-let colorNote = new ColorNote() // ok
+const note = new Note() // error!
+const colorNote = new ColorNote() // ok
 ```
 
 #### 12. Defining lazy range function
@@ -265,4 +270,6 @@ for (let teenageYear of range(13, 7)) {
 
 ## Wrapping up
 
-That's it! There are many more clever ways in which we can leverage this newfound functionality with ES6. These were the dozen that jumped out to me most. If you have any additional "tricks" that you use, tweet me at [@benmvp](https://twitter.com/benmvp)! Thanks for reading!
+That's it! There are many more clever ways in which we can leverage this newfound functionality with ES6. These were the dozen that jumped out to me most. If you have any additional "tricks" that you use, tweet me at [@benmvp](https://twitter.com/benmvp)!
+
+Keep learning my friends. 🤓
