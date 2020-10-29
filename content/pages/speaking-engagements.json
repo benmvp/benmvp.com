@@ -105,6 +105,10 @@
         "date": "10/9/2020",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=xfcPUP2_J9E"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/tsconf/react.html"
           }
