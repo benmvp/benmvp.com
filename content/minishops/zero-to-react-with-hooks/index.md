@@ -7,10 +7,10 @@ tags: [react, react hooks, useState, useEffect, jsx]
 hero: ./react-code-filiberto-santillan-1HCb2gPk3ik-unsplash.jpg
 heroAlt: A wide computer monitor with some React code on it
 heroCredit: 'Photo by [Filiberto Santillán](https://unsplash.com/@filisantillan)'
-event:
-  id: '119759364483'
-  start: 2020-11-10T09:00:00-08:00
-  end: 2020-11-10T12:30:00-08:00
+# event:
+#   id: '119759364483'
+#   start: 2020-11-10T09:00:00-08:00
+#   end: 2020-11-10T12:30:00-08:00
 ---
 
 React is a JavaScript UI library that makes creating reusable components easy and efficient. It’s critical to understand the fundamentals of creating custom configurable components, fetching and maintaining state, and rendering UI based upon that state and component configurations.
