@@ -59,6 +59,7 @@ const Minishop = ({ data }) => {
     title: fullTitle,
     tagline: shortDescription,
   })
+  const eventId = event?.id
   const isUpcomingEvent = event?.start
     ? isFuture(Date.parse(event.start))
     : false
@@ -66,10 +67,10 @@ const Minishop = ({ data }) => {
   useEffect(() => {
     if (isUpcomingEvent) {
       window.gtag?.('event', 'view_item', {
-        items: [{ id: event.id, name: title, price: 100 }],
+        items: [{ id: eventId, name: title, price: 100 }],
       })
     }
-  }, [event.id, isUpcomingEvent, title])
+  }, [eventId, isUpcomingEvent, title])
 
   useEffect(() => {
     if (upcomingMinishops.length) {
