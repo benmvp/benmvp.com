@@ -32,22 +32,18 @@ So the question is: how can we create this dependent relationship between two pr
 
 ```typescript
 interface CommonProps {
-  children: React.ReactNode,
+  children: React.ReactNode
 
   // ...other props that always exist
 }
 
 type TruncateProps =
-  | { truncate?: false, showExpanded?: never }
-  | { truncate: true, showExpanded? boolean }
+  | { truncate?: false; showExpanded?: never }
+  | { truncate: true; showExpanded?: boolean }
 
 type Props = CommonProps & TruncateProps
 
-const Text = ({
-  children,
-  showExpanded,
-  truncate
-}: Props) => {
+const Text = ({ children, showExpanded, truncate }: Props) => {
   // Both truncate & showExpanded will be of
   // the type `boolean | undefined`
 }
@@ -69,8 +65,8 @@ interface CommonProps {
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded?: never }
-  | { truncate: true, showExpanded? boolean }
+  | { truncate?: false; showExpanded?: never }
+  | { truncate: true; showExpanded?: boolean }
 ```
 
 `TruncateProps` is where the magic happens. It's what's called a "[discriminated union](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#discriminating-unions)." I don't yet know what the "discriminated" part refers to, but to me it's just a union of object definitions. Let's break it down further and we'll come back to see how the discriminated union works for us.
@@ -78,25 +74,25 @@ type TruncateProps =
 ```typescript
 type TruncateProps =
   // highlight-next-line
-  | { truncate?: false, showExpanded?: never }
-  | { truncate: true, showExpanded? boolean }
+  | { truncate?: false; showExpanded?: never }
+  | { truncate: true; showExpanded?: boolean }
 ```
 
 The first part of the discriminated union is when the `truncate` prop is `false` or unspecified (`undefined`). In this case, we want the `showExpanded` prop to be invalid. It shouldn't be able to be set. Therefore we define its type as `never`, which means it cannot be set. We also need to make `showExpanded` optional so that the `<Text>not truncated</Text>` call with neither prop specified works.
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded?: never }
+  | { truncate?: false; showExpanded?: never }
   // highlight-next-line
-  | { truncate: true, showExpanded? boolean }
+  | { truncate: true; showExpanded?: boolean }
 ```
 
 The second part is when the `truncate` prop is `true` (and only `true`). In this case, we want to be able to configure the `showExpanded` prop. Therefore we define its type as an optional `boolean`.
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded?: never }
-  | { truncate: true, showExpanded? boolean }
+  | { truncate?: false; showExpanded?: never }
+  | { truncate: true; showExpanded?: boolean }
 ```
 
 So now back to the entire discriminated union, it's saying that the configuration for the `truncate` and `showExpanded` props can either be the first case or the second case. We defined the combinations individually instead of just saying that both `truncate` and `showExpanded` are optional booleans. There's never an option for `truncate` to be `false` while `showExpanded` is configurable.
