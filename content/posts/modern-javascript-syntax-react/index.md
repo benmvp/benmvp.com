@@ -25,5 +25,7 @@ published: false
   - Can use in arrow function
 - Promises & Fetch API
 - `async`/`await`
+- `import`/`export`
+  - Do `export` first to show how to import
 
 Keep learning my friends. 🤓

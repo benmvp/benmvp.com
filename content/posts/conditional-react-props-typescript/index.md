@@ -38,7 +38,7 @@ interface CommonProps {
 }
 
 type TruncateProps =
-  | { truncate?: false, showExpanded: undefined }
+  | { truncate?: false, showExpanded?: never }
   | { truncate: true, showExpanded? boolean }
 
 type Props = CommonProps & TruncateProps
@@ -69,7 +69,7 @@ interface CommonProps {
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded: undefined }
+  | { truncate?: false, showExpanded?: never }
   | { truncate: true, showExpanded? boolean }
 ```
 
@@ -78,15 +78,15 @@ type TruncateProps =
 ```typescript
 type TruncateProps =
   // highlight-next-line
-  | { truncate?: false, showExpanded: undefined }
+  | { truncate?: false, showExpanded?: never }
   | { truncate: true, showExpanded? boolean }
 ```
 
-The first part of the discriminated union is when the `truncate` prop is `false` or `undefined` (unspecified). In this case, we want the `showExpanded` prop to be invalid. It shouldn't be able to be set. Therefore we define its type as `undefined`, which means it cannot be set.
+The first part of the discriminated union is when the `truncate` prop is `false` or unspecified (`undefined`). In this case, we want the `showExpanded` prop to be invalid. It shouldn't be able to be set. Therefore we define its type as `never`, which means it cannot be set. We also need to make `showExpanded` optional so that the `<Text>not truncated</Text>` call with neither prop specified works.
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded: undefined }
+  | { truncate?: false, showExpanded?: never }
   // highlight-next-line
   | { truncate: true, showExpanded? boolean }
 ```
@@ -95,7 +95,7 @@ The second part is when the `truncate` prop is `true` (and only `true`). In this
 
 ```typescript
 type TruncateProps =
-  | { truncate?: false, showExpanded: undefined }
+  | { truncate?: false, showExpanded?: never }
   | { truncate: true, showExpanded? boolean }
 ```
 
