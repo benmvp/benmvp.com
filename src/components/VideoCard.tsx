@@ -1,13 +1,20 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useState } from 'react'
+import classNames from 'classnames'
 import {
   makeStyles,
+  createStyles,
+  Box,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
+  Collapse,
+  IconButton,
   Typography,
 } from '@material-ui/core'
+import { ExpandMore } from '@material-ui/icons'
 import { Link } from 'gatsby-theme-material-ui'
+import Markdown from 'react-markdown'
 import { genVideoSlug } from '../utils'
 import { Video } from '../utils/video'
 
@@ -20,18 +27,31 @@ const getEmbedSrc = (id: string, provider: Provider) => {
   }
 }
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 800,
-  },
-  media: {
-    minHeight: 300,
-    height: 'min(450px, min(800px, 100vw / 1.5))',
-  },
-})
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      maxWidth: 800,
+    },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
+    media: {
+      minHeight: 300,
+      height: 'min(450px, min(800px, 100vw / 1.5))',
+    },
+  }),
+)
 
 interface Props extends Video {
   className?: string
+  mode: 'min' | 'full'
 }
 
 const VideoCard = ({
@@ -39,11 +59,14 @@ const VideoCard = ({
   engagement,
   date,
   id,
+  mode,
   provider = 'youtube',
   title,
   url,
+  description,
 }: Props) => {
   const classes = useStyles()
+  const [expanded, setExpanded] = useState(false)
 
   const ContentWrapper = ({
     children: wrapperChildren,
@@ -76,30 +99,57 @@ const VideoCard = ({
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-      <ContentWrapper>
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            color="textPrimary"
-            component="h3"
-            noWrap
-          >
-            {title}
+      <CardContent>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="flex-start"
+        >
+          <ContentWrapper>
+            <Typography
+              gutterBottom
+              variant="h5"
+              color="textPrimary"
+              component="h3"
+              noWrap
+            >
+              {title}
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="subtitle2"
+              color="textPrimary"
+              component="h4"
+            >
+              {engagement}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {date}
+            </Typography>
+          </ContentWrapper>
+
+          {mode === 'full' && description && (
+            <Box>
+              <IconButton
+                className={classNames(classes.expand, {
+                  [classes.expandOpen]: expanded,
+                })}
+                onClick={() => setExpanded((curExpanded) => !curExpanded)}
+                aria-expanded={expanded}
+                aria-label="show video description"
+              >
+                <ExpandMore />
+              </IconButton>
+            </Box>
+          )}
+        </Box>
+
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Typography variant="body2">
+            <Markdown>{description}</Markdown>
           </Typography>
-          <Typography
-            gutterBottom
-            variant="subtitle2"
-            color="textPrimary"
-            component="h4"
-          >
-            {engagement}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {date}
-          </Typography>
-        </CardContent>
-      </ContentWrapper>
+        </Collapse>
+      </CardContent>
     </Card>
   )
 }

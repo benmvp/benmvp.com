@@ -140,7 +140,7 @@ const VideoCardList = () => {
     <Grid container spacing={2}>
       {RECENT_VIDEOS.map((video) => (
         <Grid key={video.id} item xs={12} lg={6}>
-          <VideoCard {...video} className={classes.video} />
+          <VideoCard {...video} className={classes.video} mode="min" />
         </Grid>
       ))}
       <Grid item xs={12}>

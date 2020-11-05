@@ -89,7 +89,7 @@ const Talk = ({
               className={classNames(classes.expand, {
                 [classes.expandOpen]: expanded,
               })}
-              onClick={() => setExpanded((prevExpanded) => !prevExpanded)}
+              onClick={() => setExpanded((curExpanded) => !curExpanded)}
               aria-expanded={expanded}
               aria-label="show talk description"
             >

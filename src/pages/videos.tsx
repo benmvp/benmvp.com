@@ -41,7 +41,7 @@ const Videos = () => {
       </Typography>
       {getVideos().map((video) => (
         <Box key={video.id}>
-          <VideoCard {...video} className={classes.videoCard} />
+          <VideoCard {...video} className={classes.videoCard} mode="full" />
         </Box>
       ))}
     </Layout>

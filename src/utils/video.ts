@@ -8,6 +8,7 @@ export interface Video {
   id: string
   provider: Provider
   title: string
+  description?: string
   url?: string
 }
 
@@ -30,7 +31,7 @@ const getProviderData = (
   return undefined
 }
 
-export const getVideos = () =>
+export const getVideos = (): Video[] =>
   getEngagements()
     .all.map((engagement): Video | undefined => {
       const talkWithVideo = engagement.talks.find(({ links }) =>
@@ -51,6 +52,7 @@ export const getVideos = () =>
               date: talkWithVideo.date,
               title: talkWithVideo.title,
               url: `/speak/#${engagement.id}`,
+              description: talkWithVideo.description,
               ...providerData,
             }
           }
