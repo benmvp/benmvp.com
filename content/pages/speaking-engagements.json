@@ -31,7 +31,13 @@
       {
         "id": "mixins-to-hooks",
         "date": "11/5/2020",
-        "time": "9am PST"
+        "time": "9am PST",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2020/qconplus/mixins-hooks.html"
+          }
+        ]
       }
     ]
   },
