@@ -109,22 +109,24 @@ const Talk = ({
           />
         ))}
       </Box>
-      <Box mt={1}>
-        {links?.map(({ label, url }) => (
-          <Button
-            key={label}
-            variant="contained"
-            size="small"
-            href={url}
-            color="primary"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.link}
-          >
-            {label}
-          </Button>
-        ))}
-      </Box>
+      {mode === 'full' && (
+        <Box mt={1}>
+          {links?.map(({ label, url }) => (
+            <Button
+              key={label}
+              variant="contained"
+              size="small"
+              href={url}
+              color="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              {label}
+            </Button>
+          ))}
+        </Box>
+      )}
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <Typography variant="body2">

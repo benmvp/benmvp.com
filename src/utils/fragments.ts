@@ -40,7 +40,7 @@ export const fragments = graphql`
       title
       shortDescription
       tags
-      date(formatString: "DD MMMM YYYY")
+      date(formatString: "MMMM D, YYYY")
       hero {
         childImageSharp {
           fluid(maxWidth: 550, traceSVG: { color: "#3f51b5" }, quality: 50) {

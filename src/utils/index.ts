@@ -12,10 +12,16 @@ export const genMinishopSlug = (title: string) => genSlug(`shop-${title}`)
 export const genPostSlug = (title: string) => genSlug(`post-${title}`)
 export const genVideoSlug = (id: string) => genSlug(`video-${id}`)
 
-export const formatDate = (date: string) => {
+export const formatDate = (date: string): string => {
   const parsedDate = Date.parse(date)
 
-  return parsedDate ? format(parsedDate, 'dd MMMM yyyy') : date
+  return parsedDate ? format(parsedDate, 'EEEE, MMMM dd, yyyy') : date
+}
+
+export const formatTime = (date: string): string => {
+  const parsedDate = Date.parse(date)
+
+  return parsedDate ? format(parsedDate, 'h:mm b z') : date
 }
 
 export const getDateYear = (date: string) => {

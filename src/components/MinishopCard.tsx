@@ -1,6 +1,5 @@
 import React from 'react'
 import { isFuture } from 'date-fns'
-import formatDate from 'date-fns-tz/format'
 import {
   makeStyles,
   createStyles,
@@ -14,7 +13,12 @@ import {
 } from '@material-ui/core'
 import { Link } from 'gatsby-theme-material-ui'
 import Share from './Share'
-import { getMinishopUrl, genMinishopSlug } from '../utils'
+import {
+  getMinishopUrl,
+  genMinishopSlug,
+  formatDate,
+  formatTime,
+} from '../utils'
 import useCopyUrl from '../utils/useCopyUrl'
 
 interface Props {
@@ -53,9 +57,8 @@ const MinishopCard = ({
   let fullDate
 
   if (event?.start && isFuture(Date.parse(event?.start))) {
-    const startDate = Date.parse(event.start)
-    const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
-    const formattedTime = formatDate(startDate, 'h:mm b z')
+    const formattedDate = formatDate(event.start)
+    const formattedTime = formatTime(event.start)
 
     fullDate = `${formattedDate} @ ${formattedTime}`
   }
