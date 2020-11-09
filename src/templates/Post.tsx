@@ -195,7 +195,7 @@ export const query = graphql`
         shortDescription
         tags
         category
-        date(formatString: "DD MMMM YYYY")
+        date(formatString: "MMMM DD, YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")
       }
     }
