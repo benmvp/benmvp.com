@@ -13,13 +13,19 @@
   },
   {
     "name": "Global React Meetup November 2020",
-    "url": "https://www.reactjsmeetup.com/",
+    "url": "https://www.reactjsmeetup.com/#/global-react-meetup-november-2020",
     "location": "Remote",
     "talks": [
       {
         "id": "mixins-to-hooks",
         "date": "11/12/2020",
-        "time": "12:30p PST"
+        "time": "12:30p PST",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2020/reactjsmeetup/mixins-hooks.html"
+          }
+        ]
       }
     ]
   },
