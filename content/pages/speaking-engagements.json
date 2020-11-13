@@ -22,6 +22,10 @@
         "time": "12:30p PST",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=ox-IJGoor1c"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/reactjsmeetup/mixins-hooks.html"
           }
