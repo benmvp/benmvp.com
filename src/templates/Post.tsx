@@ -117,7 +117,7 @@ const Post = ({ data }) => {
             property: 'og:article:author',
             content: site.siteMetadata.author.name,
           },
-          { property: 'og:author:section', content: 'Technology' },
+          { property: 'og:article:section', content: 'Technology' },
           ...(tags || []).map((tag) => ({
             property: 'og:article:tag',
             content: tag,

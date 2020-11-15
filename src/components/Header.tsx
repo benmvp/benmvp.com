@@ -18,21 +18,21 @@ import { Link, Button, IconButton } from 'gatsby-theme-material-ui'
 import Img from 'gatsby-image'
 
 const NAV_LINKS = [
+  { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
   {
-    to: '/minishops/',
-    title: 'Minishops',
-    label: "Attend one of Ben's remote minishop",
+    to: '/videos/',
+    title: 'Videos',
+    label: "Watch Ben's past tech talks",
   },
   {
     to: '/speak/',
     title: 'Speak',
     label: "Check out Ben's speaking engagements",
   },
-  { to: '/blog/', title: 'Blog', label: "View Ben's blog posts" },
   {
-    to: '/videos/',
-    title: 'Videos',
-    label: "Watch Ben's past tech talks",
+    to: '/minishops/',
+    title: 'Minishops',
+    label: "Attend one of Ben's remote minishop",
   },
   { to: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]

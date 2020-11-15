@@ -171,11 +171,23 @@ export default ({ data }) => {
           variant="h3"
           component="h2"
           gutterBottom
-          aria-label="Join one of Ben's upcoming minishops"
+          aria-label="Read some of Ben's recent blog posts"
         >
-          Develop
+          Read
         </Typography>
-        <MinishopCardList />
+        <PostCardList posts={recentPosts.edges} />
+      </Box>
+
+      <Box component="section" className={classes.section}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Watch Ben's most recent tech talk video"
+        >
+          Watch
+        </Typography>
+        <VideoCardList />
       </Box>
 
       <Box component="section" className={classes.section}>
@@ -195,23 +207,11 @@ export default ({ data }) => {
           variant="h3"
           component="h2"
           gutterBottom
-          aria-label="Read one of Ben's recent blog posts"
+          aria-label="Join one of Ben's upcoming minishops"
         >
-          Read
+          Develop
         </Typography>
-        <PostCardList posts={recentPosts.edges} />
-      </Box>
-
-      <Box component="section" className={classes.section}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Watch Ben's most recent tech talk video"
-        >
-          Watch
-        </Typography>
-        <VideoCardList />
+        <MinishopCardList />
       </Box>
     </Layout>
   )
