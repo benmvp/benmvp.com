@@ -52,7 +52,13 @@
       {
         "title": "Front End Happy Hour",
         "date": "11/5/2020",
-        "time": "11:30a PST"
+        "time": "11:30a PST",
+        "links": [
+          {
+            "label": "Podcast",
+            "url": "https://frontendhappyhour.com/episodes/live-at-qcon-plus-2020/"
+          }
+        ]
       }
     ]
   },
