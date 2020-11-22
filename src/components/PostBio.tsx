@@ -46,11 +46,17 @@ const PostBio = () => {
         component="aside"
         className={classes.avatarShell}
       >
-        <Img
-          fixed={logo.childImageSharp.fixed}
-          alt={site.siteMetadata.author.name}
-          className={classes.avatar}
-        />
+        <a
+          href="https://twitter.com/benmvp"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Img
+            fixed={logo.childImageSharp.fixed}
+            alt={site.siteMetadata.author.name}
+            className={classes.avatar}
+          />
+        </a>
       </Grid>
       <Grid
         item
