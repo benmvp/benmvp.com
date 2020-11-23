@@ -1,6 +1,6 @@
 ---
 date: 2020-12-17
-title: Modern Javascript syntax for React
+title: Modern Javascript syntax to be awesome at React
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: template
 # tags: [react, hooks]
@@ -10,7 +10,12 @@ category: template
 published: false
 ---
 
-- When you're learning React, you're likely learning modern JavaScript too
+- React is Just JavaScript (TM)
+  - Gatekeepers like to say you need to be great at JS before you can do JS
+  - I used to feel the same way
+  - Not to keep folks out, but I knew how much easier React would be
+  - Now I tell people to learn how they learn
+  - But eventually you'll need to understand modern JS
   - Here are some common features
 - Arrow functions
   - `.map` example w/ `function`, implicit return, full
@@ -20,9 +25,13 @@ published: false
 - Template strings
 - Array destructuring
   - For `useState`
+  - rest operator
 - Object destructuring
   - For props
   - Can use in arrow function
+  - rest operator
+- Spread operator
+  - Arrays & objects
 - Promises & Fetch API
 - `async`/`await`
 - `import`/`export`
