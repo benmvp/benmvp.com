@@ -5,7 +5,6 @@
 
 ## Blog Posts
 
-- [ ] Advanced TS prop patterns (1 each from slides)
 - [ ] useMemo & useCallback explained
 
 ## Site improvements
@@ -14,10 +13,12 @@
 - [ ] Add Contact page (like https://www.sarasoueidan.com/contact/ or https://kentcdodds.com/contact)
 - [ ] Interactive bio / press kit (like https://chriscoyier.net/ or https://www.sarasoueidan.com/press-kit/)
   - [ ] Hi-res photos page (like https://chriscoyier.net/photos/)
+- [ ] Grid view on home page (see Google News app)
 - [ ] Animated masthead (like https://fizbuz.com/)
   - frontend skills, JavaScript skills, development skills, React skills
 - [ ] Speaker rider (like https://github.com/cassidoo/talks/blob/master/speaker-rider.md)
 - [ ] Breadcrumbs (to easily jump to category pages like /minishops/ or /blog/)
+- [ ] Newsletter
 
 ## Data-driven features
 

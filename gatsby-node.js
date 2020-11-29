@@ -26,7 +26,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     query {
       minishops: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "//content/minishops//" } }
+        filter: {
+          fileAbsolutePath: { regex: "//content/minishops//" }
+          frontmatter: { published: { ne: false } }
+        }
       ) {
         edges {
           node {
@@ -35,7 +38,10 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       posts: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "//content/posts//" } }
+        filter: {
+          fileAbsolutePath: { regex: "//content/posts//" }
+          frontmatter: { published: { ne: false } }
+        }
       ) {
         edges {
           node {
@@ -44,7 +50,10 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       pages: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "//content/pages//" } }
+        filter: {
+          fileAbsolutePath: { regex: "//content/pages//" }
+          frontmatter: { published: { ne: false } }
+        }
       ) {
         edges {
           node {
