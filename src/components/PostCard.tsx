@@ -81,7 +81,6 @@ const PostCard = ({
             color="textPrimary"
             component="h3"
             title={title}
-            noWrap
           >
             {title}
           </Typography>
