@@ -1,7 +1,7 @@
 ---
 date: 2020-11-29
-title: 'Filtering undefined elements from an array in TypeScript'
-shortDescription: How TypeScript user-defined type guards can remove undefined/null types with Array.filter
+title: Filtering undefined elements from an array in TypeScript
+shortDescription: How TypeScript user-defined type guards can remove undefined or null types with Array.filter
 category: typescript
 tags: [arrays]
 hero: ./sifting-tuan-anh-tran-tHfJ3mevHi0-unsplash.jpg
@@ -13,7 +13,8 @@ One feature I really appreciate about TypeScript is [nullable type guards](https
 
 ```typescript
 const getProduct = (id: number): Product | undefined => {
-  // ...
+  // return a `Product` if found
+  // otherwise `undefined`
 }
 
 const product = getProduct(123)
