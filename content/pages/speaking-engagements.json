@@ -73,6 +73,10 @@
         "time": "10:30a PDT",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=Drli_MNdCts"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/ato/perfect-lib.html"
           }
