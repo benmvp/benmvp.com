@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
-title: Modern Javascript syntax to be awesome at React
-# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
+title: Top X newish Javascript features to be awesome at React
+shortDescription: The most important features in modern JavaScript that will take your React skills to the next level
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
@@ -11,6 +11,8 @@ published: false
 ---
 
 - React is Just JavaScript (TM)
+  - For better or worse React hitched its ride with JS
+  - React gets better/easier as JS improves
   - Gatekeepers like to say you need to be great at JS before you can do JS
   - I used to feel the same way
   - Not to keep folks out, but I knew how much easier React would be

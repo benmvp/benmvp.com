@@ -10,4 +10,8 @@ category: template
 published: false
 ---
 
+- Useful for
+  - custom hooks
+  - enums in big data
+
 Keep learning my friends. 🤓
