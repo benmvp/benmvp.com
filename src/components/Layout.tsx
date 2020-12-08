@@ -1,4 +1,5 @@
 import React, { useMemo, ReactNode } from 'react'
+import Helmet from 'react-helmet'
 import {
   makeStyles,
   createStyles,
@@ -101,6 +102,13 @@ const Layout = (props: Props) => {
 
   return (
     <>
+      <Helmet>
+        <script
+          data-ad-client="ca-pub-8593460861818909"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+      </Helmet>
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
