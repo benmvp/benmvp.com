@@ -19,6 +19,8 @@
 - [ ] Speaker rider (like https://github.com/cassidoo/talks/blob/master/speaker-rider.md)
 - [ ] Breadcrumbs (to easily jump to category pages like /minishops/ or /blog/)
 - [ ] Newsletter
+- [x] Google AdSense
+- [ ] Recent blog posts in blog post footer
 
 ## Data-driven features
 
