@@ -11,11 +11,11 @@ heroCredit: 'Photo by [Yusuf Evli](https://unsplash.com/@yusufevli)'
 
 One of my favorite sayings about React is that it's "Just JavaScript™." For better or worse, React hitched its ride with JavaScript. It's "for better" because as JavaScript improves, React also gets better (and maybe easier too?). However, it's "for worse" because it means that we really need to be good at JavaScript in order to be good at React. And that can be a barrier to entry.
 
-I used to tell folks that before they even started learning React, they should be really solid in JavaScript. **My thinking was that the more comfortable they were with JavaScript, the easier React would be for them.** I had good intentions, but it was still gate-keeping. My bad.
+I used to tell folks that before they even started learning React, they should be really solid in JavaScript. **My thinking was that the more comfortable they were with JavaScript, the easier React would be for them.** I had the best of intentions, but it was still gate-keeping. My bad. 😔
 
 Now I just tell people to learn however they learn best. It's totally fine to start learning React with basic JavaScript skills. Lots of people get the energy and desire to keep learning by building things. However, **I still feel that in order to take our React skills to the next level, we will need a solid grasp of modern JavaScript.**
 
-So I want to highlight 10 features of "modern JavaScript" that I believe go hand-in-hand with React. Whether you're considering learning React, and you want to get a handle of modern JavaScript first, or you've already been developing in React and want to fully understand all the JavaScript features you see surrounding React, these are for you. For the features you don't know well yet, feel free to follow the links to learn more.
+I want to highlight 10 features of "modern JavaScript" that I believe go hand-in-hand with React. So whether you're considering learning React, and you want to get a handle of modern JavaScript first, or you've already been developing in React and want to fully understand all the JavaScript features you see surrounding React, these are for you. For the features you don't know well yet, feel free to follow the links to learn more.
 
 ## 1. ECMAScript Modules (i.e. `import`/`export`)
 
