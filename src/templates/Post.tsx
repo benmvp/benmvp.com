@@ -50,7 +50,7 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
 const useStyles = makeStyles((theme) =>
   createStyles({
     header: {
-      marginBottom: theme.spacing(5),
+      marginBottom: theme.spacing(3),
     },
     footer: {
       marginTop: theme.spacing(3),
