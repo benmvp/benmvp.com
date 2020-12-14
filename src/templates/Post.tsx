@@ -103,7 +103,7 @@ const Post = ({ data }) => {
   }, [upcomingMinishops])
 
   return (
-    <Layout>
+    <Layout showAds>
       <Seo
         title={title}
         description={summary}

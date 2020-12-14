@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
   const { posts, site } = data
 
   return (
-    <Layout maxWidth="lg">
+    <Layout maxWidth="lg" showAds>
       <Seo
         url={getBlogUrl()}
         title="Blog"

@@ -19,6 +19,28 @@ import Footer from './Footer'
 import Masthead from './Masthead'
 import { getTheme } from '../../config/theme'
 
+const GoogleAds = ({ showAds }: { showAds: boolean }) => {
+  const configuration = `
+  (adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=${showAds ? 0 : 1};
+
+  if (!adsbygoogle.loaded) {
+    adsbygoogle.push({
+      google_ad_client: "ca-pub-8593460861818909",
+      enable_page_level_ads: true
+    });
+  }
+  `
+  return (
+    <Helmet>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
+      <script>{configuration}</script>
+    </Helmet>
+  )
+}
+
 interface ScrollToTopProps {
   children: ReactNode
 }
@@ -63,6 +85,7 @@ interface Props {
   children: ReactNode
   masthead?: boolean
   maxWidth?: 'md' | 'lg'
+  showAds?: boolean
 }
 
 const useMainStyles = makeStyles((theme) =>
@@ -96,19 +119,13 @@ const useMainStyles = makeStyles((theme) =>
 
 const Layout = (props: Props) => {
   const classes = useMainStyles(props)
-  const { children, masthead = false, maxWidth = 'md' } = props
+  const { children, masthead = false, maxWidth = 'md', showAds = false } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
 
   return (
     <>
-      <Helmet>
-        <script
-          data-ad-client="ca-pub-8593460861818909"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
-      </Helmet>
+      <GoogleAds showAds={showAds} />
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Box component="section" className={classes.root}>
