@@ -111,7 +111,7 @@ console.log(`Name: ${lastName}, ${firstName}`)
 console.log('Name: ' + lastName + ', ' + firstName)
 ```
 
-**Pretty much anywhere where you used to use string concatenation, you can replace with string interpolation with string literals (the back-ticks).** And the `${}` syntax isn't _just_ variable interpolation; it's _expression_ interpolation. Anything expression can go inside.
+**Pretty much anywhere where you used to use string concatenation, you can replace with string interpolation using string literals (the back-ticks).** And the `${}` syntax isn't _just_ variable interpolation; it's _expression_ interpolation. Anything expression can go inside.
 
 To learn more, you can deep dive into [Template literals & tagged templates](/blog/learning-es6-template-literals-tagged-templates/). Oh, and template literals also support [nested string interpolation](/blog/nested-string-interpolation-in-javascript/) as well.
 
@@ -297,7 +297,7 @@ const processUser = (user) => {
 }
 ```
 
-**Bonus:** optional chaining can be combined with [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) to safely default a missing value.
+**Bonus:** optional chaining can also be combined with the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) to safely default a missing value.
 
 ```js
 const processUser = (user) => {
