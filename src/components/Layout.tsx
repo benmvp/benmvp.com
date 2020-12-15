@@ -83,6 +83,7 @@ const ScrollToTop = ({ children }: ScrollToTopProps) => {
 
 interface Props {
   children: ReactNode
+  includeSubscribe?: boolean
   masthead?: boolean
   maxWidth?: 'md' | 'lg'
   showAds?: boolean
@@ -119,7 +120,13 @@ const useMainStyles = makeStyles((theme) =>
 
 const Layout = (props: Props) => {
   const classes = useMainStyles(props)
-  const { children, masthead = false, maxWidth = 'md', showAds = false } = props
+  const {
+    children,
+    includeSubscribe = true,
+    masthead = false,
+    maxWidth = 'md',
+    showAds = false,
+  } = props
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
 
@@ -146,7 +153,7 @@ const Layout = (props: Props) => {
           >
             <Box component="main">{children}</Box>
           </Container>
-          <Footer />
+          <Footer includeSubscribe={includeSubscribe} maxWidth={maxWidth} />
           <ScrollToTop>
             <Fab color="secondary" size="small" aria-label="scroll back to top">
               <KeyboardArrowUpIcon />

@@ -1,19 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import {
-  makeStyles,
-  createStyles,
-  Grid,
-  Typography,
-  Box,
-  Divider,
-} from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import { makeStyles, createStyles } from '@material-ui/core'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
-import MinishopCard from '../components/MinishopCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
