@@ -14,7 +14,6 @@ import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Seo from '../components/Seo'
 import MinishopRegister from '../components/MinishopRegister'
-import MinishopForm from '../components/MinishopForm'
 import Share from '../components/Share'
 import MinishopCard from '../components/MinishopCard'
 import MinishopTestimonials from '../components/MinishopTestimonials'
@@ -148,7 +147,6 @@ const Minishop = ({ data }) => {
           tags={tags}
           type="minishop"
         />
-        {!isUpcomingEvent && <MinishopForm slug={slug} title={title} />}
         {!!otherMinishops.length && (
           <Box component="section" className={classes.minishops}>
             <Typography component="h3" variant="h5">
