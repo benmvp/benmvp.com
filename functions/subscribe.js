@@ -2,9 +2,9 @@ const fetch = require('node-fetch')
 const { isEmail } = require('validator')
 
 const validateBody = (parsedBody) => {
-  if (!parsedBody?.email) {
+  if (!parsedBody.email) {
     return 'Email is required'
-  } else if (!parsedBody?.firstName) {
+  } else if (!parsedBody.firstName) {
     return 'First Name is required'
   } else if (!isEmail(parsedBody.email)) {
     return 'Email is not valid'
