@@ -60,6 +60,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.*
 
 .cache/
 .DS_Store
@@ -74,3 +75,6 @@ yarn-error.log
 schema.json
 *.d.ts
 apollo.config.js
+
+# Local Netlify folder
+.netlify

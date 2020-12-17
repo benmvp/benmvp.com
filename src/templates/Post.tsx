@@ -1,51 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import {
-  makeStyles,
-  createStyles,
-  Grid,
-  Typography,
-  Box,
-  Divider,
-} from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import { makeStyles, createStyles } from '@material-ui/core'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
-import MinishopCard from '../components/MinishopCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
-import useMinishops, { Minishop } from '../utils/useMinishops'
-
-const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
-  <Grid container spacing={2}>
-    {minishops.map((minishop) => (
-      <Grid key={minishop.id} item xs={12}>
-        <MinishopCard
-          mode="min"
-          slug={minishop.fields.slug}
-          title={minishop.frontmatter.title}
-          tags={minishop.frontmatter.tags}
-          summary={minishop.frontmatter.shortDescription || minishop.excerpt}
-          event={minishop.frontmatter.event}
-        />
-      </Grid>
-    ))}
-    <Grid item xs={12}>
-      <Box
-        display="flex"
-        justifyContent={{ xs: 'center', sm: 'flex-end' }}
-        width="100%"
-      >
-        <Link href="/minishops/" variant="h6">
-          View all minishops &gt;
-        </Link>
-      </Box>
-    </Grid>
-  </Grid>
-)
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -55,28 +17,11 @@ const useStyles = makeStyles((theme) =>
     footer: {
       marginTop: theme.spacing(3),
     },
-    minishops: {
-      marginTop: theme.spacing(2),
-    },
-    minishopsDivider: {
-      margin: theme.spacing(0, 'auto', 3),
-      width: '50%',
-    },
-    minishopsDescription: {
-      marginBottom: theme.spacing(2),
-    },
   }),
 )
 
 const Post = ({ data }) => {
   const classes = useStyles()
-  const {
-    upcoming: upcomingMinishops,
-    remaining: remainingMinishops,
-  } = useMinishops()
-  const otherMinishops = upcomingMinishops.length
-    ? upcomingMinishops
-    : remainingMinishops
   const { post, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const { title, date, dateIso, shortDescription, tags, category } = frontmatter
@@ -87,20 +32,6 @@ const Post = ({ data }) => {
     title,
     tagline: shortDescription,
   })
-
-  useEffect(() => {
-    if (upcomingMinishops.length) {
-      window.gtag?.('event', 'view_item_list', {
-        items: upcomingMinishops.map((node, index) => ({
-          id: node.frontmatter.event?.id,
-          name: node.frontmatter.title,
-          list_name: 'Post',
-          list_position: index + 1,
-          price: 100,
-        })),
-      })
-    }
-  }, [upcomingMinishops])
 
   return (
     <Layout showAds>
@@ -157,21 +88,6 @@ const Post = ({ data }) => {
         summary={summary}
         tags={tags}
       />
-      {!!otherMinishops.length && (
-        <Box component="section" className={classes.minishops}>
-          <Divider className={classes.minishopsDivider} />
-          <Typography component="h3" variant="h5" gutterBottom>
-            Attend upcoming minishops
-          </Typography>
-          <Typography variant="body1" className={classes.minishopsDescription}>
-            <Link to="/minishops/">Minishops by Ben Ilegbodu</Link> are
-            fully-remote workshops that last about 3 hours. They’re
-            highly-focused, covering only the concepts you want to learn so that
-            you can level up your skills and get on with the rest of your day.
-          </Typography>
-          <MinishopList minishops={otherMinishops} />
-        </Box>
-      )}
     </Layout>
   )
 }
