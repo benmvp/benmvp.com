@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) =>
 
       [theme.breakpoints.up('sm')]: {
         gridTemplateColumns: '1fr 1fr',
+        gridTemplateRows: '1fr auto 1fr',
         gridTemplateAreas: `
           "subscribe links"
           "subscribe info"
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) =>
     },
     links: {
       gridArea: 'links',
+      alignSelf: 'flex-end',
     },
     info: {
       gridArea: 'info',
