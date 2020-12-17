@@ -6,6 +6,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const { resolve } = require('path')
 const SITE_CONFIG = require('./config/site')
 const { getBlogUrl } = require('./src/utils')
 
@@ -35,25 +36,25 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/minishops/`,
+        path: resolve(__dirname, 'content/minishops'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/posts/`,
+        path: resolve(__dirname, 'content/posts'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/pages/`,
+        path: resolve(__dirname, 'content/pages'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/images/`,
+        path: resolve(__dirname, 'content/images'),
       },
     },
     'gatsby-plugin-catch-links',

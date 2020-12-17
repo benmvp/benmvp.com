@@ -7,7 +7,7 @@ require('prismjs/plugins/line-numbers/prism-line-numbers.css')
 require('./src/css/prism.css')
 
 Bugsnag.start({
-  apiKey: process.env.BUGSNAG_API_KEY,
+  apiKey: process.env.GATSBY_BUGSNAG_API_KEY,
   plugins: [new BugsnagPluginReact()],
   releaseStage: process.env.CONTEXT || process.env.NODE_ENV,
   appVersion: process.env.DEPLOY_ID,
