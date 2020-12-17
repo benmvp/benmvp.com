@@ -12,10 +12,10 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
 
-# Remap /.netlify/functions/* to /api/*
+# Remap pretty /api/* to ugly /.netlify/functions/*
 [[redirects]]
   from = "/api/*"
-  to = ".netlify/functions/:splat"
+  to = "/.netlify/functions/:splat"
   status = 200
   force = true
 
