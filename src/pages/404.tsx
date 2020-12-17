@@ -60,6 +60,17 @@ const PostCardList = ({ posts }) => (
         />
       </Grid>
     ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/blog/" variant="h6">
+          View all posts &gt;
+        </Link>
+      </Box>
+    </Grid>
   </Grid>
 )
 
@@ -131,11 +142,11 @@ const NotFound = ({ data }) => {
           variant="h4"
           component="h2"
           gutterBottom
-          aria-label="Join one of Ben's upcoming minishops"
+          aria-label="Read one of Ben's recent blog posts"
         >
-          Upcoming minishops
+          Recent posts
         </Typography>
-        <MinishopList minishops={minishops} />
+        <PostCardList posts={recentPosts} />
       </Box>
 
       <Divider variant="middle" className={classes.divider} />
@@ -145,11 +156,11 @@ const NotFound = ({ data }) => {
           variant="h4"
           component="h2"
           gutterBottom
-          aria-label="Read one of Ben's recent blog posts"
+          aria-label="Join one of Ben's upcoming minishops"
         >
-          Recent posts
+          Upcoming minishops
         </Typography>
-        <PostCardList posts={recentPosts} />
+        <MinishopList minishops={minishops} />
       </Box>
     </Layout>
   )
