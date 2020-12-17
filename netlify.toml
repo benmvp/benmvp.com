@@ -12,6 +12,11 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
 
+[[headers]]
+  for = "/blog/rss.xml"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
 # Remap pretty /api/* to ugly /.netlify/functions/*
 [[redirects]]
   from = "/api/*"
