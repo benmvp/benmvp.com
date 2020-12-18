@@ -61,8 +61,8 @@ const useStyles = makeStyles((theme) => {
 })
 
 type Status =
-  | null
-  | 'loading'
+  | { state: 'inactive' }
+  | { state: 'loading' }
   | { state: 'success'; message: string }
   | { state: 'error'; message: string }
 
@@ -70,16 +70,16 @@ const SubscribeForm = () => {
   const classes = useStyles()
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
-  const [status, setStatus] = useState<Status>(null)
+  const [status, setStatus] = useState<Status>({ state: 'inactive' })
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
-    if (status === 'loading') {
+    if (status.state === 'loading') {
       return
     }
 
-    setStatus('loading')
+    setStatus({ state: 'loading' })
 
     try {
       await addSubscriber({ email, firstName, referrer: window.location.href })
@@ -118,10 +118,15 @@ const SubscribeForm = () => {
         Get notified about new blog posts, minishops &amp; other goodies
       </Typography>
 
-      <Collapse in={!!status && status !== 'loading'}>
+      <Collapse in={status.state === 'success' || status.state === 'error'}>
         <Box mt={1}>
-          <Alert severity={status?.state} onClose={() => setStatus(null)}>
-            {status?.message}
+          <Alert
+            severity={status.state === 'success' ? 'success' : 'error'}
+            onClose={() => setStatus({ state: 'inactive' })}
+          >
+            {status.state === 'success' || status.state === 'error'
+              ? status.message
+              : ''}
           </Alert>
         </Box>
       </Collapse>
@@ -171,7 +176,7 @@ const SubscribeForm = () => {
           variant="contained"
           color="primary"
           endIcon={
-            status === 'loading' ? (
+            status.state === 'loading' ? (
               <CircularProgress color="inherit" size={20} />
             ) : (
               <SendIcon />
