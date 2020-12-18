@@ -101,6 +101,10 @@
         "time": "11:30a PDT",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=MBrOX6gS4C8"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/reactsummit/typescript.html"
           }
