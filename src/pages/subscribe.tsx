@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import SubscribeForm from '../components/SubscribeForm'
+import Share from '../components/Share'
 import { getUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
 
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) =>
     },
     promise: {
       marginTop: theme.spacing(4),
+      marginBottom: theme.spacing(4),
       textAlign: 'center',
     },
   }),
@@ -23,6 +25,7 @@ const useStyles = makeStyles((theme) =>
 const PAGE_TITLE = 'Subscribe to the BenMVP Newsletter'
 const PAGE_DESCRIPTION =
   'Get notified about new blog posts, upcoming minishops & other goodies by Ben Ilegbodu'
+const PAGE_URL = getUrl('subscribe')
 const SEO_IMAGE_URL = generateSocialImage({
   title: PAGE_TITLE,
   tagline: PAGE_DESCRIPTION,
@@ -34,7 +37,7 @@ const Subscribe = () => {
   return (
     <Layout includeSubscribe={false}>
       <Seo
-        url={getUrl('subscribe')}
+        url={PAGE_URL}
         title={PAGE_TITLE}
         description={PAGE_DESCRIPTION}
         image={SEO_IMAGE_URL}
@@ -72,11 +75,12 @@ const Subscribe = () => {
 
       <Box maxWidth="500px" mx="auto" mt={4}>
         <SubscribeForm />
-
         <Typography variant="body2" className={classes.promise}>
           I will <strong>not</strong> sell your email address to spammers (or
           anyone), I promise.
         </Typography>
+
+        <Share url={PAGE_URL} title={PAGE_TITLE} summary={PAGE_DESCRIPTION} />
       </Box>
     </Layout>
   )
