@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) =>
       `,
 
       [theme.breakpoints.up('sm')]: {
-        gridTemplateColumns: '1fr 1fr',
+        gridTemplateColumns: 'auto 1fr',
         gridTemplateRows: '1fr auto 1fr',
         gridTemplateAreas: `
           "subscribe links"
@@ -78,9 +78,11 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
       mt={5}
     >
       <Container maxWidth={maxWidth} className={classes.root}>
-        <Box className={classes.subscribe}>
-          <SubscribeForm />
-        </Box>
+        {includeSubscribe && (
+          <Box className={classes.subscribe}>
+            <SubscribeForm />
+          </Box>
+        )}
         <Typography variant="body1" align="center" className={classes.links}>
           {LINKS.map(({ to, title }, index) => (
             <Fragment key={to}>

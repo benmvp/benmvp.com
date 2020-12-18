@@ -49,7 +49,7 @@ interface Props {
   summary: string
   tags?: string[]
   title: string
-  type: 'minishop' | 'post'
+  type?: 'minishop' | 'post'
   url: string
 }
 

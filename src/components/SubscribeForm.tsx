@@ -9,6 +9,7 @@ import {
   InputAdornment,
   Paper,
   Collapse,
+  CircularProgress,
 } from '@material-ui/core'
 import { Alert } from '@material-ui/lab'
 import Bugsnag from '@bugsnag/js'
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme) => {
 
 type Status =
   | null
+  | 'loading'
   | { state: 'success'; message: string }
   | { state: 'error'; message: string }
 
@@ -72,7 +74,12 @@ const SubscribeForm = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    setStatus(null)
+
+    if (status === 'loading') {
+      return
+    }
+
+    setStatus('loading')
 
     try {
       await addSubscriber({ email, firstName, referrer: window.location.href })
@@ -108,10 +115,10 @@ const SubscribeForm = () => {
         Subscribe to the Newsletter
       </Typography>
       <Typography variant="body1" gutterBottom>
-        Get notified about new blog posts, minishops &amp; other events
+        Get notified about new blog posts, minishops &amp; other goodies
       </Typography>
 
-      <Collapse in={!!status}>
+      <Collapse in={!!status && status !== 'loading'}>
         <Box mt={1}>
           <Alert severity={status?.state} onClose={() => setStatus(null)}>
             {status?.message}
@@ -163,7 +170,13 @@ const SubscribeForm = () => {
           type="submit"
           variant="contained"
           color="primary"
-          endIcon={<SendIcon />}
+          endIcon={
+            status === 'loading' ? (
+              <CircularProgress color="inherit" size={20} />
+            ) : (
+              <SendIcon />
+            )
+          }
           className={classes.button}
         >
           Subscribe
