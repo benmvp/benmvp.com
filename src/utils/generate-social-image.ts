@@ -17,6 +17,9 @@ interface Config {
   taglineFontSize?: number
 }
 
+const escape = (text: string): string =>
+  encodeURIComponent(encodeURIComponent(text))
+
 const generateSocialImage = ({
   title,
   tagline,
@@ -51,9 +54,7 @@ const generateSocialImage = ({
     'g_south_west',
     `x_${textLeftOffset}`,
     `y_${titleBottomOffset}`,
-    `l_text:${encodeURIComponent(
-      titleFont,
-    )}_${titleFontSize}_bold:${encodeURIComponent(title)}`,
+    `l_text:${escape(titleFont)}_${titleFontSize}_bold:${escape(title)}`,
   ].join(',')
 
   // configure the tagline text
@@ -65,9 +66,9 @@ const generateSocialImage = ({
         'g_north_west',
         `x_${textLeftOffset}`,
         `y_${taglineTopOffset}`,
-        `l_text:${encodeURIComponent(
-          taglineFont,
-        )}_${taglineFontSize}_light:${encodeURIComponent(tagline)}`,
+        `l_text:${escape(taglineFont)}_${taglineFontSize}_light:${escape(
+          tagline,
+        )}`,
       ].join(',')
     : ''
 
