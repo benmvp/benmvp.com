@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) =>
 
 const PAGE_TITLE = 'Subscribe to the BenMVP Newsletter'
 const PAGE_DESCRIPTION =
-  'Get notified about new blog posts, upcoming minishops & other goodies by Ben Ilegbodu'
+  'Get notified about new web frontend development blog posts, upcoming minishops & other goodies by Ben Ilegbodu'
 const PAGE_URL = getUrl('subscribe')
 const SEO_IMAGE_URL = generateSocialImage({
   title: PAGE_TITLE,
@@ -56,9 +56,10 @@ const Subscribe = () => {
           <a href="https://www.divops.dev/" target="_blank" rel="noreferrer">
             &quot;divops&quot;
           </a>{' '}
-          and other related technologies based on what I'm learning or questions
-          that I'm asked. <strong>Get notified of my new blog posts</strong>{' '}
-          when they are published.
+          and other related web frontend technologies based on what I'm learning
+          or questions that I'm asked.{' '}
+          <strong>Get notified of my new blog posts</strong> when they are
+          published.
         </Typography>
         <Typography component="li">
           I host short 3.5-hour workshops (called{' '}
