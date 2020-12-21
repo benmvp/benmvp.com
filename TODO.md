@@ -18,7 +18,7 @@
   - frontend skills, JavaScript skills, development skills, React skills
 - [ ] Speaker rider (like https://github.com/cassidoo/talks/blob/master/speaker-rider.md)
 - [ ] Breadcrumbs (to easily jump to category pages like /minishops/ or /blog/)
-- [ ] Newsletter
+- [x] Newsletter
 - [x] Google AdSense
 - [ ] Recent blog posts in blog post footer
 
