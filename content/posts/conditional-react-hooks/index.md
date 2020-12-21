@@ -14,6 +14,8 @@ published: false
   - Short explanation why
 - But there are ways around it!
 - Wrapping the hook in a conditionally rendered component
+  - using a render prop somehow?
   - https://twitter.com/TkDodo/status/1330492854628708364
+- https://goodguydaniel.com/blog/call-react-hooks-inside-condition
 
 Keep learning my friends. 🤓

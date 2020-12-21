@@ -10,4 +10,7 @@ category: template
 published: false
 ---
 
+- https://linguinecode.com/post/4-techniques-conditional-render-react-props-state
+- https://reactjs.org/docs/conditional-rendering.html
+
 Keep learning my friends. 🤓
