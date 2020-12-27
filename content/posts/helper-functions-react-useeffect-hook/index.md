@@ -112,7 +112,7 @@ This time instead of the error being on the `useEffect` dependencies list, it’
 
 The error provides two suggested options, but I've found that many developers are not quite sure which option is best for their situation. So they'll do _anything_ to get the error to go away. I've even seen them go nuclear and turn off the `react-hooks/exhaustive-deps` rule altogether, which is probably the worst option. By disabling it, they now allow bugs to creep into their other uses of `useEffect` when they forget to add non-function dependencies.
 
-So I wanted to provide a couple of options to solve this problem of helper functions within the useEffect hook **without having to disable the `react-hooks/exhaustive-deps` rule**. And also explain in which situation(s) the option would work best.
+So I wanted to provide a couple of options to solve this problem of helper functions within the `useEffect` hook **without having to disable the `react-hooks/exhaustive-deps` rule**. And also explain in which situation(s) the option would work best.
 
 ## Option 1 - Don’t use a helper function
 
