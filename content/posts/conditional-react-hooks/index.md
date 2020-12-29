@@ -63,8 +63,8 @@ One way to work around the rule is to use what I call the "call but ignore" appr
 const Overlay = ({ show, children, onClose }) => {
   const rootRef = useRef(null)
 
-  // `useClickAway` is always called, but we ignore
-  // the callback function
+  // `useClickAway` is always called, but we only
+  // use the callback when `show` is `true`
   useClickAway(rootRef, () => {
     if (show) {
       console.log('clicked outside')
@@ -161,7 +161,7 @@ const PageTitle = ({ title }) => {
 const Example = ({ team }) => {
   return (
     <section>
-      {team.name ?? <PageTitle title={team.name} />}
+      {team.name && <PageTitle title={team.name} />}
       <h1>{team.name}</h1>
       { ... }
     </section>
@@ -169,7 +169,7 @@ const Example = ({ team }) => {
 }
 ```
 
-So again, the `PageTitle` component is a "renderless" component by returning `null`. And it only calls the `useTitle` Hook with the `title` prop. And now that `Example` has a component to work with, it can conditionally render `<PageTitle>` based on `team.name` not being `null` or `undefined` (making use of [nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) by the way).
+So again, the `PageTitle` component is a "renderless" component by returning `null`. And it only calls the `useTitle` Hook with the `title` prop. And now that `Example` has a component to work with, it can conditionally render `<PageTitle>` based on `team.name` not being `null` or `undefined`.
 
 How about one more example before we wrap up? Both the `useClickAway` and `useTitle` Hooks don't return any data so their "renderless" component wrappers have rather simple interfaces. However, **if you have a Hook that returns data AND you still want to conditionally render it**, your component wrapper will still be "renderless," but in a slightly different way.
 
