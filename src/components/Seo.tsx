@@ -12,7 +12,7 @@ interface Props {
   imageAlt?: string
   lang?: string
   meta?: Meta[]
-  schemaOrg?: any
+  schemaOrg?: Record<string, unknown>
   title?: string
   type?: string
   url: string
