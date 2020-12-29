@@ -1,7 +1,7 @@
 ---
 date: 2020-12-27
 title: Conditional React Hooks
-shortDescription: How to conditionally call a React Hook while still calling Hooks at the top level
+shortDescription: How to conditionally call a custom React Hook that you can't modify & avoid breaking Hooks rules
 category: react
 tags: [react, hooks]
 hero: ./wrapping-paper-hello-sunday-nIV5aY7JOBk-unsplash.jpg
@@ -15,7 +15,7 @@ But no matter how good an abstraction is, there are always [abstraction leaks](h
 
 We can't call Hooks inside of conditionals, loops, or nested functions in order to ensure that Hooks are called in the same order each time a component renders. The order is important for how React [associates Hook calls](https://reactjs.org/docs/hooks-faq.html#how-does-react-associate-hook-calls-with-components) with components. So if we conditionally render a hook, for instance, **the order of the Hooks could change between renders of a component**, completely messing up the Hooks system.
 
-Sometimes, though, despite the rules, we do want to conditionally call a React Hook. Let's learn how to be rule breakers. 😎
+Sometimes, though, despite the rules, we do want to conditionally call a React Hook, especially when we don't have access to the implementation of a custom hook. Let's learn how to be rule breakers. 😎
 
 ---
 
@@ -53,7 +53,7 @@ call a React Hook after an early return?
 
 Thanks ESLint! Although the Hooks are called at the top level, they are still conditionally called because they won't be called if the `show` prop is `false`.
 
-So how do we solve this problem? How can we avoid breaking Hooks yet make our `Overlay` component as it should?
+So how do we solve this problem? We can't change the implementation of `useClickAway` to take an additional `enabled` parameter, so how can we avoid breaking Hooks yet make our `Overlay` component work as it should?
 
 ## Call but ignore
 
