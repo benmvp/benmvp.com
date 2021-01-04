@@ -1,7 +1,7 @@
 ---
 date: 2021-01-03
 title: Object & array dependencies in the React useEffect Hook
-shortDescription: Four options for optimizing the useEffect Hook with object or array dependencies
+shortDescription: Four options for optimizing the useEffect Hook with object or array dependencies in React
 category: react
 tags: [react, hooks, customHooks, javascript]
 hero: ./three-doors-sebastian-herrmann-AY3cdYQJ4xU-unsplash.jpg
