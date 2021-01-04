@@ -34,7 +34,7 @@ const Post = ({ data }) => {
   })
 
   return (
-    <Layout showAds>
+    <Layout showAds includeSubscribe={false}>
       <Seo
         title={title}
         description={summary}

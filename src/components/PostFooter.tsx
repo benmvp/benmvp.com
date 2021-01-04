@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core'
 import Share from './Share'
 import PostBio from './PostBio'
+import SubscribeForm from './SubscribeForm'
 
 interface Props {
   className?: string
@@ -40,9 +41,17 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
         tags={tags}
         type="post"
       />
+
+      <Box mx="auto" mt={2} mb={4} maxWidth="350px">
+        <SubscribeForm />
+      </Box>
+
       <Divider className={classes.divider} variant="middle" />
+
       <PostBio />
+
       <Divider className={classes.divider} variant="middle" />
+
       <Typography align="center" variant="h6" component="p">
         <Link
           href={`https://twitter.com/search?q=${url}`}
