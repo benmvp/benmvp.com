@@ -13,9 +13,9 @@ Hooks launched in React with [v16.8](https://reactjs.org/blog/2019/02/06/react-v
 
 But no matter how good an abstraction is, there are always [abstraction leaks](https://en.wikipedia.org/wiki/Leaky_abstraction) and it's no different with React Hooks. I alluded to one in my post on dealing with [helper functions in the `useEffect` Hook](/blog/helper-functions-react-useeffect-hook/). Another one of those leaks is that **we can only call Hooks at the top level of our React function components**.
 
-We can't call Hooks inside of conditionals, loops, or nested functions in order to ensure that Hooks are called in the same order each time a component renders. The order is important for how React [associates Hook calls](https://reactjs.org/docs/hooks-faq.html#how-does-react-associate-hook-calls-with-components) with components. So if we conditionally render a hook, for instance, **the order of the Hooks could change between renders of a component**, completely messing up the Hooks system.
+We can't call Hooks inside of conditionals, loops, or nested functions in order to ensure that Hooks are called in the same order each time a component renders. The order is important for how React [associates Hook calls](https://reactjs.org/docs/hooks-faq.html#how-does-react-associate-hook-calls-with-components) with components. So if we conditionally render a Hook, for instance, **the order of the Hooks could change between renders of a component**, completely messing up the Hooks system.
 
-Sometimes, though, despite the rules, we do want to conditionally call a React Hook, especially when we don't have access to the implementation of a custom hook. Let's learn how to be rule breakers. 😎
+Sometimes, though, despite the rules, we do want to conditionally call a React Hook, especially when we don't have access to the implementation of a custom Hook. Let's learn how to be rule breakers. 😎
 
 ---
 
