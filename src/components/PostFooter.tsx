@@ -42,7 +42,7 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
         type="post"
       />
 
-      <Box mx="auto" mt={2} mb={4} maxWidth="350px">
+      <Box mx="auto" mt={2} mb={4} maxWidth="500px">
         <SubscribeForm />
       </Box>
 
