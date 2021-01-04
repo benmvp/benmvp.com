@@ -281,7 +281,6 @@ Instead of using the `useMemo` Hook, we can (ab)use the `useRef` Hook.
 import React, { useState, useEffect, useRef } from 'react'
 // highlight-next-line
 import isDeepEqual from 'fast-deep-equal/react'
-import { createTeam } from '../utils'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
 
