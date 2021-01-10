@@ -10,8 +10,13 @@ category: template
 published: false
 ---
 
+- Have you ever run into X problem?
+  - const assertions can solve it!
 - Useful for
   - custom hooks
   - enums in big data
+- https://mariusschulz.com/blog/const-assertions-in-literal-expressions-in-typescript
+- "typescript string literal string error"
+- SO: https://stackoverflow.com/questions/50762772/typescript-why-cant-this-string-literal-type-be-inferred
 
 Keep learning my friends. 🤓
