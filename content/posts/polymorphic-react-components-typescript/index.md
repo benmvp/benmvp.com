@@ -166,7 +166,7 @@ interface Props<C extends React.ElementType> {
 }
 ```
 
-In addition to the `children`, `color`, `font`, and `size` props which are "normal" we have the optional `as` prop which is of a generic type. I like think of generics as "parameterized types." So the type of `as` is the parameter `C`, which is determined by the value the caller passes for `as`. This makes our `Props` generic or parameterized.
+In addition to the `children`, `color`, `font`, and `size` props which are "normal" we have the optional `as` prop which is of a generic type. I like to think of generics as "parameterized types." So the type of `as` is the parameter `C`, which is determined by the value the caller passes for `as`. This makes our `Props` generic or parameterized.
 
 Now `C` can't be any ol' type, or even any `string`. We've restricted the type of `C` to types that "extend" [`React.ElementType`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L73-L77). The definition for `React.ElementType` is basically **"any valid HTML element or another React component."** So `'label'` can be a valid value for `as` because it is extends `React.ElementType`. But `'ben'` (sadly) is not a valid value.
 
