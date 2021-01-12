@@ -62,11 +62,11 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
         </Link>
         {' // '}
         <Link
-          href={`https://github.com/benmvp/benmvp.com/edit/master/content/posts${slug}index.md`}
+          href={`https://github.com/benmvp/benmvp.com/edit/main/content/posts${slug}index.md`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Edit on Github
+          Edit on GitHub
         </Link>
       </Typography>
     </Box>
