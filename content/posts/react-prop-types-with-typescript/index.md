@@ -18,7 +18,7 @@ Below are mappings from `PropTypes` to TypeScript types that you can use as a re
 Prop types:
 
 ```js
-MyComponent.propTypes = {
+Example.propTypes = {
   message: PropTypes.string,
   count: PropTypes.number,
   disabled: PropTypes.bool,
@@ -42,14 +42,14 @@ interface Props {
 Prop types:
 
 ```js
-MyComponent.propTypes = {
+Example.propTypes = {
   error: PropTypes.instanceOf(Error),
   children: PropTypes.node,
-  status: PropTypes.oneOf(['inactive', 'inProgress', 'success', 'failed'])
+  status: PropTypes.oneOf(['inactive', 'inProgress', 'success', 'failed']),
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.instanceOf(Error)
+    PropTypes.instanceOf(Error),
   ]),
 }
 ```
@@ -70,7 +70,7 @@ interface Props {
 Prop types:
 
 ```js
-MyComponent.propTypes = {
+Example.propTypes = {
   style: PropTypes.shape({
     color: PropTypes.string,
     fontSize: PropTypes.number,
@@ -137,7 +137,7 @@ interface Props {
 Prop types:
 
 ```js
-MyComponent.propTypes = {
+Example.propTypes = {
   onClick: PropTypes.func,
   onChange: PropTypes.func,
   onSelect: PropTypes.func,
@@ -163,7 +163,7 @@ Don't forget! With `PropTypes`, the props are all optional by default and you ha
 Prop Types:
 
 ```js
-MyComponent.propTypes = {
+Example.propTypes = {
   description: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
 }

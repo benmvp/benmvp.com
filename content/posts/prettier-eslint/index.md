@@ -15,6 +15,8 @@ published: false
 - prettier config
 - Add to eslint (use airbnb config if you don't already have one)
   - this is the crux
+  - it is an eslint rule
+  - also turns off competing eslint rules
   - `--fix` formats w/ prettier!
 - Editor extensions
   - VS Code prettier auto-format
