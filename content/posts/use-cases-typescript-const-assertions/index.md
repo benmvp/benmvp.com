@@ -36,7 +36,7 @@ const DEFAULT_NBA_OPTIONS = {
   level: 'team',
 }
 
-notify('James Harden traded to the Nets', DEFAULT_NBA_OPTIONS)
+notify('James Harden traded to the Nets 😢', DEFAULT_NBA_OPTIONS)
 // ❌ TS Error!
 // Argument of type '{ sport: string; level: string; }'
 // is not assignable to parameter of type
@@ -46,10 +46,12 @@ notify('James Harden traded to the Nets', DEFAULT_NBA_OPTIONS)
 //    '"all" | "player" | "team" | "sport"'.
 ```
 
+> Curious about the use of `unknown`? Read [When to use TypeScript `unknown` vs `any`](/blog/when-use-typescript-unknown-versus-any/).
+
 The problem is that even though we defined `DEFAULT_NBA_OPTIONS` with a `level` of `'team'`, when the object gets passed to `notify()` the type of `level` is `string` which can't be assigned to the string union type `'player' | 'team' | 'sport' | 'all'`. Interestingly enough, if we pass the object inline, it works:
 
 ```typescript
-notify('James Harden traded to the Nets', {
+notify('James Harden traded to the Nets 😢', {
   sport: 'nba',
   // highlight-next-line
   level: 'team',
@@ -68,7 +70,7 @@ const DEFAULT_NBA_OPTIONS = {
   // highlight-next-line
 } as const
 
-notify('James Harden traded to the Nets', DEFAULT_NBA_OPTIONS)
+notify('James Harden traded to the Nets 😢', DEFAULT_NBA_OPTIONS)
 ```
 
 The const assertion takes the type of `DEFAULT_NBA_OPTIONS` from being:
@@ -145,5 +147,7 @@ The order is correct, the length is fixed, and the array is read-only. 🎉
 ---
 
 Usually the need for const assertions can be avoided by being very specific with the types of our objects, arrays or return values. But declaring specific types can sometimes be onerous or even infeasible. It's nice to be able to rely on TypeScript's type inference. Const assertions provide an additional "hint" to TypeScript so that it can infer correctly.
+
+I mentioned earlier that there are several ways to solve the original type error I showed. What approaches have you used to solve it? I'm very curious to find out. 😄 Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
 Keep learning my friends. 🤓
