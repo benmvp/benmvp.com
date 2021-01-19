@@ -52,8 +52,8 @@ const Menu = ({ open, onClose }: MenuProps) => (
     <Box width="250px">
       <List component="nav" aria-label="main site navigation links">
         {NAV_LINKS.map(({ to, title, label }) => (
-          <ListItem key={title} aria-label={label} underline="none">
-            <Link to={to}>
+          <ListItem key={title} aria-label={label}>
+            <Link to={to} style={{ width: '100%' }}>
               <ListItemText
                 primaryTypographyProps={{
                   color: 'textPrimary',
