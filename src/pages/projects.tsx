@@ -14,6 +14,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import { getUrl } from '../utils'
+import generateSocialImage from '../utils/generate-social-image'
 import SITE_CONFIG from '../../config/site'
 
 const PROJECTS = [
@@ -153,13 +154,23 @@ const ProjectCard = ({
   )
 }
 
+const SEO_PAGE_TITLE = 'Dev Projects by Ben'
+const SEO_PAGE_DESCRIPTION =
+  "Check out Ben Ilegbodu's active and past web frontend development projects"
+const SEO_IMAGE_URL = generateSocialImage({
+  title: SEO_PAGE_TITLE,
+  tagline: SEO_PAGE_DESCRIPTION,
+})
+
 const Projects = () => {
   return (
     <Layout>
       <Seo
         url={getUrl('projects')}
         title="Dev Projects"
-        description="Ben Ilegbodu's development projects"
+        description={SEO_PAGE_DESCRIPTION}
+        image={SEO_IMAGE_URL}
+        imageAlt={SEO_PAGE_TITLE}
       />
       <PageHeader
         title="Dev Projects"
