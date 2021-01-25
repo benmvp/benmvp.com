@@ -1,6 +1,6 @@
 ---
 date: 2021-12-17
-title: Dealing with async React effects after unmount
+title: React useMemo & useCallback use cases
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: template
 # tags: [react, hooks]
