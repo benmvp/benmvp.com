@@ -22,7 +22,7 @@ const Adder = () => {
   const handleSubmit = (data) => {
     submitNewItem(data)
       .then((newItem) => {
-        setItems((prevItems) => [...prevItems, newItems])
+        setItems((prevItems) => [...prevItems, newItem])
       })
   }
 
@@ -109,7 +109,7 @@ test('new item is added to the UI when the form is successfully submitted', (don
     component.update()
     expect(component.find('[data-testid="adder-items"]')).toHaveLength(1)
 
-    // have to call done here to let Jest know the test is done
+    // have to call `done` here to let Jest know the test is done
     done()
   })
   // highlight-end
@@ -184,9 +184,7 @@ jest.mock('../utils')
 // test is now `async`
 test('new item is added to the UI when the form is successfully submitted', async () => {
   // highlight-end
-  submitNewItem.mockImplementationOnce(() =>
-    Promise.resolve({ id: 14, title: 'Gucci sneakers' }),
-  )
+  submitNewItem.mockResolvedValueOnce({ id: 14, title: 'Gucci sneakers' })
 
   const component = mount(<Adder />)
   const preventDefault = jest.fn()
@@ -205,7 +203,7 @@ test('new item is added to the UI when the form is successfully submitted', asyn
   })
   // highlight-end
 
-  // more tests here
+  // more assertions here
 })
 ```
 

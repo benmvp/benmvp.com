@@ -24,6 +24,9 @@ published: false
     - fails to format when there's a syntax error so it's immediate feedback
   - VS Code eslint
 - Git hooks
+  - Prettier has some configurations (single quotes, semi, etc)
+    - But hardest part may be getting your co-workers to get onboard w/ opinions
+    - Using a git hook basically makes it so they can write however they like, but what's committed is a consistent format
   - Husky + lint-staged
 
 Keep learning my friends. 🤓
