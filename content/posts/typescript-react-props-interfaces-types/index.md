@@ -11,8 +11,18 @@ published: false
 ---
 
 - More or less the same
-- Both can extend just with different syntaxes
+  - 95% of the time they are interchangeable for the simple cases
+  - TS says to use `interface` by default so that's what I do
+- Both can define an object
+- Both can extend
+- Both can use generics
 - Complex prop relationships will use types
-- There is one little difference...
+  - discriminated unions
+  - See other posts
+- There is one little difference for each
+  - interfaces cannot extend union types
+  - type intersection name collisions cause problems
+    - Use interface
+    - Use `Omit<>`
 
 Keep learning my friends. 🤓
