@@ -82,7 +82,7 @@ const Share = ({
         {options.has('twitter') && (
           <TwitterShareButton
             url={formatUrl(socialUrl, { utm_source: 'twitter' })}
-            title={title}
+            title={`${title} - ${summary}`}
             via={SITE_CONFIG.twitterHandle}
             hashtags={tags || []}
             aria-label="Share on Twitter"
