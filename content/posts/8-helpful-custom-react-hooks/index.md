@@ -529,7 +529,7 @@ const Team = ({ team }) => {
 
 Because the `useDeepCompareEffect` Hook is a wrapper around the basic `useEffect` Hook, it acts like a drop-in replacement for `useEffect`. Our code looks almost identical. However, we probably wouldn't want to use `useDeepCompareEffect` all the time because it's definitely slower than normal `useEffect` because of the deep comparison checks. But in spot cases, it'll definitely come in handy.
 
-Also, if you use [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) for linting your React Hooks code (which I hope you do), you'll have to update the [`react-hooks/exhaustive deps`](https://www.npmjs.com/package/eslint-plugin-react-hooks#advanced-configuration) rule to include `useDeepCompareEffect` in the `additionalHooks` configuration. This way you'll still be warned if you forget to list a dependency.
+Also, if you use [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) for linting your React Hooks code (which I hope you do), you'll have to update the [`react-hooks/exhaustive-deps`](https://www.npmjs.com/package/eslint-plugin-react-hooks#advanced-configuration) rule to include `useDeepCompareEffect` in the `additionalHooks` configuration. This way you'll still be warned if you forget to list a dependency.
 
 The implementation in TypeScript mirrors the type API of `useEffect`:
 
@@ -557,7 +557,7 @@ The `react-use` package has a similar [`useDeepCompareEffect`](https://github.co
 
 ---
 
-So that's it! 😅 There are literally an infinite number of custom Hooks that we can create. But these are 8 custom Hooks that I found particularly interesting and/or especially helpful.
+So that's it! 😅 There are literally an infinite number of custom Hooks that we can create. But these are 8 custom Hooks that I found especially helpful or particularly interesting.
 
 What custom Hooks do you find yourself using all the time? I'd love to know! Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp) to let me know!
 
