@@ -12,6 +12,8 @@ published: false
 
 - Talking about internal-only
   - Public ones have to be anything & everything to everyone
+- Non-obvious things
+  - Design system checklist: https://designsystemchecklist.com/
 
 1. Design team **must** drive the process and be bought-in otherwise don't bother (see previous post)
 1. Box & Text components

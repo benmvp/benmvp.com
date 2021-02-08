@@ -174,7 +174,7 @@ const useMountedState = () => {
     return () => {
       mountedRef.current = false
     }
-  })
+  }, [])
 
   // highlight-next-line
   return isMounted
