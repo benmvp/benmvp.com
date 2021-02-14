@@ -241,7 +241,7 @@ const Input = ({ value, id, onChange, ...otherProps }) => {
 }
 ```
 
-With object destructuring, we can also change the name of the variable created and even use computed keys. For more on object destructuring, take a look at my [Destructuring](/blog/learning-es6-destructuring/) post. For more on destructured parameters, you can read my [Parameter handling](https://www.benmvp.com/blog/learning-es6-parameter-handling/) post.
+With object destructuring, we can also change the name of the variable created and even use computed keys. For more on object destructuring, take a look at my [Destructuring](/blog/learning-es6-destructuring/) post. For more on destructured parameters, you can read my [Parameter handling](/blog/learning-es6-parameter-handling/) post.
 
 ## 7. Spread operator
 

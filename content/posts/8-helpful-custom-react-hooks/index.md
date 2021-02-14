@@ -221,7 +221,7 @@ const NavMenu = ({ items }) => {
 
 Once again we get to use a previously created custom Hook (`useInitialMount`) to help build a new Hook.
 
-React actually had a proposal for a built-in Hook to solve this exact problem and ensure the ID generated client-side matched the one generated server-side. It was called `useOpaqueIdentifier`. Not sure what exactly happened to it and why it hasn't been released, but I wrote about it last year in post entitled [New React useOpaqueIdentifier hook coming soon](https://www.benmvp.com/blog/new-react-use-opaque-identifier-hook-coming-soon/). Lesson learned. 😂
+React actually had a proposal for a built-in Hook to solve this exact problem and ensure the ID generated client-side matched the one generated server-side. It was called `useOpaqueIdentifier`. Not sure what exactly happened to it and why it hasn't been released, but I wrote about it last year in post entitled [New React useOpaqueIdentifier hook coming soon](/blog/new-react-use-opaque-identifier-hook-coming-soon/). Lesson learned. 😂
 
 ---
 
