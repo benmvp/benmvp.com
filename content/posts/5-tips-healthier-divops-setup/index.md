@@ -153,4 +153,6 @@ If you are starting a new greenfield project, **I cannot stress enough how benef
 
 But even if you're working on a "brownfield" project, putting in the effort to do some code custodial work will prove beneficial in the long run. With these configurations activated, you will also be able to offload policing to the "robot." It can be the bad cop telling folks they're doing something wrong instead of you!
 
+What other DivOps settings do you use to improve the health of your codebases? I'd love to learn even more tips. Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp) to let me know!
+
 Keep learning my friends. 🤓
