@@ -71,8 +71,16 @@ The good thing is that these warnings and errors are written to the console duri
 Just like we set up ESLint to fail if there are any warning-level violations, we can do the same with Jest. It's just a lot less straightforward. The Jest configuration file supports the [`setupFilesAfterEnv`](https://jestjs.io/docs/en/configuration#setupfilesafterenv-array) config, which is a list of paths to modules that run code to set up the testing framework before each test file in the suite executes. We can write a little bit of additional code to cause a test to fail if any code writes to `console.warn` or `console.error`:
 
 ```js
-// jest.setup.js
+// jest.config.js (main config)
+module.exports = {
+  clearMocks: true,
+  setupFilesAfterEnv: ['./jest.setup.js'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'babel-jest',
+  },
+}
 
+// jest.setup.js (extra setup file)
 const CONSOLE_FAIL_TYPES = ['error', 'warn']
 
 // Throw errors when a `console.error` or
@@ -100,7 +108,7 @@ This means that our asynchronous tests have a much higher likelihood of false po
 Instead of having to add `expect.hasAssertions()` at the beginning of every test or even every test suite, we can add it to our setup file:
 
 ```js
-// jest.setup.js
+// jest.setup.js (extra setup file)
 
 // Throw errors when a `console.error` or
 // `console.warn` happens
