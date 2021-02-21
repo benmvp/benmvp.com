@@ -53,6 +53,19 @@ const PROJECTS = [
     ),
   },
   {
+    title: 'NBA Player Tiers',
+    url: 'https://player-tiers.vercel.app/',
+    imageUrl: '/projects/nba-logo.jpg',
+    inProgress: true,
+    description: (
+      <>
+        A fun app for NBA fans to rank who they believe are the top 25 players
+        in the NBA. It's built with NextJS, Material-UI &amp; Firebase, running
+        on Vercel.
+      </>
+    ),
+  },
+  {
     title: '@benmvp/cli',
     url: 'https://github.com/benmvp/benmvp-cli/',
     imageUrl: '/projects/npm-logo-red.png',
@@ -116,6 +129,7 @@ const useStyles = makeStyles(({ breakpoints }) =>
 interface ProjectCardProps {
   description: ReactNode
   imageUrl: string
+  inProgress?: boolean
   title: string
   url: string
 }
@@ -123,6 +137,7 @@ interface ProjectCardProps {
 const ProjectCard = ({
   description,
   imageUrl,
+  inProgress = false,
   title,
   url,
 }: ProjectCardProps) => {
@@ -143,6 +158,12 @@ const ProjectCard = ({
           <CardContent>
             <Typography component="h1" variant="h4">
               <Link href={url}>{title}</Link>
+              {inProgress && (
+                <Typography component="span" variant="h6">
+                  {' '}
+                  (in-progress)
+                </Typography>
+              )}
             </Typography>
             <Typography variant="body1" color="textSecondary">
               {description}
