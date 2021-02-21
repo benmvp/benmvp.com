@@ -56,7 +56,7 @@ const PROJECTS = [
     title: 'NBA Player Tiers',
     url: 'https://player-tiers.vercel.app/',
     imageUrl: '/projects/nba-logo.jpg',
-    inProgress: true,
+    preLaunch: true,
     description: (
       <>
         A fun app for NBA fans to rank who they believe are the top 25 players
@@ -129,7 +129,7 @@ const useStyles = makeStyles(({ breakpoints }) =>
 interface ProjectCardProps {
   description: ReactNode
   imageUrl: string
-  inProgress?: boolean
+  preLaunch?: boolean
   title: string
   url: string
 }
@@ -137,7 +137,7 @@ interface ProjectCardProps {
 const ProjectCard = ({
   description,
   imageUrl,
-  inProgress = false,
+  preLaunch = false,
   title,
   url,
 }: ProjectCardProps) => {
@@ -158,10 +158,10 @@ const ProjectCard = ({
           <CardContent>
             <Typography component="h1" variant="h4">
               <Link href={url}>{title}</Link>
-              {inProgress && (
+              {preLaunch && (
                 <Typography component="span" variant="h6">
                   {' '}
-                  (in-progress)
+                  (pre launch)
                 </Typography>
               )}
             </Typography>
