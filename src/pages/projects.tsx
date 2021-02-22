@@ -144,32 +144,30 @@ const ProjectCard = ({
   const classes = useStyles()
 
   return (
-    <Card component="section">
-      <Box className={classes.layout}>
-        <CardActionArea component="a" href={url} className={classes.imageLink}>
-          <CardMedia
-            className={classes.image}
-            component="img"
-            image={imageUrl}
-            title={title}
-          />
-        </CardActionArea>
-        <Box flex="1">
-          <CardContent>
-            <Typography component="h1" variant="h4">
-              <Link href={url}>{title}</Link>
-              {preLaunch && (
-                <Typography component="span" variant="h6">
-                  {' '}
-                  (pre launch)
-                </Typography>
-              )}
-            </Typography>
-            <Typography variant="body1" color="textSecondary">
-              {description}
-            </Typography>
-          </CardContent>
-        </Box>
+    <Card component="section" className={classes.layout}>
+      <CardActionArea component="a" href={url} className={classes.imageLink}>
+        <CardMedia
+          className={classes.image}
+          component="img"
+          image={imageUrl}
+          title={title}
+        />
+      </CardActionArea>
+      <Box flex="1">
+        <CardContent>
+          <Typography component="h1" variant="h4">
+            <Link href={url}>{title}</Link>
+            {preLaunch && (
+              <Typography component="span" variant="h6">
+                {' '}
+                (pre launch)
+              </Typography>
+            )}
+          </Typography>
+          <Typography variant="body1" color="textSecondary">
+            {description}
+          </Typography>
+        </CardContent>
       </Box>
     </Card>
   )
