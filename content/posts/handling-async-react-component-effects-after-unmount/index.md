@@ -216,7 +216,7 @@ const useSafeAsync = () => {
   const isMounted = useMountedState()
   // highlight-start
   const safeAsync = useCallback((promise) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       promise.then((value) => {
         if (isMounted()) {
           resolve(value)
