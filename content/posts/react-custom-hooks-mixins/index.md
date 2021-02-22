@@ -1,5 +1,5 @@
 ---
-date: 2021-12-17
+date: 2021-02-21
 title: React custom Hooks vs. Mixins
 shortDescription: How Mixins are surprisingly similar to custom Hooks for sharing stateful, non-visual logic
 category: react
