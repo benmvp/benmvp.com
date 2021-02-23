@@ -178,7 +178,7 @@ const PlayerPicker = () => {
 }
 ```
 
-The `usePlayers` Hook and the `PlayersMixins` _are_ pretty similar. In a way, **custom Hooks are mixins done well.**
+The `usePlayers` Hook and the `PlayersMixins` _are_ pretty similar. In a way, **custom Hooks are Mixins done well.**
 
 The main difference between the two is that dependencies are explicit with Hooks versus implicit with Mixins. The `allPlayers` data available in `PlayerPicker` comes from calling `usePlayers`, instead of magically being in `state` because it mixed in `PlayersMixin`. Similarly, `usePlayers` explicitly gets the `safeAsync` function from `useSafeAsync` as opposed to `PlayersMixin` implicitly receiving the `safeAsync` method from `SafeAsyncMixin`.
 
