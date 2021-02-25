@@ -12,9 +12,14 @@ published: false
 
 - Wrap `useReducer` with call to `useLocalStorage`
 - Wrap `reducer` with memoized function that sets value
-- `usePersistedReducer`
+- `usePersistReducer`
 - Show example w/o `useLocalStorage` Hook (vanilla)
 - Show example w/ TS
   - Link to the `useReducer` + TS post
+- Links
+  - https://codesandbox.io/s/ko2632k52r
+  - https://gist.github.com/mattiaerre/8dbd2d8efca3f242c7085a9ce82ecbde
+  - https://stackoverflow.com/questions/64547044/persist-localstorage-with-usereducer
+  - https://www.google.com/search?q=usereducer+localstorage
 
 Keep learning my friends. 🤓

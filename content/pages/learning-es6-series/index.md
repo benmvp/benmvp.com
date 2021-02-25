@@ -176,7 +176,7 @@ console.log(join('//', 'one', 'two', 'three'))
 We should no longer need the `apply` function with the new spread operator:
 
 ```js
-function video(width, length, height) {
+function volume(width, length, height) {
   return width * length * height
 }
 
