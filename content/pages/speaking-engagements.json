@@ -11,6 +11,23 @@
     ]
   },
   {
+    "name": "C000000DE",
+    "url": "https://twitter.com/HenriHelvetica/status/1357805286623490048",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "typescript-react",
+        "date": "02/27/2021",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2021/c000000de/ts-react.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Global React Meetup November 2020",
     "url": "https://www.reactjsmeetup.com/#/global-react-meetup-november-2020",
     "location": "Remote",
