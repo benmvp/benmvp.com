@@ -128,6 +128,7 @@ The [`useLocalStorage`](https://github.com/streamich/react-use/blob/master/docs/
 ```js
 const usePersistReducer = () => {
   const [savedState, setSavedState] = useState(() => {
+    // initialize state w/ existing value saved in `localStorage`
     try {
       const localStorageValue = localStorage.getItem(LOCAL_STORAGE_KEY)
 
