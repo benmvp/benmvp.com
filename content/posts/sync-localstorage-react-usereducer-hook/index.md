@@ -59,6 +59,8 @@ const usePersistReducer = () => {
 }
 
 const Example = () => {
+  // return value from `usePersistReducer` is identical
+  // to `useReducer`
   const [state, dispatch] = usePersistReducer()
 
   // render UI based on `state`
@@ -126,32 +128,30 @@ I mention it in the code comments earlier, but we must memoize `reducerLocalStor
 The [`useLocalStorage`](https://github.com/streamich/react-use/blob/master/docs/useLocalStorage.md) Hook from the [`react-use`](https://github.com/streamich/react-use) library of helpful custom Hooks does a lot for us. But if you can't use it (or don't want to use it), we can create a `usePersistReducer` without it.
 
 ```js
-const usePersistReducer = () => {
-  const [savedState, setSavedState] = useState(() => {
-    // initialize state w/ existing value saved in `localStorage`
-    try {
-      const localStorageValue = localStorage.getItem(LOCAL_STORAGE_KEY)
+const init = () => {
+  // initialize state w/ existing value saved in `localStorage`
+  try {
+    const localStorageValue = localStorage.getItem(LOCAL_STORAGE_KEY)
 
-      if (localStorageValue !== null) {
-        // if there's an existing value in `localStorage`,
-        // parse it and return it to be initial value of
-        // `savedState`
-        return JSON.parse(localStorageValue)
-      } else {
-        // if no existing value exists, we'll use `INITIAL_STATE`.
-        // but sync this backup value to `localStorage` first
-        localStorage.setItem(LOCAL_STORAGE_KEY, INITIAL_STATE)
-
-        return INITIAL_STATE
-      }
-    } catch {
-      // if user is in incognito mode, `localStorage` access
-      // will throw an error. if the value is malformed JSON
-      // `JSON.parse` will throw an error as well
-      return INITIAL_STATE
+    if (localStorageValue !== null) {
+      // if there's an existing value in `localStorage`,
+      // parse it and return it to be initial reducer state
+      return JSON.parse(localStorageValue)
+    } else {
+      // if no existing value exists, we'll use `INITIAL_STATE`.
+      // but sync this backup value to `localStorage` first
+      localStorage.setItem(LOCAL_STORAGE_KEY, INITIAL_STATE)
     }
-  })
+  } catch {
+    // if user is in incognito mode, `localStorage` access
+    // will throw an error. if the value is malformed JSON
+    // `JSON.parse` will throw an error as well
+  }
 
+  return INITIAL_STATE
+}
+
+const usePersistReducer = () => {
   // Wrap `reducer` with a memoized function that
   // syncs the `newState` to `localStorage` before
   // returning `newState`. Memoizing is important!
@@ -162,9 +162,6 @@ const usePersistReducer = () => {
       try {
         // store new state in local storage
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newState))
-
-        // update saved state w/ newly stored state
-        setSavedState(newState)
       } catch {
         // if user is in incognito mode, `localStorage` access
         // will throw an error. The state could fail to stringify
@@ -173,14 +170,15 @@ const usePersistReducer = () => {
 
       return newState
     },
-    [LOCAL_STORAGE_KEY, newState],
+    [LOCAL_STORAGE_KEY],
   )
 
-  return useReducer(reducerLocalStorage, savedState)
+  // use `init` function to initialize state from `localStorage`
+  return useReducer(reducerLocalStorage, undefined, init)
 }
 ```
 
-As you can see it's not quite as "clean." The storage retrieval/updating is mixed in with the reducer wrapping. I guess we could've created our own `useLocalStorage`. But anyway, this is still better than having all of this code within the component itself.
+As you can see it's not quite as "clean." The storage retrieval/updating is separated in two places. I guess we could've created our own `useLocalStorage`. But anyway, this is still better than having all of this code within the component itself.
 
 ## With TypeScript
 
