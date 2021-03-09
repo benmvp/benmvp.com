@@ -2,7 +2,7 @@
 date: 2021-03-07
 title: Auto-generate React PropTypes from TypeScript components
 shortDescription: A helper to convert TypeScript types for a React component library into PropTypes for legacy JavaScript apps
-category: react
+category: divops
 tags: [react, typescript, designSystem]
 hero: ./volvo-interior-markus-spiske-9vA4T6GBZAk-unsplash.jpg
 heroAlt: Interior of an old school Volvo
