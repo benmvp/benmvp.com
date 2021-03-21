@@ -9,7 +9,7 @@ heroAlt: Old white home telephone next to a new Android smartphone
 heroCredit: 'Photo by [Martin Widenka](https://unsplash.com/@widenka)'
 ---
 
-The last couple of weeks, I've been working on my latest project, [NBA Player Tiers](https://player-tiers.vercel.app/) (very much still in-progress). I wrote this custom Hook to retrieve NBA player information from a [Firestore](https://firebase.google.com/products/firestore) DB. It's composed of other custom Hooks and it just makes me giddy.
+The last couple of weeks, I've been working on my latest project, [NBA Player Tiers](https://nbaplayertiers.com/) (very much still in-progress). I wrote this custom Hook to retrieve NBA player information from a [Firestore](https://firebase.google.com/products/firestore) DB. It's composed of other custom Hooks and it just makes me giddy.
 
 ```js
 import { useEffect, useState } from 'react'

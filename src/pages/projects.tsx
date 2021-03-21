@@ -54,7 +54,7 @@ const PROJECTS = [
   },
   {
     title: 'NBA Player Tiers',
-    url: 'https://player-tiers.vercel.app/',
+    url: 'https://nbaplayertiers.com/',
     imageUrl: '/projects/nba-logo.jpg',
     preLaunch: true,
     description: (
