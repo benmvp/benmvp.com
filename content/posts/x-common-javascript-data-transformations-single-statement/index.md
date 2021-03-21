@@ -1,7 +1,7 @@
 ---
 date: 2021-12-17
 title: X common JavaScript data transformations in a single statement
-# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
+shortDescription: Reduce our reliance on lodash by leveraging ESNext APIs
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
@@ -12,7 +12,7 @@ published: false
 
 - "Rules":
   - No using lodash (the whole point)
-  - Skipping the obvious new ES functionality (like `.find()`)
+  - Skipping the obvious new ES functionality (like `.find()`, object spread)
   - No mutations
   - Single top-level statement (chaining and/or inner functions are fine)
 - Transforms
