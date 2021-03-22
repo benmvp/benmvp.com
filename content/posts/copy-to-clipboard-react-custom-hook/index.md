@@ -16,6 +16,12 @@ The `Clipboard` interface has a [`writeText()`](https://developer.mozilla.org/en
 ```javascript
 const useCopyToClipboard = (text, notifyTimeout = 2500) => {
   const [copyStatus, setCopyStatus] = useState('inactive')
+  const copy = useCallback(() => {
+    navigator.clipboard.writeText(text).then(
+      () => setCopyStatus('copied'),
+      () => setCopyStatus('failed'),
+    )
+  }, [text])
 
   useEffect(() => {
     if (copyStatus === 'inactive') {
@@ -26,13 +32,6 @@ const useCopyToClipboard = (text, notifyTimeout = 2500) => {
 
     return () => clearTimeout(timeoutId)
   }, [copyStatus])
-
-  const copy = useCallback(() => {
-    navigator.clipboard.writeText(text).then(
-      () => setCopyStatus('copied'),
-      () => setCopyStatus('failed'),
-    )
-  }, [text])
 
   return [copyStatus, copy]
 }
@@ -60,6 +59,20 @@ const [copyStatus, setCopyStatus] = useState('inactive')
 We use the [`useState` Hook](https://reactjs.org/docs/hooks-state.html) to maintain the copy status. It's one of `'inactive'` (the default state), `'success'` (after a successful write to the clipboard) and `'failed'` (after a failed write to the clipboard).
 
 ```js
+const copy = useCallback(() => {
+  // highlight-next-line
+  navigator.clipboard.writeText(text).then(
+    () => setCopyStatus('copied'),
+    () => setCopyStatus('failed'),
+  )
+}, [text])
+```
+
+We create a copy function that we'll return (along with the `copyStatus`) from our custom Hook. The UI calls this function when the user wants to copy the text (usually a button click). When the user copies the text, we call `clipboard.writeText()`, and change the `copyStatus` to `'success'` or `'failed'` depending on the outcome.
+
+Our `useCopyToClipboard` Hook is re-executed every time that the component re-renders. We don't want to create a new function reference each time. Functions returned by custom Hooks often are passed as props to child components. If these functions are recreated with each re-render, they could cause unnecessary re-renders of the child components. As a result, **it's typically good practice to ensure that functions returned by custom Hooks have stable references**. And we create stable references by memoizing the functions using the [`useCallback` Hook](https://reactjs.org/docs/hooks-reference.html#usecallback).
+
+```js
 useEffect(() => {
   if (copyStatus === 'inactive') {
     return
@@ -72,21 +85,7 @@ useEffect(() => {
 }, [copyStatus])
 ```
 
-When the user copies the text, the `copyStatus` changes to `'success'` or `'failed'` and the `useCopyToClipboard` Hook will returns this state to the component. However, we want the user to be able to copy again, so the Hook cannot remain in the `'success'` or `'failed'` state. The [`useEffect` Hook](https://reactjs.org/docs/hooks-effect.html) here sets a timeout for how long our custom Hook remains in the its state before returning to the default `'inactive'` state.
-
-```js
-const copy = useCallback(() => {
-  // highlight-next-line
-  navigator.clipboard.writeText(text).then(
-    () => setCopyStatus('copied'),
-    () => setCopyStatus('failed'),
-  )
-}, [text])
-```
-
-Finally the actual use of `clipboard.writeText()`. We create a copy function that we'll return (along with the copy status) from our custom Hook. The UI calls this function when the user wants to copy the text (usually a button click).
-
-Our `useCopyToClipboard` Hook is re-executed every time that the component re-renders. We don't want to create a new function reference each time. Functions returned by custom Hooks often are passed as props to child components. If these functions are recreated with each re-render, they could cause unnecessary re-renders of the child components. As a result, **it's typically good practice to ensure that functions returned by custom Hooks have stable references**. And we create stable references by memoizing the functions using the [`useCallback` Hook](https://reactjs.org/docs/hooks-reference.html#usecallback).
+The user may want to copy again, so we need a way to reset the `copyStatus`. The [`useEffect` Hook](https://reactjs.org/docs/hooks-effect.html) here sets a timeout for how long our custom Hook remains in the its `'success'` or `'failed'` state before automatically returning to the default `'inactive'` state.
 
 ```js
 return [copyStatus, copy]
@@ -111,9 +110,9 @@ const CopyUrlButton = ({ url }) => {
 }
 ```
 
-Within a component, we pass the text we want copied as a parameter to `useCopyToClipboard`. If the app provides UI for copying different pieces of text, we need multiple calls to `useCopyToClipboard`. Each has their own `copyStatus` and `copy` function. The component can create whatever UI it likes based on the `copyStatus`.
+Within a component, we pass the text we want copied as a parameter to `useCopyToClipboard`. If the app provides UI for copying different pieces of text, we need multiple calls to `useCopyToClipboard`. Each one has its own `copyStatus` and `copy` function.
 
-In this example, the `CopyUrlButton` component uses the `copyUrlStatus` to control the button text. After the text is copied, the button text is `'Copied'` or `'Copy failed'`, depending on the success or failure of the clipboard write. But after the timeout, the text returns to `'Copy URL'`. Clicking the button, triggers its `onClick` prop, which is the `copyUrl` function.
+The component can create whatever UI it likes based on the `copyStatus`. In this example, the `CopyUrlButton` component uses the `copyUrlStatus` to control the button text. After the text is copied, the button text is `'Copied'` or `'Copy failed'`, depending on the success or failure of the clipboard write. But after the timeout, the text returns to `'Copy URL'`. Clicking the button, triggers its `onClick` prop, which is the `copyUrl` function.
 
 That's it!
 
@@ -131,6 +130,12 @@ const useCopyToClipboard = (
 ): [CopyStatus, () => void] => {
   const [copyStatus, setCopyStatus] = useState<CopyStatus>('inactive')
   // highlight-end
+  const copy = useCallback(() => {
+    navigator.clipboard.writeText(text).then(
+      () => setCopyStatus('copied'),
+      () => setCopyStatus('failed'),
+    )
+  }, [text])
 
   useEffect(() => {
     if (copyStatus === 'inactive') {
@@ -141,13 +146,6 @@ const useCopyToClipboard = (
 
     return () => clearTimeout(timeoutId)
   }, [copyStatus])
-
-  const copy = useCallback(() => {
-    navigator.clipboard.writeText(text).then(
-      () => setCopyStatus('copied'),
-      () => setCopyStatus('failed'),
-    )
-  }, [text])
 
   return [copyStatus, copy]
 }
