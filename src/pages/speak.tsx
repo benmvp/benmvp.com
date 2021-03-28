@@ -81,21 +81,25 @@ const SpeakingEngagements = ({ data }) => {
         <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
       </Typography>
 
-      <Grid container spacing={2}>
-        <Grid item xs={12} className={classes.year}>
-          <Typography id="upcoming" variant="h3">
-            Upcoming
-          </Typography>
-        </Grid>
+      {futureEngagements.length > 0 && (
+        <>
+          <Grid container spacing={2}>
+            <Grid item xs={12} className={classes.year}>
+              <Typography id="upcoming" variant="h3">
+                Upcoming
+              </Typography>
+            </Grid>
 
-        {futureEngagements.map((engagement) => (
-          <Grid key={engagement.id} item xs={12}>
-            <SpeakCard {...engagement} />
+            {futureEngagements.map((engagement) => (
+              <Grid key={engagement.id} item xs={12}>
+                <SpeakCard {...engagement} />
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
 
-      {futureEngagements.length > 0 && <Divider className={classes.divider} />}
+          <Divider className={classes.divider} />
+        </>
+      )}
 
       <Grid container spacing={2}>
         {pastEngagements.map((engagement) => {

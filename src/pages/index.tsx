@@ -190,17 +190,19 @@ export default ({ data }) => {
         <VideoCardList />
       </Box>
 
-      <Box component="section" className={classes.section}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Attend one of Ben's future tech talks"
-        >
-          Attend
-        </Typography>
-        <SpeakCardList />
-      </Box>
+      {UPCOMING_ENGAGEMENTS.length > 0 && (
+        <Box component="section" className={classes.section}>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Attend one of Ben's future tech talks"
+          >
+            Attend
+          </Typography>
+          <SpeakCardList />
+        </Box>
+      )}
 
       <Box component="section" className={classes.section}>
         <Typography
