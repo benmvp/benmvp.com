@@ -6,7 +6,13 @@
     "talks": [
       {
         "id": "perfect-lib",
-        "date": "03/30/2021"
+        "date": "03/30/2021",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2021/os101/perfect-lib.html"
+          }
+        ]
       }
     ]
   },
