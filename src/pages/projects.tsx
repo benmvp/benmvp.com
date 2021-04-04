@@ -32,6 +32,18 @@ const PROJECTS = [
     ),
   },
   {
+    title: 'NBA Player Tiers',
+    url: 'https://nbaplayertiers.com/',
+    imageUrl: 'https://nbaplayertiers.com/logo/wordmark-bg.png',
+    description: (
+      <>
+        A fun app for NBA fans to rank who they believe are the top 25 players
+        in the NBA. Fans can publish their "ladders" and share them. It's built
+        with NextJS, Material-UI &amp; Firebase, running on Vercel.
+      </>
+    ),
+  },
+  {
     title: 'Rep Yo City',
     url: 'https://repyo.city',
     imageUrl: 'https://repyo.city/logos/wordmark.png',
@@ -49,19 +61,6 @@ const PROJECTS = [
         countries from around the world on shirts, mugs, hats, bags and many
         other types of products. It's built with NextJS &amp; Material-UI,
         running on Vercel.
-      </>
-    ),
-  },
-  {
-    title: 'NBA Player Tiers',
-    url: 'https://nbaplayertiers.com/',
-    imageUrl: '/projects/nba-logo.jpg',
-    preLaunch: true,
-    description: (
-      <>
-        A fun app for NBA fans to rank who they believe are the top 25 players
-        in the NBA. It's built with NextJS, Material-UI &amp; Firebase, running
-        on Vercel.
       </>
     ),
   },
