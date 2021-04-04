@@ -66,6 +66,10 @@
         "time": "9am PST",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.infoq.com/presentations/react-custom-hooks/"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2020/qconplus/mixins-hooks.html"
           }
