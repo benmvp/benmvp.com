@@ -161,7 +161,7 @@ A similar algorithm can be used to recreate [`_.union`](https://lodash.com/docs/
 const GROUP_A = [24, 64, 24, 42, 23, 55, 12, 42, 37, 35]
 const GROUP_B = [24, 55, 62, 23, 57, 472, 5, 48]
 
-const uniqueAges = [...new Set([...GROUP_A, GROUP_B])]
+const allUniqueAges = [...new Set([...GROUP_A, ...GROUP_B])]
 // => [24, 64, 42, 23, 55, 12, 37, 35, 62, 57, 472, 5, 48]
 ```
 
@@ -183,7 +183,7 @@ const TEAMS = {
   CHI: 'Chicago Bulls',
   CLE: 'Cleveland Cavaliers',
   CHA: 'Charlotte Hornets',
-  // ...
+  // ...other 24 teams
 }
 const IDS = ['ATL', 'CHI', 'CHA']
 
@@ -203,6 +203,7 @@ const REMAINING_TEAMS = Object.fromEntries(
 // BOS: 'Boston Celtics',
 // BKN: 'Brooklyn Nets',
 // CLE: 'Cleveland Cavaliers',
+// ...other 24 teams
 // }
 ```
 
