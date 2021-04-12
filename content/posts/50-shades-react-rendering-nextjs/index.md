@@ -360,4 +360,6 @@ Now, the home page will be re-rendered (in the background) at most once per hour
 
 There are also various configurations we can combine to create an even more hybrid rendering strategy. What I really like about Next.js is how it streamlines the effort of moving between the different rendering modes.
 
+If you wanna chat more about Next.js feel free to reach out on Twitter at [@benmvp](https://twitter.com/benmvp).
+
 Keep learning my friends. 🤓
