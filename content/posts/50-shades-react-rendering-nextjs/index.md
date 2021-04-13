@@ -181,7 +181,7 @@ export const getStaticPaths = async () => {
   const popularProducts = getPopularProducts(50)
 
   return {
-    // any paths listed here will be rendered at build time
+    // any paths listed here will be pre-rendered at build time
     paths: popularProducts.map((product) => ({
       params: {
         id: product.id,
@@ -200,8 +200,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const product = await getProduct(params.id)
 
-  // if no product was found (bad ID), display
-  // 404 page
+  // if no product was found (bad ID), display 404 page
   // highlight-start
   if (!product) {
     return {
@@ -210,7 +209,7 @@ export const getStaticProps = async ({ params }) => {
   }
   // highlight-end
 
-  // pass product to the `ProductPage` component as props
+  // pass `product` to the `ProductPage` component as props
   return {
     props: {
       product,
@@ -253,7 +252,7 @@ export const getStaticPaths = async () => {
   const popularProducts = getPopularProducts(50)
 
   return {
-    // any paths listed here will be rendered at build time
+    // any paths listed here will be pre-rendered at build time
     paths: popularProducts.map((product) => ({
       params: {
         id: product.id,
@@ -274,15 +273,14 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const product = await getProduct(params.id)
 
-  // if no product was found (bad ID), display
-  // 404 page
+  // if no product was found (bad ID), display 404 page
   if (!product) {
     return {
       notFound: true,
     }
   }
 
-  // pass product to the `ProductPage` component as props
+  // pass `product` to the `ProductPage` component as props
   return {
     props: {
       product,
@@ -350,6 +348,8 @@ const HomePage = ({ recentShipments }) => {
     </div>
   )
 }
+
+export default HomePage
 ```
 
 Now, the home page will be re-rendered (in the background) at most once per hour. If new shipments have happened within the last hour, the newly rendered home page will now display them. **And this is all without having to rebuild and redeploy the app.** While Next is re-rendering the page, active requests receive the currently cached page. Next returns the newly rendered page once re-rendering is complete.
