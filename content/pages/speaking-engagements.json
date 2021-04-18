@@ -9,6 +9,10 @@
         "date": "03/30/2021",
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=wA77sWwdQZo"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2021/os101/perfect-lib.html"
           }
