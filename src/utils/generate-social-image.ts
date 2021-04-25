@@ -10,8 +10,8 @@ interface Config {
   imageHeight?: number
   textAreaWidth?: number
   textLeftOffset?: number
-  titleBottomOffset?: number
-  taglineTopOffset?: number
+  titleTopOffset?: number
+  taglineBottomOffset?: number
   textColor?: string
   titleFontSize?: number
   taglineFontSize?: number
@@ -23,16 +23,16 @@ const escape = (text: string): string =>
 const generateSocialImage = ({
   title,
   tagline,
-  imagePublicID = 'benmvp/blog-post-template_xz3hus',
-  version = 'v1601530635',
+  imagePublicID = 'benmvp/blog-post-template_gkpzgc',
+  version = 'v1619329795',
   titleFont = 'roboto',
   taglineFont = 'roboto',
   imageWidth = 1280,
   imageHeight = 669,
   textAreaWidth = 666,
   textLeftOffset = 550,
-  titleBottomOffset = 327,
-  taglineTopOffset = 370,
+  titleTopOffset = 64,
+  taglineBottomOffset = 64,
   textColor = 'ffffff',
   titleFontSize = 70,
   taglineFontSize = 40,
@@ -47,25 +47,27 @@ const generateSocialImage = ({
   ].join(',')
 
   // configure the title text
+  // starts at the top and grows downward
   const titleConfig = [
     `w_${textAreaWidth}`,
     'c_fit',
     `co_rgb:${textColor}`,
-    'g_south_west',
+    'g_north_west',
     `x_${textLeftOffset}`,
-    `y_${titleBottomOffset}`,
+    `y_${titleTopOffset}`,
     `l_text:${escape(titleFont)}_${titleFontSize}_bold:${escape(title)}`,
   ].join(',')
 
   // configure the tagline text
+  // starts at the bottom and grows upward
   const taglineConfig = tagline
     ? [
         `w_${textAreaWidth}`,
         'c_fit',
         `co_rgb:${textColor}`,
-        'g_north_west',
+        'g_south_west',
         `x_${textLeftOffset}`,
-        `y_${taglineTopOffset}`,
+        `y_${taglineBottomOffset}`,
         `l_text:${escape(taglineFont)}_${taglineFontSize}_light:${escape(
           tagline,
         )}`,

@@ -28,5 +28,6 @@ published: false
 - Integrated it w/ client-side code
   - Not sure if it's okay to setup Bugsnag w/ both plugins
 - I use TS so here's the final code in TS
+- PR that helped: https://github.com/bugsnag/bugsnag-js/pull/885/files
 
 Keep learning my friends. 🤓
