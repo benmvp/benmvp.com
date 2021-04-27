@@ -38,8 +38,8 @@ const mockGetPlayers = getPlayers as jest.MockedFunction<typeof getPlayers>
 
 describe('getPlayerLadder', () => {
   it('returns a player ladder from a valid id', async () => {
-    // use the variables that are typed with the mock information
-    // instead of the originals
+    // use the variables that are typed with the additional
+    // mock information instead of the originals
     // highlight-start
     mockGetLadder.mockResolvedValue(MOCK_VALID_LADDER)
     mockGetPlayers.mockResolvedValue(MOCK_PLAYERS)
@@ -53,7 +53,7 @@ describe('getPlayerLadder', () => {
     expect(getPlayers).toHaveBeenCalledTimes(1)
     expect(getPlayers).toHaveBeenCalledWith(MOCK_PLAYER_IDS)
 
-    expect(player).toMatchSnapshot()
+    expect(playerLadder).toMatchSnapshot()
   })
 })
 ```
@@ -82,7 +82,7 @@ export const getPlayerLadder = async (id: LadderId) => {
 
   // replace each ID w/ the corresponding player info to
   // create a player ladder
-  const playerLader = makePlayerLadder(rawLadder, players)
+  const playerLadder = makePlayerLadder(rawLadder, players)
 
   return playerLadder
 }
@@ -123,7 +123,7 @@ describe('getPlayerLadder', () => {
     expect(getPlayers).toHaveBeenCalledTimes(1)
     expect(getPlayers).toHaveBeenCalledWith(MOCK_PLAYER_IDS)
 
-    expect(player).toMatchSnapshot()
+    expect(playerLadder).toMatchSnapshot()
   })
 })
 ```
@@ -187,7 +187,7 @@ describe('getPlayerLadder', () => {
     expect(getPlayers).toHaveBeenCalledTimes(1)
     expect(getPlayers).toHaveBeenCalledWith(MOCK_PLAYER_IDS)
 
-    expect(player).toMatchSnapshot()
+    expect(playerLadder).toMatchSnapshot()
   })
 })
 ```
