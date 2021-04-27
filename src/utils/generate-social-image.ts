@@ -1,6 +1,7 @@
 interface Config {
   title: string
   tagline?: string
+  date?: string
   imagePublicID?: string
   cloudName?: string
   version?: string | null
@@ -23,6 +24,7 @@ const escape = (text: string): string =>
 const generateSocialImage = ({
   title,
   tagline,
+  date,
   imagePublicID = 'benmvp/blog-post-template_gkpzgc',
   version = 'v1619329795',
   titleFont = 'roboto',
@@ -74,11 +76,26 @@ const generateSocialImage = ({
       ].join(',')
     : ''
 
+  // configure the date text
+  // beneath the logo
+  const dateConfig = date
+    ? [
+        `w_350`,
+        'c_fit',
+        `co_rgb:${textColor}`,
+        'g_south_west',
+        `x_64`,
+        `y_64`,
+        `l_text:${escape(taglineFont)}_${taglineFontSize}:${escape(date)}`,
+      ].join(',')
+    : ''
+
   // combine all the pieces required to generate a Cloudinary URL
   const urlParts = [
     imageConfig,
     titleConfig,
     taglineConfig,
+    dateConfig,
     version,
     imagePublicID,
   ]

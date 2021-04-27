@@ -31,6 +31,7 @@ const Post = ({ data }) => {
   const seoImageUrl = generateSocialImage({
     title,
     tagline: shortDescription,
+    date,
   })
 
   return (
