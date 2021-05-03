@@ -1,6 +1,6 @@
 ---
 date: 2021-12-17
-title: Create a dynamic sitemap with a NextJS API route
+title: Create a dynamic sitemap with a Next.js API route
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: template
 # tags: [react, hooks]
