@@ -68,7 +68,7 @@ The [`_.times()`](https://lodash.com/docs/4.17.15#times) Lodash utility function
 
 ```js
 _.times(5)
-// => [0, 1, 2, 3, 4, 5]
+// => [0, 1, 2, 3, 4]
 
 _.times(5, () => '')
 // => ['', '', '', '', '']
@@ -81,7 +81,7 @@ Since using Lodash of course breaks one of our rules, we can use [`Array.from`](
 
 ```js
 Array.from({ length: 5 }, (_, index) => index)
-// => [0, 1, 2, 3, 4, 5]
+// => [0, 1, 2, 3, 4]
 
 Array.from({ length: 5 }, () => '')
 // => ['', '', '', '', '']
