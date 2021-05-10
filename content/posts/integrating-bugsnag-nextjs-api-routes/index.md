@@ -1,7 +1,7 @@
 ---
 date: 2020-12-17
-title: Integrating Bugsnag in Next.js API routes
-# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
+title: Next.js server-side logging
+shortDescription: How to log errors from Next.js pre-rendering & API route to services like Bugsnag
 category: template
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
@@ -29,5 +29,9 @@ published: false
   - Not sure if it's okay to setup Bugsnag w/ both plugins
 - I use TS so here's the final code in TS
 - PR that helped: https://github.com/bugsnag/bugsnag-js/pull/885/files
+- Issues
+  - https://github.com/vercel/next.js/issues/1852
+  - https://github.com/vercel/next.js/issues/4808
+- Google search "nextjs server error logging"
 
 Keep learning my friends. 🤓
