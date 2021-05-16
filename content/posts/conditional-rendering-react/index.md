@@ -312,7 +312,7 @@ const Page = ({ results }) => {
         </When>
         <Otherwise>
           <p>There are no results to view.</p>
-        </Other>
+        </Otherwise>
       </Choose>
       // highlight-end
     </main>
