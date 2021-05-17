@@ -192,7 +192,7 @@ const Items = ({ maxItems }) => {
   // e.g: [1, 2, 3, ..., maxItems]
   const itemsUi = Array.from({ length: maxItems }, (_, index) => index + 1)
     // then map over the numbers to create array of JSX elements
-    .map((num) => items.push(<li key={num}>Item #{num}</li>))
+    .map((num) => <li key={num}>Item #{num}</li>)
   // highlight-end
 
   return <ul>{itemsUi}</ul>
