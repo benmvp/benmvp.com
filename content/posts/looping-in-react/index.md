@@ -38,7 +38,7 @@ const Teams = ({ teams }) => {
     </li>
   ))
 
-  return <ul>{teamsUi}</li>
+  return <ul>{teamsUi}</ul>
 }
 ```
 
@@ -59,7 +59,7 @@ const Teams = ({ teams }) => {
         </li>
       ))}
       // highlight-end
-    </li>
+    </ul>
   )
 }
 ```
@@ -71,7 +71,7 @@ const Teams = ({ teams }) => {
   const teamsUi = []
 
   // highlight-start
-  for (const team of teams) {
+  for (let team of teams) {
     teamsUi.push(
       <li key={team.name}>
         {team.name} ({team.abbreviation})
@@ -80,7 +80,7 @@ const Teams = ({ teams }) => {
   }
   // highlight-end
 
-  return <ul>{teamsUi}</li>
+  return <ul>{teamsUi}</ul>
 }
 ```
 
@@ -150,13 +150,13 @@ const Teams = ({ teams }) => {
   return (
     <ul>
       // highlight-next-line
-      <For each="team" of={teams}>
+      <For of={teams} each="team">
         <li key={team.name}>
           {team.name} ({team.abbreviation})
         </li>
         // highlight-next-line
       </For>
-    </li>
+    </ul>
   )
 }
 ```
