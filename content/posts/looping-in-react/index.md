@@ -175,7 +175,7 @@ const Items = ({ maxItems }) => {
 
   // highlight-start
   for (let i = 0; i < maxItems; i++) {
-    items.push(<li key={i}>Item #{i + 1}</li>)
+    itemsUi.push(<li key={i}>Item #{i + 1}</li>)
   }
   // highlight-end
 
