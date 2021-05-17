@@ -62,7 +62,7 @@ However, if we use type narrowing, like doing `typeof`/`instanceof` checks, comp
 
 ```typescript
 // typeof check
-if (typeof unknownData === 'object') {
+if (unknownData && typeof unknownData === 'object') {
   // ✅ TS knows `data` is an `object`
   // type now
   const dataKeys = Object.keys(unknownData)
