@@ -2,7 +2,7 @@
 date: 2020-12-17
 title: Next.js server-side logging
 shortDescription: How to log errors from Next.js pre-rendering & API route to services like Bugsnag
-category: template
+category: divops
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
 # heroAlt: Blue anchor stenciled on the wall
