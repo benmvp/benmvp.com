@@ -113,7 +113,7 @@ const Button = ({
 }
 ```
 
-**The placeholder props pattern allow the shared component to control its layout and any logic, but give some control to the parent on the display.** So for our `Button` component, the `startIcon` & `endIcon` props can be `<svg>` elements, `<img>` tags, or even other React components. `Button` doesn't know and it doesn't care. But it does still control the layout of the icons relative to the button contents.
+**The placeholder props pattern allows the shared component to control its layout and any logic, but give some control to the parent for the display.** So for our `Button` component, the `startIcon` & `endIcon` props can be `<svg>` elements, `<img>` tags, or even other React components. `Button` doesn't know and it doesn't care. But it does still control the layout of the icons relative to the button contents.
 
 ```js
 import { useState } from 'react'
@@ -229,7 +229,7 @@ const LinkPagination = ({ page = 1 }) => {
 
 So now instead of rendering `<button>` elements with the `Button` component, we are rendering `<a>` elements. And because the `Button` component will spread any additional props to the `<a>`, the `href` gets properly included with the `<a>`.
 
-**The polymorphic component pattern comes in handy when we need flexibility of the rendered element.** In fact, we could pass another React component as the `as` prop (such as the [`<Link>`](https://reactrouter.com/web/api/Link) from [`react-router`](https://reactrouter.com/web)).
+**The polymorphic component pattern comes in handy when we need flexibility on the rendered element.** For semantic HTML or accessibility reasons, we may need to change the root element. In fact, we could pass another React component as the `as` prop (such as the [`<Link>`](https://reactrouter.com/web/api/Link) from [`react-router`](https://reactrouter.com/web)).
 
 ```js
 import { Link } from 'react-router-dom'
