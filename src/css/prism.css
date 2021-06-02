@@ -42,6 +42,20 @@
   padding-left: 2.8em;
 }
 
+/* Hide the line numbers and shrink font size on small screens */
+@media (max-width: 767px) {
+  .gatsby-highlight pre[class*='language-'].line-numbers {
+    padding-left: 0;
+  }
+  .gatsby-highlight .line-numbers-rows {
+    display: none;
+  }
+  pre[class*='language-'],
+  code[class*='language-'] {
+    font-size: 0.75rem;
+  }
+}
+
 /* Copy button */
 .gatsby-code-button {
   margin-right: 1em;
