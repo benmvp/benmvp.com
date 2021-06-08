@@ -1,5 +1,5 @@
 ---
-date: 2021-06-05
+date: 2021-06-06
 title: Extracting TypeScript types from functions, objects & arrays
 shortDescription: Tips & tricks for reverse-engineering function, object & array TypeScript types from 3rd-party libraries that fail to export them
 category: typescript

@@ -487,7 +487,7 @@ const Page = () => {
     // highlight-start
     <Results
       items={products}
-      render={({ item, view }) => {
+      renderItem={({ item, view }) => {
         return view === 'grid' ? (
           <ProductGridItem product={item} />
         ) : (
