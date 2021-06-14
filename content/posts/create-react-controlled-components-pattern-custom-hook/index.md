@@ -122,7 +122,7 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
 }
 ```
 
-Don't worry about the length of the code. Over half of it is helpful warning messages. So what I want to do is break down this custom Hook to explain how it composes 6 built-in Hooks to provide the controlled component pattern.
+Don't worry too much about the length of the code. Over half of it is helpful warning messages. So what I want to do is break down this custom Hook to explain how it composes 6 built-in Hooks to provide the controlled component pattern.
 
 Before we begin the walk-through, this is how we'd use the `useControlled` custom Hook in our `Pagination` component:
 
@@ -389,7 +389,7 @@ As you can see, the TypeScript version isn't _that_ much different from the vani
 
 ---
 
-And that's all folks! I really like taking apart custom Hooks because it helps me understand the built-in Hooks better, especially the advanced ones (like `useRef` or `useCallback`). They give me ideas for more scenarios in which I can leverage them.
+And that's all folks! I really like taking apart React custom Hooks because it helps me understand the built-in Hooks better, especially the advanced ones (like `useRef` or `useCallback`). Custom Hooks give me ideas for more scenarios in which I can leverage the built in ones.ui
 
 Typically I need a shared component to be **only controlled** or **only uncontrolled**, not both. But when I do need it to be both, I use the controlled components pattern and this custom Hook. Have you had a case for using the controlled components pattern? Have you had to build components using it? I'd love to hear about it! Feel free to hit me up on Twitter at [@benmvp](https://twitter.com/benmvp).
 
