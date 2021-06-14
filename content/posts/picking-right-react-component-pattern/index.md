@@ -390,7 +390,7 @@ const Pagination = ({
 }
 ```
 
-The `Pagination` component now maintains the internal state for when it is uncontrolled, but doesn't use it when it is controlled (i.e. the `page` prop is specified).
+The `Pagination` component now maintains the internal state when it is uncontrolled, but doesn't use it when it is controlled (i.e. the `page` prop is specified).
 
 As we can see, the implementation is a bit complex, so it's best to only use the pattern when absolutely necessary. **The controlled components pattern gives the parent flexible control over the shared component's UI logic.** But typically we only need one or the other. When we need a shared interactive component to be controlled, we can make it controlled for all use cases. If parent components don't need to know the internal state of the shared component, make it always uncontrolled.
 
