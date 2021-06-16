@@ -389,7 +389,7 @@ As you can see, the TypeScript version isn't _that_ much different from the vani
 
 ---
 
-And that's all folks! I really like taking apart React custom Hooks because it helps me understand the built-in Hooks better, especially the advanced ones (like `useRef` or `useCallback`). Custom Hooks give me ideas for more scenarios in which I can leverage the built in ones.ui
+And that's all folks! I really like taking apart React custom Hooks because it helps me understand the built-in Hooks better, especially the advanced ones (like `useRef` or `useCallback`). Custom Hooks give me ideas for more scenarios in which I can leverage the built-in ones.
 
 Typically I need a shared component to be **only controlled** or **only uncontrolled**, not both. But when I do need it to be both, I use the controlled components pattern and this custom Hook. Have you had a case for using the controlled components pattern? Have you had to build components using it? I'd love to hear about it! Feel free to hit me up on Twitter at [@benmvp](https://twitter.com/benmvp).
 
