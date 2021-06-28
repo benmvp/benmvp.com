@@ -1,0 +1,156 @@
+---
+date: 2021-06-27
+title: Catch warnings in Jest tests
+shortDescription: How to configure Jest to fail tests on console warnings and errors
+category: divops
+tags: [divops, jest, testing, warnings]
+hero: ./hazard-sign-waldemar-brandt-F_yOvTzX8b4-unsplash.jpeg
+heroAlt: Brown hazard sign
+heroCredit: 'Photo by [Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w)'
+---
+
+Earlier in the year I wrote about [5 tips for a healthier DivOps setup](https://www.benmvp.com/blog/5-tips-healthier-divops-setup/). Well, guess what? I've got another tip for getting rid of warnings. Let's take a look.
+
+**Many JavaScript libraries write warnings or errors to the console to notify us of deprecations or other issues in our code** (as long as it's not the production build). React is a great example. The [`prop-types`](https://www.npmjs.com/package/prop-types) library performs runtime type checking for React props. It displays warnings in the console (i.e. `console.warn`) when the type checking fails for a component.
+
+Because these types of warnings are console warnings and not [thrown errors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw), **developers can easily miss (or ignore) these errors in the browser**. These warnings typically show up when running unit tests as well. There are many reasons why a developer will leave and not fix these warnings: time pressure, unfamiliarity with the codebase, laziness, unfamiliarity with frontend development, unwillingness to go off on a tangent, and many other valid reasons.
+
+So in order to save us from ourselves, I've started failing tests whenever there is a `console.warn` or `console.error`. **In my opinion, failing on warnings and/or errors creates a healthier codebase.** We can catch issues earlier like API deprecations, subtle errors in code, etc. I also have increased confidence when upgrading packages that if the tests pass that means that there are no problems. Lastly, it also ensures that after I've fixed all the warnings in a codebase, others cannot introduce new code or tests that cause new warnings.
+
+I exclusively use [Jest](https://jestjs.io/) for writing JavaScript unit tests, and unfortunately it doesn't yet have a configuration for failing on `console.warn` or `console.error`. So what I do is manually configure Jest to do so:
+
+```js
+// jest.setup.js
+
+const CONSOLE_FAIL_TYPES = ['error', 'warn']
+
+// Throw errors when a `console.error` or `console.warn` happens
+// by overriding the functions
+CONSOLE_FAIL_TYPES.forEach((type) => {
+  console[type] = (message) => {
+    throw new Error(
+      `Failing due to console.${type} while running test!\n\n${message}`,
+    )
+  }
+})
+```
+
+The above Jest setup code overwrites `console.warn` and `console.error` to new functions that throw an `Error` (along with the logged message). We probably don't want to fail on `console.log` because Jest uses log messages to write out the test results. 🙃
+
+Jest tests fail whenever an error is thrown (and not caught), so we've accomplished our goal. If while testing a component (using [React Testing Library](https://testing-library.com/docs/react-testing-library/) of course) a prop type check fails, we have an [invalid hook call](https://reactjs.org/warnings/invalid-hook-call-warning.html), or it doesn't pass [strict mode](https://reactjs.org/docs/strict-mode.html), the test will fail. **No more passing Jest test runs full of console warnings!** 🎉
+
+We can configure `jest.setup.js` with [`setupFilesAfterEnv`](https://jestjs.io/docs/configuration#setupfilesafterenv-array) in the main `jest.config.js` file.
+
+```js
+// jest.config.js
+
+module.exports = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+}
+```
+
+And now a test fails due to a `console.warn` (or `console.error`) or failing test looks something like:
+
+```shell
+FAIL  src/utils/player.test.ts
+  genLadderSlug
+    ✕ generates ID-only slug with empty title (13 ms)
+    ✓ generates slug with single-word title (2 ms)
+    ✓ generates slug with multi-word title (1 ms)
+
+  ● genLadderSlug › generates ID-only slug with empty title
+
+    # highlight-next-line
+    Failing due to console.warn while running test!
+
+    # highlight-next-line
+    Empty titles are deprecated. Support will be removed in v2.
+
+
+       9 | CONSOLE_FAIL_TYPES.forEach((type) => {
+      10 |   console[type] = (message) => {
+    > 11 |     throw new Error(
+         |           ^
+      12 |       `Failing due to console.${type} while running test!\n\n${message}`,
+      13 |     )
+      14 |   }
+
+      at console.warn (jest.setup.ts:11:11)
+      at genLadderSlug (src/utils/player.ts:25:13)
+      at Object.<anonymous> (src/utils/player.test.ts:6:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 passed, 11 total
+Snapshots:   0 total
+Time:        4.543 s, estimated 5 s
+```
+
+I've never been so excited to get a failing test. 😂 The failure includes both why the test failed as well as the original `console.warn` message.
+
+But as you can see the Jest failure points to our console-catching code, not the warning-causing code. That's going to be pretty confusing to someone unfamiliar with the setup. Hopefully, the call stack will give us enough clues as to where to look.
+
+However, **there is a library called [`jest-fail-on-console`](https://github.com/ricardo-ch/jest-fail-on-console)**, and its more robust implementation does a better job of surfacing console warnings and errors. The setup is even simpler too.
+
+```js
+// jest.setup.js
+
+const failOnConsole = require('jest-fail-on-console')
+
+failOnConsole()
+```
+
+We get the same failing test, but with some better messaging in my opinion.
+
+```shell
+FAIL  src/utils/player.test.ts
+  genLadderSlug
+    ✕ generates ID-only slug with empty title (16 ms)
+    ✓ generates slug with single-word title (1 ms)
+    ✓ generates slug with multi-word title
+
+  ● genLadderSlug › generates ID-only slug with empty title
+
+    # highlight-next-line
+    Expected test not to call console.warn().
+
+    # highlight-start
+    If the warning is expected, test for it explicitly by mocking
+    it out using jest.spyOn(console, 'warn') and test that the warning occurs.
+    # highlight-end
+
+    # highlight-next-line
+    Empty titles are deprecated. Support will be removed in v2.
+        at console.warn (/Users/benmvp/github/benmvp/player-tiers/node_modules/jest-fail-on-console/index.js:15:25)
+        at genLadderSlug (/Users/benmvp/github/benmvp/player-tiers/src/utils/player.ts:25:13)
+        at Object.<anonymous> (/Users/benmvp/github/benmvp/player-tiers/src/utils/player.test.ts:6:7)
+        at Object.asyncJestTest (/Users/benmvp/github/benmvp/player-tiers/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+        at /Users/benmvp/github/benmvp/player-tiers/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+        at new Promise (<anonymous>)
+        at mapper (/Users/benmvp/github/benmvp/player-tiers/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+        at /Users/benmvp/github/benmvp/player-tiers/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+        at processTicksAndRejections (internal/process/task_queues.js:93:5)
+
+      at flushUnexpectedConsoleCalls (node_modules/jest-fail-on-console/index.js:60:13)
+      at Object.flushAllUnexpectedConsoleCalls (node_modules/jest-fail-on-console/index.js:80:7)
+```
+
+> The terminal displays in helpful colors too but we can't see that here.
+
+**And what about if we're actually expecting the warning** and therefore we _don't_ want the test to fail? Then we need to explicitly mock the console warning using [`jest.spyOn`](https://jestjs.io/docs/jest-object#jestspyonobject-methodname).
+
+```js
+test('should log a warning', () => {
+  jest.spyOn(console, 'warn').mockImplementation()
+
+  // assert the expected warning
+  expect(console.warn).toHaveBeenCalledWith(
+    expect.stringContaining('Empty titles are deprecated.'),
+  )
+})
+```
+
+Not too bad, right? I have yet to regret adding this to every new codebase I start. I'm all about putting up as many automated guardrails and blockades as possible in order to funnel developers into doing the correct thing. It even catches me when I want to be lazy.
+
+What other DivOps setups do you use to improve the health of your code bases? I'd love to learn even more tips. Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp) to let me know!
+
+Keep learning my friends. 🤓
