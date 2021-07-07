@@ -59,8 +59,10 @@ import Welcome from './Welcome'
 
 test('has correct input value', () => {
   const { getByRole } = render(<Welcome firstName="John" lastName="Doe" />)
+  // highlight-next-line
+  const form = getByRole('form')
 
-  expect(getByRole('form')).toHaveFormValues({
+  expect(form).toHaveFormValues({
     firstName: 'John',
     lastName: 'Doe',
   })
@@ -82,8 +84,9 @@ test('has correct input value', async () => {
   const { container, getByRole } = render(
     <Welcome firstName="John" lastName="Doe" />,
   )
+  const form = getByRole('form')
 
-  expect(getByRole('form')).toHaveFormValues({
+  expect(form).toHaveFormValues({
     firstName: 'John',
     lastName: 'Doe',
   })
@@ -99,7 +102,7 @@ test('has correct input value', async () => {
 
 ## End-to-end testing
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source, automated tool for improving the quality of our web pages. We can run it against any web page and it produces audits for many features of a web page, including accessibility. We can run Lighthouse in [Chrome DevTools](https://developers.google.com/web/tools/lighthouse/#devtools) on an ad-hoc basis to test our web application. But as part of our automated end-to-end regression test on our website, **we can use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) to validate the accessibility of fully-rendered pages**.
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an open-source, automated tool for improving the quality of our web pages. We can run it against any web page and it produces audits for many features of a web page, including accessibility. We can run Lighthouse in [Chrome DevTools](https://developers.google.com/web/tools/lighthouse/#devtools) on an ad-hoc basis to test our web application. But as part of our automated end-to-end regression test on our website, **we can use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) to validate the accessibility of fully rendered pages**.
 
 Once we've connected to our CI Provider of choice (I'm a big fan of [Github Actions](https://docs.github.com/en/actions)), we can configure Lighthouse CI to fail if the accessibility score dips below a specified threshold. After generating the reports, Lighthouse CI uploads them to a temporary public storage and provides a URL to access them. If we don't want these reports publicly available we can also set up [Lighthouse CI server](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md#the-lighthouse-ci-server).
 
@@ -109,7 +112,7 @@ Once we've connected to our CI Provider of choice (I'm a big fan of [Github Acti
 
 ---
 
-While these 5 tools do lots to automate (and teach!) a lot of common accessibility mistakes, they don't replace testing our UIs ourselves. Testing our UIs with [assistive devices](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies#when-to-test) not only helps us verify that our code is correct (or woefully broken), but should give us some empathy as well. And we also can't avoid the responsibility of [learning more](https://www.youtube.com/watch?v=z8xUCzToff8) about accessibility best practices.
+While these 5 tools do lots to automate finding (and teaching!) a lot of common accessibility mistakes, they don't replace testing our UIs ourselves. Testing our UIs with [assistive devices](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies#when-to-test) not only helps us verify that our code is correct (or woefully broken), but should give us some empathy as well. And we also can't avoid the responsibility of [learning more](https://www.youtube.com/watch?v=z8xUCzToff8) about accessibility best practices.
 
 Are there any other automated tools you use for validating accessibility? I'm interested in adding event more to my pipeline. Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
