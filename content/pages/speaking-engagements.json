@@ -1,5 +1,18 @@
 [
   {
+    "name": "Egghead.io Twitter Space",
+    "url": "https://twitter.com/i/spaces/1mrGmwwnnEvxy",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Learning & Teaching React w/ @kentcdodds @chantastic @shaundai @benmvp",
+        "date": "07/08/2021",
+        "time": "10:00a PST",
+        "categories": ["react", "mentoring"]
+      }
+    ]
+  },
+  {
     "name": "Open Source 101 2021",
     "url": "https://opensource101.com/",
     "location": "Remote",
@@ -151,6 +164,7 @@
         "title": "Bringing it back to TypeScript",
         "date": "10/15/2020",
         "time": "10a PDT",
+        "categories": ["typescript"],
         "links": [
           {
             "label": "Podcast",
@@ -190,6 +204,7 @@
         "title": "Power up React with TypeScript",
         "date": "10/8/2020",
         "time": "9:30a PDT",
+        "categories": ["react", "typescript"],
         "links": [
           {
             "label": "Video",
@@ -248,6 +263,7 @@
         "title": "JDHH with special guest Ben Ilegbodu",
         "date": "07/18/2020",
         "time": "12p PDT",
+        "categories": ["mentoring"],
         "links": [
           {
             "label": "Video",
@@ -279,6 +295,7 @@
         "title": "#BlackLivesMatter #MetaTalk w/ Pariss & Ben",
         "date": "06/09/2020",
         "time": "10a PDT",
+        "categories": ["miscellaneous"],
         "links": [
           {
             "label": "Video",
@@ -537,6 +554,7 @@
         "date": "20 September 2018",
         "time": "11:40a",
         "room": "Room 8 / Level 4",
+        "categories": ["react"],
         "links": [
           {
             "label": "Video",
