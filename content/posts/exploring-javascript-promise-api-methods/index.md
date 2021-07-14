@@ -178,7 +178,9 @@ In this example, we pass 2 promises to `Promise.race`. The first promise is a fe
 
 **If the fetch request fulfills _before_ 3 seconds, it resolves first so `Promise.race` returns a promise with the data.** We resolve it using the `await` operator and we've got the data. However, if the request takes longer than 3 seconds, the `timeoutPromise` will reject first. So `Promise.race` will return a promise that rejects with the reason (typically an `Error` object).
 
-This code is essentially an "async with timeout" operation. In over 6 years it's still the only real-world use case I've found for `Promise.race`. I dive deeper and how we can create an abstraction around it in my [Quickie fetch timeout](https://www.benmvp.com/blog/quickie-fetch-timeout/) post. **So when we want to get back the result of the first promise that settles no matter if it's a fulfillment or rejection, we use `Promise.race`. But if we want we really want is the first promise that fulfills, we use the new `Promise.any`.**
+This code is essentially an "async with timeout" operation. In over 6 years it's still the only real-world use case I've found for `Promise.race`. And it doesn't even cancel the long-running async task. It keeps running. Our code just stops waiting for it.
+
+I dive deeper and how we can create an abstraction around it in my [Quickie fetch timeout](https://www.benmvp.com/blog/quickie-fetch-timeout/) post. **So when we want to get back the result of the first promise that settles no matter if it's a fulfillment or rejection, we use `Promise.race`. But if we want we really want is the first promise that fulfills, we use the new `Promise.any`.**
 
 ---
 
@@ -210,7 +212,7 @@ const run = async () => {
   // }
   // myRepositoriesOutcome: {
   //   status: 'fulfilled',
-  //   value: { ... },
+  //   value: 'All the Github repos',
   // }
 }
 ```
