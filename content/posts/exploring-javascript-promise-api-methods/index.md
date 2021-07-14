@@ -233,7 +233,7 @@ const fetchRepos = (userName) => {
 
 However, before [async functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), I would sometimes use `Promise.resolve` or `Promise.reject` in a function like this example. Normally it returns the promise from the call to a function that returns a promise (`fetchJson` in this case). But since I want the function to always return a promise, I still need to return a `Promise` object for the edge cases that aren't actually asynchronous.
 
-**This is no longer necessary with `async`/`await` because async functions always return a `Promise` object no matter what's actually returned by the function itself.**
+**This is no longer necessary with `async`/`await` because async functions always return a `Promise` object no matter what's actually returned by the function itself.** I still do sometimes create promises using the [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) to ["promisify"](https://nodejs.org/api/util.html#util_util_promisify_original) functions that take callback functions.
 
 ---
 
