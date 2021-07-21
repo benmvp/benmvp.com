@@ -108,6 +108,8 @@ The [`_.flatten`](https://lodash.com/docs/4.17.15#flatten) function (also availa
 ```js
 const flatten = (array) => {
   return array.reduce((flattened, value) => {
+    // `.concat()` flattens the value if it's an array
+    // when concatenating to return a new array
     return flattened.concat(value)
   }, [])
 }
@@ -253,7 +255,7 @@ By the way, the map function in the example above is using the [exponentiation (
 
 ## `max`
 
-The [`_.max()`](https://lodash.com/docs/4.17.15#max) function computes the maximum value within the `array`.
+The [`_.max()`](https://lodash.com/docs/4.17.15#max) function computes the maximum value within the array.
 
 ```js
 const max = (array) => {
@@ -337,7 +339,7 @@ zip(
 */
 ```
 
-Here we get to use the third parameter of `.reduce()`, the value's `index` within the array.
+Here we get to use the third parameter of the reduce function, the value's `index` within the array.
 
 ---
 
