@@ -22,5 +22,6 @@ published: false
 - array useEffect deps
 - storing state in DOM
 - rendering too much DOM
+- expensive `useState` initialize (see other post)
 
 Keep learning my friends. 🤓
