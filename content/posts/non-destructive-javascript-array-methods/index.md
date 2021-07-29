@@ -112,7 +112,7 @@ The [`.some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referenc
 
 ```js
 const names = ['Aidan', 'Ben', 'David', 'Faraz', 'Kyle', 'Jonathan', 'Tyler']
-const someShortNames = names.every((name) => name.length <= 5)
+const someShortNames = names.some((name) => name.length <= 5)
 
 console.log(someShortNames)
 // true
@@ -235,7 +235,7 @@ console.log(namesCopyConcat !== namesCopySpread)
 
 ## `.flat()` / `.flatMap()`
 
-The `.flat()` and `.flatMap()` methods are another pair of companion methods.
+The `.flat()` and `.flatMap()` methods (ES2019) are another pair of companion methods.
 
 The [`.flat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) method creates a new array from flattening the array the specified number of levels deep (defaulting to a single level).
 
@@ -251,7 +251,7 @@ const groupedPlayers = Object.values(playerIdsByTeam)
   // converts an array of player ID arrays
   // into an array of player name arrays
   .map((playerIds) => {
-    return getPlayersNameById(playerIds)
+    return getPlayerNamesById(playerIds)
   })
 /*
 Nested array of players
@@ -284,7 +284,7 @@ const playerIdsByTeam = {
 }
 const allPlayerNames = Object.values(playerIdsByTeam)
   .flatMap((playerIds) => {
-    return getPlayersNameById(playerIds)
+    return getPlayerNamesById(playerIds)
   })
 
 console.log(allPlayerNames)
