@@ -59,7 +59,7 @@ So I want to take a quick look walk down memory lane at Mixins to see how surpri
 
 ## Mixins
 
-Before Hooks, React components were created using [native JavaScript classes](/blog/learning-es6-classes/). And before classes became a part of JavaScript with [ES6/ES2015](http://localhost:8000/learning-es6-series/), React had its own class system. It still exists with the [`create-react-class` package](https://reactjs.org/docs/react-without-es6.html). Mixins were plain objects that implemented React lifecycle methods and were "mixed into" a component using `React.createClass`.
+Before Hooks, React components were created using [native JavaScript classes](/blog/learning-es6-classes/). And before classes became a part of JavaScript with [ES6/ES2015](/learning-es6-series/), React had its own class system. It still exists with the [`create-react-class` package](https://reactjs.org/docs/react-without-es6.html). Mixins were plain objects that implemented React lifecycle methods and were "mixed into" a component using `React.createClass`.
 
 Five years ago, the equivalent of the `useSafeAsync` and `usePlayers` Hooks as Mixins could've looked something like:
 

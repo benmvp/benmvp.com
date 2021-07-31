@@ -9,7 +9,7 @@ heroAlt: Assorted concrete houses
 heroCredit: 'Photo by [Sam Ellis](https://unsplash.com/@swellis)'
 ---
 
-Two weeks ago I wrote about [Conditional React prop types with TypeScript](/blog/conditional-react-props-typescript/). Last week we learned about [Polymorphic React components in TypeScript](http://localhost:8000/blog/polymorphic-react-components-typescript/). And today we're continuing the React + TypeScript theme, this time focusing on creating generic React components using TypeScript.
+Two weeks ago I wrote about [Conditional React prop types with TypeScript](/blog/conditional-react-props-typescript/). Last week we learned about [Polymorphic React components in TypeScript](/blog/polymorphic-react-components-typescript/). And today we're continuing the React + TypeScript theme, this time focusing on creating generic React components using TypeScript.
 
 To better explain what we're trying to do, let's use a somewhat real-world example. Let's say we have a `<List />` component that we pass an array of items and it exposes a [render prop](https://ui.dev/react-render-props/) to allow the caller to decide how to render a given item. We could use it to render the full list of active players in the NBA:
 
