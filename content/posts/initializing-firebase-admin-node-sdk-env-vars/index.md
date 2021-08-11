@@ -1,7 +1,7 @@
 ---
 date: 2021-08-08
 title: Initializing the Firebase Admin Node SDK with env vars
-shortDescription: How to use environment variables to initialize the Firebase Admin Node SDK instead of the JSON file
+shortDescription: How to use environment variables to initialize the Firebase Admin Node SDK with the private key instead of using the JSON file
 category: divops
 tags: [divops, firebase, sdk, node]
 hero: ./fire-cullan-smith-BdTtvBRhOng-unsplash.jpeg
