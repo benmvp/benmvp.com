@@ -336,6 +336,8 @@ Now when we render a `<Text>` component, if the `as` prop is `"label"`, not only
 
 ---
 
-The types are still abstracted well enough that the definition of the `Text` component itself isn't overly complex. I just really wished we could avoid the explicit type annotation. If you have found a way around it or have found another solution for forwarding refs for polymorphic React components in TypeScript, I'd love to hear it! Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
+The types are still abstracted well enough that the definition of the `Text` component itself isn't overly complex. I just really wished we could avoid the explicit type annotation. I'm hoping this can be improved if/when the React team builds `forwardRef()` directly into function components.
+
+If you have found a way around it or have found another solution for forwarding refs for polymorphic React components in TypeScript, I'd love to hear it! Feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
 Keep learning my friends. 🤓
