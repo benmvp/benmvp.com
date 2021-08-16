@@ -12,5 +12,11 @@ published: false
 
 Keep learning my friends. 🤓
 
-- https://www.typescriptlang.org/docs/handbook/utility-types.html
-- `Omit<>`
+- A lot of times when we get started with generics we use them directly in functions
+  - See previous posts
+- They can also be used to create reusable types like the built in utility types
+  - https://www.typescriptlang.org/docs/handbook/utility-types.html
+- I learn best by seeing real-world examples
+  - See something new in the context of something familiar helps me make the connection
+- Rebuilding TS utility types you may have used
+  - `Omit<>`

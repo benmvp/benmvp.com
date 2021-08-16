@@ -3,7 +3,7 @@ date: 2020-11-08
 title: Polymorphic React Components in TypeScript
 shortDescription: How to define strongly-typed React components that can inherit props from arbitrary HTML elements
 category: typescript
-tags: [react, components, design-system]
+tags: [react, typescript, components, design-system]
 hero: ./green-white-chameleon-david-clode-eZ6jB5dOlcw-unsplash.jpg
 heroAlt: Green and white chameleon on a tree branch
 heroCredit: 'Photo by [David Clode](https://unsplash.com/@davidclode)'
@@ -128,7 +128,7 @@ interface Props<C extends React.ElementType> {
 }
 
 type TextProps<C extends React.ElementType> = Props<C> &
-  Omit<React.ComponentPropsWithRef<C>, keyof Props<C>>
+  Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 
 const Text = <C extends React.ElementType = 'span'>({
   as,
@@ -172,32 +172,32 @@ Now `C` can't be any ol' type, or even any `string`. We've restricted the type o
 
 ```typescript
 type TextProps<C extends React.ElementType> = Props<C> &
-  Omit<React.ComponentPropsWithRef<C>, keyof Props<C>>
+  Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 ```
 
 Here's where you get excited. Or you brain explodes. Or maybe both. It's basically what determines the additional HTML attributes/props that are valid based upon `C`. Let's break it down further.
 
 ```typescript
-React.ComponentPropsWithRef<C>
+React.ComponentPropsWithoutRef<C>
 ```
 
-First we grab all of the props defined for `C` using [`React.ComponentPropsWithRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L836-L839). So if we pass `as="label"`, this will include `style`, `className`, all of the [ARIA tags](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), dozens of other props, as well as `htmlFor`. It will also include the `ref` prop for passing through [refs](https://reactjs.org/docs/refs-and-the-dom.html). If you don't want to support `ref`, you can use [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L840-L841).
+First we grab all of the props defined for `C` using [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L836-L839). So if we pass `as="label"`, this will include `style`, `className`, all of the [ARIA tags](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), dozens of other props, as well as `htmlFor`. It will also include the `ref` prop for passing through [refs](https://reactjs.org/docs/refs-and-the-dom.html). If you don't want to support `ref`, you can use [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L840-L841).
 
 ```typescript
-Omit<React.ComponentPropsWithRef<C>, keyof Props<C>>
+Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 ```
 
 Next, using [`keyof`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#keyof-and-lookup-types) and the [`Omit<>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys) generic utility, we take those `C` props and remove from them any props that are defined in `Props`. So if `Props` defined a `style` prop or any other prop that already exists on `C`, it will get removed. This is important because of:
 
 ```typescript
-Props<C> & Omit<React.ComponentPropsWithRef<C>, keyof Props<C>>
+Props<C> & Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 ```
 
 Basically we want to merge the properties of `Props` and the properties of `C` together. But if there are prop name collisions, TypeScript gets unhappy. Therefore we prevent the chance of a name collision by removing the duplicate props first.
 
 ```typescript
 type TextProps<C extends React.ElementType> = Props<C> &
-  Omit<React.ComponentPropsWithRef<C>, keyof Props<C>>
+  Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 ```
 
 Now `TextProps` has all of the valid props we want for the `Text` component and it'll be based on the value we pass to the `as` prop.
@@ -234,7 +234,7 @@ Pick<
   TextProps<C>,
   Exclude<
     Exclude<
-      keyof React.ComponentPropsWithRef<C>,
+      keyof React.ComponentPropsWithoutRef<C>,
       "as" | "children" | "color" | "font" | "size"
     >,
     "as" | "children" | "color" | "font" | "size"
@@ -290,11 +290,13 @@ So I've been working on our component library at Stitch Fix basically for the en
 It took me a really long time to get it working just right. It was the `Omit<>` part that I was missing. Also, because we have many polymorphic components, I needed to **abstract this polymorphic setup into easy-to-use helpers**. After many iterations, here's what I came up with after borrowing bits and pieces from other open-source libraries.
 
 ```typescript
+import React from 'react'
+
 // Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
-// A more precise version of just React.ComponentPropsWithRef on its own
+// A more precise version of just React.ComponentPropsWithoutRef on its own
 export type PropsOf<
   C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
-> = JSX.LibraryManagedAttributes<C, React.ComponentPropsWithRef<C>>
+> = JSX.LibraryManagedAttributes<C, React.ComponentPropsWithoutRef<C>>
 
 type AsProp<C extends React.ElementType> = {
   /**
@@ -334,6 +336,53 @@ export type PolymorphicComponentProps<
 > = InheritableElementProps<C, Props & AsProp<C>>
 ```
 
-Hopefully this can short-circuit your implementation. 😄
+And now the `Text` component can make use of our new helpers to define the `TextProps`.
+
+```typescript
+import React from 'react'
+
+// The `Props` interface becomes a simple interface of the main props
+interface Props {
+  children: React.ReactNode
+  color?: Color
+  font?: 'thin' | 'regular' | 'heavy'
+  size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10'
+}
+
+// `TextProps` now uses `PolymorphicComponentProps` to add the `as` prop
+// and inherit its prop
+// highlight-start
+type TextProps<C extends React.ElementType> = PolymorphicComponentProps<
+  C,
+  Props
+>
+// highlight-end
+
+const Text = <C extends React.ElementType = 'span'>({
+  as,
+  children,
+  font = 'regular',
+  size = '4',
+  color = 'gray-40',
+  ...other
+}: TextProps<C>) => {
+  const classes = getClasses({ font, size, color })
+  const Component = as || 'span'
+
+  return (
+    <Component {...other} className={classes}>
+      {children}
+    </Component>
+  )
+}
+```
+
+The definition of `TextProps` is now much simpler because all of the complexity is abstracted away in `PolymorphicComponentProps` (and its helper types). The `Props` type is also simpler because it no longer needs to be generic in order to define the `as` prop. `PolymorphicComponentProps` is taking care of that too.
+
+> UPDATE: If you are interested in knowing how to properly type `forwardRef()` with polymorphic components in TypeScript, read [Forwarding refs for a polymorphic React component in TypeScript](/blog/forwarding-refs-polymorphic-react-component-typescript/).
+
+---
+
+Hopefully this can short-circuit your implementation. 😄 It's been super helpful for us in building our base components that need to be really flexible. If you've got any questions, comments or other feedback, feel free to reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
 Keep learning my friends. 🤓

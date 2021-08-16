@@ -12,6 +12,15 @@ published: false
 
 Keep learning my friends. 🤓
 
-- `map()`
-- `reduce()`
-- `zip()`
+- Generics are super powerful but also pretty complicated
+  - Generics are like implicit return functions but for types
+  - Blog post on generics for folks who gave up learning generics
+- I learn best by seeing real-world examples
+  - See something new in the context of something familiar helps me make the connection
+- Types for familiar functions
+  - `identity()`
+  - `first()`
+  - `forEach()`
+  - `map()`
+  - `reduce()`
+  - `zip()`
