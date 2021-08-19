@@ -75,7 +75,7 @@ type TextProps<C extends React.ElementType> = PolymorphicComponentProps<
   Props
 >
 
-const Text = <C extends React.ElementType = 'span'>({
+export const Text = <C extends React.ElementType = 'span'>({
   as,
   children,
   font = 'regular',
@@ -100,7 +100,7 @@ When using [`forwardRef()` generic function in TypeScript](https://github.com/De
 
 ```typescript
 // highlight-next-line
-const Text = React.forwardRef<HTMLSpanElement, TextProps>(
+export const Text = React.forwardRef<HTMLSpanElement, TextProps>(
   ({ children, font = 'regular', size = '4', color = 'gray-40' }, ref) => {
     const classes = getClasses({ font, size, color })
 
@@ -130,7 +130,7 @@ We can then use this type in our call to `forwardRef()` to avoid passing in the 
 
 ```typescript
 // highlight-range{10-11,17}
-const Text = React.forwardRef(
+export const Text = React.forwardRef(
   <C extends React.ElementType = 'span'>(
     {
       as,
@@ -164,7 +164,7 @@ type TextComponent = <C extends React.ElementType = 'span'>(
 // highlight-end
 
 // highlight-next-line
-const Text: TextComponent = React.forwardRef(
+export const Text: TextComponent = React.forwardRef(
   <C extends React.ElementType = 'span'>(
     {
       as,
@@ -306,7 +306,7 @@ type TextComponent = <C extends React.ElementType = 'span'>(
 // highlight-end
 
 // highlight-next-line
-const Text: TextComponent = React.forwardRef(
+export const Text: TextComponent = React.forwardRef(
   <C extends React.ElementType = 'span'>(
     {
       as,

@@ -52,7 +52,7 @@ We can make `<Text>` "polymorphic" by adding an `as` prop to it that allows the 
 And a basic implementation could look like:
 
 ```javascript
-const Text = ({
+export const Text = ({
   as,
   children,
   font = 'regular',
@@ -130,7 +130,7 @@ interface Props<C extends React.ElementType> {
 type TextProps<C extends React.ElementType> = Props<C> &
   Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
 
-const Text = <C extends React.ElementType = 'span'>({
+export const Text = <C extends React.ElementType = 'span'>({
   as,
   children,
   font = 'regular',
@@ -204,7 +204,7 @@ Now `TextProps` has all of the valid props we want for the `Text` component and 
 
 ```typescript
 // highlight-next-line
-const Text = <C extends React.ElementType = 'span'>({
+export const Text = <C extends React.ElementType = 'span'>({
   as,
   children,
   font = 'regular',
@@ -358,7 +358,7 @@ type TextProps<C extends React.ElementType> = PolymorphicComponentProps<
 >
 // highlight-end
 
-const Text = <C extends React.ElementType = 'span'>({
+export const Text = <C extends React.ElementType = 'span'>({
   as,
   children,
   font = 'regular',
