@@ -10,6 +10,8 @@ category: training
 published: false
 ---
 
+Keep learning my friends. 🤓
+
 - I ❤️ docs
   - MDN docs
   - `semantic-release` docs
@@ -43,5 +45,3 @@ published: false
   - Do live sessions
   - But consider using tooling for long-lasting info over writing docs
   - The tooling basically points back to a **shared** location of docs
-
-Keep learning my friends. 🤓

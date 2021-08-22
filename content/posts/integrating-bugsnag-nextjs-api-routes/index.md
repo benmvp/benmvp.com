@@ -10,6 +10,8 @@ category: divops
 published: false
 ---
 
+Keep learning my friends. 🤓
+
 - Bugsnag's JS package supports all sorts of JS envs
   - But that poses a challenge cuz each env is its own snowflake for setting up
 - Wrote about Gatsby + Netlify before
@@ -33,5 +35,3 @@ published: false
   - https://github.com/vercel/next.js/issues/1852
   - https://github.com/vercel/next.js/issues/4808
 - Google search "nextjs server error logging"
-
-Keep learning my friends. 🤓
