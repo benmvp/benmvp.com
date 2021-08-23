@@ -1,5 +1,37 @@
 [
   {
+    "name": "CascadiaJS 2021",
+    "url": "https://2021.cascadiajs.com/workshops",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Zero to React with Hooks",
+        "date": "11/10/2021",
+        "time": "1p PST",
+        "categories": ["react"]
+      },
+      {
+        "title": "TypeScript for React Developers",
+        "date": "11/11/2021",
+        "time": "1p PST",
+        "categories": ["typescript", "react"]
+      }
+    ]
+  },
+  {
+    "name": "Global React Meetup September 2021",
+    "url": "https://www.reactjsmeetup.com/#/react-contributor-days-september-2021",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "React Contributor Days",
+        "date": "9/9/2021",
+        "time": "9a PST",
+        "categories": ["react"]
+      }
+    ]
+  },
+  {
     "name": "Egghead.io Twitter Space",
     "url": "https://twitter.com/i/spaces/1mrGmwwnnEvxy",
     "location": "Remote",

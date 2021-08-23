@@ -11,7 +11,7 @@ heroCredit: 'Photo by [Crystal de Passillé-Chabot](https://unsplash.com/@cchabo
 
 JavaScript is a highly dynamic language, so generics are instrumental in helping us to add types to make our code type safe with TypeScript. [TypeScript Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) are super powerful, but also can be pretty complicated. As a result, we find lots of blog posts, YouTube videos, workshops, and courses on how to use generics in TypeScript.
 
-This post is a little different. I learn best by seeing real-world examples. Seeing something new in the context of something familiar helps my brain make the connections. So this post walks through how generics are used (something new) by re-implementing common [lodash](https://lodash.com/) functions (something familiar). My hope is that these examples will help build and solidify your understanding of generics.
+This post is a little different. I learn best by seeing real-world examples. Seeing something new in the context of something familiar helps my brain make the connections. So this post walks through how we can develop with TypeScript generics (something new) by re-implementing common lodash functions (something familiar). My hope is that these examples will help build and solidify your understanding of how to leverage generics in your TypeScript code.
 
 Let's get started!
 
