@@ -208,10 +208,7 @@ const map = <ItemType, MappedItemType>(
   return newArray
 }
 
-const mappedNames = map(
-  ['Ben', 'James', 'Leslie'],
-  (name, index) => name.length,
-)
+const mappedNames = map(['Ben', 'James', 'Leslie'], (name) => name.length)
 // [3, 5, 6] (type `number[]`)
 // TS sees that the return type from the `callback` is a `number`
 // so it knows the return value from `map()` is a `number[]`
