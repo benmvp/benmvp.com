@@ -50,8 +50,7 @@
   .gatsby-highlight .line-numbers-rows {
     display: none;
   }
-  pre[class*='language-'],
-  code[class*='language-'] {
+  pre[class*='language-'] {
     font-size: 0.75rem;
   }
 }
