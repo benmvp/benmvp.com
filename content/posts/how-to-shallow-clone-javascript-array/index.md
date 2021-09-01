@@ -115,6 +115,7 @@ The [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 const addMessage = (allMessages, message) => {
   // highlight-start
   // make a shallow copy of `allMessages`
+  // by spreading it into a new array
   const newMessages = [...allMessages]
   // highlight-end
 
@@ -163,6 +164,7 @@ The `Array` [`.concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 const addMessage = (allMessages, message) => {
   // highlight-start
   // make a shallow copy of `allMessages`
+  // by concatenating nothing to the array
   const newMessages = allMessages.concat()
   // highlight-end
 
@@ -189,6 +191,7 @@ The `Array` [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript
 const addMessage = (allMessages, message) => {
   // highlight-start
   // make a shallow copy of `allMessages`
+  // by taking slice of entire array
   const newMessages = allMessages.slice()
   // highlight-end
 
@@ -217,6 +220,7 @@ I don't think I've never seen [`.map()`](https://developer.mozilla.org/en-US/doc
 const addMessage = (allMessages, message) => {
   // highlight-start
   // make a shallow copy of `allMessages`
+  // by mapping each item to itself
   const newMessages = allMessages.map((m) => m)
   // highlight-end
 
@@ -244,8 +248,9 @@ I've also not seen [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/Ja
 ```js
 const addMessage = (allMessages, message) => {
   // highlight-start
-  // make a shallow copy of `allMessages` 🤯
-  const newMessages = allMessages.filter(Boolean)
+  // make a shallow copy of `allMessages`
+  // by returning `true` includes all items
+  const newMessages = allMessages.filter(() => true)
   // highlight-end
 
   // add the new message info object
@@ -261,10 +266,8 @@ const addMessage = (allMessages, message) => {
 
 Using `.filter()` is in the same spirit of `.map()`. The `.filter()` method is used to filter out items from the array. **However, if we keep all the items in the array, we've effectively created a shallow clone!** Of all of the approaches, this is likely the most cryptic though.
 
-> Doing `.filter(Boolean)` is a shorthand for `.filter(m => true)`. If you call the `Boolean` constructor with any truthy value, it returns `true`, otherwise `false`. So when `.filter()` calls the `Boolean` constructor as a function for each item, like `Boolean(messageInfo)`, they all return `true`.
-
 ---
 
-And those are the 8! I could've gone with 9, if I had separated out the `for` loop. How many of these approaches did you know about? How many of these have you used? I'd love to hear about it. Feel free to contact me on Twitter at [@benmvp](https://twitter.com/benmvmp).
+And those are the 8! I could've gone with 9, if I had separated out the `for` loop. How many of these approaches did you know about? How many of these have you used? I'd love to hear about it. Feel free to contact me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
 Keep learning my friends. 🤓
