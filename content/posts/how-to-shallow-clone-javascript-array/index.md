@@ -203,7 +203,7 @@ const addMessage = (allMessages, message) => {
 }
 ```
 
-The `.slice()` method is used to return a shallow copy of a portion of an array based on the start and end indices we pass. **However, if we don't pass either index, `.slice()` simply returns a shallow copy!**
+The `.slice()` method is used to return a shallow copy of a portion of an array based on the start and end indices we pass. **However, if we don't pass either index, `.slice()` simply returns a shallow copy of the entire array!**
 
 I don't think I ever used `.slice()` for array shallow cloning. I always used `.concat()`. But I learned about it from seeing it in others' code. The more I think about it, using an empty `.slice()` is probably more semantically closer to a "copy" than `.concat()`. We're basically saying give me a slice of the whole array, which of course is a shallow copy. It's also one character shorter. 😉
 
@@ -259,7 +259,7 @@ const addMessage = (allMessages, message) => {
 }
 ```
 
-Using `.filter()` is in the same spirit of `.map()`. The `.filter()` method is used to filter out items for the array. **However, if we keep all the items in the array, we've effectively created a shallow clone!** Of all of the approaches, this is likely the most cryptic though.
+Using `.filter()` is in the same spirit of `.map()`. The `.filter()` method is used to filter out items from the array. **However, if we keep all the items in the array, we've effectively created a shallow clone!** Of all of the approaches, this is likely the most cryptic though.
 
 > Doing `.filter(Boolean)` is a shorthand for `.filter(m => true)`. If you call the `Boolean` constructor with any truthy value, it returns `true`, otherwise `false`. So when `.filter()` calls the `Boolean` constructor as a function for each item, like `Boolean(messageInfo)`, they all return `true`.
 
