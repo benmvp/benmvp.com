@@ -128,7 +128,7 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
             >
               Gatsby
             </Link>{' '}
-            and hosted on{' '}
+            and deployed to{' '}
             <Link
               href="https://netlify.com/"
               target="_blank"

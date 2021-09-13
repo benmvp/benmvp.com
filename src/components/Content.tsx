@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) =>
       },
       '& .gatsby-highlight': {
         // code blocks
-        margin: theme.spacing(0, 0, 3, 2),
+        marginBottom: theme.spacing(3),
       },
       '& .gatsby-resp-iframe-wrapper': {
         // iframes (video embeds)
