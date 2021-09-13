@@ -11,7 +11,7 @@ heroCredit: 'Photo by [Drew Beamer](https://unsplash.com/@drew_beamer)'
 
 I recently got to work on a different type of project than I normally tackle. Instead of building a React component in TypeScript or configuring a new DivOps setup, I needed to create an SVG gradient loading spinner. It looked like:
 
-<img src="./loading-spinner-final.svg" alt="SVG loading spinner w/ gradient fill" style="display: block; margin: 0 auto 16px" />
+<img src="./loading-spinner-final.svg" alt="SVG loading spinner with a gradient fill" style="display: block; margin: 0 auto 16px" />
 
 The spinner isn't a solid color, but has a gradient from 100% to 0% opacity. The design seemed simple enough, but the implementation ended up being way more complicated than I anticipated. This is because **SVGs don't support adding a gradient to a [`<circle>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle).** However, it's possible to simulate a gradient with some cleverness.
 
@@ -315,7 +315,7 @@ So I ran with that idea and added a third solid color path to sit on top of the 
 
 Add an SVG [`<animateTransform`>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform), and voilà!
 
-<img src="./loading-spinner-final.svg" alt="SVG loading spinner w/ gradient fill" style="display: block; margin: 0 auto 16px" />
+<img src="./loading-spinner-final.svg" alt="SVG loading spinner with a gradient fill" style="display: block; margin: 0 auto 16px" />
 
 ```html
 <svg

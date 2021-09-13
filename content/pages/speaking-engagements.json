@@ -27,7 +27,13 @@
         "title": "React Contributor Days",
         "date": "9/9/2021",
         "time": "9a PST",
-        "categories": ["react"]
+        "categories": ["react"],
+        "links": [
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=jweh2aO33RY"
+          }
+        ]
       }
     ]
   },
@@ -39,7 +45,7 @@
       {
         "title": "Learning & Teaching React w/ @kentcdodds @chantastic @shaundai @benmvp",
         "date": "07/08/2021",
-        "time": "10:00a PST",
+        "time": "1a PST",
         "categories": ["react", "mentoring"]
       }
     ]
