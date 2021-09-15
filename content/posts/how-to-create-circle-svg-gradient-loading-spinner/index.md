@@ -259,7 +259,7 @@ When I inspected the markup, I noticed that the developer _did_ use a linear gra
 
 <img src="./semicircles-linear-gradient.svg" alt="Two SVG semicircles with separate linear gradients" style="display: block; margin: 0 auto 16px" />
 
-I revisted the [SVG circle arc tool](http://xahlee.info/js/svg_circle_arc.html) to create the two semicircles. And because there are 2 linear gradients, I no longer had the problem of 2 points of the circle having the same opacity. The top semicircle has a linear gradient from 0% to 50% and the bottom semicircle has a linear gradient from 100% to 50%. **Because the gradients line up on the right edge at 50% the circle _looks_ like it has a single 1000% to 0% gradient!**
+I revisted the [SVG circle arc tool](http://xahlee.info/js/svg_circle_arc.html) to create the two semicircles. And because there are 2 linear gradients, I no longer had the problem of 2 points of the circle having the same opacity. The top semicircle has a linear gradient from 0% to 50% and the bottom semicircle has a linear gradient from 100% to 50%. **Because the gradients line up on the right edge at 50% the circle _looks_ like it has a single 100% to 0% gradient!**
 
 And it looked good rotating as well.
 
