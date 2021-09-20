@@ -21,5 +21,8 @@ Keep learning my friends. 🤓
   - See something new in the context of something familiar helps me make the connection
 - Rebuilding TS utility types you may have used
   - `Array<T>`
-  - `Omit<>`
+  - `Omit<T>`
+  - `Partial<T>`
+  - `Required<T>`
+  - `NonNullable<T> = T extends null | undefined ? never : T`
 - Conditional types: https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types
