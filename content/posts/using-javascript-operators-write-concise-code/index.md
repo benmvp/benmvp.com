@@ -9,7 +9,7 @@ heroAlt: JavaScript code in VSCode on black flat screen computer
 heroCredit: 'Photo by [Joan Gamell](https://unsplash.com/@gamell)'
 ---
 
-JavaScript has been around for over 25 years, since May 1995 when [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich) supposedly created it in 10 days. I wrote a full [history of ECMAScript](https://www.benmvp.com/blog/learning-es6-history-of-ecmascript/) if you're interested in learning more. There's a lot of syntax and operators that has been added to JavaScript since its inception. Many we use regularly (like `===`, `&&`, etc.) so they are familiar to us, but there are others that are rarely used, but still have some useful use cases.
+JavaScript has been around for over 25 years, since May 1995 when [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich) supposedly created it in 10 days. I wrote a full [history of ECMAScript](/blog/learning-es6-history-of-ecmascript/) if you're interested in learning more. There's a lot of syntax and operators that has been added to JavaScript since its inception. Many we use regularly (like `===`, `&&`, etc.) so they are familiar to us, but there are others that are rarely used, but still have some useful use cases.
 
 So I want to walk through 8 operators that are either new(-ish) or lesser-known, and explain the situations in which we may want to use them to make our code more concise and/or accurate. Let's jump right in!
 
@@ -22,6 +22,7 @@ Let's say we have a variable that we would like to assign into (using the [assig
 ```js
 let winner
 
+// verbose conditional 😒
 if (hasATrophy) {
   winner = 'Houston Rockets'
 } else {
@@ -32,6 +33,7 @@ if (hasATrophy) {
 However, we can use the [conditional (ternary)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) operator to simplify the code to a single line/statement:
 
 ```js
+// single-statement ternary! 🎉
 const winner = hasATrophy ? 'Houston Rockets' : 'Utah Jazz'
 ```
 
@@ -48,6 +50,8 @@ Let's say you have a string variable that has the value `'123.45'` and would lik
 ```js
 const value = document.getElementById('price-field').value
 // '123.45'
+
+// typical way to parse a number 👍🏾
 const price = Number.parseFloat(value)
 // 123.45
 ```
@@ -57,6 +61,8 @@ However back in the day, before the movement started to stop writing clever code
 ```js
 const value = document.getElementById('price-field').value
 // '123.45'
+
+// clever way to parse a number! 🤓
 // highlight-next-line
 const price = +value
 // 123.45
@@ -67,8 +73,12 @@ How exactly does that work? Well, the unary plus operator works just like the [u
 ```js
 const value = document.getElementById('price-field').value
 // '123.45'
+
+// clever way to parse a number! 🤓
 const price = +value
 // 123.45
+
+// similar way to negate a number...
 // highlight-next-line
 const negativePrice = -value
 // -123.45
@@ -92,6 +102,8 @@ const teams = [
   'Denver Nuggets',
   'Utah Jazz',
 ]
+
+// pluck out each value individually 🤮
 const firstTeam = teams[0]
 // 'Houston Rockets'
 const secondTeam = teams[1]
@@ -110,6 +122,8 @@ const teams = [
   'Denver Nuggets',
   'Utah Jazz',
 ]
+
+// grab all values at once! 😎
 // highlight-next-line
 const [firstTeam, secondTeam, ...trophylessTeams] = teams
 // firstTeam - Houston Rockets
@@ -123,10 +137,9 @@ A fun trick, should you ever need it, is that you can also use destructuring ass
 let onTheRise = 'Phoenix Suns'
 let trendingDown = 'Houston Rockets'
 
-// swap values using array destructuring
+// swap values using array destructuring 🤓
 // highlight-next-line
 ;[onTheRise, trendingDown] = [trendingDown, onTheRise]
-
 // onTheRise - 'Houston Rockets'
 // trendingDown - 'Phoenix Suns'
 ```
@@ -142,6 +155,8 @@ const teamInfo = {
   numTrophies: 2,
   bestPlayer: 'Hakeem Olajuwon',
 }
+
+// grab all values at once! 😎
 // highlight-next-line
 const { name, numTrophies, bestPlayer } = teamInfo
 // name - 'Houston Rockets'
@@ -149,7 +164,7 @@ const { name, numTrophies, bestPlayer } = teamInfo
 // bestPlayer - 'Hakeem Olajuwon'
 ```
 
-There are lot of features with destructuring assignment, including the ability to skipping array items, rename object properties, defaulting `undefined` values, and more. To get all the details you've ever wanted, check out my previous post on [Destructuring](https://www.benmvp.com/blog/learning-es6-destructuring/) which was part of the [Learning ES6 Series](https://www.benmvp.com/learning-es6-series/).
+There are lot of features with destructuring assignment, including the ability to skipping array items, rename object properties, defaulting `undefined` values, and more. To get all the details you've ever wanted, check out my previous post on [Destructuring](/blog/learning-es6-destructuring/) which was part of the [Learning ES6 Series](/learning-es6-series/).
 
 Destructuring was officially introduced into JavaScript with ES6/ES2015.
 
@@ -157,12 +172,12 @@ Destructuring was officially introduced into JavaScript with ES6/ES2015.
 
 ## Spread (`...`) operator
 
-How would we clone an array an add items to it? We could use [`Array.from()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) to clone and [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) to add the items.
+How would we clone an array an add items to it? We could use [`.concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) to clone and [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) to add the items.
 
 ```js
 const addLoserTeams = (teams) => {
   // clone array so we don't mutate original
-  const allTeams = Array.from(teams)
+  const allTeams = teams.concat()
 
   // now add the loser teams to the new array
   allTeams.push(['Phoenix Suns', 'Denver Nuggets', 'Utah Jazz'])
@@ -181,11 +196,13 @@ console.log(allTeams.length)
 // 5
 ```
 
+> Check out [How to shallow clone a JavaScript array](/blog/how-to-shallow-clone-javascript-array/) for more ways to create a shallow copy of an array.
+
 Instead, we can use the [spread operator (`...`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to clone and push all in one statement.
 
 ```js
 const addLoserTeams = (teams) => {
-  // shallow clone and add new items in one step w/ spread operator
+  // shallow clone and add new items in one step w/ spread operator 🙌🏾
   // highlight-next-line
   return [...teams, 'Phoenix Suns', 'Denver Nuggets', 'Utah Jazz']
 }
@@ -207,7 +224,7 @@ The same applies to objects as well. Instead of using [`Object.assign()`](https:
 const addTimestamp = (teamInfo) => {
   // make a copy of `teamInfo` plus add new properties to it.
   // the first parameter (the target) needs to be `{}` to make a
-  // shallow clone
+  // shallow clone otherwise we mutate! 😨
   return Object.assign({}, teamInfo, { timestamp: Date.now() })
 }
 
@@ -231,7 +248,7 @@ console.log(Object.keys(teamInfoWithTimestamp).length)
 
 ```js
 const addTimestamp = (teamInfo) => {
-  // shallow clone and add `timestamp` w/ spread operator
+  // shallow clone and add `timestamp` w/ spread operator 🙌🏾
   // highlight-next-line
   return { ...teamInfo, timestamp: Date.now() }
 }
@@ -275,6 +292,7 @@ if (!teamInfo.city) {
   console.log('"city" property is gone?')
 }
 
+// 'city' is still in the object... 🤔
 console.log(Object.keys(teamInfo))
 // ['name', 'city', 'numTrophies', 'bestPlayer']
 ```
@@ -297,11 +315,12 @@ if (!teamInfo.city) {
   console.log('"city" property is gone!')
 }
 
+// no more 'city' 👍🏾
 console.log(Object.keys(teamInfo))
 // ['name', 'numTrophies', 'bestPlayer']
 ```
 
-The `delete` operator is another unary operator. It also returns a boolean indicating whether or not the deletion was successful.
+The `delete` operator is another unary operator. It also returns a boolean indicating whether or not the deletion was successful. I don't really like using the `delete` operator because it's an imperative statement that can't be combined with other expressions.
 
 ---
 
@@ -323,7 +342,7 @@ if (teamInfo.city) {
 
 // because the Jazz have never won a championship
 // this message won't log even though `numTrophies`
-// property *does* exist
+// property *does* exist 👎🏾
 if (teamInfo.numTrophies) {
   console.log('"numTrophies" property exists?')
 }
@@ -341,6 +360,7 @@ const teamInfo = {
   bestPlayer: 'Greg Ostertag',
 }
 
+// `hasOwnProperty` is accurate, but verbose 😐
 if (Object.hasOwnProperty(teamInfo, 'city')) {
   console.log('"city" property exists!')
 }
@@ -360,6 +380,7 @@ const teamInfo = {
   bestPlayer: 'Greg Ostertag',
 }
 
+// `in` is nice & succinct 👍🏾👍🏾
 // highlight-next-line
 if ('city' in teamInfo) {
   console.log('"city" property exists!')
@@ -383,6 +404,7 @@ const teamInfo = {
   bestPlayer: 'Greg Ostertag',
 }
 
+// `in` also is used w/ `for-in`
 // highlight-next-line
 for (const propertyName in teamInfo) {
   // log each property name/value combo
@@ -407,6 +429,7 @@ const teamInfo = {
 }
 let championshipPlayers
 
+// use conditional to check existence 😢
 if (teamInfo.players) {
   championshipPlayers = teamInfo.players['94-95']
 }
@@ -425,6 +448,7 @@ const teamInfo = {
   numTrophies: 2,
   bestPlayer: 'Hakeem Olajuwon',
 }
+// use `&&` to check w/ a single statement 😩
 const championshipPlayers = teamInfo.players && teamInfo.players['94-95']
 
 // championshipPlayers - `undefined`
@@ -439,6 +463,7 @@ const teamInfo = {
   numTrophies: 2,
   bestPlayer: 'Hakeem Olajuwon',
 }
+// use optional chaining to check concisely! 🎉
 // highlight-next-line
 const championshipPlayers = teamInfo.players?.['94-95']
 
@@ -454,6 +479,7 @@ const teamInfo = {
   numTrophies: 2,
   bestPlayer: 'Hakeem Olajuwon',
 }
+// function syntax is a bit funky 😜
 // highlight-next-line
 teamInfo.update?.()
 ```
@@ -470,7 +496,7 @@ Let's say we want to assign a default value to a variable if it's nullish. The c
 
 ```js
 const ratingFilter = inputValue || 'PG'
-// what happens when `inputValue` is empty (`''`)?
+// what happens when `inputValue` is empty (`''`)? 🤔
 ```
 
 However, if the variable can be a falsy value (like `false` or `0`), we would still fall into the default value. Sometimes we want this so the logical OR operator is totally fine. However, if a falsy value is valid that we don't want to default, this can unknowingly cause bugs. The empty string (`''`) is sneaky falsy value. If the empty string is a valid value for `inputValue`, our code would still default with `'PG'`, making the empty string an impossible value for `ratingFilter`.
@@ -479,7 +505,7 @@ If we need to preserve falsy values and only want to default on nullish values, 
 
 ```js
 // will only default when `inputValue` is nullish
-// (`null` or `undefined`)
+// (`null` or `undefined`) 😁
 // highlight-next-line
 const ratingFilter = inputValue ?? 'PG'
 ```
@@ -495,6 +521,7 @@ const teamInfo = {
   numTrophies: 2,
   bestPlayer: 'Hakeem Olajuwon',
 }
+// optional chaining + nullish coalescing FTW! 🤗
 // highlight-next-line
 const championshipPlayers = teamInfo.players?.['94-95'] ?? []
 
