@@ -1,7 +1,7 @@
 ---
 date: 2021-09-26
 title: Successfully using async functions in React useEffect
-shortDescription: How to avoid the exhaustive deps ESLint error by properly using async functions within the React useEffect Hook
+shortDescription: How to avoid the exhaustive deps ESLint error by properly using JavaScript async functions within the React useEffect Hook
 category: react
 tags: [react, hooks, async, functions, linting]
 hero: ./pinky-promise-andrew-petrov-hopnkQoC0dg-unsplash.jpeg
@@ -81,7 +81,7 @@ const useTopPlayers = (category, season) => {
 
 The code seems to flow more nicely using [`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await), right? But we're unintentionally breaking one of the rules of the `useEffect()` Hook by making `useEffect()` asynchronous.
 
-Despite breaking the rules, the majority of the time our code would still work fine. However, if we have multiple `useEffect()` calls that were order-dependent, we could run into a race-condition, creating a bug that would be super hard to track down. But if we're using the [React Hooks ESLint Plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) (which we absolutely should be), it clues us in to our lurking issue.
+Despite breaking the rules, the majority of the time our code would still work fine. **However, if we have multiple `useEffect()` calls that were order-dependent, we could run into a race-condition, creating a bug that would be super hard to track down.** But if we're using the [React Hooks ESLint Plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) (which we absolutely should be), it clues us in to our lurking issue.
 
 ```
 Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
@@ -109,7 +109,33 @@ Argument of type '() => Promise<void>' is not assignable to parameter of type 'E
 
 What are these errors telling us? Well, `useEffect()` is supposed to either return nothing or a [cleanup function](https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1). But by making the `useEffect()` function an async function, it [automatically returns a `Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#return_value) (even if that promise contains no data).
 
-We can follow the lint error's suggestion by defining an inner function within the `useEffect()` function and immediately calling it.
+You may be tempted, instead, to move the `async` to the function containing the `useEffect()` (i.e. the component function).
+
+```js
+// 🛑 DON'T DO THIS! 🛑
+// highlight-next-line
+const useTopPlayers = async (category, season) => {
+  const [players, setPlayers] = useState([])
+
+  useEffect(() => {
+    try {
+      const playerIds = await getTopPlayersApi(category, season)
+      const rawPlayers = await getPlayersById(playerIds)
+
+      setPlayers(normalizeApiPlayers(rawPlayers))
+    } catch (err) {
+      Bugsnag.notify(err)
+      setPlayers(null)
+    }
+  }, [category, season])
+
+  return players
+}
+```
+
+But this doesn't work at all for 2 main reasons. First, by making the component function `async`, we're now returning JSX wrapped in a `Promise` instead of just JSX. Remember, `async` automatically makes the function return a `Promise`. Secondly, `await` only works if its _direct_ containing function is `async`. **You cannot put `async` on a top-level function and expect `await` to work within nested functions.** So it not only doesn't work with React, but also isn't even valid JavaScript.
+
+Instead, we can follow the lint error's suggestion by defining an `async` inner function within the `useEffect()` function and immediately calling it.
 
 ```js
 const useTopPlayers = (category, season) => {
@@ -142,7 +168,7 @@ const useTopPlayers = (category, season) => {
 }
 ```
 
-Now the main `useEffect()` function is back to returning nothing. Instead, we've defined the `fetchTopPlayers()` inner function that we immediately call. We make `fetchTopPlayers()` an async function so that we can use `await` within it.
+Now the component function is back to returning JSX and the main `useEffect()` function is back to returning nothing. Instead, we've defined the `fetchTopPlayers()` inner function that we immediately call. We make `fetchTopPlayers()` an async function so that we can use `await` within it.
 
 I gotta admit, having to define the inner function is a bit clunky. But, in my opinion, it's a small price to pay to drastically improve the developer experience of async `useEffect` calls. You know, what's actually the most annoying is having to come up with a non-duplicative name for the inner function. We _could_ instead use an [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (immediately-invoked function expression).
 
