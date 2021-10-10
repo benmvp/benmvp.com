@@ -29,8 +29,8 @@ const useTopPlayers = (category, season) => {
     getTopPlayersApi(category, season)
       .then((playerIds) => {
         // avoid nesting by returning the promise returned by
-        // `getPlayersById`
-        return getPlayersById(playerIds)
+        // `getPlayersByIdApi`
+        return getPlayersByIdApi(playerIds)
       })
       .then((rawPlayers) => {
         setPlayers(normalizeApiPlayers(rawPlayers))
@@ -65,7 +65,7 @@ const useTopPlayers = (category, season) => {
     try {
       // highlight-start
       const playerIds = await getTopPlayersApi(category, season)
-      const rawPlayers = await getPlayersById(playerIds)
+      const rawPlayers = await getPlayersByIdApi(playerIds)
       // highlight-end
 
       setPlayers(normalizeApiPlayers(rawPlayers))
@@ -109,7 +109,7 @@ Argument of type '() => Promise<void>' is not assignable to parameter of type 'E
 
 What are these errors telling us? Well, `useEffect()` is supposed to either return nothing or a [cleanup function](https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1). But by making the `useEffect()` function an async function, it [automatically returns a `Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function#return_value) (even if that promise contains no data).
 
-You may be tempted, instead, to move the `async` to the function containing the `useEffect()` (i.e. the component function).
+You may be tempted, instead, to move the `async` to the function containing the `useEffect()` (i.e. the custom Hook).
 
 ```js
 // 🛑 DON'T DO THIS! 🛑
@@ -120,7 +120,7 @@ const useTopPlayers = async (category, season) => {
   useEffect(() => {
     try {
       const playerIds = await getTopPlayersApi(category, season)
-      const rawPlayers = await getPlayersById(playerIds)
+      const rawPlayers = await getPlayersByIdApi(playerIds)
 
       setPlayers(normalizeApiPlayers(rawPlayers))
     } catch (err) {
@@ -133,7 +133,7 @@ const useTopPlayers = async (category, season) => {
 }
 ```
 
-But this doesn't work at all for 2 main reasons. First, by making the component function `async`, we're now returning JSX wrapped in a `Promise` instead of just JSX. Remember, `async` automatically makes the function return a `Promise`. Secondly, `await` only works if its _direct_ containing function is `async`. **You cannot put `async` on a top-level function and expect `await` to work within nested functions.** So it not only doesn't work with React, but also isn't even valid JavaScript.
+But this doesn't work at all for 2 main reasons. First, by making the custom Hook `async`, we're now returning `players` data wrapped in a `Promise` instead of just `players`. Remember, `async` automatically makes the function return a `Promise`. Secondly, `await` only works if its _direct_ containing function is `async`. **You cannot put `async` on a top-level function and expect `await` to work within nested functions.** So it not only doesn't work with React, but also isn't even valid JavaScript.
 
 Instead, we can follow the lint error's suggestion by defining an `async` inner function within the `useEffect()` function and immediately calling it.
 
@@ -142,24 +142,23 @@ const useTopPlayers = (category, season) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
+    // Add inner async function
     // highlight-next-line
-    const fetchTopPlyers = async () => {
+    const fetchTopPlayers = async () => {
       try {
         // highlight-start
         const playerIds = await getTopPlayersApi(category, season)
-        const rawPlayers = await getPlayersById(playerIds)
+        const rawPlayers = await getPlayersByIdApi(playerIds)
         // highlight-end
 
         setPlayers(normalizeApiPlayers(rawPlayers))
       } catch (err) {
-        // notify our error monitoring (using Bugsnag)
         Bugsnag.notify(err)
-
-        // `null` players means an error happened
         setPlayers(null)
       }
     }
 
+    // Call function immediately
     // highlight-next-line
     fetchTopPlayers()
   }, [category, season])
@@ -168,7 +167,7 @@ const useTopPlayers = (category, season) => {
 }
 ```
 
-Now the component function is back to returning JSX and the main `useEffect()` function is back to returning nothing. Instead, we've defined the `fetchTopPlayers()` inner function that we immediately call. We make `fetchTopPlayers()` an async function so that we can use `await` within it.
+Now the Hook is back to returning `players` data and the main `useEffect()` function is back to returning nothing. Instead, we've defined the `fetchTopPlayers()` inner function that we immediately call. We make `fetchTopPlayers()` an async function so that we can use `await` within it.
 
 I gotta admit, having to define the inner function is a bit clunky. But, in my opinion, it's a small price to pay to drastically improve the developer experience of async `useEffect` calls. You know, what's actually the most annoying is having to come up with a non-duplicative name for the inner function. We _could_ instead use an [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (immediately-invoked function expression).
 
@@ -177,11 +176,12 @@ const useTopPlayers = (category, season) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
+    // use IIFE to avoid creating named function 🤪
     // highlight-next-line
     ;(async () => {
       try {
         const playerIds = await getTopPlayersApi(category, season)
-        const rawPlayers = await getPlayersById(playerIds)
+        const rawPlayers = await getPlayersByIdApi(playerIds)
 
         setPlayers(normalizeApiPlayers(rawPlayers))
       } catch (err) {
@@ -195,6 +195,8 @@ const useTopPlayers = (category, season) => {
   return players
 }
 ```
+
+> [Prettier](https://prettier.io/) automatically adds that weird `;` at the beginning of the statement. Because I don't normally use semicolons in my code, if there was a line prior to the IIFE the JavaScript interpreter wouldn't be able to properly understand what's going on.
 
 But to me, this is taking a clunky solution and making it worse. 🤪
 
