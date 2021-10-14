@@ -35,6 +35,7 @@ const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
+  // inner helper function that will be called w/in `useEffect()`
   // highlight-start
   const hideMessage = () => {
     if (count < 10) {
@@ -156,17 +157,7 @@ Our `useCopyToClipboard()` custom Hook will be called every time the host compon
 
 The [`useMemo()`](https://reactjs.org/docs/hooks-reference.html#usememo) Hook is very similar to `useCallback()` except that it [memoizes](https://en.wikipedia.org/wiki/Memoization) any value, not just functions. Again, we can think of "memoization" as a cache. If we provide the same dependency values (i.e. the "cache key"), we'll get the same value back.
 
-I doubt this is how it's actually implemented in the React code, but we can implement `useCallback()` with `useMemo()`:
-
-```js
-const useCallback = (func, deps) => {
-  return useMemo(() => {
-    return func
-  }, deps)
-}
-```
-
-So anyway I would use `useMemo()` in the same situations as above, i.e. when I have an object or array that will end up in the dependencies of `useEffect()`.
+I would use `useMemo()` in the same situations as above w/ `useCallback()`, i.e. when I have an object or array that will end up in the dependencies of `useEffect()`.
 
 ```js
 const Example = () => {
@@ -250,6 +241,18 @@ So now, if `filter` remains the same, we'll get back the same array reference fo
 **The other use case for `useMemo()` is to avoid expensive recalculations.** Let's say that in our example `ALL_PLAYERS` is a huge array (maybe 1000+ items). Even if we weren't using `filteredPlayers` in a `useEffect()`, re-computing that filter every time `Example` is re-rendered could be expensive and have performance impacts. So using `useMemo()` once again caches the value so it's only computed once per `filter` value.
 
 I _rarely_ use `useMemo()` in this case, though. I have yet to run into a case where this sort of performance optimization was needed. Unless the recalculation is super duper intensive and the component is being re-render many times per second, I've found that this optimization really isn't needed. **Using `useMemo()` isn't free after all because of all the code that executes to support it.** So it can actually _hurt_ our performance when used unnecessarily.
+
+By the way, I doubt this is how it's actually implemented in React under the hood, but we can implement `useCallback()` with `useMemo()`.
+
+```js
+const useCallback = (func, deps) => {
+  return useMemo(() => {
+    return func
+  }, deps)
+}
+```
+
+Just a little nugget of information before you go. 😄
 
 ---
 
