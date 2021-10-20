@@ -68,7 +68,7 @@ const Page = () => {
 
 > If you're wondering about the `isMounted` check after we receive the data from the API, it's to ensure that the component wasn't unmounted during the time that we made the API request and got back the response. Read [Handling async React component effects after unmount](/blog/handling-async-react-component-effects-after-unmount/) for more details on the problem and solution.
 
-The component makes two API requests any time the `TeamsFilter` or `PlayersFilter` changes. But it's inefficient because only one filter can change at a time, yet we make requests to both APIs. So if we're changing the `TeamsFilter` we're still retrieving the same `players` data over and over. We can fix by splitting up the single `useEffect()` call into two of them.
+The component makes two API requests any time the `TeamsFilter` or `PlayersFilter` change. But it's inefficient because only one filter can change at a time, yet we make requests to both APIs. So if we're changing the `TeamsFilter` we're still retrieving the same `players` data over and over. We can fix by splitting up the single `useEffect()` call into two of them.
 
 ```js
 import { useEffect, useState } from 'react'
@@ -215,9 +215,9 @@ const Page = () => {
 
 Overall the code is a bit longer than it was before, but I would argue that it is easier to reason about now that the component logic is split out into the `useTeams()` and `usePlayers()` custom Hooks. We can think of custom Hooks in much the same way we thinking about regular JavaScript helper/utility functions that extract logic. The unique aspect about custom Hooks is that they can call other Hooks. And when the state within the custom Hook updates, the component that calls the Hook also is re-rendered in order to retrieve the new data!
 
-Now instead of the `Player` component maintaining the `teams` and `players` states directly, it gets them `useTeams()` and `usePlayers()`, respectively. The `useTeams()` and `usePlayers()` custom Hooks are only being used once, but I extracted them just to "clean up" the component. What it's responsible for now is greatly simplified. In my opinion, it's much easier to follow what's happen in `Page`.
+Now instead of the `Page` component maintaining the `teams` and `players` states directly, it gets them `useTeams()` and `usePlayers()`, respectively. The `useTeams()` and `usePlayers()` custom Hooks are only being used once, but I extracted them just to "clean up" the component. What it's responsible for now is greatly simplified. In my opinion, it's much easier to follow what's happen in `Page`.
 
-The extraction also allows me to now focus in on the logic of the Hooks themselves. There are still some commonalities between `useTeams()` and `usePlayers()`. They both make API calls, and they both check the mounted state before setting the state. Let's try extracting _that_ logic into a `useFetch()` custom Hook.
+The extraction also allows me to now zero in on the logic of the Hooks themselves. There are still some commonalities between `useTeams()` and `usePlayers()`. They both make API calls, and they both check the mounted state before setting the state. Let's try extracting _that_ logic into a `useFetch()` custom Hook.
 
 ```js
 import { useEffect, useState } from 'react'
