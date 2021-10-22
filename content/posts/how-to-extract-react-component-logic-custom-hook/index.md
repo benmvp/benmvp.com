@@ -22,11 +22,9 @@ const Page = () => {
   const [playersFilter, setPlayersFilter] = useState('')
   const [players, setPlayers] = useState([])
 
-  let isMounted = false
-
   useEffect(() => {
     // page is mounted once `useEffect()` is called
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(`https://api.benmvp.com/teams?q=${teamsFilter}`)
@@ -52,6 +50,7 @@ const Page = () => {
       // page is no longer mounted when cleanup func is called
       isMounted = false
     }
+    // makes both API calls when either filter changes 👎🏾
   }, [teamsFilter, playersFilter])
 
   return (
@@ -79,13 +78,11 @@ const Page = () => {
   const [playersFilter, setPlayersFilter] = useState('')
   const [players, setPlayers] = useState([])
 
-  let isMounted = false
-
   // separate the teams `useEffect()` from the players one so that
   // we only retrieve data for the one that has changed
 
   useEffect(() => {
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(`https://api.benmvp.com/teams?q=${teamsFilter}`)
@@ -102,7 +99,7 @@ const Page = () => {
   }, [teamsFilter])
 
   useEffect(() => {
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(`https://api.benmvp.com/players?q=${playersFilter}`)
@@ -139,10 +136,9 @@ import { useEffect, useState } from 'react'
 // get the data
 const useTeams = (filter = '') => {
   const [teams, setTeams] = useState([])
-  let isMounted = false
 
   useEffect(() => {
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(`https://api.benmvp.com/teams?q=${filter}`)
@@ -169,10 +165,9 @@ const useTeams = (filter = '') => {
 // get the data
 const usePlayers = (filter = '') => {
   const [players, setPlayers] = useState([])
-  let isMounted = false
 
   useEffect(() => {
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(`https://api.benmvp.com/players?q=${filter}`)
@@ -227,10 +222,9 @@ import { useEffect, useState } from 'react'
 // mounted
 const useFetch = (url) => {
   const [jsonData, setJsonData] = useState(undefined)
-  let isMounted = false
 
   useEffect(() => {
-    isMounted = true
+    let isMounted = true
 
     window
       .fetch(url)
