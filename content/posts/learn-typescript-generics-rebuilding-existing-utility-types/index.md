@@ -33,7 +33,10 @@ interface Team {
   championships: number
 }
 
-const updateTeam = (team: Team: fieldsToUpdate: Partial<Team>) => {
+// `fieldsToUpdate` can take any properties of a `Team` since
+// all properties are optional. We don't have to pass in a
+// full `Team` object
+const updateTeam = (team: Team: fieldsToUpdate: Partial<Team>): Team => {
   return {
     ...team,
     ...fieldsToUpdate
@@ -60,7 +63,7 @@ As a result, the type definition of `Partial<Type>` is:
 
 ```typescript
 /**
- * Make all properties in T optional
+ * Make all properties in `Type` optional
  */
 type Partial<Type> = {
   [Key in keyof Type]?: Type[Key]
@@ -134,11 +137,11 @@ const players: Record<Position, Player[]> = {
     { firstName: 'Jalen', lastName: 'Green' },
   ],
   wing: [
-    { firstname: 'Eric', lastName: 'Gorden' },
+    { firstname: 'Eric', lastName: 'Gordon' },
     { firstName: 'Danuel', lastName: 'House Jr.' },
     { firstName: "Jae'Sean", lastName: 'Tate' },
   ],
-  center: [
+  big: [
     { firstName: 'Christian', lastName: 'Wood' },
     { firstName: 'Alperen', lastName: 'Sengun' },
     { firstName: 'Daniel', lastName: 'Theis' },
@@ -150,8 +153,8 @@ As a result, the type definition of `Record<Keys, Type>` is:
 
 ```typescript
 /**
- * Construct a type with a set of properties
- * `Keys` of type `Type`
+ * Construct a type with a set of properties `Keys`
+ * of type `Type`
  */
 type Record<Keys extends string | number | symbol, Type> = {
   [Key in Keys]: Type
