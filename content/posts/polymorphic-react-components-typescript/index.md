@@ -181,7 +181,9 @@ Here's where you get excited. Or you brain explodes. Or maybe both. It's basical
 React.ComponentPropsWithoutRef<C>
 ```
 
-First we grab all of the props defined for `C` using [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L836-L839). So if we pass `as="label"`, this will include `style`, `className`, all of the [ARIA tags](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), dozens of other props, as well as `htmlFor`. It will also include the `ref` prop for passing through [refs](https://reactjs.org/docs/refs-and-the-dom.html). If you don't want to support `ref`, you can use [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L840-L841).
+First we grab all of the props defined for `C` using [`React.ComponentPropsWithoutRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L836-L839). So if we pass `as="label"`, this will include `style`, `className`, all of the [ARIA tags](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), dozens of other props, as well as `htmlFor`. As the name suggests, the component will not include the `ref` prop for passing through [refs](https://reactjs.org/docs/refs-and-the-dom.html).
+
+> If you want to support `ref` with [`React.ComponentPropsWithRef`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2dfb801ec978b29ab81690a9b24ecb1f06c4eaf2/types/react/index.d.ts#L836-L839) and [`forwardRef()`](https://reactjs.org/docs/forwarding-refs.html), read my follow-up post on [Forwarding refs for a polymorphic React component in TypeScript](https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/).
 
 ```typescript
 Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
