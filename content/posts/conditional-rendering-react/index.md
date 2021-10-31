@@ -2,7 +2,7 @@
 date: 2021-05-09
 title: Conditional rendering in React
 shortDescription: 6 approaches for conditionally rendering JSX markup within a React component
-category: react
+category: React
 tags: [react, jsx, conditional, rendering]
 hero: ./fork-in-the-road-jens-lelie-u0vgcIOQG08-unsplash.jpg
 heroAlt: Fork in the road around two trees

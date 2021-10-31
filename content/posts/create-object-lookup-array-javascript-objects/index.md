@@ -2,7 +2,7 @@
 date: 2021-03-14
 title: Create an object lookup from an array of JavaScript objects
 shortDescription: Surprisingly shorthand JavaScript code for converting an array into an object lookup
-category: javascript
+category: JavaScript
 tags: [javascript, esnext]
 hero: ./butterfly-sandy-millar-pNGJpcrbfM4-unsplash.jpg
 heroAlt: Beautiful butterfly

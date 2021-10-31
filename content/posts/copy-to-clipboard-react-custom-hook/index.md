@@ -2,7 +2,7 @@
 date: 2021-03-21
 title: Copy to clipboard React custom Hook
 shortDescription: A React custom Hook wrapping the Clipboard web API to enable a copy to clipboard UX
-category: react
+category: React
 tags: [react, hooks, clipboard, web, apis]
 hero: ./clipboard-bethany-cirlincione-743f0Dy8bFE-unsplash.jpg
 heroAlt: A clipboard next to a pretty flower

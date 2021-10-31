@@ -1,7 +1,7 @@
 ---
 date: 2015-09-13
 title: Enhanced object literals
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, object-literals]
 hero: ./object-literal.png
 heroAlt: object literals

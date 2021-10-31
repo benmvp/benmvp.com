@@ -2,7 +2,7 @@
 date: 2021-04-25
 title: Using Jest mock functions in TypeScript
 shortDescription: How to represent an imported function in TypeScript that has been replaced by a Jest mock
-category: typescript
+category: TypeScript
 tags: [typescript, jest, mock]
 hero: ./mock-paper-kelly-sikkema-oYlvf3pdBw0-unsplash.jpg
 heroAlt: White printer paper against a green leafed plant

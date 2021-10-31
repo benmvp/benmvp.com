@@ -1,7 +1,7 @@
 ---
 title: Sharing React Component Logic
 shortDescription: Learn how to write reusable React components using patterns for sharing stateful logic and behavior
-category: react
+category: React
 level: advanced
 tags: [react, react hooks, render props, hoc, compound component]
 hero: ./laptop-with-code-safar-safarov-MSN8TFhJ0is-unsplash.jpg

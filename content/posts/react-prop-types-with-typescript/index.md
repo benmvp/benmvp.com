@@ -2,7 +2,7 @@
 date: 2020-06-11
 title: React Prop Types with TypeScript
 shortDescription: A guide comparing React Prop Types to their equivalent TypeScript definitions
-category: react
+category: React
 tags: [react, typescript, props]
 hero: ./mixing-console-abigail-keenan-QdEn9s5Q_4w-unsplash.jpg
 heroAlt: Sound mixing console

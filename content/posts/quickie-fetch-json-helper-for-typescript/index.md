@@ -2,7 +2,7 @@
 date: 2020-12-06
 title: Quickie fetch JSON helper for TypeScript
 shortDescription: How to avoid receiving the TypeScript any type from the Fetch API when retrieving JSON data
-category: typescript
+category: TypeScript
 tags: [fetch, type-assertion, fetch-api, json]
 hero: ./dog-fetch-k-mitch-hodge-kqPlrOrir5g-unsplash.jpg
 heroAlt: Dog fetching a huge stick

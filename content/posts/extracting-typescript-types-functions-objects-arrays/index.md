@@ -2,7 +2,7 @@
 date: 2021-06-06
 title: Extracting TypeScript types from functions, objects & arrays
 shortDescription: Tips & tricks for reverse-engineering function, object & array TypeScript types from 3rd-party libraries that fail to export them
-category: typescript
+category: TypeScript
 tags: [typescript, tips, types, hacks]
 hero: ./dentist-tools-neonbrand-y8fWicGsv4g-unsplash.jpeg
 heroAlt: Dentist tools on a blue tray

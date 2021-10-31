@@ -2,7 +2,7 @@
 date: 2021-10-24
 title: Learn TypeScript generics by rebuilding existing utility types
 shortDescription: Using TypeScript generic utilities to better understand constraints, conditional types and other generic type features
-category: typescript
+category: TypeScript
 tags: [typescript, generics, utilities]
 hero: ./toolbox-tekton-EcE9dFfXwwE-unsplash.jpeg
 heroAlt: Tekton screwdrivers, sockets, and combination wrenches

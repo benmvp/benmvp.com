@@ -1,7 +1,7 @@
 ---
 date: 2015-12-20
 title: New collections
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, map, set, weakmap, weakset]
 hero: ./many-coins.jpg
 heroAlt: A collection of different coins

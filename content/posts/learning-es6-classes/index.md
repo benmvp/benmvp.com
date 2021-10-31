@@ -1,7 +1,7 @@
 ---
 date: 2015-12-11
 title: Classes
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, classes]
 hero: ./oop-scrabble-tiles.jpg
 heroAlt: O-O-P Scrabble tiles

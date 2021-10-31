@@ -2,7 +2,7 @@
 date: 2021-06-27
 title: Catch warnings in Jest tests
 shortDescription: How to configure Jest to fail tests on console warnings and errors
-category: divops
+category: DivOps
 tags: [divops, jest, testing, warnings]
 hero: ./hazard-sign-waldemar-brandt-F_yOvTzX8b4-unsplash.jpeg
 heroAlt: Brown hazard sign

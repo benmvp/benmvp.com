@@ -1,7 +1,7 @@
 ---
 date: 2016-07-21
 title: NDC Oslo 2016
-category: speaking
+category: Speaking
 tags: [conferences, html5, css3, speaking, talks]
 hero: ./ndc-oslo-logo.png
 heroAlt: NDC Oslo Logo

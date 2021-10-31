@@ -46,6 +46,9 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             ...MarkdownPageInfo
+            frontmatter {
+              category
+            }
           }
         }
       }
@@ -71,8 +74,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const { minishops, posts, pages } = data
 
   const createPages = ({ allMarkdownRemark, component, getPath }) => {
-    allMarkdownRemark.edges.forEach(({ node }) => {
+    const { edges } = allMarkdownRemark
+
+    edges.forEach(({ node }, index) => {
       const slug = node.fields.slug
+      const category = node.frontmatter?.category
+      const nextEdge = index >= edges.length - 1 ? null : edges[index + 1]
+      const previousEdge = index <= 0 ? null : edges[index - 1]
 
       createPage({
         path: getPath(slug),
@@ -81,6 +89,9 @@ exports.createPages = async ({ graphql, actions }) => {
           // Data passed to context is available
           // in page queries as GraphQL variables.
           slug,
+          previousSlug: previousEdge?.node.fields.slug,
+          nextSlug: nextEdge?.node.fields.slug,
+          category,
         },
       })
     })

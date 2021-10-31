@@ -2,7 +2,7 @@
 date: 2021-07-11
 title: Exploring the JavaScript Promise API methods
 shortDescription: Learn the JavaScript Promise static methods like Promise.allSettled, Promise.any, and others through real-world use cases
-category: javascript
+category: JavaScript
 tags: [javascript, promise, async, await]
 hero: ./wedding-bands-tetiana-shyshkina-HC-FGU-chN0-unsplash.jpeg
 heroAlt: Two wedding bands on a table

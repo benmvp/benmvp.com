@@ -2,7 +2,7 @@
 date: 2020-04-23
 title: Check out react-jsonschema-form
 shortDescription: How to use react-jsonschema-form to automatically render a form based on JSON schema
-category: react
+category: React
 tags: [TIL, react, forms, json-schema]
 hero: ./document-helloquence-OQMZwNd3ThU-unsplash.jpeg
 heroAlt: Man filling out a document

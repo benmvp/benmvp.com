@@ -2,7 +2,7 @@
 date: 2021-07-18
 title: Learn the Array reduce method by re-implementing lodash functions
 shortDescription: Re-implement zip, keyBy, sum and other lodash functions in order to learn how Array reduce works
-category: javascript
+category: JavaScript
 tags: [javascript, arrays, reduce]
 hero: ./solar-panel-array-antonio-garcia-ndz_u1_tFZo-unsplash.jpeg
 heroAlt: An array of blue solar panels in Chile

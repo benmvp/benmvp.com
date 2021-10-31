@@ -2,7 +2,7 @@
 date: 2021-03-28
 title: Quickie fetch timeout
 shortDescription: Use Promise.race to add timeout support to the Fetch API
-category: javascript
+category: JavaScript
 tags: [fetch, timeout, promises]
 hero: ./locks-marcos-mayer-8_NI1WTqCGY-unsplash.jpg
 heroAlt: Locks on a bridge

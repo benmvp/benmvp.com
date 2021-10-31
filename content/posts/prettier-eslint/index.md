@@ -2,7 +2,7 @@
 date: 2021-01-31
 title: Prettier + ESLint = ❤️
 shortDescription: How to integrate Prettier into ESLint so that you'll never have to think of code formatting again!
-category: divops
+category: DivOps
 tags: [divops, githooks, vscode]
 hero: ./makeup-element5-digital-ceWgSMd8rvQ-unsplash.jpg
 heroAlt: Assorted makeup products

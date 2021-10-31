@@ -1,7 +1,7 @@
 ---
 date: 2015-11-30
 title: for-of loop
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, for-of]
 hero: ./merry-go-round.jpg
 heroAlt: Spinning Merry-go-round

@@ -2,7 +2,7 @@
 date: 2021-06-13
 title: Creating a React controlled components pattern custom Hook
 shortDescription: How to create a custom React Hook that allows components to be both controlled and uncontrolled just like form elements
-category: react
+category: React
 tags: [react, hooks, controlled, components, pattern]
 hero: ./cockpit-controls-mael-balland-V5hAryReZzo-unsplash.jpeg
 heroAlt: Gray and black airplane control panel

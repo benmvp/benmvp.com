@@ -2,7 +2,7 @@
 date: 2015-08-06
 title: Using ES6 right now
 author: Ben Ilegbodu
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, transpilers, babel, traceur]
 hero: ./babel-logo.png
 heroAlt: Babel logo

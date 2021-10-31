@@ -2,7 +2,7 @@
 date: 2021-09-26
 title: Successfully using async functions in React useEffect
 shortDescription: How to avoid the exhaustive deps ESLint error by properly using JavaScript async functions within the React useEffect Hook
-category: react
+category: React
 tags: [react, hooks, async, functions, linting]
 hero: ./pinky-promise-andrew-petrov-hopnkQoC0dg-unsplash.jpeg
 heroAlt: Two hand molds touching pinkies

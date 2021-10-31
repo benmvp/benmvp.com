@@ -2,7 +2,7 @@
 date: 2021-05-16
 title: Looping in React
 shortDescription: How to use vanilla JavaScript to loop within JSX of a React component
-category: react
+category: React
 tags: [react, loop, logic, javascript]
 hero: ./roller-coasters-priscilla-du-preez-FOsina4f7qM-unsplash.jpg
 heroAlt: Roller coaster under white clouds and blue sky

@@ -1,7 +1,7 @@
 ---
 date: 2016-09-19
 title: Front Porch Austin 2016
-category: speaking
+category: Speaking
 tags: [conferences, react, es6, speaking, talks]
 hero: ./front-porch-austin-closeup.jpg
 heroAlt: 'Ben Ilegbodu @ Front Porch Austin 2016 Closeup'

@@ -2,7 +2,7 @@
 date: 2019-07-10
 title: I'm a Google Developer Expert!
 shortDescription: I just found out that I've been accepted into the GDE program for Web Technologies!
-category: speaking
+category: Speaking
 tags: [google, developer, expert, award, developer-technologies]
 hero: ./google-developer-experts-logo-horizontal-color.png
 heroAlt: Google Developer Experts Logo

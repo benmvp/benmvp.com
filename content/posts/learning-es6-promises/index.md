@@ -1,7 +1,7 @@
 ---
 date: 2015-09-27
 title: Promises
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, promises, deferreds]
 hero: ./pinky-promise.jpg
 heroAlt: Pinky promise fingers

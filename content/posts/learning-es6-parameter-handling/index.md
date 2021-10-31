@@ -1,7 +1,7 @@
 ---
 date: 2015-09-11
 title: Parameter handling
-category: learning-es6
+category: 'Learning ES6'
 tags:
   [
     ecmascript-6,

@@ -1,7 +1,7 @@
 ---
 date: 2015-09-02
 title: Speaking at Little Rock Tech Fest 2015!
-category: learning-es6
+category: 'Learning ES6'
 tags:
   [
     ecmascript-6,

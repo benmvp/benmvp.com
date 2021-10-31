@@ -2,7 +2,7 @@
 date: 2020-11-01
 title: Conditional React props with TypeScript
 shortDescription: Using TypeScript to only allow a React prop to be set when another has a specific value
-category: react
+category: React
 tags: [react, typescript, props]
 hero: ./pair-birds-mcgill-library-osPrIcTwJy4-unsplash.jpg
 heroAlt: A pair of brown and white birds perched on a tree

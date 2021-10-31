@@ -2,7 +2,7 @@
 date: 2021-08-15
 title: Forwarding refs for a polymorphic React component in TypeScript
 shortDescription: How to properly type polymorphic React components using forwardRef in TypeScript
-category: react
+category: React
 tags: [react, typescript, refs, polymorphic]
 hero: ./you-are-here-fallon-michael-VUWDlBXGogg-unsplash.jpeg
 heroAlt: You are Here with boots in black & white

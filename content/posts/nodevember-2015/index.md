@@ -1,7 +1,7 @@
 ---
 date: 2015-11-22
 title: Nodevember 2015
-category: speaking
+category: Speaking
 tags: [conferences, es6, speaking, talks]
 hero: ./nodevember-2015-logo.png
 heroAlt: Nodevember 2015

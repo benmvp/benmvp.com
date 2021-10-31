@@ -2,7 +2,7 @@
 date: 2020-05-22
 title: The Popoff Progression
 shortDescription: A plan for new software engineering grads to focus on gaining depth in a single technical area to help grow their career
-category: career
+category: Career
 tags: [career, growth, interviewing, mentorship, training]
 hero: ./growing-plant-francesco-gallarotti-ruQHpukrN7c-unsplash.jpg
 heroAlt: A tiny plant growing out of the ground

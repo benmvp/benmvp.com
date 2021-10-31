@@ -2,7 +2,7 @@
 date: 2021-02-07
 title: 8 helpful custom React Hooks
 shortDescription: Implementations & explanations for custom React Hooks like usePrevious, useMedia, useDeepCompareEffect & more
-category: template
+category: React
 tags: [react, hooks]
 hero: ./chain-lock-link-markus-spiske-k-Ff5sB4iCY-unsplash.jpg
 heroAlt: Silver-colored chain lock link

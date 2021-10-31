@@ -2,7 +2,7 @@
 date: 2021-01-17
 title: Use cases for TypeScript const assertions
 shortDescription: Cases where TypeScript const assertions help avoid type errors with union literals in objects and more
-category: typescript
+category: TypeScript
 tags: [typescript, constAssertions, react, hooks]
 hero: ./wrenches-matt-artz-4mAcustUNPs-unsplash.jpg
 heroAlt: Two adjustable wrenches

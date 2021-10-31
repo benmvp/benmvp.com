@@ -1,7 +1,7 @@
 ---
 date: 2016-09-23
 title: Speaking at NodeSummit 2016
-category: speaking
+category: Speaking
 tags: [conferences, es6, speaking, talks]
 hero: ./nodesummit-side.jpg
 heroAlt: 'Ben Ilegbodu @ NodeSummit 2016 side shot'

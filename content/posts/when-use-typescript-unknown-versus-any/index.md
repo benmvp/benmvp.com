@@ -2,7 +2,7 @@
 date: 2021-01-10
 title: When to use TypeScript unknown vs any
 shortDescription: How the unknown type in TypeScript helps avoid using the any type for variables we don't know the type of
-category: typescript
+category: TypeScript
 tags: [types, unknown, any, typeSafety, typeChecking]
 hero: ./fork-in-the-road-jens-lelie-u0vgcIOQG08-unsplash.jpg
 heroAlt: Fork in the road in the forest

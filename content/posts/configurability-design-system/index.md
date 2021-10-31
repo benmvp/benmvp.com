@@ -2,7 +2,7 @@
 date: 2020-08-27
 title: Configurability in a Design System
 shortDescription: Thoughts on how developers prioritize flexibility when using your JS component library
-category: design-system
+category: 'Design System'
 tags: [react, design-system, javascript, components]
 hero: ./mac-option-key-hannah-joshua-46T6nVjRc2w-unsplash.jpg
 heroAlt: Photo of a the Option key on a Mac keyboard

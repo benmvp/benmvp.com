@@ -1,7 +1,7 @@
 ---
 date: 2015-08-30
 title: Block-level scoping with let and const
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, block-scoping, const, let]
 hero: ./block-scope.png
 heroAlt: block scoping

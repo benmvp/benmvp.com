@@ -2,7 +2,7 @@
 date: 2021-10-10
 title: React useCallback & useMemo use cases
 shortDescription: Examples for when using the useCallback and useMemo React Hooks are helpful in reducing component re-renders
-category: react
+category: React
 tags: [react, hooks, usecallback, useMemo, performance]
 hero: ./us-currency-bills-alexander-schimmeck-H_KabGs8FMw-unsplash.jpeg
 heroAlt: Various denominations of U.S. paper notes

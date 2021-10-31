@@ -2,7 +2,7 @@
 date: 2020-11-15
 title: Generic React Components in TypeScript
 shortDescription: How to use TypeScript generics to create data-agnostic React components
-category: typescript
+category: TypeScript
 tags: [react, generics]
 hero: ./assorted-concrete-houses-sam-ellis-8Ud6edt2DJ0-unsplash.jpg
 heroAlt: Assorted concrete houses

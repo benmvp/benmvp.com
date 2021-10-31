@@ -2,8 +2,8 @@
 date: 2020-12-13
 title: 10 modern JavaScript features to be awesome at React
 shortDescription: The 10 most important modern JavaScript features that will take your React skills to the next level
-category: template
-tags: [ecmascript, proposals, javascript]
+category: JavaScript
+tags: [react, ecmascript, proposals, javascript]
 hero: ./stairs-yusuf-evli-yaSLNLtKRIU-unsplash.jpg
 heroAlt: Gray outdoor wooden staircase
 heroCredit: 'Photo by [Yusuf Evli](https://unsplash.com/@yusufevli)'

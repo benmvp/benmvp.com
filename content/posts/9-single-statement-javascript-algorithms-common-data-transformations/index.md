@@ -2,7 +2,7 @@
 date: 2021-04-04
 title: 9 single-statement JS algorithms for common data transformations
 shortDescription: Reducing our reliance on Lodash by leveraging ESNext APIs to transform objects and arrays
-category: javascript
+category: JavaScript
 tags: [lodash, algorithms, objects, arrays]
 hero: ./heart-1s-0s-alexander-sinn-KgLtFCgfC28-unsplash.jpg
 heroAlt: 1s and 0s with a red heart

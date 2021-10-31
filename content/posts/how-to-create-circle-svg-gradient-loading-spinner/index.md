@@ -2,7 +2,7 @@
 date: 2021-09-12
 title: How to create an SVG gradient loading spinner
 shortDescription: How to add a gradient along an SVG circular arc path to create a loading spinner
-category: svg
+category: 'Web Development'
 tags: [svg, animations]
 hero: ./spinning-top-drew-beamer-iPpt0clD3ag-unsplash.jpeg
 heroAlt: Silver top spinning on a table

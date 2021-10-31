@@ -2,7 +2,7 @@
 date: 2021-09-19
 title: Using new-ish & lesser-known JavaScript operators to write concise code
 shortDescription: 8 operators that help us write more concise & accurate JavaScript code
-category: javascript
+category: JavaScript
 tags: [javascript, operators, ecmascript]
 hero: ./javascript-code-joan-gamell-ZS67i1HLllo-unsplash.jpeg
 heroAlt: JavaScript code in VSCode on black flat screen computer

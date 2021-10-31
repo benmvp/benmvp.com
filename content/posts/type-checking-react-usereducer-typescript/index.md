@@ -2,7 +2,7 @@
 date: 2020-11-22
 title: Type-checking React useReducer in TypeScript
 shortDescription: How TypeScript discriminating unions provide type safety to the useReducer hook
-category: typescript
+category: TypeScript
 tags: [react, hooks]
 hero: ./coffee-bean-funnel-shengjun-shi-kUUacyTdChM-unsplash.jpg
 heroAlt: Funnel of coffee beans

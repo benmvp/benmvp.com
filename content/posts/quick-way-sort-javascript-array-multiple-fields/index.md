@@ -2,7 +2,7 @@
 date: 2020-12-20
 title: Quick way to sort a JavaScript array by multiple fields
 shortDescription: How to avoid using if statements when sorting arrays by multiple keys in JavaScript
-category: javascript
+category: JavaScript
 tags: [arrays, typescript]
 hero: ./shell-game.jpg
 heroAlt: Photo of a shell game in action

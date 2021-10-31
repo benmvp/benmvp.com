@@ -1,7 +1,7 @@
 ---
 date: 2015-08-15
 title: "20 reasons to drop IE8 like it's hot"
-category: 'web-development'
+category: 'Web Development'
 tags:
   [
     browsers,

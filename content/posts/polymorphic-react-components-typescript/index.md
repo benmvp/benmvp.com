@@ -2,7 +2,7 @@
 date: 2020-11-08
 title: Polymorphic React Components in TypeScript
 shortDescription: How to define strongly-typed React components that can inherit props from arbitrary HTML elements
-category: typescript
+category: TypeScript
 tags: [react, typescript, components, design-system]
 hero: ./green-white-chameleon-david-clode-eZ6jB5dOlcw-unsplash.jpg
 heroAlt: Green and white chameleon on a tree branch

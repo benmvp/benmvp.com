@@ -1,7 +1,7 @@
 ---
 title: Zero to React with Hooks
 shortDescription: An introduction to React to learn the critical concepts needed for building modern React applications using hooks
-category: react
+category: React
 level: beginner
 tags: [react, react hooks, useState, useEffect, jsx]
 hero: ./react-code-filiberto-santillan-1HCb2gPk3ik-unsplash.jpg

@@ -2,7 +2,7 @@
 date: 2016-10-25
 title: 12 tricks for ES6 fun
 shortDescription: A quick look at using ES6 to solve "common-ish" tasks in JavaScript
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, tricks]
 hero: ./tips-and-tricks.jpg
 heroAlt: ES6 tricks

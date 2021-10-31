@@ -2,7 +2,7 @@
 date: 2021-04-11
 title: 50 shades of React rendering with Next.js
 shortDescription: How Next provides the best of static-site generation (SSG), client-side rendering (CSR) & server-side rendering (SSR) for React apps
-category: divops
+category: DivOps
 tags: [react, ssg, csr, ssr, nextjs]
 hero: ./assorted-colored-leaves-chris-lawton-5IHz5WhosQE-unsplash.jpg
 heroAlt: Various different colored leaves hanging from a line

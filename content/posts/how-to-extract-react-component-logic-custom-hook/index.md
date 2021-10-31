@@ -2,7 +2,7 @@
 date: 2021-10-17
 title: How to extract React component logic into a custom Hook
 shortDescription: Reasons and steps to follow to create React custom Hooks by extracting component logic
-category: react
+category: React
 tags: [react, hooks]
 hero: ./coat-hook-steve-johnson-6sB8gMRlEAU-unsplash.jpeg
 heroAlt: Silver coat hook on white wall

@@ -2,7 +2,7 @@
 date: 2021-05-23
 title: Create a dynamic sitemap with a Next.js API route
 shortDescription: How to use Next API routes to create an always up-to-date sitemap for user-generated dynamic routes
-category: react
+category: React
 tags: [react, next, sitemap, api]
 hero: ./maps-andrew-neel-1-29wyvvLJA-unsplash.jpg
 heroAlt: Maps lying on the floor

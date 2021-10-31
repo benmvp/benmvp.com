@@ -2,7 +2,7 @@
 date: 2021-08-29
 title: How to shallow clone a JavaScript array
 shortDescription: 8 different approaches in JavaScript for creating a shallow copy of an array
-category: javascript
+category: JavaScript
 tags: [javascript, arrays, shallow, clone, copy]
 hero: ./storm-troopers-phil-shaw-zAZYuch7deE-unsplash.jpeg
 heroAlt: Many storm troopers in rows

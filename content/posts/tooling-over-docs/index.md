@@ -2,7 +2,7 @@
 date: 2020-12-17
 title: Tooling over docs
 shortDescription: Why you should prioritize building tooling to shape best practices instead of writing docs
-category: training
+category: DivOps
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
 # heroAlt: Blue anchor stenciled on the wall

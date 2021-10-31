@@ -2,7 +2,7 @@
 date: 2021-05-02
 title: End-to-end testing with Firebase Emulator and Github Actions
 shortDescription: Setting up Cypress end-to-end testing in Github Actions for Next.js apps using Firebase Local Emulator Suite
-category: divops
+category: DivOps
 tags: [firebase, firestore, emulator, github, actions, nextjs, cypress]
 hero: ./road-to-mountains-jakub-gorajek-8w6971ZzUcg-unsplash.jpeg
 heroAlt: Gray asphalt road heading into the mountains

@@ -2,7 +2,7 @@
 date: 2020-12-17
 title: What is a Senior Software Engineer?
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
-category: react
+category: React
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
 # heroAlt: Blue anchor stenciled on the wall

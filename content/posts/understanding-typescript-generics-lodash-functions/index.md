@@ -2,7 +2,7 @@
 date: 2021-08-22
 title: Understanding TypeScript generics through lodash functions
 shortDescription: Learning how to use TypeScript generics by re-implementing common functions from lodash
-category: typescript
+category: TypeScript
 tags: [typescript, generics, lodash, arrays]
 hero: ./generic-cleaning-bottle-crystal-de-passille-chabot-9gzU1mtTzWM-unsplash.jpeg
 heroAlt: A generic window cleaning bottle with paper towel roll

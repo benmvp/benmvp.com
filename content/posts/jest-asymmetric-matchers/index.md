@@ -2,7 +2,7 @@
 date: 2020-12-17
 title: Jest asymmetric matchers
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
-category: testing
+category: Testing
 # tags: [react, hooks]
 # hero: ./blue-anchor-on-wall.jpg
 # heroAlt: Blue anchor stenciled on the wall

@@ -2,7 +2,7 @@
 date: 2015-08-01
 title: Goals & Features of ECMAScript 6
 author: Ben Ilegbodu
-category: learning-es6
+category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6]
 hero: ./es6-logo.png
 heroAlt: ES6 logo

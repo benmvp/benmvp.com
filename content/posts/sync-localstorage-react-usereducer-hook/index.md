@@ -2,7 +2,7 @@
 date: 2021-02-28
 title: Sync to localStorage with React useReducer Hook
 shortDescription: How to create a React custom Hook that wraps useReducer to persist state to localStorage
-category: react
+category: React
 tags: [react, hooks, localStorage]
 hero: ./floppy-disk-hosein-zanbori-FIFhOXkhAw4-unsplash.jpg
 heroAlt: Red floppy disk

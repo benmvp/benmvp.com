@@ -1,7 +1,7 @@
 ---
 date: 2016-01-13
 title: Generators as iterators
-category: learning-es6
+category: 'Learning ES6'
 tags:
   [
     ecmascript-6,

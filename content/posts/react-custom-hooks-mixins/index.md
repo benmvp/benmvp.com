@@ -2,7 +2,7 @@
 date: 2021-02-21
 title: React custom Hooks vs. Mixins
 shortDescription: How Mixins are surprisingly similar to custom Hooks for sharing stateful, non-visual logic
-category: react
+category: React
 tags: [react, hooks, mixins, HOCs, RenderProps]
 hero: ./old-phone-cellphone-martin-widenka-KxZyYXULMDw-unsplash.jpg
 heroAlt: Old white home telephone next to a new Android smartphone

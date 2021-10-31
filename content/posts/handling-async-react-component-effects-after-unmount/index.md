@@ -2,7 +2,7 @@
 date: 2021-01-24
 title: Handling async React component effects after unmount
 shortDescription: Four strategies for ensuring that React components don't update state after they've been unmounted
-category: react
+category: React
 tags: [react, hooks, async, effects, unmount]
 hero: ./empty-room-chair-serge-le-strat-tnw3krPFXxk-unsplash.jpg
 heroAlt: An empty room with a lone chair

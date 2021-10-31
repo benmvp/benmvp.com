@@ -2,7 +2,7 @@
 date: 2021-05-31
 title: Picking the right React component pattern
 shortDescription: Explanations & advice on how to choose between advanced React UI patterns like polymorphic components, render props, compound components and others
-category: react
+category: React
 tags:
   [
     react,

@@ -2,7 +2,7 @@
 date: 2021-02-14
 title: 5 tips for a healthier DivOps setup
 shortDescription: Suggestions for configurations to ESLint, Jest & TypeScript to prevent codebases from being riddled with warnings, errors or false positives
-category: divops
+category: DivOps
 tags: [divops, testing, eslint, jest, typescript]
 hero: ./vegetables-dan-gold-4_jhDO54BYg-unsplash.jpg
 heroAlt: A table full of a variety of vegetables

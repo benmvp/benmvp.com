@@ -1,13 +1,43 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { makeStyles, createStyles } from '@material-ui/core'
+import {
+  makeStyles,
+  createStyles,
+  Divider,
+  Typography,
+  Grid,
+} from '@material-ui/core'
 import Layout from '../components/Layout'
 import PostHeader from '../components/PostHeader'
 import Content from '../components/Content'
 import PostFooter from '../components/PostFooter'
+import PostCard from '../components/PostCard'
 import Seo from '../components/Seo'
 import { getBlogUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
+
+const PostCardList = ({ posts, category }) => (
+  <Grid container spacing={2}>
+    <Grid item xs={12}>
+      <Typography variant="h5" component="h3">
+        More from Ben Ilegbodu on {category}...
+      </Typography>
+    </Grid>
+    {posts.map(({ node }) => (
+      <Grid key={node.id} item xs={12} sm={6}>
+        <PostCard
+          mode="min"
+          slug={node.fields.slug}
+          title={node.frontmatter.title}
+          tags={node.frontmatter.tags}
+          date={node.frontmatter.date}
+          summary={node.frontmatter.shortDescription || node.excerpt}
+          hero={node.frontmatter.hero}
+        />
+      </Grid>
+    ))}
+  </Grid>
+)
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -17,12 +47,16 @@ const useStyles = makeStyles((theme) =>
     footer: {
       marginTop: theme.spacing(3),
     },
+    divider: {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+    },
   }),
 )
 
 const Post = ({ data }) => {
   const classes = useStyles()
-  const { post, site } = data
+  const { post, categoryPosts, site } = data
   const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
   const { title, date, dateIso, shortDescription, tags, category } = frontmatter
   const { slug } = fields
@@ -33,6 +67,19 @@ const Post = ({ data }) => {
     tagline: shortDescription,
     date,
   })
+  const relatedPosts = [...categoryPosts.edges]
+  const totalRelatedPosts = relatedPosts.length
+  const numRelatedPosts = 4
+
+  if (relatedPosts.length > numRelatedPosts) {
+    // We need to randomly remove (N - X) items from the array so that we'll
+    // have X remaining.
+    for (let i = 0; i < totalRelatedPosts - numRelatedPosts; i++) {
+      const randomIndex = Math.floor(Math.random() * relatedPosts.length)
+
+      relatedPosts.splice(randomIndex, 1)
+    }
+  }
 
   return (
     <Layout showAds includeSubscribe={false}>
@@ -89,6 +136,13 @@ const Post = ({ data }) => {
         summary={summary}
         tags={tags}
       />
+      {relatedPosts.length > 0 && (
+        <>
+          <Divider className={classes.divider} variant="middle" />
+
+          <PostCardList posts={relatedPosts} category={category} />
+        </>
+      )}
     </Layout>
   )
 }
@@ -96,7 +150,7 @@ const Post = ({ data }) => {
 export default Post
 
 export const query = graphql`
-  query PostInfo($slug: String!) {
+  query PostInfo($slug: String!, $category: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
@@ -114,6 +168,21 @@ export const query = graphql`
         category
         date(formatString: "MMMM DD, YYYY")
         dateIso: date(formatString: "YYYY-MM-DD")
+      }
+    }
+    categoryPosts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fileAbsolutePath: { regex: "//content/posts//" }
+        fields: { slug: { ne: $slug } }
+        frontmatter: { published: { ne: false }, category: { eq: $category } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          ...PostCardInfo
+        }
       }
     }
     site {

@@ -1,7 +1,7 @@
 ---
 date: 2018-12-01
 title: MVP! MVP! MVP!
-category: speaking
+category: Speaking
 tags: [microsoft, mvp, award, developer-technologies]
 hero: ./official-microsoft-mvp-horizontal-banner.png
 heroAlt: Official Microsoft Most Valuable Professional award

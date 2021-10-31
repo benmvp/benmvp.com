@@ -2,7 +2,7 @@
 date: 2021-04-18
 title: 25 VS Code extensions for max productivity
 shortDescription: A collection of Visual Studio Code extensions package management, code editing, formatting & validating and more
-category: productivity
+category: Productivity
 tags: [vscode, extensions, productivity]
 hero: ./code-editor-on-laptop-altumcode-dC6Pb2JdAqs-unsplash.jpg
 heroAlt: A laptop with a code editor on screen

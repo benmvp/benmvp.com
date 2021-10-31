@@ -2,7 +2,7 @@
 date: 2021-07-05
 title: Tools to catch accessibility errors in JavaScript applications
 shortDescription: How to use automated tooling to catch accessibility issues in a web application built with React, Vue or other JavaScript frameworks
-category: divops
+category: DivOps
 tags: [accessibility, a11y, testing, react, vue, angular, svelte]
 hero: ./accessible-entry-sign-daniel-ali-ju1yFZkrxVg-unsplash.jpeg
 heroAlt: Wall with an Accessible Entry sign on it
