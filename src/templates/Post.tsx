@@ -20,7 +20,7 @@ const PostCardList = ({ posts, category }) => (
   <Grid container spacing={2}>
     <Grid item xs={12}>
       <Typography variant="h5" component="h3">
-        More from Ben Ilegbodu on {category}...
+        More from Ben Ilegbodu on <strong>{category}</strong>...
       </Typography>
     </Grid>
     {posts.map(({ node }) => (
