@@ -36,7 +36,7 @@ interface Team {
 // `fieldsToUpdate` can take any properties of a `Team` since
 // all properties are optional. We don't have to pass in a
 // full `Team` object
-const updateTeam = (team: Team: fieldsToUpdate: Partial<Team>): Team => {
+const updateTeam = (team: Team, fieldsToUpdate: Partial<Team>): Team => {
   return {
     ...team,
     ...fieldsToUpdate
