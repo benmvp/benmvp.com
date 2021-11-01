@@ -67,14 +67,14 @@ const Post = ({ data }) => {
     tagline: shortDescription,
     date,
   })
-  const relatedPosts = [...categoryPosts.edges]
+  const relatedPosts = categoryPosts?.edges ? [...categoryPosts?.edges] : []
   const totalRelatedPosts = relatedPosts.length
-  const numRelatedPosts = 4
+  const maxRelatedPosts = 4
 
-  if (relatedPosts.length > numRelatedPosts) {
+  if (relatedPosts.length > maxRelatedPosts) {
     // We need to randomly remove (N - X) items from the array so that we'll
     // have X remaining.
-    for (let i = 0; i < totalRelatedPosts - numRelatedPosts; i++) {
+    for (let i = 0; i < totalRelatedPosts - maxRelatedPosts; i++) {
       const randomIndex = Math.floor(Math.random() * relatedPosts.length)
 
       relatedPosts.splice(randomIndex, 1)
