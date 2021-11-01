@@ -59,7 +59,7 @@ End-to-end testing is also important for web applications and, of course, requir
 
 ---
 
-## CI / CD environment
+## CI/CD environment
 
 While the DevOps engineers are experts at maintaining the Production environment, they are typically trained in backend engineering so they _usually_ are less familiar with maintaining frontend tool chains. **As a result, the onus falls on DivOps engineers to do what's necessary to get the web application to Production (or the JavaScript package to npm).**
 
@@ -79,7 +79,7 @@ Tools like [Create React App](https://create-react-app.dev/) and [Next.js](https
 
 Phew! 😅 So how about that? I'm sure I left off tons of packages and tools that are part of maintaining a frontend platform or infrastructure, but these should at least be the high-level areas.
 
-I'm really curious. Does your company have an explicit role for something like a DivOps engineer? There is certainly enough work here for one or more folks to focus on this type of work. I would love to see a job description if you have one.
+I'm really curious. Does your company have an explicit role for something like a DivOps engineer? There is certainly enough work here for one or more folks to focus on this type of work. I would love to see a job description if you have one. Reach out to me on Twitter at [@benmvp](https://twitter.com/benmvp).
 
 If after reading all this you realize that you are in fact a DivOps engineer, welcome to the [#DivOps](https://twitter.com/hashtag/divops) community! Join us on the [r/divops](https://www.reddit.com/r/divops/) subreddit and [DivOps Discord server](https://discord.gg/Vvk67JDX6t).
 
