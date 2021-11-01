@@ -1,7 +1,7 @@
 ---
 date: 2021-10-31
 title: What is a DivOps Engineer and what do they do?
-shortDescription: A deep dive into the various tools that a engineer sets up & configures while maintaining the web frontend infrastructure
+shortDescription: A deep dive into the various tools that an engineer sets up & configures while maintaining the web frontend infrastructure
 category: DivOps
 tags: [divops, engineer, frontend, tooling, platform]
 hero: ./code-joshua-sortino-LqKhnDzSF-8-unsplash.jpeg
