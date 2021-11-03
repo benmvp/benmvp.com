@@ -19,6 +19,24 @@
     ]
   },
   {
+    "name": "StaffEng Podcast",
+    "url": "https://podcast.staffeng.com/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Ben Ilegbodu (Stitch Fix)",
+        "date": "11/2/2021",
+        "categories": ["career"],
+        "links": [
+          {
+            "label": "Podcast",
+            "url": "https://podcast.staffeng.com/1687069/9464860-ben-ilegbodu-stitch-fix"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Global React Meetup September 2021",
     "url": "https://www.reactjsmeetup.com/#/react-contributor-days-september-2021",
     "location": "Remote",
