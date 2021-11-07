@@ -41,6 +41,12 @@ Keep learning my friends. 🤓
 - TypeScript?
 - Lighthouse CI
   - Each failure directs you to more docs
+- CLIs
+  - Argument validation (`--name` has to be a certain format)
+  - "Doctor" command
+- RTL complaining about using `act()`
+- React warnings in DEV
+  - Updating state after unmount
 - When you find yourself needing to teach or train people on best practices
   - Do live sessions
   - But consider using tooling for long-lasting info over writing docs
