@@ -39,7 +39,7 @@ const Home = () => {
 export default Home
 ```
 
-But this renders a vanilla `<a>` tag with no styling, which pretty much no one is going to want. We may throw a `className` on the `<a>` for styling, but more than likely we have a custom `<Link>` component of our own that handles the styling. I use the fantastic [MUI](https://mui.com/) React component library for my personal projects, and it has its own [`Link` component](https://mui.com/components/links/). So with MUI, the example becomes:
+**But the Next `<Link>` renders a vanilla `<a>` tag with no styling**, which pretty much no one is going to want. We may throw a `className` on the `<a>` for styling, but more than likely we have a custom `<Link>` component of our own that handles the styling. I use the fantastic [MUI](https://mui.com/) React component library for my personal projects, and it has its own [`Link` component](https://mui.com/components/links/). So with MUI, the example becomes:
 
 ```js
 import NextLink from 'next/link'
@@ -77,7 +77,7 @@ Notice that we had to add the [`passHref`](https://nextjs.org/docs/api-reference
 
 > It's important to note that if your component library's `Link` component is a function component (more than likely it is given Hooks), it must wrap the component in [`React.forwardRef`](https://reactjs.org/docs/forwarding-refs.html).
 
-But having to do this double `<Link>` dance every time we want to render a styled link gets annoying, especially if we're passing more props to the `<NextLink>` and `<MuiLink>`. So what I typically do in my Next apps is create a lightweight custom `Link` component that wraps both `next/link` and MUI `Link`.
+**But having to do this double `<Link>` dance every time we want to render a styled link gets annoying**, especially if we're passing more props to the `<NextLink>` and `<MuiLink>`. So what I typically do in my Next apps is create a lightweight custom `Link` component that wraps both `next/link` and MUI `Link`.
 
 ```js
 import NextLink from 'next/link'
@@ -171,9 +171,9 @@ type LinkProps = Omit<MuiLinkProps, 'href'> &
   Omit<NextLinkProps, 'as' | 'passHref' | 'children'>
 ```
 
-It ensures that we only can pass in valid props for our new `<Link>` component. How it's defined is also important. First we take all the props of our component library's `Link` component (`MuiLinkProps` in this case), but omits the `href` prop. This is because it is also defined in `NextLinkProps` and we want to ensure that we use the type definition for `href` from `next/link` because it supports both a `string` as well as a [`URL` object](https://nodejs.org/api/url.html#url_url_strings_and_url_objects).
+**It ensures that we only can pass in valid props for our new `<Link>` component.** How it's defined is also important. First we take all the props of our component library's `Link` component (`MuiLinkProps` in this case), but omits the `href` prop. This is because it is also defined in `NextLinkProps` and we want to ensure that we use the type definition for `href` from `next/link` because it supports both a `string` as well as a [`URL` object](https://nodejs.org/api/url.html#url_url_strings_and_url_objects).
 
-Then we intersect (or merge in) all of the props from `NextLinkProps`. I personally also exclude the [`as`](https://nextjs.org/docs/tag/v9.5.2/api-reference/next/link#dynamic-routes) prop because it's basically legacy functionality. We can omit `passHref` and `children` as well because we're explicitly setting them on `<NextLink>` (the `children` of `<NextLink>` is the `<MuiLink>`).
+Then we intersect (or extend) all of the props from `NextLinkProps`. I personally also exclude the [`as`](https://nextjs.org/docs/tag/v9.5.2/api-reference/next/link#dynamic-routes) prop because it's basically legacy functionality. We can omit `passHref` and `children` as well because we're explicitly setting them on `<NextLink>` (the `children` of `<NextLink>` is the `<MuiLink>`).
 
 So now back in our home page component, we can use our new `<Link>` component.
 
@@ -204,7 +204,7 @@ export default Home
 
 Now we're back to it _feeling_ like we're just using our component library `<Link>` component, but with all of the bells and whistles of `next/link`. 🎉
 
-One more thing before we finish. The `next/link` only works for local links. It does nothing for external links. In fact, using it for external links results in a bunch of wasted work. So it's better if we just use our component library's `<Link>` component directly.
+One more thing before we finish. The `next/link` only works for local links. It does nothing for external links. **In fact, using it for external links results in a bunch of wasted work.** So it's better if we just use our component library's `<Link>` component directly.
 
 ```js
 import { Link as ExternalLink } from '@mui/material'

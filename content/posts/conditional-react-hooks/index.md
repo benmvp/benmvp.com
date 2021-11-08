@@ -1,7 +1,7 @@
 ---
 date: 2020-12-27
 title: Conditional React Hooks
-shortDescription: How to conditionally call a custom React Hook that you can't modify & avoid breaking Hooks rules
+shortDescription: How to avoid breaking Hooks rules when conditionally calling a custom React Hook that you can't modify
 category: React
 tags: [react, hooks]
 hero: ./wrapping-paper-hello-sunday-nIV5aY7JOBk-unsplash.jpg
