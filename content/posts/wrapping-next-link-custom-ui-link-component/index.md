@@ -80,6 +80,7 @@ Notice that we had to add the [`passHref`](https://nextjs.org/docs/api-reference
 **But having to do this double `<Link>` dance every time we want to render a styled link gets annoying**, especially if we're passing more props to the `<NextLink>` and `<MuiLink>`. So what I typically do in my Next apps is create a lightweight custom `Link` component that wraps both `next/link` and MUI `Link`.
 
 ```js
+import { forwardRef } from 'react'
 import NextLink from 'next/link'
 import { Link as MuiLink } from '@mui/material'
 
@@ -89,38 +90,35 @@ import { Link as MuiLink } from '@mui/material'
  *
  * @see https://next.js.org/docs/api-reference/next/link
  */
-const Link = ({
-  href,
-  prefetch,
-  replace,
-  scroll,
-  shallow,
-  locale,
-  ...muiProps
-}) => {
+const Link = forwardRef(function Link(
+  { href, prefetch, replace, scroll, shallow, locale, ...muiProps },
+  ref,
+) {
   return (
     <NextLink
       href={href}
-      prefetch={prefetch}
       replace={replace}
       scroll={scroll}
       shallow={shallow}
       locale={locale}
       passHref
     >
-      <MuiLink {...muiProps} />
+      <MuiLink ref={ref} {...muiProps} />
     </NextLink>
   )
-}
+})
 
 export default Link
 ```
 
-The component isn't really complex. It just takes in the props and passes the appropriate ones to the underlying `<NextLink>` versus the `<MuiLink>`.
+The component isn't terribly complex. It takes in the props and passes the appropriate ones to the underlying `<NextLink>` versus the `<MuiLink>`. Because it's a function component, it also uses [`forwardRef`](https://reactjs.org/docs/forwarding-refs.html) so that it can still support refs like the underlying `<MuiLink>`.
+
+> I use a function declaration (`function Link`) instead of my typical arrow function so that the component definition within `forwardRef` still has a component name (`Link`). It helps with debugging in the DevTools so that it'll say `ForwardRef(Link)` instead of just `ForwardRef`.
 
 But since I develop in React with TypeScript, my `Link` component actually looks like this:
 
 ```tsx
+import { forwardRef } from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { Link as MuiLink, LinkProps as MuiLinkProps } from '@mui/material'
 
@@ -137,34 +135,29 @@ export type LinkProps = Omit<MuiLinkProps, 'href'> &
  *
  * @see https://next.js.org/docs/api-reference/next/link
  */
-const Link = ({
-  href,
-  prefetch,
-  replace,
-  scroll,
-  shallow,
-  locale,
-  ...muiProps
-}: LinkProps) => {
+// highlight-next-line
+const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
+  { href, prefetch, replace, scroll, shallow, locale, ...muiProps },
+  ref,
+) {
   return (
     <NextLink
       href={href}
-      prefetch={prefetch}
       replace={replace}
       scroll={scroll}
       shallow={shallow}
       locale={locale}
       passHref
     >
-      <MuiLink {...muiProps} />
+      <MuiLink ref={ref} {...muiProps} />
     </NextLink>
   )
-}
+})
 
 export default Link
 ```
 
-The only real difference here is the `LinkProps` type definition.
+The main difference here is the `LinkProps` type definition.
 
 ```typescript
 type LinkProps = Omit<MuiLinkProps, 'href'> &
@@ -174,6 +167,8 @@ type LinkProps = Omit<MuiLinkProps, 'href'> &
 **It ensures that we only can pass in valid props for our new `<Link>` component.** How it's defined is also important. First we take all the props of our component library's `Link` component (`MuiLinkProps` in this case), but omits the `href` prop. This is because it is also defined in `NextLinkProps` and we want to ensure that we use the type definition for `href` from `next/link` because it supports both a `string` as well as a [`URL` object](https://nodejs.org/api/url.html#url_url_strings_and_url_objects).
 
 Then we intersect (or extend) all of the props from `NextLinkProps`. I personally also exclude the [`as`](https://nextjs.org/docs/tag/v9.5.2/api-reference/next/link#dynamic-routes) prop because it's basically legacy functionality. We can omit `passHref` and `children` as well because we're explicitly setting them on `<NextLink>` (the `children` of `<NextLink>` is the `<MuiLink>`).
+
+Lastly, we update `forwardRef()` to include the ref type and component props type as the generic params: `forwardRef<HTMLAnchorElement, LinkProps>`.
 
 So now back in our home page component, we can use our new `<Link>` component.
 
@@ -234,6 +229,8 @@ export default Home
 ```
 
 I explicitly name the component library's link component `ExternalLink` to make it abundantly clear that it's only to be used for external links. Our custom `<Link>` component that wraps `next/link` is the default one to use.
+
+Alternatively, I could update the custom `Link` component to be smarter and only render a `<MuiLink>` when the url is external, but then it would need all the logic to resolve the `href` to a `string` if it's a `URL` object and then detect whether or not a URL string is external. That's more work than I'm willing to put in. 😅
 
 ---
 

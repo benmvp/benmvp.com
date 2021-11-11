@@ -53,9 +53,9 @@ const Subscribe = () => {
       <Box component="ul" my={4} pl={4}>
         <Typography component="li">
           I blog a lot about JavaScript, React, TypeScript,{' '}
-          <a href="https://www.divops.dev/" target="_blank" rel="noreferrer">
-            &quot;divops&quot;
-          </a>{' '}
+          <GatsbyLink href="/blog/what-divops-engineer/">
+            &quot;DivOps&quot;
+          </GatsbyLink>{' '}
           and other related web frontend technologies based on what I'm learning
           or questions that I'm asked.{' '}
           <strong>Get notified of my new blog posts</strong> when they are

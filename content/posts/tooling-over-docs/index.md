@@ -47,6 +47,7 @@ Keep learning my friends. 🤓
 - RTL complaining about using `act()`
 - React warnings in DEV
   - Updating state after unmount
+  - Unique keys or missing keys
 - When you find yourself needing to teach or train people on best practices
   - Do live sessions
   - But consider using tooling for long-lasting info over writing docs
