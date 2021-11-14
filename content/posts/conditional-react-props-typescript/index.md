@@ -69,7 +69,7 @@ type TruncateProps =
   | { truncate: true; showExpanded?: boolean }
 ```
 
-`TruncateProps` is where the magic happens. It's what's called a "[discriminated union](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#discriminating-unions)." I don't yet know what the "discriminated" part refers to, but to me it's just a union of object definitions. Let's break it down further and we'll come back to see how the discriminated union works for us.
+`TruncateProps` is where the magic happens. It's what's called a "[discriminated union](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions)." I don't yet know what the "discriminated" part refers to, but to me it's just a union of object definitions. Let's break it down further and we'll come back to see how the discriminated union works for us.
 
 ```typescript
 type TruncateProps =

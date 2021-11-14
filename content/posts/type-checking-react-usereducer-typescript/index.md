@@ -146,7 +146,7 @@ type Action =
   | { type: 'set_visibility'; visibility: Visibility }
 ```
 
-Next, using a [discriminated union](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#discriminating-unions), we define the valid actions. **This discriminated union is what becomes the linchpin and provides the strong typing for `useReducer`**.
+Next, using a [discriminated union](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions), we define the valid actions. **This discriminated union is what becomes the linchpin and provides the strong typing for `useReducer`**.
 
 It means that an action can _only_ have one of these 3 shapes. The fact that we cannot have a `type` other than the 3 listed catches any typos and prevents the need for having shared constants. An `'add_todo'` action _must_ have both `id` & `text` properties, whereas a `'toggle_todo'` cannot have a `text` property. The `visibility` property for `'set_visibility'` must be one of the 3 `Visibility` options (which also matches the `visibility` state property).
 
