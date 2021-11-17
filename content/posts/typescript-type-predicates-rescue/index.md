@@ -13,3 +13,8 @@ published: false
 Keep learning my friends. 🤓
 
 - https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
+- duck typing
+- examples
+  - regular expression match on a string
+  - seeing if a string is an enum
+  - one of two or more objects

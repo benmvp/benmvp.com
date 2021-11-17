@@ -130,6 +130,8 @@ The situations necessitating `type` alias are generally for more complex prop re
 Let's take the example explained in the [Conditional React props with TypeScript](https://www.benmvp.com/blog/conditional-react-props-typescript/) post where we have a `Text` component that allows for the text to be truncated with a `truncate` prop. And when the text is truncated there is also a `showExpanded` prop to include a "show expanded" button that will allow the truncated text to be expanded to the full text. Therefore the `showExpanded` prop only makes sense when the `truncate` prop is true.
 
 ```ts
+// `TruncateProps` is a discriminated union of 2
+// object types
 type TruncateProps =
   // `showExpanded` cannot be set when `truncate`
   // is `false` (or `undefined`)
@@ -145,6 +147,8 @@ When `truncate` is `false` (or `undefined`), `showExpanded` is `never` (i.e. it 
 Similarly, if we want to take `TruncateProps` and merge it with our main props, we also need to use type intersection with a `type` alias.
 
 ```ts
+// Can only use type intersection to
+// extend a discriminated union
 type TextProps = TruncateProps & {
   children: React.ReactNode
 }
@@ -153,7 +157,7 @@ type TextProps = TruncateProps & {
 **We have to use a `type` alias to extend a discriminated union.** If we tried to use `extends` in an `interface`, we get an error.
 
 ```ts
-interface CommonProps extends TruncateProps {
+interface TextProps extends TruncateProps {
   children: React.ReactNode
 }
 
@@ -172,6 +176,8 @@ interface ButtonProps {
   width?: 'fixed' | 'fit' | 'fill'
 }
 
+// type aliases create "type expressions" when
+// combined with generic types
 // highlight-start
 type OptionalButtonProps = Partial<ButtonProps>
 type ButtonLayoutProps = Pick<ButtonProps, 'size' | 'width'>
@@ -188,6 +194,7 @@ interface ButtonProps {
   width?: 'fixed' | 'fit' | 'fill'
 }
 
+// interfaces *can* extend generic types but feel weird
 // 🤮🤮🤮
 // highlight-start
 interface OptionalButtonProps extends Partial<ButtonProps> {}
@@ -236,12 +243,12 @@ interface ButtonProps {
 }
 // highlight-start
 type NumberButtonProps = ButtonProps & {
-  // this doesn't work how we'd expect 😔
+  // intersecting doesn't work how we'd expect 😔
   children: number
 }
 // highlight-end
 // NumberButtonProps['children'] -> `never`
-// `string & number` -> `never`
+// (`string & number` -> `never`)
 ```
 
 The type of the `children` property is now [`never`](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type). But why? Well it turns out that when using intersections with `type` aliases, properties aren't overridden. They are... intersected. So instead of `number` overriding the original `string`, `number` is intersected with `string` (`string & number`). And because there is no shared type between `string` and `number`, the resulting type is `never`! 🤯
@@ -258,7 +265,7 @@ interface ButtonProps {
   width?: 'fixed' | 'fit' | 'fill'
 }
 // omit `children` from `ButtonProps` first so that
-// intersecting overrides
+// intersecting "overrides"
 // highlight-start
 type NumberButtonProps = Omit<ButtonProps, 'children'> & {
   children: number
