@@ -107,7 +107,7 @@ import userEvent from '@testing-library/user-event'
 import Example from './Example'
 
 test('displays the content when button is clicked', () => {
-  const { container } = render(<Example />)
+  render(<Example />)
 
   // 👍🏾 use the button's implicit role instead
   // highlight-next-line
