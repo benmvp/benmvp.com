@@ -11,3 +11,5 @@ published: false
 ---
 
 Keep learning my friends. 🤓
+
+- Use `Map`
