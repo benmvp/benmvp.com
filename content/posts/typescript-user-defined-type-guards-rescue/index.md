@@ -52,7 +52,7 @@ const getTeamMessage = (team?: Team) => {
 
   if (team) {
     // Because `team` is "truthy" TS knows that
-    // it *cannot* be `undefined`, so it's type
+    // it *cannot* be `undefined`, so its type
     // is just `Team`
     return `Welcome ${team.name}!`
   }
@@ -92,7 +92,7 @@ const getDisplay = (option: Option | string): string =>
 
 In both examples we're using built-in JavaScript operators that return rudimentary type information: [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) and [`instanceof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof). Depending on the types in the unioned type, using one operator or the other can help TypeScript narrow down the possible types when you can call the method ([`.toUTCString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString)) or access the property that you care about.
 
-But what happens if you have two objects, neither of which are class instances? Using `typeof` or `instanceof` won't help. Depending on the properties of the objects, we can make use of [`in` operator narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing).
+But what happens if you have two objects types, neither of which are class instances? Using `typeof` or `instanceof` won't help. Depending on the properties of the objects, we can make use of [`in` operator narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing).
 
 ```typescript
 interface Team {
@@ -130,7 +130,7 @@ const ALL_LOCALES = [
   'es-US',
 ] as const
 
-// derive `Locale` type from `ALL_LOCALES` data
+// derive `Locale` type from `ALL_LOCALES` data 🤓
 type Locale = typeof ALL_LOCALES[number]
 // ⮑ "en-US" | "en-GB" | "en-CA" | "fr-CA" | "fr-FR" | "es-ES" | "es-US"
 
@@ -175,7 +175,7 @@ const getUserLocale = (): Locale =>
 
 The `navigator.languages` property is a `string[]`. The [`.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method takes a test function that returns true when an array item passes the test. Because `isValidLocale` does the same thing, we can pass it to `.find()`. But since it's not just a regular function but a type predicate, TypeScript now knows that the found item in the `string[]` is specifically a `Locale`.
 
-A type predicate can be used with [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) as well to not only filter down the elements but filter down the types as well.
+A user-defined type guard can also be used with [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) to not only filter down the elements but filter down the types as well.
 
 ```typescript
 // returns a list of the user languages that are also valid locales
@@ -186,7 +186,7 @@ const getUserLocales = (): Locale[] =>
   navigator.languages.filter(isValidLocale)
 ```
 
-> I wrote a blog post almost exactly a year ago called [Filtering undefined elements from an array in TypeScript](/blog/filtering-undefined-elements-from-array-typescript/) which makes use of user-defined type guards with `.filter()`.
+> I wrote a post almost exactly a year ago called [Filtering undefined elements from an array in TypeScript](/blog/filtering-undefined-elements-from-array-typescript/) which makes use of user-defined type guards with `.filter()`.
 
 ---
 
