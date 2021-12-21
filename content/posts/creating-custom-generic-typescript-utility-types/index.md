@@ -1,5 +1,5 @@
 ---
-date: 2022-12-21
+date: 2021-12-21
 title: Creating custom generic TypeScript utility types
 shortDescription: How to create complex conditional generic type expressions in TypeScript that can even be recursive
 category: TypeScript
