@@ -39,7 +39,7 @@ interface Team {
 const updateTeam = (team: Team, fieldsToUpdate: Partial<Team>): Team => {
   return {
     ...team,
-    ...fieldsToUpdate
+    ...fieldsToUpdate,
   }
 }
 
@@ -49,11 +49,11 @@ const before2021 = {
   state: 'Texas',
   since: new Date(1967, 1, 1),
   value: 2.5e9,
-  championships: 2
+  championships: 2,
 }
 const after2021 = updateTeam(before2021, {
   championships: 3,
-  value: 3e9
+  value: 3e9,
 })
 ```
 
@@ -120,7 +120,7 @@ We're starting to build our generic type powers. 💥
 
 ## Generic constraints
 
-The [`Record<Keys, Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type) utility constructs an object type whose propery keys are `Keys` and whose property values are `Type`. So this utility is used to create a map of the properties of a type to another type.
+The [`Record<Keys, Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type) utility constructs an object type whose property keys are `Keys` and whose property values are `Type`. So this utility is used to create a map of the properties of a type to another type.
 
 For example:
 
