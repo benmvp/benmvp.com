@@ -1,5 +1,5 @@
 ---
-date: 2021-12-17
+date: 2022-12-17
 title: How to get properly typed keys of a TypeScript Record using Object.keys
 # shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
 category: TypeScript
