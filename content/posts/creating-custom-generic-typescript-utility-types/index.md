@@ -107,8 +107,8 @@ type ToFirestore<MaybeDate> = MaybeDate extends Date
   ? { [Key in keyof MaybeDate]: ToFirestore<MaybeDate[Key]> }
   : MaybeDate
 
-type TypeA = ToFirestore<{ name: string; birthdate: Date }>
-// ⮑ { name: string, birthdate: Timestamp }
+type TypeA = ToFirestore<{ name: string; birthDate: Date }>
+// ⮑ { name: string, birthDate: Timestamp }
 
 type TypeB = ToFirestore<{ id: number; created: Date; dates: Date[] }>
 // ⮑ { id: number, created: Timestamp, dates: Timestamp[] }
@@ -118,25 +118,25 @@ type TypeC = ToFirestore<{ from: Date; to: Date }[]>
 
 type TypeD = ToFirestore<{
   name: string
-  players: { fullName: string; birthdate: Date }[]
+  players: { fullName: string; birthDate: Date }[]
 }>
 // ⮑ {
 //  name: string,
-//  players: { fullName: string, birthdate: Timestamp }[]
+//  players: { fullName: string, birthDate: Timestamp }[]
 // }
 
 type typeE = ToFirestore<{ name: string; age: number }>
 // ⮑ { name: string, age: number }
 ```
 
-If the `MaybeDate` is not a `Date` nor an array, we next want to see if it's an object type instead. We do that using another conditional to see if the `MaybeDate` extends `Record<string, any>`, a base object literal type. **The "true" branch of the doubly nested conditional takes an object type and using [mapped types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) converts it to a new object type with the same keys.** Using `ToFirestore<>`, any `Date` type values are mapped to `Timestamp` types while other types are left the same.
+If the `MaybeDate` is not a `Date` nor an array, we next want to see if it's an object type instead. We do that using another conditional to see if the `MaybeDate` extends `Record<string, any>`, a base object literal type. **The "true" branch of the doubly nested conditional takes an object type and using [mapped types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) converts it to a new object type with the same key types.** Using `ToFirestore<>`, any `Date` type values are mapped to `Timestamp` types while other types are left the same.
 
 > Again, `ToFirestore<>` is a recursive conditional generic type because it calls itself on every object value type of `MaybeDate`.
 
 ```typescript
-// If we have neither a `Date`, nor array nor object, just return
-// back the same type because there's no transformation to be
-// done
+// If we have neither a `Date`, nor array nor object, just
+// return back the same type because there's no transformation
+// to be done
 // highlight-range{7}
 type ToFirestore<MaybeDate> = MaybeDate extends Date
   ? Timestamp
