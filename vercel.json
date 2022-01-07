@@ -19,7 +19,7 @@
     },
     {
       "source": "/blog/rss.xml",
-      "values": [
+      "headers": [
         {
           "key": "Content-Type",
           "value": "application/rss+xml"
