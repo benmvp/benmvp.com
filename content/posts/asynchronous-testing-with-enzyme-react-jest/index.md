@@ -164,7 +164,7 @@ const runAllPromises = () => {
 }
 ```
 
-We return a `Promise` that is resolved, when the `setImmediate` callback is called.
+We return a `Promise` that is resolved, when the `setImmediate` callback is called. If you prefer, you can also use the native implementation of `runAllPromises` named [`timersPromises.setImmediate`](https://nodejs.org/api/timers.html#timerspromisessetimmediatevalue-options).
 
 ## The React Testing Library solution
 
