@@ -216,6 +216,8 @@ However, if the `window.__WAS_SSR` property is set to `true` by the app, then on
 Although the component doesn't know if it's being rendered in a client-side only app or a server-side rendered app, **the app itself does know how it's being rendered.** So a server-side rendered app can set the `window` value in module scope in the top-most component.
 
 ```js
+// in App.js (or equivalent)
+
 import React from 'react'
 // other imports as needed
 
