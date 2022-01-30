@@ -135,7 +135,7 @@ Now let's go on a journey...
 
 ---
 
-## Problem 1: Source of the `act()` warning
+## Problem 1: Find the source of the `act()` warning
 
 Let's take a quick look at the test code again:
 
@@ -307,7 +307,7 @@ Oh! But what if instead of polyfilling `IntersectionObserver`... I mocked it?
 
 ---
 
-## Problem 5: Mocking `IntersectionObserver`
+## Problem 5: Mock `IntersectionObserver`
 
 I really felt that my best chance at a workaround was by manipulating `IntersectionObserver` somehow. **I needed it to exist, but never intersect.** And then I remembered [`react-intersection-observer`](https://github.com/thebuilder/react-intersection-observer). Its main use provides a [`useInView`](https://github.com/thebuilder/react-intersection-observer#useinview-hook) Hook that is a wrapper around `IntersectionObserver`'s API. But what I was most interested in was its [testing utilities](https://github.com/thebuilder/react-intersection-observer#testing).
 

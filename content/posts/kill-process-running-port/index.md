@@ -1,7 +1,7 @@
 ---
 date: 2020-10-18
 title: Easily kill a process running on a port
-shortDescription: How to use the kill-port package with npx to kill the process running on a given port
+shortDescription: How to use the kill-port package with npx to stop the process running on a given port
 category: DivOps
 tags: [bash, command-line, npx, til]
 hero: ./sword-artur-kerkhoff-YQa44-Lst54-unsplash.jpg
