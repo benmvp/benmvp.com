@@ -1,5 +1,5 @@
 ---
-date: 2020-12-17
+date: 2022-12-17
 title: Tooling over docs
 shortDescription: Why you should prioritize building tooling to shape best practices instead of writing docs
 category: DivOps
@@ -9,6 +9,8 @@ category: DivOps
 # heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
 published: false
 ---
+
+Docs are highly important to keep teams on the same page, especially when they are distributed and remote. However, writing effective documentation and maintaining it to keep it up-to-date is challenging.
 
 Keep learning my friends. 🤓
 
