@@ -1,5 +1,17 @@
 [
   {
+    "name": "React Miami 2021",
+    "url": "https://www.reactmiami.com/",
+    "location": "Miami, Florida",
+    "talks": [
+      {
+        "title": "TBD",
+        "date": "TBD",
+        "time": "TBD"
+      }
+    ]
+  },
+  {
     "name": "CascadiaJS 2021",
     "url": "https://2021.cascadiajs.com/workshops/ben-ilegbodu",
     "location": "Remote",
