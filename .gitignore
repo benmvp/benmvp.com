@@ -76,5 +76,8 @@ schema.json
 *.d.ts
 apollo.config.js
 
-# Local Netlify folder
+# Local Netlify folder for CLI
 .netlify
+
+# Local Vercel folder for CLI
+.vercel

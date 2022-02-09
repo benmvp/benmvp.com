@@ -60,7 +60,7 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
       throw new Error(`Invalid method: ${request.method}`)
     }
 
-    const parsedBody = JSON.parse(request.body)
+    const parsedBody = request.body as BodyParams
     const validationError = validateBody(parsedBody)
 
     if (validationError) {
