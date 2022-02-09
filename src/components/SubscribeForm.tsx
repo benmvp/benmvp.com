@@ -42,7 +42,11 @@ const addSubscriber = async ({ email, firstName, referrer }) => {
   const data = await res.json()
 
   if (!res.ok) {
-    throw new SubscribeError(data.message)
+    if (res.status === 422) {
+      throw new SubscribeError(data.message)
+    } else {
+      throw new Error(data.message)
+    }
   }
 
   return data
@@ -104,7 +108,7 @@ const SubscribeForm = () => {
           state: 'error',
           message: 'Unknown error. Please try again.',
         })
-        Bugsnag.notify(err)
+        Bugsnag.notify(err as Error)
       }
     }
   }
