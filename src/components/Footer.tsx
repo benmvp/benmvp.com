@@ -130,13 +130,13 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
             </Link>{' '}
             and deployed to{' '}
             <Link
-              href="https://netlify.com/"
+              href="https://vercel.com/"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
               underline="always"
             >
-              Netlify
+              Vercel
             </Link>
             . The source code is hosted on{' '}
             <Link
