@@ -93,6 +93,6 @@
     "react-share": "^4.2.1",
     "slugify": "^1.4.5",
     "url-lib": "^3.0.3",
-    "validator": "^13.5.2"
+    "validator": "^13.7.0"
   }
 }
