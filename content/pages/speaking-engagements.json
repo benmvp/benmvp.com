@@ -5,9 +5,10 @@
     "location": "Miami, Florida",
     "talks": [
       {
-        "title": "TBD",
-        "date": "TBD",
-        "time": "TBD"
+        "title": "Migrating from Enzyme to React Testing Library",
+        "date": "4/11/2022",
+        "time": "10:57a EST",
+        "categories": ["react"]
       }
     ]
   },
