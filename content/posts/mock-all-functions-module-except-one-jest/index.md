@@ -19,9 +19,7 @@ Keep learning my friends. 🤓
 jest.mock('../path/to/module', () => {
   const actual = jest.requireActual('../path/to/module')
 
-  const allMocked = Object.fromEntries(
-    Object.keys(actual).map((funcName) => [funcName, jest.fn()]),
-  )
+  const allMocked = jest.createMockFromModule('../path/to/module')
 
   return {
     __esModules: true,
