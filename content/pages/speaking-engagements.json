@@ -6,9 +6,15 @@
     "talks": [
       {
         "title": "Migrating from Enzyme to React Testing Library",
-        "date": "4/11/2022",
+        "date": "4/19/2022",
         "time": "10:57a EST",
-        "categories": ["react"]
+        "categories": ["react"],
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2022/reactmiami/enzyme-to-rtl.html"
+          }
+        ]
       }
     ]
   },
