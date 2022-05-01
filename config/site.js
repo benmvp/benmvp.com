@@ -29,7 +29,7 @@ module.exports = {
   // author info
   author: 'Ben Ilegbodu',
   authorBio:
-    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Principal Frontend Engineer at Stitch Fix, frontend development teacher, Google Developer Expert, and Microsoft MVP. I love helping developers level up their frontend skills.",
+    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Frontend Architect at Stitch Fix, frontend development teacher, Google Developer Expert, and Microsoft MVP. I love helping developers level up their frontend skills.",
 
   // manifest.json
   manifestShortName: 'benmvp', // max 12 characters
