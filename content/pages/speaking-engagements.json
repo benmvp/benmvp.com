@@ -30,6 +30,10 @@
         "categories": ["react"],
         "links": [
           {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=po5UstEVIK4"
+          },
+          {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2022/reactmiami/enzyme-to-rtl.html"
           }
