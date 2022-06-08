@@ -88,7 +88,7 @@ jest.mock('../utils/players')
 // `undefined` because they've been auto-mocked
 ```
 
-Auto-mocking means that Jest will replace any function within the mocked module (`../utils/players` in this case) with a function that just returns `undefined`. **So if `app.js` calls `writePlayersData()` during a test run, it'll do nothing instead of writing to the filesystem** (which we probably don't want to do in a unit test).
+Auto-mocking means that Jest will replace any function within the mocked module (`../utils/players` in this case) with a new function that just returns `undefined`. **So if `app.js` calls `writePlayersData()` during a test run, it'll do nothing instead of writing to the filesystem** (which we probably don't want to do in a unit test).
 
 We can even assert that `writePlayersData` is called in a test by importing it.
 
@@ -101,6 +101,9 @@ import { writePlayersData } from '../utils/players'
 // create a mock of the `../utils/players` module
 jest.mock('../utils/players')
 
+// calls to any of the 4 functions in `app.js` will return
+// `undefined` because they've been auto-mocked
+
 it('calls `writePlayersData` when the `write` option is true', () => {
   run({ write: true })
 
@@ -112,7 +115,7 @@ it('calls `writePlayersData` when the `write` option is true', () => {
 })
 ```
 
-The `jest.mock()` method also supports parameters that allow us to specify a new implementation for module instead of the default auto-mocking.
+The `jest.mock()` method also supports parameters that allow us to specify a new implementation for a module instead of the default auto-mocking.
 
 ```js
 // app.test.js
@@ -136,7 +139,7 @@ jest.mock('../utils/players', () => {
 // test run will return the mocked values above
 ```
 
-Now the 4 functions are replaced with the specified mock functions (via [`jest.fn()`](https://jestjs.io/docs/jest-object#jestfnimplementation)) that return mock data. If any of them are called from `app.js` in a test case, the mock functions are used. **These explicit mocks are especially useful for `getPlayers()` and `getTeams()` because they are expected to return data and not `undefined` when called.**
+Now the 4 functions are replaced with the specified mock functions (via [`jest.fn()`](https://jestjs.io/docs/jest-object#jestfnimplementation)) that return mock data. If any of them are called from `app.js` in a test case, the mock functions are used. **These explicit mocks are especially useful for `getPlayers()` and `getTeams()` because they are expected to return data not `undefined` when called.**
 
 There are two problems with this approach. First, even though we're fine with `writePlayersData` being auto-mocked, we still have to include it with the default `jest.fn()`. **Otherwise, `writePlayersData` wouldn't exist at all during a test run.** Second, we have to provide a mock implementation for `formatPlayerName` even though we can (and probably should) use its real implementation.
 
