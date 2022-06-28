@@ -24,7 +24,7 @@
     "location": "Miami, Florida",
     "talks": [
       {
-        "title": "Migrating from Enzyme to React Testing Library",
+        "id": "enzyme-to-rtl",
         "date": "4/19/2022",
         "time": "10:57a EST",
         "categories": ["react"],
