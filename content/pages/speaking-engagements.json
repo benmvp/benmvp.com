@@ -47,13 +47,13 @@
     "location": "Remote",
     "talks": [
       {
-        "title": "Zero to React with Hooks",
+        "title": "Zero to React with Hooks Minishop",
         "date": "11/10/2021",
         "time": "1p PST",
         "categories": ["react"]
       },
       {
-        "title": "TypeScript for React Developers",
+        "title": "TypeScript for React Developers Minishop",
         "date": "11/11/2021",
         "time": "1p PST",
         "categories": ["typescript", "react"]
