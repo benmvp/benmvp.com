@@ -40,6 +40,7 @@
       "source": "/learning-es6",
       "destination": "https://learning-es6.benmvp.com/"
     },
+
     {
       "source": "/you-dont-need-js-for-that",
       "destination": "https://you-dont-need-js-for-that.benmvp.com/"
@@ -48,6 +49,7 @@
       "source": "/react-exposed",
       "destination": "https://react-exposed.benmvp.com/"
     },
+
     {
       "source": "/new-blog/",
       "destination": "/blog/new-blog/"
@@ -156,6 +158,12 @@
       "source": "/microsoft-mvp/",
       "destination": "/blog/microsoft-mvp/"
     },
+
+    {
+      "source": "/hb-hooks",
+      "destination": "https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html"
+    },
+
     {
       "source": "/slides/confoo2016-es6.html",
       "destination": "https://slides.benmvp.com/2016/confoo/es6"

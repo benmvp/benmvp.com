@@ -1,5 +1,23 @@
 [
   {
+    "name": "HackBuddy 2022",
+    "url": "https://javascriptla.net/blog/from-mixins-to-custom-hooks-history-of-sharing-in-react-w-benmvp/",
+    "location": "Online",
+    "talks": [
+      {
+        "id": "mixins-to-hooks",
+        "date": "7/26/2022",
+        "time": "6p PST",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Global React Meetup",
     "url": "https://www.reactjsmeetup.com/archive/state-of-react-or-april-2022",
     "location": "Remote",
