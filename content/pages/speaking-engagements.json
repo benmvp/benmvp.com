@@ -1,5 +1,24 @@
 [
   {
+    "name": "Connect.Tech 2022",
+    "url": "https://2022.connect.tech/",
+    "location": "Atlanta, Georgia",
+    "talks": [
+      {
+        "id": "web-dev",
+        "date": "11/8/2022",
+        "time": "TBD",
+        "room": "TBD"
+      },
+      {
+        "id": "typescript-react",
+        "date": "11/9/2022",
+        "time": "TBD",
+        "room": "TBD"
+      }
+    ]
+  },
+  {
     "name": "HackBuddy 2022",
     "url": "https://javascriptla.net/blog/from-mixins-to-custom-hooks-history-of-sharing-in-react-w-benmvp/",
     "location": "Online",
