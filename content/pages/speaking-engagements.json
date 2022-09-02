@@ -19,9 +19,21 @@
     ]
   },
   {
-    "name": "HackBuddy 2022",
+    "name": "Houston React Developers",
+    "url": "https://www.meetup.com/houston-react-js-group/events/287638053/",
+    "location": "Remote",
+    "talks": [
+      {
+        "id": "mixins-to-hooks",
+        "date": "9/22/2022",
+        "time": "4p PST"
+      }
+    ]
+  },
+  {
+    "name": "HackBuddy",
     "url": "https://javascriptla.net/blog/from-mixins-to-custom-hooks-history-of-sharing-in-react-w-benmvp/",
-    "location": "Online",
+    "location": "Remote",
     "talks": [
       {
         "id": "mixins-to-hooks",
