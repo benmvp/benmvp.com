@@ -163,6 +163,10 @@
       "source": "/hb-hooks",
       "destination": "https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html"
     },
+    {
+      "source": "/hrd-hooks",
+      "destination": "https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.html"
+    },
 
     {
       "source": "/slides/confoo2016-es6.html",

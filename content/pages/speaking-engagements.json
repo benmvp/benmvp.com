@@ -26,7 +26,13 @@
       {
         "id": "mixins-to-hooks",
         "date": "9/22/2022",
-        "time": "4p PST"
+        "time": "4p PST",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.htmll"
+          }
+        ]
       }
     ]
   },
