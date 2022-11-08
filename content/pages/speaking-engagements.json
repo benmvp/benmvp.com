@@ -14,7 +14,13 @@
         "id": "typescript-react",
         "date": "11/8/2022",
         "time": "10:30a",
-        "room": "Ballroom C"
+        "room": "Ballroom C",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2022/connecttech/ts-react.html"
+          }
+        ]
       }
     ]
   },

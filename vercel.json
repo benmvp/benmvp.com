@@ -160,6 +160,10 @@
     },
 
     {
+      "source": "/ct-ts-react",
+      "destination": "https://slides.benmvp.com/2022/connecttech/ts-react.html"
+    },
+    {
       "source": "/hb-hooks",
       "destination": "https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html"
     },
