@@ -164,6 +164,10 @@
       "destination": "https://slides.benmvp.com/2022/connecttech/ts-react.html"
     },
     {
+      "source": "/ct-webdev",
+      "destination": "https://slides.benmvp.com/2022/connecttech/webdev.html"
+    },
+    {
       "source": "/hb-hooks",
       "destination": "https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html"
     },
