@@ -8,7 +8,13 @@
         "id": "web-dev",
         "date": "11/9/2022",
         "time": "1:30p",
-        "room": "Ballroom D"
+        "room": "Room 105",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2022/connecttech/webdev.html"
+          }
+        ]
       },
       {
         "id": "typescript-react",
@@ -36,7 +42,7 @@
         "links": [
           {
             "label": "Slides",
-            "url": "https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.htmll"
+            "url": "https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.html"
           },
           {
             "label": "Video",
