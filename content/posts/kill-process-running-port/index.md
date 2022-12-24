@@ -13,7 +13,7 @@ Generally when I try to run a web server on an existing port, it will tell me th
 
 ```shell
 Something is already running at port 8080
-? Would you like to run the app at another port instead? › (Y/n)
+Would you like to run the app at another port instead? › (Y/n)
 ```
 
 But sometimes, usually for older servers, when the port is in use I'll get an error like:

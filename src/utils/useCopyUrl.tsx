@@ -1,9 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'
 import { formatUrl } from 'url-lib'
+import { ButtonProps } from '@material-ui/core'
 
 const useCopyUrl = (
   url: string,
-): [{ copyText: string; copyButtonColor: string }, () => void] => {
+): [
+  { copyText: string; copyButtonColor: ButtonProps['color'] },
+  () => void,
+] => {
   const trackedUrl = formatUrl(url, {
     utm_source: 'copy',
     utm_medium: 'social',
@@ -39,7 +43,7 @@ const useCopyUrl = (
   }, [trackedUrl])
 
   let copyText = 'Copy URL'
-  let copyButtonColor = 'primary'
+  let copyButtonColor: ButtonProps['color'] = 'primary'
 
   if (copyStatus === 'copied') {
     copyText = 'Copied'

@@ -13,15 +13,19 @@ import {
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
-import { getUrl } from '../utils'
+import { getFullUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
-import SITE_CONFIG from '../../config/site'
+import {
+  image as siteImage,
+  title as siteTitle,
+  url as siteUrl,
+} from '../../config/site'
 
 const PROJECTS = [
   {
-    title: SITE_CONFIG.siteTitle,
-    url: SITE_CONFIG.siteUrl,
-    imageUrl: SITE_CONFIG.siteImage,
+    title: siteTitle,
+    url: siteUrl,
+    imageUrl: siteImage,
     description: (
       <>
         My personal website where I include blog posts focusing on frontend
@@ -184,7 +188,7 @@ const Projects = () => {
   return (
     <Layout>
       <Seo
-        url={getUrl('projects')}
+        url={getFullUrl('projects')}
         title="Dev Projects"
         description={SEO_PAGE_DESCRIPTION}
         image={SEO_IMAGE_URL}

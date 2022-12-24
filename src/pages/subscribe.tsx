@@ -1,12 +1,18 @@
 import React from 'react'
-import { createStyles, makeStyles, Box, Typography } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import {
+  createStyles,
+  makeStyles,
+  Box,
+  Typography,
+  Link,
+} from '@material-ui/core'
+import NextLink from 'next/link'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import SubscribeForm from '../components/SubscribeForm'
 import Share from '../components/Share'
-import { getUrl } from '../utils'
+import { getFullUrl } from '../utils'
 import generateSocialImage from '../utils/generate-social-image'
 
 const useStyles = makeStyles((theme) =>
@@ -25,7 +31,7 @@ const useStyles = makeStyles((theme) =>
 const PAGE_TITLE = 'Subscribe to the BenMVP Newsletter'
 const PAGE_DESCRIPTION =
   'Get notified about new web frontend development blog posts, upcoming minishops & other goodies by Ben Ilegbodu'
-const PAGE_URL = getUrl('subscribe')
+const PAGE_URL = getFullUrl('subscribe')
 const SEO_IMAGE_URL = generateSocialImage({
   title: PAGE_TITLE,
   tagline: PAGE_DESCRIPTION,
@@ -47,15 +53,18 @@ const Subscribe = () => {
       <Typography variant="body1">
         The <strong>BenMVP Newsletter</strong> is a weekly<em>-ish</em> frontend
         web development newsletter by{' '}
-        <GatsbyLink href="/about/">Ben Ilegbodu</GatsbyLink>. 😄
+        <NextLink href="/about/" passHref legacyBehavior>
+          <Link>Ben Ilegbodu</Link>
+        </NextLink>
+        . 😄
       </Typography>
 
       <Box component="ul" my={4} pl={4}>
         <Typography component="li">
           I blog a lot about JavaScript, React, TypeScript,{' '}
-          <GatsbyLink href="/blog/what-divops-engineer/">
-            &quot;DivOps&quot;
-          </GatsbyLink>{' '}
+          <NextLink href="/blog/what-divops-engineer/" passHref legacyBehavior>
+            <Link>&quot;DivOps&quot;</Link>
+          </NextLink>{' '}
           and other related web frontend technologies based on what I'm learning
           or questions that I'm asked.{' '}
           <strong>Get notified of my new blog posts</strong> when they are
@@ -63,13 +72,20 @@ const Subscribe = () => {
         </Typography>
         <Typography component="li">
           I host short 3.5-hour workshops (called{' '}
-          <GatsbyLink href="/minishops/">minishops</GatsbyLink>) on React and
-          TypeScript. <strong>Find out about upcoming minishops</strong> when
-          they are released to ensure you get the best price possible.
+          <NextLink href="/minishops/" passHref legacyBehavior>
+            <Link>minishops</Link>
+          </NextLink>
+          ) on React and TypeScript.{' '}
+          <strong>Find out about upcoming minishops</strong> when they are
+          released to ensure you get the best price possible.
         </Typography>
         <Typography component="li">
-          I <GatsbyLink href="/speak/">speak</GatsbyLink> at conferences &amp;
-          meetups, join in on podcasts, and will do the occasional livestream.{' '}
+          I{' '}
+          <NextLink href="/speak/" passHref legacyBehavior>
+            <Link>speak</Link>
+          </NextLink>{' '}
+          at conferences &amp; meetups, join in on podcasts, and will do the
+          occasional livestream.{' '}
           <strong>Stay up to date with future events and videos</strong>.
         </Typography>
       </Box>

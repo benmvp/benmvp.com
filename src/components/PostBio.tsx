@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import { makeStyles, Grid } from '@material-ui/core'
-import Img from 'gatsby-image'
+import Image from 'next/image'
+import { author, authorBio } from '../../config/site'
+import benmvpLogo from '../../public/icons/benmvp-logo.png'
 
 const useStyles = makeStyles({
   avatarShell: {
@@ -17,25 +18,6 @@ const useStyles = makeStyles({
 
 const PostBio = () => {
   const classes = useStyles()
-  const { site, logo } = useStaticQuery(graphql`
-    query PostSiteInfo {
-      site {
-        siteMetadata {
-          author {
-            name
-            bio
-          }
-        }
-      }
-      logo: file(relativePath: { eq: "benmvp-logo.png" }) {
-        childImageSharp {
-          fixed(width: 80, height: 80) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Grid component="section" container spacing={2} alignItems="center">
@@ -51,9 +33,11 @@ const PostBio = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Img
-            fixed={logo.childImageSharp.fixed}
-            alt={site.siteMetadata.author.name}
+          <Image
+            src={benmvpLogo}
+            width={80}
+            height={80}
+            alt={author}
             className={classes.avatar}
           />
         </a>
@@ -63,7 +47,7 @@ const PostBio = () => {
         xs={12}
         sm={10}
         component="article"
-        dangerouslySetInnerHTML={{ __html: site.siteMetadata.author.bio }}
+        dangerouslySetInnerHTML={{ __html: authorBio }}
       />
     </Grid>
   )

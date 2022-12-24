@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import {
   createStyles,
   makeStyles,
@@ -7,7 +7,7 @@ import {
   Link,
   Container,
 } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 
 import SocialIcons from './SocialIcons'
 import SubscribeForm from './SubscribeForm'
@@ -18,9 +18,9 @@ interface Props {
 }
 
 const LINKS = [
-  { to: '/learning-es6-series/', title: 'Learning ES6' },
-  { to: '/ama/', title: 'AMA' },
-  { to: '/blog/rss.xml', title: 'RSS' },
+  { href: '/learning-es6-series/', title: 'Learning ES6' },
+  { href: '/ama/', title: 'AMA' },
+  { href: '/blog/rss.xml', title: 'RSS' },
 ]
 
 const useStyles = makeStyles((theme) =>
@@ -84,19 +84,16 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
           </Box>
         )}
         <Typography variant="body1" align="center" className={classes.links}>
-          {LINKS.map(({ to, title }, index) => (
-            <Fragment key={to}>
-              <GatsbyLink key={to} to={to} color="inherit" underline="hover">
+          {LINKS.map(({ href, title }, index) => (
+            <NextLink key={href} href={href} legacyBehavior passHref>
+              <Link color="inherit" underline="hover">
                 {title}
-              </GatsbyLink>
-              {index < LINKS.length - 1 ? ' | ' : ''}
-            </Fragment>
-          ))}
+              </Link>
+            </NextLink>
+          )).join(' | ')}
         </Typography>
         <Box className={classes.info}>
-          <Typography variant="h4" className={classes.name}>
-            Ben Ilegbodu
-          </Typography>
+          <Typography variant="h4">Ben Ilegbodu</Typography>
           <SocialIcons />
         </Box>
         <Box className={classes.finePrint}>
@@ -112,21 +109,16 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
               2 Cor 5:17
             </Link>
           </Typography>
-          <Typography
-            variant="caption"
-            component="p"
-            align="center"
-            className={classes.buildInfo}
-          >
+          <Typography variant="caption" component="p" align="center">
             Built using{' '}
             <Link
-              href="https://www.gatsbyjs.org"
+              href="https://nextjs.org/"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
               underline="always"
             >
-              Gatsby
+              Next.js
             </Link>{' '}
             and deployed to{' '}
             <Link

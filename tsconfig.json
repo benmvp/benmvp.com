@@ -1,10 +1,15 @@
 {
-  "include": ["./src/**/*"],
+  "include": [
+    "./src/**/*"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "lib": ["dom", "es2020"],
-    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2020"
+    ],
+    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -12,6 +17,13 @@
     "noEmit": true,
     "skipLibCheck": true,
     "noImplicitAny": false,
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "isolatedModules": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

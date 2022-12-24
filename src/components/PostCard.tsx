@@ -11,17 +11,17 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 import Share from './Share'
 import { getBlogUrl, genPostSlug } from '../utils'
 import useCopyUrl from '../utils/useCopyUrl'
 
 interface Props {
   date: string
-  hero: any
+  hero?: string
   mode?: 'min' | 'full'
   slug: string
-  summary: string
+  summary?: string
   tags?: string[]
   title: string
 }
@@ -55,11 +55,11 @@ const PostCard = ({
 
   return (
     <Card id={genPostSlug(title)}>
-      <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
+      <CardActionArea component={NextLink} href={`/blog${slug}`}>
         {hero && (
           <CardMedia
             component="img"
-            image={hero.childImageSharp.fluid.src}
+            image={hero}
             title={title}
             className={classes.media}
           />

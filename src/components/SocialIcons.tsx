@@ -1,8 +1,7 @@
 import React from 'react'
-import { makeStyles, createStyles, Box } from '@material-ui/core'
+import { makeStyles, createStyles, Box, IconButton } from '@material-ui/core'
 import { GitHub, LinkedIn, Twitter } from '@material-ui/icons'
-import { IconButton } from 'gatsby-theme-material-ui'
-import { graphql, useStaticQuery } from 'gatsby'
+import { github, linkedIn, twitter } from '../../config/site'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -22,25 +21,12 @@ const useStyles = makeStyles((theme) =>
 
 const SocialIcons = () => {
   const classes = useStyles()
-  const { site } = useStaticQuery(graphql`
-    query SocialSiteInfo {
-      site {
-        siteMetadata {
-          social {
-            twitter
-            github
-            linkedIn
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Box component="ul" className={classes.root} p={0} my={0}>
       <li className={classes.item}>
         <a
-          href={site.siteMetadata.social.twitter}
+          href={twitter}
           target="_blank"
           rel="noopener noreferrer"
           title="Follow Ben on Twitter"
@@ -52,7 +38,7 @@ const SocialIcons = () => {
       </li>
       <li className={classes.item}>
         <a
-          href={site.siteMetadata.social.github}
+          href={github}
           target="_blank"
           rel="noopener noreferrer"
           title="Visit Ben's Github profile"
@@ -64,7 +50,7 @@ const SocialIcons = () => {
       </li>
       <li className={classes.item}>
         <a
-          href={site.siteMetadata.social.linkedIn}
+          href={linkedIn}
           target="_blank"
           rel="noopener noreferrer"
           title="Visit Ben's LinkedIn resume"

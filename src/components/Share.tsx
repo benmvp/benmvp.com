@@ -14,7 +14,7 @@ import {
   EmailShareButton,
   EmailIcon,
 } from 'react-share'
-import SITE_CONFIG from '../../config/site'
+import { title as siteTitle, twitterHandle } from '../../config/site'
 
 type ShareOption = 'twitter' | 'facebook' | 'pocket' | 'linkedin' | 'email'
 
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) =>
 interface Props {
   iconSize?: number
   options?: Set<ShareOption>
-  summary: string
+  summary?: string
   tags?: string[]
   title: string
   type?: 'minishop' | 'post'
@@ -83,7 +83,7 @@ const Share = ({
           <TwitterShareButton
             url={formatUrl(socialUrl, { utm_source: 'twitter' })}
             title={`${title} - ${summary}`}
-            via={SITE_CONFIG.twitterHandle}
+            via={twitterHandle}
             hashtags={tags || []}
             aria-label="Share on Twitter"
             className={classes.shareButton}
@@ -102,7 +102,9 @@ const Share = ({
           >
             <FacebookIcon round size={iconSize} />
             <FacebookShareCount url={url}>
-              {(count) => count && <div className="share-count">{count}</div>}
+              {(shareCount) =>
+                shareCount && <div className="share-count">{shareCount}</div>
+              }
             </FacebookShareCount>
           </FacebookShareButton>
         )}
@@ -122,7 +124,7 @@ const Share = ({
             url={formatUrl(socialUrl, { utm_source: 'linkedin' })}
             title={title}
             summary={summary}
-            source={SITE_CONFIG.siteTitle}
+            source={siteTitle}
             aria-label="Share on LinkedIn"
             className={classes.shareButton}
             onShareWindowClose={() => handleShare('LinkedIn')}

@@ -11,7 +11,7 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 import Share from './Share'
 import {
   getMinishopUrl,
@@ -65,11 +65,7 @@ const MinishopCard = ({
 
   return (
     <Card id={genMinishopSlug(title)}>
-      <CardActionArea
-        component={Link}
-        to={`/minishops${slug}`}
-        underline="none"
-      >
+      <CardActionArea component={NextLink} href={`/minishops${slug}`}>
         <CardContent>
           {fullDate && (
             <Typography

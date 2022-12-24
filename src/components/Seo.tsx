@@ -1,6 +1,15 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import Head from 'next/head'
+import {
+  author,
+  description as siteDescription,
+  image as siteImage,
+  keywords as siteKeywords,
+  language as siteLanguage,
+  title as siteTitle,
+  twitterHandle,
+} from '../../config/site'
+import { getFullUrl } from '../utils'
 
 type Meta =
   | { property: string; content: string; name?: undefined }
@@ -29,46 +38,21 @@ const Seo = ({
   type = 'website',
   url,
 }: Props) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SeoSiteInfo {
-        site {
-          siteMetadata {
-            siteUrl
-            title
-            description
-            image
-            keywords
-            lang
-            author {
-              name
-              bio
-            }
-            social {
-              twitterHandle
-            }
-          }
-        }
-      }
-    `,
-  )
-
-  const htmlLang = lang || site.siteMetadata.lang
-  const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const htmlLang = lang || siteLanguage
+  const metaDescription = description || siteDescription
+  const metaImage = image || siteImage
   const metaImageFull = metaImage.startsWith('http')
     ? metaImage
-    : `${site.siteMetadata.siteUrl}${metaImage}`
-  const siteTitle = site.siteMetadata.title
+    : getFullUrl(metaImage)
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
-  const keywords = site.siteMetadata.keywords.join(' ')
+  const keywords = siteKeywords.join(' ')
   const siteSchemaOrg = {
     '@context': 'http://schema.org/',
     '@type': 'WebSite',
     url,
     name: fullTitle,
     alternateName: siteTitle,
-    copyrightHolder: site.siteMetadata.author.name,
+    copyrightHolder: author,
     copyrightYear: 2015,
     description: metaDescription,
     image: {
@@ -80,7 +64,7 @@ const Seo = ({
   }
 
   return (
-    <Helmet>
+    <Head>
       <html lang={htmlLang} />
       <title>{fullTitle}</title>
 
@@ -102,14 +86,8 @@ const Seo = ({
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:site"
-        content={`@${site.siteMetadata.social.twitterHandle}`}
-      />
-      <meta
-        name="twitter:creator"
-        content={`@${site.siteMetadata.social.twitterHandle}`}
-      />
+      <meta name="twitter:site" content={`@${twitterHandle}`} />
+      <meta name="twitter:creator" content={`@${twitterHandle}`} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImageFull} />
@@ -127,7 +105,7 @@ const Seo = ({
       <script type="application/ld+json">
         {JSON.stringify(siteSchemaOrg)}
       </script>
-    </Helmet>
+    </Head>
   )
 }
 

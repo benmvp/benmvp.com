@@ -1,45 +1,49 @@
 import React, { ReactElement, useState } from 'react'
-import { Link as GatsbyLink, graphql, useStaticQuery } from 'gatsby'
 import {
-  makeStyles,
-  createStyles,
-  useScrollTrigger,
   AppBar,
-  Slide,
-  Toolbar,
   Box,
+  Button,
+  createStyles,
   Drawer,
+  IconButton,
+  Link,
   List,
   ListItem,
   ListItemText,
+  makeStyles,
+  Slide,
+  Toolbar,
+  useScrollTrigger,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link, Button, IconButton } from 'gatsby-theme-material-ui'
-import Img from 'gatsby-image'
+import NextLink from 'next/link'
+import Image from 'next/image'
+import { title as siteTitle } from '../../config/site'
+import benmvpLogo from '../../public/icons/benmvp-logo.png'
 
 const NAV_LINKS = [
-  { to: '/blog/', title: 'Blog', label: "Read Ben's blog posts" },
+  { href: '/blog/', title: 'Blog', label: "Read Ben's blog posts" },
   {
-    to: '/videos/',
+    href: '/videos/',
     title: 'Videos',
     label: "Watch Ben's past tech talks",
   },
   {
-    to: '/speak/',
+    href: '/speak/',
     title: 'Speak',
     label: "Attend one of Ben's speaking engagements",
   },
   {
-    to: '/minishops/',
+    href: '/minishops/',
     title: 'Minishops',
     label: "Develop from one of Ben's remote minishop",
   },
   {
-    to: '/projects/',
+    href: '/projects/',
     title: 'Projects',
     label: "Check out some of Ben's dev projects",
   },
-  { to: '/about/', title: 'About', label: 'Learn more about Ben' },
+  { href: '/about/', title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 768
 
@@ -51,18 +55,20 @@ const Menu = ({ open, onClose }: MenuProps) => (
   <Drawer anchor="right" open={open} onClose={onClose}>
     <Box width="250px">
       <List component="nav" aria-label="main site navigation links">
-        {NAV_LINKS.map(({ to, title, label }) => (
+        {NAV_LINKS.map(({ href, title, label }) => (
           <ListItem key={title} aria-label={label}>
-            <Link to={to} style={{ width: '100%' }}>
-              <ListItemText
-                primaryTypographyProps={{
-                  color: 'textPrimary',
-                  variant: 'h4',
-                }}
-              >
-                {title}
-              </ListItemText>
-            </Link>
+            <NextLink href={href} passHref legacyBehavior>
+              <Link style={{ width: '100%' }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    color: 'textPrimary',
+                    variant: 'h4',
+                  }}
+                >
+                  {title}
+                </ListItemText>
+              </Link>
+            </NextLink>
           </ListItem>
         ))}
       </List>
@@ -131,23 +137,9 @@ const useStyles = makeStyles((theme) =>
 
 const Header = () => {
   const classes = useStyles()
-  const { site, logo } = useStaticQuery(graphql`
-    query HeaderSiteInfo {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-      logo: file(relativePath: { eq: "benmvp-logo.png" }) {
-        childImageSharp {
-          fixed(width: 60, height: 60) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  // TODO: Handle active state <Button> `partiallyActive` & `classes.activeLink`
 
   return (
     <>
@@ -155,41 +147,43 @@ const Header = () => {
         <AppBar>
           <Box component="section" mx={{ xs: 1, sm: 2 }} my={1}>
             <Toolbar disableGutters className={classes.toolbar}>
-              <Link color="inherit" to="/" aria-label="Go to homepage">
-                <Img
-                  fixed={logo.childImageSharp.fixed}
-                  alt={site.siteMetadata.title}
-                  className={classes.logo}
-                />
-              </Link>
-              <Link
-                variant="h5"
-                color="inherit"
-                to="/"
-                underline="none"
-                className={classes.name}
-                aria-label="Go to homepage"
-              >
-                {site.siteMetadata.title}
-              </Link>
+              <NextLink href="/" passHref legacyBehavior>
+                <Link color="inherit" aria-label="Go to homepage">
+                  <Image
+                    src={benmvpLogo}
+                    width={60}
+                    height={60}
+                    alt={siteTitle}
+                    className={classes.logo}
+                  />
+                </Link>
+              </NextLink>
+              <NextLink href="/" passHref legacyBehavior>
+                <Link
+                  variant="h5"
+                  color="inherit"
+                  underline="none"
+                  className={classes.name}
+                  aria-label="Go to homepage"
+                >
+                  {siteTitle}
+                </Link>
+              </NextLink>
               <Box
                 component="nav"
                 className={classes.navLinks}
                 aria-label="main site navigation links"
               >
-                {NAV_LINKS.map(({ to, title, label }) => (
-                  <Button
-                    key={title}
-                    component={GatsbyLink}
-                    color="inherit"
-                    to={to}
-                    className={classes.navButton}
-                    activeClassName={classes.activeLink}
-                    partiallyActive
-                    aria-label={label}
-                  >
-                    {title}
-                  </Button>
+                {NAV_LINKS.map(({ href, title, label }) => (
+                  <NextLink key={title} href={href} passHref legacyBehavior>
+                    <Button
+                      color="inherit"
+                      className={classes.navButton}
+                      aria-label={label}
+                    >
+                      {title}
+                    </Button>
+                  </NextLink>
                 ))}
               </Box>
               <IconButton

@@ -13,12 +13,12 @@ import {
   Typography,
 } from '@material-ui/core'
 import { ExpandMore } from '@material-ui/icons'
-import { Link } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 import Markdown from 'react-markdown'
 import { genVideoSlug } from '../utils'
 import { Video } from '../utils/video'
 
-const getEmbedSrc = (id: string, provider: Provider) => {
+const getEmbedSrc = (id: string, provider: Video['provider']) => {
   if (provider === 'youtube') {
     return `https://www.youtube.com/embed/${id}`
   }
@@ -75,7 +75,7 @@ const VideoCard = ({
   }) => {
     if (url) {
       return (
-        <CardActionArea component={Link} to={url} underline="none">
+        <CardActionArea component={NextLink} href={url}>
           {wrapperChildren}
         </CardActionArea>
       )

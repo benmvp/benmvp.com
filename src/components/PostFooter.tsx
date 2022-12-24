@@ -13,7 +13,7 @@ import SubscribeForm from './SubscribeForm'
 
 interface Props {
   className?: string
-  summary: string
+  summary?: string
   slug: string
   tags?: string[]
   title: string

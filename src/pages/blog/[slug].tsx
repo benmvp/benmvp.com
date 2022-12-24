@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { ParsedUrlQuery } from 'querystring'
 import {
   makeStyles,
   createStyles,
@@ -7,35 +8,79 @@ import {
   Typography,
   Grid,
 } from '@material-ui/core'
-import Layout from '../components/Layout'
-import PostHeader from '../components/PostHeader'
-import Content from '../components/Content'
-import PostFooter from '../components/PostFooter'
-import PostCard from '../components/PostCard'
-import Seo from '../components/Seo'
-import { getBlogUrl } from '../utils'
-import generateSocialImage from '../utils/generate-social-image'
+import Layout from '../../components/Layout'
+import PostHeader from '../../components/PostHeader'
+import Content from '../../components/Content'
+import PostFooter from '../../components/PostFooter'
+import PostCard from '../../components/PostCard'
+import Seo from '../../components/Seo'
+import { formatDate, formatDateIso, getBlogUrl } from '../../utils'
+import generateSocialImage from '../../utils/generate-social-image'
+import { getAllPostIds, getPostData, PostData } from '../../utils/posts'
+import { author } from '../../../config/site'
 
-const PostCardList = ({ posts, category }) => (
+interface QueryParams extends ParsedUrlQuery {
+  slug?: string
+}
+
+export const getStaticPaths: GetStaticPaths<QueryParams> = async () => {
+  const postIds = await getAllPostIds()
+
+  return {
+    paths: postIds.map((slug) => ({
+      params: {
+        slug,
+      },
+    })),
+
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps<PostData, QueryParams> = async ({
+  params,
+}) => {
+  const slug = params?.slug
+  const postData = slug ? await getPostData(slug) : undefined
+
+  if (!postData) {
+    return { notFound: true }
+  }
+
+  return {
+    props: {
+      ...postData,
+    },
+  }
+}
+
+interface PostCardListProps {
+  category: string
+  posts: PostData[]
+}
+
+const PostCardList = ({ category, posts }: PostCardListProps) => (
   <Grid container spacing={2}>
     <Grid item xs={12}>
       <Typography variant="h5" component="h3">
         More from Ben Ilegbodu on <strong>{category}</strong>...
       </Typography>
     </Grid>
-    {posts.map(({ node }) => (
-      <Grid key={node.id} item xs={12} sm={6}>
-        <PostCard
-          mode="min"
-          slug={node.fields.slug}
-          title={node.frontmatter.title}
-          tags={node.frontmatter.tags}
-          date={node.frontmatter.date}
-          summary={node.frontmatter.shortDescription || node.excerpt}
-          hero={node.frontmatter.hero}
-        />
-      </Grid>
-    ))}
+    {posts.map(
+      ({ date, excerpt, hero, shortDescription, slug, tags, title }) => (
+        <Grid key={slug} item xs={12} sm={6}>
+          <PostCard
+            mode="min"
+            slug={slug}
+            title={title}
+            tags={tags}
+            date={formatDate(date)}
+            summary={shortDescription || excerpt}
+            hero={hero}
+          />
+        </Grid>
+      ),
+    )}
   </Grid>
 )
 
@@ -54,12 +99,26 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const Post = ({ data }) => {
+const Post: NextPage<PostData> = ({
+  excerpt,
+  date,
+  html,
+  slug,
+  category,
+  hero,
+  // heroAlt,
+  // heroCredit,
+  shortDescription,
+  tags,
+  timeToRead,
+  title,
+  wordCount,
+}) => {
   const classes = useStyles()
-  const { post, categoryPosts, site } = data
-  const { html, fields, frontmatter, excerpt, timeToRead, wordCount } = post
-  const { title, date, dateIso, shortDescription, tags, category } = frontmatter
-  const { slug } = fields
+  // const { post, categoryPosts, site } = data
+  // const { fields, frontmatter, excerpt, timeToRead, wordCount } = post
+  const formattedDate = formatDate(date)
+  const formattedDateIso = formatDateIso(date)
   const summary = shortDescription || excerpt
   const url = getBlogUrl(slug)
   const seoImageUrl = generateSocialImage({
@@ -67,7 +126,8 @@ const Post = ({ data }) => {
     tagline: shortDescription,
     date,
   })
-  const relatedPosts = categoryPosts?.edges ? [...categoryPosts?.edges] : []
+  // const relatedPosts = categoryPosts?.edges ? [...categoryPosts?.edges] : []
+  const relatedPosts: PostData[] = []
   const totalRelatedPosts = relatedPosts.length
   const maxRelatedPosts = 4
 
@@ -91,10 +151,10 @@ const Post = ({ data }) => {
         imageAlt={title}
         type="article"
         meta={[
-          { property: 'og:article:published_time', content: dateIso },
+          { property: 'og:article:published_time', content: formattedDateIso },
           {
             property: 'og:article:author',
-            content: site.siteMetadata.author.name,
+            content: author,
           },
           { property: 'og:article:section', content: 'Technology' },
           ...(tags || []).map((tag) => ({
@@ -108,16 +168,16 @@ const Post = ({ data }) => {
           articleBody: html,
           author: {
             '@type': 'Person',
-            name: site.siteMetadata.author.name,
+            name: author,
           },
-          datePublished: dateIso,
+          datePublished: formattedDateIso,
           publisher: {
             '@type': 'Person',
-            name: site.siteMetadata.author.name,
+            name: author,
           },
           teaches: category,
           timeRequired: `PT${timeToRead}M`,
-          wordCount: wordCount.words,
+          wordCount: wordCount,
         }}
       />
       <PostHeader
@@ -125,7 +185,7 @@ const Post = ({ data }) => {
         title={title}
         subTitle={shortDescription}
         timeToRead={timeToRead}
-        date={date}
+        date={formattedDate}
       />
       <Content>{html}</Content>
       <PostFooter
@@ -140,7 +200,7 @@ const Post = ({ data }) => {
         <>
           <Divider className={classes.divider} variant="middle" />
 
-          <PostCardList posts={relatedPosts} category={category} />
+          <PostCardList category={category} posts={relatedPosts} />
         </>
       )}
     </Layout>
@@ -149,7 +209,7 @@ const Post = ({ data }) => {
 
 export default Post
 
-export const query = graphql`
+/*export const query = graphql`
   query PostInfo($slug: String!, $category: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -193,4 +253,4 @@ export const query = graphql`
       }
     }
   }
-`
+`*/

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { graphql } from 'gatsby'
 import {
   makeStyles,
   createStyles,
@@ -7,16 +6,18 @@ import {
   Box,
   Grid,
   Divider,
+  Link,
 } from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import MinishopCard from '../components/MinishopCard'
 import PostCard from '../components/PostCard'
 import Seo from '../components/Seo'
-import { getUrl } from '../utils'
+import { getFullUrl } from '../utils'
 import useMinishops, { Minishop } from '../utils/useMinishops'
+import notFound from '../../public/images/desert-keith-hardy-PP8Escz15d8-unsplash.jpg'
 
 const PAGE_TITLE = 'Page Not Found'
 
@@ -39,9 +40,9 @@ const MinishopList = ({ minishops }: { minishops: Minishop[] }) => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href="/minishops/" variant="h6">
-          View all minishops &gt;
-        </Link>
+        <NextLink href="/minishops/" passHref legacyBehavior>
+          <Link variant="h6">View all minishops &gt;</Link>
+        </NextLink>
       </Box>
     </Grid>
   </Grid>
@@ -91,9 +92,8 @@ const useStyles = makeStyles((theme) =>
   }),
 )
 
-const NotFound = ({ data }) => {
+const NotFound = () => {
   const classes = useStyles()
-  const { recentPosts, hero } = data
   const {
     upcoming: upcomingMinishops,
     remaining: remainingMinishops,
@@ -118,18 +118,10 @@ const NotFound = ({ data }) => {
 
   return (
     <Layout maxWidth="lg">
-      <Seo
-        title={PAGE_TITLE}
-        url={getUrl('/404/')}
-        image={hero?.childImageSharp?.fluid?.src}
-      />
+      <Seo title={PAGE_TITLE} url={getFullUrl('/404/')} image={notFound} />
       <PageHeader title={PAGE_TITLE} />
 
-      <HeroImage
-        fluid={hero.childImageSharp.fluid}
-        alt={PAGE_TITLE}
-        className={classes.image}
-      />
+      <HeroImage src={notFound} alt={PAGE_TITLE} className={classes.image} />
 
       <Typography variant="h5" component="p" align="center">
         Sorry, but the page you were trying to view does not exist!

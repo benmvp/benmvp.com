@@ -1,20 +1,21 @@
 import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
 import {
   createStyles,
   makeStyles,
   Typography,
   Grid,
   Divider,
+  Link,
 } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import NextLink from 'next/link'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import HeroImage from '../components/HeroImage'
 import SpeakCard from '../components/SpeakCard'
-import { getUrl, getDateYear } from '../utils'
+import { getFullUrl, getDateYear } from '../utils'
 import { getEngagements } from '../utils/speaking-engagement'
+import reactathonImage from '../../public/images/reactathon.png'
 
 const PAGE_TITLE = 'Speaking Engagements'
 
@@ -38,17 +39,16 @@ const useStyles = makeStyles((theme) =>
 
 const SpeakingEngagements = ({ data }) => {
   const classes = useStyles()
-  const { hero } = data
   const { future: futureEngagements, past: pastEngagements } = getEngagements()
   let curYear = getDateYear(pastEngagements[0].talks[0].date) + 1
 
   return (
     <Layout>
       <Seo
-        url={getUrl('speak')}
+        url={getFullUrl('speak')}
         title={PAGE_TITLE}
         description="Check out Ben Ilegbodu's upcoming and previous speaking engagements for React and frontend web development. The links to videos and slides should help you keep up to date with the latest best practices."
-        image={hero.childImageSharp.fluid.src}
+        image="/images/reactathon.png"
       />
       <PageHeader
         className={classes.header}
@@ -56,7 +56,7 @@ const SpeakingEngagements = ({ data }) => {
         subTitle="Ben's upcoming and previous speaking engagements"
       />
       <HeroImage
-        fluid={hero.childImageSharp.fluid}
+        src={reactathonImage}
         alt="Ben Ilegbodu speaking at Reactathon 2018"
         className={classes.image}
       />
@@ -78,7 +78,10 @@ const SpeakingEngagements = ({ data }) => {
           Twitter
         </a>
         , <a href="mailto:ben@benmvp.com">email</a> or{' '}
-        <GatsbyLink href="/ama/">my AMA</GatsbyLink>.
+        <NextLink href="/ama/" passHref legacyBehavior>
+          <Link>my AMA</Link>
+        </NextLink>
+        .
       </Typography>
 
       {futureEngagements.length > 0 && (
@@ -133,11 +136,3 @@ const SpeakingEngagements = ({ data }) => {
 }
 
 export default SpeakingEngagements
-
-export const query = graphql`
-  query SpeakingInfo {
-    hero: file(relativePath: { eq: "reactathon.png" }) {
-      ...HeroFluid960
-    }
-  }
-`

@@ -1,19 +1,19 @@
 import React, { useMemo, ReactNode } from 'react'
-import Helmet from 'react-helmet'
 import {
-  makeStyles,
-  createStyles,
-  ThemeProvider,
-  useMediaQuery,
-  CssBaseline,
-  useScrollTrigger,
-  Toolbar,
-  Container,
   Box,
+  Container,
+  createStyles,
+  CssBaseline,
+  Fab,
+  makeStyles,
+  ThemeProvider,
+  Toolbar,
+  useMediaQuery,
+  useScrollTrigger,
   Zoom,
 } from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
-import { Fab } from 'gatsby-theme-material-ui'
+import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 import Masthead from './Masthead'
@@ -31,13 +31,10 @@ const GoogleAds = ({ showAds }: { showAds: boolean }) => {
   }
   `
   return (
-    <Helmet>
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      ></script>
+    <Head>
+      <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
       <script>{configuration}</script>
-    </Helmet>
+    </Head>
   )
 }
 

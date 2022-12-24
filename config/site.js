@@ -5,19 +5,21 @@ const {
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === 'production'
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+const url = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 const { getTheme } = require('./theme')
 
 const THEME = getTheme(false)
 
+const HANDLE = 'benmvp'
+
 module.exports = {
-  siteTitle: 'Ben Ilegbodu',
-  siteUrl,
-  siteImage: '/ben-ilegbodu.png',
-  siteDescription:
+  title: 'Ben Ilegbodu',
+  url,
+  image: '/ben-ilegbodu.png',
+  description:
     'Ben Ilegbodu uses his many years of frontend development experience to provide quality content to help you become a better frontend engineer.',
-  siteLanguage: 'en', // Language Tag on <html> element
+  language: 'en', // Language Tag on <html> element
   keywords: [
     'Frontend Software Engineer',
     'React Training',
@@ -32,7 +34,7 @@ module.exports = {
     "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Frontend Architect at Stitch Fix, frontend development teacher, Google Developer Expert, and Microsoft MVP. I love helping developers level up their frontend skills.",
 
   // manifest.json
-  manifestShortName: 'benmvp', // max 12 characters
+  manifestShortName: HANDLE, // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: THEME.palette.background.default,
   manifestThemeColor: THEME.palette.primary.main,
@@ -40,10 +42,10 @@ module.exports = {
   manifestIcon: 'static/icons/benmvp-logo.png',
 
   // social
-  twitterHandle: 'benmvp',
-  twitter: 'https://twitter.com/benmvp',
-  github: 'https://github.com/benmvp',
-  linkedIn: 'https://linkedin.com/in/benmvp',
+  twitterHandle: HANDLE,
+  twitter: `https://twitter.com/${HANDLE}`,
+  github: `https://github.com/${HANDLE}`,
+  linkedIn: `https://linkedin.com/in/${HANDLE}`,
 
   // analytics
   gaTrackingId: 'UA-65375615-1',

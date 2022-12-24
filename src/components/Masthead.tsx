@@ -1,7 +1,7 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import Image from 'next/image'
 import { makeStyles, createStyles, Box, Typography } from '@material-ui/core'
-import { graphql, useStaticQuery } from 'gatsby'
+import masthead from '../../public/ben-ilegbodu.png'
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -54,27 +54,14 @@ const useStyles = makeStyles((theme) =>
 
 const Masthead = () => {
   const classes = useStyles()
-  const { masthead } = useStaticQuery(graphql`
-    query MastheadInfo {
-      masthead: file(relativePath: { eq: "ben-ilegbodu-masthead.jpg" }) {
-        childImageSharp {
-          fluid(
-            maxWidth: 3000
-            quality: 100
-            traceSVG: { color: "#3f51b5" }
-            srcSetBreakpoints: [600, 960, 1280, 1920]
-          ) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Box className={classes.root}>
-      <Img
-        fluid={masthead.childImageSharp.fluid}
+      <Image
+        src={masthead}
+        objectFit="cover"
+        sizes="(max-width: 600px) 600px, (max-width: 960px) 960px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920, 3000"
+        quality={100}
         className={classes.masthead}
         alt="A cropped image of Ben Ilegbodu speaking at a conference"
       />
