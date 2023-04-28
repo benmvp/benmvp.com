@@ -1,5 +1,22 @@
 [
   {
+    "name": "HalfStack Charlotte 2023",
+    "url": "https://halfstackconf.com/charlotte",
+    "location": "Charlotte, North Carolina",
+    "talks": [
+      {
+        "id": "web-dev",
+        "date": "04/28/2023",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2023/halfstack/webdev.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Connect.Tech 2022",
     "url": "https://2022.connect.tech/",
     "location": "Atlanta, Georgia",

@@ -160,6 +160,10 @@
     },
 
     {
+      "source": "/hsclt-webdev",
+      "destination": "https://slides.benmvp.com/2023/halfstackclt/webdev.html"
+    },
+    {
       "source": "/ct-ts-react",
       "destination": "https://slides.benmvp.com/2022/connecttech/ts-react.html"
     },
