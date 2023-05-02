@@ -1,6 +1,9 @@
 {
   "private": true,
   "name": "benmvp.com",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
