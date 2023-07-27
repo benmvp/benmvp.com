@@ -1,5 +1,32 @@
 [
   {
+    "name": "All Things Open 2023",
+    "url": "https://2023.allthingsopen.org/",
+    "location": "Raleigh, North Carolina"
+  },
+  {
+    "name": "Black is Tech 2023",
+    "url": "https://blackistechconference.com/",
+    "location": "Atlanta, Georgia",
+    "talks": [
+      {
+        "id": "web-dev",
+        "date": "08/11/2023"
+      }
+    ]
+  },
+  {
+    "name": "SeattleJS Conf 2023",
+    "url": "https://seattlejs.com/conf",
+    "location": "Seattle, Washington",
+    "talks": [
+      {
+        "id": "nextjs-rendering",
+        "date": "08/08/2023"
+      }
+    ]
+  },
+  {
     "name": "HalfStack Charlotte 2023",
     "url": "https://halfstackconf.com/charlotte",
     "location": "Charlotte, North Carolina",

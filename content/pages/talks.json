@@ -191,5 +191,10 @@
     "categories": ["css"],
     "retired": true,
     "description": "We have been using JavaScript toolkits like jQuery for nearly a decade to make manipulating the DOM easier as we create our highly-interactive web apps. New features in HTML5 & CSS3 should've made old development strategies obsolete, and yet we're still using jQuery to do things better suited for HTML5 & CSS3. Why? Well, old habits die hard.\n\nIn this session, let's look at ways we used to build interactivity in JavaScript and see how we can transform them into more optimal solutions using plain old HTML and CSS. We'll discuss CSS3 transitions & animations, new HTML5 attributes, and other \"tricks\" to offload JavaScript functionality to the browser's rendering engine for more performant web applications. Whether you're a seasoned JavaScripter or just getting started, you'll leave the session with fresh ideas to work with."
+  },
+  "nextjs-rendering": {
+    "title": "50 shades of React rendering with Next.js",
+    "categories": ["javascript", "react", "nextjs", "web"],
+    "description": "CSR. SSG. SSR. ISR. These acronyms may seem similar, but they represent different rendering methods for React applications. In the past, we had to commit to a single rendering approach for the entire app, but with Next.js, we have the flexibility to choose the optimal rendering type for each page. This hybrid approach aligns closely with the unique needs of our applications. Imagine a landing page with static content that updates only when the code changes, a universally consistent page that undergoes frequent changes, and a personalized logged-in page with content tailored to each user—all rendered differently within a single application.\n\nThis session is designed for React developers of all backgrounds. We'll explore the various types of rendering methods and deep dive into how Next.js empowers us to leverage them effectively. By the end of this talk, you'll not only gain a comprehensive understanding of these different rendering methods but also have the confidence to make informed decisions that maximize the potential of your React applications."
   }
 }
