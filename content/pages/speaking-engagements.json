@@ -2,7 +2,14 @@
   {
     "name": "All Things Open 2023",
     "url": "https://2023.allthingsopen.org/",
-    "location": "Raleigh, North Carolina"
+    "location": "Raleigh, North Carolina",
+    "talks": [
+      {
+        "id": "nextjs-rendering",
+        "date": "10/16/2023",
+        "time": "11:30a"
+      }
+    ]
   },
   {
     "name": "Black is Tech 2023",
@@ -11,7 +18,8 @@
     "talks": [
       {
         "id": "web-dev",
-        "date": "08/11/2023"
+        "date": "08/11/2023",
+        "time": "12:30p"
       }
     ]
   },
@@ -22,7 +30,8 @@
     "talks": [
       {
         "id": "nextjs-rendering",
-        "date": "08/08/2023"
+        "date": "08/08/2023",
+        "time": "9:30a"
       }
     ]
   },
