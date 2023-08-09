@@ -5,7 +5,8 @@
     "location": "Atlanta, Georgia",
     "talks": [
       {
-        "id": "divops"
+        "id": "divops",
+        "date": "10/25/2023"
       }
     ]
   },
