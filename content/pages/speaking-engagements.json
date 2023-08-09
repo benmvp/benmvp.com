@@ -1,5 +1,15 @@
 [
   {
+    "name": "Connect.Tech 2023",
+    "url": "https://2023.connect.tech/",
+    "location": "Atlanta, Georgia",
+    "talks": [
+      {
+        "id": "divops"
+      }
+    ]
+  },
+  {
     "name": "All Things Open 2023",
     "url": "https://2023.allthingsopen.org/",
     "location": "Raleigh, North Carolina",
@@ -31,7 +41,13 @@
       {
         "id": "nextjs-rendering",
         "date": "08/08/2023",
-        "time": "9:30a"
+        "time": "9:30a",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2023/seattlejs/nextjs.html"
+          }
+        ]
       }
     ]
   },
