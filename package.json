@@ -2,7 +2,7 @@
   "private": true,
   "name": "benmvp.com",
   "engines": {
-    "node": "20.x"
+    "node": ">=18"
   },
   "scripts": {
     "build": "next build",
