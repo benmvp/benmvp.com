@@ -160,6 +160,10 @@
     },
 
     {
+      "source": "/bit-webdev",
+      "destination": "https://slides.benmvp.com/2023/bit/webdev.html"
+    },
+    {
       "source": "/seattlejs-nextjs",
       "destination": "https://slides.benmvp.com/2023/seattlejs/nextjs.html"
     },

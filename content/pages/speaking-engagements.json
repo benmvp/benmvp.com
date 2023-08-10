@@ -17,8 +17,8 @@
     "talks": [
       {
         "id": "nextjs-rendering",
-        "date": "10/16/2023",
-        "time": "11:30a"
+        "date": "10/17/2023",
+        "time": "2:45p"
       }
     ]
   },
@@ -26,11 +26,19 @@
     "name": "Black is Tech 2023",
     "url": "https://blackistechconference.com/",
     "location": "Atlanta, Georgia",
+    "venue": "Georgia World Congress Center",
     "talks": [
       {
         "id": "web-dev",
         "date": "08/11/2023",
-        "time": "12:30p"
+        "time": "12:30p",
+        "room": "Georgia Ballroom 2",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2023/bit/webdev.html"
+          }
+        ]
       }
     ]
   },
@@ -38,6 +46,7 @@
     "name": "SeattleJS Conf 2023",
     "url": "https://seattlejs.com/conf",
     "location": "Seattle, Washington",
+    "venue": "Amazon Meeting Center (SEA45)",
     "talks": [
       {
         "id": "nextjs-rendering",
@@ -56,6 +65,7 @@
     "name": "HalfStack Charlotte 2023",
     "url": "https://halfstackconf.com/charlotte",
     "location": "Charlotte, North Carolina",
+    "venue": "Cinergy Dine-In Theater",
     "talks": [
       {
         "id": "web-dev",
@@ -77,6 +87,7 @@
     "name": "Connect.Tech 2022",
     "url": "https://2022.connect.tech/",
     "location": "Atlanta, Georgia",
+    "venue": "Cobb Galleria Centre",
     "talks": [
       {
         "id": "web-dev",
@@ -167,6 +178,7 @@
     "name": "React Miami 2022",
     "url": "https://www.reactmiami.com/",
     "location": "Miami, Florida",
+    "venue": "Miami Beach Convention Centre",
     "talks": [
       {
         "id": "enzyme-to-rtl",
