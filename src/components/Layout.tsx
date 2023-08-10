@@ -11,6 +11,8 @@ import {
 import Script from 'next/script'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Footer from './Footer'
+import Masthead from './Masthead'
+import Header, { HEADER_HEIGHT } from './Header'
 
 const GoogleAds = ({ showAds }: { showAds: boolean }) => {
   const configuration = `
@@ -101,9 +103,9 @@ const Layout = (props: Props) => {
         >
           Skip Main Navigation
         </Link>
-        {/* <Header /> */}
-        <Toolbar id="back-to-top-anchor" sx={{ height: '82px' }} />
-        {/* {masthead && <Masthead />} */}
+        <Header />
+        <Toolbar id="back-to-top-anchor" sx={{ height: HEADER_HEIGHT }} />
+        {masthead && <Masthead />}
 
         <Container
           id="skip-heading"
