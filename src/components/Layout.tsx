@@ -94,12 +94,7 @@ const Layout = (props: Props) => {
     <>
       <GoogleAds showAds={showAds} />
 
-      <Box
-        component="section"
-        sx={{
-          bgcolor: 'background.default',
-        }}
-      >
+      <Box component="section">
         <Link
           href="#skip-heading"
           sx={{

@@ -1,11 +1,10 @@
 import type { AppProps } from 'next/app'
 import { useMemo } from 'react'
-import { useMedia } from 'react-use'
 import { getTheme } from '../config/theme'
-import { CssBaseline, ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material'
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const prefersDarkMode = useMedia('(prefers-color-scheme: dark)')
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode])
 
   return (
