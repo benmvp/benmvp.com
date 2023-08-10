@@ -51,6 +51,7 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     name: 'Connect.Tech 2023',
     url: 'https://2023.connect.tech/',
     location: 'Atlanta, Georgia',
+    venue: 'Georgia World Congress Center',
     talks: [
       {
         id: 'divops',
@@ -62,6 +63,7 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     name: 'All Things Open 2023',
     url: 'https://2023.allthingsopen.org/',
     location: 'Raleigh, North Carolina',
+    venue: 'Raleigh Convention Center',
     talks: [
       {
         id: 'nextjs-rendering',
