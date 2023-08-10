@@ -2,22 +2,38 @@
   "private": true,
   "name": "benmvp.com",
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc"
   },
   "dependencies": {
-    "next": "^13.3.4",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.4",
+    "date-fns": "^2.30.0",
+    "date-fns-tz": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "next": "^13.4.13",
+    "prettier": "^3.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-share": "^4.4.1",
+    "react-use": "^17.4.0",
+    "slugify": "^1.6.6",
+    "url-lib": "^3.0.3"
   },
   "devDependencies": {
     "@types/node": "18.16.3",
     "@types/react": "^18.2.0",
-    "eslint-config-next": "^13.3.4"
+    "eslint-config-next": "^13.4.13",
+    "eslint-config-prettier": "^9.0.0",
+    "typescript": "^5.0.4"
   }
 }
