@@ -8,9 +8,9 @@ import {
   Zoom,
   useScrollTrigger,
 } from '@mui/material'
-import Head from 'next/head'
 import Script from 'next/script'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import Footer from './Footer'
 
 const GoogleAds = ({ showAds }: { showAds: boolean }) => {
   const configuration = `
@@ -29,9 +29,7 @@ const GoogleAds = ({ showAds }: { showAds: boolean }) => {
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
-      <Head>
-        <script dangerouslySetInnerHTML={{ __html: configuration }} />
-      </Head>
+      <Script id="ga-init">{configuration}</Script>
     </>
   )
 }
@@ -61,11 +59,8 @@ const ScrollToTop = ({ children }: ScrollToTopProps) => {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{
-          position: 'fixed',
-          bottom: 2,
-          right: 2,
-        }}
+        position="fixed"
+        sx={(theme) => ({ bottom: theme.spacing(2), right: theme.spacing(2) })}
       >
         {children}
       </Box>
@@ -97,24 +92,17 @@ const Layout = (props: Props) => {
       <Box component="section">
         <Link
           href="#skip-heading"
-          sx={{
-            position: 'absolute',
-            left: '-10000px',
-            top: 'auto',
-            width: '1px',
-            height: '1px',
-            overflow: 'hidden',
-          }}
+          position="absolute"
+          left="-10000px"
+          top="auto"
+          width="1px"
+          height="1px"
+          overflow="hidden"
         >
           Skip Main Navigation
         </Link>
         {/* <Header /> */}
-        <Toolbar
-          id="back-to-top-anchor"
-          sx={{
-            height: '82px',
-          }}
-        />
+        <Toolbar id="back-to-top-anchor" sx={{ height: '82px' }} />
         {/* {masthead && <Masthead />} */}
 
         <Container
@@ -131,7 +119,7 @@ const Layout = (props: Props) => {
         >
           <Box component="main">{children}</Box>
         </Container>
-        {/* <Footer includeSubscribe={includeSubscribe} maxWidth={maxWidth} /> */}
+        <Footer includeSubscribe={includeSubscribe} maxWidth={maxWidth} />
       </Box>
 
       <ScrollToTop>
