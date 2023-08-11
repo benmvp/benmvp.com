@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import SITE_CONFIG from '../config/site'
+import { useTheme } from '@mui/material'
 
 type Meta =
   | { property: string; content: string; name?: undefined }
@@ -27,6 +28,8 @@ const Seo = ({
   type = 'website',
   url,
 }: Props) => {
+  const { palette } = useTheme()
+
   const metaDescription = description || SITE_CONFIG.description
   const metaImage = image || SITE_CONFIG.image
   const metaImageFull = metaImage.startsWith('http')
@@ -61,6 +64,33 @@ const Seo = ({
       <meta name="keywords" content={keywords} />
       <meta name="image" content={metaImageFull} />
       <link rel="canonical" href={url} />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png?v=2"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png?v=2"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png?v=2"
+      />
+      <link rel="manifest" href="/site.webmanifest?v=2" />
+      <link
+        rel="mask-icon"
+        href="/safari-pinned-tab.svg?v=2"
+        color={palette.primary.main}
+      />
+      <link rel="shortcut icon" href="/favicon.ico?v=2" />
+      <meta name="msapplication-TileColor" content={palette.primary.main} />
+      <meta name="theme-color" content={palette.primary.main} />
 
       {/* OpenGraph tags */}
       <meta property="og:site_name" content={siteTitle} />
