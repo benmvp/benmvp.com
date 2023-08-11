@@ -98,8 +98,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 const Logo = styled(Image)(({ theme }) => ({
   borderRadius: '50%',
   marginRight: theme.spacing(),
-  width: 60,
-  height: 60,
 }))
 const TitleLink = styled(Link)(({ theme }) => ({
   flex: 1,

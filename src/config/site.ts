@@ -17,15 +17,7 @@ const SITE_CONFIG = {
   // author info
   author: 'Ben Ilegbodu',
   authorBio:
-    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Frontend Architect at Stitch Fix, frontend development teacher, Google Developer Expert, and Microsoft MVP. I love helping developers level up their frontend skills.",
-
-  // manifest.json
-  // manifestShortName: 'benmvp', // max 12 characters
-  // manifestStartUrl: '/',
-  // manifestBackgroundColor: THEME.palette.background.default,
-  // manifestThemeColor: THEME.palette.primary.main,
-  // manifestDisplay: 'standalone',
-  // manifestIcon: 'static/icons/benmvp-logo.png',
+    "Hi, I'm <strong>Ben Ilegbodu</strong>. 👋🏾<br /><br />I'm a Christian, husband, and father of 3, with 15+ years of professional experience developing user interfaces for the Web. I'm a Google Developer Expert Frontend Architect at Stitch Fix, and frontend development teacher. I love helping developers level up their frontend skills.",
 
   // social
   twitterHandle: 'benmvp',

@@ -21,6 +21,7 @@
     "@vercel/node": "^2.15.9",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
+    "fs-extra": "^11.1.1",
     "gray-matter": "^4.0.3",
     "next": "^13.4.13",
     "node-fetch": "^3.3.2",
@@ -30,11 +31,15 @@
     "react-markdown": "^8.0.7",
     "react-share": "^4.4.1",
     "react-use": "^17.4.0",
+    "reading-time-estimator": "^1.9.0",
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
     "slugify": "^1.6.6",
     "url-lib": "^3.0.3",
     "validator": "^13.11.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "18.16.3",
     "@types/react": "^18.2.0",
     "@types/validator": "^13.11.1",

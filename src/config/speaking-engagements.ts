@@ -2271,7 +2271,7 @@ export const getEngagements = () => {
           ...(sourceTalk.id ? TALKS[sourceTalk.id] : {}),
           id: sourceTalk.id,
           ...sourceTalk,
-          date: formatDate(sourceTalk.date),
+          date: formatDate(sourceTalk.date, 'normal'),
           title,
         }
       }),

@@ -1,9 +1,23 @@
 import { format, getYear } from 'date-fns'
 
-export const formatDate = (date: string): string => {
+type DateFormat = 'normal' | 'long'
+
+const DATE_FORMAT: Record<DateFormat, string> = {
+  normal: 'MMMM dd, yyy',
+  long: 'EEEE, MMMM dd, yyyy',
+}
+
+export const formatDate = (
+  date: string,
+  dateFormat: DateFormat = 'normal',
+): string => {
   const parsedDate = Date.parse(date)
 
-  return parsedDate ? format(parsedDate, 'EEEE, MMMM dd, yyyy') : date
+  if (!parsedDate) {
+    return date
+  }
+
+  return parsedDate ? format(parsedDate, DATE_FORMAT[dateFormat]) : date
 }
 
 export const formatTime = (date: string): string => {
