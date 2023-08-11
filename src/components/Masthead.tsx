@@ -59,6 +59,7 @@ const Masthead = () => {
         alt="A cropped image of Ben Ilegbodu speaking at a conference"
         placeholder="blur"
         fill
+        quality={100}
         style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
       <TextShell>
