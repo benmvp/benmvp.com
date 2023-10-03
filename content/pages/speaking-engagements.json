@@ -7,7 +7,9 @@
     "talks": [
       {
         "id": "divops",
-        "date": "10/25/2023"
+        "date": "10/25/2023",
+        "time": "9:00a",
+        "room": "Main stage"
       }
     ]
   },
@@ -20,7 +22,8 @@
       {
         "id": "nextjs-rendering",
         "date": "10/17/2023",
-        "time": "2:45p"
+        "time": "2:45p",
+        "room": "Developer 1"
       }
     ]
   },
