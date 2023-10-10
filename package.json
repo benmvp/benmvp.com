@@ -91,5 +91,8 @@
     "slugify": "^1.4.5",
     "url-lib": "^3.0.3",
     "validator": "^13.5.2"
+  },
+  "overrides": {
+    "sharp": "^0.32.6"
   }
 }
