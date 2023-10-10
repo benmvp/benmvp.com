@@ -23,7 +23,13 @@
         "id": "nextjs-rendering",
         "date": "10/17/2023",
         "time": "2:45p",
-        "room": "Developer 1"
+        "room": "Developer 1",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://slides.benmvp.com/2023/ato/nextjs.html"
+          }
+        ]
       }
     ]
   },
@@ -61,6 +67,10 @@
           {
             "label": "Slides",
             "url": "https://slides.benmvp.com/2023/seattlejs/nextjs.html"
+          },
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=JZIB8qrCers"
           }
         ]
       }

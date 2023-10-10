@@ -160,6 +160,10 @@
     },
 
     {
+      "source": "/ato-nextjs",
+      "destination": "https://slides.benmvp.com/2023/ato/nextjs.html"
+    },
+    {
       "source": "/bit-webdev",
       "destination": "https://slides.benmvp.com/2023/bit/webdev.html"
     },
