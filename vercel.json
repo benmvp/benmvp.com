@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": null,
-  "buildCommand": null,
+  "buildCommand": "npm run bugsnag-report",
   "outputDirectory": "public",
   "headers": [
     {

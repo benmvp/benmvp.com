@@ -3,7 +3,7 @@
   "name": "benmvp.com",
   "scripts": {
     "build:local": "gatsby build --no-uglify --verbose",
-    "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
+    "bugsnag-report": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
     "lint": "eslint . --ext .ts,.tsx,.js --cache",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
