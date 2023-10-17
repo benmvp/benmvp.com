@@ -2,7 +2,6 @@
   "private": true,
   "name": "benmvp.com",
   "scripts": {
-    "prebuild": "npm ls regenerator-runtime",
     "build": "gatsby build --log-pages",
     "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
