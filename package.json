@@ -2,7 +2,7 @@
   "private": true,
   "name": "benmvp.com",
   "scripts": {
-    "build": "gatsby build --log-pages",
+    "builds": "gatsby build --log-pages",
     "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
     "lint": "eslint . --ext .ts,.tsx,.js --cache",
