@@ -2,7 +2,7 @@
   "private": true,
   "name": "benmvp.com",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "gatsby build --log-pages",
     "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
     "lint": "eslint . --ext .ts,.tsx,.js --cache",
