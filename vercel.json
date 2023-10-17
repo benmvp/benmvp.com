@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "npx gatsby build",
+  "buildCommand": "npm run build",
   "headers": [
     {
       "source": "/(.*)",

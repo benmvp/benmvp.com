@@ -2,7 +2,7 @@
   "private": true,
   "name": "benmvp.com",
   "scripts": {
-    "builds": "gatsby build --log-pages",
+    "build": "gatsby build --no-uglify --verbose",
     "postbuild": "NODE_ENV=production node scripts/bugsnag-build-reporter.js",
     "develop": "gatsby develop",
     "lint": "eslint . --ext .ts,.tsx,.js --cache",
@@ -11,16 +11,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "exit 0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --allow-empty"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "npm run lint -- --fix"
-    ]
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.66",
@@ -41,8 +31,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.1.1",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7",
-    "vercel": "^23.1.2"
+    "typescript": "^3.9.7"
   },
   "dependencies": {
     "@bugsnag/js": "^7.3.3",
