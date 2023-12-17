@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { type MouseEvent, ReactNode } from 'react'
 import {
   Box,
   Container,
@@ -46,7 +46,7 @@ const ScrollToTop = ({ children }: ScrollToTopProps) => {
     threshold: 100,
   })
 
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     const anchor = (
       (event.target as HTMLDivElement).ownerDocument || document
     ).querySelector('#back-to-top-anchor')
@@ -112,11 +112,11 @@ const Layout = (props: Props) => {
           maxWidth={maxWidth}
           sx={
             masthead
-              ? {
+              ? undefined
+              : {
                   minHeight: '100vh',
                   marginTop: 2,
                 }
-              : undefined
           }
         >
           <Box component="main">{children}</Box>

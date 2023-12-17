@@ -5,6 +5,9 @@ import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material'
 import Bugsnag from '@bugsnag/js'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
 
+import 'prism-themes/themes/prism-material-dark.css'
+import '../css/line-numbers.css'
+
 Bugsnag.start({
   apiKey: process.env.NEXT_PUBLIC_BUGSNAG_BROWSER_API_KEY || '',
   plugins: [new BugsnagPluginReact()],

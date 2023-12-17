@@ -1,5 +1,4 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { readingTime } from 'reading-time-estimator'
 import { type Post, getAllPostSlugs, getPost } from '../../utils/post'
 import Layout from '../../components/Layout'
 import { Box, Stack } from '@mui/material'
@@ -9,6 +8,7 @@ import { getBlogUrl } from '../../utils/url'
 import generateSocialImage from '../../utils/generate-social-image'
 import SITE_CONFIG from '../../config/site'
 import PostFooter from '../../components/PostFooter'
+import Content from '../../components/Content'
 
 interface Props {
   post: Post
@@ -39,10 +39,9 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 const BlogPage: NextPage<Props> = ({ post }) => {
   const {
     category,
-    content,
+    compiledSource,
     date,
     excerpt,
-    html,
     shortDescription,
     slug,
     tags,
@@ -82,7 +81,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
         schemaOrg={{
           '@type': 'BlogPosting',
           headline: shortDescription,
-          articleBody: html,
+          articleBody: compiledSource,
           author: {
             '@type': 'Person',
             name: SITE_CONFIG.author,
@@ -101,9 +100,11 @@ const BlogPage: NextPage<Props> = ({ post }) => {
         <PostHeader
           title={title}
           subTitle={shortDescription}
-          timeToRead={readingTime(content).minutes}
+          timeToRead={timeToRead}
           date={date}
         />
+
+        <Content compiledSource={compiledSource} slug={slug} />
         <PostFooter
           url={url}
           slug={slug}

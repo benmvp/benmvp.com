@@ -1,25 +1,63 @@
 import { resolve } from 'path'
 import { readFile, readdir } from 'fs-extra'
 import matter from 'gray-matter'
-import { markdownToHtml } from './markdown'
+import { serialize } from 'next-mdx-remote/serialize'
+
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrism from 'rehype-prism-plus/all'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
+
 import { readingTime } from 'reading-time-estimator'
 
 const POSTS_DIRECTORY = resolve(process.cwd(), 'src/content/posts')
 
-export interface Post {
-  date: string
+interface PostFrontMatter {
+  [key: string]: any
+
   category?: string
-  content: string
-  excerpt: string
-  hero: string
+  hero?: string
   heroAlt?: string
   heroCredit?: string
-  html: string
-  slug: string
   shortDescription?: string
   tags?: string[]
-  timeToRead: number
   title: string
+}
+
+export interface Post extends PostFrontMatter {
+  /**
+   * Markdown content w/o the front matter
+   */
+  content: string
+
+  /**
+   * The compiled source, generated from `next-mdx-remote/serialize`
+   */
+  compiledSource: string
+
+  /**
+   * The post's date
+   */
+  date: string
+
+  /**
+   * An excerpt from the `content`
+   */
+  excerpt: string
+
+  /**
+   * The post's slug (unique identifier)
+   */
+  slug: string
+
+  /**
+   * The approximate time it takes to read the post
+   */
+  timeToRead: number
+
+  /**
+   * The post's word count
+   */
   wordCount: number
 }
 
@@ -34,33 +72,48 @@ export const getAllPosts = async () => {
 }
 
 export const getPost = async (slug: string): Promise<Post> => {
-  const path = resolve(POSTS_DIRECTORY, slug, 'index.md')
-  const rawContents = await readFile(path, { encoding: 'utf-8' })
-  const {
-    data: frontMatter,
-    content,
-    excerpt,
-  } = matter(rawContents, { excerpt: true })
-  const html = await markdownToHtml(content)
+  const slugPath = resolve(POSTS_DIRECTORY, slug)
+  const postPath = resolve(slugPath, 'index.mdx')
+  const rawContents = await readFile(postPath, { encoding: 'utf-8' })
+
+  const { data, content, excerpt } = matter(rawContents, { excerpt: true })
+  const frontMatter = data as PostFrontMatter
+  const { compiledSource } = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [
+        // support for GitHub Flavored Markdown (GFM)
+        remarkGfm,
+      ],
+      rehypePlugins: [
+        // highlight code blocks in HTML with Prism
+        [rehypePrism, { showLineNumbers: true }],
+
+        // add IDs to headings for linking
+        rehypeSlug,
+
+        // add links to headings
+        rehypeAutolinkHeadings,
+      ],
+    },
+  })
+
   const { words: wordCount, minutes: timeToRead } = readingTime(content)
 
   return {
     slug,
     content,
+    compiledSource,
     excerpt: excerpt as string,
-    html,
 
-    category: frontMatter.category as string | undefined,
-    date: frontMatter.date.toString() as string,
-    hero: frontMatter.hero as string,
-    heroAlt: frontMatter.heroAlt as string | undefined,
-    heroCredit: frontMatter.heroCredit as string | undefined,
-    shortDescription: frontMatter.shortDescription as string | undefined,
-    tags: Array.isArray(frontMatter.tags)
-      ? (frontMatter.tags as string[])
-      : undefined,
+    category: frontMatter.category,
+    date: (frontMatter.date as Date).toISOString(),
+    hero: frontMatter.hero,
+    heroAlt: frontMatter.heroAlt,
+    heroCredit: frontMatter.heroCredit,
+    shortDescription: frontMatter.shortDescription,
+    tags: Array.isArray(frontMatter.tags) ? frontMatter.tags : undefined,
     timeToRead,
-    title: frontMatter.title as string,
+    title: frontMatter.title,
     wordCount,
   }
 }
