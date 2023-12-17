@@ -41,14 +41,13 @@ const HiddenMessage = ({ children }) => {
 
 In order to write a test to see if the component shows the `children` when the checkbox is clicked we need to first _find_ the checkbox. With Enzyme I would typically add a `data-testid="toggle-message"` attribute to the checkbox and search for it like:
 
-```js
+```js  {7}
 import { mount } from 'enzyme'
 import HiddenMessage from './HiddenMessage'
 
 test('shows the children when the checkbox is checked', () => {
   const component = mount(<HiddenMessage>Test Message</HiddenMessage>)
 
-  // highlight-next-line
   const checkbox = component.find('[data-testid="toggle-message"]')
 })
 ```
