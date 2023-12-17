@@ -53,7 +53,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
   const url = getBlogUrl(slug)
   const seoImageUrl = generateSocialImage({
     title,
-    tagline: shortDescription,
+    tagline: shortDescription ?? undefined,
     date,
   })
 
@@ -99,7 +99,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
       <Stack direction="column" spacing={3}>
         <PostHeader
           title={title}
-          subTitle={shortDescription}
+          subTitle={shortDescription ?? undefined}
           timeToRead={timeToRead}
           date={date}
         />
@@ -110,7 +110,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
           slug={slug}
           title={title}
           summary={summary}
-          tags={tags}
+          tags={tags ?? undefined}
         />
       </Stack>
     </Layout>

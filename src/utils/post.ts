@@ -105,6 +105,7 @@ export const getPost = async (slug: string): Promise<Post> => {
     compiledSource,
     excerpt: excerpt as string,
 
+    // properties have to be `null` if they don't exist in order for them to be serialized to JSON with `getStaticProps`
     category: frontMatter.category ?? null,
     date: (frontMatter.date as Date).toISOString(),
     hero: frontMatter.hero ?? null,
