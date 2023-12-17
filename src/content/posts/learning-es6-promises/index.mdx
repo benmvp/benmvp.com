@@ -3,7 +3,7 @@ date: 2015-09-27
 title: Promises
 category: 'Learning ES6'
 tags: [ecmascript-6, es6, javascript, learning-es6, promises, deferreds]
-hero: ./pinky-promise.jpg
+hero: pinky-promise.jpg
 heroAlt: Pinky promise fingers
 ---
 
@@ -254,7 +254,7 @@ A promise can be in one of the following three states:
 
 A promise is settled (the async operation has completed) if it is either fulfilled or rejected. A promise can only transition from unsettled to settled **one** time and it remains settled. Attempting to settle an already settled promise does nothing. Here's a visualization of the (short) lifecycle of a promise from [Axel Rauschmayer](http://exploringjs.com/es6/ch_promises.html):
 
-![lifecyle of a promise](https://exploringjs.com/es6/images/promises----promise_states_simple.jpg)
+<Image src="https://exploringjs.com/es6/images/promises----promise_states_simple.jpg" alt="lifecyle of a promise" />
 
 Let's take a look again at the `Promise` constructor in our promised-back `fetch` function:
 

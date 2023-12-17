@@ -4,7 +4,7 @@ title: Tools to catch accessibility errors in JavaScript applications
 shortDescription: How to use automated tooling to catch accessibility issues in a web application built with React, Vue or other JavaScript frameworks
 category: DivOps
 tags: [accessibility, a11y, testing, react, vue, angular, svelte]
-hero: ./accessible-entry-sign-daniel-ali-ju1yFZkrxVg-unsplash.jpeg
+hero: accessible-entry-sign-daniel-ali-ju1yFZkrxVg-unsplash.jpeg
 heroAlt: Wall with an Accessible Entry sign on it
 heroCredit: 'Photo by [Daniel Ali](https://unsplash.com/@untodesign_)'
 ---
@@ -31,7 +31,7 @@ Let's jump right in!
 
 One of the Storybook addons is [`@storybook/addon-a11y`](https://github.com/storybookjs/storybook/tree/next/addons/a11y). **It uses [`axe-core`](https://github.com/dequelabs/axe-core) to surface accessibility issues in the Storybook stories we develop.** It runs and updates every time we change a story. I really like it because (unlike some of the other tools we'll see), it runs in the browser. So it can catch issues with the final visual render (like [color contrast](https://webaim.org/articles/contrast/)) in addition to issues with the markup structure (like missing `alt` or incorrect `role` attributes).
 
-[![Screenshot of the Accessibility panel in Storybook](./storybook-addon-a11y-screenshot.png)](https://github.com/storybookjs/storybook/tree/next/addons/a11y)
+<a href="https://github.com/storybookjs/storybook/tree/next/addons/a11y"><Image src="storybook-addon-a11y-screenshot.png" alt="Screenshot of the Accessibility panel in Storybook" /></a>
 
 While it does run automatically, we still have to look at the Accessibility panel and fix the issues. It doesn't run in our continuous integration (CI) pipeline so it can't fail a pull request.
 
@@ -106,7 +106,7 @@ test('has correct input value', async () => {
 
 Once we've connected to our CI Provider of choice (I'm a big fan of [Github Actions](https://docs.github.com/en/actions)), we can configure Lighthouse CI to fail if the accessibility score dips below a specified threshold. After generating the reports, Lighthouse CI uploads them to a temporary public storage and provides a URL to access them. If we don't want these reports publicly available we can also set up [Lighthouse CI server](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md#the-lighthouse-ci-server).
 
-![Screenshot of the Lighthouse CI dashboard](./lighthouse-ci-dashboard.png)
+<Image src="lighthouse-ci-dashboard.png" alt="Screenshot of the Lighthouse CI dashboard" />
 
 **By running a full page of our web app in the browser it's able to catch issues that the other tools we've looked at cannot catch.** Validating that the whole page has [heading elements that are always sequentially-descending in order](https://web.dev/heading-order/?utm_source=lighthouse&utm_medium=devtools) can only be verified at the page level. And the great thing about Lighthouse is that it always provides a "learn more" link for each accessibility issue. So it serves as a teacher as well as a validator. Lastly, because it operates on the rendered web page, it works with our favorite frameworks.
 

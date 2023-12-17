@@ -1,4 +1,4 @@
-import { Typography, styled } from '@mui/material'
+import { Box, Typography, styled } from '@mui/material'
 import Image, { ImageProps } from 'next/image'
 import { MDXRemote } from 'next-mdx-remote'
 import type { DOMAttributes } from 'react'
@@ -22,26 +22,7 @@ const Body = styled('article')(({ theme }) => ({
   '& p': {
     ...theme.typography.body1,
     margin: theme.spacing(0, 0, 2, 0),
-
-    '&.responsive-image-wrapper': {
-      height: 300,
-      position: 'relative',
-      width: '100%',
-
-      img: {
-        maxWidth: 800,
-        objectFit: 'contain',
-      },
-    },
   },
-
-  // '& p > .gatsby-resp-image-wrapper + em': {
-  //   ...theme.typography.caption,
-  //   display: 'block',
-  //   textAlign: 'right',
-  //   maxWidth: 800,
-  //   margin: theme.spacing(1, 2),
-  // },
   '& ul': {
     listStyle: 'circle',
     padding: theme.spacing(0, 0, 0, 3),
@@ -83,6 +64,16 @@ const Body = styled('article')(({ theme }) => ({
   //   margin: `0 auto ${theme.spacing(2)}px auto`,
   // },
 }))
+const ImageWrapper = styled('div')({
+  height: 300,
+  position: 'relative',
+  width: '100%',
+
+  '& img': {
+    maxWidth: 800,
+    objectFit: 'contain',
+  },
+})
 
 interface Props {
   /**
@@ -93,18 +84,46 @@ interface Props {
   slug: string
 }
 
+interface ContentImageProps extends ImageProps {
+  credit?: {
+    name: string
+    url: string
+  }
+}
+
 const Content = ({ compiledSource, slug }: Props) => {
   const components = {
-    Image: (props: ImageProps) => (
-      <p className="responsive-image-wrapper">
-        <Image
-          {...props}
-          alt={props.alt}
-          src={`/images/posts/${slug}/${props.src}`}
-          fill
-          sizes="100vw"
-        />
-      </p>
+    Image: ({ credit, ...props }: ContentImageProps) => (
+      <Box mb={2}>
+        <ImageWrapper>
+          <Image
+            {...props}
+            alt={props.alt}
+            src={`/images/posts/${slug}/${props.src}`}
+            fill
+            sizes="100vw"
+          />
+        </ImageWrapper>
+
+        {credit && (
+          <Typography
+            component="em"
+            variant="caption"
+            sx={{
+              display: 'block',
+              textAlign: 'center',
+              maxWidth: 800,
+              my: 1,
+              mx: 2,
+            }}
+          >
+            Photo by{' '}
+            <a href={credit.url} target="_blank" rel="noopener noreferrer">
+              {credit.name}
+            </a>
+          </Typography>
+        )}
+      </Box>
     ),
   }
 

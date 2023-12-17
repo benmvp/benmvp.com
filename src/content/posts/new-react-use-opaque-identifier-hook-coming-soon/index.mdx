@@ -4,14 +4,14 @@ title: New React useOpaqueIdentifier hook coming soon
 shortDescription: A quick overview of the newly implemented useOpaqueIdentifier hook and when you would want to use it
 category: React
 tags: [react, hooks]
-hero: ./blue-anchor-on-wall.jpg
+hero: blue-anchor-on-wall.jpg
 heroAlt: Blue anchor stenciled on the wall
 heroCredit: 'Photo by [milan degraeve](https://unsplash.com/@milandegraeve)'
 ---
 
 As announced by [Josh Comeau](https://twitter.com/JoshWComeau) on twitter today, React in a future version (v16.4.0 maybe?) will have a new utility hook called `useOpaqueIdentifier`:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🌠 React is getting a new hook, `useOpaqueIdentifier`, which can be used to generate unique IDs (to be used for form labels, aria-labelledby, etc), in an SSR-safe way.<br><br>Exciting!<a href="https://t.co/UyJtle6IhY">https://t.co/UyJtle6IhY</a></p>&mdash; 💫 Josh (@JoshWComeau) <a href="https://twitter.com/JoshWComeau/status/1250843977194094592?ref_src=twsrc%5Etfw">April 16, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🌠 React is getting a new hook, `useOpaqueIdentifier`, which can be used to generate unique IDs (to be used for form labels, aria-labelledby, etc), in an SSR-safe way.<br /><br />Exciting!<a href="https://t.co/UyJtle6IhY">https://t.co/UyJtle6IhY</a></p>&mdash; 💫 Josh (@JoshWComeau) <a href="https://twitter.com/JoshWComeau/status/1250843977194094592?ref_src=twsrc%5Etfw">April 16, 2020</a></blockquote>
 
 I've always needed a safe function like this in React to auto-generate the `id` of a input field so that I can associate it with a `<label>`'s `for` attribute for accessibility and usability purposes. We _could_ use a global running counter or worse, just a random number, but with server-side rendering there was never a guarantee that the ID generated server-side would be the same when the app hydrated client-side. If there is an ID mismatch, then the UI would have to re-render.
 

@@ -15,12 +15,12 @@ const POSTS_DIRECTORY = resolve(process.cwd(), 'src/content/posts')
 interface PostFrontMatter {
   [key: string]: any
 
-  category?: string
-  hero?: string
-  heroAlt?: string
-  heroCredit?: string
-  shortDescription?: string
-  tags?: string[]
+  category: string | null
+  hero: string | null
+  heroAlt: string | null
+  heroCredit: string | null
+  shortDescription: string | null
+  tags: string[] | null
   title: string
 }
 
@@ -105,13 +105,13 @@ export const getPost = async (slug: string): Promise<Post> => {
     compiledSource,
     excerpt: excerpt as string,
 
-    category: frontMatter.category,
+    category: frontMatter.category ?? null,
     date: (frontMatter.date as Date).toISOString(),
-    hero: frontMatter.hero,
-    heroAlt: frontMatter.heroAlt,
-    heroCredit: frontMatter.heroCredit,
-    shortDescription: frontMatter.shortDescription,
-    tags: Array.isArray(frontMatter.tags) ? frontMatter.tags : undefined,
+    hero: frontMatter.hero ?? null,
+    heroAlt: frontMatter.heroAlt ?? null,
+    heroCredit: frontMatter.heroCredit ?? null,
+    shortDescription: frontMatter.shortDescription ?? null,
+    tags: Array.isArray(frontMatter.tags) ? frontMatter.tags : null,
     timeToRead,
     title: frontMatter.title,
     wordCount,
