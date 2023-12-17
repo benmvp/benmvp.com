@@ -19,7 +19,7 @@ for slug_dir in "$source_dir"/*; do
     mkdir -p "$dest_dir/$slug"
 
     # Move all image files within the current directory to the destination
-    mv "$slug_dir"/*.jpg  "$slug_dir"/*.jpeg "$slug_dir"/*.png "$slug_dir"/*.gif "$dest_dir/$slug/"
+    mv "$slug_dir"/*.jpg  "$slug_dir"/*.jpeg "$slug_dir"/*.png "$slug_dir"/*.svg "$slug_dir"/*.gif "$dest_dir/$slug/"
   fi
 done
 
