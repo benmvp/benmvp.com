@@ -56,13 +56,14 @@ const Body = styled('article')(({ theme }) => ({
   //   // code blocks
   //   marginBottom: theme.spacing(3),
   // },
-  // '& .gatsby-resp-iframe-wrapper': {
-  //   // iframes (video embeds)
-  //   margin: theme.spacing(0, 0, 3, 2),
-  // },
-  // '& .twitter-tweet': {
-  //   margin: `0 auto ${theme.spacing(2)}px auto`,
-  // },
+  // video players
+  '& iframe': {
+    display: 'block',
+    margin: theme.spacing(4, 'auto'),
+  },
+  '& .twitter-tweet': {
+    margin: theme.spacing(0, 'auto', 2),
+  },
 }))
 const ImageWrapper = styled('div')({
   height: 300,
@@ -128,16 +129,14 @@ const Content = ({ compiledSource, slug }: Props) => {
   }
 
   return (
-    <Body
-      sx={{ typography: 'body1' }}
-      // dangerouslySetInnerHTML={{ __html: children }}
-    >
+    <Body sx={{ typography: 'body1' }}>
       <MDXRemote
         compiledSource={compiledSource}
         scope={undefined}
         frontmatter={undefined}
         components={components}
       />
+      <script async src="https://platform.twitter.com/widgets.js"></script>
     </Body>
   )
 }
