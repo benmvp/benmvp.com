@@ -41,7 +41,7 @@ const HiddenMessage = ({ children }) => {
 
 In order to write a test to see if the component shows the `children` when the checkbox is clicked we need to first _find_ the checkbox. With Enzyme I would typically add a `data-testid="toggle-message"` attribute to the checkbox and search for it like:
 
-```js  {7}
+```js {7}
 import { mount } from 'enzyme'
 import HiddenMessage from './HiddenMessage'
 
@@ -56,14 +56,13 @@ test('shows the children when the checkbox is checked', () => {
 
 Instead with React Testing Library, we search for the checkbox based on its label, "Show Message". This is what the user sees and what they click on. So our tests acts more like what our users are doing. The search for the checkbox looks like:
 
-```js
+```js {7}
 import { render, fireEvent } from '@testing-library/react'
 import HiddenMessage from './HiddenMessage'
 
 test('shows the children when the checkbox is checked', () => {
   const { getByLabelText } = render(<HiddenMessage>Test Message</HiddenMessage>)
 
-  // highlight-next-line
   const checkbox = getByLabelText('Show Message')
 })
 ```
@@ -76,7 +75,7 @@ There's really no easy way to replicate this in Enzyme without recreating the fu
 
 In the example of our `<HiddenMessage />` component, we need to click the checkbox in order to get to the new state. In Enzyme this would look like:
 
-```js
+```js {9}
 import { mount } from 'enzyme'
 import HiddenMessage from './HiddenMessage'
 
@@ -85,14 +84,13 @@ test('shows the children when the checkbox is checked', () => {
 
   const checkbox = component.find('[data-testid="toggle-message"]')
 
-  // highlight-next-line
   checkbox.simulate('click')
 })
 ```
 
 and in React Testing Library:
 
-```js
+```js {9}
 import { render, fireEvent } from '@testing-library/react'
 import HiddenMessage from './HiddenMessage'
 
@@ -101,7 +99,6 @@ test('shows the children when the checkbox is checked', () => {
 
   const checkbox = getByLabelText('Show Message')
 
-  // highlight-next-line
   fireEvent.click(checkbox)
 })
 ```

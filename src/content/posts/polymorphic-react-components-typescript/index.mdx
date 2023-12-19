@@ -51,7 +51,7 @@ We can make `<Text>` "polymorphic" by adding an `as` prop to it that allows the 
 
 And a basic implementation could look like:
 
-```javascript
+```javascript {12,15}
 export const Text = ({
   as,
   children,
@@ -63,11 +63,9 @@ export const Text = ({
   // imagine a helper that will generate a CSS class
   // string based on the selected visual props
   const classes = getClasses({font, size, color })
-  // highlight-next-line
   const Component = as || 'span'
 
   return (
-// highlight-next-line
     <Component {...other} className={classes}>
       {children}
     </Component>
@@ -153,11 +151,9 @@ This all works because of [TypeScript generics](https://www.typescriptlang.org/d
 
 So the actual source code for `Text` is basically the same. It's the typing of the props that makes it so that I can add `htmlFor` when `as="label"`, but it's an error if I set `href="https://www.benmvp.com"` when `as="h1"`. So let's break down how this all works chunk by chunk.
 
-```typescript
-// highlight-start
+```typescript {1-2}
 interface Props<C extends React.ElementType> {
   as?: C
-  // highlight-end
 
   children: React.ReactNode
   color?: Color
@@ -204,18 +200,15 @@ type TextProps<C extends React.ElementType> = Props<C> &
 
 Now `TextProps` has all of the valid props we want for the `Text` component and it'll be based on the value we pass to the `as` prop.
 
-```typescript
-// highlight-next-line
+```typescript {1,7-8}
 export const Text = <C extends React.ElementType = 'span'>({
   as,
   children,
   font = 'regular',
   size = '4',
   color = 'gray-40',
-  // highlight-start
   ...other
 }: TextProps<C>) => {
-  // highlight-end
   const classes = getClasses({ font, size, color })
   const Component = as || 'span'
 
@@ -340,7 +333,7 @@ export type PolymorphicComponentProps<
 
 And now the `Text` component can make use of our new helpers to define the `TextProps`.
 
-```typescript
+```typescript {13-16}
 import React from 'react'
 
 // The `Props` interface becomes a simple interface of the main props
@@ -353,12 +346,10 @@ interface Props {
 
 // `TextProps` now uses `PolymorphicComponentProps` to add the `as` prop
 // and inherit its prop
-// highlight-start
 type TextProps<C extends React.ElementType> = PolymorphicComponentProps<
   C,
   Props
 >
-// highlight-end
 
 export const Text = <C extends React.ElementType = 'span'>({
   as,

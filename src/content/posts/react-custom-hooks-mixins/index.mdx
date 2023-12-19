@@ -11,7 +11,7 @@ heroCredit: 'Photo by [Martin Widenka](https://unsplash.com/@widenka)'
 
 The last couple of weeks, I've been working on my latest project, [NBA Player Tiers](https://nbaplayertiers.com/) (very much still in-progress). I wrote this custom Hook to retrieve NBA player information from a [Firestore](https://firebase.google.com/products/firestore) DB. It's composed of other custom Hooks and it just makes me giddy.
 
-```js
+```js {15,22}
 import { useEffect, useState } from 'react'
 import { usePromise as useSafeAsync } from 'react-use'
 
@@ -26,7 +26,6 @@ const usePlayers = () => {
   const [allPlayers, setAllPlayers] = useState([])
 
   useEffect(() => {
-    // highlight-next-line
     safeAsync(getAllPlayers()).then(setAllPlayers)
   }, [safeAsync])
 
@@ -34,7 +33,6 @@ const usePlayers = () => {
 }
 
 const PlayerPicker = () => {
-  // highlight-next-line
   const players = usePlayers()
 
   // render players UI using `players`
@@ -63,7 +61,7 @@ Before Hooks, React components were created using [native JavaScript classes](/b
 
 Five years ago, the equivalent of the `useSafeAsync` and `usePlayers` Hooks as Mixins could've looked something like:
 
-```js
+```js {16-24,34,38,44-46,51}
 var SafeAsyncMixin = {
   // Use `_isMounted` property to keep track
   // of mounted state
@@ -79,7 +77,6 @@ var SafeAsyncMixin = {
 
   // A helper method for the component to "safely"
   // update the state based on the mounted state
-  // highlight-start
   safeAsync: function (promise) {
     return new Promise(function (resolve) {
       return promise.then(function (value) {
@@ -89,7 +86,6 @@ var SafeAsyncMixin = {
       })
     })
   },
-  // highlight-end
 }
 
 function getAllPlayers() {
@@ -99,28 +95,23 @@ function getAllPlayers() {
 }
 
 var PlayersMixin = {
-  // highlight-next-line
   mixins: [SafeAsyncMixin],
 
   getInitialState: function () {
     return {
-      // highlight-next-line
       allPlayers: [],
     }
   },
 
   componentDidMount: function () {
     // Use `safeAsync` method provided by `SafeAsyncMixin`
-    // highlight-start
     this.safeAsync(getAllPlayers()).then(function (allPlayers) {
       return this.setState({ allPlayers: allPlayers })
     })
-    // highlight-end
   },
 }
 
 var PlayerPicker = React.createClass({
-  // highlight-next-line
   mixins: [PlayersMixin],
 
   render: function () {
@@ -147,7 +138,7 @@ But Mixins ultimately were nixed because ES6 classes didn't support them. With R
 
 A lot happened in the three years between React 15 with ES6 classes and React 16.8 with Hooks. We tried to repurpose [Higher-Order Components](https://ui.dev/react-higher-order-components/) (HOCs) and [Render Props](https://ui.dev/react-render-props/) to solve the problem of sharing stateful, non-visual logic. But they weren't designed to solve the problem like Mixins had been. **And Mixins and Hooks are surprisingly similar.** Let's look at the Hooks implementation again.
 
-```js
+```js {11,15,22}
 import { useEffect, useState } from 'react'
 import { usePromise as useSafeAsync } from 'react-use'
 
@@ -158,12 +149,10 @@ const getAllPlayers = async () => {
 }
 
 const usePlayers = () => {
-  // highlight-next-line
   const safeAsync = useSafeAsync()
   const [allPlayers, setAllPlayers] = useState([])
 
   useEffect(() => {
-    // highlight-next-line
     safeAsync(getAllPlayers()).then(setAllPlayers)
   }, [safeAsync])
 
@@ -171,7 +160,6 @@ const usePlayers = () => {
 }
 
 const PlayerPicker = () => {
-  // highlight-next-line
   const players = usePlayers()
 
   // render players UI using `players`

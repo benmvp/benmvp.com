@@ -186,7 +186,7 @@ I pretty much use TypeScript in all the JavaScript code I write nowadays. I find
 
 If you're getting into TypeScript, I have an existing post on [using TypeScript with `useReducer`](https://www.benmvp.com/blog/type-checking-react-usereducer-typescript/) which explains adding types for the `reducer` function. So here's the little bit needed to add types for `usePersistReducer`:
 
-```typescript
+```typescript {9}
 const usePersistReducer = () => {
   const [savedState, saveState] = useLocalStorage(
     LOCAL_STORAGE_KEY,
@@ -195,7 +195,6 @@ const usePersistReducer = () => {
   const reducerLocalStorage = useCallback(
     // give `reducerLocalStorage` the same TS API
     // as the underlying `reducer` function
-    // highlight-next-line
     (state: State, action: Action): State => {
       const newState = reducer(state, action)
 

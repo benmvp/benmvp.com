@@ -43,7 +43,7 @@ When the `<AddForm />` submits, it calls `submitNewItem` which is a helper funct
 
 So we set up our test like so, but we run into a problem:
 
-```js
+```js {23-24}
 import { mount } from 'enzyme'
 import Adder from './Adder'
 import { submitNewItem } from '../utils'
@@ -66,10 +66,8 @@ test('new item is added to the UI when the form is successfully submitted', () =
 
   component.update()
 
-  // highlight-start
   // THIS DOESN'T WORK!!
   expect(component.find('[data-testid="adder-items"]')).toHaveLength(1)
-  // highlight-end
 })
 ```
 
@@ -85,10 +83,8 @@ But if we think about it, what we really want to do is **wait until all of the p
 
 Well it turns out that calling [`setImmediate`](https://nodejs.org/api/timers.html#timers_setimmediate_callback_args) will do just that; exhaust all of the promises. But since `setImmediate` uses a callback, we have to use the [callback form](https://jestjs.io/docs/en/asynchronous#callbacks) of Jest async testing:
 
-```js
-// highlight-start
+```js {1-1,15-23}
 test('new item is added to the UI when the form is successfully submitted', (done) => {
-  // highlight-end
   // Instead of making a real API call, mock the helper to return a
   // resolved promise with the data that would come back from the API
   submitNewItem.mockResolvedValueOnce({ id: 14, title: 'Gucci sneakers' })
@@ -102,7 +98,6 @@ test('new item is added to the UI when the form is successfully submitted', (don
 
   expect(preventDefault).toHaveBeenCalledTimes(1)
 
-  // highlight-start
   setImmediate(() => {
     // within `setImmediate` all of the promises have been exhausted
 
@@ -112,20 +107,15 @@ test('new item is added to the UI when the form is successfully submitted', (don
     // have to call `done` here to let Jest know the test is done
     done()
   })
-  // highlight-end
 })
 ```
 
 So this is great! We were able to successfully test our code! But I personally don't like using the callback form of Jest async testing. I prefer using the [`async`/`await` form](https://jestjs.io/docs/en/asynchronous#asyncawait). Well, it turns out that we can turn this `setImmediate` pattern into a Promise-based helper called `runAllPromises` that will then allow us to use `async`/`await`:
 
-```js
-// highlight-start
+```js {1-1,3-3,17-22}
 const runAllPromises = () => new Promise(setImmediate)
-// highlight-end
 
-// highlight-start
 test('new item is added to the UI when the form is successfully submitted', async () => {
-  // highlight-end
   // Instead of making a real API call, mock the helper to return a
   // resolved promise with the data that would come back from the API
   submitNewItem.mockResolvedValueOnce({ id: 14, title: 'Gucci sneakers' })
@@ -139,14 +129,12 @@ test('new item is added to the UI when the form is successfully submitted', asyn
 
   expect(preventDefault).toHaveBeenCalledTimes(1)
 
-  // highlight-start
   await runAllPromises()
 
   // after waiting for all the promises to be exhausted
   // we can do our UI check
   component.update()
   expect(component.find('[data-testid="adder-items"]')).toHaveLength(1)
-  // highlight-end
 })
 ```
 
@@ -172,7 +160,7 @@ As I mentioned in my previous article, React Testing Library is all about testin
 
 To promote user-centric testing, React Testing Library has [async utilities](https://testing-library.com/docs/dom-testing-library/api-async) that mimic the user behavior of waiting. Specifically, there is a `waitFor()` method that allows you to _wait_ until the UI is ready. Using `waitFor`, our Enzyme test would look something like this:
 
-```js
+```js {8-9,21-25}
 import { mount } from 'enzyme'
 import Adder from './Adder'
 import { submitNewItem } from '../utils'
@@ -180,10 +168,8 @@ import { waitFor } from '../testUtils'
 
 jest.mock('../utils')
 
-// highlight-start
 // test is now `async`
 test('new item is added to the UI when the form is successfully submitted', async () => {
-  // highlight-end
   submitNewItem.mockResolvedValueOnce({ id: 14, title: 'Gucci sneakers' })
 
   const component = mount(<Adder />)
@@ -195,13 +181,11 @@ test('new item is added to the UI when the form is successfully submitted', asyn
 
   expect(preventDefault).toHaveBeenCalledTimes(1)
 
-  // highlight-start
   // we wait for the assertion to pass
   await waitFor(() => {
     component.update()
     expect(component.find('[data-testid="adder-items"]')).toHaveLength(1)
   })
-  // highlight-end
 
   // more assertions here
 })

@@ -7,4 +7,4 @@
 - [x] Replace all images with `<Image /` components
 - [x] Style Twitter embeds
 - [x] Style YouTube/Vimeo embeds
-- [ ] Replace line highlighting with basic prism format
+- [x] Replace line highlighting with basic prism format

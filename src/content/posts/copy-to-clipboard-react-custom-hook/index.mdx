@@ -58,9 +58,8 @@ const [copyStatus, setCopyStatus] = useState('inactive')
 
 We use the [`useState` Hook](https://reactjs.org/docs/hooks-state.html) to maintain the copy status. It's one of `'inactive'` (the default state), `'success'` (after a successful write to the clipboard) and `'failed'` (after a failed write to the clipboard).
 
-```js
+```js {2}
 const copy = useCallback(() => {
-  // highlight-next-line
   navigator.clipboard.writeText(text).then(
     () => setCopyStatus('copied'),
     () => setCopyStatus('failed'),
@@ -72,13 +71,12 @@ We create a copy function that we'll return (along with the `copyStatus`) from o
 
 Our `useCopyToClipboard` Hook is re-executed every time that the component re-renders. We don't want to create a new function reference each time. Functions returned by custom Hooks often are passed as props to child components. If these functions are recreated with each re-render, they could cause unnecessary re-renders of the child components. As a result, **it's typically good practice to ensure that functions returned by custom Hooks have stable references**. And we create stable references by memoizing the functions using the [`useCallback` Hook](https://reactjs.org/docs/hooks-reference.html#usecallback).
 
-```js
+```js {6}
 useEffect(() => {
   if (copyStatus === 'inactive') {
     return
   }
 
-  // highlight-next-line
   const timeoutId = setTimeout(() => setCopyStatus('inactive'), notifyTimeout)
 
   return () => clearTimeout(timeoutId)
@@ -93,9 +91,8 @@ return [copyStatus, copy]
 
 Lastly, our custom Hook returns the `copyStatus` and the memoized `copy` function as a 2-element "tuple" array for the component to use.
 
-```js
+```js {2,11}
 const CopyUrlButton = ({ url }) => {
-  // highlight-next-line
   const [copyUrlStatus, copyUrl] = useCopyToClipboard(url)
   const buttonText = 'Copy URL'
 
@@ -105,7 +102,6 @@ const CopyUrlButton = ({ url }) => {
     buttonText = 'Copy failed!'
   }
 
-  // highlight-next-line
   return <button onClick={copyUrl}>{buttonText}</button>
 }
 ```
@@ -120,8 +116,7 @@ That's it!
 
 For those using TypeScript the additional types needed are minimal.
 
-```typescript
-// highlight-start
+```typescript {1-7}
 type CopyStatus = 'inactive' | 'copied' | 'failed'
 
 const useCopyToClipboard = (
@@ -129,7 +124,6 @@ const useCopyToClipboard = (
   notifyTimeout = 2500,
 ): [CopyStatus, () => void] => {
   const [copyStatus, setCopyStatus] = useState<CopyStatus>('inactive')
-  // highlight-end
   const copy = useCallback(() => {
     navigator.clipboard.writeText(text).then(
       () => setCopyStatus('copied'),

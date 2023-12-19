@@ -41,7 +41,7 @@ export default Home
 
 **But the Next `<Link>` renders a vanilla `<a>` tag with no styling**, which pretty much no one is going to want. We may throw a `className` on the `<a>` for styling, but more than likely we have a custom `<Link>` component of our own that handles the styling. I use the fantastic [MUI](https://mui.com/) React component library for my personal projects, and it has its own [`Link` component](https://mui.com/components/links/). So with MUI, the example becomes:
 
-```js
+```js {8,13,18}
 import NextLink from 'next/link'
 import { Link as MuiLink } from '@mui/material'
 
@@ -49,19 +49,16 @@ const Home = () => {
   return (
     <ul>
       <li>
-        // highlight-next-line
         <NextLink href="/" passHref>
           <MuiLink>Home</MuiLink>
         </NextLink>
       </li>
       <li>
-        // highlight-next-line
         <NextLink href="/about" passHref>
           <MuiLink>About Us</MuiLink>
         </NextLink>
       </li>
       <li>
-        // highlight-next-line
         <NextLink href="/blog/hello-world" passHref>
           <MuiLink>Blog Post</MuiLink>
         </NextLink>
@@ -117,17 +114,15 @@ The component isn't terribly complex. It takes in the props and passes the appro
 
 But since I develop in React with TypeScript, my `Link` component actually looks like this:
 
-```tsx
+```tsx {7-8,16}
 import { forwardRef } from 'react'
 import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 import { Link as MuiLink, LinkProps as MuiLinkProps } from '@mui/material'
 
 // `LinkProps` is the combination of the MUI `LinkProps` and the Next `LinkProps`
 // We wanna use the `href` prop from `next/link` so we omit it from MUI's.
-// highlight-start
 export type LinkProps = Omit<MuiLinkProps, 'href'> &
   Omit<NextLinkProps, 'as' | 'passHref' | 'children'>
-// highlight-end
 
 /**
  * A convenience component that wraps the MUI `Link` component that provides
@@ -135,7 +130,6 @@ export type LinkProps = Omit<MuiLinkProps, 'href'> &
  *
  * @see https://next.js.org/docs/api-reference/next/link
  */
-// highlight-next-line
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   { href, prefetch, replace, scroll, shallow, locale, ...muiProps },
   ref,
@@ -172,22 +166,19 @@ Lastly, we update `forwardRef()` to include the ref type and component props typ
 
 So now back in our home page component, we can use our new `<Link>` component.
 
-```js
+```js {7,10,13}
 import Link from '../components/Link'
 
 const Home = () => {
   return (
     <ul>
       <li>
-        // highlight-next-line
         <Link href="/">Home</Link>
       </li>
       <li>
-        // highlight-next-line
         <Link href="/about">About Us</Link>
       </li>
       <li>
-        // highlight-next-line
         <Link href="/blog/hello-world">Blog Post</Link>
       </li>
     </ul>
@@ -201,7 +192,7 @@ Now we're back to it _feeling_ like we're just using our component library `<Lin
 
 One more thing before we finish. The `next/link` only works for local links. It does nothing for external links. **In fact, using it for external links results in a bunch of wasted work.** So it's better if we just use our component library's `<Link>` component directly.
 
-```js
+```js {17}
 import { Link as ExternalLink } from '@mui/material'
 import Link from '../components/Link'
 
@@ -218,7 +209,6 @@ const Home = () => {
         <Link href="/blog/hello-world">Blog Post</Link>
       </li>
       <li>
-        // highlight-next-line
         <ExternalLink href="https://www.benmvp.com">Ben Ilegbodu</ExternalLink>
       </li>
     </ul>

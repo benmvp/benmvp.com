@@ -50,11 +50,10 @@ When [configuring ESLint rules](https://eslint.org/docs/user-guide/configuring/r
 
 To ensure that we don't ship code with ESLint warnings, we can use the [`--max-warnings`](https://eslint.org/docs/user-guide/command-line-interface#-max-warnings) CLI option. Setting it to `0` will force ESLint to exit with an error status if there is even a single warning-level rule violation.
 
-```json
+```json {4}
 {
   "name": "healthiest-app-ever",
   "scripts": {
-    // highlight-next-line
     "lint:js": "eslint . --ext .ts,.tsx,.js --cache --max-warnings 0"
   }
 }
@@ -70,7 +69,7 @@ The good thing is that these warnings and errors are written to the console duri
 
 Just like we set up ESLint to fail if there are any warning-level violations, we can do the same with Jest. It's just a lot less straightforward. The Jest configuration file supports the [`setupFilesAfterEnv`](https://jestjs.io/docs/en/configuration#setupfilesafterenv-array) config, which is a list of paths to modules that run code to set up the testing framework before each test file in the suite executes. We can write a little bit of additional code to cause a test to fail if any code writes to `console.warn` or `console.error`:
 
-```js
+```js {18-20}
 // jest.config.js (main config)
 module.exports = {
   clearMocks: true,
@@ -88,11 +87,9 @@ const CONSOLE_FAIL_TYPES = ['error', 'warn']
 CONSOLE_FAIL_TYPES.forEach((type) => {
   console[type] = (message) => {
     // throwing an Error will immediately fail a test
-    // highlight-start
     throw new Error(
       `Failing due to console.${type} while running test!\n\n${message}`,
     )
-    // highlight-end
   }
 })
 ```
@@ -107,7 +104,7 @@ This means that our asynchronous tests have a much higher likelihood of false po
 
 Instead of having to add `expect.hasAssertions()` at the beginning of every test or even every test suite, we can add it to our setup file:
 
-```js
+```js {9-11}
 // jest.setup.js (extra setup file)
 
 // Throw errors when a `console.error` or
@@ -116,11 +113,9 @@ Instead of having to add `expect.hasAssertions()` at the beginning of every test
 
 // ensure *every* test has at
 // least one expect() called
-// highlight-start
 beforeEach(() => {
   expect.hasAssertions()
 })
-// highlight-end
 ```
 
 ## Use the strict flag in TypeScript
@@ -131,14 +126,13 @@ TypeScript no doubt has a learning curve, especially if you haven't worked in a 
 
 Thanks to [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript), I use TypeScript _with Babel_. I use Babel to do what it does best: transpile modern JavaScript to less modern JavaScript. And I use TypeScript to do what it does best: type-check my JavaScript code. Here's what the [`tsconfig.json`](https://www.typescriptlang.org/tsconfig) on my latest project looks like:
 
-```json
+```json {7}
 {
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    // highlight-next-line
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,

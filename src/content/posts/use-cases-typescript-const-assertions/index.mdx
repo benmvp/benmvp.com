@@ -13,7 +13,7 @@ Have you ever run into a problem where TypeScript incorrectly infers the types o
 
 Phew, that was a lot of technical terms. 😅 Let's ground ourselves with an example:
 
-```typescript
+```typescript {9,18}
 const notify = (
   data: unknown,
   {
@@ -22,7 +22,6 @@ const notify = (
   }: {
     sport: string
     // 👇🏾 union string literal
-    // highlight-next-line
     level: 'player' | 'team' | 'sport' | 'all'
   },
 ) => {
@@ -32,7 +31,6 @@ const notify = (
 const DEFAULT_NBA_OPTIONS = {
   sport: 'nba',
   // 👇🏾 trying to use one of the literals in the union
-  // highlight-next-line
   level: 'team',
 }
 
@@ -50,10 +48,9 @@ notify('James Harden traded to the Nets 😢', DEFAULT_NBA_OPTIONS)
 
 The problem is that even though we defined `DEFAULT_NBA_OPTIONS` with a `level` of `'team'`, when the object gets passed to `notify()` the type of `level` is `string` which can't be assigned to the string union type `'player' | 'team' | 'sport' | 'all'`. Interestingly enough, if we pass the object inline, it works:
 
-```typescript
+```typescript {3}
 notify('James Harden traded to the Nets 😢', {
   sport: 'nba',
-  // highlight-next-line
   level: 'team',
 })
 // 👍🏾 No error
@@ -63,11 +60,10 @@ This works because the type of `level` is now the string literal `'team'` which 
 
 Now there are several ways we could fix this type error, including creating a `NotifyOptions` type which we would define as the type of the second parameter of `notify()`, as well as the type of `DEFAULT_NBA_OPTIONS`. But let's say we don't want to (or can't) do that. One way we can solve it is by using a [const assertion](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions):
 
-```typescript
+```typescript {4}
 const DEFAULT_NBA_OPTIONS = {
   sport: 'nba',
   level: 'team',
-  // highlight-next-line
 } as const
 
 notify('James Harden traded to the Nets 😢', DEFAULT_NBA_OPTIONS)
@@ -110,7 +106,7 @@ player.team = 'Brooklyn Nets' // 😢
 
 Another cool use of [const assertions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) is with [React custom Hooks](https://reactjs.org/docs/hooks-custom.html). Typically when a custom Hook returns 2 values, we return it using an array tuple (just like the [`useState` Hook](https://reactjs.org/docs/hooks-state.html)):
 
-```typescript
+```typescript {15}
 const useUserSearch = () => {
   const [username, setUsername] = useState('')
   const [user, setUser] = useState<User | null>(null)
@@ -125,7 +121,6 @@ const useUserSearch = () => {
 
   // use const assertion for the correct return type
   // User first, function second
-  // highlight-next-line
   return [user, setUsername] as const
 }
 ```

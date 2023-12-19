@@ -82,16 +82,14 @@ Let's jump right in!
 
 Placeholder props work much like regular props except they are React nodes (`PropTypes.node` or `ReactNode` in TypeScript).
 
-```js
+```js {5,8,19,21}
 import classNames from 'classnames'
 
 const Button = ({
   children,
-  // highlight-next-line
   endIcon,
   onClick,
   size = 'large',
-  // highlight-next-line
   startIcon,
   variant = 'primary',
 }) => {
@@ -103,10 +101,8 @@ const Button = ({
         'has-end-icon': !!endIcon,
       })}
     >
-      // highlight-next-line
       {startIcon}
       {children}
-      // highlight-next-line
       {endIcon}
     </button>
   )
@@ -115,7 +111,7 @@ const Button = ({
 
 **The placeholder props pattern allows the shared component to control its layout and any logic, but give some control to the parent for the display.** So for our `Button` component, the `startIcon` & `endIcon` props can be `<svg>` elements, `<img>` tags, or even other React components. `Button` doesn't know and it doesn't care. But it does still control the layout of the icons relative to the button contents.
 
-```js
+```js {15,25}
 import { useState } from 'react'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
@@ -130,7 +126,6 @@ const Pagination = ({ initialPage = 1 }) => {
           size="small"
           variant="secondary"
           onClick={() => setPage((curPage) => curPage - 1)}
-          // highlight-next-line
           startIcon={<ChevronLeftIcon />}
         >
           Previous
@@ -141,7 +136,6 @@ const Pagination = ({ initialPage = 1 }) => {
         size="small"
         variant="secondary"
         onClick={() => setPage((curPage) => curPage + 1)}
-        // highlight-next-line
         endIcon={<ChevronRightIcon />}
       >
         Next
@@ -163,29 +157,24 @@ Do we add an `isLink` prop as well as an `href` prop that only applies when `isL
 
 This is where the polymorphic component pattern comes in. It has a special prop (typically called `as` or `component`) that controls the root element of the shared component.
 
-```js
+```js {4,9,12,15,18}
 import classNames from 'classnames'
 
 const Button = ({
-  // highlight-next-line
   as: Component = 'button',
   children,
   onClick,
   size = 'large',
   variant = 'primary',
-  // highlight-next-line
   ...otherProps
 }) => {
   return (
-    // highlight-next-line
     <Component
       onClick={onClick}
       className={classNames(variant, size)}
-      // highlight-next-line
       {...otherProps}
     >
       {children}
-      // highlight-next-line
     </Component>
   )
 }
@@ -195,16 +184,14 @@ The `as` prop defaults to `'button'` so that it renders a `<button>` by default,
 
 > We rename the `as` prop to `Component` because **all React custom components must start with a capital letter.** If left the `as` variable name, React would assume its an HTML element and render `<as>` into the DOM.
 
-```js
+```js {6-7,16-17}
 const LinkPagination = ({ page = 1 }) => {
   return (
     <div>
       {page > 1 && (
         <Button
-          // highlight-start
           as="a"
           href={`/items/${page - 1}`}
-          // highlight-end
           size="small"
           variant="secondary"
         >
@@ -213,10 +200,8 @@ const LinkPagination = ({ page = 1 }) => {
       )}
       <span>Current page: {page}</span>
       <Button
-        // highlight-start
         as="a"
         href={`/items/${page + 1}`}
-        // highlight-end
         size="small"
         variant="secondary"
       >
@@ -231,7 +216,7 @@ So now instead of rendering `<button>` elements with the `Button` component, we 
 
 **The polymorphic component pattern comes in handy when we need flexibility on the rendered element.** For semantic HTML or accessibility reasons, we may need to change the root element. In fact, we could pass another React component as the `as` prop (such as the [`<Link>`](https://reactrouter.com/web/api/Link) from [`react-router`](https://reactrouter.com/web)).
 
-```js
+```js {8-9,18-19}
 import { Link } from 'react-router-dom'
 
 const RouterLinkPagination = ({ page = 1 }) => {
@@ -239,10 +224,8 @@ const RouterLinkPagination = ({ page = 1 }) => {
     <div>
       {page > 1 && (
         <Button
-          // highlight-start
           as={Link}
           to={`/items/${page - 1}`}
-          // highlight-end
           size="small"
           variant="secondary"
         >
@@ -251,10 +234,8 @@ const RouterLinkPagination = ({ page = 1 }) => {
       )}
       <span>Current page: {page}</span>
       <Button
-        // highlight-start
         as={Link}
         to={`/items/${page + 1}`}
-        // highlight-end
         size="small"
         variant="secondary"
       >
@@ -315,18 +296,16 @@ But after that, as the user clicks around, the `Pagination` component maintains 
 
 React teaches us that we need to [lift up the state](https://reactjs.org/docs/lifting-state-up.html) to the parent component so that the parent will now be responsible for maintaining the page state.
 
-```js
+```js {4,10}
 import { useState } from 'react'
 
 const Results = () => {
-  // highlight-next-line
   const [page, setPage] = useState(1)
 
   return (
     <div>
       {/* render search, sort & other UI components */}
       {/* render items */}
-      // highlight-next-line
       <Pagination page={page} onPageChange={setPage} />
     </div>
   )
@@ -337,17 +316,14 @@ Because the parent `Results` component is now in charge of the `page` state, the
 
 We implement the controlled components pattern when we enable `Pagination` to be either an uncontrolled or controlled component depending on what props the parent passes.
 
-```js
+```js {5-6,8-23}
 import { useState } from 'react'
 
 const Pagination = ({
   initialPage = 1,
-  // highlight-start
   page: controlledPage,
   onPageChange,
-  // highlight-end
 }) => {
-  // highlight-start
   const isControlled = controlledPage !== undefined
   const [pageState, setPage] = useState(initialPage)
 
@@ -364,7 +340,6 @@ const Pagination = ({
     // call `onPageChange` if it exists using optional chaining
     onPageChange?.(nextPage)
   }
-  // highlight-end
 
   return (
     <div>
@@ -406,7 +381,7 @@ The `Results` component needs the raw data array as a prop so that it can do all
 
 This situation is a prime candidate for a [render prop](https://ui.dev/react-render-props/).
 
-```js
+```js {42-42}
 import { useState, useMemo } from 'react'
 
 const Results = ({
@@ -448,9 +423,7 @@ const Results = ({
       <ViewToggle value={view} onChange={setView} />
 
       <div>
-        // highlight-start
         {filteredItems.map((item) => renderItem({ item, view }))}
-        // highlight-end
       </div>
 
       <Pagination
@@ -470,7 +443,7 @@ There's a lot of code, but really the highlighted part is all that matters. The 
 
 The `renderItem` prop is a function prop but it's not like our traditional callback function props like `onClick` or `onChange`. The `renderItem` prop returns UI to render. We call `renderItem` passing it an object with the `item` and the current `view`.
 
-```js
+```js {14-23}
 import { useState, useEffect } from 'react'
 import { loadProducts } from '../utils/products'
 import ProductGridItem from '../components/ProductGridItem'
@@ -484,7 +457,6 @@ const Page = () => {
   }, [])
 
   return (
-    // highlight-start
     <Results
       items={products}
       renderItem={({ item, view }) => {
@@ -495,7 +467,6 @@ const Page = () => {
         )
       }}
     />
-    // highlight-end
   )
 }
 ```
@@ -546,24 +517,20 @@ const Results = ({
 
 The `Results` component has `100%` control of how the `<Search>` component looks, where it's placed in the UI layout, and even if it exists. If we wanted to give visual and layout control to its parent component, we'd have to expose more props.
 
-```js
+```js {3-4,11-13}
 const Results = ({
   // other props...
-  // highlight-start
   searchLocation = 'top', // 'none' means hide
   searchProps,
-  // highlight-end
 }) => {
   // define state...
   // calculate filteredItems...
 
   return (
     <div>
-      // highlight-start
       {searchLocation === 'top' && (
         <Search query={filter} onChange={setFilter} {...searchProps} />
       )}
-      // highlight-end
       {/* other UI... */}
       //highlight-start
       {searchLocation === 'bottom' && (
@@ -579,7 +546,7 @@ We added `searchLocation` (`'top'`, `'bottom'` or `'none'`) to control the locat
 
 So instead of rendering our `<Results>` component with a lot of props...
 
-```jsx
+```jsx {12-21}
 <Results
   initialSort="ascending"
   initialPage={3}
@@ -591,7 +558,6 @@ So instead of rendering our `<Results>` component with a lot of props...
       <ProductListItem product={item} />
     )
   }}
-  // highlight-start
   searchLocation="bottom"
   searchProps={{
     startIcon: <SearchIcon />,
@@ -602,7 +568,6 @@ So instead of rendering our `<Results>` component with a lot of props...
     width: 'full',
   }}
   paginationLocation="both"
-  // highlight-end
 />
 ```
 

@@ -15,15 +15,13 @@ Back in October, I gave four options for dealing with [helper functions](/blog/h
 
 Let's quickly recap the `useEffect` Hook in React. By default it runs on every re-render:
 
-```js
+```js {4-6}
 const Example = () => {
   const [count, setCount] = useState(0)
 
-  // highlight-start
   useEffect(() => {
     document.title = `You clicked ${count} times`
   })
-  // highlight-end
 
   return (
     <div>
@@ -36,13 +34,12 @@ const Example = () => {
 
 However, we rarely want this functionality because it's likely that the effect will run more times than it really needs to. The `useEffect` hook takes a second parameter, a "dependencies" array, **that will only re-run the effect when the values within the array change across re-renders**. This allows us to optimize how many times the effect is run.
 
-```js
+```js {6}
 const Example = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     document.title = `You clicked ${count} times`
-    // highlight-next-line
   }, [count]) // Only re-run the effect if count changes
 
   return (
@@ -66,7 +63,7 @@ I've already discussed dealing with [helper functions](/blog/helper-functions-re
 
 In this first problem, let's say we have an object being passed in as a prop that we're also using in the dependencies list of `useEffect`.
 
-```js
+```js {9-10,12}
 import React, { useState, useEffect } from 'react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
@@ -75,12 +72,9 @@ const Team = ({ team }) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
-    // highlight-start
     if (team.active) {
       getPlayers(team.id).then(setPlayers)
-      // highlight-end
     }
-    // highlight-next-line
   }, [team])
 
   return <Players team={team} players={players} />
@@ -91,7 +85,7 @@ Ideally if the contents of the `team` prop are the same, the object reference wo
 
 However, in this flavor of the problem, we're only using a couple of properties on the `team` object. And they are properties that are primitives. So instead of having `useEffect` depend on the whole `team` object, it should only depend on the properties used within the effect.
 
-```js
+```js {12}
 import React, { useState, useEffect } from 'react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
@@ -103,7 +97,6 @@ const Team = ({ team }) => {
     if (team.active) {
       getPlayers(team.id).then(setPlayers)
     }
-    // highlight-next-line
   }, [team.id, team.active])
 
   return <Players team={team} players={players} />
@@ -114,14 +107,13 @@ Assuming that the `id` and `active` properties of the `team` object are primitiv
 
 This also would work if the `team` object was created within the component:
 
-```js
+```js {7}
 import React, { useState, useEffect } from 'react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
 
 const Team = ({ id, name, active }) => {
   // construct the object from props and/or state
-  // highlight-next-line
   const team = { id, name, active }
   const [players, setPlayers] = useState([])
 
@@ -143,20 +135,18 @@ Even though the `team` object is being recreated with every render of the `Team`
 
 So what happens if we take the last example, but instead of the effect using a couple of properties of the object, it needs the whole object (or array)?
 
-```js
+```js {7,12}
 import React, { useState, useEffect } from 'react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
 
 const Team = ({ id, name, active }) => {
   // construct the object from props/state
-  // highlight-next-line
   const team = { id, name, active }
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
     if (team.active) {
-      // highlight-next-line
       getPlayers(team).then(setPlayers)
     }
   }, [team])
@@ -179,7 +169,7 @@ of 'team' in its own useMemo() Hook.
 
 Before we look at ESLint's suggestion of using the `useMemo` Hook (that's Option 3), I want to try something potentially simpler. We can create the `team` object twice; one to pass to `<Players />` in the UI and one to use within `useEffect`:
 
-```js
+```js {11,16,18}
 import React, { useState, useEffect } from 'react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
@@ -190,16 +180,13 @@ const Team = ({ id, name, active }) => {
   useEffect(() => {
     // recreate the `team` object within `useEffect`
     // from props/state
-    // highlight-next-line
     const team = { id, name, active }
 
     if (team.active) {
       getPlayers(team).then(setPlayers)
     }
-    // highlight-next-line
   }, [id, name, active])
 
-  // highlight-next-line
   const team = { id, name, active }
 
   return <Players team={team} players={players} />
@@ -214,7 +201,7 @@ Now that the `team` object is created within `useEffect`, it'll only be created 
 
 However, if creating the object or array is expensive, then having to create it twice may actually be worse than running the effect too many times. In this case, we need to "cache" the object or array we've created so that it'll persist across renders when its data doesn't change. This process is called "memoization" and we can use the [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo) Hook to accomplish this.
 
-```js
+```js {9-13,20}
 import React, { useState, useEffect, useMemo } from 'react'
 import { createTeam } from '../utils'
 import { getPlayers } from '../api'
@@ -223,20 +210,17 @@ import Players from '../components/Players'
 const Team = ({ id, name, active }) => {
   // memoize calling `createTeam` because it's
   // an expensive operation
-  // highlight-start
   const team = useMemo(() => createTeam({ id, name, active }), [
     id,
     name,
     active,
   ])
-  // highlight-end
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
     if (team.active) {
       getPlayers(team).then(setPlayers)
     }
-    // highlight-next-line
   }, [team])
 
   return <Players team={team} players={players} />
@@ -249,22 +233,19 @@ Assuming that the `createTeam()` helper is expensive, we want to call it as few 
 
 What happens when we're in the worst of both worlds? This is the situation where the object or array is passed in as a prop so we cannot trust its referential equality, and the effect needs to use the entire object.
 
-```js
+```js {6,11,13}
 import React, { useState, useEffect } from 'react'
 import { createTeam } from '../utils'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
 
-// highlight-next-line
 const Team = ({ team }) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
     if (team.active) {
-      // highlight-next-line
       getPlayers(team).then(setPlayers)
     }
-    // highlight-next-line
   }, [team])
 
   return <Players team={team} players={players} />
@@ -277,29 +258,24 @@ We cannot use `useMemo` from Option 3 because we don't know for certain what are
 
 Instead of using the `useMemo` Hook, we can (ab)use the `useRef` Hook.
 
-```js
+```js {2,8,10-12,18}
 import React, { useState, useEffect, useRef } from 'react'
-// highlight-next-line
 import isDeepEqual from 'fast-deep-equal/react'
 import { getPlayers } from '../api'
 import Players from '../components/Players'
 
 const Team = ({ team }) => {
   const [players, setPlayers] = useState([])
-  // highlight-next-line
   const teamRef = useRef(team)
 
-  // highlight-start
   if (!isDeepEqual(teamRef.current, team)) {
     teamRef.current = team
   }
-  // highlight-end
 
   useEffect(() => {
     if (team.active) {
       getPlayers(team).then(setPlayers)
     }
-    // highlight-next-line
   }, [teamRef.current])
 
   return <Players team={team} players={players} />

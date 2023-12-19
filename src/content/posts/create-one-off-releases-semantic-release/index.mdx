@@ -59,10 +59,9 @@ jobs:
 
 However, sadly the default configuration [still uses `master` as the default branch](https://github.com/semantic-release/semantic-release/issues/1581). Since all of my repos use `main` as the default branch, I now need a `release.config.js` to configure the [supported branches](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches).
 
-```js
+```js {3}
 module.exports = {
   branches: [
-    // highlight-next-line
     'main',
     'next',
     'next-major',
@@ -76,7 +75,7 @@ module.exports = {
 
 And because all of my libs are written in TypeScript, I also have a build step before releasing the pacakge. The build step allows the project to transpile TypeScript into vanilla JavaScript and auto-generate TypeScript declaration files (`*.d.ts`). As a result, **I need to specifically configure the [`@semantic-release/npm` plugin](https://github.com/semantic-release/npm) to specify the build directory (typically `lib/` for me)**. But to configure the plugin, I also must include all of the [plugins](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins) used by default.
 
-```js
+```js {19-21}
 module.exports = {
   branches: [
     'main',
@@ -95,11 +94,9 @@ module.exports = {
     '@semantic-release/release-notes-generator',
 
     // publishes the npm package from the specified folder
-    // highlight-start
     ['@semantic-release/npm', {
       pkgRoot: './lib'
     }]
-    // highlight-end
 
     // Publishes changelog as a GitHub release and
     // comments on released Pull Requests & Issues
@@ -195,7 +192,7 @@ This approach worked okay. The `alpha` branch ended up having a lot of trial and
 
 We need to isolate the dev branches into their releases. We need something akin to running `npm pack` locally, but with the consistency that running `semantic-release` in CI provides. **So what we can do is add another pre-release branch, but use a pattern for multiple branch support.**
 
-```js
+```js {10-12}
 module.exports = {
   branches: [
     'main',
@@ -205,11 +202,9 @@ module.exports = {
     { name: 'beta', prerelease: true },
     { name: 'alpha', prerelease: true },
 
-    // highlight-start
     // Any branch starting with `test-` will be auto-released
     // as a pre-release (e.g. `1.3.0-test-add-cool-new-feature.1`)
     { name: 'test-*' prerelease: true},
-    // highlight-end
   ],
 
   plugins: [

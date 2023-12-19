@@ -115,11 +115,10 @@ When the "call but ignore" workaround doesn't work, we can use the "renderless" 
 
 So for our `useClickAway` Hook, we can create a `ClickAway` component that renders nothing, and we then conditionally render it:
 
-```js
+```js {4}
 const ClickAway = ({ ref, onClickAway }) => {
   useClickAway(ref, onClickAway)
 
-  // highlight-next-line
   return null
 }
 
@@ -150,11 +149,10 @@ Now, instead of trying to conditionally call the `useClickAway` Hook, we're cond
 
 To conditionally call the `useTitle` Hook, we can take a similar approach:
 
-```js
+```js {4}
 const PageTitle = ({ title }) => {
   useTitle(title)
 
-  // highlight-next-line
   return null
 }
 
@@ -175,11 +173,10 @@ How about one more example before we wrap up? Both the `useClickAway` and `useTi
 
 Let's say we're using the [`useWindowScroll`](https://github.com/streamich/react-use/blob/master/docs/useWindowScroll.md) Hook to display a "back to top" button if the user has scrolled down the page enough. And like the others, this functionality is conditional based on a prop. We'll have to turn our "renderless" component wrapper into a component with [render prop](https://ui.dev/react-render-props/):
 
-```js
+```js {4}
 const WindowScroll = ({ children }) => {
   const { x, y } = useWindowScroll()
 
-  // highlight-next-line
   return <>{children({ x, y })}</>
 }
 

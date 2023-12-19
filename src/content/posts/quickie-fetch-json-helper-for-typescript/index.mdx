@@ -13,7 +13,7 @@ At work and for my personal projects I use the native browser [Fetch API](https:
 
 So with `window.fetch` this would look something like:
 
-```typescript
+```typescript {21}
 interface ResponseData {
   data: {
     id: number
@@ -34,7 +34,6 @@ interface ResponseData {
 }
 
 window
-  // highlight-next-line
   .fetch<ResponseData>('https://www.balldontlie.io/api/v1/teams')
   .then((resp) => resp.json())
   .then((respData) => {
@@ -68,8 +67,7 @@ fetchJson<ResponseData>('https://www.balldontlie.io/api/v1/teams').then(
 
 Pretty sweet huh? 🎉 Let's break this down line by line.
 
-```typescript
-// highlight-next-line
+```typescript {1}
 type FetchParams = Parameters<typeof window.fetch>
 
 // type FetchParams = [
@@ -80,8 +78,7 @@ type FetchParams = Parameters<typeof window.fetch>
 
 Using the [`Parameters<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype) generic utility type, we grab the two parameters of `window.fetch` as a 2-element array/tuple type. Notice that the second element, `init`, is optional.
 
-```typescript
-// highlight-next-line
+```typescript {1}
 const fetchJson = <T>(...params: FetchParams): Promise<T> => {
   return window.fetch(...params).then((resp) => resp.json() as Promise<T>)
 }
@@ -89,9 +86,8 @@ const fetchJson = <T>(...params: FetchParams): Promise<T> => {
 
 We then define `fetchJson` as a generic function that will accept the exact same parameters as `window.fetch` (`FetchParams`). **So it will look exactly like `window.fetch` except it will return a `Promise` of the expected return data type instead of `any`.** This works because using the rest operator makes `...params` an array [rest parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). And because `FetchParams` is an array type, the types match.
 
-```typescript
+```typescript {2}
 const fetchJson = <T>(...params: FetchParams): Promise<T> => {
-  // highlight-next-line
   return window.fetch(...params).then((resp) => resp.json() as Promise<T>)
 }
 ```
@@ -102,8 +98,7 @@ The helper also does the work of transforming the response to JSON. **This is wh
 
 The `fetchJson` call does exactly what the name implies; it fetches JSON data. That's why it can do the `resp.json()` transformation on our behalf. We could have a wrapper that just returned `resp`, yet when we called `resp.json()` ourselves the type was `T`. But that would require more type sophistication that I don't want to get into. Maybe later. 😄
 
-```typescript
-// highlight-next-line
+```typescript {1}
 fetchJson<ResponseData>('https://www.balldontlie.io/api/v1/teams').then(
   (respData) => {
     // here `respData` is of type `ResponseData`

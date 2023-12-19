@@ -58,19 +58,18 @@ const price = Number.parseFloat(value)
 
 However back in the day, before the movement started to stop writing clever code, I would use the [unary plus (+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) operator to coerce a string value to a number.
 
-```js
+```js {5}
 const value = document.getElementById('price-field').value
 // '123.45'
 
 // clever way to parse a number! 🤓
-// highlight-next-line
 const price = +value
 // 123.45
 ```
 
 How exactly does that work? Well, the unary plus operator works just like the [unary negation (-)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation) that will negate a value (coercing it to a number first if necessary). We've likely negated a value before.
 
-```js
+```js {9}
 const value = document.getElementById('price-field').value
 // '123.45'
 
@@ -79,7 +78,6 @@ const price = +value
 // 123.45
 
 // similar way to negate a number...
-// highlight-next-line
 const negativePrice = -value
 // -123.45
 ```
@@ -114,7 +112,7 @@ const trophylessTeams = teams.slice(2)
 
 Well with [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) on arrays, we can combine those assignments into a single statement.
 
-```js
+```js {10}
 const teams = [
   'Houston Rockets',
   'Los Angeles Lakers',
@@ -124,7 +122,6 @@ const teams = [
 ]
 
 // grab all values at once! 😎
-// highlight-next-line
 const [firstTeam, secondTeam, ...trophylessTeams] = teams
 // firstTeam - Houston Rockets
 // secondTeam - Los Angeles Lakers
@@ -133,12 +130,11 @@ const [firstTeam, secondTeam, ...trophylessTeams] = teams
 
 A fun trick, should you ever need it, is that you can also use destructuring assignment with arrays to swap two values without needing a temporary variable.
 
-```js
+```js {5}
 let onTheRise = 'Phoenix Suns'
 let trendingDown = 'Houston Rockets'
 
 // swap values using array destructuring 🤓
-// highlight-next-line
 ;[onTheRise, trendingDown] = [trendingDown, onTheRise]
 // onTheRise - 'Houston Rockets'
 // trendingDown - 'Phoenix Suns'
@@ -148,7 +144,7 @@ let trendingDown = 'Houston Rockets'
 
 Destructuring assignment also works with objects, which is when I use it most. It allows us to directly assign into variables from properties in the object.
 
-```js
+```js {9}
 const teamInfo = {
   name: 'Houston Rockets',
   city: 'Houston',
@@ -157,7 +153,6 @@ const teamInfo = {
 }
 
 // grab all values at once! 😎
-// highlight-next-line
 const { name, numTrophies, bestPlayer } = teamInfo
 // name - 'Houston Rockets'
 // numTrophies - 2
@@ -200,10 +195,9 @@ console.log(allTeams.length)
 
 Instead, we can use the [spread operator (`...`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to clone and push all in one statement.
 
-```js
+```js {3}
 const addLoserTeams = (teams) => {
   // shallow clone and add new items in one step w/ spread operator 🙌🏾
-  // highlight-next-line
   return [...teams, 'Phoenix Suns', 'Denver Nuggets', 'Utah Jazz']
 }
 
@@ -246,10 +240,9 @@ console.log(Object.keys(teamInfoWithTimestamp).length)
 
 ...we can use the spread operator.
 
-```js
+```js {3}
 const addTimestamp = (teamInfo) => {
   // shallow clone and add `timestamp` w/ spread operator 🙌🏾
-  // highlight-next-line
   return { ...teamInfo, timestamp: Date.now() }
 }
 
@@ -299,7 +292,7 @@ console.log(Object.keys(teamInfo))
 
 Although the conditional evaluates to `true` and we do log the message, the `city` property isn't truly gone. It still shows up in [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) and any other function that enumerates over the entries of the object. Instead, we can use the [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator.
 
-```js
+```js {9}
 const teamInfo = {
   name: 'Houston Rockets',
   city: 'Houston',
@@ -308,7 +301,6 @@ const teamInfo = {
 }
 
 // remove the 'city' property for real
-// highlight-next-line
 delete teamInfo.city
 
 if (!teamInfo.city) {
@@ -372,7 +364,7 @@ if (Object.hasOwnProperty(teamInfo, 'numTrophies')) {
 
 Both messages now log thanks to `Object.hasOwnProperty()`. The "own" part doesn't matter for a simple object like `teamInfo`. However we can shorten up the code using the [`in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) operator.
 
-```js
+```js {9,13}
 const teamInfo = {
   name: 'Utah Jazz',
   city: 'Salt Lake City',
@@ -381,12 +373,10 @@ const teamInfo = {
 }
 
 // `in` is nice & succinct 👍🏾👍🏾
-// highlight-next-line
 if ('city' in teamInfo) {
   console.log('"city" property exists!')
 }
 
-// highlight-next-line
 if ('numTrophies' in teamInfo) {
   console.log('"numTrophies" property exists!')
 }
@@ -396,7 +386,7 @@ The `in` operator returns `true` if the specified property is in the specified o
 
 We're probably most familiar using the `in` operator with [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in).
 
-```js
+```js {9}
 const teamInfo = {
   name: 'Utah Jazz',
   city: 'Salt Lake City',
@@ -405,7 +395,6 @@ const teamInfo = {
 }
 
 // `in` also is used w/ `for-in`
-// highlight-next-line
 for (const propertyName in teamInfo) {
   // log each property name/value combo
   console.log(propertyName, teamInfo[property])
@@ -456,7 +445,7 @@ const championshipPlayers = teamInfo.players && teamInfo.players['94-95']
 
 It's nice that it's a single statement, but it's still a bit verbose. And it can get way more verbose if the object is deeply nested with potential nullish values all the way down. Shortening this syntax is exactly why the [optional chaining (`?.`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator was added to JavaScript.
 
-```js
+```js {8}
 const teamInfo = {
   name: 'Houston Rockets',
   city: 'Houston',
@@ -464,7 +453,6 @@ const teamInfo = {
   bestPlayer: 'Hakeem Olajuwon',
 }
 // use optional chaining to check concisely! 🎉
-// highlight-next-line
 const championshipPlayers = teamInfo.players?.['94-95']
 
 // championshipPlayers - `undefined`
@@ -472,7 +460,7 @@ const championshipPlayers = teamInfo.players?.['94-95']
 
 The optional chaining operator also works with calling a function that may not exist, although the syntax is a bit funky.
 
-```js
+```js {8}
 const teamInfo = {
   name: 'Houston Rockets',
   city: 'Houston',
@@ -480,7 +468,6 @@ const teamInfo = {
   bestPlayer: 'Hakeem Olajuwon',
 }
 // function syntax is a bit funky 😜
-// highlight-next-line
 teamInfo.update?.()
 ```
 
@@ -503,10 +490,9 @@ However, if the variable can be a falsy value (like `false` or `0`), we would st
 
 If we need to preserve falsy values and only want to default on nullish values, we can use the [nullish coalescing (`??`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) operator instead.
 
-```js
+```js {3}
 // will only default when `inputValue` is nullish
 // (`null` or `undefined`) 😁
-// highlight-next-line
 const ratingFilter = inputValue ?? 'PG'
 ```
 
@@ -514,7 +500,7 @@ Now `ratingFilter` will only default to `'PG'` if `inputValue` is `null` or `und
 
 The nullish coalescing operator works nicely with the optional chaining operator as well.
 
-```js
+```js {8}
 const teamInfo = {
   name: 'Houston Rockets',
   city: 'Houston',
@@ -522,7 +508,6 @@ const teamInfo = {
   bestPlayer: 'Hakeem Olajuwon',
 }
 // optional chaining + nullish coalescing FTW! 🤗
-// highlight-next-line
 const championshipPlayers = teamInfo.players?.['94-95'] ?? []
 
 // championshipPlayers - `[]`

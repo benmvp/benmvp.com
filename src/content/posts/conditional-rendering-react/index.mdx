@@ -38,21 +38,18 @@ So let's look at all the various ways we can accomplish conditional Rendering in
 
 We can store JSX in variables. When we want to conditionally render some content, we can conditionally assign values to variables and then render them.
 
-```js
+```js {2-6,12}
 const Page = ({ results }) => {
-  // highlight-start
   let resultsUi
 
   if (results.length) {
     resultsUi = <Items items={results} />
   }
-  // highlight-end
 
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {resultsUi}
     </main>
   )
@@ -63,21 +60,18 @@ We initialize `resultsUi` to `undefined`. If there are no items in `results`, th
 
 And what if we also want to render some UI when there are no results?
 
-```js
+```js {2-6,12}
 const Page = ({ results }) => {
-  // highlight-start
   let resultsUi = <p>There are no results to view.</p>
 
   if (results.length) {
     resultsUi = <Items items={results} />
   }
-  // highlight-end
 
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {resultsUi}
     </main>
   )
@@ -94,13 +88,12 @@ We can apply the same approach even if there are multiple conditions. We can use
 
 It's more common, however, to do the conditional rendering within the context of the JSX. And probably the most common inline approach is using the logical `&&`.
 
-```js
+```js {6}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {results.length > 0 && <Items items={results} />}
     </main>
   )
@@ -113,13 +106,12 @@ So here if there are no items in `results`, then the expression returns `false`.
 
 I held out for several years using this approach for a couple of reasons. First, there's a subtle gotcha. If we wrote the expression excluding the `> 0`:
 
-```js
+```js {6}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {results.length && <Items items={results} />}
     </main>
   )
@@ -136,19 +128,17 @@ The other reason is because ouf formatting. In this example, the conditional is 
 
 The logical `&&` approach works when we only need to render something when the inline conditional is `true`. We can use a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) when we want to use inline conditional rendering to render something for both the `false` and `true` conditions.
 
-```js
+```js {6-10}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-start
       {results.length ? (
         <Items items={results} />
       ) : (
         <p>There are no results to view.</p>
       )}
-      // highlight-end
     </main>
   )
 }
@@ -176,15 +166,13 @@ const Page = ({ results }) => {
 
 Another alternative is to push the conditional down into the rendered component.
 
-```js
+```js {4-6,16}
 const Items = ({ items }) => {
   // if there are no items, prevent itself from rendering
   // by returning `null` early
-  // highlight-start
   if (!items.length) {
     return null
   }
-  // highlight-end
 
   // render out the items
 }
@@ -194,7 +182,6 @@ const Page = ({ results }) => {
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       <Items items={results} />
     </main>
   )
@@ -207,9 +194,8 @@ So now, we always render the `<Items />` component. It becomes responsible for n
 
 If there are a lot of calculations needed to construct a condition, it would be nice to have them grouped together as well as located close to the render. I've used helper functions for this.
 
-```js
+```js {2-8,14}
 const Page = ({ results }) => {
-  // highlight-start
   const renderResults = () => {
     if (!results.length) {
       return <p>There are no results to view.</p>
@@ -217,13 +203,11 @@ const Page = ({ results }) => {
 
     return <Items items={results} />
   }
-  // highlight-end
 
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {renderResults()}
     </main>
   )
@@ -238,13 +222,12 @@ This approach puts the calculations, condition and UI rendering together. It's k
 
 However, it does separate the final component rendering. There is an inline option for using helper functions.
 
-```js
+```js {6-12}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-start
       {(() => {
         if (!results.length) {
           return <p>There are no results to view.</p>
@@ -252,7 +235,6 @@ const Page = ({ results }) => {
 
         return <Items items={results} />
       })()}
-      // highlight-end
     </main>
   )
 }
@@ -266,17 +248,15 @@ Honestly, one of the 5 options above should suffice. But I did want to share an 
 
 The [`jsx-control-statements`](https://github.com/AlexGilleran/jsx-control-statements) Babel plugin allows us to use component syntax to write conditions.
 
-```js
+```js {6-8}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-start
       <If condition={results.length}>
         <Items items={results} />
       </If>
-      // highlight-end
     </main>
   )
 }
@@ -284,13 +264,12 @@ const Page = ({ results }) => {
 
 It's a [Babel plugin](https://babeljs.io/docs/en/plugins/) so it transforms our code. It doesn't execute at runtime. In fact, it transforms our code to a ternary!
 
-```js
+```js {6}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-next-line
       {results.length ? <Items items={results} /> : null}
     </main>
   )
@@ -299,13 +278,12 @@ const Page = ({ results }) => {
 
 If we have multiple conditions, there are the `<Choose>`, `<When>`, and `<Otherwise>` components.
 
-```js
+```js {6-13}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-start
       <Choose>
         <When condition={results.length}>
           <Items items={results} />
@@ -314,7 +292,6 @@ const Page = ({ results }) => {
           <p>There are no results to view.</p>
         </Otherwise>
       </Choose>
-      // highlight-end
     </main>
   )
 }
@@ -322,19 +299,17 @@ const Page = ({ results }) => {
 
 This code will be transformed into a ternary as well.
 
-```js
+```js {6-10}
 const Page = ({ results }) => {
   return (
     <main>
       <h1>Your results</h1>
       <p>View your results below</p>
-      // highlight-start
       {results.length ? (
         <Items items={results} />
       ) : (
         <p>There are no results to view.</p>
       )}
-      // highlight-end
     </main>
   )
 }

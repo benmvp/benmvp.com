@@ -11,7 +11,7 @@ heroCredit: 'Photo by [TUAN ANH TRAN](https://unsplash.com/@rafaeltran)'
 
 One feature I really appreciate about TypeScript is [nullable type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#nullable-types).
 
-```typescript
+```typescript {9}
 const getProduct = (id: number): Product | undefined => {
   // return a `Product` if found
   // otherwise `undefined`
@@ -20,7 +20,6 @@ const getProduct = (id: number): Product | undefined => {
 const product = getProduct(123)
 // the type of `product` is `Product | undefined`
 
-// highlight-next-line
 if (product) {
   // in here the type of `product` is now only `Product` 👍🏾
   console.log(product.price)
@@ -48,11 +47,10 @@ In this case, TypeScript wasn't smart enough to figure out what we were doing. T
 
 **So we need to give TypeScript more info on exactly what we're doing.** A quick and dirty solution is to assert the type at the end.
 
-```typescript
+```typescript {4}
 const productIds = [123, 456, 789]
 const products = productIds
   .map(getProduct)
-  // highlight-next-line
   .filter((item) => item) as Product[] // 😢
 ```
 
@@ -76,11 +74,10 @@ The key bit is the `item is Product` return type of the `isProduct` function. Th
 
 FYI, if we prefer the inline `.filter()`, we can use the type guard inline.
 
-```typescript
+```typescript {4}
 const productIds = [123, 456, 789]
 const products = productIds
   .map(getProduct)
-  // highlight-next-line
   .filter((item): item is Product => !!item)
 
 // `products` is still `Product[]` 🙌🏾

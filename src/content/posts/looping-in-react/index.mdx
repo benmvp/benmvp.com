@@ -48,17 +48,15 @@ The most common way to transform an array of data to a JSX array is using [`.map
 
 Many developers, instead of assigning the result of `.map` to a variable, prefer to use it inline.
 
-```js
+```js {4-8}
 const Teams = ({ teams }) => {
   return (
     <ul>
-      // highlight-start
       {teams.map((team) => (
         <li key={team.name}>
           {team.name} ({team.abbreviation})
         </li>
       ))}
-      // highlight-end
     </ul>
   )
 }
@@ -66,11 +64,10 @@ const Teams = ({ teams }) => {
 
 It works the exact same (and still needs the `key` prop), but it's in the context of the other JSX which a lot of folks prefer. It's similar to how other templating languages work as well. The advantage of using `.map` is that it allows for inlining. Other methods of transforming a list of data to list of JSX elements require the use of a variable.
 
-```js
+```js {4-10}
 const Teams = ({ teams }) => {
   const teamsUi = []
 
-  // highlight-start
   for (let team of teams) {
     teamsUi.push(
       <li key={team.name}>
@@ -78,7 +75,6 @@ const Teams = ({ teams }) => {
       </li>,
     )
   }
-  // highlight-end
 
   return <ul>{teamsUi}</ul>
 }
@@ -86,11 +82,10 @@ const Teams = ({ teams }) => {
 
 Because we need to define a variable that we can `.push` into, our code is no longer a single expression that can be rendered within the JSX. So it needs to be separate. I suppose we could wrap the code in an [immediately-invoked function expression](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (aka IIFE) to make it inline.
 
-```js
+```js {4-16}
 const Teams = ({ teams }) => {
   return (
     <ul>
-      // highlight-start
       {(() => {
         const teamsUi = []
 
@@ -104,7 +99,6 @@ const Teams = ({ teams }) => {
 
         return teamsUi
       })()}
-      // highlight-end
     </ul>
   )
 }
@@ -114,19 +108,16 @@ But in my opinion that's taking things a bit too far. 😂 Plus JavaScript devel
 
 JSX only accepting an array of JSX elements for rendering lists enables us to do all sorts of JavaScripting to get to that final list of JSX elements.
 
-```js
+```js {5,8,10}
 const Teams = ({ teamLookup }) => {
   // teamLookup is an object of `teamId` (key) to `team` (value)
 
   // first convert object into an array of [key, value] arrays
-  // highlight-next-line
   const winningTeamsUi = Object.entries(teamLookup)
     // next filter out teams w/o championships
     // (Jazz, Suns, Nuggets, other sad franchises)
-    // highlight-next-line
     .filter(([, team]) => team.championships > 0)
     // finally map to JSX elements
-    // highlight-next-line
     .map(([teamId, team]) => (
       <li key={teamId}>
         {team.name} ({team.abbreviation})
@@ -145,16 +136,14 @@ While it's definitely different, it's nice to be able to stay in JavaScript the 
 
 So there is another alternative to using JavaScript for looping in JSX: using `<For>` from [`babel-plugin-jsx-control-statements`](https://github.com/AlexGilleran/jsx-control-statements).
 
-```js
+```js {4,8}
 const Teams = ({ teams }) => {
   return (
     <ul>
-      // highlight-next-line
       <For of={teams} each="team">
         <li key={team.name}>
           {team.name} ({team.abbreviation})
         </li>
-        // highlight-next-line
       </For>
     </ul>
   )
@@ -169,15 +158,13 @@ This plugin was popular early in the lifetime of React when developers were stil
 
 Before we wrap, what happens if we don't have an array of data, but still want to loop? Like we have a count and want to render a list of items up to that count. We can use a `for` loop directly.
 
-```js
+```js {4-6}
 const Items = ({ maxItems }) => {
   const itemsUi = []
 
-  // highlight-start
   for (let i = 0; i < maxItems; i++) {
     itemsUi.push(<li key={i}>Item #{i + 1}</li>)
   }
-  // highlight-end
 
   return <ul>{itemsUi}</ul>
 }
@@ -185,15 +172,13 @@ const Items = ({ maxItems }) => {
 
 Here we use the `for` loop to iterate up to `maxItems`, each time pushing a new `<li>` element to the array. But in the spirit of functional-style programming, I prefer to create an array of numbers up to `maxItems`.
 
-```js
+```js {2-6}
 const Items = ({ maxItems }) => {
-  // highlight-start
   // first create an array with `maxItems` elements
   // e.g: [1, 2, 3, ..., maxItems]
   const itemsUi = Array.from({ length: maxItems }, (_, index) => index + 1)
     // then map over the numbers to create array of JSX elements
     .map((num) => <li key={num}>Item #{num}</li>)
-  // highlight-end
 
   return <ul>{itemsUi}</ul>
 }

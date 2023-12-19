@@ -28,14 +28,13 @@ Typically this won't break our apps because React will just ignore our state upd
 
 First lets look at a sample "app" that causes this error.
 
-```js
+```js {7,24}
 import { useState, useEffect } from 'react'
 
 const Results = () => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    // highlight-next-line
     fetchItems().then(setItems)
   }, [])
 
@@ -53,7 +52,6 @@ const App = () => {
 
   return (
     <div>
-      // highlight-next-line
       {shown && <Results />}
       <button onClick={() => setShown((curShown) => !curShown)}>
         {shown ? 'Hide' : 'Show'}
@@ -77,28 +75,24 @@ Vanilla [JavaScript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
 This can be done inline in the same `useEffect` call in which we're making our `fetch` request.
 
-```js
+```js {7,10,15-17}
 import { useState, useEffect } from 'react'
 
 const Results = () => {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    // highlight-next-line
     let mounted = true
 
     fetchItems().then((newItems) => {
-      // highlight-next-line
       if (mounted) {
         setItems(newItems)
       }
     })
 
-    // highlight-start
     return () => {
       mounted = false
     }
-    // highlight-end
   }, [])
 
   // render UI
@@ -113,15 +107,13 @@ This local variable approach only works within a single `useEffect` call without
 
 If we need to track the mounted state in multiple `useEffect` calls within a component, we can use a [ref](https://reactjs.org/docs/hooks-reference.html#useref) to maintain the mounted state across component re-renders.
 
-```js
+```js {5,7-14,18}
 import { useState, useEffect, useRef } from 'react'
 
 const Results = () => {
   const [items, setItems] = useState([])
-  // highlight-next-line
   const mountedRef = useRef(false)
 
-  // highlight-start
   // effect just for tracking mounted state
   useEffect(() => {
     mountedRef.current = true
@@ -130,11 +122,9 @@ const Results = () => {
       mountedRef.current = false
     }
   }, [])
-  // highlight-end
 
   useEffect(() => {
     fetchItems().then((newItems) => {
-      // highlight-next-line
       if (mountedRef.current) {
         setItems(newItems)
       }
@@ -158,14 +148,13 @@ The first `useEffect` call maintains the state with the `mountedRef`. It's set t
 
 If we need to track the mounted state in a number of different components, this is the perfect case to create a [custom Hook](https://reactjs.org/docs/hooks-custom.html). We basically want to move the logic from Option 2 into a custom Hook.
 
-```js
+```js {7,17,22,26,30}
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 // returns a function that when called will
 // return `true` if the component is mounted
 const useMountedState = () => {
   const mountedRef = useRef(false)
-  // highlight-next-line
   const isMounted = useCallback(() => mountedRef.current, [])
 
   useEffect(() => {
@@ -176,23 +165,19 @@ const useMountedState = () => {
     }
   }, [])
 
-  // highlight-next-line
   return isMounted
 }
 
 const Results = () => {
   const [items, setItems] = useState([])
-  // highlight-next-line
   const isMounted = useMountedState()
 
   useEffect(() => {
     fetchItems().then((newItems) => {
-      // highlight-next-line
       if (isMounted()) {
         setItems(newItems)
       }
     })
-    // highlight-next-line
   }, [isMounted])
 
   // render UI
@@ -211,10 +196,9 @@ By the way, the awesome [`react-use`](https://github.com/streamich/react-use) pa
 
 The previous three approaches provided us with a mounted state to do whatever we wished. But we were only using it in conjunction with making an async fetch request. So what if we created a custom Hook that specifically was for restricting async actions to the mounted state?
 
-```js
+```js {3-11,18,21-22}
 const useSafeAsync = () => {
   const isMounted = useMountedState()
-  // highlight-start
   const safeAsync = useCallback((promise) => {
     return new Promise((resolve) => {
       promise.then((value) => {
@@ -224,21 +208,17 @@ const useSafeAsync = () => {
       })
     })
   })
-  // highlight-end
 
   return safeAsync
 }
 
 const Results = () => {
   const [items, setItems] = useState([])
-  // highlight-next-line
   const safeAsync = useSafeAsync()
 
   useEffect(() => {
-    // highlight-start
     safeAsync(fetchItems()).then(setItems)
   }, [safeAsync])
-  // highlight-end
 
   // render UI
 }
@@ -258,7 +238,7 @@ By the way, this warning can also happen if we update the state in an event list
 
 But this is precisely what the clean-up return function of `useEffect` is for. **Always remember to remove event handlers you create.**
 
-```js
+```js {9,12}
 const Example = () => {
   const [width, setWidth] = useState(0)
 
@@ -267,11 +247,9 @@ const Example = () => {
       setWidth(document.body.clientWidth)
     }
 
-    // highlight-next-line
     window.addEventListener('resize', onResize)
 
     return () => {
-      // highlight-next-line
       window.removeEventListener('resize', onResize)
     }
   }, [])

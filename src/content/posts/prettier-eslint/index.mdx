@@ -47,12 +47,11 @@ While Prettier is highly opinionated, it does allow for some configuration insid
 
 Lastly, in our `.eslintrc.json`, we extend the recommended configuration:
 
-```json
+```json {5}
 {
   "extends": [
     "react-app",
     "react-app/jest",
-    // highlight-next-line
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
     "prettier/react"
@@ -64,16 +63,14 @@ The `plugin:prettier/recommended` extends the `eslint-config-prettier` which tur
 
 When developing in React, we use [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) for React-specific ESLint rules. There are some rules within it that also conflict with Prettier, so `eslint-config-prettier` provides an additional React-specific config to extend from that removes those conflicting rules.
 
-```json
+```json {6-7}
 {
   "extends": [
     "react-app",
     "react-app/jest",
     "plugin:prettier/recommended",
-    // highlight-start
     "prettier/@typescript-eslint",
     "prettier/react"
-    // highlight-end
   ]
 }
 ```

@@ -23,7 +23,7 @@ Let's jump in!
 
 Sometimes we only want to run an effect the very first time the component mounts. In my experience, the majority of these times have been firing off a tracking event. Usually I'll maintain a `hasSent` local variable that I flip from `false` to `true` after I've sent it the first time. But instead, we can use a `useInitialMount` custom Hook.
 
-```js
+```js {25}
 import { useRef, useEffect } from 'react'
 
 const useInitialMount = () => {
@@ -48,7 +48,6 @@ const useInitialMount = () => {
 }
 
 const Page = ({ pageName, items }) => {
-  // highlight-next-line
   const isInitialMount = useInitialMount()
 
   useEffect(() => {
@@ -86,7 +85,7 @@ However, the FAQ code above has a potential gotcha in that if the component re-r
 
 We likely want a `usePrevious` that only updates the previous value if it differs from the new value.
 
-```js
+```js {8,30}
 import { useRef, useState, useEffect } from 'react'
 
 const usePrevious = (value) => {
@@ -94,7 +93,6 @@ const usePrevious = (value) => {
   // current values
   const prevRef = useRef()
   const curRef = useRef(value)
-  // highlight-next-line
   const isInitialMount = useInitialMount()
 
   // after the initial render, if the value passed in
@@ -117,7 +115,6 @@ const Example = () => {
 
   // use `usePrevious` to keep track of the `count`
   // from the last time it changed
-  // highlight-next-line
   const prevCount = usePrevious(count)
 
   // update `date` every 1 sec to have another state updating
@@ -144,13 +141,11 @@ Did you catch how we're using the `useInitialMount` Hook here in `usePrevious`? 
 
 And in TypeScript, the code is more or less the same, except we use [generics](https://www.typescriptlang.org/docs/handbook/generics.html) so that the type of `curValue` can be arbitrary, but enforce that the return value has to be the same type.
 
-```typescript
+```typescript {3-4}
 import { useRef } from 'react'
 
-// highlight-start
 const usePrevious = <T>(value: T): T | undefined => {
   const prevRef = useRef<T>()
-  // highlight-end
   const curRef = useRef(value)
   const isInitialMount = useInitialMount()
 
@@ -173,14 +168,13 @@ Sometimes in React we need to create a unique ID to use an `id` for DOM elements
 
 The trick is that we don't want to generate a new ID for every render. Once we've generated an ID for the component, we want it to remain the same. Our good ol' friend [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) will come to the rescue again, and we can wrap up the logic into something easily reusable.
 
-```js
+```js {7,21}
 import { useRef } from 'react'
 
 let GLOBAL_ID = 0
 
 const useUniqueId = () => {
   const idRef = useRef('')
-  // highlight-next-line
   const isInitialMount = useInitialMount()
 
   // generate the ID for the first render
@@ -195,7 +189,6 @@ const useUniqueId = () => {
 }
 
 const NavMenu = ({ items }) => {
-  // highlight-next-line
   const id = useUniqueId()
   const buttonId = `${id}-button`
   const menuId = `${id}-menu`
@@ -231,7 +224,7 @@ In my previous post on [Handling async React component effects after unmount](/b
 
 All the solutions resolve around keeping track of if the component is still mounted. So we created a custom Hook for it called `useIsMounted`.
 
-```js
+```js {29,36}
 import { useEffect, useRef, useCallback } from 'react'
 
 // returns a function that when called will
@@ -260,7 +253,6 @@ const useIsMounted = () => {
 
 const Results = () => {
   const [items, setItems] = useState([])
-  // highlight-next-line
   const isMounted = useIsMounted()
 
   useEffect(() => {
@@ -268,7 +260,6 @@ const Results = () => {
       // only set state if the component
       // is still mounted after receiving
       // the async data
-      // highlight-next-line
       if (isMounted()) {
         setItems(newItems)
       }
@@ -285,17 +276,15 @@ const Results = () => {
 
 [Media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) allow us to change our UI based upon a host of media features (most commonly the size of the window). Media queries are normally used in CSS, but the [`matchMedia()` API ](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) allows us to execute media queries in JavaScript when necessary. Maybe we need to change props or render entirely different components depending on the results of a media query.
 
-```js
+```js {6,9,19,38}
 import { useState, useEffect } from 'react'
 
 const useMedia = (query) => {
   // initialize state to current match value
   const [matches, setMatches] = useState(() => window.matchMedia(query).matches)
-  // highlight-next-line
   const isMounted = useIsMounted()
 
   useEffect(() => {
-    // highlight-next-line
     if (!isMounted()) {
       return
     }
@@ -306,7 +295,6 @@ const useMedia = (query) => {
       // `isMounted()` check is for extra protection in case
       // listener somehow fires in between unmount and
       // listener removal
-      // highlight-next-line
       if (isMounted()) {
         setMatches(mediaQueryList.matches)
       }
@@ -326,7 +314,6 @@ const useMedia = (query) => {
 }
 
 const Example = () => {
-  // highlight-next-line
   const isSmall = useMedia('(max-width: 480px)')
 
   return <p>Screen is {isSmall ? 'small' : 'large'}</p>
@@ -343,7 +330,7 @@ We can try to work around this problem by manually [debouncing](https://github.c
 
 I found this `useRafState` Hook on [`react-use`](https://github.com/streamich/react-use/) and had to share it because it'll making this debouncing much easier. Its interface is identical to [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate). It wraps `useState`, only setting the state using `requestAnimationFrame`.
 
-```js
+```js {34}
 import { useState, useCallback, useRef, useEffect } from 'react'
 
 const useRafState = (initialState) => {
@@ -377,7 +364,6 @@ const useRafState = (initialState) => {
 }
 
 const Example = () => {
-  // highlight-next-line
   const [width, setWidth] = useRafState(0)
 
   useEffect(() => {
@@ -401,12 +387,11 @@ const Example = () => {
 
 The TypeScript for `useRafState` is a bit involved because we need to mimic all that `useState` can do. Since the state can be anything, we leverage generics once again.
 
-```typescript
+```typescript {5,13,26}
 // just like with `useState`, `initialState` is either a value
 // or a function that returns a value
 // the type of `initialState` is generic and depends on the value
 // being passed in
-// highlight-next-line
 const useRafState = <S>(initialState: S | (() => S)) => {
   const [state, setState] = useState(initialState)
 
@@ -415,7 +400,6 @@ const useRafState = <S>(initialState: S | (() => S)) => {
   // just like with `useState`, `setRafState` is a memoized function
   // that either takes a value or a function that accepts
   // the previous value and returns the next value
-  // highlight-next-line
   const setRafState = useCallback((value: S | ((prevState: S) => S)) => {
     cancelAnimationFrame(requestId.current)
 
@@ -429,7 +413,6 @@ const useRafState = <S>(initialState: S | (() => S)) => {
   })
 
   // using const assertion simplifies return value type definition
-  // highlight-next-line
   return [state, setRafState] as const
 }
 ```
@@ -442,7 +425,7 @@ For more on `as const`, read [Use cases for TypeScript const assertions](/blog/u
 
 We may need to track the scroll position of the window in order to know when to pin or unpin some sticky content on the page. And since the document `scroll` event fires often, we'll likely want to debounce updating the state. We can build `useWindowScroll` using the `useRafState` custom Hook we just implemented.
 
-```js
+```js {9}
 import { useEffect } from 'react'
 
 const getPos = () => ({
@@ -451,7 +434,6 @@ const getPos = () => ({
 })
 
 const useWindowScroll = () => {
-  // highlight-next-line
   const [pos, setPos] = useRafState({ x: 0, y: 0 })
 
   useEffect(() => {
@@ -492,7 +474,7 @@ Last month I wrote a post entitled [Object & array dependencies in the React use
 
 If we had a `useEffect` that instead performed a deep comparison of the objects or arrays, we wouldn't have to worry about having having them in our dependencies. So let's build one!
 
-```js
+```js {24}
 import { useRef, useEffect } from 'react'
 import isDeepEqual from 'fast-deep-equal/react'
 
@@ -516,7 +498,6 @@ const useDeepCompareEffect = (effect, deps) => {
 const Team = ({ team }) => {
   const [players, setPlayers] = useState([])
 
-  // highlight-next-line
   useDeepCompareEffect(() => {
     if (team.active) {
       getPlayers(team).then(setPlayers)
@@ -533,17 +514,15 @@ Also, if you use [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/esl
 
 The implementation in TypeScript mirrors the type API of `useEffect`:
 
-```typescript
+```typescript {4-8}
 import { useRef, useEffect, DependencyList, EffectCallback } from 'react'
 import isDeepEqual from 'fast-deep-equal/react'
 
-// highlight-start
 const useDeepCompareEffect = <TDeps extends DependencyList>(
   effect: EffectCallback,
   deps: TDeps,
 ) => {
   const depsRef = useRef<TDeps | undefined>()
-  // highlight-end
 
   if (!depsRef || !isDeepEqual(depsRef.current, deps)) {
     depsRef.current = deps

@@ -25,7 +25,7 @@ React Testing Library exports [`fireEvent`](https://testing-library.com/docs/dom
 
 For example before with `fireEvent`, we would simulate typing in a `<textarea>` by triggering the `onChange` DOM event that the component was handling.
 
-```js
+```js {9-13}
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 
@@ -34,13 +34,11 @@ test('types into text box', () => {
 
   // ⚠️ `prefer-user-event` ESLint error
   // don't use `fireEvent`
-  // highlight-start
   fireEvent.change(screen.getByRole('textbox'), {
     target: {
       value: 'Hello,\nWorld!',
     },
   })
-  // highlight-end
 
   expect(screen.getByRole('textbox')).toHaveValue('Hello,\nWorld!')
 })
@@ -48,7 +46,7 @@ test('types into text box', () => {
 
 The [`prefer-user-event`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-user-event.md) ESLint rule enforces the usage of `userEvent` over `fireEvent`, so this is now an error. We should've known we weren't doing it right when we had to specify `e.target.value`. Definitely to low-level. Instead, we should use the [`type`](https://testing-library.com/docs/ecosystem-user-event#typeelement-text-options) user event.
 
-```js
+```js {10}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -58,7 +56,6 @@ test('types into text box', () => {
 
   // 👍🏾 `type` writes text inside of the `<textarea>`
   // character-by-character triggering multiple `onChange` events
-  // highlight-next-line
   userEvent.type(screen.getByRole('textbox'), 'Hello,{enter}World!')
 
   expect(screen.getByRole('textbox')).toHaveValue('Hello,\nWorld!')
@@ -73,7 +70,7 @@ The `type` user event writes the specified text into the `<textarea>`, character
 
 **React Testing Library provides methods for [semantically querying DOM elements](https://testing-library.com/docs/queries/about) so that we can test our page in the most accessible way.** Instead of searching by class name, we find elements by [role](https://testing-library.com/docs/queries/byrole), [label](https://testing-library.com/docs/queries/bylabeltext), [display text](https://testing-library.com/docs/queries/bydisplayvalue), etc. Folks coming from Enzyme or used to using other UI testing libraries that use heavy DOM traversal to select DOM nodes may bring that into RTL testing.
 
-```js
+```js {11,17}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -84,14 +81,12 @@ test('displays the content when button is clicked', () => {
 
   // ⚠️ `no-container` ESLint error
   // don't use `querySelector` or other DOM methods
-  // highlight-next-line
   const button = container.querySelector('.btn-primary')
 
   userEvent.click(button)
 
   // ⚠️ `no-node-access` ESLint error
   // don't use `firstChild`
-  // highlight-next-line
   const message = screen.getByTestId('foot').firstChild
 
   expect(message).toHaveTextContext('Loaded')
@@ -100,7 +95,7 @@ test('displays the content when button is clicked', () => {
 
 The [`no-container`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-container.md) and [`no-node-access`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-node-access.md) ESLint rules help guard against the non-RTL way of querying elements. This forces us to use the appropriate queries.
 
-```js
+```js {10,15}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -110,13 +105,11 @@ test('displays the content when button is clicked', () => {
   render(<Example />)
 
   // 👍🏾 use the button's implicit role instead
-  // highlight-next-line
   const button = screen.getByRole('button')
 
   userEvent.click(button)
 
   // 👍🏾 can search by `data-testid` as well
-  // highlight-next-line
   const message = screen.getByTestId('message')
 
   expect(message).toHaveTextContext('Loaded')
@@ -129,7 +122,7 @@ test('displays the content when button is clicked', () => {
 
 In the beginning, when there was just React Testing Library, the suggested approach to get these queries (like `getByRole`) was by destructuring the object returned from calling [`render`](https://testing-library.com/docs/react-testing-library/api#render).
 
-```js
+```js {10}
 import React from 'react'
 import { render } from '@testing-library/react'
 import Greeting from './Greeting'
@@ -139,14 +132,13 @@ test('renders a message', () => {
 
   // ⚠️ `prefer-screen-queries` ESLint error
   // don't destructure, `render`, use `screen` instead
-  // highlight-next-line
   expect(getByText('Hello, world!')).toBeInTheDocument()
 })
 ```
 
 [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/), which React Testing Library is built on top of, now exposes a [`screen` object](https://testing-library.com/docs/queries/about/#using-queries) which has every query built-in. **The changed best practice is to always use `screen` object and no longer destructure the object returned by `render`.** And the [`prefer-screen-queries`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-screen-queries.md) ESLint rule ensures we follow this best practice.
 
-```js
+```js {8}
 import { render, screen } from '@testing-library/react'
 import Greeting from './Greeting'
 
@@ -154,7 +146,6 @@ test('renders a message', () => {
   render(<Greeting />)
 
   // 👍🏾 use `screen` object queries instead
-  // highlight-next-line
   expect(screen.getByText('Hello, world!')).toBeInTheDocument()
 })
 ```
@@ -163,7 +154,7 @@ The benefit of using `screen` is that we no longer need to keep updating the des
 
 There are several [types of queries](https://testing-library.com/docs/queries/about#types-of-queries) (`get*`, `query*` & `find*`) and it's not always clear when to use one over the other.
 
-```js
+```js {10,14}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Greeting from './Greeting'
@@ -173,12 +164,10 @@ test('renders a message', () => {
 
   // ⚠️ `prefer-presence-queries` ESLint error
   // use `getByText` when asserting presence
-  // highlight-next-line
   expect(screen.queryByText('Hello, world!')).toBeInTheDocument()
 
   // ⚠️ `prefer-presence-queries` ESLint error
   // use `queryByRole` when asserting hidden
-  // highlight-next-line
   expect(screen.getByRole('region')).not.toBeVisible()
 })
 ```
@@ -187,7 +176,7 @@ The `get*` methods throw an error when the element is not found. So when we are 
 
 This best practice is pretty tricky to understand, let alone get it right every single time. But thankfully the [`prefer-presence-queries`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-presence-queries.md) ESLint rule has our back and will alert us when we misstep.
 
-```js
+```js {9,12}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Greeting from './Greeting'
@@ -196,11 +185,9 @@ test('renders a message', () => {
   render(<Greeting />)
 
   // 👍🏾 use `get*` when asserting presence
-  // highlight-next-line
   expect(screen.getByText('Hello, world!')).toBeInTheDocument()
 
   // 👍🏾 use `query*` when asserting hidden
-  // highlight-next-line
   expect(screen.queryByRole('region')).not.toBeVisible()
 })
 ```
@@ -213,7 +200,7 @@ test('renders a message', () => {
 
 The [`waitFor`](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) method is a powerful asynchronous utility to enable us to make an assertion after a non-deterministic amount of time. The way `waitFor` works is that polls until the callback we pass stops throwing an error. **So if we were to make side-effects within the callback, those side-effects could trigger a non-deterministic number of times.**
 
-```js
+```js {13}
 import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -226,7 +213,6 @@ test('has keyboard support', async () => {
     // ⚠️ `no-wait-for-side-effects` ESLint error
     // don't call side-effects w/in `waitFor` callback
     // it could get called N number of times
-    // highlight-next-line
     userEvent.type(screen.getByRole('input'), '{arrowdown}')
 
     expect(screen.getByTestId('item3')).toBeChecked()
@@ -236,7 +222,7 @@ test('has keyboard support', async () => {
 
 **Instead the best practice is to move these sorts of side-effects outside of the `waitFor` callback, and only put assertions within it.** The [`no-wait-for-side-effects`](https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/no-wait-for-side-effects.md) ESLint rule ensures we adhere to this.
 
-```js
+```js {10}
 import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -246,7 +232,6 @@ test('has keyboard support', async () => {
   render(<PlayersCombobox />)
 
   // side effects go *outside* `waitFor`
-  // highlight-next-line
   userEvent.type(screen.getByRole('input'), '{arrowdown}')
 
   await waitFor(() => {
@@ -265,7 +250,7 @@ Finally, the catch-all bucket. 😄
 
 React Testing Library provides several super useful [debugging utilities](https://testing-library.com/docs/dom-testing-library/api-debugging/) to help understand what's going on in the DOM.
 
-```js
+```js {10}
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Greeting from './Greeting'
@@ -275,7 +260,6 @@ test('renders a message', () => {
 
   // ⚠️ `no-debugging-utils` ESLint error
   // prevent checking in debug code
-  // highlight-next-line
   screen.debug()
 
   expect(screen.getByText('Hello, world!')).toBeInTheDocument()

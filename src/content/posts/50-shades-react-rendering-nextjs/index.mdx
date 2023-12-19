@@ -29,7 +29,7 @@ Static-site generation (aka SSG) is pre-rendering all pages/routes of the app at
 
 Next.js renders all pages using SSG by default. In Next, a page looks like a normal React component:
 
-```js
+```js {9,16}
 // src/pages/index.js
 
 const HomePage = () => {
@@ -38,7 +38,6 @@ const HomePage = () => {
   useEffect(() => {
     // retrieve recent shipments client-side on mount of page
     // and update the state
-    // highlight-next-line
     getRecentShipments().then(setRecentShipments)
   })
 
@@ -46,7 +45,6 @@ const HomePage = () => {
     <div>
       <Header />
       <HeroImage />
-      // highlight-next-line
       {recentShipments && <Shipments shipments={recentShipments} />}
       <Footer />
     </div>
@@ -60,35 +58,29 @@ The nice thing about SSG is that `<script>` tags are still shipped with the pre-
 
 Now if we wanted, with Next we could also retrieve the recent shipments at build time so that they are included in the initial HTML (likely to help with SEO). We export an additional `async` function called [`getStaticProps`](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation):
 
-```js
+```js {3,6,10-12,18,23}
 // src/pages/index.js
 
-// highlight-next-line
 export const getStaticProps = async () => {
   // by fetching at build time we're assuming this data
   // won't change often
-  // highlight-next-line
   const recentShipments = await getRecentShipments()
 
   return {
     // `props` are passed to the page component as props
-    // highlight-start
     props: {
       recentShipments,
     },
-    // highlight-end
   }
 }
 
 // `recentShipments` is now passed in as a prop by the
 // Next.js framework at build time
-// highlight-next-line
 const HomePage = ({ recentShipments }) => {
   return (
     <div>
       <Header />
       <HeroImage />
-      // highlight-next-line
       <Shipments shipments={recentShipments} />
       <Footer />
     </div>
@@ -112,15 +104,13 @@ Next suggests fetching the data client-side unless the page not only has data th
 
 But if server-side rendering really is needed, we can just swap `getStaticProps` for [`getServerSideProps`](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering):
 
-```js
+```js {3,7}
 // src/pages/index.js
 
-// highlight-next-line
 export const getServerSideProps = async () => {
   // presumably the shipments are somehow determined
   // based on the user, which is why they are retrieved
   // server-side instead of client-side or at build-time
-  // highlight-next-line
   const recentShipments = await getRecentShipments()
 
   return {
@@ -170,12 +160,11 @@ Let's take the first drawback that we had with SSG where builds take too long wh
 
 Fallback pages work with the addition of [`getStaticPaths`](https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation).
 
-```js
+```js {5-20,29-33,49-56}
 // src/pages/p/[id].js
 
 // called at build time to figure out which product pages
 // should be rendered at build time (if any)
-// highlight-start
 export const getStaticPaths = async () => {
   // get the 50 most popular pages
   const popularProducts = getPopularProducts(50)
@@ -192,7 +181,6 @@ export const getStaticPaths = async () => {
     fallback: true,
   }
 }
-// highlight-end
 
 // called whenever the product page is being rendered,
 // either at build time or for one-time rendering at
@@ -201,13 +189,11 @@ export const getStaticProps = async ({ params }) => {
   const product = await getProduct(params.id)
 
   // if no product was found (bad ID), display 404 page
-  // highlight-start
   if (!product) {
     return {
       notFound: true,
     }
   }
-  // highlight-end
 
   // pass `product` to the `ProductPage` component as props
   return {
@@ -223,7 +209,6 @@ const ProductPage = ({ product }) => {
   return (
     <div>
       <Header />
-      // highlight-start
       {!product ? (
         <Loading />
       ) : (
@@ -232,7 +217,6 @@ const ProductPage = ({ product }) => {
           <ProductInfo product={product} />
         </div>
       )}
-      // highlight-end
       <Footer />
     </div>
   )
@@ -245,7 +229,7 @@ The `getStaticPaths` method is cool because we can decide which pages, if any, w
 
 Let's say we don't like the shell page for the on-demand pages (resulting in the need for displaying `<Loading />`). We can, instead, have the server wait to return the page HTML until it has fully rendered it that first time. **So the first request of the page will act like server-side rendering, but subsequent requests will be cached pages like static-site generation.** We do this by setting `fallback` to `'blocking'` instead of `true`.
 
-```js
+```js {17,47-50}
 // src/pages/p/[id].js
 
 export const getStaticPaths = async () => {
@@ -262,7 +246,6 @@ export const getStaticPaths = async () => {
     // all other paths will be statically generated on-demand,
     // but the server will wait to return the initial HTML until
     // the page has been fully rendered
-    // highlight-next-line
     fallback: 'blocking',
   }
 }
@@ -293,12 +276,10 @@ const ProductPage = ({ product }) => {
   return (
     <div>
       <Header />
-      // highlight-start
       <div>
         <ProductImage product={product} />
         <ProductInfo product={product} />
       </div>
-      // highlight-end
       <Footer />
     </div>
   )
@@ -315,7 +296,7 @@ With both the single home page route rendered at build time or the dynamic produ
 
 Well, Next.js solves this problem with a feature called [Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration). It allows us to update _existing_ pages by re-rendering them in the background as traffic comes in. Let's revisit our `HomePage`.
 
-```js
+```js {15}
 // src/pages/index.js
 
 const ONE_HOUR = 60 * 60 // in seconds
@@ -330,7 +311,6 @@ export const getStaticProps = async () => {
 
     // Re-generate the page on the next request
     // after at least one hour has passed
-    // highlight-next-line
     revalidate: ONE_HOUR,
   }
 }

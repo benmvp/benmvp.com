@@ -166,11 +166,10 @@ const List = <T extends IdObj>({
 
 The `<T extends IdObj>` is called [generic constraining](https://www.typescriptlang.org/docs/handbook/generics.html#generic-constraints). So `T` can't just be _anything_. And because `IdObj` defines an object with a required `id` property, by declaring that `T` must extend `IdObj`, we are **constraining `T` to also be an object with a required `id` property**. It can have more properties than `id` of course, but that's the absolute minimum. Second need completed. 👍🏾👍🏾
 
-```typescript
+```typescript {4}
 return (
   <div className={className}>
     {visibleItems.map((item) => (
-      // highlight-next-line
       <div key={item.id} className="item">
         {children(item)}
       </div>

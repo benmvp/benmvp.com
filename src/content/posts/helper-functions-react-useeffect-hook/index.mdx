@@ -11,15 +11,13 @@ heroCredit: 'Photo by [NeONBRAND](https://unsplash.com/@neonbrand)'
 
 The [`useEffect` hook](https://reactjs.org/docs/hooks-reference.html#useeffect) in React by default runs on every re-render:
 
-```js
+```js {4-6}
 const Example = () => {
   const [count, setCount] = useState(0)
 
-  // highlight-start
   useEffect(() => {
     document.title = `You clicked ${count} times`
   })
-  // highlight-end
 
   return (
     <div>
@@ -32,13 +30,12 @@ const Example = () => {
 
 You pretty much never want this functionality because the “effect” will happen way more times than it needs to. So as an optimization, `useEffect` takes a second parameter, a “dependencies” array, that will only re-run the effect when the values within the array change across re-renders:
 
-```js
+```js {6}
 const Example = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     document.title = `You clicked ${count} times`
-    // highlight-next-line
   }, [count]) // Only re-run the effect if count changes
 
   return (
@@ -56,18 +53,16 @@ However, sometimes you have helper functions that you need to call from within `
 
 Take a look at this totally made up example component:
 
-```js
+```js {5-9,17,20}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
-  // highlight-start
   const hideMessage = () => {
     if (count < 10) {
       setShowMessage(false)
     }
   }
-  // highlight-end
 
   useEffect(() => {
     window
@@ -75,11 +70,9 @@ const Example = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-next-line
           hideMessage()
         }
       })
-    // highlight-next-line
   }, [])
 
   return (
@@ -120,7 +113,7 @@ Seems simple enough right? 😄 Helper functions are great abstractions because 
 
 By the way, if the code was making use of any variables, you will need to add those to the dependencies list.
 
-```js
+```js {11-13,16}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
@@ -131,14 +124,11 @@ const Example = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-start
           if (count < 10) {
             setShowMessage(false)
           }
-          // highlight-end
         }
       })
-    // highlight-next-line
   }, [count])
 
   return (
@@ -156,30 +146,26 @@ This option really only works if the function was small. But it's a pretty simpl
 
 This is the first suggestion in that second error we got. It may seem a bit weird, but if you move the helper function within the `useEffect` hook, **it’s no longer being redeclared with every component re-render.** Instead, it’s only being redeclared every time the effect is re-run. And since the helper function is now _inside_ the `useEffect` hook, it no longer needs to be listed in the dependencies. However, any variables that the function used from outside of the `useEffect` will need to be added to the dependencies list.
 
-```js
+```js {6-10,17,20}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
   useEffect(() => {
-    // highlight-start
     const hideMessage = () => {
       if (count < 10) {
         setShowMessage(false)
       }
     }
-    // highlight-end
 
     window
       .fetch('https://api.benmvp.com/')
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-next-line
           hideMessage()
         }
       })
-    // highlight-next-line
   }, [count])
 
   return (
@@ -201,14 +187,12 @@ As a result, you don’t even need to include the function in the dependencies l
 
 However, any props, state or other derived values that the function needs will now need to be passed in as function arguments and will also need to be dependencies of `useEffect`.
 
-```js
-// highlight-start
+```js {1-5,17,20}
 const hideMessage = (count, setShowMessage) => {
   if (count < 10) {
     setShowMessage(false)
   }
 }
-// highlight-end
 
 const Example = () => {
   const [count, setCount] = useState(0)
@@ -220,11 +204,9 @@ const Example = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-next-line
           hideMessage(count, setShowMessage)
         }
       })
-    // highlight-next-line
   }, [count])
 
   return (
@@ -244,18 +226,16 @@ This is the other suggestion in the lint error we got. The [`useCallback` hook](
 
 `useCallback` helps us get around the problem of the helper function being redeclared with every re-render because now we’ll get back the same function reference. It will only change if and when its parameters change.
 
-```js
+```js {5-9,17,20}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
-  // highlight-start
   const hideMessage = useCallback(() => {
     if (count < 10) {
       setShowMessage(false)
     }
   }, [count])
-  // highlight-end
 
   useEffect(() => {
     window
@@ -263,11 +243,9 @@ const Example = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-next-line
           hideMessage()
         }
       })
-    // highlight-next-line
   }, [hideMessage])
 
   return (

@@ -13,7 +13,7 @@ A 3rd-party library written in TypeScript likely makes use of lots of internal t
 
 Let's say that we're using the following function from a library:
 
-```typescript
+```typescript {28-30}
 // index.ts (in @third-party-lib/api)
 
 interface Player {
@@ -41,11 +41,9 @@ interface Team extends TeamInfo {
   dateCreated: Date
 }
 
-// highlight-start
 export const createTeam = (info: TeamInfo): Promise<Team> => {
   // do stuff asynchronously...
 }
-// highlight-end
 ```
 
 The `createTeam` function takes a single parameter that's an object with three properties: `name`, `location`, and `players`. It returns a `Team` object wrapped in a `Promise` because the function is async.
@@ -88,8 +86,7 @@ Even though we never declared the `Player` or `Location` types directly, TypeScr
 
 But what if we need to use the `Player` or `Location` type in our application outside of calling `createTeam`?
 
-```typescript
-// highlight-next-line
+```typescript {1}
 const validatePlayer = (player: Player): boolean => {
   // code that validates a `Player` object
 }
@@ -133,8 +130,7 @@ Noticed that we used `[number]` to get the `ExtractedPlayer`. `ExtractedPlayers`
 
 Now we have `ExtractedLocation` & `ExtractedPlayer` as types to use as we need.
 
-```typescript
-// highlight-next-line
+```typescript {1}
 const validatePlayer = (player: ExtractedPlayer): boolean => {
   // code that validates a `Player` object
 }
@@ -151,14 +147,12 @@ We use the [`ReturnType<T>`](https://www.typescriptlang.org/docs/handbook/utilit
 
 And finally we need to unwrap the promise type so we can get just `Team`. Unfortunately, there's no simple index type that we can use to remove the `Promise<T>`. But we can create our own [conditional type](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#conditional-type-constraints) to do the unwrapping.
 
-```typescript
+```typescript {3-5}
 // checks to see if the `Type` is a promise wrapping an underlying type.
 // if so it returns the underlying type. if not, it returns back the type.
-// highlight-start
 type Unwrapped<Type> = Type extends Promise<infer WrappedType>
   ? WrappedType
   : Type
-// highlight-end
 
 type ExtractedTeam = Unwrapped<CreateTeamPromise>
 // ExtractedTeam = Team

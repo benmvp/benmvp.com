@@ -95,10 +95,9 @@ const [count, setCount] = useState(
 
 The second example is _almost_ similar, except it **passes a function** that retrieves the value from `localStorage`, parses it into an integer, and **returns** the value.
 
-```js
+```js {3}
 // Example 2
 
-// highlight-next-line
 const [count, setCount] = useState(() =>
   Number.parseInt(window.localStorage.getItem(cacheKey)),
 )
@@ -171,9 +170,8 @@ In these cases, the initial value is a simple value or an already calculated var
 
 I’d likely use it to initialize state to be the current date/time:
 
-```js
+```js {2}
 const Clock = () => {
-  // highlight-next-line
   const [time, setTime] = useState(() => new Date())
 
   useEffect(() => {

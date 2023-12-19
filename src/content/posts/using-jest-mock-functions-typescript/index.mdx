@@ -13,7 +13,7 @@ I write my unit tests in TypeScript because I want to ensure that my tests are a
 
 In order to aid TypeScript in understanding Jest mocks, we can use the `jest.MockedFunction` type that's available in the [`@types/jest`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/jest/index.d.ts) DefinitelyTyped package (from version `24.9.0`).
 
-```ts
+```ts {18-19,25-26}
 // src/api/players.test.ts
 
 import { getPlayerLadder } from './players'
@@ -31,19 +31,15 @@ jest.mock('../db/firestore')
 
 // take the functions we're mocking and add the jest mock properties
 // to them so that everything will type-check properly
-// highlight-start
 const mockGetLadder = getLadder as jest.MockedFunction<typeof getLadder>
 const mockGetPlayers = getPlayers as jest.MockedFunction<typeof getPlayers>
-// highlight-end
 
 describe('getPlayerLadder', () => {
   it('returns a player ladder from a valid id', async () => {
     // use the variables that are typed with the additional
     // mock information instead of the originals
-    // highlight-start
     mockGetLadder.mockResolvedValue(MOCK_VALID_LADDER)
     mockGetPlayers.mockResolvedValue(MOCK_PLAYERS)
-    // highlight-end
 
     const playerLadder = await getPlayerLadder(MOCK_VALID_LADDER_ID)
 
@@ -90,7 +86,7 @@ export const getPlayerLadder = async (id: LadderId) => {
 
 What `getPlayerLadder` does isn't terribly important, but I just wanted to provide something concrete as we work through a test.
 
-```ts
+```ts {20-21}
 // src/api/players.test.ts
 
 import { getPlayerLadder } from './players'
@@ -110,10 +106,8 @@ describe('getPlayerLadder', () => {
   it('returns a player ladder from a valid id', async () => {
     // have `getLadder` & `getPlayers` to return mocked data.
     // The test passes, but these two lines will be type errors in TypeScript 😢
-    // highlight-start
     getLadder.mockResolvedValue(MOCK_VALID_LADDER)
     getPlayers.mockResolvedValue(MOCK_PLAYERS)
-    // highlight-end
 
     const playerLadder = await getPlayerLadder(MOCK_VALID_LADDER_ID)
 
@@ -147,7 +141,7 @@ I use the [`ban-ts-comment`](https://github.com/typescript-eslint/typescript-esl
 
 It turns out that the `@types/jest` DefinitelyTyped package includes a type to solve this: [`jest.MockedFunction`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/1f64dcea8a712e7154be51e367c2e1ba84272188/types/jest/index.d.ts#L1107). It takes any function and extends it with the [`jest.MockInstance` interface](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/1f64dcea8a712e7154be51e367c2e1ba84272188/types/jest/index.d.ts#L1150-L1310). We can use it to type our mocked functions.
 
-```ts
+```ts {12-13}
 import { getPlayerLadder } from './players'
 import {
   MOCK_VALID_LADDER_ID,
@@ -159,25 +153,21 @@ import { getLadder, getPlayers } from '../db/firestore'
 
 jest.mock('../db/firestore')
 
-// highlight-start
 const mockGetLadder = getLadder as jest.MockedFunction<typeof getLadder>
 const mockGetPlayers = getPlayers as jest.MockedFunction<typeof getPlayers>
-// highlight-end
 
 // tests...
 ```
 
 We take our mocked functions, `getLadder` & `getPlayers` and use [type assertions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) to create new variables with the extended types. The mocked functions are still the same, but they now have the full type information.
 
-```ts
+```ts {5-6}
 describe('getPlayerLadder', () => {
   it('returns a player ladder from a valid id', async () => {
     // use the variables that are typed with the mock information
     // instead of the originals so that they pass type-checking
-    // highlight-start
     mockGetLadder.mockResolvedValue(MOCK_VALID_LADDER)
     mockGetPlayers.mockResolvedValue(MOCK_PLAYERS)
-    // highlight-end
 
     const playerLadder = await getPlayerLadder(MOCK_VALID_LADDER_ID)
 
@@ -212,7 +202,7 @@ export const asMock = <Func extends MockableFunction>(mockedFunc: Func) =>
 
 As you can see `asMock` doesn't do anything with `mockedFunc`. It simply returns it with the proper type information. I don't need to mock functions all that often. But I figure wrapping the type assertion in a helper means most folks won't have to try to understand all the `jest.MockedFunction<>` business in their test code.
 
-```ts
+```ts {19-20}
 // src/api/players.test.ts
 
 import { getPlayerLadder } from './players'
@@ -231,10 +221,8 @@ jest.mock('../db/firestore')
 
 // take the functions we're mocking and add the jest mock properties
 // to them so that everything will type-check properly
-// highlight-start
 const mockGetLadder = asMock(getLadder)
 const mockGetPlayers = asMock(getPlayers)
-// highlight-end
 
 // tests...
 ```

@@ -15,10 +15,9 @@ In my opinion, **there's no point of opting in to the extra work of type-checkin
 
 But **there are legitimate situations where we don't know the type of a value being passed into a function**. Usually it's some pass-through interface that takes arbitrary data, but there are other use cases as well. In these situations, we can use the TypeScript [`unknown`](https://www.typescriptlang.org/docs/handbook/basic-types.html#unknown) type.
 
-```typescript
+```typescript {3,13}
 const postJSON = (
   url: string,
-  // highlight-next-line
   data: unknown,
   options: PostOptions = {},
 ): Promise<Response> => {
@@ -29,7 +28,6 @@ const postJSON = (
       'Content-Type': 'application/json',
       ...options.headers,
     },
-    // highlight-next-line
     body: JSON.stringify(data),
   })
 }
@@ -103,10 +101,9 @@ The `any` type is definitely the easier type to deal with because we get back to
 
 Outside of the technical differences between `unknown` and `any`, to me there are also some semantic differences as well. Let's revisit the `postJSON` example from the beginning:
 
-```typescript
+```typescript {3,13}
 const postJSON = (
   url: string,
-  // highlight-next-line
   data: unknown,
   options: PostOptions = {},
 ): Promise<Response> => {
@@ -117,7 +114,6 @@ const postJSON = (
       'Content-Type': 'application/json',
       ...options.headers,
     },
-    // highlight-next-line
     body: JSON.stringify(data),
   })
 }

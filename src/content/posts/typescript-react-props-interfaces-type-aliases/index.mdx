@@ -39,14 +39,13 @@ type ButtonProps = {
 
 Both can merge or extend other object types as well.
 
-```ts
+```ts {7,20}
 // include `ElementStylingProps` by interface extending
 
 interface ElementStylingProps {
   className?: string
   style?: React.CssProperties
 }
-// highlight-next-line
 interface ButtonProps extends ElementStylingProps {
   children: string
   size?: 'small' | 'large'
@@ -60,7 +59,6 @@ type ElementStylingProps = {
   className?: string
   style?: React.CssProperties
 }
-// highlight-next-line
 type ButtonProps = ElementStylingProps & {
   children: string
   size?: 'small' | 'large'
@@ -71,14 +69,13 @@ type ButtonProps = ElementStylingProps & {
 
 In case you were wondering, an `interface` can also extend an object type defined by a `type` alias and vice versa.
 
-```ts
+```ts {7,20}
 // include `ElementStylingProps` by interface extending
 
 type ElementStylingProps = {
   className?: string
   style?: React.CssProperties
 }
-// highlight-next-line
 interface ButtonProps extends ElementStylingProps {
   children: string
   size?: 'small' | 'large'
@@ -92,7 +89,6 @@ interface ElementStylingProps {
   className?: string
   style?: React.CssProperties
 }
-// highlight-next-line
 type ButtonProps = ElementStylingProps & {
   children: string
   size?: 'small' | 'large'
@@ -168,7 +164,7 @@ interface TextProps extends TruncateProps {
 
 When using the [TypeScript utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) (like `Omit<>` or `Record<>`) or other custom generic types, I exclusively use `type` aliases.
 
-```ts
+```ts {10-11}
 interface ButtonProps {
   children: string
   size?: 'small' | 'large'
@@ -178,15 +174,13 @@ interface ButtonProps {
 
 // type aliases create "type expressions" when
 // combined with generic types
-// highlight-start
 type OptionalButtonProps = Partial<ButtonProps>
 type ButtonLayoutProps = Pick<ButtonProps, 'size' | 'width'>
-// highlight-end
 ```
 
 We can actually use interfaces as well by extending the type returned by the generic.
 
-```ts
+```ts {10-11}
 interface ButtonProps {
   children: string
   size?: 'small' | 'large'
@@ -196,10 +190,8 @@ interface ButtonProps {
 
 // interfaces *can* extend generic types but feel weird
 // 🤮🤮🤮
-// highlight-start
 interface OptionalButtonProps extends Partial<ButtonProps> {}
 interface ButtonLayoutProps extends Pick<ButtonProps, 'size' | 'width'> {}
-// highlight-end
 ```
 
 But in my opinion, this feels rather clunky. We're really just trying to name the result of the "type expressions as I call them. We're not extending anything. So a `type` alias is better suited for these cases in my opinion.
@@ -216,37 +208,33 @@ And that's all it says! It doesn't actually explain how the conflicts are handle
 
 Let's say we want to define `NumberButtonProps` which are just like our `ButtonProps` except that the `children` is a `number` type instead of a `string` type. We can define `NumberButtonProps` using an `interface` that `extends` `ButtonProps` to override the `children` prop.
 
-```ts
+```ts {7-10}
 interface ButtonProps {
   children: string
   size?: 'small' | 'large'
   variant?: 'primary' | 'secondary'
   width?: 'fixed' | 'fit' | 'fill'
 }
-// highlight-start
 interface NumberButtonProps extends ButtonProps {
   // should override `string` from `ButtonProps`
   children: number
 }
-// highlight-end
 // NumberButtonProps['children'] -> `number`
 ```
 
 The type of the `children` property in `NumberButtonProps` is `number`, which is exactly what we want. But what happens if we try to use an intersection with a `type` alias instead?
 
-```ts
+```ts {7-10}
 interface ButtonProps {
   children: string
   size?: 'small' | 'large'
   variant?: 'primary' | 'secondary'
   width?: 'fixed' | 'fit' | 'fill'
 }
-// highlight-start
 type NumberButtonProps = ButtonProps & {
   // intersecting doesn't work how we'd expect 😔
   children: number
 }
-// highlight-end
 // NumberButtonProps['children'] -> `never`
 // (`string & number` -> `never`)
 ```
@@ -257,7 +245,7 @@ There may be a case where we do want a redefined property to intersect like this
 
 There is a workaround for this, however. Before intersecting the redefined property we can omit it.
 
-```ts
+```ts {9-11}
 interface ButtonProps {
   children: string
   size?: 'small' | 'large'
@@ -266,11 +254,9 @@ interface ButtonProps {
 }
 // omit `children` from `ButtonProps` first so that
 // intersecting "overrides"
-// highlight-start
 type NumberButtonProps = Omit<ButtonProps, 'children'> & {
   children: number
 }
-// highlight-end
 // NumberButtonProps['children'] -> `number`
 ```
 

@@ -49,19 +49,16 @@ By default with Next, we have `"dev"` (run a local dev server), `"build"` (build
 
 But now we want to run these against the Firebase Local Emulator with imported data. First follow the instructions to [install & configure the emulator](https://firebase.google.com/docs/emulator-suite/install_and_configure). Then add additional scripts to run the emulator and import the data before running our scripts.
 
-```json
+```json {6,8,10}
 {
   "name": "player-tiers",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3020",
-    // highlight-next-line
     "dev:emulator": "firebase emulators:exec 'npm run dev' --import=scripts/firebase/firestore-export/ --ui",
     "build -p 3021": "next build",
-    // highlight-next-line
     "build:emulator": "firebase emulators:exec 'npm run build' --import=scripts/firebase/firestore-export/",
     "start": "next start",
-    // highlight-next-line
     "start:emulator": "firebase emulators:exec 'npm start' --import=scripts/firebase/firestore-export/"
   }
 }
@@ -85,7 +82,7 @@ With the `baseUrl` set to `"http://localhost:3020"`, we can run our tests agains
 
 Well it turns out that Cypress also supports the `CYPRESS_BASE_URL` [environment variable](https://docs.cypress.io/guides/guides/environment-variables) that will override the default `baseUrl` set in `cypress.json`.
 
-```json
+```json {11,12}
 {
   "name": "player-tiers",
   "private": true,
@@ -96,9 +93,7 @@ Well it turns out that Cypress also supports the `CYPRESS_BASE_URL` [environment
     "build:emulator": "firebase emulators:exec 'npm run build' --import=scripts/firebase/firestore-export/",
     "start": "next start",
     "start:emulator": "firebase emulators:exec 'npm start' --import=scripts/firebase/firestore-export/",
-    // highlight-next-line
     "cy:open": "cypress open",
-    // highlight-next-line
     "cy:run": "CYPRESS_BASE_URL=http://localhost:3021 cypress run"
   }
 }

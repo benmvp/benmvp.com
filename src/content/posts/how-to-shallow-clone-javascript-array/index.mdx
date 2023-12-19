@@ -23,17 +23,14 @@ There are likely more, but I've got 8 approaches for creating a shallow copy of 
 
 The `for` loop is probably the "simplest" approach and the one that's most portable across programming languages.
 
-```js
+```js {2,4-7}
 const addMessage = (allMessages, message) => {
-  // highlight-next-line
   const newMessages = []
 
-  // highlight-start
   // make a shallow copy of `allMessages`
   for (let messageInfo of allMessages) {
     newMessages.push(messageInfo)
   }
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -54,17 +51,14 @@ Here we make our shallow copy by creating a new empty array (`newMessages`), man
 
 The [.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) approach works similar to the `for` loop.
 
-```js
+```js {2,4-7}
 const addMessage = (allMessages, message) => {
-  // highlight-next-line
   const newMessages = []
 
-  // highlight-start
   // make a shallow copy of `allMessages`
   allMessages.forEach((messageInfo) => {
     newMessages.push(messageInfo)
   })
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -85,12 +79,10 @@ It starts off with the same new empty array (`newMessages`), pushing each new `m
 
 [`Array.from`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) was introduced to JavaScript in ES6/ES2015, and is probably the most technically correct solution. It, by definition, creates a new, shallow-copied array.
 
-```js
+```js {2-3}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   const newMessages = Array.from(allMessages)
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -111,13 +103,11 @@ Nice and short, eh? No need to manually iterate over `allMessages`. Just use the
 
 The [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_array_literals) can be used as syntax sugar for `Array.from()` to shallow clone an array.
 
-```js
+```js {2-4}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   // by spreading it into a new array
   const newMessages = [...allMessages]
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -160,13 +150,11 @@ const addMessage = (allMessages, message) => {
 
 The `Array` [`.concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) method used to be my go-to concise approach for shallow cloning an array prior to ES6/ES2015 and the spread operator.
 
-```js
+```js {2-4}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   // by concatenating nothing to the array
   const newMessages = allMessages.concat()
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -187,13 +175,11 @@ Typically we pass one or more arrays to `.concat()` to merge to the array and re
 
 The `Array` [`.slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) approach is pretty much identical to the `.concat()` one.
 
-```js
+```js {2-4}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   // by taking slice of entire array
   const newMessages = allMessages.slice()
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -216,13 +202,11 @@ I don't think I ever used `.slice()` for array shallow cloning. I always used `.
 
 I don't think I've never seen [`.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) used to shallow clone an array, but as I was looking through the array methods, it seemed like a perfectly good candidate.
 
-```js
+```js {2-4}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   // by mapping each item to itself
   const newMessages = allMessages.map((m) => m)
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp
@@ -245,13 +229,11 @@ The `.map()` approach is actually a more correct than the `.forEach()` approach.
 
 I've also not seen [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) used to make a shallow copy of an array either, but it could totally work too!
 
-```js
+```js {2-4}
 const addMessage = (allMessages, message) => {
-  // highlight-start
   // make a shallow copy of `allMessages`
   // by returning `true` includes all items
   const newMessages = allMessages.filter(() => true)
-  // highlight-end
 
   // add the new message info object
   // including the message + timestamp

@@ -30,19 +30,17 @@ I've written a number of React posts about custom Hooks that have used [`useCall
 
 The last post gives the option of using `useCallback()` when we have an internal helper function that needs to be used within `useEffect()`.
 
-```js
+```js {6-10,21,24}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
   // inner helper function that will be called w/in `useEffect()`
-  // highlight-start
   const hideMessage = () => {
     if (count < 10) {
       setShowMessage(false)
     }
   }
-  // highlight-end
 
   useEffect(() => {
     window
@@ -53,11 +51,9 @@ const Example = () => {
           // ⚠️ not including `hideMessage()` in the dependencies of
           // `useEffect()` is a lurking bug and will trigger the
           // `react-hooks/exhaustive-deps` ESLint rule
-          // highlight-next-line
           hideMessage()
         }
       })
-    // highlight-next-line
   }, [])
 
   return (
@@ -75,20 +71,18 @@ You see, `useEffect()` compares the values of the items in the dependencies arra
 
 Wrapping `hideMessage` in `useCallback()` is one option to fix this problem.
 
-```js
+```js {7-11,19,22}
 const Example = () => {
   const [count, setCount] = useState(0)
   const [showMessage, setShowMessage] = useState(true)
 
   // 👍🏾 The reference of `hideMessage()` will only change if/when
   // the value of `count` changes
-  // highlight-start
   const hideMessage = useCallback(() => {
     if (count < 10) {
       setShowMessage(false)
     }
   }, [count])
-  // highlight-end
 
   useEffect(() => {
     window
@@ -96,11 +90,9 @@ const Example = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // highlight-next-line
           hideMessage()
         }
       })
-    // highlight-next-line
   }, [hideMessage])
 
   return (
@@ -116,13 +108,12 @@ const Example = () => {
 
 In addition, because of this issue with functions in the dependencies of `useEffect()` (or even other `useCallback()` calls), when I create custom Hooks that return a function, I always wrap those in `useCallback()` as well.
 
-```js
+```js {6}
 const useCopyToClipboard = (text, notifyTimeout = 2500) => {
   const [copyStatus, setCopyStatus] = useState('inactive')
 
   // Wrap `copy()` in `useCallback()` just in case.
   // It becomes a "stable" reference like `setCopyStatus()`
-  // highlight-next-line
   const copy = useCallback(() => {
     navigator.clipboard.writeText(text).then(
       () => setCopyStatus('copied'),
@@ -159,16 +150,14 @@ The [`useMemo()`](https://reactjs.org/docs/hooks-reference.html#usememo) Hook is
 
 I would use `useMemo()` in the same situations as above w/ `useCallback()`, i.e. when I have an object or array that will end up in the dependencies of `useEffect()`.
 
-```js
+```js {5-7,17,19}
 const Example = () => {
   const [filter, setFilter] = useState('')
   // `filteredPlayers` is a derived array that is
   // recomputed on every re-render of `Example`
-  // highlight-start
   const filteredPlayers = ALL_PLAYERS.filter((player) =>
     player.name.includes(filter),
   )
-  // highlight-end
 
   useEffect(() => {
     window.fetch('https://api.benmvp.com/players/update', {
@@ -178,10 +167,8 @@ const Example = () => {
       // the `react-hooks/exhaustive-deps` ESLint rule,
       // but including it in the deps will also cause
       // the effect to run every re-render 😭
-      // highlight-next-line
       body: JSON.stringify(filteredPlayers),
     })
-    // highlight-next-line
   }, [])
 
   return (
@@ -200,26 +187,22 @@ By not including `filteredPlayers` in the `useEffect()` dependencies, when it do
 
 By using the `useMemo()` Hook, we can "cache" the value of `filteredPlayers` for every `filter` value.
 
-```js
+```js {4-7,12,16}
 const Example = () => {
   const [filter, setFilter] = useState('')
   // "cache" `filteredPlayers` on every value of `filter`
-  // highlight-start
   const filteredPlayers = useMemo(
     () => ALL_PLAYERS.filter((player) => player.name.includes(filter)),
     [filter],
   )
-  // highlight-end
 
   useEffect(() => {
     window.fetch('https://api.benmvp.com/players/update', {
       method: 'POST',
-      // highlight-next-line
       body: JSON.stringify(filteredPlayers),
     })
     // now the effect will only be called when `filter` changes because
     // that's the only time the `filteredPlayers` reference will change
-    // highlight-next-line
   }, [filteredPlayers])
 
   return (

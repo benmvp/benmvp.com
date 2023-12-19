@@ -55,18 +55,15 @@ This is pretty standard code. It's simplified a bit because I have abstracted th
 
 Async functions to the rescue! The naive approach would be to add [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to `useEffect()`'s callback function.
 
-```js
+```js {5,7-8}
 const useTopPlayers = (category, season) => {
   const [players, setPlayers] = useState([])
 
   // 🛑 DON'T DO THIS! 🛑
-  // highlight-next-line
   useEffect(async () => {
     try {
-      // highlight-start
       const playerIds = await getTopPlayersApi(category, season)
       const rawPlayers = await getPlayersByIdApi(playerIds)
-      // highlight-end
 
       setPlayers(normalizeApiPlayers(rawPlayers))
     } catch (err) {
@@ -111,9 +108,8 @@ What are these errors telling us? Well, `useEffect()` is supposed to either retu
 
 You may be tempted, instead, to move the `async` to the function containing the `useEffect()` (i.e. the custom Hook).
 
-```js
+```js {2}
 // 🛑 DON'T DO THIS! 🛑
-// highlight-next-line
 const useTopPlayers = async (category, season) => {
   const [players, setPlayers] = useState([])
 
@@ -137,19 +133,16 @@ But this doesn't work at all for 2 main reasons. First, by making the custom Hoo
 
 Instead, we can follow the lint error's suggestion by defining an `async` inner function within the `useEffect()` function and immediately calling it.
 
-```js
+```js {6,8-9,19}
 const useTopPlayers = (category, season) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
     // Add inner async function
-    // highlight-next-line
     const fetchTopPlayers = async () => {
       try {
-        // highlight-start
         const playerIds = await getTopPlayersApi(category, season)
         const rawPlayers = await getPlayersByIdApi(playerIds)
-        // highlight-end
 
         setPlayers(normalizeApiPlayers(rawPlayers))
       } catch (err) {
@@ -159,7 +152,6 @@ const useTopPlayers = (category, season) => {
     }
 
     // Call function immediately
-    // highlight-next-line
     fetchTopPlayers()
   }, [category, season])
 
@@ -171,13 +163,12 @@ Now the Hook is back to returning `players` data and the main `useEffect()` func
 
 I gotta admit, having to define the inner function is a bit clunky. But, in my opinion, it's a small price to pay to drastically improve the developer experience of async `useEffect` calls. You know, what's actually the most annoying is having to come up with a non-duplicative name for the inner function. We _could_ instead use an [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (immediately-invoked function expression).
 
-```js
+```js {6,16}
 const useTopPlayers = (category, season) => {
   const [players, setPlayers] = useState([])
 
   useEffect(() => {
     // use IIFE to avoid creating named function 🤪
-    // highlight-next-line
     ;(async () => {
       try {
         const playerIds = await getTopPlayersApi(category, season)
@@ -188,7 +179,6 @@ const useTopPlayers = (category, season) => {
         Bugsnag.notify(err)
         setPlayers(null)
       }
-      // highlight-next-line
     })()
   }, [category, season])
 

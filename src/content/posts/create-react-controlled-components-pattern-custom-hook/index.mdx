@@ -13,7 +13,7 @@ Two weeks ago I wrote about [picking the right React component pattern](/blog/pi
 
 I showed this snippet of code for a `Pagination` component that either wants to be an uncontrolled or controlled component depending on what props the parent passes.
 
-```js
+```js {8-9,11-26}
 import { useState } from 'react'
 
 const Pagination = ({
@@ -21,12 +21,9 @@ const Pagination = ({
   initialPage = 1,
 
   // `page` & `onPageChange` are when it's controlled by parent
-  // highlight-start
   page: controlledPage,
   onPageChange,
-  // highlight-end
 }) => {
-  // highlight-start
   const isControlled = controlledPage !== undefined
   const [pageState, setPage] = useState(initialPage)
 
@@ -43,7 +40,6 @@ const Pagination = ({
     // call `onPageChange` if it exists using optional chaining
     onPageChange?.(nextPage)
   }
-  // highlight-end
 
   return (
     <div>
@@ -126,7 +122,7 @@ Don't worry too much about the length of the code. Over half of it is helpful wa
 
 Before we begin the walk-through, this is how we'd use the `useControlled` custom Hook in our `Pagination` component:
 
-```js
+```js {8-12,15}
 import { useControlled } from './hooks'
 
 const Pagination = ({
@@ -134,16 +130,13 @@ const Pagination = ({
   page: controlledPage,
   onPageChange,
 }) => {
-  // highlight-start
   const [page, setPage] = useControlled({
     controlledValue: controlledPage,
     initialValue: initialPage,
     name: 'Pagination.page',
   })
-  // highlight-end
 
   const setNewPage = (nextPage) => {
-    // highlight-next-line
     setPage(nextPage)
     onPageChange?.(nextPage)
   }
@@ -186,15 +179,13 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
 
 First is the API. It takes an object with 3 properties. The `controlledValue` is the value that's passed as the component's `value` prop, making it a controlled component. The `initialValue` is the default value that's passed as the component's `initialValue` prop, making it an uncontrolled component. Lastly the `name` is a unique name that's just used in displaying warnings.
 
-```js
+```js {2-6}
 const useControlled = ({ controlledValue, initialValue, name }) => {
-  // highlight-start
   const isControlled = controlledValue !== undefined
   const { current: origIsControlled } = useRef(isControlled)
   const [internalValue, setInternalValue] = useState(initialValue)
   const { current: origInitialValue } = useRef(initialValue)
   const value = origIsControlled ? controlledValue : internalValue
-  // highlight-end
 
   // remaining implementation...
 }
@@ -204,17 +195,14 @@ First we calculate whether or not the component is controlled by checking to see
 
 The internal value (`internalValue`) is the same `useState` call from before initialized by the `initialValue`. We store this in a ref as well (`origInitialValue`) so we can warn if it changes over time too. **The actual `value` is based upon whether or not the component is controlled.** If it's controlled (`originIsControlled` is `true`), then we'll use the `controlledValue`. Otherwise, we use the internally maintained value (`internalValue`).
 
-```js
+```js {2-3,8-20}
 const useControlled = ({ controlledValue, initialValue, name }) => {
-  // highlight-start
   const isControlled = controlledValue !== undefined
   const { current: origIsControlled } = useRef(isControlled)
-  // highlight-end
   const [internalValue, setInternalValue] = useState(initialValue)
   const { current: origInitialValue } = useRef(initialValue)
   const value = origIsControlled ? controlledValue : internalValue
 
-  // highlight-start
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
       if (origIsControlled !== isControlled) {
@@ -228,7 +216,6 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
       }
     }
   }, [origIsControlled, isControlled, name])
-  // highlight-end
 
   // remaining implementation...
 }
@@ -236,19 +223,16 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
 
 If the `controlledValue` initially was `undefined` (i.e. uncontrolled) and now has a value (aka controlled), that's a problem and likely a developer mistake. It's the same in reverse as well. So we compare the controlled state for this render (`isControlled`) with the original one stored in the ref (`origIsControlled`) to see if it's changed. If it has, we need to warn the developer of the issue **as long as this isn't a production build**.
 
-```js
+```js {4-5,10-18}
 const useControlled = ({ controlledValue, initialValue, name }) => {
   const isControlled = controlledValue !== undefined
   const { current: origIsControlled } = useRef(isControlled)
-  // highlight-start
   const [internalValue, setInternalValue] = useState(initialValue)
   const { current: origInitialValue } = useRef(initialValue)
-  // highlight-end
   const value = origIsControlled ? controlledValue : internalValue
 
   // controlled <-> uncontrolled warning
 
-  // highlight-start
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
       if (!origIsControlled && origInitialValue !== initialValue) {
@@ -258,7 +242,6 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
       }
     }
   }, [origInitialValue, initialValue, name, origIsControlled])
-  // highlight-end
 
   // remaining implementation...
 }
@@ -266,19 +249,17 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
 
 The second warning guards against the `initialValue` changing across re-renders when the component is uncontrolled. This also likely is a developer error. It's less of a problem than switching from controlled to uncontrolled (or vice versa). The `initialValue` changing will have no effect. But if the developer was trying to change the `initialValue`, they likely intended for the component to be controlled.
 
-```js
+```js {6,11-20}
 const useControlled = ({ controlledValue, initialValue, name }) => {
   const isControlled = controlledValue !== undefined
   const { current: origIsControlled } = useRef(isControlled)
   const [internalValue, setInternalValue] = useState(initialValue)
   const { current: origInitialValue } = useRef(initialValue)
-  // highlight-next-line
   const value = origIsControlled ? controlledValue : internalValue
 
   // controlled <-> uncontrolled warning
   // `initialValue` change warning
 
-  // highlight-start
   const setValueIfUncontrolled = useCallback(
     (newValue) => {
       if (!origIsControlled) {
@@ -289,7 +270,6 @@ const useControlled = ({ controlledValue, initialValue, name }) => {
   )
 
   return [value, setValueIfUncontrolled]
-  // highlight-end
 }
 ```
 

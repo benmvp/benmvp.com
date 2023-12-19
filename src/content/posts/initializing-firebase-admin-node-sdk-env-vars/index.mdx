@@ -13,12 +13,11 @@ The [Firebase Admin Node SDK](https://firebase.google.com/docs/admin/setup) is i
 
 In order to initialize the Admin SDK, we first need to generate a private key file from our [Google service account](https://console.firebase.google.com/u/0/project/_/settings/serviceaccounts/adminsdk). We'll get a JSON file containing the private key. It'll look something like this (redacted for obvious reasons):
 
-```json
+```json {5}
 {
   "type": "service_account",
   "project_id": "[PROJECT_ID]",
   "private_key_id": "xxxx",
-  // highlight-next-line
   "private_key": "-----BEGIN PRIVATE KEY-----\n[KEY_IS_HERE]\n-----END PRIVATE KEY-----\n",
   "client_email": "[CLIENT_EMAIL]",
   "client_id": "[CLIENT_ID]",
@@ -76,7 +75,7 @@ The secrets are kept in individual environment variables and bundled into the so
 
 It turns out that the solution for the Admin SDK is a hybrid of the original solution using `admin.credential.cert()` and what we have here for the Web SDK. **Instead of importing a JSON file from the file system to get a JavaScript object to pass to `admin.credential.cert()`, we build one ourselves from environment variables.**
 
-```js
+```js {9-10}
 // Admin SDK
 const admin = require('firebase-admin')
 
@@ -85,10 +84,8 @@ admin.initializeApp({
   credential: admin.credential.cert({
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    // highlight-start
     // replace `\` and `n` character pairs w/ single `\n` character
     privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-    // highlight-end
   }),
 })
 ```
@@ -120,11 +117,10 @@ apps, pass a second argument to initializeApp() to give each app a unique name.
 
 The best solution I've found is to store that default Firebase app on the `global` object and reusing it if it exists.
 
-```js
+```js {4,13-15}
 const admin = require('firebase-admin')
 
 const firebaseApp =
-  // highlight-next-line
   global.firebaseApp ??
   admin.initializeApp({
     credential: admin.credential.cert({
@@ -134,11 +130,9 @@ const firebaseApp =
     }),
   })
 
-// highlight-start
 // store on global object so we can reuse it if we attempt
 // to initialize the app again
 global.firebaseApp = firebaseApp
-// highlight-end
 ```
 
 > The `??` is the [nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) which will only call `admin.initializeApp(...)` if `global.firebaseApp` is `null` or `undefined`.
