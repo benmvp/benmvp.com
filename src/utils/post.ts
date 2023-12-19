@@ -6,7 +6,6 @@ import { serialize } from 'next-mdx-remote/serialize'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrism from 'rehype-prism-plus/all'
 import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
 
 import { readingTime } from 'reading-time-estimator'
 
@@ -80,10 +79,6 @@ export const getPost = async (slug: string): Promise<Post> => {
   const frontMatter = data as PostFrontMatter
   const { compiledSource } = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [
-        // support for GitHub Flavored Markdown (GFM)
-        remarkGfm,
-      ],
       rehypePlugins: [
         // highlight code blocks in HTML with Prism
         [rehypePrism, { showLineNumbers: true }],
