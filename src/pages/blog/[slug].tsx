@@ -4,7 +4,7 @@ import Layout from '../../components/Layout'
 import { Box, Stack } from '@mui/material'
 import PostHeader from '../../components/PostHeader'
 import Seo from '../../components/Seo'
-import { getBlogUrl } from '../../utils/url'
+import { getPostUrl } from '../../utils/url'
 import generateSocialImage from '../../utils/generate-social-image'
 import SITE_CONFIG from '../../config/site'
 import PostFooter from '../../components/PostFooter'
@@ -50,7 +50,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
     wordCount,
   } = post
   const summary = shortDescription || excerpt
-  const url = getBlogUrl(slug)
+  const fullUrl = getPostUrl(slug, true)
   const seoImageUrl = generateSocialImage({
     title,
     tagline: shortDescription ?? undefined,
@@ -62,7 +62,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
       <Seo
         title={title}
         description={summary}
-        url={url}
+        url={fullUrl}
         image={seoImageUrl}
         imageAlt={title}
         type="article"
@@ -106,7 +106,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
 
         <Content compiledSource={compiledSource} slug={slug} />
         <PostFooter
-          url={url}
+          url={fullUrl}
           slug={slug}
           title={title}
           summary={summary}

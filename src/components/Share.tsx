@@ -18,17 +18,17 @@ import SITE_CONFIG from '../config/site'
 type ShareOption = 'twitter' | 'facebook' | 'pocket' | 'linkedin' | 'email'
 
 const DEFAULT_ICON_SIZE = 48
-const DEFAULT_SHARE_OPTIONS = new Set<ShareOption>([
+const DEFAULT_SHARE_OPTIONS: ShareOption[] = [
   'twitter',
   'facebook',
   'pocket',
   'linkedin',
   'email',
-])
+]
 
 interface Props {
   iconSize?: number
-  options?: Set<ShareOption>
+  options?: ShareOption[]
   summary: string
   tags?: string[]
   title: string
@@ -49,6 +49,7 @@ const Share = ({
     utm_medium: 'social',
     utm_campaign: 'share',
   })
+  const shareOptions = new Set(options)
 
   const handleShare = (method: string) => {
     window.gtag?.('event', 'share', {
@@ -67,7 +68,7 @@ const Share = ({
       // justifyContent="center"
       // flexWrap="wrap"
     >
-      {options.has('twitter') && (
+      {shareOptions.has('twitter') && (
         <TwitterShareButton
           url={formatUrl(socialUrl, { utm_source: 'twitter' })}
           title={`${title} - ${summary}`}
@@ -79,7 +80,7 @@ const Share = ({
           <TwitterIcon round size={iconSize} />
         </TwitterShareButton>
       )}
-      {options.has('facebook') && (
+      {shareOptions.has('facebook') && (
         <FacebookShareButton
           url={formatUrl(socialUrl, { utm_source: 'facebook' })}
           quote={`${title} - ${summary}`}
@@ -90,7 +91,7 @@ const Share = ({
           <FacebookShareCount url={url} />
         </FacebookShareButton>
       )}
-      {options.has('pocket') && (
+      {shareOptions.has('pocket') && (
         <PocketShareButton
           url={formatUrl(socialUrl, { utm_source: 'pocket' })}
           title={title}
@@ -100,7 +101,7 @@ const Share = ({
           <PocketIcon round size={iconSize} />
         </PocketShareButton>
       )}
-      {options.has('linkedin') && (
+      {shareOptions.has('linkedin') && (
         <LinkedinShareButton
           url={formatUrl(socialUrl, { utm_source: 'linkedin' })}
           title={title}
@@ -112,7 +113,7 @@ const Share = ({
           <LinkedinIcon round size={iconSize} />
         </LinkedinShareButton>
       )}
-      {options.has('email') && (
+      {shareOptions.has('email') && (
         <EmailShareButton
           url={formatUrl(socialUrl, { utm_source: 'email' })}
           subject={`Check out "${title}"`}

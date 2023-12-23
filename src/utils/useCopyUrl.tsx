@@ -1,3 +1,4 @@
+import { ButtonProps } from '@mui/material'
 import { useState, useEffect, useCallback } from 'react'
 import { formatUrl } from 'url-lib'
 
@@ -33,14 +34,14 @@ const useCopyUrl = (url: string) => {
   }, [trackedUrl])
 
   let copyText = 'Copy URL'
-  let copyButtonColor = 'primary'
+  let copyButtonColor: ButtonProps['color'] = 'primary'
 
   if (copyStatus === 'copied') {
     copyText = 'Copied'
     copyButtonColor = 'secondary'
   } else if (copyStatus === 'failed') {
     copyText = 'Failed!'
-    copyButtonColor = 'default'
+    copyButtonColor = 'error'
   }
 
   return [{ copyText, copyButtonColor }, copy] as const

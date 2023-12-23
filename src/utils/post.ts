@@ -14,12 +14,16 @@ const POSTS_DIRECTORY = resolve(process.cwd(), 'src/content/posts')
 interface PostFrontMatter {
   [key: string]: any
 
-  category: string | null
-  hero: string | null
-  heroAlt: string | null
-  heroCredit: string | null
-  shortDescription: string | null
-  tags: string[] | null
+  category: string
+  /**
+   * URL to the hero image
+   */
+  hero: string
+  heroAlt: string
+  heroCredit: string
+  published: boolean
+  shortDescription: string
+  tags: string[]
   title: string
 }
 
@@ -64,12 +68,6 @@ export const getAllPostSlugs = async () => {
   return await readdir(POSTS_DIRECTORY)
 }
 
-export const getAllPosts = async () => {
-  const slugs = await getAllPostSlugs()
-
-  return slugs.map(getPost)
-}
-
 export const getPost = async (slug: string): Promise<Post> => {
   const slugPath = resolve(POSTS_DIRECTORY, slug)
   const postPath = resolve(slugPath, 'index.mdx')
@@ -91,7 +89,6 @@ export const getPost = async (slug: string): Promise<Post> => {
       ],
     },
   })
-
   const { words: wordCount, minutes: timeToRead } = readingTime(content)
 
   return {
@@ -101,15 +98,94 @@ export const getPost = async (slug: string): Promise<Post> => {
     excerpt: excerpt as string,
 
     // properties have to be `null` if they don't exist in order for them to be serialized to JSON with `getStaticProps`
-    category: frontMatter.category ?? null,
+    category: frontMatter.category ?? '',
     date: (frontMatter.date as Date).toISOString(),
-    hero: frontMatter.hero ?? null,
-    heroAlt: frontMatter.heroAlt ?? null,
-    heroCredit: frontMatter.heroCredit ?? null,
-    shortDescription: frontMatter.shortDescription ?? null,
-    tags: Array.isArray(frontMatter.tags) ? frontMatter.tags : null,
+    hero: frontMatter.hero ? `/images/posts/${slug}/${frontMatter.hero}` : '',
+    heroAlt: frontMatter.heroAlt ?? '',
+    heroCredit: frontMatter.heroCredit ?? '',
+    published: frontMatter.published !== false,
+    shortDescription: frontMatter.shortDescription ?? '',
+    tags: Array.isArray(frontMatter.tags) ? frontMatter.tags : [],
     timeToRead,
     title: frontMatter.title,
     wordCount,
   }
+}
+
+interface GetPostsOptions {
+  /**
+   * How to filter the posts
+   */
+  filter?: {
+    /**
+     * Whether to return only published posts, only unpublished posts, or all posts
+     * @default true
+     */
+    published?: boolean | 'all'
+  }
+
+  /**
+   * The number of posts to return
+   */
+  size?: number
+
+  /**
+   * The page of posts to return
+   * @default 1
+   */
+  page?: number
+
+  /**
+   * The property to sort by
+   * @default 'date'
+   */
+  sortBy?: 'date' | 'title'
+
+  /**
+   * The order to sort by
+   * @default 'desc'
+   */
+  sortOrder?: 'asc' | 'desc'
+}
+
+/**
+ * Get all the posts, optionally filtered and sorted
+ * @param param0
+ * @returns
+ */
+export const getPosts = async ({
+  filter = {},
+  page = 1,
+  size = -1,
+  sortBy = 'date',
+  sortOrder = 'desc',
+}: GetPostsOptions = {}) => {
+  const slugs = await getAllPostSlugs()
+  const allPosts = await Promise.all(slugs.map(getPost))
+
+  const pageIndex = page - 1
+  const displaySize = size === -1 ? allPosts.length : size
+
+  const posts = allPosts
+    .filter((post) => {
+      const { published = true } = filter
+
+      return published === 'all' || published === post.published
+    })
+    .sort((postA, postB) => {
+      const direction = sortOrder === 'asc' ? 1 : -1
+
+      if (sortBy === 'date') {
+        return direction * (postA.date > postB.date ? 1 : -1)
+      }
+
+      if (sortBy === 'title') {
+        return direction * (postA.title > postB.title ? 1 : -1)
+      }
+
+      return 0
+    })
+    .slice(pageIndex * displaySize, pageIndex * displaySize + displaySize)
+
+  return posts
 }
