@@ -8,6 +8,7 @@ import rehypePrism from 'rehype-prism-plus/all'
 import rehypeSlug from 'rehype-slug'
 
 import { readingTime } from 'reading-time-estimator'
+import { paginate, sortByDate } from './data'
 
 const POSTS_DIRECTORY = resolve(process.cwd(), 'src/content/posts')
 
@@ -163,29 +164,19 @@ export const getPosts = async ({
   const slugs = await getAllPostSlugs()
   const allPosts = await Promise.all(slugs.map(getPost))
 
-  const pageIndex = page - 1
-  const displaySize = size === -1 ? allPosts.length : size
+  const posts = paginate(
+    sortByDate(
+      allPosts.filter((post) => {
+        const { published = true } = filter
 
-  const posts = allPosts
-    .filter((post) => {
-      const { published = true } = filter
-
-      return published === 'all' || published === post.published
-    })
-    .sort((postA, postB) => {
-      const direction = sortOrder === 'asc' ? 1 : -1
-
-      if (sortBy === 'date') {
-        return direction * (postA.date > postB.date ? 1 : -1)
-      }
-
-      if (sortBy === 'title') {
-        return direction * (postA.title > postB.title ? 1 : -1)
-      }
-
-      return 0
-    })
-    .slice(pageIndex * displaySize, pageIndex * displaySize + displaySize)
+        return published === 'all' || published === post.published
+      }),
+      sortBy,
+      sortOrder,
+    ),
+    page,
+    size,
+  )
 
   return posts
 }

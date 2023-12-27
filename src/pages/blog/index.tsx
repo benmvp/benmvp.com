@@ -14,8 +14,6 @@ interface Props {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await getPosts()
 
-  console.log(posts.length)
-
   return {
     props: { posts },
   }
@@ -45,4 +43,5 @@ const BlogListPage = ({ posts }: Props) => (
     </Grid>
   </Layout>
 )
+
 export default BlogListPage

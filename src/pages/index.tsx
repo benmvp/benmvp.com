@@ -5,15 +5,14 @@ import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
 import { getEngagements } from '../config/speaking-engagements'
 import { getUrl } from '../utils/url'
-import { getVideos } from '../utils/video'
+import { Video, getVideos } from '../utils/video'
 import { Post, getPosts } from '../utils/post'
 import Link from '../components/Link'
+import VideoCard from '../components/VideoCard'
 
 const UPCOMING_ENGAGEMENTS = getEngagements()
   .future.filter(({ isCancelled }) => !isCancelled)
   .slice(0, 2)
-
-const RECENT_VIDEOS = getVideos().slice(0, 2)
 
 const PostCardList = ({ posts }: { posts: Post[] }) => {
   return (
@@ -38,21 +37,46 @@ const PostCardList = ({ posts }: { posts: Post[] }) => {
   )
 }
 
+const VideoCardList = ({ videos }: { videos: Video[] }) => {
+  return (
+    <Grid container spacing={2}>
+      {videos.map((video) => (
+        <Grid key={video.id} item xs={12} lg={6}>
+          <VideoCard video={video} mode="min" />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href="/videos/" variant="h6">
+            View all videos &gt;
+          </Link>
+        </Box>
+      </Grid>
+    </Grid>
+  )
+}
+
 interface Props {
-  posts: Post[]
+  recentPosts: Post[]
+  recentVideos: Video[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = await getPosts({
+  const recentPosts = await getPosts({
     size: 6,
   })
+  const recentVideos = getVideos({ size: 2 })
 
   return {
-    props: { posts },
+    props: { recentPosts, recentVideos },
   }
 }
 
-const HomePage = ({ posts }: Props) => {
+const HomePage = ({ recentPosts, recentVideos }: Props) => {
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl('/', true)} />
@@ -66,7 +90,19 @@ const HomePage = ({ posts }: Props) => {
         >
           Read
         </Typography>
-        <PostCardList posts={posts} />
+        <PostCardList posts={recentPosts} />
+      </Box>
+
+      <Box component="section" mt={3}>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          aria-label="Watch Ben's most recent tech talk video"
+        >
+          Watch
+        </Typography>
+        <VideoCardList videos={recentVideos} />
       </Box>
     </Layout>
   )

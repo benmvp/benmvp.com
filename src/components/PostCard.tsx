@@ -13,6 +13,7 @@ import useCopyUrl from '../utils/useCopyUrl'
 import Share from './Share'
 import Link from './Link'
 import { Post } from '../utils/post'
+import { formatDate } from '../utils/date'
 
 interface Props {
   mode?: 'min' | 'full'
@@ -29,7 +30,7 @@ const PostCard = ({ mode = 'full', post }: Props) => {
 
   return (
     <Card id={slug}>
-      <CardActionArea href="">
+      <CardActionArea>
         <Link href={getPostUrl(slug)} underline="none">
           {hero && (
             <CardMedia
@@ -47,7 +48,7 @@ const PostCard = ({ mode = 'full', post }: Props) => {
                 color="textSecondary"
                 component="h4"
               >
-                {date}
+                {formatDate(date)}
               </Typography>
             )}
             <Typography
@@ -78,7 +79,7 @@ const PostCard = ({ mode = 'full', post }: Props) => {
             tags={tags ?? undefined}
             title={title}
             url={fullUrl}
-            options={['twitter', 'facebook']}
+            options={['twitter', 'facebook', 'pocket']}
             type="post"
           />
         </CardActions>

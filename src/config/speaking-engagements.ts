@@ -48,6 +48,29 @@ interface SourceEngagement {
 
 const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'The Modern Web Podcast',
+    url: 'https://www.thisdot.co/',
+    location: 'Remote',
+    talks: [
+      {
+        title:
+          'Unlock the Power of DivOps Engineering with Ben Ilegbodu and Jonathan Creamer',
+        date: '11/15/2023',
+        categories: ['DivOps'],
+        links: [
+          {
+            label: 'Podcast',
+            url: 'https://modernweb.podbean.com/e/modern-web-podcast-s11e13-unlock-the-power-of-divops-engineering-with-ben-ilegbodu-and-jonathan-creamer/',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=6MmuBj22vx0',
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'Connect.Tech 2023',
     url: 'https://2023.connect.tech/',
     location: 'Atlanta, Georgia',
@@ -55,7 +78,15 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     talks: [
       {
         id: 'divops',
-        date: '10/25/2023',
+        date: '10/26/2023',
+        time: '9:00a',
+        room: 'Main stage',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://slides.benmvp.com/2023/connecttech/divops.html',
+          },
+        ],
       },
     ],
   },
@@ -69,6 +100,13 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         id: 'nextjs-rendering',
         date: '10/17/2023',
         time: '2:45p',
+        room: 'Developer 1, Ballroom B',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://slides.benmvp.com/2023/ato/nextjs.html',
+          },
+        ],
       },
     ],
   },
@@ -106,6 +144,10 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Slides',
             url: 'https://slides.benmvp.com/2023/seattlejs/nextjs.html',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=JZIB8qrCers',
           },
         ],
       },
@@ -2284,14 +2326,12 @@ export const getEngagements = () => {
   )
 
   const future = all
-    .filter(
-      ({ talks }) =>
-        talks?.some(({ date }) => isFuture(addDays(Date.parse(date), 1))),
+    .filter(({ talks }) =>
+      talks?.some(({ date }) => isFuture(addDays(Date.parse(date), 1))),
     )
     .reverse()
-  const past = all.filter(
-    ({ talks }) =>
-      talks?.some(({ date }) => isPast(addDays(Date.parse(date), 1))),
+  const past = all.filter(({ talks }) =>
+    talks?.some(({ date }) => isPast(addDays(Date.parse(date), 1))),
   )
 
   return { all, future, past }
