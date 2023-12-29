@@ -7,12 +7,14 @@ export const sortByDate = <I extends Item>(
   items: I[],
   sortBy = 'date',
   sortOrder = 'desc',
-) =>
+): I[] =>
   items.sort((itemA, itemB) => {
     const direction = sortOrder === 'asc' ? 1 : -1
 
     if (sortBy === 'date') {
-      return direction * (Date.parse(itemA.date) > Date.parse(itemB.date) ? 1 : -1)
+      return (
+        direction * (Date.parse(itemA.date) > Date.parse(itemB.date) ? 1 : -1)
+      )
     }
 
     if (sortBy === 'title') {
@@ -22,7 +24,7 @@ export const sortByDate = <I extends Item>(
     return 0
   })
 
-export const paginate = <I extends Item>(items: I[], page = 1, size = -1) => {
+export const paginate = <T>(items: T[], page = 1, size = -1): T[] => {
   const pageIndex = page - 1
   const displaySize = size === -1 ? items.length : size
 

@@ -43,8 +43,8 @@ const VideoListPage = ({ videos }: Props) => {
       </Typography>
 
       {videos.map((video) => (
-        <Box mt={3} mx="auto" key={video.id}>
-          <VideoCard video={video} mode="full" />
+        <Box key={video.id}>
+          <VideoCard video={video} mode="full" sx={{ mt: 3, mx: 'auto' }} />
         </Box>
       ))}
     </Layout>

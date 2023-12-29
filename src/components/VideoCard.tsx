@@ -5,6 +5,7 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  CardProps,
   Collapse,
   IconButton,
   Typography,
@@ -16,10 +17,11 @@ import { type Video } from '../utils/video'
 
 interface Props {
   mode: 'min' | 'full'
+  sx?: CardProps['sx']
   video: Video
 }
 
-const VideoCard = ({ mode = 'full', video }: Props) => {
+const VideoCard = ({ mode = 'full', sx, video }: Props) => {
   const { id, title, url, engagement, date, description, srcEmbed } = video
   const [expanded, setExpanded] = useState(false)
 
@@ -42,7 +44,7 @@ const VideoCard = ({ mode = 'full', video }: Props) => {
   }
 
   return (
-    <Card id={id} variant="outlined" sx={{ maxWidth: 800 }}>
+    <Card id={id} variant="outlined" sx={{ maxWidth: '800px', ...sx }}>
       <CardMedia
         component="iframe"
         sx={{ minHeight: 300, height: 'min(450px, min(800px, 100vw / 1.5))' }}
