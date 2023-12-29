@@ -1,4 +1,4 @@
-import { getEngagements } from '../config/speaking-engagements'
+import { getEngagements } from './engagement'
 import { paginate, sortByDate } from './data'
 
 type Provider = 'youtube' | 'vimeo'
@@ -74,7 +74,7 @@ export const getVideos = ({
   sortOrder = 'desc',
 }: GetVideoOptions = {}): Video[] => {
   const videos = getEngagements()
-    .all.map((engagement): Video | undefined => {
+    .map((engagement): Video | undefined => {
       const talkWithVideo = engagement.talks.find(({ links }) =>
         links?.some(({ label }) => label === 'Video'),
       )

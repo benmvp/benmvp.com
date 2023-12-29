@@ -1,7 +1,4 @@
-import slugify from 'slugify'
-import { formatDate } from '../utils/date'
-import TALKS, { type Talk, type TalkId } from './talks'
-import { isFuture, isPast, differenceInMilliseconds, addDays } from 'date-fns'
+import { type TalkId } from './talks'
 
 type TalkLinkLabel =
   | 'Blog post'
@@ -13,7 +10,7 @@ type TalkLinkLabel =
   | 'Workshop code'
   | 'Workshop repo'
 
-interface TalkLink {
+export interface TalkLink {
   label: TalkLinkLabel
   url: string
 }
@@ -29,7 +26,7 @@ interface TitledSourceTalk {
 
 type BaseSourceTalk = IdentifiedSourceTalk | TitledSourceTalk
 
-type SourceTalk = BaseSourceTalk & {
+export type SourceTalk = BaseSourceTalk & {
   categories?: string[]
   date: string
   room?: string
@@ -37,7 +34,7 @@ type SourceTalk = BaseSourceTalk & {
   links?: TalkLink[]
 }
 
-interface SourceEngagement {
+export interface SourceEngagement {
   isCancelled?: boolean
   location: string
   name: string
@@ -46,7 +43,7 @@ interface SourceEngagement {
   venue?: string
 }
 
-const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
+export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
     name: 'The Modern Web Podcast',
     url: 'https://www.thisdot.co/',
@@ -246,7 +243,7 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     ],
   },
   {
-    name: 'Global React Meetup',
+    name: 'Global React Meetup April 2022',
     url: 'https://www.reactjsmeetup.com/archive/state-of-react-or-april-2022',
     location: 'Remote',
     talks: [
@@ -325,7 +322,7 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     ],
   },
   {
-    name: 'Global React Meetup',
+    name: 'Global React Meetup September 2021',
     url: 'https://www.reactjsmeetup.com/archive/react-contributor-days-september-2021',
     location: 'Remote',
     talks: [
@@ -2279,60 +2276,3 @@ const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     ],
   },
 ]
-
-export interface EngagementTalk extends Partial<Talk> {
-  date: string
-  id?: TalkId
-  links?: TalkLink[]
-  room?: SourceTalk['room']
-  time?: SourceTalk['time']
-  title: string
-}
-
-export interface SpeakingEngagement {
-  id: string
-  isCancelled?: SourceEngagement['isCancelled']
-  name: SourceEngagement['name']
-  location: SourceEngagement['location']
-  talks: EngagementTalk[]
-  url: SourceEngagement['url']
-  venue?: SourceEngagement['venue']
-}
-
-export const getEngagements = () => {
-  const all = SPEAKING_ENGAGEMENTS.map(
-    (sourceEngagement): SpeakingEngagement => ({
-      ...sourceEngagement,
-      id: slugify(sourceEngagement.name),
-      talks: sourceEngagement.talks.map((sourceTalk): EngagementTalk => {
-        const title = sourceTalk.id
-          ? TALKS[sourceTalk.id].title
-          : sourceTalk.title
-
-        return {
-          ...(sourceTalk.id ? TALKS[sourceTalk.id] : {}),
-          id: sourceTalk.id,
-          ...sourceTalk,
-          date: formatDate(sourceTalk.date, 'normal'),
-          title,
-        }
-      }),
-    }),
-  ).sort((engagementA, engagementB) =>
-    differenceInMilliseconds(
-      Date.parse(engagementB?.talks?.[0].date),
-      Date.parse(engagementA?.talks?.[0].date),
-    ),
-  )
-
-  const future = all
-    .filter(({ talks }) =>
-      talks?.some(({ date }) => isFuture(addDays(Date.parse(date), 1))),
-    )
-    .reverse()
-  const past = all.filter(({ talks }) =>
-    talks?.some(({ date }) => isPast(addDays(Date.parse(date), 1))),
-  )
-
-  return { all, future, past }
-}

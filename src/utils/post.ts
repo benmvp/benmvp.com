@@ -151,8 +151,6 @@ interface GetPostsOptions {
 
 /**
  * Get all the posts, optionally filtered and sorted
- * @param param0
- * @returns
  */
 export const getPosts = async ({
   filter = {},

@@ -3,16 +3,38 @@ import { Box, Grid, Typography } from '@mui/material'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
-import { getEngagements } from '../config/speaking-engagements'
+import { type SpeakingEngagement, getEngagements } from '../utils/engagement'
 import { getUrl } from '../utils/url'
 import { Video, getVideos } from '../utils/video'
 import { Post, getPosts } from '../utils/post'
 import Link from '../components/Link'
 import VideoCard from '../components/VideoCard'
+import SpeakCard from '../components/SpeakCard'
 
-const UPCOMING_ENGAGEMENTS = getEngagements()
-  .future.filter(({ isCancelled }) => !isCancelled)
-  .slice(0, 2)
+const SpeakCardList = ({
+  engagements,
+}: {
+  engagements: SpeakingEngagement[]
+}) => (
+  <Grid container spacing={2}>
+    {engagements.map((engagement) => (
+      <Grid key={engagement.id} item xs={12} md={6}>
+        <SpeakCard engagement={engagement} mode="min" />
+      </Grid>
+    ))}
+    <Grid item xs={12}>
+      <Box
+        display="flex"
+        justifyContent={{ xs: 'center', sm: 'flex-end' }}
+        width="100%"
+      >
+        <Link href="/speak/" variant="h6">
+          View all speaking engagements &gt;
+        </Link>
+      </Box>
+    </Grid>
+  </Grid>
+)
 
 const PostCardList = ({ posts }: { posts: Post[] }) => {
   return (
@@ -42,7 +64,7 @@ const VideoCardList = ({ videos }: { videos: Video[] }) => {
     <Grid container spacing={2}>
       {videos.map((video) => (
         <Grid key={video.id} item xs={12} lg={6}>
-          <VideoCard video={video} mode="min" />
+          <VideoCard video={video} mode="min" sx={{ mx: 'auto' }} />
         </Grid>
       ))}
       <Grid item xs={12}>
@@ -61,6 +83,7 @@ const VideoCardList = ({ videos }: { videos: Video[] }) => {
 }
 
 interface Props {
+  futureEngagements: SpeakingEngagement[]
   recentPosts: Post[]
   recentVideos: Video[]
 }
@@ -70,13 +93,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     size: 6,
   })
   const recentVideos = getVideos({ size: 2 })
+  const futureEngagements = getEngagements({
+    size: 2,
+    filter: { when: 'future' },
+    sortOrder: 'asc',
+  })
 
   return {
-    props: { recentPosts, recentVideos },
+    props: { futureEngagements, recentPosts, recentVideos },
   }
 }
 
-const HomePage = ({ recentPosts, recentVideos }: Props) => {
+const HomePage = ({ futureEngagements, recentPosts, recentVideos }: Props) => {
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl('/', true)} />
@@ -104,6 +132,20 @@ const HomePage = ({ recentPosts, recentVideos }: Props) => {
         </Typography>
         <VideoCardList videos={recentVideos} />
       </Box>
+
+      {futureEngagements.length > 0 && (
+        <Box component="section" mt={3}>
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Attend one of Ben's future tech talks"
+          >
+            Attend
+          </Typography>
+          <SpeakCardList engagements={futureEngagements} />
+        </Box>
+      )}
     </Layout>
   )
 }
