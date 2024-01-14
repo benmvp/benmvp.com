@@ -26,7 +26,7 @@ const VideoListPage = ({ videos }: Props) => {
   return (
     <Layout maxWidth="lg">
       <Seo
-        url={getUrl('videos')}
+        url={getUrl('videos', true)}
         title={PAGE_TITLE}
         description="Watch videos of some of Ben Ilegbodu's past tech talks to keep up to date with the latest in React and frontend web development best practices."
       />

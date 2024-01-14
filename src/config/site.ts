@@ -3,7 +3,7 @@ const url = process.env.VERCEL_URL || 'https://www.benmvp.com'
 const SITE_CONFIG = {
   title: 'Ben Ilegbodu',
   url,
-  image: '/ben-ilegbodu.png',
+  image: '/images/ben-ilegbodu.png',
   description:
     'Ben Ilegbodu uses his many years of frontend development experience to provide quality content to help you become a better frontend engineer.',
   keywords: [

@@ -39,7 +39,7 @@ const SpeakingEngagementListPage = ({ upcoming, past }: Props) => {
   return (
     <Layout>
       <Seo
-        url={getUrl('speak')}
+        url={getUrl('speak', true)}
         title={PAGE_TITLE}
         description="Check out Ben Ilegbodu's upcoming and previous speaking engagements for React and frontend web development. The links to videos and slides should help you keep up to date with the latest best practices."
         image={getUrl('images/speak-seo.png')}

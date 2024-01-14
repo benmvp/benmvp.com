@@ -22,7 +22,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const BlogListPage = ({ posts }: Props) => (
   <Layout maxWidth="lg">
     <Seo
-      url={getPostUrl()}
+      url={getPostUrl('', true)}
       title="Blog"
       description="Browse through Ben Ilegbodu's blog posts to learn more about React and other frontend topics"
       schemaOrg={{

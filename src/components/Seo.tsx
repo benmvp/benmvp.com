@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import SITE_CONFIG from '../config/site'
 import { useTheme } from '@mui/material'
+import { getUrl } from '../utils/url'
 
 type Meta =
   | { property: string; content: string; name?: undefined }
@@ -31,7 +32,7 @@ const Seo = ({
   const { palette } = useTheme()
 
   const metaDescription = description || SITE_CONFIG.description
-  const metaImage = image || SITE_CONFIG.image
+  const metaImage = image || getUrl(SITE_CONFIG.image, true)
   const metaImageFull = metaImage.startsWith('http')
     ? metaImage
     : `${SITE_CONFIG.url}${metaImage}`

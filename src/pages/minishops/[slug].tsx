@@ -103,7 +103,7 @@ const Minishop = ({ minishop, others }: Props) => {
     tags,
     title,
   } = minishop
-  const url = getMinishopUrl(slug)
+  const fullUrl = getMinishopUrl(slug, true)
   const fullTitle = `${title} Minishop`
   const summary = shortDescription || excerpt
   const seoImageUrl = generateSocialImage({
@@ -127,7 +127,7 @@ const Minishop = ({ minishop, others }: Props) => {
     <Layout>
       <Seo
         title={`${fullTitle}/Workshop`}
-        url={url}
+        url={fullUrl}
         description={summary}
         image={seoImageUrl}
         imageAlt={fullTitle}
@@ -147,12 +147,12 @@ const Minishop = ({ minishop, others }: Props) => {
           educationLevel: level,
           location: {
             '@type': 'VirtualLocation',
-            url,
+            url: fullUrl,
           },
           organizer: {
             '@type': 'Person',
             name: SITE_CONFIG.author,
-            url: getUrl('', true),
+            url: fullUrl,
           },
           teaches: category,
           ...(eventStart && eventEnd
@@ -178,7 +178,7 @@ const Minishop = ({ minishop, others }: Props) => {
 
         <Box component="footer">
           <Share
-            url={url}
+            url={fullUrl}
             title={`${fullTitle} by Ben Ilegbodu`}
             summary={summary}
             tags={tags}
