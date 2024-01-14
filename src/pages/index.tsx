@@ -1,15 +1,57 @@
+import { useEffect } from 'react'
 import { type GetStaticProps } from 'next'
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Grid, Stack, Typography } from '@mui/material'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
 import { type SpeakingEngagement, getEngagements } from '../utils/engagement'
-import { getUrl } from '../utils/url'
+import { getMinishopUrl, getUrl } from '../utils/url'
 import { Video, getVideos } from '../utils/video'
 import { Post, getPosts } from '../utils/post'
 import Link from '../components/Link'
 import VideoCard from '../components/VideoCard'
 import SpeakCard from '../components/SpeakCard'
+import { Minishop, getMinishops } from '../utils/minishop'
+import MinishopCard from '../components/MinishopCard'
+
+const MinishopCardList = ({ minishops }: { minishops: Minishop[] }) => {
+  useEffect(() => {
+    if (minishops.length) {
+      window.gtag?.('event', 'view_item_list', {
+        items: minishops
+          .filter((minishop) => minishop.isUpcoming)
+          .map((minishop, index) => ({
+            id: minishop.slug,
+            name: minishop.title,
+            list_name: 'Home',
+            list_position: index + 1,
+            price: 100,
+          })),
+      })
+    }
+  }, [minishops])
+
+  return (
+    <Grid container spacing={2}>
+      {minishops.map((minishop) => (
+        <Grid key={minishop.slug} item xs={12} lg={6}>
+          <MinishopCard mode="min" minishop={minishop} />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href={getMinishopUrl()} variant="h6" underline="hover">
+            View all minishops &gt;
+          </Link>
+        </Box>
+      </Grid>
+    </Grid>
+  )
+}
 
 const SpeakCardList = ({
   engagements,
@@ -28,7 +70,7 @@ const SpeakCardList = ({
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href="/speak/" variant="h6">
+        <Link href={getUrl('/speak/')} variant="h6" underline="hover">
           View all speaking engagements &gt;
         </Link>
       </Box>
@@ -50,7 +92,7 @@ const PostCardList = ({ posts }: { posts: Post[] }) => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href={getUrl('/blog/')} variant="h6">
+          <Link href={getUrl('/blog/')} variant="h6" underline="hover">
             View all posts &gt;
           </Link>
         </Box>
@@ -73,7 +115,7 @@ const VideoCardList = ({ videos }: { videos: Video[] }) => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href="/videos/" variant="h6">
+          <Link href={getUrl('/videos/')} variant="h6" underline="hover">
             View all videos &gt;
           </Link>
         </Box>
@@ -83,9 +125,10 @@ const VideoCardList = ({ videos }: { videos: Video[] }) => {
 }
 
 interface Props {
-  futureEngagements: SpeakingEngagement[]
+  minishops: Minishop[]
   recentPosts: Post[]
   recentVideos: Video[]
+  upcomingEngagements: SpeakingEngagement[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -93,59 +136,90 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     size: 6,
   })
   const recentVideos = getVideos({ size: 2 })
-  const futureEngagements = getEngagements({
+  const upcomingEngagements = getEngagements({
     size: 2,
-    filter: { when: 'future' },
+    filter: { when: 'upcoming' },
     sortOrder: 'asc',
   })
+  let minishops = await getMinishops({
+    size: 4,
+    filter: { when: 'upcoming' },
+  })
+
+  if (minishops.length === 0) {
+    minishops = await getMinishops({
+      size: 4,
+      filter: { when: 'remaining' },
+      sortBy: 'title',
+    })
+  }
 
   return {
-    props: { futureEngagements, recentPosts, recentVideos },
+    props: { minishops, upcomingEngagements, recentPosts, recentVideos },
   }
 }
 
-const HomePage = ({ futureEngagements, recentPosts, recentVideos }: Props) => {
+const HomePage = ({
+  minishops,
+  recentPosts,
+  recentVideos,
+  upcomingEngagements,
+}: Props) => {
   return (
     <Layout masthead maxWidth="lg">
       <Seo url={getUrl('/', true)} />
 
-      <Box component="section" mt={3}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Read some of Ben's recent blog posts"
-        >
-          Read
-        </Typography>
-        <PostCardList posts={recentPosts} />
-      </Box>
-
-      <Box component="section" mt={3}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Watch Ben's most recent tech talk video"
-        >
-          Watch
-        </Typography>
-        <VideoCardList videos={recentVideos} />
-      </Box>
-
-      {futureEngagements.length > 0 && (
-        <Box component="section" mt={3}>
+      <Stack spacing={3} direction="column" mt={3}>
+        <Box component="section">
           <Typography
             variant="h3"
             component="h2"
             gutterBottom
-            aria-label="Attend one of Ben's future tech talks"
+            aria-label="Read some of Ben's recent blog posts"
           >
-            Attend
+            Read
           </Typography>
-          <SpeakCardList engagements={futureEngagements} />
+          <PostCardList posts={recentPosts} />
         </Box>
-      )}
+
+        <Box component="section">
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Watch Ben's most recent tech talk video"
+          >
+            Watch
+          </Typography>
+          <VideoCardList videos={recentVideos} />
+        </Box>
+
+        {upcomingEngagements.length > 0 && (
+          <Box component="section">
+            <Typography
+              variant="h3"
+              component="h2"
+              gutterBottom
+              aria-label="Attend one of Ben's upcoming tech talks"
+            >
+              Attend
+            </Typography>
+            <SpeakCardList engagements={upcomingEngagements} />
+          </Box>
+        )}
+
+        <Box component="section">
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Join one of Ben's upcoming minishops"
+          >
+            Develop
+          </Typography>
+          <MinishopCardList minishops={minishops} />
+        </Box>
+      </Stack>
     </Layout>
   )
 }

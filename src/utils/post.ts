@@ -1,21 +1,12 @@
 import { resolve } from 'path'
 import { readFile, readdir } from 'fs-extra'
-import matter from 'gray-matter'
-import { serialize } from 'next-mdx-remote/serialize'
-
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypePrism from 'rehype-prism-plus/all'
-import rehypeSlug from 'rehype-slug'
-
-import { readingTime } from 'reading-time-estimator'
-import { paginate, sortByDate } from './data'
+import { paginate, parseMdx, sortByDate } from './data'
 
 const POSTS_DIRECTORY = resolve(process.cwd(), 'src/content/posts')
 
 interface PostFrontMatter {
-  [key: string]: any
-
   category: string
+  date: Date
   /**
    * URL to the hero image
    */
@@ -28,12 +19,7 @@ interface PostFrontMatter {
   title: string
 }
 
-export interface Post extends PostFrontMatter {
-  /**
-   * Markdown content w/o the front matter
-   */
-  content: string
-
+export interface Post extends Omit<PostFrontMatter, 'date'> {
   /**
    * The compiled source, generated from `next-mdx-remote/serialize`
    */
@@ -48,6 +34,11 @@ export interface Post extends PostFrontMatter {
    * An excerpt from the `content`
    */
   excerpt: string
+
+  /**
+   * Markdown content w/o the front matter
+   */
+  mainContent: string
 
   /**
    * The post's slug (unique identifier)
@@ -74,33 +65,23 @@ export const getPost = async (slug: string): Promise<Post> => {
   const postPath = resolve(slugPath, 'index.mdx')
   const rawContents = await readFile(postPath, { encoding: 'utf-8' })
 
-  const { data, content, excerpt } = matter(rawContents, { excerpt: true })
-  const frontMatter = data as PostFrontMatter
-  const { compiledSource } = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [
-        // highlight code blocks in HTML with Prism
-        [rehypePrism, { showLineNumbers: true }],
-
-        // add IDs to headings for linking
-        rehypeSlug,
-
-        // add links to headings
-        rehypeAutolinkHeadings,
-      ],
-    },
-  })
-  const { words: wordCount, minutes: timeToRead } = readingTime(content)
+  const {
+    compiledSource,
+    frontMatter,
+    excerpt,
+    mainContent,
+    timeToRead,
+    wordCount,
+  } = await parseMdx<PostFrontMatter>(rawContents)
 
   return {
     slug,
-    content,
+    mainContent,
     compiledSource,
     excerpt: excerpt as string,
 
-    // properties have to be `null` if they don't exist in order for them to be serialized to JSON with `getStaticProps`
     category: frontMatter.category ?? '',
-    date: (frontMatter.date as Date).toISOString(),
+    date: frontMatter.date.toISOString(),
     hero: frontMatter.hero ? `/images/posts/${slug}/${frontMatter.hero}` : '',
     heroAlt: frontMatter.heroAlt ?? '',
     heroCredit: frontMatter.heroCredit ?? '',
@@ -158,7 +139,7 @@ export const getPosts = async ({
   size = -1,
   sortBy = 'date',
   sortOrder = 'desc',
-}: GetPostsOptions = {}) => {
+}: GetPostsOptions = {}): Promise<Post[]> => {
   const slugs = await getAllPostSlugs()
   const allPosts = await Promise.all(slugs.map(getPost))
 

@@ -10,34 +10,31 @@ import SpeakCard from '../../components/SpeakCard'
 import { type SpeakingEngagement, getEngagements } from '../../utils/engagement'
 import { getDateYear } from '../../utils/date'
 import { getUrl } from '../../utils/url'
-import speakImage from '../../components/images/reactathon.png'
+import speakImage from '../../components/images/speak-hero.png'
 
 interface Props {
-  futureEngagements: SpeakingEngagement[]
-  pastEngagements: SpeakingEngagement[]
+  upcoming: SpeakingEngagement[]
+  past: SpeakingEngagement[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const futureEngagements = getEngagements({
-    filter: { when: 'future' },
+  const upcoming = getEngagements({
+    filter: { when: 'upcoming' },
     sortOrder: 'asc',
   })
-  const pastEngagements = getEngagements({
+  const past = getEngagements({
     filter: { when: 'past' },
   })
 
   return {
-    props: { futureEngagements, pastEngagements },
+    props: { upcoming, past },
   }
 }
 
 const PAGE_TITLE = 'Speaking Engagements'
 
-const SpeakingEngagementListPage = ({
-  futureEngagements,
-  pastEngagements,
-}: Props) => {
-  let curYear = getDateYear(pastEngagements[0].talks[0].date) + 1
+const SpeakingEngagementListPage = ({ upcoming, past }: Props) => {
+  let curYear = getDateYear(past[0].talks[0].date) + 1
 
   return (
     <Layout>
@@ -45,7 +42,7 @@ const SpeakingEngagementListPage = ({
         url={getUrl('speak')}
         title={PAGE_TITLE}
         description="Check out Ben Ilegbodu's upcoming and previous speaking engagements for React and frontend web development. The links to videos and slides should help you keep up to date with the latest best practices."
-        image={getUrl('reactathon.png')}
+        image={getUrl('images/speak-seo.png')}
       />
       <Box mb={5}>
         <PageHeader
@@ -66,9 +63,9 @@ const SpeakingEngagementListPage = ({
         make them a better developer.
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        If you're interested in having me speak to or hold a workshop with your
-        group, thank you! It means a lot that you entrust me with with leveling
-        up your group. Please feel free to contact me via{' '}
+        If you&apos;re interested in having me speak to or hold a workshop with
+        your group, thank you! It means a lot that you entrust me with with
+        leveling up your group. Please feel free to contact me via{' '}
         <a
           href="https://twitter.com/benmvp"
           target="_blank"
@@ -80,7 +77,7 @@ const SpeakingEngagementListPage = ({
         <Link href="/ama/">my AMA</Link>.
       </Typography>
 
-      {futureEngagements.length > 0 && (
+      {upcoming.length > 0 && (
         <>
           <Grid container spacing={2}>
             <Grid item xs={12} mt={3}>
@@ -89,7 +86,7 @@ const SpeakingEngagementListPage = ({
               </Typography>
             </Grid>
 
-            {futureEngagements.map((engagement) => (
+            {upcoming.map((engagement) => (
               <Grid key={engagement.id} item xs={12}>
                 <SpeakCard engagement={engagement} />
               </Grid>
@@ -103,7 +100,7 @@ const SpeakingEngagementListPage = ({
       )}
 
       <Grid container spacing={2}>
-        {pastEngagements.map((engagement) => {
+        {past.map((engagement) => {
           const engagementYear = getDateYear(engagement.talks[0].date)
           let dateDisplay
 

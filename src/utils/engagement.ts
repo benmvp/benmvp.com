@@ -1,4 +1,4 @@
-import { isFuture, isPast, differenceInMilliseconds, addDays } from 'date-fns'
+import { isFuture, isPast, addDays } from 'date-fns'
 import slugify from 'slugify'
 import { formatDate } from './date'
 import TALKS, { type Talk, type TalkId } from '../config/talks'
@@ -41,10 +41,10 @@ interface GetEngagementsOptions {
     cancelled?: boolean | 'all'
 
     /**
-     * Whether to return only future engagements, only past engagements, or all engagements
+     * Whether to return only upcoming engagements, only past engagements, or all engagements
      * @default 'all'
      */
-    when?: 'future' | 'past' | 'all'
+    when?: 'upcoming' | 'past' | 'all'
   }
 
   /**
@@ -109,7 +109,7 @@ export const getEngagements = ({
       const isWhen =
         when === 'all' ||
         talks?.some(({ date }) => {
-          const whenFilter = when === 'future' ? isFuture : isPast
+          const whenFilter = when === 'upcoming' ? isFuture : isPast
 
           return whenFilter(addDays(Date.parse(date), 1))
         })

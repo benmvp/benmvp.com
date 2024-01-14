@@ -83,6 +83,8 @@ interface Props {
   compiledSource: string
 
   slug: string
+
+  type: 'post' | 'minishop'
 }
 
 interface ContentImageProps extends ImageProps {
@@ -92,7 +94,7 @@ interface ContentImageProps extends ImageProps {
   }
 }
 
-const Content = ({ compiledSource, slug }: Props) => {
+const Content = ({ compiledSource, slug, type }: Props) => {
   const components = {
     Image: ({ credit, ...props }: ContentImageProps) => (
       <Box mb={2}>
@@ -100,7 +102,7 @@ const Content = ({ compiledSource, slug }: Props) => {
           <Image
             {...props}
             alt={props.alt}
-            src={`/images/posts/${slug}/${props.src}`}
+            src={`/images/${type}/${slug}/${props.src}`}
             fill
             sizes="100vw"
           />

@@ -104,7 +104,7 @@ const BlogPage: NextPage<Props> = ({ post }) => {
           date={date}
         />
 
-        <Content compiledSource={compiledSource} slug={slug} />
+        <Content compiledSource={compiledSource} slug={slug} type="post" />
         <PostFooter
           url={fullUrl}
           slug={slug}
