@@ -96,12 +96,13 @@ const MinishopRegister = ({
       <Paper
         component="section"
         elevation={3}
-        sx={(theme) => ({
-          margin: theme.spacing(5, 0, 1),
-          padding: theme.spacing(2),
-          backgroundColor: theme.palette.secondary.main,
-          color: theme.palette.secondary.contrastText,
-        })}
+        sx={{
+          mt: 5,
+          mb: 0,
+          padding: 2,
+          backgroundColor: 'palette.secondary.main',
+          color: 'palette.secondary.contrastText',
+        }}
       >
         <Box
           display="flex"
