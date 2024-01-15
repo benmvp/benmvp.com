@@ -82,7 +82,7 @@ export const getPost = async (slug: string): Promise<Post> => {
 
     category: frontMatter.category ?? '',
     date: frontMatter.date.toISOString(),
-    hero: frontMatter.hero ? `/images/posts/${slug}/${frontMatter.hero}` : '',
+    hero: frontMatter.hero ? `/images/post/${slug}/${frontMatter.hero}` : '',
     heroAlt: frontMatter.heroAlt ?? '',
     heroCredit: frontMatter.heroCredit ?? '',
     published: frontMatter.published !== false,

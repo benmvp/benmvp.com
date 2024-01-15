@@ -12,7 +12,7 @@ import { getPostUrl } from '../utils/url'
 import useCopyUrl from '../utils/useCopyUrl'
 import Share from './Share'
 import Link from './Link'
-import { Post } from '../utils/post'
+import { type Post } from '../utils/post'
 import { formatDate } from '../utils/date'
 
 interface Props {
@@ -21,7 +21,7 @@ interface Props {
 }
 
 const PostCard = ({ mode = 'full', post }: Props) => {
-  const { date, excerpt, hero, slug, shortDescription, title, tags } = post
+  const { date, hero, slug, shortDescription, title, tags } = post
   const summary = shortDescription
   const fullUrl = getPostUrl(slug)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(fullUrl)
