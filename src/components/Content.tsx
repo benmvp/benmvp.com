@@ -52,10 +52,6 @@ const Body = styled('article')(({ theme }) => ({
     backgroundColor: theme.palette.divider,
     margin: theme.spacing(4, 'auto'),
   },
-  // '& .gatsby-highlight': {
-  //   // code blocks
-  //   marginBottom: theme.spacing(3),
-  // },
   // video players
   '& iframe': {
     display: 'block',
@@ -65,16 +61,6 @@ const Body = styled('article')(({ theme }) => ({
     margin: theme.spacing(0, 'auto', 2),
   },
 }))
-const ImageWrapper = styled('div')({
-  height: 300,
-  position: 'relative',
-  width: '100%',
-
-  '& img': {
-    maxWidth: 800,
-    objectFit: 'contain',
-  },
-})
 
 interface Props {
   /**
@@ -84,7 +70,7 @@ interface Props {
 
   slug: string
 
-  type: 'post' | 'minishop'
+  type: 'minishop' | 'page' | 'post'
 }
 
 interface ContentImageProps extends ImageProps {
@@ -98,15 +84,24 @@ const Content = ({ compiledSource, slug, type }: Props) => {
   const components = {
     Image: ({ credit, ...props }: ContentImageProps) => (
       <Box mb={2}>
-        <ImageWrapper>
+        <Box
+          pb="56.25%"
+          position="relative"
+          overflow="hidden"
+          mx={{
+            xs: -2,
+            sm: -3,
+          }}
+        >
           <Image
             {...props}
             alt={props.alt}
             src={`/images/${type}/${slug}/${props.src}`}
             fill
             sizes="100vw"
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-        </ImageWrapper>
+        </Box>
 
         {credit && (
           <Typography
