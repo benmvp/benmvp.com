@@ -5,7 +5,7 @@ import PageHeader from '../../components/PageHeader'
 import ProjectCard from '../../components/ProjectCard'
 import { getUrl } from '../../utils/url'
 import generateSocialImage from '../../utils/generate-social-image'
-import PROJECTS from '../../content/projects'
+import PROJECTS from '../../config/projects'
 
 const SEO_PAGE_TITLE = 'Dev Projects by Ben'
 const SEO_PAGE_DESCRIPTION =

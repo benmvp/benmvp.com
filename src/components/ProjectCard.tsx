@@ -7,13 +7,13 @@ import {
   CardActionArea,
   Link,
 } from '@mui/material'
-import { Project } from '../content/projects'
+import { Project } from '../config/projects'
 
-interface ProjectCardProps {
+interface Props {
   project: Project
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project }: Props) => {
   const { description, imageUrl, preLaunch = false, title, url } = project
 
   return (

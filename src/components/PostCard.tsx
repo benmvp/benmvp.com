@@ -22,7 +22,7 @@ interface Props {
 
 const PostCard = ({ mode = 'full', post }: Props) => {
   const { date, excerpt, hero, slug, shortDescription, title, tags } = post
-  const summary = shortDescription || excerpt
+  const summary = shortDescription
   const fullUrl = getPostUrl(slug)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(fullUrl)
   const showDate = mode !== 'min'

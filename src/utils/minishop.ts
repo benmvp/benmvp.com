@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { readFile, readdir, stat, statSync } from 'fs-extra'
+import { readFile, readdir, statSync } from 'fs-extra'
 import { isFuture } from 'date-fns'
 
 import { paginate, parseMdx } from './data'

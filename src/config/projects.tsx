@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Link } from '@mui/material'
-import SITE_CONFIG from '../config/site'
+import SITE_CONFIG from './site'
 
 export interface Project {
   description: ReactNode
