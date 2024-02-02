@@ -165,6 +165,10 @@
     },
 
     {
+      "source": "/hs-phx-ai",
+      "destination": "https://docs.google.com/presentation/d/1VXJNCVdx9pJFLyAPmSkRaLd-mjcUAdzpxd7oI_HPeiE/edit?usp=sharing"
+    },
+    {
       "source": "/ct-divops",
       "destination": "https://slides.benmvp.com/2023/connecttech/divops.html"
     },

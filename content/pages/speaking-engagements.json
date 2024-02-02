@@ -1,5 +1,68 @@
 [
   {
+    "name": "React Miami 2024",
+    "url": "https://www.reactmiami.com/",
+    "location": "Miami, Florida",
+    "talks": [
+      {
+        "id": "nextjs-rendering",
+        "date": "04/19/2024"
+      }
+    ]
+  },
+  {
+    "name": "Epic Web Conf",
+    "url": "https://www.epicweb.dev/conf",
+    "location": "Park City, Utah",
+    "venue": "Prospector Square Theatre",
+    "talks": [
+      {
+        "id": "divops",
+        "date": "04/11/2024"
+      }
+    ]
+  },
+  {
+    "name": "HalfStack Phoenix 2024",
+    "url": "https://halfstackconf.com/phoenix",
+    "location": "Gilbert, Arizona",
+    "venue": "Gilbert Majestic Theater",
+    "talks": [
+      {
+        "id": "shopping-ai",
+        "date": "02/02/2024",
+        "links": [
+          {
+            "label": "Slides",
+            "url": "https://www.benmvp.com/hs-phx-ai"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Modern Web Podcast",
+    "url": "https://www.thisdot.co/",
+    "location": "Remote",
+    "talks": [
+      {
+        "title": "Unlock the Power of DivOps Engineering with Ben Ilegbodu and Jonathan Creamer",
+        "date": "11/15/2023",
+        "categories": ["DivOps"],
+        "links": [
+          {
+            "label": "Podcast",
+            "url": "https://modernweb.podbean.com/e/modern-web-podcast-s11e13-unlock-the-power-of-divops-engineering-with-ben-ilegbodu-and-jonathan-creamer/"
+          },
+          {
+            "label": "Video",
+            "url": "https://www.youtube.com/watch?v=6MmuBj22vx0"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Connect.Tech 2023",
     "url": "https://2023.connect.tech/",
     "location": "Atlanta, Georgia",
