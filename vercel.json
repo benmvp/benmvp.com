@@ -168,6 +168,10 @@
     },
 
     {
+      "source": "/hs-phx-ai",
+      "destination": "https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub?start=false&loop=false&delayms=60000"
+    },
+    {
       "source": "/bit-webdev",
       "destination": "https://slides.benmvp.com/2023/bit/webdev.html"
     },

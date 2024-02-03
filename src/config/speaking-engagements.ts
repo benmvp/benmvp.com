@@ -45,6 +45,47 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'React Miami 2024',
+    url: 'https://www.reactmiami.com/',
+    location: 'Miami, Florida',
+    talks: [
+      {
+        id: 'nextjs-rendering',
+        date: '04/19/2024',
+      },
+    ],
+  },
+  {
+    name: 'Epic Web Conf',
+    url: 'https://www.epicweb.dev/conf',
+    location: 'Park City, Utah',
+    venue: 'Prospector Square Theatre',
+    talks: [
+      {
+        id: 'divops',
+        date: '04/11/2024',
+      },
+    ],
+  },
+  {
+    name: 'HalfStack Phoenix 2024',
+    url: 'https://halfstackconf.com/phoenix',
+    location: 'Gilbert, Arizona',
+    venue: 'Gilbert Majestic Theater',
+    talks: [
+      {
+        id: 'shopping-ai',
+        date: '02/02/2024',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/hs-phx-ai',
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'The Modern Web Podcast',
     url: 'https://www.thisdot.co/',
     location: 'Remote',

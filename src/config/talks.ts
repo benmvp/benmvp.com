@@ -246,6 +246,12 @@ const TALKS = {
     description:
       'As web application architecture continues to evolve, the role of frontend engineers has expanded beyond `src/`. The need to enhance the developer experience and ensure project health has given rise to a new era of responsibilities for frontend developers. While these tasks may not involve building UI features directly, they encompass critical areas such as app configurations, build scripts, CI/CD maintenance, and more. But what should we call this disciple? Is it Frontend Platform? Frontend Infra? Frontend... DevOps?\n\nThis session introduces "DivOps," the fusion of Frontend and DevOps. Designed for web app developers of all levels, this talk deep dives into all the responsibilities of DivOps engineering and its major impact on our development environments, testing procedures, CI/CD workflows, and beyond. Through real-world examples and insights, you will gain a deeper understanding of the qualities that make a successful DivOps engineer and realize that you\'re likely one too.',
   },
+  'shopping-ai': {
+    title: 'GPT-powered AI Shopping: From Search to Delight',
+    categories: ['ai', 'javascript', 'web'],
+    description:
+      "Tired of generic chatbots that stumble through product recommendations? Imagine an AI assistant with an intimate understanding of our product catalog and an uncanny grasp for knowing exactly what our customers crave. OpenAI's recently released Function Calls API unlocks this capability, seamlessly fusing GPT's conversational superpower with our personalized understanding of our data.\n\nThis talk will delve into building custom AI assistants that respond dynamically to customer preferences by searching our data based on GPT's natural language processing capabilities. Whether you're a CEO envisioning the future of e-commerce, an engineering leader shaping your tech roadmap, a PM crafting engaging experiences, or an individual contributor building the next big innovation, this talk will equip you with the knowledge and tools to unlock the power of conversational AI for your product.\n\nJoin us as we learn effective methods for building secure, searchable shopping chatbots using this cutting-edge API and discover best practices for designing conversational flows that delight our customers and drive conversions. By the end, we'll be ready to embrace the future of AI-driven commerce, where every customer feels like a VIP and every purchase is a curated delight.",
+  },
 }
 
 export type TalkId = keyof typeof TALKS
