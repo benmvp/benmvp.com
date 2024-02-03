@@ -12,9 +12,22 @@
 ## Home page
 
 - [x] Blog posts
-- [ ] Videos
-- [ ] Speaking engagements
-- [ ] Workshops
+- [x] Videos
+- [x] Speaking engagements
+- [x] Workshops
+
+## Miscellaneous pages
+
+- [x] AMA
+- [x] Minishop conduct
+- [x] Newsletter subscribe
+- [x] Learning ES6 series
+
+## Site files
+
+- [x] `robots.txt`
+- [ ] `sitemap.xml` (middleware?)
+- [ ] `manifest.webmanifest` (middleware?)
 
 ## Blog posts listing
 

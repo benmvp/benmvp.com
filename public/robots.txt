@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.benmvp.com/sitemap.xml
+Host: https://www.benmvp.com
