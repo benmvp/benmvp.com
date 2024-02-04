@@ -249,8 +249,26 @@ const TALKS = {
   'shopping-ai': {
     title: 'GPT-powered AI Shopping: From Search to Delight',
     categories: ['ai', 'javascript', 'web'],
-    description:
-      "Tired of generic chatbots that stumble through product recommendations? Imagine an AI assistant with an intimate understanding of our product catalog and an uncanny grasp for knowing exactly what our customers crave. OpenAI's recently released Function Calls API unlocks this capability, seamlessly fusing GPT's conversational superpower with our personalized understanding of our data.\n\nThis talk will delve into building custom AI assistants that respond dynamically to customer preferences by searching our data based on GPT's natural language processing capabilities. Whether you're a CEO envisioning the future of e-commerce, an engineering leader shaping your tech roadmap, a PM crafting engaging experiences, or an individual contributor building the next big innovation, this talk will equip you with the knowledge and tools to unlock the power of conversational AI for your product.\n\nJoin us as we learn effective methods for building secure, searchable shopping chatbots using this cutting-edge API and discover best practices for designing conversational flows that delight our customers and drive conversions. By the end, we'll be ready to embrace the future of AI-driven commerce, where every customer feels like a VIP and every purchase is a curated delight.",
+    description: `Tired of generic chatbots that stumble through product recommendations? Imagine an AI assistant with an intimate understanding of our product catalog and an uncanny grasp for knowing exactly what our customers crave. OpenAI's recently released Function Calls API unlocks this capability, seamlessly fusing GPT's conversational superpower with our personalized understanding of our data.
+
+This talk will delve into building custom AI assistants that respond dynamically to customer preferences by searching our data based on GPT's natural language processing capabilities. Whether you're a CEO envisioning the future of e-commerce, an engineering leader shaping your tech roadmap, a PM crafting engaging experiences, or an individual contributor building the next big innovation, this talk will equip you with the knowledge and tools to unlock the power of conversational AI for your product.
+
+Join us as we learn effective methods for building secure, searchable shopping chatbots using this cutting-edge API and discover best practices for designing conversational flows that delight our customers and drive conversions. By the end, we'll be ready to embrace the future of AI-driven commerce, where every customer feels like a VIP and every purchase is a curated delight.`,
+  },
+  'divops-workshop': {
+    title: 'Hands-On DivOps: Building a Modern Web Application from Scratch',
+    categories: ['divops', 'javascript', 'web', 'workshop'],
+    description: `“DivOps” is the fusion of frontend development and DevOps practices. It focuses on the tools, processes, and infrastructure that empower frontend engineers to take ownership of development environments, testing procedures, and continuous integration & delivery (CI/CD) workflows. In this intensive 3.5-hour workshop, you will gain hands-on experience and insights into the world of DivOps by building a modern web application architecture from the ground up.
+
+The workshop will include:
+
+- **Monorepo.** Explore the benefits of a monorepo structure and learn how to organize a project for efficient management of components and applications.
+- **Component Library.** Add a component library that will allow you to share common UI elements across the monorepo.
+- **Main Site.** Integrate the component library into the primary application of the project.
+- **Blog.** Include a static site blog that is developed and deployed separately from the main site.
+- **Dev Tools & CI/CD.** Configure essential developer tools, set up testing frameworks, and implement a robust Continuous Integration and Continuous Delivery (CI/CD) workflow to streamline your development process.
+
+This workshop is ideal for web app developers of all levels who want to enhance their frontend skills and build a solid foundation in DivOps practices. A basic understanding of JavaScript, React (or similar frontend framework), and command-line tools will help you get the most out of the workshop. By the end of this workshop, you will have the knowledge and experience to confidently apply DivOps principles in your web development projects. Join us if you are excited to learn how to create a maintainable and scalable web application architecture, this workshop is for you!`,
   },
 }
 

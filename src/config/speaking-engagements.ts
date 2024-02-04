@@ -45,6 +45,17 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'UI Architecture 2024',
+    url: 'https://uiarchconf.com/',
+    location: 'New Orleans, Louisiana',
+    talks: [
+      {
+        id: 'divops-workshop',
+        date: '05/20/2024',
+      },
+    ],
+  },
+  {
     name: 'React Miami 2024',
     url: 'https://www.reactmiami.com/',
     location: 'Miami, Florida',
