@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react'
 import type { AppProps } from 'next/app'
-import { getTheme } from '../config/theme'
+import { Analytics } from '@vercel/analytics/react'
 import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material'
 import Bugsnag from '@bugsnag/js'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
+import { getTheme } from '../config/theme'
 
 import 'prism-themes/themes/prism-material-dark.css'
 import '../css/line-numbers.css'
@@ -26,6 +27,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </ErrorBoundary>
   )

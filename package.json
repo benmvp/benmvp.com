@@ -20,6 +20,7 @@
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
     "@react-hookz/web": "^23.1.0",
+    "@vercel/analytics": "^1.1.2",
     "@vercel/node": "^2.15.9",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
