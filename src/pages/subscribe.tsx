@@ -41,8 +41,8 @@ const Subscribe = () => {
         <Typography component="li">
           I blog a lot about JavaScript, React, TypeScript,{' '}
           <Link href="/blog/what-divops-engineer/">&quot;DivOps&quot;</Link> and
-          other related web frontend technologies based on what I'm learning or
-          questions that I'm asked.{' '}
+          other related web frontend technologies based on what I&apos;m
+          learning or questions that I&apos;m asked.{' '}
           <strong>Get notified of my new blog posts</strong> when they are
           published.
         </Typography>
