@@ -186,7 +186,7 @@ const Minishop = ({ minishop, others }: Props) => {
           />
           {!!others.length && (
             <Box component="section" mt={5}>
-              <Typography component="h3" variant="h5">
+              <Typography component="h3" variant="h5" mb={2}>
                 Other minishops
               </Typography>
               <Grid container spacing={2}>

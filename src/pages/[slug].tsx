@@ -10,7 +10,7 @@ import {
 const PAGES_DIRECTORY = resolve(process.cwd(), 'src/content/pages')
 
 export const getStaticPaths: GetStaticPaths<Params> = async (context) =>
-  getGetStaticPaths(PAGES_DIRECTORY, context)
+  getGetStaticPaths(PAGES_DIRECTORY)
 
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) =>
   getGetStaticProps(PAGES_DIRECTORY, context?.params?.slug)

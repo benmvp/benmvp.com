@@ -26,8 +26,8 @@
 ## Site files
 
 - [x] `robots.txt`
-- [ ] `sitemap.xml` (middleware?)
-- [ ] `manifest.webmanifest` (middleware?)
+- [x] `sitemap.xml`
+- [x] `manifest.webmanifest`
 
 ## Blog posts listing
 

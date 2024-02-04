@@ -10,13 +10,9 @@ export interface Params {
 }
 
 type DefaultGetStaticPaths = GetStaticPaths<Params>
-type ModifiedGetStaticPathsParams = [
-  markdownDir: string,
-  ...Parameters<DefaultGetStaticPaths>,
-]
 type ModifiedGetStaticPathsReturnType = ReturnType<DefaultGetStaticPaths>
 type ModifiedGetStaticPaths = (
-  ...params: ModifiedGetStaticPathsParams
+  markdownDir: string,
 ) => ModifiedGetStaticPathsReturnType
 
 export const getGetStaticPaths: ModifiedGetStaticPaths = async (
