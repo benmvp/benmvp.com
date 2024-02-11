@@ -1,71 +1,28 @@
-import React, { ReactNode, useState } from 'react'
-import classNames from 'classnames'
+import React, { type ReactNode, useState } from 'react'
 import {
-  makeStyles,
-  createStyles,
   Box,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
+  CardProps,
   Collapse,
   IconButton,
   Typography,
-} from '@material-ui/core'
-import { ExpandMore } from '@material-ui/icons'
-import { Link } from 'gatsby-theme-material-ui'
+} from '@mui/material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import Markdown from 'react-markdown'
-import { genVideoSlug } from '../utils'
-import { Video } from '../utils/video'
+import Link from './Link'
+import { type Video } from '../utils/video'
 
-const getEmbedSrc = (id: string, provider: Provider) => {
-  if (provider === 'youtube') {
-    return `https://www.youtube.com/embed/${id}`
-  }
-  if (provider === 'vimeo') {
-    return `https://player.vimeo.com/video/${id}`
-  }
-}
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      maxWidth: 800,
-    },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    media: {
-      minHeight: 300,
-      height: 'min(450px, min(800px, 100vw / 1.5))',
-    },
-  }),
-)
-
-interface Props extends Video {
-  className?: string
+interface Props {
   mode: 'min' | 'full'
+  sx?: CardProps['sx']
+  video: Video
 }
 
-const VideoCard = ({
-  className,
-  engagement,
-  date,
-  id,
-  mode,
-  provider = 'youtube',
-  title,
-  url,
-  description,
-}: Props) => {
-  const classes = useStyles()
+const VideoCard = ({ mode = 'full', sx, video }: Props) => {
+  const { id, title, url, engagement, date, description, srcEmbed } = video
   const [expanded, setExpanded] = useState(false)
 
   const ContentWrapper = ({
@@ -75,8 +32,10 @@ const VideoCard = ({
   }) => {
     if (url) {
       return (
-        <CardActionArea component={Link} to={url} underline="none">
-          {wrapperChildren}
+        <CardActionArea>
+          <Link href={url} underline="none">
+            {wrapperChildren}
+          </Link>
         </CardActionArea>
       )
     }
@@ -85,17 +44,12 @@ const VideoCard = ({
   }
 
   return (
-    <Card
-      id={genVideoSlug(id)}
-      variant="outlined"
-      className={`${classes.root} ${className}`}
-    >
+    <Card id={id} variant="outlined" sx={{ maxWidth: '800px', ...sx }}>
       <CardMedia
         component="iframe"
-        src={getEmbedSrc(id, provider)}
+        sx={{ minHeight: 300, height: 'min(450px, min(800px, 100vw / 1.5))' }}
+        src={srcEmbed}
         title={title}
-        className={classes.media}
-        frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
@@ -131,24 +85,31 @@ const VideoCard = ({
           {mode === 'full' && description && (
             <Box>
               <IconButton
-                className={classNames(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
+                sx={{
+                  transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                  marginLeft: 'auto',
+                  transition: (theme) =>
+                    theme.transitions.create('transform', {
+                      duration: theme.transitions.duration.shortest,
+                    }),
+                }}
                 onClick={() => setExpanded((curExpanded) => !curExpanded)}
                 aria-expanded={expanded}
                 aria-label="show video description"
               >
-                <ExpandMore />
+                <ExpandMoreIcon />
               </IconButton>
             </Box>
           )}
         </Box>
 
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <Typography variant="body2">
-            <Markdown>{description}</Markdown>
-          </Typography>
-        </Collapse>
+        {description && (
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Typography variant="body2">
+              <Markdown>{description}</Markdown>
+            </Typography>
+          </Collapse>
+        )}
       </CardContent>
     </Card>
   )

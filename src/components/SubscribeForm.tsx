@@ -1,21 +1,25 @@
-import React, { FormEvent, useState } from 'react'
+import React, { ChangeEventHandler, FormEvent, useState } from 'react'
 import {
-  makeStyles,
-  createStyles,
+  Alert,
   Box,
-  Typography,
-  TextField,
   Button,
+  CircularProgress,
+  Collapse,
   InputAdornment,
   Paper,
-  Collapse,
-  CircularProgress,
-} from '@material-ui/core'
-import { Alert } from '@material-ui/lab'
+  TextField,
+  Typography,
+} from '@mui/material'
 import Bugsnag from '@bugsnag/js'
-import EmailIcon from '@material-ui/icons/Email'
-import PersonIcon from '@material-ui/icons/Person'
-import SendIcon from '@material-ui/icons/Send'
+import EmailIcon from '@mui/icons-material/Email'
+import PersonIcon from '@mui/icons-material/Person'
+import SendIcon from '@mui/icons-material/Send'
+
+declare global {
+  interface Window {
+    gtag?: (command: 'event', name: string, params: unknown) => void
+  }
+}
 
 class SubscribeError extends Error {
   constructor(message: string) {
@@ -25,7 +29,11 @@ class SubscribeError extends Error {
   }
 }
 
-const addSubscriber = async ({ email, firstName, referrer }) => {
+const addSubscriber = async (
+  email: string,
+  firstName: string,
+  referrer: string,
+) => {
   const body = JSON.stringify({
     email,
     firstName,
@@ -52,29 +60,23 @@ const addSubscriber = async ({ email, firstName, referrer }) => {
   return data
 }
 
-const useStyles = makeStyles((theme) => {
-  return createStyles({
-    root: {
-      textAlign: 'center',
-      padding: theme.spacing(2),
-    },
-    button: {
-      marginTop: theme.spacing(1),
-    },
-  })
-})
-
 type Status =
   | { state: 'inactive' }
   | { state: 'loading' }
   | { state: 'success'; message: string }
   | { state: 'error'; message: string }
 
-const SubscribeForm = () => {
-  const classes = useStyles()
+const useSubscribeForm = () => {
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
   const [status, setStatus] = useState<Status>({ state: 'inactive' })
+
+  const onEmailChange: ChangeEventHandler<
+    HTMLTextAreaElement | HTMLInputElement
+  > = (e) => setEmail(e.target.value)
+  const onFirstNameChange: ChangeEventHandler<
+    HTMLTextAreaElement | HTMLInputElement
+  > = (e) => setFirstName(e.target.value)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -86,7 +88,7 @@ const SubscribeForm = () => {
     setStatus({ state: 'loading' })
 
     try {
-      await addSubscriber({ email, firstName, referrer: window.location.href })
+      await addSubscriber(email, firstName, window.location.href)
 
       setStatus({
         state: 'success',
@@ -113,8 +115,34 @@ const SubscribeForm = () => {
     }
   }
 
+  return {
+    email,
+    onEmailChange,
+    firstName,
+    onFirstNameChange,
+    status,
+    resetStatus: () => setStatus({ state: 'inactive' }),
+    handleSubmit,
+  }
+}
+
+const SubscribeForm = () => {
+  const {
+    email,
+    onEmailChange,
+    firstName,
+    onFirstNameChange,
+    status,
+    resetStatus,
+    handleSubmit,
+  } = useSubscribeForm()
+
   return (
-    <Paper component="section" elevation={3} className={classes.root}>
+    <Paper
+      component="section"
+      elevation={3}
+      sx={{ textAlign: 'center', padding: 2 }}
+    >
       <Typography variant="h5" component="h1" gutterBottom>
         Subscribe to the Newsletter
       </Typography>
@@ -126,7 +154,7 @@ const SubscribeForm = () => {
         <Box mt={1}>
           <Alert
             severity={status.state === 'success' ? 'success' : 'error'}
-            onClose={() => setStatus({ state: 'inactive' })}
+            onClose={resetStatus}
           >
             {status.state === 'success' || status.state === 'error'
               ? status.message
@@ -157,7 +185,7 @@ const SubscribeForm = () => {
             ),
           }}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={onEmailChange}
         />
         <TextField
           label="First Name"
@@ -173,7 +201,7 @@ const SubscribeForm = () => {
             ),
           }}
           value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          onChange={onFirstNameChange}
         />
         <Button
           type="submit"
@@ -186,7 +214,7 @@ const SubscribeForm = () => {
               <SendIcon />
             )
           }
-          className={classes.button}
+          sx={{ marginTop: 1 }}
         >
           Subscribe
         </Button>

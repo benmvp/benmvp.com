@@ -1,26 +1,13 @@
 import React from 'react'
-import { createStyles, makeStyles, Box, Typography } from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+import { Box, Typography } from '@mui/material'
 import Layout from '../components/Layout'
+import Link from '../components/Link'
 import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import SubscribeForm from '../components/SubscribeForm'
 import Share from '../components/Share'
-import { getUrl } from '../utils'
+import { getMinishopUrl, getPostUrl, getUrl } from '../utils/url'
 import generateSocialImage from '../utils/generate-social-image'
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    header: {
-      marginBottom: theme.spacing(5),
-    },
-    promise: {
-      marginTop: theme.spacing(4),
-      marginBottom: theme.spacing(4),
-      textAlign: 'center',
-    },
-  }),
-)
 
 const PAGE_TITLE = 'Subscribe to the BenMVP Newsletter'
 const PAGE_DESCRIPTION =
@@ -32,8 +19,6 @@ const SEO_IMAGE_URL = generateSocialImage({
 })
 
 const Subscribe = () => {
-  const classes = useStyles()
-
   return (
     <Layout includeSubscribe={false}>
       <Seo
@@ -43,32 +28,34 @@ const Subscribe = () => {
         image={SEO_IMAGE_URL}
         imageAlt={PAGE_TITLE}
       />
-      <PageHeader className={classes.header} title={PAGE_TITLE} />
+      <Box mb={5}>
+        <PageHeader title={PAGE_TITLE} />
+      </Box>
       <Typography variant="body1">
         The <strong>BenMVP Newsletter</strong> is a weekly<em>-ish</em> frontend
-        web development newsletter by{' '}
-        <GatsbyLink href="/about/">Ben Ilegbodu</GatsbyLink>. 😄
+        web development newsletter by <Link href="/about/">Ben Ilegbodu</Link>.
+        😄
       </Typography>
 
       <Box component="ul" my={4} pl={4}>
         <Typography component="li">
           I blog a lot about JavaScript, React, TypeScript,{' '}
-          <GatsbyLink href="/blog/what-divops-engineer/">
+          <Link href={getPostUrl('what-divops-engineer')}>
             &quot;DivOps&quot;
-          </GatsbyLink>{' '}
-          and other related web frontend technologies based on what I'm learning
-          or questions that I'm asked.{' '}
+          </Link>{' '}
+          and other related web frontend technologies based on what I&apos;m
+          learning or questions that I&apos;m asked.{' '}
           <strong>Get notified of my new blog posts</strong> when they are
           published.
         </Typography>
         <Typography component="li">
           I host short 3.5-hour workshops (called{' '}
-          <GatsbyLink href="/minishops/">minishops</GatsbyLink>) on React and
+          <Link href={getMinishopUrl()}>minishops</Link>) on React and
           TypeScript. <strong>Find out about upcoming minishops</strong> when
           they are released to ensure you get the best price possible.
         </Typography>
         <Typography component="li">
-          I <GatsbyLink href="/speak/">speak</GatsbyLink> at conferences &amp;
+          I <Link href={getUrl('speak')}>speak</Link> at conferences &amp;
           meetups, join in on podcasts, and will do the occasional livestream.{' '}
           <strong>Stay up to date with future events and videos</strong>.
         </Typography>
@@ -76,7 +63,7 @@ const Subscribe = () => {
 
       <Box maxWidth="500px" mx="auto" mt={4}>
         <SubscribeForm />
-        <Typography variant="body2" className={classes.promise}>
+        <Typography variant="body2" my={4} textAlign="center">
           I will <strong>not</strong> sell your email address to spammers (or
           anyone), I promise.
         </Typography>

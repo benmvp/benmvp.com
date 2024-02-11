@@ -1,23 +1,17 @@
 import React from 'react'
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box, styled } from '@mui/material'
+import { formatDate } from '../utils/date'
 
 interface Props {
-  className: string
   date: string
   subTitle?: string
   timeToRead: number
   title: string
 }
 
-const PostHeader = ({
-  className,
-  date,
-  subTitle,
-  timeToRead,
-  title,
-}: Props) => {
+const PostHeader = ({ date, subTitle, timeToRead, title }: Props) => {
   return (
-    <Box component="header" className={className}>
+    <Box component="header">
       <Typography variant="h4" component="h1" gutterBottom>
         {title}
       </Typography>
@@ -27,7 +21,7 @@ const PostHeader = ({
         </Typography>
       )}
       <Typography variant="subtitle2" component="p" gutterBottom>
-        {date} · {timeToRead} min read
+        {formatDate(date, 'long')} · {timeToRead} min read
       </Typography>
     </Box>
   )

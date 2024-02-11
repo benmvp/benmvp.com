@@ -1,6 +1,7 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import Head from 'next/head'
+import SITE_CONFIG from '../config/site'
+import { useTheme } from '@mui/material'
+import { getUrl } from '../utils/url'
 
 type Meta =
   | { property: string; content: string; name?: undefined }
@@ -22,53 +23,29 @@ const Seo = ({
   description,
   image,
   imageAlt,
-  lang,
   meta = [],
   schemaOrg,
   title,
   type = 'website',
   url,
 }: Props) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SeoSiteInfo {
-        site {
-          siteMetadata {
-            siteUrl
-            title
-            description
-            image
-            keywords
-            lang
-            author {
-              name
-              bio
-            }
-            social {
-              twitterHandle
-            }
-          }
-        }
-      }
-    `,
-  )
+  const { palette } = useTheme()
 
-  const htmlLang = lang || site.siteMetadata.lang
-  const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const metaDescription = description || SITE_CONFIG.description
+  const metaImage = image || getUrl(SITE_CONFIG.image, true)
   const metaImageFull = metaImage.startsWith('http')
     ? metaImage
-    : `${site.siteMetadata.siteUrl}${metaImage}`
-  const siteTitle = site.siteMetadata.title
+    : `${SITE_CONFIG.url}${metaImage}`
+  const siteTitle = SITE_CONFIG.title
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
-  const keywords = site.siteMetadata.keywords.join(' ')
+  const keywords = SITE_CONFIG.keywords.join(' ')
   const siteSchemaOrg = {
     '@context': 'http://schema.org/',
     '@type': 'WebSite',
     url,
     name: fullTitle,
     alternateName: siteTitle,
-    copyrightHolder: site.siteMetadata.author.name,
+    copyrightHolder: SITE_CONFIG.author,
     copyrightYear: 2015,
     description: metaDescription,
     image: {
@@ -80,8 +57,7 @@ const Seo = ({
   }
 
   return (
-    <Helmet>
-      <html lang={htmlLang} />
+    <Head>
       <title>{fullTitle}</title>
 
       {/* General tags */}
@@ -89,6 +65,33 @@ const Seo = ({
       <meta name="keywords" content={keywords} />
       <meta name="image" content={metaImageFull} />
       <link rel="canonical" href={url} />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png?v=2"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png?v=2"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png?v=2"
+      />
+      <link rel="manifest" href="/site.webmanifest?v=2" />
+      <link
+        rel="mask-icon"
+        href="/safari-pinned-tab.svg?v=2"
+        color={palette.primary.main}
+      />
+      <link rel="shortcut icon" href="/favicon.ico?v=2" />
+      <meta name="msapplication-TileColor" content={palette.primary.main} />
+      <meta name="theme-color" content={palette.primary.main} />
 
       {/* OpenGraph tags */}
       <meta property="og:site_name" content={siteTitle} />
@@ -102,14 +105,8 @@ const Seo = ({
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:site"
-        content={`@${site.siteMetadata.social.twitterHandle}`}
-      />
-      <meta
-        name="twitter:creator"
-        content={`@${site.siteMetadata.social.twitterHandle}`}
-      />
+      <meta name="twitter:site" content={`@${SITE_CONFIG.twitterHandle}`} />
+      <meta name="twitter:creator" content={`@${SITE_CONFIG.twitterHandle}`} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImageFull} />
@@ -127,7 +124,7 @@ const Seo = ({
       <script type="application/ld+json">
         {JSON.stringify(siteSchemaOrg)}
       </script>
-    </Helmet>
+    </Head>
   )
 }
 

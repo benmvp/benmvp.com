@@ -1,14 +1,16 @@
-import { getEngagements } from './speaking-engagement'
+import { getEngagements } from './engagement'
+import { paginate, sortByDate } from './data'
 
 type Provider = 'youtube' | 'vimeo'
 
 export interface Video {
+  description: string
   engagement: string
   date: string
   id: string
   provider: Provider
   title: string
-  description?: string
+  srcEmbed: string
   url?: string
 }
 
@@ -16,6 +18,15 @@ const PROVIDER_REGEXES = [
   { provider: 'youtube', regex: /^https:\/\/www.youtube.com\/watch\?v=(.*?)$/ },
   { provider: 'vimeo', regex: /^https:\/\/vimeo.com\/(.*?)$/ },
 ] as { provider: Provider; regex: RegExp }[]
+
+const getEmbedSrc = (id: string, provider: Provider) => {
+  if (provider === 'youtube') {
+    return `https://www.youtube.com/embed/${id}`
+  }
+  if (provider === 'vimeo') {
+    return `https://player.vimeo.com/video/${id}`
+  }
+}
 
 const getProviderData = (
   url: string,
@@ -31,9 +42,39 @@ const getProviderData = (
   return undefined
 }
 
-export const getVideos = (): Video[] =>
-  getEngagements()
-    .all.map((engagement): Video | undefined => {
+interface GetVideoOptions {
+  /**
+   * The number of videos to return
+   */
+  size?: number
+
+  /**
+   * The page of videos to return
+   * @default 1
+   */
+  page?: number
+
+  /**
+   * The property to sort by
+   * @default 'date'
+   */
+  sortBy?: 'date' | 'title'
+
+  /**
+   * The order to sort by
+   * @default 'desc'
+   */
+  sortOrder?: 'asc' | 'desc'
+}
+
+export const getVideos = ({
+  size = -1,
+  page = 1,
+  sortBy = 'date',
+  sortOrder = 'desc',
+}: GetVideoOptions = {}): Video[] => {
+  const videos = getEngagements()
+    .map((engagement): Video | undefined => {
       const talkWithVideo = engagement.talks.find(({ links }) =>
         links?.some(({ label }) => label === 'Video'),
       )
@@ -47,13 +88,18 @@ export const getVideos = (): Video[] =>
           const providerData = getProviderData(linkWithVideo.url)
 
           if (providerData) {
-            return {
-              engagement: engagement.name,
-              date: talkWithVideo.date,
-              title: talkWithVideo.title,
-              url: `/speak/#${engagement.id}`,
-              description: talkWithVideo.description,
-              ...providerData,
+            const srcEmbed = getEmbedSrc(providerData.id, providerData.provider)
+
+            if (srcEmbed) {
+              return {
+                description: talkWithVideo.description ?? '',
+                engagement: engagement.name,
+                date: talkWithVideo.date,
+                srcEmbed,
+                title: talkWithVideo.title,
+                url: `/speak/#${engagement.id}`,
+                ...providerData,
+              }
             }
           }
         }
@@ -62,3 +108,6 @@ export const getVideos = (): Video[] =>
       return undefined
     })
     .filter((video): video is Video => video !== undefined)
+
+  return paginate(sortByDate(videos, sortBy, sortOrder), page, size)
+}

@@ -1,3 +1,5 @@
+import { formatDate } from './date'
+
 interface Config {
   title: string
   tagline?: string
@@ -86,7 +88,9 @@ const generateSocialImage = ({
         'g_south_west',
         `x_64`,
         `y_64`,
-        `l_text:${escape(taglineFont)}_${taglineFontSize}:${escape(date)}`,
+        `l_text:${escape(taglineFont)}_${taglineFontSize}:${escape(
+          formatDate(date, 'normal'),
+        )}`,
       ].join(',')
     : ''
 

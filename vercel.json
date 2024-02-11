@@ -1,9 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "installCommand": null,
-  "buildCommand": "npm run bugsnag-report",
-  "outputDirectory": "public",
+
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "buildCommand": "pnpm run build",
+  "devCommand": "pnpm run dev",
+  "installCommand": "pnpm install",
+
   "headers": [
     {
       "source": "/(.*)",
@@ -167,14 +170,6 @@
     {
       "source": "/hs-phx-ai",
       "destination": "https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub?start=false&loop=false&delayms=60000"
-    },
-    {
-      "source": "/ct-divops",
-      "destination": "https://slides.benmvp.com/2023/connecttech/divops.html"
-    },
-    {
-      "source": "/ato-nextjs",
-      "destination": "https://slides.benmvp.com/2023/ato/nextjs.html"
     },
     {
       "source": "/bit-webdev",

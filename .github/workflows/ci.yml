@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: push
 
 jobs:
   main:
@@ -9,17 +9,28 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'pnpm'
 
-      - name: Install NPM dependencies
-        run: npm ci
+      - name: Install pnpm dependencies
+        run: pnpm install
 
       - name: Run lint
-        run: npm run lint
+        run: pnpm run lint
+        env:
+          CI: true
+
+      - name: Run type-checking
+        run: pnpm run type-check
         env:
           CI: true

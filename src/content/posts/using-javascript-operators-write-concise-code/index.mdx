@@ -1,0 +1,526 @@
+---
+date: 2021-09-19
+title: Using new-ish & lesser-known JavaScript operators to write concise code
+shortDescription: 8 operators that help us write more concise & accurate JavaScript code
+category: JavaScript
+tags: [javascript, operators, ecmascript]
+hero: javascript-code-joan-gamell-ZS67i1HLllo-unsplash.jpeg
+heroAlt: JavaScript code in VSCode on black flat screen computer
+heroCredit: 'Photo by [Joan Gamell](https://unsplash.com/@gamell)'
+---
+
+JavaScript has been around for over 25 years, since May 1995 when [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich) supposedly created it in 10 days. I wrote a full [history of ECMAScript](/blog/learning-es6-history-of-ecmascript/) if you're interested in learning more. There's a lot of syntax and operators that has been added to JavaScript since its inception. Many we use regularly (like `===`, `&&`, etc.) so they are familiar to us, but there are others that are rarely used, but still have some useful use cases.
+
+So I want to walk through 8 operators that are either new(-ish) or lesser-known, and explain the situations in which we may want to use them to make our code more concise and/or accurate. Let's jump right in!
+
+---
+
+## Conditional (ternary) operator
+
+Let's say we have a variable that we would like to assign into (using the [assignment (`=`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) operator by the way) based on a condition. Furthermore, we'd like to assign one value when the condition is `true` and a different value when the condition is `false`. A simple implementation would be to use an `if` statement.
+
+```js
+let winner
+
+// verbose conditional 😒
+if (hasATrophy) {
+  winner = 'Houston Rockets'
+} else {
+  winner = 'Utah Jazz'
+}
+```
+
+However, we can use the [conditional (ternary)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) operator to simplify the code to a single line/statement:
+
+```js
+// single-statement ternary! 🎉
+const winner = hasATrophy ? 'Houston Rockets' : 'Utah Jazz'
+```
+
+Pretty nice right? Most languages have the concept of a ternary operator. And there's actually a good chance that you've used one or at least have seen one in code before. But did you know that the ternary operator is currently the only JavaScript operator that takes three operands? It takes the condition (`hasTrophy`), the value when `true` (`'Houston Rockets'`), and the value when `false` (`'Utah Jazz'`).
+
+Okay, now that we've been warmed up, let's continue shall we? 😄
+
+---
+
+## Unary plus (`+`) operator
+
+Let's say you have a string variable that has the value `'123.45'` and would like to [coerce](https://blog.logrocket.com/type-coercion-in-javascript/) it to a number. The most common way would be to use [`Number.parseFloat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat).
+
+```js
+const value = document.getElementById('price-field').value
+// '123.45'
+
+// typical way to parse a number 👍🏾
+const price = Number.parseFloat(value)
+// 123.45
+```
+
+However back in the day, before the movement started to stop writing clever code, I would use the [unary plus (+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) operator to coerce a string value to a number.
+
+```js {5}
+const value = document.getElementById('price-field').value
+// '123.45'
+
+// clever way to parse a number! 🤓
+const price = +value
+// 123.45
+```
+
+How exactly does that work? Well, the unary plus operator works just like the [unary negation (-)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation) that will negate a value (coercing it to a number first if necessary). We've likely negated a value before.
+
+```js {9}
+const value = document.getElementById('price-field').value
+// '123.45'
+
+// clever way to parse a number! 🤓
+const price = +value
+// 123.45
+
+// similar way to negate a number...
+const negativePrice = -value
+// -123.45
+```
+
+The only difference with the unary plus operator is that it doesn't do the negation portion; all it does is coerce to a number. If the value cannot be coerced to a number, it'll return [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). It's actually the "fastest" way to coerce a string to a number, but it's also the most cryptic so I no longer use it, despite it being used solely for number coercion.
+
+By the way, it's called a "unary" operator because it only has the single operand (the value to coerce to a number). This helps distinguish it from the [addition (+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition) binary operator that sums _two_ operands.
+
+---
+
+## Destructuring assignment
+
+Let's say you have an array of a specific length and you want to assign some of the indices to variables. The old-school way of doing this would be one assignment at a time.
+
+```js
+const teams = [
+  'Houston Rockets',
+  'Los Angeles Lakers',
+  'Phoenix Suns',
+  'Denver Nuggets',
+  'Utah Jazz',
+]
+
+// pluck out each value individually 🤮
+const firstTeam = teams[0]
+// 'Houston Rockets'
+const secondTeam = teams[1]
+// 'Los Angeles Lakers'
+const trophylessTeams = teams.slice(2)
+// ['Phoenix Suns', 'Denver Nuggets', 'Utah Jazz']
+```
+
+Well with [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) on arrays, we can combine those assignments into a single statement.
+
+```js {10}
+const teams = [
+  'Houston Rockets',
+  'Los Angeles Lakers',
+  'Phoenix Suns',
+  'Denver Nuggets',
+  'Utah Jazz',
+]
+
+// grab all values at once! 😎
+const [firstTeam, secondTeam, ...trophylessTeams] = teams
+// firstTeam - Houston Rockets
+// secondTeam - Los Angeles Lakers
+// trophylessTeams - ['Phoenix Suns', 'Denver Nuggets', 'Utah Jazz']
+```
+
+A fun trick, should you ever need it, is that you can also use destructuring assignment with arrays to swap two values without needing a temporary variable.
+
+```js {5}
+let onTheRise = 'Phoenix Suns'
+let trendingDown = 'Houston Rockets'
+
+// swap values using array destructuring 🤓
+;[onTheRise, trendingDown] = [trendingDown, onTheRise]
+// onTheRise - 'Houston Rockets'
+// trendingDown - 'Phoenix Suns'
+```
+
+> If you normally don't use semicolons, you will need to put one in front of the destructuring assignment otherwise the JavaScript interpreter interprets the code as something entirely different.
+
+Destructuring assignment also works with objects, which is when I use it most. It allows us to directly assign into variables from properties in the object.
+
+```js {9}
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+
+// grab all values at once! 😎
+const { name, numTrophies, bestPlayer } = teamInfo
+// name - 'Houston Rockets'
+// numTrophies - 2
+// bestPlayer - 'Hakeem Olajuwon'
+```
+
+There are lot of features with destructuring assignment, including the ability to skipping array items, rename object properties, defaulting `undefined` values, and more. To get all the details you've ever wanted, check out my previous post on [Destructuring](/blog/learning-es6-destructuring/) which was part of the [Learning ES6 Series](/learning-es6-series/).
+
+Destructuring was officially introduced into JavaScript with ES6/ES2015.
+
+---
+
+## Spread (`...`) operator
+
+How would we clone an array an add items to it? We could use [`.concat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) to clone and [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) to add the items.
+
+```js
+const addLoserTeams = (teams) => {
+  // clone array so we don't mutate original
+  const allTeams = teams.concat()
+
+  // now add the loser teams to the new array
+  allTeams.push(['Phoenix Suns', 'Denver Nuggets', 'Utah Jazz'])
+
+  return allTeams
+}
+
+const winningTeams = ['Houston Rockets', 'Los Angeles Lakers']
+const allTeams = addLoserTeams(winningTeams)
+
+console.log(winningTeams === allTeams)
+// false (proof the arrays are different)
+console.log(winningTeams.length)
+// 2
+console.log(allTeams.length)
+// 5
+```
+
+> Check out [How to shallow clone a JavaScript array](/blog/how-to-shallow-clone-javascript-array/) for more ways to create a shallow copy of an array.
+
+Instead, we can use the [spread operator (`...`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to clone and push all in one statement.
+
+```js {3}
+const addLoserTeams = (teams) => {
+  // shallow clone and add new items in one step w/ spread operator 🙌🏾
+  return [...teams, 'Phoenix Suns', 'Denver Nuggets', 'Utah Jazz']
+}
+
+const winningTeams = ['Houston Rockets', 'Los Angeles Lakers']
+const allTeams = addLoserTeams(winningTeams)
+
+console.log(winningTeams === allTeams)
+// false (proof the arrays are different)
+console.log(winningTeams.length)
+// 2
+console.log(allTeams.length)
+// 5
+```
+
+The same applies to objects as well. Instead of using [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to clone an object (and having to remember to make the target object empty)...
+
+```js
+const addTimestamp = (teamInfo) => {
+  // make a copy of `teamInfo` plus add new properties to it.
+  // the first parameter (the target) needs to be `{}` to make a
+  // shallow clone otherwise we mutate! 😨
+  return Object.assign({}, teamInfo, { timestamp: Date.now() })
+}
+
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+const teamInfoWithTimestamp = addTimestamp(teamInfo)
+
+console.log(teamInfo === teamInfoWithTimestamp)
+// false (proof the arrays are different)
+console.log(Object.keys(teamInfo).length)
+// 4
+console.log(Object.keys(teamInfoWithTimestamp).length)
+// 5
+```
+
+...we can use the spread operator.
+
+```js {3}
+const addTimestamp = (teamInfo) => {
+  // shallow clone and add `timestamp` w/ spread operator 🙌🏾
+  return { ...teamInfo, timestamp: Date.now() }
+}
+
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+const teamInfoWithTimestamp = addTimestamp(teamInfo)
+
+console.log(teamInfo === teamInfoWithTimestamp)
+// false (proof the arrays are different)
+console.log(Object.keys(teamInfo).length)
+// 4
+console.log(Object.keys(teamInfoWithTimestamp).length)
+// 5
+```
+
+Array spread was officially introduced with JavaScript in ES6/ES2015, while object spread came with ES2018.
+
+---
+
+## `delete` operator
+
+Let's say we have an object and need to remove a property from it. What do we do? We could assign the property to `undefined`.
+
+```js
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+
+// "remove" the 'city' property
+teamInfo.city = undefined
+
+if (!teamInfo.city) {
+  console.log('"city" property is gone?')
+}
+
+// 'city' is still in the object... 🤔
+console.log(Object.keys(teamInfo))
+// ['name', 'city', 'numTrophies', 'bestPlayer']
+```
+
+Although the conditional evaluates to `true` and we do log the message, the `city` property isn't truly gone. It still shows up in [`Object.keys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) and any other function that enumerates over the entries of the object. Instead, we can use the [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator.
+
+```js {9}
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+
+// remove the 'city' property for real
+delete teamInfo.city
+
+if (!teamInfo.city) {
+  console.log('"city" property is gone!')
+}
+
+// no more 'city' 👍🏾
+console.log(Object.keys(teamInfo))
+// ['name', 'numTrophies', 'bestPlayer']
+```
+
+The `delete` operator is another unary operator. It also returns a boolean indicating whether or not the deletion was successful. I don't really like using the `delete` operator because it's an imperative statement that can't be combined with other expressions.
+
+---
+
+## `in` operator
+
+How can we test to see if a property exists in an object? One way is to test the [truthiness](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) of the property.
+
+```js
+const teamInfo = {
+  name: 'Utah Jazz',
+  city: 'Salt Lake City',
+  numTrophies: 0,
+  bestPlayer: 'Greg Ostertag',
+}
+
+if (teamInfo.city) {
+  console.log('"city" property exists!')
+}
+
+// because the Jazz have never won a championship
+// this message won't log even though `numTrophies`
+// property *does* exist 👎🏾
+if (teamInfo.numTrophies) {
+  console.log('"numTrophies" property exists?')
+}
+```
+
+This approach can work most of the time. But the problem with testing the truthiness is when there can be valid [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) values, like `0` for `numTrophies` (since the Utah Jazz have never one an NBA championship). The second conditional won't execute even though the `numTrophies` property does exist on the `teamInfo` object.
+
+We can instead use [Object.hasOwnProperty()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty).
+
+```js
+const teamInfo = {
+  name: 'Utah Jazz',
+  city: 'Salt Lake City',
+  numTrophies: 0,
+  bestPlayer: 'Greg Ostertag',
+}
+
+// `hasOwnProperty` is accurate, but verbose 😐
+if (Object.hasOwnProperty(teamInfo, 'city')) {
+  console.log('"city" property exists!')
+}
+
+if (Object.hasOwnProperty(teamInfo, 'numTrophies')) {
+  console.log('"numTrophies" property exists!')
+}
+```
+
+Both messages now log thanks to `Object.hasOwnProperty()`. The "own" part doesn't matter for a simple object like `teamInfo`. However we can shorten up the code using the [`in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) operator.
+
+```js {9,13}
+const teamInfo = {
+  name: 'Utah Jazz',
+  city: 'Salt Lake City',
+  numTrophies: 0,
+  bestPlayer: 'Greg Ostertag',
+}
+
+// `in` is nice & succinct 👍🏾👍🏾
+if ('city' in teamInfo) {
+  console.log('"city" property exists!')
+}
+
+if ('numTrophies' in teamInfo) {
+  console.log('"numTrophies" property exists!')
+}
+```
+
+The `in` operator returns `true` if the specified property is in the specified object. A property that has been removed with `delete` returns `false`. However a property that has been set to `undefined` still returns `true`.
+
+We're probably most familiar using the `in` operator with [`for...in`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in).
+
+```js {9}
+const teamInfo = {
+  name: 'Utah Jazz',
+  city: 'Salt Lake City',
+  numTrophies: 0,
+  bestPlayer: 'Greg Ostertag',
+}
+
+// `in` also is used w/ `for-in`
+for (const propertyName in teamInfo) {
+  // log each property name/value combo
+  console.log(propertyName, teamInfo[property])
+}
+```
+
+One nuance with the `in` operator is that it evaluates both the object's own properties as well as any inherited properties, whereas `Object.hasOwnProperty()` only looks at the object's own properties. For simple objects like `teamInfo` there is no [prototypal inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) chain. But if we're wanting to inspect [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) instances, we may need one or the other depending on our needs.
+
+---
+
+## Optional chaining (`?.`) operator
+
+What happens when we need to access a property of an object but it may be [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) (i.e. `null` or `undefined`)? The old-school approach requires us to conditionally access the property.
+
+```js
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+let championshipPlayers
+
+// use conditional to check existence 😢
+if (teamInfo.players) {
+  championshipPlayers = teamInfo.players['94-95']
+}
+
+// championshipPlayers - `undefined`
+```
+
+We want to get the players from the 1994-1995 NBA season, but we first have to check to see if the `players` property even exists on `teamInfo` because it may not be there (it doesn't exist in our example). If we don't check, we get the dreaded `Cannot read property '94-95' of undefined` error.
+
+But using the the conditional is a bit verbose. In the past we've made it a single statement by using the short-circuiting behavior of the [logical AND (`&&`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator.
+
+```js
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+// use `&&` to check w/ a single statement 😩
+const championshipPlayers = teamInfo.players && teamInfo.players['94-95']
+
+// championshipPlayers - `undefined`
+```
+
+It's nice that it's a single statement, but it's still a bit verbose. And it can get way more verbose if the object is deeply nested with potential nullish values all the way down. Shortening this syntax is exactly why the [optional chaining (`?.`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator was added to JavaScript.
+
+```js {8}
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+// use optional chaining to check concisely! 🎉
+const championshipPlayers = teamInfo.players?.['94-95']
+
+// championshipPlayers - `undefined`
+```
+
+The optional chaining operator also works with calling a function that may not exist, although the syntax is a bit funky.
+
+```js {8}
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+// function syntax is a bit funky 😜
+teamInfo.update?.()
+```
+
+If the function doesn't exist, there is no error! Despite the somewhat funky syntax, in my opinion it's still better than having to use a conditional.
+
+The optional chaining operator was officially introduced to JavaScript with ES2020.
+
+---
+
+## Nullish coalescing (`??`) operator
+
+Let's say we want to assign a default value to a variable if it's nullish. The common pattern is to use the [logical OR (`||`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) operator.
+
+```js
+const ratingFilter = inputValue || 'PG'
+// what happens when `inputValue` is empty (`''`)? 🤔
+```
+
+However, if the variable can be a falsy value (like `false` or `0`), we would still fall into the default value. Sometimes we want this so the logical OR operator is totally fine. However, if a falsy value is valid that we don't want to default, this can unknowingly cause bugs. The empty string (`''`) is sneaky falsy value. If the empty string is a valid value for `inputValue`, our code would still default with `'PG'`, making the empty string an impossible value for `ratingFilter`.
+
+If we need to preserve falsy values and only want to default on nullish values, we can use the [nullish coalescing (`??`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) operator instead.
+
+```js {3}
+// will only default when `inputValue` is nullish
+// (`null` or `undefined`) 😁
+const ratingFilter = inputValue ?? 'PG'
+```
+
+Now `ratingFilter` will only default to `'PG'` if `inputValue` is `null` or `undefined`. If `inputValue` were the empty string, `ratingFilter` would be the empty string as well.
+
+The nullish coalescing operator works nicely with the optional chaining operator as well.
+
+```js {8}
+const teamInfo = {
+  name: 'Houston Rockets',
+  city: 'Houston',
+  numTrophies: 2,
+  bestPlayer: 'Hakeem Olajuwon',
+}
+// optional chaining + nullish coalescing FTW! 🤗
+const championshipPlayers = teamInfo.players?.['94-95'] ?? []
+
+// championshipPlayers - `[]`
+```
+
+The optional chaining operator returns `undefined` if the properties don't exist. So when we get `undefined` the nullish coalescing operator kicks in and returns the default value (`[]`).
+
+The nullish coalescing operator was officially introduced into JavaScript with ES2020.
+
+---
+
+And there you have it. Eight JavaScript operators to help you write more concise and accurate code. I'm sure there are a dozen more, but these are the ones I use the most that I simultaneously don't see others using that much.
+
+How many of them do you use on a regular basis? What other "unique" JavaScript operators or syntax are you using? Let me know on Twitter at [@benmvp](https://twitter.com/benmvp).
+
+Keep learning my friends. 🤓

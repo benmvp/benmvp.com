@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
 import {
-  createStyles,
-  makeStyles,
   Box,
   Typography,
-  Link,
+  Link as ExternalLink,
   Container,
-} from '@material-ui/core'
-import { Link as GatsbyLink } from 'gatsby-theme-material-ui'
+  styled,
+} from '@mui/material'
+import Link from './Link'
 
 import SocialIcons from './SocialIcons'
 import SubscribeForm from './SubscribeForm'
@@ -18,57 +17,37 @@ interface Props {
 }
 
 const LINKS = [
-  { to: '/learning-es6-series/', title: 'Learning ES6' },
-  { to: '/ama/', title: 'AMA' },
-  { to: '/blog/rss.xml', title: 'RSS' },
+  { href: '/learning-es6-series/', title: 'Learning ES6' },
+  { href: '/ama/', title: 'AMA' },
+  { href: '/blog/rss.xml', title: 'RSS' },
 ]
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      display: 'grid',
-      gridRowGap: theme.spacing(3),
-      gridColumnGap: theme.spacing(2),
-      justifyItems: 'center',
-      gridTemplateColumns: 'auto',
-      gridTemplateRows: 'auto',
-      gridTemplateAreas: `
-        "links"
-        "info"
-        "subscribe"
-        "finePrint"
-      `,
+const Root = styled(Container)(({ theme }) => ({
+  display: 'grid',
+  gridRowGap: theme.spacing(3),
+  gridColumnGap: theme.spacing(2),
+  justifyItems: 'center',
+  gridTemplateColumns: 'auto',
+  gridTemplateRows: 'auto',
+  gridTemplateAreas: `
+    "links"
+    "info"
+    "subscribe"
+    "finePrint"
+  `,
 
-      [theme.breakpoints.up('sm')]: {
-        gridTemplateColumns: 'auto 1fr',
-        gridTemplateRows: '1fr auto 1fr',
-        gridTemplateAreas: `
-          "subscribe links"
-          "subscribe info"
-          "subscribe finePrint"
-        `,
-      },
-    },
-    links: {
-      gridArea: 'links',
-      alignSelf: 'flex-end',
-    },
-    info: {
-      gridArea: 'info',
-    },
-    subscribe: {
-      gridArea: 'subscribe',
-      maxWidth: '350px',
-    },
-    finePrint: {
-      gridArea: 'finePrint',
-    },
-  }),
-)
+  [theme.breakpoints.up('sm')]: {
+    gridTemplateColumns: 'auto 1fr',
+    gridTemplateRows: '1fr auto 1fr',
+    gridTemplateAreas: `
+      "subscribe links"
+      "subscribe info"
+      "subscribe finePrint"
+    `,
+  },
+}))
 
 const Footer = ({ includeSubscribe, maxWidth }: Props) => {
-  const classes = useStyles()
-
   return (
     <Box
       component="footer"
@@ -77,59 +56,57 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
       py={5}
       mt={5}
     >
-      <Container maxWidth={maxWidth} className={classes.root}>
+      <Root maxWidth={maxWidth}>
         {includeSubscribe && (
-          <Box className={classes.subscribe}>
+          <Box gridArea="subscribe" maxWidth="350px">
             <SubscribeForm />
           </Box>
         )}
-        <Typography variant="body1" align="center" className={classes.links}>
-          {LINKS.map(({ to, title }, index) => (
-            <Fragment key={to}>
-              <GatsbyLink key={to} to={to} color="inherit" underline="hover">
+        <Typography
+          variant="body1"
+          align="center"
+          gridArea="links"
+          alignSelf="flex-end"
+        >
+          {LINKS.map(({ href, title }, index) => (
+            <Fragment key={href}>
+              <Link href={href} color="inherit" underline="hover">
                 {title}
-              </GatsbyLink>
+              </Link>
               {index < LINKS.length - 1 ? ' | ' : ''}
             </Fragment>
           ))}
         </Typography>
-        <Box className={classes.info}>
-          <Typography variant="h4" className={classes.name}>
-            Ben Ilegbodu
-          </Typography>
+        <Box gridArea="info">
+          <Typography variant="h4">Ben Ilegbodu</Typography>
           <SocialIcons />
         </Box>
-        <Box className={classes.finePrint}>
+        <Box gridArea="finePrint">
           <Typography variant="body2" align="center" gutterBottom>
             © 2015 — {new Date().getFullYear()}, Ben Ilegbodu. All rights
             reserved.{' '}
-            <Link
+            <ExternalLink
               href="https://www.biblegateway.com/passage/?search=2%20cor%205%3A17&version=NLT;NTV"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
             >
               2 Cor 5:17
-            </Link>
+            </ExternalLink>
           </Typography>
-          <Typography
-            variant="caption"
-            component="p"
-            align="center"
-            className={classes.buildInfo}
-          >
+          <Typography variant="caption" component="p" align="center">
             Built using{' '}
-            <Link
-              href="https://www.gatsbyjs.org"
+            <ExternalLink
+              href="https://nextjs.org/"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
               underline="always"
             >
-              Gatsby
-            </Link>{' '}
+              Next.js
+            </ExternalLink>{' '}
             and deployed to{' '}
-            <Link
+            <ExternalLink
               href="https://vercel.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -137,9 +114,9 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
               underline="always"
             >
               Vercel
-            </Link>
+            </ExternalLink>
             . The source code is hosted on{' '}
-            <Link
+            <ExternalLink
               href="https://github.com/benmvp/benmvp.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -147,11 +124,11 @@ const Footer = ({ includeSubscribe, maxWidth }: Props) => {
               underline="always"
             >
               Github
-            </Link>
+            </ExternalLink>
             .
           </Typography>
         </Box>
-      </Container>
+      </Root>
     </Box>
   )
 }

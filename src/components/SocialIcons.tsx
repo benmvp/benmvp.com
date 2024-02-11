@@ -1,79 +1,51 @@
 import React from 'react'
-import { makeStyles, createStyles, Box } from '@material-ui/core'
-import { GitHub, LinkedIn, Twitter } from '@material-ui/icons'
-import { IconButton } from 'gatsby-theme-material-ui'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Box, IconButton, styled } from '@mui/material'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import SITE_CONFIG from '../config/site'
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      justifyContent: 'center',
-
-      [theme.breakpoints.up('md')]: {
-        justifyContent: 'flex-end',
-      },
-    },
-    item: {
-      listStyle: 'none',
-    },
-  }),
-)
+const Item = styled('li')({ listStyle: 'none' })
 
 const SocialIcons = () => {
-  const classes = useStyles()
-  const { site } = useStaticQuery(graphql`
-    query SocialSiteInfo {
-      site {
-        siteMetadata {
-          social {
-            twitter
-            github
-            linkedIn
-          }
-        }
-      }
-    }
-  `)
-
   return (
-    <Box component="ul" className={classes.root} p={0} my={0}>
-      <li className={classes.item}>
+    <Box component="ul" display="flex" justifyContent="center" p={0} my={0}>
+      <Item>
         <a
-          href={site.siteMetadata.social.twitter}
+          href={SITE_CONFIG.twitter}
           target="_blank"
           rel="noopener noreferrer"
           title="Follow Ben on Twitter"
         >
           <IconButton color="secondary" aria-label="Ben's Twitter profile">
-            <Twitter fontSize="large" />
+            <TwitterIcon fontSize="large" />
           </IconButton>
         </a>
-      </li>
-      <li className={classes.item}>
+      </Item>
+      <Item>
         <a
-          href={site.siteMetadata.social.github}
+          href={SITE_CONFIG.github}
           target="_blank"
           rel="noopener noreferrer"
           title="Visit Ben's Github profile"
         >
           <IconButton color="secondary" aria-label="Ben's Github profile">
-            <GitHub fontSize="large" />
+            <GitHubIcon fontSize="large" />
           </IconButton>
         </a>
-      </li>
-      <li className={classes.item}>
+      </Item>
+      <Item>
         <a
-          href={site.siteMetadata.social.linkedIn}
+          href={SITE_CONFIG.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
           title="Visit Ben's LinkedIn resume"
         >
           <IconButton color="secondary" aria-label="Ben's LinkedIn profile">
-            <LinkedIn fontSize="large" />
+            <LinkedInIcon fontSize="large" />
           </IconButton>
         </a>
-      </li>
+      </Item>
     </Box>
   )
 }

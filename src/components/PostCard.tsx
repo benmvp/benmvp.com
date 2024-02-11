@@ -1,97 +1,74 @@
-import React from 'react'
 import {
-  makeStyles,
-  createStyles,
+  Box,
+  Button,
   Card,
   CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
-  Button,
   Typography,
-  Box,
-} from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
-import Share from './Share'
-import { getBlogUrl, genPostSlug } from '../utils'
+} from '@mui/material'
+import { getPostUrl } from '../utils/url'
 import useCopyUrl from '../utils/useCopyUrl'
+import Share from './Share'
+import Link from './Link'
+import { type Post } from '../utils/post'
+import { formatDate } from '../utils/date'
 
 interface Props {
-  date: string
-  hero: any
   mode?: 'min' | 'full'
-  slug: string
-  summary: string
-  tags?: string[]
-  title: string
+  post: Post
 }
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    media: {
-      height: 266.66667,
-    },
-    buttons: {
-      flex: 1,
-      marginRight: theme.spacing(2),
-    },
-  }),
-)
-
-const PostCard = ({
-  date,
-  hero,
-  mode = 'full',
-  slug,
-  summary,
-  tags,
-  title,
-}: Props) => {
-  const classes = useStyles()
-  const url = getBlogUrl(slug)
-  const [{ copyText, copyButtonColor }, copy] = useCopyUrl(url)
+const PostCard = ({ mode = 'full', post }: Props) => {
+  const { date, hero, slug, shortDescription, title, tags } = post
+  const summary = shortDescription
+  const fullUrl = getPostUrl(slug)
+  const [{ copyText, copyButtonColor }, copy] = useCopyUrl(fullUrl)
   const showDate = mode !== 'min'
   const showShare = mode !== 'min'
 
   return (
-    <Card id={genPostSlug(title)}>
-      <CardActionArea component={Link} to={`/blog${slug}`} underline="none">
-        {hero && (
-          <CardMedia
-            component="img"
-            image={hero.childImageSharp.fluid.src}
-            title={title}
-            className={classes.media}
-          />
-        )}
-        <CardContent>
-          {showDate && (
+    <Card id={slug}>
+      <CardActionArea>
+        <Link href={getPostUrl(slug)} underline="none">
+          {hero && (
+            <CardMedia
+              component="img"
+              src={hero}
+              title={title}
+              sx={{ height: 266.66667 }}
+            />
+          )}
+          <CardContent>
+            {showDate && (
+              <Typography
+                gutterBottom
+                variant="subtitle2"
+                color="textSecondary"
+                component="h4"
+              >
+                {formatDate(date)}
+              </Typography>
+            )}
             <Typography
               gutterBottom
-              variant="subtitle2"
-              color="textSecondary"
-              component="h4"
+              variant="h5"
+              color="textPrimary"
+              component="h3"
+              title={title}
             >
-              {date}
+              {title}
             </Typography>
-          )}
-          <Typography
-            gutterBottom
-            variant="h5"
-            color="textPrimary"
-            component="h3"
-            title={title}
-          >
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {summary}
-          </Typography>
-        </CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {summary}
+            </Typography>
+          </CardContent>
+        </Link>
       </CardActionArea>
       {showShare && (
         <CardActions>
-          <Box className={classes.buttons}>
+          <Box sx={{ flex: 1, mr: 2 }}>
             <Button size="small" color={copyButtonColor} onClick={copy}>
               {copyText}
             </Button>
@@ -99,10 +76,10 @@ const PostCard = ({
           <Share
             iconSize={32}
             summary={summary}
-            tags={tags}
+            tags={tags ?? undefined}
             title={title}
-            url={url}
-            options={new Set(['twitter', 'facebook', 'pocket'])}
+            url={fullUrl}
+            options={['twitter', 'facebook', 'pocket']}
             type="post"
           />
         </CardActions>

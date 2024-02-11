@@ -1,71 +1,41 @@
-import React, { useEffect } from 'react'
-import { graphql } from 'gatsby'
-import {
-  createStyles,
-  makeStyles,
-  Box,
-  Typography,
-  Grid,
-} from '@material-ui/core'
-import { Link } from 'gatsby-theme-material-ui'
-import Layout from '../components/Layout'
+import { useEffect } from 'react'
+import { type GetStaticProps } from 'next'
+import { Box, Grid, Stack, Typography } from '@mui/material'
 import Seo from '../components/Seo'
-import MinishopCard from '../components/MinishopCard'
-import SpeakCard from '../components/SpeakCard'
+import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
+import { type SpeakingEngagement, getEngagements } from '../utils/engagement'
+import { getMinishopUrl, getPostUrl, getUrl } from '../utils/url'
+import { Video, getVideos } from '../utils/video'
+import { Post, getPosts } from '../utils/post'
+import Link from '../components/Link'
 import VideoCard from '../components/VideoCard'
-import { getUrl } from '../utils'
-import { getVideos } from '../utils/video'
-import { getEngagements } from '../utils/speaking-engagement'
-import useMinishops from '../utils/useMinishops'
+import SpeakCard from '../components/SpeakCard'
+import { Minishop, getMinishops } from '../utils/minishop'
+import MinishopCard from '../components/MinishopCard'
 
-const UPCOMING_ENGAGEMENTS = getEngagements()
-  .future.filter(({ isCancelled }) => !isCancelled)
-  .slice(0, 2)
-
-const RECENT_VIDEOS = getVideos().slice(0, 2)
-
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    section: {
-      marginTop: theme.spacing(3),
-    },
-    video: {
-      margin: '0 auto',
-    },
-  }),
-)
-
-const MinishopCardList = () => {
-  const { upcoming, remaining } = useMinishops()
-  const minishops = upcoming.length ? upcoming : remaining
-
+const MinishopCardList = ({ minishops }: { minishops: Minishop[] }) => {
   useEffect(() => {
-    if (upcoming.length) {
+    if (minishops.length) {
       window.gtag?.('event', 'view_item_list', {
-        items: upcoming.map((node, index) => ({
-          id: node.frontmatter.event?.id,
-          name: node.frontmatter.title,
-          list_name: 'Home',
-          list_position: index + 1,
-          price: 100,
-        })),
+        items: minishops
+          .filter((minishop) => minishop.isUpcoming)
+          .map((minishop, index) => ({
+            id: minishop.slug,
+            name: minishop.title,
+            list_name: 'Home',
+            list_position: index + 1,
+            price: 100,
+          })),
       })
     }
-  }, [upcoming])
+  }, [minishops])
 
   return (
     <Grid container spacing={2}>
-      {minishops.map((node) => (
-        <Grid key={node.id} item xs={12} lg={6}>
-          <MinishopCard
-            mode="min"
-            slug={node.fields.slug}
-            title={node.frontmatter.title}
-            tags={node.frontmatter.tags}
-            summary={node.frontmatter.shortDescription || node.excerpt}
-            event={node.frontmatter.event}
-          />
+      {minishops.map((minishop) => (
+        <Grid key={minishop.slug} item xs={12} lg={6}>
+          <MinishopCard mode="min" minishop={minishop} />
         </Grid>
       ))}
       <Grid item xs={12}>
@@ -74,7 +44,7 @@ const MinishopCardList = () => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href="/minishops/" variant="h6">
+          <Link href={getMinishopUrl()} variant="h6" underline="hover">
             View all minishops &gt;
           </Link>
         </Box>
@@ -83,11 +53,15 @@ const MinishopCardList = () => {
   )
 }
 
-const SpeakCardList = () => (
+const SpeakCardList = ({
+  engagements,
+}: {
+  engagements: SpeakingEngagement[]
+}) => (
   <Grid container spacing={2}>
-    {UPCOMING_ENGAGEMENTS.map((speak) => (
-      <Grid key={speak.id} item xs={12} md={6}>
-        <SpeakCard {...speak} mode="min" />
+    {engagements.map((engagement) => (
+      <Grid key={engagement.id} item xs={12} md={6}>
+        <SpeakCard engagement={engagement} mode="min" />
       </Grid>
     ))}
     <Grid item xs={12}>
@@ -96,7 +70,7 @@ const SpeakCardList = () => (
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href="/speak/" variant="h6">
+        <Link href={getUrl('speak')} variant="h6" underline="hover">
           View all speaking engagements &gt;
         </Link>
       </Box>
@@ -104,43 +78,12 @@ const SpeakCardList = () => (
   </Grid>
 )
 
-const PostCardList = ({ posts }) => (
-  <Grid container spacing={2}>
-    {posts.map(({ node }) => (
-      <Grid key={node.id} item xs={12} sm={6} lg={4}>
-        <PostCard
-          mode="min"
-          slug={node.fields.slug}
-          title={node.frontmatter.title}
-          tags={node.frontmatter.tags}
-          date={node.frontmatter.date}
-          summary={node.frontmatter.shortDescription || node.excerpt}
-          hero={node.frontmatter.hero}
-        />
-      </Grid>
-    ))}
-    <Grid item xs={12}>
-      <Box
-        display="flex"
-        justifyContent={{ xs: 'center', sm: 'flex-end' }}
-        width="100%"
-      >
-        <Link href="/blog/" variant="h6">
-          View all posts &gt;
-        </Link>
-      </Box>
-    </Grid>
-  </Grid>
-)
-
-const VideoCardList = () => {
-  const classes = useStyles()
-
+const PostCardList = ({ posts }: { posts: Post[] }) => {
   return (
     <Grid container spacing={2}>
-      {RECENT_VIDEOS.map((video) => (
-        <Grid key={video.id} item xs={12} lg={6}>
-          <VideoCard {...video} className={classes.video} mode="min" />
+      {posts.map((post) => (
+        <Grid key={post.slug} item xs={12} sm={6} lg={4}>
+          <PostCard mode="min" post={post} />
         </Grid>
       ))}
       <Grid item xs={12}>
@@ -149,7 +92,30 @@ const VideoCardList = () => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href="/videos/" variant="h6">
+          <Link href={getPostUrl('blog')} variant="h6" underline="hover">
+            View all posts &gt;
+          </Link>
+        </Box>
+      </Grid>
+    </Grid>
+  )
+}
+
+const VideoCardList = ({ videos }: { videos: Video[] }) => {
+  return (
+    <Grid container spacing={2}>
+      {videos.map((video) => (
+        <Grid key={video.id} item xs={12} lg={6}>
+          <VideoCard video={video} mode="min" sx={{ mx: 'auto' }} />
+        </Grid>
+      ))}
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          justifyContent={{ xs: 'center', sm: 'flex-end' }}
+          width="100%"
+        >
+          <Link href={getUrl('videos')} variant="h6" underline="hover">
             View all videos &gt;
           </Link>
         </Box>
@@ -158,83 +124,104 @@ const VideoCardList = () => {
   )
 }
 
-export default ({ data }) => {
-  const { recentPosts } = data
-  const classes = useStyles()
+interface Props {
+  minishops: Minishop[]
+  recentPosts: Post[]
+  recentVideos: Video[]
+  upcomingEngagements: SpeakingEngagement[]
+}
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const recentPosts = await getPosts({
+    size: 6,
+  })
+  const recentVideos = getVideos({ size: 2 })
+  const upcomingEngagements = getEngagements({
+    size: 2,
+    filter: { when: 'upcoming' },
+    sortOrder: 'asc',
+  })
+  let minishops = await getMinishops({
+    size: 4,
+    filter: { when: 'upcoming' },
+  })
+
+  if (minishops.length === 0) {
+    minishops = await getMinishops({
+      size: 4,
+      filter: { when: 'remaining' },
+      sortBy: 'title',
+    })
+  }
+
+  return {
+    props: { minishops, upcomingEngagements, recentPosts, recentVideos },
+  }
+}
+
+const HomePage = ({
+  minishops,
+  recentPosts,
+  recentVideos,
+  upcomingEngagements,
+}: Props) => {
   return (
     <Layout masthead maxWidth="lg">
-      <Seo url={getUrl()} />
+      <Seo url={getUrl('', true)} />
 
-      <Box component="section" className={classes.section}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Read some of Ben's recent blog posts"
-        >
-          Read
-        </Typography>
-        <PostCardList posts={recentPosts.edges} />
-      </Box>
-
-      <Box component="section" className={classes.section}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Watch Ben's most recent tech talk video"
-        >
-          Watch
-        </Typography>
-        <VideoCardList />
-      </Box>
-
-      {UPCOMING_ENGAGEMENTS.length > 0 && (
-        <Box component="section" className={classes.section}>
+      <Stack spacing={3} direction="column" mt={3}>
+        <Box component="section">
           <Typography
             variant="h3"
             component="h2"
             gutterBottom
-            aria-label="Attend one of Ben's future tech talks"
+            aria-label="Read some of Ben's recent blog posts"
           >
-            Attend
+            Read
           </Typography>
-          <SpeakCardList />
+          <PostCardList posts={recentPosts} />
         </Box>
-      )}
 
-      <Box component="section" className={classes.section}>
-        <Typography
-          variant="h3"
-          component="h2"
-          gutterBottom
-          aria-label="Join one of Ben's upcoming minishops"
-        >
-          Develop
-        </Typography>
-        <MinishopCardList />
-      </Box>
+        <Box component="section">
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Watch Ben's most recent tech talk video"
+          >
+            Watch
+          </Typography>
+          <VideoCardList videos={recentVideos} />
+        </Box>
+
+        {upcomingEngagements.length > 0 && (
+          <Box component="section">
+            <Typography
+              variant="h3"
+              component="h2"
+              gutterBottom
+              aria-label="Attend one of Ben's upcoming tech talks"
+            >
+              Attend
+            </Typography>
+            <SpeakCardList engagements={upcomingEngagements} />
+          </Box>
+        )}
+
+        <Box component="section">
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            aria-label="Join one of Ben's upcoming minishops"
+          >
+            Develop
+          </Typography>
+          <MinishopCardList minishops={minishops} />
+        </Box>
+      </Stack>
     </Layout>
   )
 }
 
-export const query = graphql`
-  query HomePageInfo {
-    recentPosts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        fileAbsolutePath: { regex: "//content/posts//" }
-        frontmatter: { published: { ne: false } }
-      }
-      limit: 6
-    ) {
-      edges {
-        node {
-          id
-          ...PostCardInfo
-        }
-      }
-    }
-  }
-`
+export default HomePage

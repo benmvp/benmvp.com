@@ -1,18 +1,9 @@
-import React from 'react'
-import {
-  makeStyles,
-  createStyles,
-  Typography,
-  Box,
-  Divider,
-  Link,
-} from '@material-ui/core'
+import { Typography, Box, Divider, Link, Stack } from '@mui/material'
 import Share from './Share'
 import PostBio from './PostBio'
 import SubscribeForm from './SubscribeForm'
 
 interface Props {
-  className?: string
   summary: string
   slug: string
   tags?: string[]
@@ -20,20 +11,14 @@ interface Props {
   url: string
 }
 
-const useStyles = makeStyles((theme) => {
-  return createStyles({
-    divider: {
-      marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(2),
-    },
-  })
-})
-
-const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
-  const classes = useStyles()
-
+const PostFooter = ({ summary, slug, tags, title, url }: Props) => {
   return (
-    <Box component="footer" className={className}>
+    <Stack
+      component="footer"
+      direction="column"
+      spacing={2}
+      alignItems="center"
+    >
       <Share
         url={url}
         title={title}
@@ -46,11 +31,11 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
         <SubscribeForm />
       </Box>
 
-      <Divider className={classes.divider} variant="middle" />
+      <Divider variant="middle" />
 
       <PostBio />
 
-      <Divider className={classes.divider} variant="middle" />
+      <Divider variant="middle" />
 
       <Typography align="center" variant="h6" component="p">
         <Link
@@ -69,7 +54,7 @@ const PostFooter = ({ className, summary, slug, tags, title, url }: Props) => {
           Edit on GitHub
         </Link>
       </Typography>
-    </Box>
+    </Stack>
   )
 }
 

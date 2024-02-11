@@ -1,15 +1,14 @@
 import React from 'react'
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box } from '@mui/material'
 
 interface Props {
-  className?: string
   subTitle?: string
   title: string
 }
 
-const PageHeader = ({ className, subTitle, title }: Props) => {
+const PageHeader = ({ subTitle, title }: Props) => {
   return (
-    <Box component="header" className={className}>
+    <Box component="header">
       <Typography variant="h3" component="h1" gutterBottom>
         {title}
       </Typography>

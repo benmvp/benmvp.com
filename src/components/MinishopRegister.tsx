@@ -1,43 +1,33 @@
 import React, { useEffect } from 'react'
-import formatDate from 'date-fns-tz/format'
-import {
-  makeStyles,
-  createStyles,
-  Box,
-  Button,
-  Paper,
-  Typography,
-} from '@material-ui/core'
+import formatDateTimezone from 'date-fns-tz/format'
+import { Box, Button, Paper, Typography } from '@mui/material'
 
-interface Props {
-  id: string
-  title: string
-  event: {
-    id: string
-    start: string
+declare global {
+  interface Window {
+    EBWidgets?: {
+      createWidget: (options: {
+        widgetType: string
+        eventId: string
+        modal: boolean
+        modalTriggerElementId: string
+        onOrderComplete: () => void
+      }) => void
+    }
   }
-  isTop?: boolean
 }
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-      margin: theme.spacing(5, 0, 1),
-      padding: theme.spacing(2),
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
-    },
-  }),
-)
+interface Props {
+  eventId: string
+  eventStart: string
+  isTop?: boolean
+  title: string
+}
 
-const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
-  const classes = useStyles()
-  const startDate = Date.parse(event.start)
-  const formattedDate = formatDate(startDate, 'EEEE, MMMM d, yyyy')
-  const formattedTime = formatDate(startDate, 'h:mm b z')
-  const eventId = event.id
-  const buttonId = `eventbrite-checkout-${eventId}-${isTop ? 'top' : 'bottom'}`
-
+const useCheckoutWidget = (
+  eventId: string,
+  buttonId: string,
+  title: string,
+) => {
   useEffect(() => {
     const createWidget = () => {
       window.EBWidgets?.createWidget({
@@ -55,22 +45,23 @@ const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
       })
     }
 
-    let widgetsScript: HTMLScriptElement | null = document.getElementById(
-      'eb_widgets',
-    )
+    let widgetsScript: HTMLElement | null =
+      document.getElementById('eb_widgets')
     let added = false
 
     // create the widgets script if it doesn't already exists
     if (!widgetsScript) {
-      widgetsScript = document.createElement('script')
+      const newWidgetsScript = document.createElement('script')
 
-      widgetsScript.id = 'eb_widgets'
-      widgetsScript.async = true
-      widgetsScript.src =
+      newWidgetsScript.id = 'eb_widgets'
+      newWidgetsScript.async = true
+      newWidgetsScript.src =
         'https://www.eventbrite.com/static/widgets/eb_widgets.js'
-      widgetsScript.type = 'text/javascript'
+      newWidgetsScript.type = 'text/javascript'
 
-      document.body.appendChild(widgetsScript)
+      document.body.appendChild(newWidgetsScript)
+
+      widgetsScript = newWidgetsScript
       added = true
     }
 
@@ -85,10 +76,34 @@ const MinishopRegister = ({ id, title, event, isTop = false }: Props) => {
       }
     }
   }, [eventId, buttonId, title])
+}
+
+const MinishopRegister = ({
+  eventId,
+  eventStart,
+  isTop = false,
+  title,
+}: Props) => {
+  const startDate = Date.parse(eventStart)
+  const formattedDate = formatDateTimezone(startDate, 'EEEE, MMMM d, yyyy')
+  const formattedTime = formatDateTimezone(startDate, 'h:mm b z')
+  const buttonId = `eventbrite-checkout-${eventId}-${isTop ? 'top' : 'bottom'}`
+
+  useCheckoutWidget(eventId, buttonId, title)
 
   return (
     <>
-      <Paper component="section" elevation={3} className={classes.root}>
+      <Paper
+        component="section"
+        elevation={3}
+        sx={{
+          mt: 5,
+          mb: 0,
+          padding: 2,
+          backgroundColor: 'palette.secondary.main',
+          color: 'palette.secondary.contrastText',
+        }}
+      >
         <Box
           display="flex"
           alignItems="center"

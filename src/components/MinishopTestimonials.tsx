@@ -1,18 +1,17 @@
 import React, { Fragment } from 'react'
 import {
-  makeStyles,
-  createStyles,
-  Typography,
+  Avatar,
+  Divider,
   List,
   ListItem,
-  Divider,
-  ListItemText,
   ListItemAvatar,
-  Avatar,
+  ListItemText,
   Paper,
-} from '@material-ui/core'
-import { formatDate } from '../utils'
-import ALL_TESTIMONIALS from '../../content/minishops/testimonials/data.json'
+  Typography,
+} from '@mui/material'
+import ALL_TESTIMONIALS from '../content/minishops/testimonials'
+import { formatDate } from '../utils/date'
+import { Minishop } from '../utils/minishop'
 
 interface Testimonial {
   date: string
@@ -23,21 +22,11 @@ interface Testimonial {
 }
 
 interface Props {
-  slug: string
-  title: string
+  minishop: Minishop
 }
 
-const useStyles = makeStyles((theme) => {
-  return createStyles({
-    title: {
-      textAlign: 'center',
-      padding: theme.spacing(2),
-    },
-  })
-})
-
-const MinishopTestimonials = ({ slug, title }: Props) => {
-  const classes = useStyles()
+const MinishopTestimonials = ({ minishop }: Props) => {
+  const { slug, title } = minishop
   const { [slug]: testimonials = [] } = ALL_TESTIMONIALS as Record<
     string,
     Testimonial[]
@@ -49,7 +38,7 @@ const MinishopTestimonials = ({ slug, title }: Props) => {
 
   return (
     <Paper component="section" elevation={1}>
-      <Typography variant="h5" component="h1" className={classes.title}>
+      <Typography variant="h5" component="h1" align="center" p={2}>
         Past learners{' '}
         <span role="img" aria-label="love">
           ❤️
