@@ -135,6 +135,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
             label: 'Slides',
             url: 'https://slides.benmvp.com/2023/connecttech/divops.html',
           },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=Xh4JLNJeWQ4',
+          },
         ],
       },
     ],
@@ -154,6 +158,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Slides',
             url: 'https://slides.benmvp.com/2023/ato/nextjs.html',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=_B9kJdMUDPk',
           },
         ],
       },
