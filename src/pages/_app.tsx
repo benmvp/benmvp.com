@@ -4,7 +4,9 @@ import { Analytics } from '@vercel/analytics/react'
 import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material'
 import Bugsnag from '@bugsnag/js'
 import BugsnagPluginReact from '@bugsnag/plugin-react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { getTheme } from '../config/theme'
+import SITE_CONFIG from '../config/site'
 
 import 'prism-themes/themes/prism-material-dark.css'
 import '../css/line-numbers.css'
@@ -27,6 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <GoogleAnalytics gaId={SITE_CONFIG.gaTrackingId} />
         <Analytics />
       </ThemeProvider>
     </ErrorBoundary>

@@ -29,6 +29,13 @@
 - [x] `sitemap.xml`
 - [x] `manifest.webmanifest`
 
+## Other
+
+- [x] Google analytics
+- [x] RSS feed
+- [x] Google ads
+- [x] Google search console
+
 ## Blog posts listing
 
 - [ ] Add pagination

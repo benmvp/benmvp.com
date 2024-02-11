@@ -89,6 +89,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     pipeline.pipe(res).on('finish', resolve).on('error', reject)
   })
 
+  // no props to return, just need to write the sitemap to the response
   return {
     props: {},
   }
