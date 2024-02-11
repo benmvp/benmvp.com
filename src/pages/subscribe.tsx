@@ -6,7 +6,7 @@ import Seo from '../components/Seo'
 import PageHeader from '../components/PageHeader'
 import SubscribeForm from '../components/SubscribeForm'
 import Share from '../components/Share'
-import { getUrl } from '../utils/url'
+import { getMinishopUrl, getPostUrl, getUrl } from '../utils/url'
 import generateSocialImage from '../utils/generate-social-image'
 
 const PAGE_TITLE = 'Subscribe to the BenMVP Newsletter'
@@ -40,21 +40,23 @@ const Subscribe = () => {
       <Box component="ul" my={4} pl={4}>
         <Typography component="li">
           I blog a lot about JavaScript, React, TypeScript,{' '}
-          <Link href="/blog/what-divops-engineer/">&quot;DivOps&quot;</Link> and
-          other related web frontend technologies based on what I&apos;m
+          <Link href={getPostUrl('what-divops-engineer')}>
+            &quot;DivOps&quot;
+          </Link>{' '}
+          and other related web frontend technologies based on what I&apos;m
           learning or questions that I&apos;m asked.{' '}
           <strong>Get notified of my new blog posts</strong> when they are
           published.
         </Typography>
         <Typography component="li">
           I host short 3.5-hour workshops (called{' '}
-          <Link href="/minishops/">minishops</Link>) on React and TypeScript.{' '}
-          <strong>Find out about upcoming minishops</strong> when they are
-          released to ensure you get the best price possible.
+          <Link href={getMinishopUrl()}>minishops</Link>) on React and
+          TypeScript. <strong>Find out about upcoming minishops</strong> when
+          they are released to ensure you get the best price possible.
         </Typography>
         <Typography component="li">
-          I <Link href="/speak/">speak</Link> at conferences &amp; meetups, join
-          in on podcasts, and will do the occasional livestream.{' '}
+          I <Link href={getUrl('speak')}>speak</Link> at conferences &amp;
+          meetups, join in on podcasts, and will do the occasional livestream.{' '}
           <strong>Stay up to date with future events and videos</strong>.
         </Typography>
       </Box>

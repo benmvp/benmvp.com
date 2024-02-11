@@ -5,7 +5,7 @@ import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
 import { type SpeakingEngagement, getEngagements } from '../utils/engagement'
-import { getMinishopUrl, getUrl } from '../utils/url'
+import { getMinishopUrl, getPostUrl, getUrl } from '../utils/url'
 import { Video, getVideos } from '../utils/video'
 import { Post, getPosts } from '../utils/post'
 import Link from '../components/Link'
@@ -70,7 +70,7 @@ const SpeakCardList = ({
         justifyContent={{ xs: 'center', sm: 'flex-end' }}
         width="100%"
       >
-        <Link href={getUrl('/speak/')} variant="h6" underline="hover">
+        <Link href={getUrl('speak')} variant="h6" underline="hover">
           View all speaking engagements &gt;
         </Link>
       </Box>
@@ -92,7 +92,7 @@ const PostCardList = ({ posts }: { posts: Post[] }) => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href={getUrl('/blog/')} variant="h6" underline="hover">
+          <Link href={getPostUrl('blog')} variant="h6" underline="hover">
             View all posts &gt;
           </Link>
         </Box>
@@ -115,7 +115,7 @@ const VideoCardList = ({ videos }: { videos: Video[] }) => {
           justifyContent={{ xs: 'center', sm: 'flex-end' }}
           width="100%"
         >
-          <Link href={getUrl('/videos/')} variant="h6" underline="hover">
+          <Link href={getUrl('videos')} variant="h6" underline="hover">
             View all videos &gt;
           </Link>
         </Box>
@@ -167,7 +167,7 @@ const HomePage = ({
 }: Props) => {
   return (
     <Layout masthead maxWidth="lg">
-      <Seo url={getUrl('/', true)} />
+      <Seo url={getUrl('', true)} />
 
       <Stack spacing={3} direction="column" mt={3}>
         <Box component="section">

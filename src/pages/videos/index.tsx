@@ -38,8 +38,8 @@ const VideoListPage = ({ videos }: Props) => {
         I have been blessed with the opportunity to travel throughout the United
         States and all over the world to share my knowledge to help other
         developers grow in their skills. Check out some of the videos from my
-        past <Link href="/speak/">speaking engagements</Link> that can help you
-        level up your frontend skills.
+        past <Link href={getUrl('speak')}>speaking engagements</Link> that can
+        help you level up your frontend skills.
       </Typography>
 
       {videos.map((video) => (

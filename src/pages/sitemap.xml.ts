@@ -26,21 +26,21 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const pipeline = sitemap.pipe(createGzip())
 
   // home page
-  sitemap.write({ url: getUrl(''), changefreq: 'daily', priority: 0.7 })
+  sitemap.write({ url: getUrl('', true), changefreq: 'daily', priority: 0.7 })
 
   // main pages
   sitemap.write({
-    url: getUrl('speak/'),
+    url: getUrl('speak', true),
     changefreq: 'daily',
     priority: 0.7,
   })
   sitemap.write({
-    url: getUrl('videos/'),
+    url: getUrl('videos', true),
     changefreq: 'daily',
     priority: 0.7,
   })
   sitemap.write({
-    url: getUrl('projects/'),
+    url: getUrl('projects', true),
     changefreq: 'daily',
     priority: 0.7,
   })
@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   pages.paths.forEach((path) => {
     if (path && typeof path !== 'string') {
       sitemap.write({
-        url: getUrl(`${path.params.slug}/`),
+        url: getUrl(path.params.slug, true),
         changefreq: 'daily',
         priority: 0.7,
       })
@@ -57,25 +57,33 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   })
 
   // blog posts
-  sitemap.write({ url: getPostUrl(), changefreq: 'daily', priority: 0.7 })
+  sitemap.write({
+    url: getPostUrl('', true),
+    changefreq: 'daily',
+    priority: 0.7,
+  })
   posts.forEach((slug) => {
     sitemap.write({
-      url: getPostUrl(slug),
+      url: getPostUrl(slug, true),
       changefreq: 'daily',
       priority: 0.7,
     })
   })
 
   // minishops
-  sitemap.write({ url: getMinishopUrl(), changefreq: 'daily', priority: 0.7 })
   sitemap.write({
-    url: getMinishopUrl('conduct'),
+    url: getMinishopUrl('', true),
+    changefreq: 'daily',
+    priority: 0.7,
+  })
+  sitemap.write({
+    url: getMinishopUrl('conduct', true),
     changefreq: 'daily',
     priority: 0.7,
   })
   minishops.forEach((slug) => {
     sitemap.write({
-      url: getMinishopUrl(slug),
+      url: getMinishopUrl(slug, true),
       changefreq: 'daily',
       priority: 0.7,
     })

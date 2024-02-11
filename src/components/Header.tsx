@@ -18,32 +18,33 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 import Link from './Link'
 import SITE_CONFIG from '../config/site'
+import { getMinishopUrl, getPostUrl, getUrl } from '../utils/url'
 
 export const HEADER_HEIGHT = '82px'
 
 const NAV_LINKS = [
-  { href: '/blog/', title: 'Blog', label: "Read Ben's blog posts" },
+  { href: getPostUrl(), title: 'Blog', label: "Read Ben's blog posts" },
   {
-    href: '/videos/',
+    href: getUrl('videos'),
     title: 'Videos',
     label: "Watch Ben's past tech talks",
   },
   {
-    href: '/speak/',
+    href: getUrl('speak'),
     title: 'Speak',
     label: "Attend one of Ben's speaking engagements",
   },
   {
-    href: '/minishops/',
+    href: getMinishopUrl(),
     title: 'Minishops',
     label: "Develop from one of Ben's remote minishop",
   },
   {
-    href: '/projects/',
+    href: getUrl('projects'),
     title: 'Projects',
     label: "Check out some of Ben's dev projects",
   },
-  { href: '/about/', title: 'About', label: 'Learn more about Ben' },
+  { href: getUrl('about'), title: 'About', label: 'Learn more about Ben' },
 ]
 const MENU_BP = 768
 

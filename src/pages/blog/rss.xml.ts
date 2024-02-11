@@ -10,9 +10,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const feed = new RSS({
     title: SITE_CONFIG.title,
     description: SITE_CONFIG.description,
-    site_url: getUrl(''),
-    feed_url: getUrl('/blog/rss.xml'),
-    image_url: getUrl('/icons/icon-192x192.png'),
+    site_url: getUrl('', true),
+    feed_url: getUrl('blog/rss.xml', true),
+    image_url: getUrl('icons/icon-192x192.png', true),
   })
 
   posts.forEach((post) => {

@@ -74,7 +74,7 @@ const SpeakingEngagementListPage = ({ upcoming, past }: Props) => {
           Twitter
         </a>
         , <a href="mailto:ben@benmvp.com">email</a> or{' '}
-        <Link href="/ama/">my AMA</Link>.
+        <Link href={getUrl('ama')}>my AMA</Link>.
       </Typography>
 
       {upcoming.length > 0 && (
