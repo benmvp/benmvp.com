@@ -19,6 +19,14 @@ const PostFooter = ({ summary, slug, tags, title, url }: Props) => {
       spacing={2}
       alignItems="center"
     >
+      <Share
+        url={url}
+        title={title}
+        summary={summary}
+        tags={tags}
+        type="post"
+      />
+
       <Box mx="auto" mt={2} mb={4} maxWidth="500px">
         <SubscribeForm />
       </Box>

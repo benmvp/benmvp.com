@@ -48,6 +48,7 @@ const MinishopCard = ({ minishop, mode = 'full' }: Props) => {
                 component="h4"
                 title={fullDate}
                 noWrap
+                suppressHydrationWarning
               >
                 {fullDate}
               </Typography>

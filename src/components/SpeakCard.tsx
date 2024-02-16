@@ -39,7 +39,11 @@ const Talk = ({ mode, talk }: TalkProps) => {
           <Typography variant="body1" title={title}>
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary">
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            suppressHydrationWarning
+          >
             {date}
             {time && ` @ ${time}`}
             {room && ` (${room})`}

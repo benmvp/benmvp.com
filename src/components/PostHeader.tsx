@@ -32,11 +32,24 @@ const PostHeader = ({
           {subTitle}
         </Typography>
       )}
-      <Typography variant="subtitle2" component="p" gutterBottom>
+      <Typography
+        variant="subtitle2"
+        component="p"
+        gutterBottom
+        suppressHydrationWarning
+      >
         {formatDate(date, 'long')} · {timeToRead} min read
       </Typography>
 
-      <Box mt={2}></Box>
+      <Box mt={2}>
+        <Share
+          url={url}
+          title={title}
+          summary={summary}
+          tags={tags}
+          type="post"
+        />
+      </Box>
     </Box>
   )
 }

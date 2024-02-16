@@ -63,7 +63,7 @@ const Seo = ({
       {/* General tags */}
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={keywords} />
-      <meta name="image" content={metaImageFull} />
+      <meta name="image" content={metaImageFull} suppressHydrationWarning />
       <link rel="canonical" href={url} />
 
       <link
@@ -99,7 +99,11 @@ const Seo = ({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={metaImageFull} />
+      <meta
+        property="og:image"
+        content={metaImageFull}
+        suppressHydrationWarning
+      />
       <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:locale" content="en_US" />
 
@@ -109,7 +113,11 @@ const Seo = ({
       <meta name="twitter:creator" content={`@${SITE_CONFIG.twitterHandle}`} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={metaImageFull} />
+      <meta
+        name="twitter:image"
+        content={metaImageFull}
+        suppressHydrationWarning
+      />
       <meta name="twitter:image:alt" content={imageAlt} />
 
       {/* Additional tags */}
@@ -121,7 +129,7 @@ const Seo = ({
       ))}
 
       {/* schema.org */}
-      <script type="application/ld+json">
+      <script type="application/ld+json" suppressHydrationWarning>
         {JSON.stringify(siteSchemaOrg)}
       </script>
     </Head>

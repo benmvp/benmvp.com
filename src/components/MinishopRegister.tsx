@@ -119,7 +119,7 @@ const MinishopRegister = ({
             <Typography variant="h6" component="h3">
               Next Online Minishop*
             </Typography>
-            <Typography variant="h5" component="p">
+            <Typography variant="h5" component="p" suppressHydrationWarning>
               {formattedDate} @ {formattedTime}
             </Typography>
           </Box>

@@ -77,7 +77,12 @@ const VideoCard = ({ mode = 'full', sx, video }: Props) => {
             >
               {engagement}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              suppressHydrationWarning
+            >
               {date}
             </Typography>
           </ContentWrapper>
