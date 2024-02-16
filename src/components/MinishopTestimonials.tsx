@@ -65,6 +65,7 @@ const MinishopTestimonials = ({ minishop }: Props) => {
                         component="span"
                         variant="body2"
                         color="textPrimary"
+                        suppressHydrationWarning
                       >
                         {formatDate(testimonial.date)}
                       </Typography>

@@ -1,28 +1,38 @@
 import { formatUrl } from 'url-lib'
 import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
   FacebookShareButton,
   FacebookShareCount,
-  FacebookIcon,
-  LinkedinShareButton,
   LinkedinIcon,
-  PocketShareButton,
-  PocketIcon,
+  LinkedinShareButton,
+  RedditIcon,
+  RedditShareButton,
+  RedditShareCount,
+  XIcon,
   TwitterShareButton,
-  TwitterIcon,
-  EmailShareButton,
-  EmailIcon,
+  WhatsappIcon,
+  WhatsappShareButton,
 } from 'react-share'
 import { Stack } from '@mui/material'
 import SITE_CONFIG from '../config/site'
 
-type ShareOption = 'twitter' | 'facebook' | 'pocket' | 'linkedin' | 'email'
+type ShareOption =
+  | 'email'
+  | 'facebook'
+  | 'linkedin'
+  | 'reddit'
+  | 'twitter'
+  | 'whatsapp'
 
 const DEFAULT_ICON_SIZE = 48
 const DEFAULT_SHARE_OPTIONS: ShareOption[] = [
   'twitter',
   'facebook',
-  'pocket',
+  'reddit',
   'linkedin',
+  'whatsapp',
   'email',
 ]
 
@@ -60,14 +70,7 @@ const Share = ({
   }
 
   return (
-    <Stack
-      direction="row"
-      spacing={1}
-      // display="flex"
-      // flexDirection="row"
-      // justifyContent="center"
-      // flexWrap="wrap"
-    >
+    <Stack direction="row" spacing={1}>
       {shareOptions.has('twitter') && (
         <TwitterShareButton
           url={formatUrl(socialUrl, { utm_source: 'twitter' })}
@@ -77,13 +80,12 @@ const Share = ({
           aria-label="Share on Twitter"
           onShareWindowClose={() => handleShare('Twitter')}
         >
-          <TwitterIcon round size={iconSize} />
+          <XIcon round size={iconSize} />
         </TwitterShareButton>
       )}
       {shareOptions.has('facebook') && (
         <FacebookShareButton
           url={formatUrl(socialUrl, { utm_source: 'facebook' })}
-          quote={`${title} - ${summary}`}
           aria-label="Share on Facebook"
           onShareWindowClose={() => handleShare('Facebook')}
         >
@@ -91,15 +93,16 @@ const Share = ({
           <FacebookShareCount url={url} />
         </FacebookShareButton>
       )}
-      {shareOptions.has('pocket') && (
-        <PocketShareButton
-          url={formatUrl(socialUrl, { utm_source: 'pocket' })}
+      {shareOptions.has('reddit') && (
+        <RedditShareButton
+          url={formatUrl(socialUrl, { utm_source: 'reddit' })}
           title={title}
-          aria-label="Save to Pocket"
-          onShareWindowClose={() => handleShare('Pocket')}
+          aria-label="Share on Reddit"
+          onShareWindowClose={() => handleShare('Reddit')}
         >
-          <PocketIcon round size={iconSize} />
-        </PocketShareButton>
+          <RedditIcon round size={iconSize} />
+          <RedditShareCount url={url} />
+        </RedditShareButton>
       )}
       {shareOptions.has('linkedin') && (
         <LinkedinShareButton
@@ -112,6 +115,16 @@ const Share = ({
         >
           <LinkedinIcon round size={iconSize} />
         </LinkedinShareButton>
+      )}
+      {shareOptions.has('whatsapp') && (
+        <WhatsappShareButton
+          url={formatUrl(socialUrl, { utm_source: 'whatsapp' })}
+          title={title}
+          aria-label="Share with Whatsapp"
+          onShareWindowClose={() => handleShare('Whatsapp')}
+        >
+          <WhatsappIcon round size={iconSize} />
+        </WhatsappShareButton>
       )}
       {shareOptions.has('email') && (
         <EmailShareButton

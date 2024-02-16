@@ -79,8 +79,10 @@ export interface Minishop extends Omit<MinishopFrontMatter, 'event'> {
 export const getAllMinishopSlugs = async () => {
   const files = await readdir(MINISHOPS_DIRECTORY)
 
-  return files.filter((file) =>
-    statSync(resolve(MINISHOPS_DIRECTORY, file)).isDirectory(),
+  return files.filter(
+    (file) =>
+      statSync(resolve(MINISHOPS_DIRECTORY, file)).isDirectory() &&
+      file !== 'conduct',
   )
 }
 

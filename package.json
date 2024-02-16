@@ -35,7 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
-    "react-share": "^4.4.1",
+    "react-share": "^5.1.0",
     "reading-time-estimator": "^1.9.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-prism-plus": "^1.6.3",

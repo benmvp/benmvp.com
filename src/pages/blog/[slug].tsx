@@ -102,6 +102,9 @@ const BlogPage: NextPage<Props> = ({ post }) => {
           subTitle={shortDescription ?? undefined}
           timeToRead={timeToRead}
           date={date}
+          url={fullUrl}
+          summary={summary}
+          tags={tags ?? undefined}
         />
 
         <Content compiledSource={compiledSource} slug={slug} type="post" />
