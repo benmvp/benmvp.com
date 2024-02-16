@@ -72,8 +72,8 @@ dependencies:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.33)(react@18.2.0)
   react-share:
-    specifier: ^4.4.1
-    version: 4.4.1(react@18.2.0)
+    specifier: ^5.1.0
+    version: 5.1.0(react@18.2.0)
   reading-time-estimator:
     specifier: ^1.9.0
     version: 1.9.0
@@ -4217,11 +4217,10 @@ packages:
       - supports-color
     dev: false
 
-  /react-share@4.4.1(react@18.2.0):
-    resolution: {integrity: sha512-AJ9m9RiJssqvYg7MoJUc9J0D7b/liWrsfQ99ndKc5vJ4oVHHd4Fy87jBlKEQPibT40oYA3AQ/a9/oQY6/yaigw==}
-    engines: {node: '>=6.9.0', npm: '>=5.0.0'}
+  /react-share@5.1.0(react@18.2.0):
+    resolution: {integrity: sha512-OvyfMtj/0UzH1wi90OdHhZVJ6WUC/+IeWvBwppeZozwIGyAjQgyR0QXlHOrxVHVECqnGvcpBaFTXVrqouTieaw==}
     peerDependencies:
-      react: ^16.3.0 || ^17 || ^18
+      react: ^17 || ^18
     dependencies:
       classnames: 2.3.2
       jsonp: 0.2.1
