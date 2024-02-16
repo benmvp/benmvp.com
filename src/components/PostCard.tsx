@@ -23,7 +23,7 @@ interface Props {
 const PostCard = ({ mode = 'full', post }: Props) => {
   const { date, hero, slug, shortDescription, title, tags } = post
   const summary = shortDescription
-  const fullUrl = getPostUrl(slug)
+  const fullUrl = getPostUrl(slug, true)
   const [{ copyText, copyButtonColor }, copy] = useCopyUrl(fullUrl)
   const showDate = mode !== 'min'
   const showShare = mode !== 'min'
@@ -79,7 +79,7 @@ const PostCard = ({ mode = 'full', post }: Props) => {
             tags={tags ?? undefined}
             title={title}
             url={fullUrl}
-            options={['twitter', 'facebook', 'pocket']}
+            options={['twitter', 'facebook', 'reddit']}
             type="post"
           />
         </CardActions>
