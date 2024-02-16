@@ -79,7 +79,11 @@ const PostCard = ({ mode = 'full', post }: Props) => {
             tags={tags ?? undefined}
             title={title}
             url={fullUrl}
-            options={['twitter', 'facebook', 'reddit']}
+            options={
+              [
+                /*'twitter', 'facebook', 'reddit'*/
+              ]
+            }
             type="post"
           />
         </CardActions>

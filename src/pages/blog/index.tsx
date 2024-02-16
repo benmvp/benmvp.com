@@ -37,7 +37,7 @@ const BlogListPage = ({ posts }: Props) => (
     <Grid container spacing={2}>
       {posts.map((post) => (
         <Grid key={post.slug} item xs={12} sm={6} lg={4}>
-          <PostCard mode="min" post={post} />
+          <PostCard post={post} />
         </Grid>
       ))}
     </Grid>
