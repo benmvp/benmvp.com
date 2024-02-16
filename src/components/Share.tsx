@@ -59,15 +59,10 @@ const Share = ({
     })
   }
 
+  return null
+
   return (
-    <Stack
-      direction="row"
-      spacing={1}
-      // display="flex"
-      // flexDirection="row"
-      // justifyContent="center"
-      // flexWrap="wrap"
-    >
+    <Stack direction="row" spacing={1}>
       {shareOptions.has('twitter') && (
         <TwitterShareButton
           url={formatUrl(socialUrl, { utm_source: 'twitter' })}
