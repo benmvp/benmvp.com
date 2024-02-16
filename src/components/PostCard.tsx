@@ -73,19 +73,6 @@ const PostCard = ({ mode = 'full', post }: Props) => {
               {copyText}
             </Button>
           </Box>
-          <Share
-            iconSize={32}
-            summary={summary}
-            tags={tags ?? undefined}
-            title={title}
-            url={fullUrl}
-            options={
-              [
-                /*'twitter', 'facebook', 'reddit'*/
-              ]
-            }
-            type="post"
-          />
         </CardActions>
       )}
     </Card>

@@ -69,8 +69,6 @@ const Share = ({
     })
   }
 
-  return null
-
   return (
     <Stack direction="row" spacing={1}>
       {shareOptions.has('twitter') && (

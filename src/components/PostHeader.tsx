@@ -36,15 +36,7 @@ const PostHeader = ({
         {formatDate(date, 'long')} · {timeToRead} min read
       </Typography>
 
-      <Box mt={2}>
-        <Share
-          url={url}
-          title={title}
-          summary={summary}
-          tags={tags}
-          type="post"
-        />
-      </Box>
+      <Box mt={2}></Box>
     </Box>
   )
 }
