@@ -47,6 +47,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
     name: 'UI Architecture 2024',
     url: 'https://uiarchconf.com/',
+    isCancelled: true,
     location: 'New Orleans, Louisiana',
     talks: [
       {
@@ -63,18 +64,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
       {
         id: 'nextjs-rendering',
         date: '04/19/2024',
-      },
-    ],
-  },
-  {
-    name: 'Epic Web Conf',
-    url: 'https://www.epicweb.dev/conf',
-    location: 'Park City, Utah',
-    venue: 'Prospector Square Theatre',
-    talks: [
-      {
-        id: 'divops',
-        date: '04/11/2024',
+        time: '1:27p',
       },
     ],
   },
