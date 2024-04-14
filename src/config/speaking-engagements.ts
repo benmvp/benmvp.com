@@ -3,6 +3,7 @@ import { type TalkId } from './talks'
 type TalkLinkLabel =
   | 'Blog post'
   | 'Code examples'
+  | 'Demo'
   | 'Podcast'
   | 'Slides'
   | 'Twitch'
@@ -65,6 +66,20 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         id: 'nextjs-rendering',
         date: '04/19/2024',
         time: '1:27p',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/rm-nextjs',
+          },
+          {
+            label: 'Demo',
+            url: 'https://nextjs-rendering.benmvp.com',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/nextjs-rendering',
+          },
+        ],
       },
     ],
   },
