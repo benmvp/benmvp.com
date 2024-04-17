@@ -69,7 +69,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/rm-nextjs',
+            url: 'https://slides.benmvp.com/2024/reactmiami/nextjs.html',
           },
           {
             label: 'Demo',
