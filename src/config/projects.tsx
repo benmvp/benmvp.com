@@ -25,14 +25,18 @@ const PROJECTS: Project[] = [
     ),
   },
   {
-    title: 'Shopping AI',
-    url: 'https://github.com/benmvp/shopping-ai',
+    title: 'Discover AI',
+    url: 'https://github.com/benmvp/discover-ai',
     imageUrl: '/images/projects/npm-logo-red.png',
     description: (
       <>
-        A conversational AI chatbot that helps you search through a store&apos;
-        catalog using natural language. It uses Open AI&apos;s Functions API.
-        It&apos;s built with NextJS, Material UI and the Open AI Node API.
+        A proof-of-concept, versatile chat-based app that I built to let users
+        explore diverse content (tech products, floor plans, and more) using
+        natural language. It provides an intuitive and conversational way to
+        search for information, making it easy for users to find what they want.
+        The idea is that a company could use this type of AI technology to
+        provide their customers with a more engaging and personalized search
+        experience.
       </>
     ),
   },
