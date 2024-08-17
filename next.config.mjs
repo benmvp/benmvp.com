@@ -31,6 +31,9 @@ const HEADERS = [
   },
 ]
 
+/**
+ * @type {import('next').Redirect[]}
+ */
 const OLD_BLOG_REDIRECTS = [
   {
     source: '/talks/',
@@ -509,7 +512,14 @@ const OLD_SLIDES_REDIRECTS = [
   },
 ]
 
+/**
+ * @type {import('next').Redirect[]}
+ */
 const SLIDE_SHORT_URLS = [
+  {
+    source: '/bit-nextjs',
+    destination: 'https://slides.benmvp.com/2024/bit/nextjs.html',
+  },
   {
     source: '/rm-nextjs',
     destination: 'https://slides.benmvp.com/2024/reactmiami/nextjs.html',

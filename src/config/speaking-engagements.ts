@@ -46,6 +46,32 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'Black is Tech 2024',
+    url: 'hhttps://blackistechconference.com/',
+    location: 'Houston, Texas',
+    talks: [
+      {
+        id: 'nextjs-rendering',
+        date: '08/19/2024',
+        time: '12:30p',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://slides.benmvp.com/2024/bit/nextjs.html',
+          },
+          {
+            label: 'Demo',
+            url: 'https://nextjs-rendering.benmvp.com',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/nextjs-rendering',
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'UI Architecture 2024',
     url: 'https://uiarchconf.com/',
     isCancelled: true,
@@ -78,6 +104,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Code examples',
             url: 'https://github.com/benmvp/nextjs-rendering',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=SM9ze_6WPs8',
           },
         ],
       },
