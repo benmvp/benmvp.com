@@ -1,17 +1,6 @@
 import { Box, Typography, styled } from '@mui/material'
 import Image, { ImageProps } from 'next/image'
 import { MDXRemote } from 'next-mdx-remote'
-import type { DOMAttributes } from 'react'
-
-const Article = (props: {
-  dangerouslySetInnerHTML: DOMAttributes<'article'>['dangerouslySetInnerHTML']
-}) => (
-  <Typography
-    dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}
-    component="article"
-    variant="body1"
-  />
-)
 
 const Body = styled('article')(({ theme }) => ({
   '& h2': theme.typography.h5,
