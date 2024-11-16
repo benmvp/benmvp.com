@@ -49,11 +49,12 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     name: 'Connect.Tech 2024',
     url: 'https://2024.connect.tech/',
     location: 'Atlanta, Georgia',
+    venue: 'Cobb Galleria Centre',
     talks: [
       {
         id: 'nextjs-rendering',
         date: '11/19/2024',
-        time: '12:30p',
+        time: '11:30a',
         links: [
           {
             label: 'Slides',
