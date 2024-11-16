@@ -517,6 +517,10 @@ const OLD_SLIDES_REDIRECTS = [
  */
 const SLIDE_SHORT_URLS = [
   {
+    source: '/ct-nextjs',
+    destination: 'https://slides.benmvp.com/2024/connecttech/nextjs.html',
+  },
+  {
     source: '/bit-nextjs',
     destination: 'https://slides.benmvp.com/2024/bit/nextjs.html',
   },

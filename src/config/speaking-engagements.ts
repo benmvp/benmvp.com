@@ -46,6 +46,32 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'Connect.Tech 2024',
+    url: 'https://2024.connect.tech/',
+    location: 'Atlanta, Georgia',
+    talks: [
+      {
+        id: 'nextjs-rendering',
+        date: '11/19/2024',
+        time: '12:30p',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://slides.benmvp.com/2024/connecttech/nextjs.html',
+          },
+          {
+            label: 'Demo',
+            url: 'https://nextjs-rendering.benmvp.com',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/nextjs-rendering',
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'Black is Tech 2024',
     url: 'hhttps://blackistechconference.com/',
     location: 'Houston, Texas',
