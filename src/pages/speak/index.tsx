@@ -28,6 +28,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: { upcoming, past },
+    revalidate: 1440, // every 24 hours
   }
 }
 
