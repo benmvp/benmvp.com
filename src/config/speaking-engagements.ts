@@ -46,6 +46,38 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'All Things Open AI',
+    url: 'https://allthingsopen.ai/',
+    location: 'Durham, North Carolina',
+    venue: 'Carolina Theater',
+    talks: [
+      {
+        id: 'sneaky-ai',
+        date: '03/18/2025',
+      },
+    ],
+  },
+  {
+    name: 'ConFoo 2025',
+    url: 'https://confoo.ca/en/2025',
+    location: 'Montreal, Canada',
+    venue: 'Carolina Theater',
+    talks: [
+      {
+        id: 'sneaky-ai',
+        date: '02/28/2025',
+        time: '11:00a',
+        room: 'ST-Laurent 8',
+      },
+      {
+        id: 'shopping-ai',
+        date: '02/27/2025',
+        time: '3:00p',
+        room: 'ST-Laurent 5',
+      },
+    ],
+  },
+  {
     name: 'Connect.Tech 2024',
     url: 'https://2024.connect.tech/',
     location: 'Atlanta, Georgia',
@@ -67,6 +99,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Code examples',
             url: 'https://github.com/benmvp/nextjs-rendering',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=oBldsJslSU0',
           },
         ],
       },

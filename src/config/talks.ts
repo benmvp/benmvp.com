@@ -248,7 +248,7 @@ const TALKS = {
   },
   'shopping-ai': {
     title: 'GPT-powered AI Shopping: From Search to Delight',
-    categories: ['ai', 'javascript', 'web'],
+    categories: ['ai', 'openai', 'gemini', 'javascript', 'web'],
     description: `Tired of generic chatbots that stumble through product recommendations? Imagine an AI assistant with an intimate understanding of our product catalog and an uncanny grasp for knowing exactly what our customers crave. OpenAI's recently released Function Calls API unlocks this capability, seamlessly fusing GPT's conversational superpower with our personalized understanding of our data.
 
 This talk will delve into building custom AI assistants that respond dynamically to customer preferences by searching our data based on GPT's natural language processing capabilities. Whether you're a CEO envisioning the future of e-commerce, an engineering leader shaping your tech roadmap, a PM crafting engaging experiences, or an individual contributor building the next big innovation, this talk will equip you with the knowledge and tools to unlock the power of conversational AI for your product.
@@ -269,6 +269,15 @@ The workshop will include:
 - **Dev Tools & CI/CD.** Configure essential developer tools, set up testing frameworks, and implement a robust Continuous Integration and Continuous Delivery (CI/CD) workflow to streamline your development process.
 
 This workshop is ideal for web app developers of all levels who want to enhance their frontend skills and build a solid foundation in DivOps practices. A basic understanding of JavaScript, React (or similar frontend framework), and command-line tools will help you get the most out of the workshop. By the end of this workshop, you will have the knowledge and experience to confidently apply DivOps principles in your web development projects. Join us if you are excited to learn how to create a maintainable and scalable web application architecture, this workshop is for you!`,
+  },
+  'sneaky-ai': {
+    title: 'Sneaky Ways to Integrate GenAI for Real-World Impact',
+    categories: ['ai', 'openai', 'gemini', 'javascript', 'web'],
+    description: `AI is no longer just a buzzword; it's a transformative force poised to reshape how we interact with technology. Everyone is trying to create the latest game-changing AI-driven app, but how can we developers leverage GenAI without becoming full-fledged AI experts or overhauling our existing applications?
+
+This talk will move past the academic exercises and explore the "sneaky" ways GenAI can be seamlessly integrated into existing applications to create subtle yet powerful enhancements that elevate the user experience. Through real-world examples and engaging demos, we'll uncover the hidden potential of GenAI to personalize user experiences and unlock new levels of creativity and efficiency.
+
+Leave this talk empowered to harness the power of GenAI, even if you're new to AI. Discover practical strategies and inspiring ideas to infuse your apps with intelligence, delight your users, and stay ahead of the curve in this rapidly evolving technological landscape.`,
   },
 }
 
