@@ -170,6 +170,20 @@ const HomePage = ({
       <Seo url={getUrl('', true)} />
 
       <Stack spacing={3} direction="column" mt={3}>
+        {upcomingEngagements.length > 0 && (
+          <Box component="section">
+            <Typography
+              variant="h3"
+              component="h2"
+              gutterBottom
+              aria-label="Attend one of Ben's upcoming tech talks"
+            >
+              Attend
+            </Typography>
+            <SpeakCardList engagements={upcomingEngagements} />
+          </Box>
+        )}
+
         <Box component="section">
           <Typography
             variant="h3"
@@ -193,20 +207,6 @@ const HomePage = ({
           </Typography>
           <VideoCardList videos={recentVideos} />
         </Box>
-
-        {upcomingEngagements.length > 0 && (
-          <Box component="section">
-            <Typography
-              variant="h3"
-              component="h2"
-              gutterBottom
-              aria-label="Attend one of Ben's upcoming tech talks"
-            >
-              Attend
-            </Typography>
-            <SpeakCardList engagements={upcomingEngagements} />
-          </Box>
-        )}
 
         <Box component="section">
           <Typography

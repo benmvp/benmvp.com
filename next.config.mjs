@@ -1,33 +1,66 @@
-const HEADERS = [
+/**
+ * @type {import('next').Redirect[]}
+ */
+const SLIDE_SHORT_URLS = [
   {
-    source: '/(.*)',
-    headers: [
-      {
-        key: 'X-Content-Type-Options',
-        value: 'nosniff',
-      },
-      {
-        key: 'X-Frame-Options',
-        value: 'DENY',
-      },
-      {
-        key: 'X-XSS-Protection',
-        value: '1; mode=block',
-      },
-    ],
+    source: '/cf-sneaky-ai',
+    destination:
+      'https://docs.google.com/presentation/d/e/2PACX-1vSn0z1cNgbFN9SKKxGYg2xOjMf2n09ecYQ0HLX9o8aVpryDGDVuSluxq1Nr_kcVGVcRm2hJrpIXzhkq/pub?start=false&loop=false&delayms=60000',
   },
   {
-    source: '/blog/rss.xml',
-    headers: [
-      {
-        key: 'Content-Type',
-        value: 'application/rss+xml',
-      },
-      {
-        key: 'Access-Control-Allow-Origin',
-        value: '*',
-      },
-    ],
+    source: '/cf-ai-shop',
+    destination:
+      'https://docs.google.com/presentation/d/e/2PACX-1vQwJqE6a0JqOHulGbVfOJ3K3rI9z4iUnUeX__JhIAGpNTz5125dul0HJHQR7dKDWO7MjufN-2EMGmdG/pub?start=false&loop=false&delayms=60000',
+  },
+  {
+    source: '/ct-nextjs',
+    destination: 'https://slides.benmvp.com/2024/connecttech/nextjs.html',
+  },
+  {
+    source: '/bit-nextjs',
+    destination: 'https://slides.benmvp.com/2024/bit/nextjs.html',
+  },
+  {
+    source: '/rm-nextjs',
+    destination: 'https://slides.benmvp.com/2024/reactmiami/nextjs.html',
+  },
+  {
+    source: '/ct-divops',
+    destination: 'https://slides.benmvp.com/2023/connecttech/divops.html',
+  },
+  {
+    source: '/hs-phx-ai',
+    destination:
+      'https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub?start=false&loop=false&delayms=60000',
+  },
+  {
+    source: '/bit-webdev',
+    destination: 'https://slides.benmvp.com/2023/bit/webdev.html',
+  },
+  {
+    source: '/seattlejs-nextjs',
+    destination: 'https://slides.benmvp.com/2023/seattlejs/nextjs.html',
+  },
+  {
+    source: '/hsclt-webdev',
+    destination: 'https://slides.benmvp.com/2023/halfstackclt/webdev.html',
+  },
+  {
+    source: '/ct-ts-react',
+    destination: 'https://slides.benmvp.com/2022/connecttech/ts-react.html',
+  },
+  {
+    source: '/ct-webdev',
+    destination: 'https://slides.benmvp.com/2022/connecttech/webdev.html',
+  },
+  {
+    source: '/hb-hooks',
+    destination: 'https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html',
+  },
+  {
+    source: '/hrd-hooks',
+    destination:
+      'https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.html',
   },
 ]
 
@@ -163,6 +196,9 @@ const OLD_BLOG_REDIRECTS = [
   },
 ]
 
+/**
+ * @type {import('next').Redirect[]}
+ */
 const OLD_SLIDES_REDIRECTS = [
   {
     source: '/slides/confoo2016-es6.html',
@@ -512,59 +548,36 @@ const OLD_SLIDES_REDIRECTS = [
   },
 ]
 
-/**
- * @type {import('next').Redirect[]}
- */
-const SLIDE_SHORT_URLS = [
+const HEADERS = [
   {
-    source: '/ct-nextjs',
-    destination: 'https://slides.benmvp.com/2024/connecttech/nextjs.html',
+    source: '/(.*)',
+    headers: [
+      {
+        key: 'X-Content-Type-Options',
+        value: 'nosniff',
+      },
+      {
+        key: 'X-Frame-Options',
+        value: 'DENY',
+      },
+      {
+        key: 'X-XSS-Protection',
+        value: '1; mode=block',
+      },
+    ],
   },
   {
-    source: '/bit-nextjs',
-    destination: 'https://slides.benmvp.com/2024/bit/nextjs.html',
-  },
-  {
-    source: '/rm-nextjs',
-    destination: 'https://slides.benmvp.com/2024/reactmiami/nextjs.html',
-  },
-  {
-    source: '/ct-divops',
-    destination: 'https://slides.benmvp.com/2023/connecttech/divops.html',
-  },
-  {
-    source: '/hs-phx-ai',
-    destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub?start=false&loop=false&delayms=60000',
-  },
-  {
-    source: '/bit-webdev',
-    destination: 'https://slides.benmvp.com/2023/bit/webdev.html',
-  },
-  {
-    source: '/seattlejs-nextjs',
-    destination: 'https://slides.benmvp.com/2023/seattlejs/nextjs.html',
-  },
-  {
-    source: '/hsclt-webdev',
-    destination: 'https://slides.benmvp.com/2023/halfstackclt/webdev.html',
-  },
-  {
-    source: '/ct-ts-react',
-    destination: 'https://slides.benmvp.com/2022/connecttech/ts-react.html',
-  },
-  {
-    source: '/ct-webdev',
-    destination: 'https://slides.benmvp.com/2022/connecttech/webdev.html',
-  },
-  {
-    source: '/hb-hooks',
-    destination: 'https://slides.benmvp.com/2022/hackbuddy/mixins-hooks.html',
-  },
-  {
-    source: '/hrd-hooks',
-    destination:
-      'https://slides.benmvp.com/2022/houreactdevs/mixins-hooks.html',
+    source: '/blog/rss.xml',
+    headers: [
+      {
+        key: 'Content-Type',
+        value: 'application/rss+xml',
+      },
+      {
+        key: 'Access-Control-Allow-Origin',
+        value: '*',
+      },
+    ],
   },
 ]
 

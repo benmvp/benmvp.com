@@ -54,6 +54,8 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
       {
         id: 'sneaky-ai',
         date: '03/18/2025',
+        time: '2:15p',
+        room: 'AI Engineers',
       },
     ],
   },
@@ -61,19 +63,39 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     name: 'ConFoo 2025',
     url: 'https://confoo.ca/en/2025',
     location: 'Montreal, Canada',
-    venue: 'Carolina Theater',
+    venue: 'Bonaventure Hotel',
     talks: [
       {
         id: 'sneaky-ai',
         date: '02/28/2025',
         time: '11:00a',
         room: 'ST-Laurent 8',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/cf-sneaky-ai',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/sneaky-ai-demo',
+          },
+        ],
       },
       {
         id: 'shopping-ai',
         date: '02/27/2025',
         time: '3:00p',
-        room: 'ST-Laurent 5',
+        room: 'Westmount 6',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/cf-ai-shop',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/discover-ai',
+          },
+        ],
       },
     ],
   },
@@ -189,6 +211,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Slides',
             url: 'https://www.benmvp.com/hs-phx-ai',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/discover-ai',
           },
         ],
       },
