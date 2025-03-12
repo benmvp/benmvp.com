@@ -56,6 +56,16 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         date: '03/18/2025',
         time: '2:15p',
         room: 'AI Engineers',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/ato-sneaky-ai',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/sneaky-ai-demo',
+          },
+        ],
       },
     ],
   },
