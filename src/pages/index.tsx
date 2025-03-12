@@ -156,6 +156,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: { minishops, upcomingEngagements, recentPosts, recentVideos },
+    revalidate: 60 * 60 * 24, // revalidate once a day
   }
 }
 
