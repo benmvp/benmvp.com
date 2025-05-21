@@ -46,6 +46,28 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'JavaScript fwdays 2025',
+    url: 'https://fwdays.com/en/event/javascript-fwdays-2025',
+    location: 'Online',
+    talks: [
+      {
+        id: 'sneaky-ai',
+        date: '05/24/2025',
+        time: '15:00',
+        links: [
+          {
+            label: 'Slides',
+            url: 'https://www.benmvp.com/jsfwd-sneaky-ai',
+          },
+          {
+            label: 'Code examples',
+            url: 'https://github.com/benmvp/sneaky-ai-demo',
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: 'All Things Open AI',
     url: 'https://allthingsopen.ai/',
     location: 'Durham, North Carolina',
@@ -64,6 +86,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
           {
             label: 'Code examples',
             url: 'https://github.com/benmvp/sneaky-ai-demo',
+          },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=KkYIY1DT3wo',
           },
         ],
       },

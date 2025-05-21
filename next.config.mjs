@@ -3,6 +3,11 @@
  */
 const SLIDE_SHORT_URLS = [
   {
+    source: '/jsfwd-sneaky-ai',
+    destination:
+      'https://docs.google.com/presentation/d/e/2PACX-1vR-tOqiOULqGQRVo-PiWcGF7vVQkRI1sm11oyFJuGkq4P7DxS1938x8XyROmA9j-BZgCsr0xfc0Oard/pub?start=false&loop=false&delayms=60000',
+  },
+  {
     source: '/ato-sneaky-ai',
     destination:
       'https://docs.google.com/presentation/d/e/2PACX-1vQgKgkoVnec4xWCLwZskQk7416Ucu-pGTbt9K7Gmzg6ypqhE5DGbPmtBXMK-axlc6ixc6TXRnNkfBpv/pub?start=false&loop=false&delayms=60000',
