@@ -1,0 +1,46 @@
+---
+date: 2025-11-12
+title: How GenAI is shifting architecture left
+shortDescription: Using GenAI to co-architect pre-specification decisions now that code has been commoditized
+category: AI
+tags:
+  [
+    genai,
+    architecture,
+    architecture-driven-development,
+    spec-driven-development,
+    meta-spec,
+    shift-left,
+    developer-experience,
+    refactoring,
+    engineering-practices,
+  ]
+# hero: blue-anchor-on-wall.jpg
+# heroAlt: Blue anchor stenciled on the wall
+---
+
+Nearly 100% of my code is AI-assisted, but not via giant one-shot prompts. For me, useful output emerges from an iterative loop: **clarify intent → shape a plan → refine a spec → generate → review**. In my previous [Mythical 10x Developer](../mythical-10x-developer) post I called out the trap of equating GenAI value with raw code volume. Faster bad code is still bad code. Real leverage comes from shifting effort _earlier_: framing the problem and planning well. If we can express a solution crisply (objectives, constraints, interfaces, edge cases, etc.), implementation becomes an execution detail. Languages start to matter less when we feed specs to an agent and pick a runtime.
+
+## Architecture-driven development (meta-spec ideation)
+
+Lately, I've been practicing **architecture-driven development**: AI-assisted reasoning _before_ the spec exists. When I'm unsure how a project should even be built, I ask the Agent to assess the current structure, surface option sets, compare trade-offs, and converge on a plan that _then_ becomes the spec. **If spec-driven development commoditizes implementation, architecture-driven development commoditizes the path to the spec.** Cursor's [Plan Mode](https://cursor.com/docs/agent/planning) accelerates turning fuzzy intent into execution structure. Historically you'd grab a colleague for that early architecture jam; now the Agent bootstraps a first draft worth reviewing.
+
+I went through this with a recent refactor. If I had to manually map dependencies just to decide _whether_ it was worth doing felt too expensive; I would have abandoned it. Instead I had the Agent analyze the existing architecture (pain points + benefits) and propose option sets (“modular split,” “layered façade,” “event-driven extraction,” etc.). Then I selected an option, and we co-shaped a phased plan (objectives, constraints). Finally the Agent implemented the plan and I iterated on edge cases. **Idea → plan → executed refactor in ~2 hours** instead of at least a half day of exploratory mapping with a colleague. This compressed loop is becoming typical. AI pairing moves architectural certainty earlier, not just code faster.
+
+## Shift-left implications
+
+This mirrors “shift-left” testing, but for architecture: exploring structure near ideation so **spec** becomes a downstream commodity, just like code. While this acceleration trims that "let's whiteboard this" time, it also risks losing the potential serendipitous knowledge transfer between colleagues. Even with using GenAI for architectural planning, humans still supply vision, domain nuance, judgment, and guardrails. GenAI abstracts the _how_ of implementation, and now it's abstracting the _how_ of architectural exploration, freeing us to focus on the _why_. Of course we still pull in humans for high-stakes domains: regulatory or compliance-heavy surfaces, cross-team boundary / contract shifts, ambiguous product intent, or when interacting constraints defy simple pattern matching.
+
+Some risks that rise as we move GenAI earlier in the process: **hallucinated architectures, generic templates, missed domain constraints.** The need for our accountability _intensifies_ to:
+
+1. Craft high-quality intent & evaluation criteria
+2. Select + refine the best option (never blindly accept the first)
+3. Review generated code for correctness, performance, fit-for-purpose
+
+Regardless of who typed the line, integrity is ours.
+
+## Horizon: true meta architecture?
+
+If AI can co-create the _plan_ before the spec, what happens when it reliably co-generates _vision_ and strategic context? That future layer, true **meta architecture**, would encode principles, constraints, and evolutionary goals as durable intent artifacts for agents to adapt whole systems. We're not there yet, but the ground is shifting under our feet. The role of a developer is moving left, away from pure implementation and toward strategic guidance.
+
+Keep learning my friends. 🤓

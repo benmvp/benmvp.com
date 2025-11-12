@@ -1,0 +1,72 @@
+---
+date: 2025-12-17
+title: The AI Productivity Model (APM)
+# shortDescription: Some reasons why I choose React Testing Library over Enzyme for testing React components
+category: AI
+# tags: [react, hooks]
+# hero: blue-anchor-on-wall.jpg
+# heroAlt: Blue anchor stenciled on the wall
+published: false
+---
+
+## 1. Introduction: We're Measuring the Wrong Thing
+
+- **Hook:** Start with the common narrative: everyone is focused on how GenAI makes developers write code faster.
+- **The Problem:** This is a trap. More code doesn't equal more value. We lack a shared vocabulary to describe the _different kinds_ of productivity gains we're all experiencing.
+- **The Solution:** Introduce the **AI Productivity Model (APM)** as a simple framework to classify AI-driven tasks based on developer intent. Briefly introduce the three phases: **Authoring**, **Synthesizing**, and **Analyzing**.
+
+---
+
+## 2. The Three Phases of AI-Powered Productivity
+
+This is the core of the post. For each phase, we'll provide a clear definition and list several common tasks to illustrate the concept.
+
+### 🎨 Phase 1: Authoring (The "Blank Canvas" Task)
+
+> _Definition: The creative, "blank canvas" generation of new assets from a high-level concept._
+
+**Common Authoring Tasks:**
+
+- **Scaffolding a New Microservice:** Generating all initial boilerplate, from `package.json` to a Dockerfile.
+- **Writing a Suite of Unit Tests:** Creating comprehensive tests for a complex function based on its logic.
+- **Drafting a Technical Spec:** Translating high-level product requirements into a detailed technical plan.
+- **Authoring a Full README:** Generating a complete `README.md` file from your project's source code and `package.json`.
+
+### ⚙️ Phase 2: Synthesizing (The "Instructional" Task)
+
+> _Definition: The structured transformation of a specific input into a new, structured output._
+
+**Common Synthesizing Tasks:**
+
+- **Generating a Changelog from Commits:** Taking git history as input and producing a formatted changelog as output.
+- **Migrating Code (e.g., Jest to Vitest):** Reading a file in one format and rewriting it in another.
+- **Performing a Pre-Commit Code Review:** Taking a `git diff` as input and producing a list of suggested improvements.
+- **Creating a Pull Request Description:** Taking a `git diff` and ticket number and generating a full PR description.
+
+### 🔬 Phase 3: Analyzing (The "Interrogative" Task)
+
+> _Definition: The diagnostic investigation of data to find insights, root causes, or explanations._
+
+**Common Analyzing Tasks:**
+
+- **Triaging a Failed CI/CD Build:** Taking a massive log file as input and identifying the root cause of failure.
+- **Finding Bloat in a Webpack Bundle:** Taking a `stats.json` file and identifying the largest dependencies.
+- **Explaining Legacy Code:** Pointing to a complex file and asking for a high-level explanation of its purpose.
+- **Investigating Production Errors:** Taking a stack trace and logs and getting a hypothesis for the bug's origin.
+
+---
+
+## 3. How to Apply the APM Framework
+
+This section explains the practical benefits of using the model.
+
+- **1. Write Better Prompts:** Tailor your prompt style (creative for Authoring, instructional for Synthesizing, or interrogative for Analyzing) to the task.
+- **2. Build Sharper Tools:** Use the phases as architectural patterns for new developer tools (e.g., an interactive chat for Authoring vs. a non-interactive CLI for Synthesizing).
+- **3. Identify Workflow Gaps:** Use the model as a checklist to find new opportunities for AI automation in your daily work.
+
+---
+
+## 4. Conclusion: A New Vocabulary for Productivity
+
+- Wrap up by stating that the APM provides a much-needed vocabulary for a more sophisticated conversation about AI's impact.
+- The goal isn't just to be faster; it's to be more effective across the entire development lifecycle. The APM helps us see and articulate how.
