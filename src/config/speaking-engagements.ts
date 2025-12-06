@@ -63,6 +63,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
             label: 'Code examples',
             url: 'https://github.com/benmvp/sneaky-ai-demo',
           },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=qpsVVy5S_6E',
+          },
         ],
       },
     ],
