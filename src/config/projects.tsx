@@ -25,6 +25,22 @@ const PROJECTS: Project[] = [
     ),
   },
   {
+    title: 'Codemata',
+    url: 'https://codemata.benmvp.com/',
+    imageUrl: 'https://codemata.benmvp.com/img/logos/logo.svg',
+    description: (
+      <>
+        A comprehensive suite of free online developer tools for code
+        transformation and manipulation. Each tool includes AI-generated
+        educational content covering best practices, integration workflows, and
+        common use cases. Format and beautify code, minify for production,
+        validate syntax, encode/decode data, and more—all with instant results
+        and no sign-up required. Built with Next.js, TypeScript, Tailwind CSS,
+        CodeMirror, and Gemini AI API for content generation, running on Vercel.
+      </>
+    ),
+  },
+  {
     title: 'Discover AI',
     url: 'https://github.com/benmvp/discover-ai',
     imageUrl: '/images/projects/npm-logo-red.png',
