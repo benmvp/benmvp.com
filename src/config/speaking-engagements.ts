@@ -72,7 +72,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
     ],
   },
   {
-    name: 'All Things Open AI',
+    name: 'All Things Open AI 2025',
     url: 'https://allthingsopen.ai/',
     location: 'Durham, North Carolina',
     venue: 'Carolina Theater',

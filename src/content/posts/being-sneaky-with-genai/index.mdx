@@ -1,0 +1,126 @@
+---
+date: 2026-01-08
+title: Being Sneaky with GenAI
+shortDescription: How to integrate AI into existing apps without becoming an AI expert or building a chatbot
+category: AI
+tags:
+  [
+    genai,
+    ai,
+    developer-experience,
+    developer-tools,
+    openai,
+    gpt,
+    gemini,
+    anthropic,
+    claude,
+    seo,
+    automation,
+  ]
+hero: sneaky-ai-tools.png
+heroAlt: A sleek, minimalist workspace showing developer tools glowing subtly with AI assistance
+---
+
+The AI hype cycle has convinced us that every app needs a conversational interface, a RAG pipeline, or an autonomous agent. Meanwhile, most of us are just trying to ship features, fix bugs, and (just) maybe reduce the amount of repetitive nonsense we do every day. The reality? **The highest ROI AI integration isn't a chatbot. It's the stuff users don't even notice.**
+
+I call it "Sneaky AI": using simple LLM API calls to eliminate toil, generate intelligent defaults, and make your existing features feel magical—without rewriting your architecture or hiring a PhD. If you're interested, I gave a talk on it at [All Things Open AI 2025](https://2025.allthingsai.org/) entitled ["Sneaky Ways to Integrate GenAI"](https://www.benmvp.com/ato-sneaky-ai).
+
+---
+
+## The "Sneaky" Philosophy
+
+Sneaky AI isn't about building AI products. It's about making your _existing_ products smarter with minimal effort.
+
+In the talk I mention three principles that define the approach:
+
+1. **Minimal Overhead** - A single API call to [OpenAI](https://platform.openai.com/docs/overview), [Anthropic](https://platform.claude.com/docs/en/home), or [Gemini](https://ai.google.dev/gemini-api/docs). No vector databases, no fine-tuning, no infrastructure setup.
+2. **Enhanced Workflows** - Find the friction points where users have to think too hard or type too much. That's where AI shines.
+3. **Invisible UX** - The AI is a "ghost" in the machine. Users get the answer before they realize they had a question.
+
+This isn't about impressive demos. It's about compounding small wins that make your app feel thoughtful and polished.
+
+---
+
+## The Four "Sneaky" Strategies
+
+Also in my talk, I broke down the practical applications into four categories:
+
+**1. Content & Pre-generated** - Use AI during build time or in scripts to create static content. Think: SEO meta descriptions, OpenGraph images, or auto-generated documentation. (more on this in a bit)
+
+**2. AI-Powered Content Tools** - Help users write or edit within your app. Examples: "Summarize this ticket," "Suggest a commit message," or "Generate test descriptions."
+
+**3. Insights & Recommendations** - Analyze existing data to suggest the "Next Best Action." This could be project suggestions based on past behavior, or highlighting anomalies in analytics.
+
+**4. Real-time Decisions** - Use an LLM as a sophisticated `if/else` block for dynamic UI logic. Classify user intent, route support requests, or provide contextual help without hardcoded rules.
+
+The beauty? You can implement any of these with a prompt and an afternoon.
+
+---
+
+## Case Study: How I Built Codemata "Sneakily"
+
+I recently launched [**Codemata**](https://codemata.benmvp.com), a suite of free developer tools (formatters, minifiers, etc.). I wanted each tool to have:
+
+- Unique SEO-optimized meta descriptions
+- Educational "How it works" sections
+- Use case examples
+- Best practice guides
+
+As of writing, there are 14 tools so writing this copy manually for 14+ tools? That's _hours_ of tedious copywriting. And I'm a developer, not a marketer. It just wouldn't get done. 😅
+
+**The Sneaky Solution:**
+
+I built a script that pipes each tool's functionality description into [Gemini](https://ai.google.dev/gemini-api/docs) (shout-out to Gemini 3!), which generates all the metadata and content during the build process. The result? [Professional-grade SEO content](https://codemata.benmvp.com/formatters/typescript-formatter) that will rank for technical keywords, without me writing a single meta tag by hand.
+
+> **Why build-time AI?** Cost, speed, and SEO. Pre-rendering content means search engines see complete HTML immediately, users get instant loads, and I'm not burning API credits on every page view. My bill remains constant even if traffic grows exponentially. It's sneaky _and_ smart.
+
+The entire [Codemata](https://codemata.benmvp.com) site is [open source](http://github.com/benmvp/tools-app), so you can see exactly how this works. The AI content generation lives in the build pipeline, not the runtime. Users get a fast, polished tool site. I get to focus on building features instead of marketing copy.
+
+---
+
+## Why "Sneaky" Beats "Flashy"
+
+The industry is obsessed with flashy AI demos, autonomous agents, multi-step reasoning, real-time voice interfaces. Those are impressive (and [get you funding](https://www.ycombinator.com/companies/industry/ai)), but they're also:
+
+- Expensive to build and maintain
+- Fragile (hallucinations, latency, API costs)
+- Overkill for most problems
+
+**Sneaky AI is the opposite.** It's:
+
+- Fast to implement (hours, not weeks)
+- Low-risk (isolated failures don't break core features)
+- High-impact (users feel the quality difference immediately)
+
+When someone uses [Codemata's JSON minifier](https://codemata.benmvp.com/minifiers/json-minifier) and sees a well-written "Did you know?" tip, they don't think, "Wow, AI wrote this." They think, "This tool is professional." **That's sneaky AI working.** 😉
+
+---
+
+## Getting Started: Find Your Toil
+
+Here's my challenge: **Don't look for an "AI project." Look for a boring task.**
+
+Ask yourself:
+
+- What do I copy-paste repeatedly?
+- What takes me 15 minutes that _should_ take 15 seconds?
+- What content do I avoid creating because it's tedious?
+
+That's your sneaky AI opportunity.
+
+For this project, it was writing SEO copy. For you, it might be generating test fixtures, summarizing PRs, or auto-tagging support tickets. The LLM doesn't need to be perfect, it just needs to be better than doing it manually.
+
+---
+
+## Resources
+
+If you want to dig deeper:
+
+- 🎥 Watch the [full "Sneaky AI" All Things Open AI talk](https://www.youtube.com/watch?v=KkYIY1DT3wo)
+- 📊 Browse the [slide deck](https://www.benmvp.com/ato-sneaky-ai)
+- 💻 Check out the [code examples on GitHub](https://github.com/benmvp/sneaky-ai-demo)
+- 🛠️ See the results live at [Codemata](https://codemata.benmvp.com)
+
+And yes, I'm fully aware this post is also a "sneaky" way to get more links to Codemata for SEO. Meta-sneaky? 😅
+
+Keep learning my friends. 🤓
