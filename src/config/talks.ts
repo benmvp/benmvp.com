@@ -9,6 +9,7 @@ const TALKS = {
   'async-future': {
     title: 'The async future is present',
     categories: ['javascript'],
+    retired: true,
     description:
       'Event handlers got you feeling "onKeyDown"? Are you stuck in "callback hell"? Promises leaving you a bit "unfulfilled"? Well, "await" no further. The async future is here. Let\'s deep dive into the new ES2017 async functions: what they are, why we should use them, where they are most useful, and how they will dramatically change our approach to asynchronous JavaScript programming. You\'ll never want to pass a callback or handle a promise again.',
   },
@@ -49,18 +50,21 @@ const TALKS = {
   'es6-workshop': {
     title: 'ES.next Fundamentals Workshop',
     categories: ['javascript'],
+    retired: true,
     description:
       "JavaScript is evolving quickly. The mega ES6 specification was released in 2015 and is quickly being implemented by modern JS interpreters. New versions of ECMAScript will now be released on a yearly basis with new features going through a 4-stage proposal process. We can leverage features in ES6, ES2016, and those slated for future versions right now to write even clearer and more concise JavaScript code.\n\nExperience with JavaScript will help you get the most out of this hands-on workshop, but you don't have to have a JavaScript black belt to leave feeling confident in \"ES.next.\" Learn how to write cleaner code using arrow functions, destructuring, rest parameters, and other ES.next features you're likely to use and benefit from on a daily basis. Oh, and don't worry if you didn't understand any of those terms — you soon will after this workshop.",
   },
   'mixins-to-hooks': {
     title: 'From Mixins to Custom Hooks: History of sharing in React',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       'React’s component-driven design simplifies reusing UI because chunks of markup can be encapsulated into custom components. Likewise, sharing traditional data utilities is straightforward because React is “Just JavaScript”™. But what about sharing non-visual component logic like state shape and lifecycle methods? React has had several approaches over its lifetime to solve this problem: mixins, higher-order components (HOCs), render props, and now hooks, each with their pros and cons.\n\nIn this session geared towards current React developers, let’s take a history lesson on sharing in React in order to better understand how modern-day custom hooks work and the problems they solve. By the end, not only will we know how hooks function, but we’ll also be equipped to pull out non-visual component logic into easily shareable custom hooks in our apps.',
   },
   'future-javascript': {
     title: "Future JavaScript: What's left?",
     categories: ['javascript'],
+    retired: true,
     description:
       'JavaScript has evolved quickly and continues to do so. The mega ES6 specification was released back in 2015, with four more editions released in successive years. New versions of ECMAScript are released on a yearly basis with new features going through a 4-stage proposal process. So what proposals are left? What do we have to look forward to in 2021 and beyond to help us write even clearer and more concise JavaScript code?\n\nFamiliarity with modern JavaScript will help you get the most of this session where we’ll discuss new features such as optional chaining, nullish coalescing, and more. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!',
   },
@@ -100,18 +104,21 @@ const TALKS = {
   'web-dev': {
     title: "Let's web dev like it's 1999!",
     categories: ['css'],
+    retired: true,
     description:
       "When we “view source” our modern web applications, the code looks nothing like what we originally wrote. At a minimum, it's gone through linting, transpilation, obfuscation, minification, and bundling. And in order to build our beautifully designed apps with sophisticated interactions, we leverage the latest features in HTML, CSS and JavaScript available in our modern evergreen browsers.\n\nHowever, when web development was in its infancy two decades ago, things were drastically different. Sites had hit counters, used frames for navigation, and were updated manually via FTP. We used the blink tag and scrolling marquees! Let's take a walk down memory lane (or have a history lesson) and have some laughs cringing at how sites looked, how they were built, and the rudimentary tooling we had to develop them.",
   },
   'redux-testing-workshop': {
     title: '"Minimally-painful" React-Redux testing Workshop',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       'Let’s be honest, no one\\* enjoys writing unit tests... especially for UI code. However, React’s architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all. In this workshop, we’ll learn to:\n\n- Test component rendered UI & event handlers\n- Test Redux reducers & synchronous/asynchronous actions\n- Stub libraries that cannot be run outside of the browser\n- Test the integration of components within entire app\n- And more...\n\nPrior experience with React is important to hit the ground running. You’ll leave the workshop with all the fundamentals you need to properly test your own apps with React. Testing probably still won’t be glamorous... but with these lessons it shouldn’t be painful either!',
   },
   'react-testing': {
     title: '"Minimally-painful" UI testing in React',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       "Let's be honest, no one\\* enjoys writing unit tests... especially for UI code. JavaScript frameworks traditionally have been heavily tied to the DOM. The only way we could test our components was to run unit tests within headless browsers, or resort to much slower end-to-end tests. However, React's architecture separates the component hierarchy from the DOM, making it much easier to quickly test the user interactions of our components without needing a browser at all.\n\nWhen Eventbrite's Frontend Platform team introduced React to our stack in 2016, we also developed best practices for testing React applications. In this talk, we'll learn some dos and don'ts Eventbrite uses for writing unit tests for React components, including those gnarly complicated cases. Testing probably still won't be glamorous... but with these lessons it shouldn't be painful either!",
   },
@@ -125,12 +132,14 @@ const TALKS = {
   'nav-react': {
     title: 'Navigating the React Solar System',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       "React just exploded in popularity. But it's only a UI library, not a full-fledged framework like Angular, Ember or _\\[insert latest JS framework\\]_. We need to create our own \"framework\" by picking from the plethora of libraries in the React solar system. But which ones should we choose? Or better yet, which ones do we actually need? Do we need a Flux implementation? What about handling ES6+, bundling and routing? How does it all come together?!1?!\n\nLet's walk through the tools and helper libraries that surround React. You'll get the most out of the session with familiarity with React and its concepts, but you don't need to be an expert. By the end of the session, you'll have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.",
   },
   'react-eco': {
     title: 'Navigating the React Ecosystem',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       'React has exploded in popularity. But it’s only a UI library, not a full-fledged framework like Angular, Ember or _\\[insert latest JS framework\\]_. We need to create our own “framework” by picking from the plethora of libraries in the React ecosystem. But which ones should we choose? Or better yet, which ones do we actually need? Do we need still a Flux implementation? What about handling forms, bundling and routing? How does it all come together?!1?!\n\nLet’s walk through the tools and helper libraries that surround React. You’ll get the most out of the session with familiarity with React and its concepts, but you don’t need to be an expert. By the end of the session, you’ll have a solid understanding of the ecosystem, know which libraries you should prioritize learning first, and confidently build your own React-based stack.',
   },
@@ -144,6 +153,7 @@ const TALKS = {
   'perfect-lib': {
     title: 'The "perfect" library tooling',
     categories: ['divops'],
+    retired: true,
     description:
       'So you have a great idea for the perfect JS library... but the implementation is only half the battle. You also need to configure the infrastructure to develop, test, build and deploy your package. How do you set up Typescript and other static checking? Do you target ESM or CJS builds? Is integration testing even possible? There’s so much extra to consider!\n\nLet’s learn what makes up the “perfect” library tooling. Familiarity with developing JavaScript packages will help you get the most out of this session, but you will gain plenty of helpful insights even if you have yet to build one. Oh, and don’t worry if you don’t understand all of those terms — you soon will after this session!',
   },
@@ -157,6 +167,7 @@ const TALKS = {
   'react-web-apis': {
     title: 'React + Web APIs = ❤️',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       'React is a JavaScript UI library that makes creating reusable components easy and efficient. And modern Web APIs like Fetch, Local storage, and Geolocation when combined with React enable us to create sophisticated user interfaces. But there are even more, lesser-known Web APIs that help us further blur the lines between browser and native apps!\n\nIn this session geared towards React developers of all skill levels, let’s learn about some Web APIs that you may have never heard of before! We’ll look at device diagnostic, interaction, audio, and video APIs — where they are supported and how you can apply them in your next React project.',
   },
@@ -177,6 +188,7 @@ const TALKS = {
   'react-workshop': {
     title: 'React FUNdamentals Workshop',
     categories: ['react', 'javascript'],
+    retired: true,
     description:
       "React is a JavaScript UI library that makes creating reusable components easy and efficient. In this workshop, we'll cover the critical concepts of React via a series of targeted exercises. We'll learn how to:\n\n- Write readable, reusable and composable components\n- Use JSX syntax\n- Work with the Virtual DOM\n- Handle user interactions and synthetic events\n- Leverage ES6 to maintain application state\n- Make API calls\n- Apply component styling\n- Hook into the component lifecycle\n- And more...\n\nPrior experience with React is not necessary, but experience with building JavaScript applications will be helpful to hit the ground running. You'll leave the workshop with all the fundamentals you need to build your own apps with React.",
   },
@@ -211,6 +223,7 @@ const TALKS = {
   'typescript-react': {
     title: 'TypeScript + React = ❤️',
     categories: ['react', 'typescript'],
+    retired: true,
     description:
       'TypeScript is a JavaScript superset that compiles down to vanilla JavaScript and has become increasingly popular. TypeScript proponents proclaim that it eliminates entire classes of bugs that affect our applications. But what exactly are those bugs? Which ones are particular to building React components and applications? Is TypeScript worth the learning curve?\n\nIn this session geared towards devs with prior experience building React applications, let’s answer those questions. We’ll walk through the common bugs that infect our apps and learn how the use of strong types with TypeScript can help prevent them. After the session, you’ll be itching to try it out in your next project!',
   },
@@ -224,6 +237,7 @@ const TALKS = {
   'web-apis': {
     title: 'Wait... the Web can do what?1?!',
     categories: ['web'],
+    retired: true,
     description:
       "ES.next, React, CSS Grid, Service Workers and other new technologies are getting all the attention within the frontend community. They enable us to easily build sophisticated UIs across all devices. But there are even more, lesser-known Web APIs that help us further blur the lines between browser and native apps!\n\nIn this session geared towards frontend engineers of all skill levels, let's learn about some Web APIs that you may have never heard of before! We'll look at audio, video, interaction, and device diagnostic APIs — where they are supported and how you can apply them in your next project.",
   },
@@ -258,6 +272,7 @@ Join us as we learn effective methods for building secure, searchable shopping c
   'divops-workshop': {
     title: 'Hands-On DivOps: Building a Modern Web Application from Scratch',
     categories: ['divops', 'javascript', 'web', 'workshop'],
+    retired: true,
     description: `“DivOps” is the fusion of frontend development and DevOps practices. It focuses on the tools, processes, and infrastructure that empower frontend engineers to take ownership of development environments, testing procedures, and continuous integration & delivery (CI/CD) workflows. In this intensive 3.5-hour workshop, you will gain hands-on experience and insights into the world of DivOps by building a modern web application architecture from the ground up.
 
 The workshop will include:
@@ -278,6 +293,16 @@ This workshop is ideal for web app developers of all levels who want to enhance 
 This talk will move past the academic exercises and explore the "sneaky" ways GenAI can be seamlessly integrated into existing applications to create subtle yet powerful enhancements that elevate the user experience. Through real-world examples and engaging demos, we'll uncover the hidden potential of GenAI to personalize user experiences and unlock new levels of creativity and efficiency.
 
 Leave this talk empowered to harness the power of GenAI, even if you're new to AI. Discover practical strategies and inspiring ideas to infuse your apps with intelligence, delight your users, and stay ahead of the curve in this rapidly evolving technological landscape.`,
+  },
+  'agentic-productivity': {
+    title: 'Agentic Productivity: Beyond the "Lines of Code" Trap',
+    categories: ['ai', 'career'],
+    description: `While "Lines of Code" (LoC) has never been a perfect metric for developer productivity, it has served as a default proxy for output. However, in an era where modern AI code editors like Cursor or Claude Code can generate thousands of lines instantly, LoC doesn't just miss the point. It actively obscures the real value we deliver. We risk optimizing for volume when we should be optimizing for leverage.
+
+Let's explore the "Agentic" shift, moving beyond the hype of raw coding speed to reveal how AI agents provide true leverage across four critical dimensions. We will look at how agents help us maintain flow by handling execution details, hardening our software through rigorous quality checks, instantly deepening our knowledge of complex codebases, and freeing us to focus on high-level strategy and innovation.
+
+We will leave this session with a practical, qualitative framework to evaluate and advocate for these tools. We'll stop trying to prove we can type faster and start demonstrating how we are building smarter, more robust systems with greater strategic focus.
+`,
   },
 }
 

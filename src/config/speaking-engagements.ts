@@ -46,6 +46,19 @@ export interface SourceEngagement {
 
 export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
   {
+    name: 'All Things Open AI 2026',
+    url: 'https://2026.allthingsai.org/',
+    location: 'Durham, North Carolina',
+    venue: 'Carolina Theater',
+    talks: [
+      {
+        id: 'agentic-productivity',
+        date: '03/24/2026',
+        time: '12p',
+      },
+    ],
+  },
+  {
     name: 'JavaScript fwdays 2025',
     url: 'https://fwdays.com/en/event/javascript-fwdays-2025',
     location: 'Online',
