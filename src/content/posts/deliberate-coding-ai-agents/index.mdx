@@ -1,0 +1,306 @@
+---
+date: 2026-02-25
+title: 'From Vibe Coding to Deliberation-First Coding with AI'
+shortDescription: How structured deliberation with AI Agents eliminates rewrites by front-loading decisions and shared context
+category: AI
+tags:
+  [
+    genai,
+    ai,
+    developer-experience,
+    agent,
+    cursor,
+    claude,
+    vscode,
+    architecture-driven-development,
+    engineering-practices,
+    productivity,
+    skills,
+  ]
+hero: chaos-to-order-coding.jpeg
+heroAlt: Split-screen showing chaotic code with errors versus clean whiteboard with organized planning and AI collaboration
+---
+
+You give the Agent a prompt. It writes 200 lines of code. You review it. The architecture is wrong. You explain what you actually meant. It rewrites everything. Still not quite right. It misunderstood your data model. **10 or more iterations later**, you've got working code... and a lingering feeling that you could have just written it yourself faster.
+
+Sound familiar?
+
+Here's the thing: **the problem isn't the Agent. It's the process.** The write-review-write loop is the easiest approach, but it's inefficient and error-prone because the Agent makes incorrect assumptions without sufficient context. Yes, tools like [Cursor's Plan Mode](https://cursor.com/docs/agent/modes) try to help by asking clarifying questions upfront, but they don't go deep enough on shared context and decision-making.
+
+There's a better way. I call it **deliberation-first coding**: structured conversations with AI Agents that front-load shared context so the Agent implements _your_ decisions correctly the first time. The key insight? **The best AI conversations happen before any code is written.**
+
+---
+
+## The Solution: The Deliberate Skill
+
+I've formalized this process into a reusable skill for VS Code Copilot, Cursor, and Claude Code. [**Get the skill here on GitHub Gist.**](https://gist.github.com/benmvp/957f267b3643d629d20c5120ef29a3a6)
+
+Save it to your skills directory (`~/.claude/skills/deliberate/SKILL.md` or equivalent), and invoke it with:
+
+```
+/deliberate I want to... [describe your task with background context]
+```
+
+The skill handles the rest: the Agent reflects back its understanding, asks clarifying questions with A/B/C options and recommendations, provides critical feedback on your answers, summarizes all decisions, and iterates with follow-up questions until you reach convergence. Then it produces an implementation plan or spec.
+
+**That's all you need to get started!** If you want to understand **why** this works, **how** I developed the process through trial and error, and see it in action with a real production example, read on. 👇
+
+---
+
+## The Payoff
+
+I recently added a [CSS Validator tool](https://codemata.benmvp.com/validators/css-validator) to [Codemata](https://codemata.benmvp.com), my suite of free developer tools. Instead of jumping straight to implementation, I spent 30 minutes in structured conversation with the Agent first. The result? The Agent wrote the tool correctly on the first pass, needing only 1-2 rounds of minor edge case refinements instead of the usual 3-5 rounds of architectural rewrites.
+
+Here's exactly how that conversation went, and why it works.
+
+---
+
+## Phase 1: Reflect & Clarify
+
+The foundation of deliberation-first coding is **front-loading shared context**. This doesn't always mean a huge initial prompt. If you've captured earlier decisions in specs or existing code, reference those. The key is making sure the Agent understands your codebase patterns, constraints, and goals before writing any code. Then you ask the Agent to reflect back its understanding and pose clarifying questions.
+
+Here's my initial prompt for the CSS Validator:
+
+```
+Ok I'm ready to start on Phase 9.5 CSS validator in #phase-9-validators.md.
+It should work very similarly to the HTML validator, just w/ a different
+validator library. Give me the implementation overview. Then ask a few
+clarifying questions. Use a/b style options + your recommendation.
+```
+
+That's it! No wall of context. Why? Because I had already written a spec for the validators (also using this deliberation-first process!) that included the architecture patterns, UX requirements, and constraints. The Agent could read that spec file and the existing HTML Validator code to understand the context.
+
+> 💡 **Working from a spec**: This is deliberation-first coding in practice. The upfront thinking was captured in the spec, so the prompt could stay focused on the specific decisions for this tool. The Agent is smart enough to figure out implementation details by reading code. What it needs from YOU is the "why" (goals, constraints) and "how" (UX patterns, architecture decisions). If those are already documented, reference them.
+
+The Agent asked clarifying questions in A/B/C format with recommendations:
+
+```
+**Q1: Which CSS validation approach should we use?**
+- A) W3C CSS Validation API (external, authoritative, but has rate limits)
+- B) CSS parser library like `postcss` or `csstree` (local, fast, but less comprehensive)
+- C) Hybrid: simple parse errors locally, optional deep validation via W3C API
+
+→ Recommendation: B, because Codemata tools feel instant and you already have API-based validators. Local validation keeps the experience snappy.
+
+**Q2: What level of validation feedback should users get?**
+- A) Binary valid/invalid with error count
+- B) Detailed error messages with line numbers and severity levels
+- C) Full report with warnings, suggestions, and best practices
+
+→ Recommendation: B, matching the detail level of your other validators without overwhelming users.
+
+**Q3: Should we support CSS preprocessors (SASS, LESS)?**
+- A) Plain CSS only (simplest, clear scope)
+- B) Auto-detect and validate preprocessors
+- C) Let users choose input type
+
+→ Recommendation: A, because preprocessors have their own validation tooling and this keeps scope focused.
+
+**Q4: How should we handle large files?**
+- A) No limit (trust browser memory constraints)
+- B) Hard limit with error message (e.g., 1MB)
+- C) Soft warning but allow validation
+
+→ Recommendation: B, prevents performance issues and aligns with other validators' constraints.
+```
+
+This is where the magic happens. **The Agent hasn't written a single line of code yet**, but we're already aligned on architecture, scope, and trade-offs.
+
+> 💡 **The real win**: When you capture architectural decisions in specs (created via deliberation!), future features become much faster to implement. The context compounds. This is the full cycle: deliberate → spec → implement → deliberate next feature. Each conversation builds on the last.
+
+---
+
+## Phase 2: Iterative Refinement (The Secret Sauce)
+
+Now comes the critical part. Most developers would answer the questions and say "okay, build it." Instead, I answer the questions _and then ask for three specific things_:
+
+1. **Critical feedback** on my responses
+2. **Decision summary** of what we've agreed to so far
+3. **Follow-up questions** to dig deeper
+
+Here's my response to the Agent:
+
+```
+My answers:
+- Q1: B (postcss library) - Agreed, keeping it local and fast aligns with the Codemata experience
+- Q2: B (detailed errors with line numbers) - Yes, matches our other validators
+- Q3: A (plain CSS only) - Good call, keeps scope manageable
+- Q4: B (hard 1MB limit) - Makes sense for consistency
+
+Additional context: I'm thinking we should also show a character/line count like
+our other text tools, and maybe a "pretty print" toggle to help users fix
+formatting issues they discover.
+
+Now:
+1. Give me critical feedback on my responses and surface any gotchas I should consider
+2. Summarize the decisions we've made
+3. Ask 2-3 follow-up questions to finalize the design
+```
+
+The Agent's response included **critical feedback**, and this is where things get interesting:
+
+```
+**Critical Feedback:**
+
+Your answers look solid, but a few gotchas to consider:
+
+- **On postcss validation**: While `postcss` is great for parsing, it's permissive by design (to support future CSS features). You might get false positives where technically-invalid-but-parseable CSS passes. Consider adding `stylelint` or a stricter validator on top, or accept that this trades strictness for speed.
+- **On the 1MB limit**: This is reasonable, but CSS files from build tools (especially with sourcemaps inlined) can exceed this. Consider either raising to 2MB or adding a clear error message like "This appears to be a compiled CSS file—try validating your source files instead."
+- **On the pretty print feature**: Great idea, but this creates scope creep toward a formatter. If you add it, you're building two tools in one (validator + formatter). Consider whether this belongs in a separate CSS Formatter tool instead, following your existing pattern of one tool = one job.
+```
+
+**This is the game-changer.** Even though I picked the Agent's recommended options, it still surfaced risks I hadn't considered. The Agent isn't just agreeing with me. It's actively challenging assumptions and making me think harder about edge cases.
+
+> 💡 **The critical feedback revelation**: I added this after discovering models are inherently sycophantic (they'll agree with whatever you suggest). The game-changer? Even when I pick the Agent's recommended option, the critical feedback surfaces potential gotchas I hadn't considered. It's not about being right or wrong, it's about making **informed decisions**.
+
+The Agent then provided a decision summary:
+
+```
+**Decisions So Far:**
+1. CSS validation using `postcss` library (local, fast)
+2. Detailed error feedback with line numbers and severity
+3. Plain CSS only (no preprocessor support)
+4. 1MB file size limit (consider 2MB adjustment)
+5. Standard ToolPage layout with textarea input
+6. Character/line count display (confirmed)
+7. Pretty print feature (needs scope decision)
+```
+
+And follow-up questions:
+
+```
+**Q5: How should we handle the postcss permissiveness issue?**
+- A) Accept it—speed over strict validation
+- B) Add stylelint for stricter checking
+- C) Show two modes: "Quick Check" and "Strict Validation"
+
+→ Recommendation: A, with clear messaging that this validates syntax, not best practices.
+
+**Q6: What should we do with the pretty print feature?**
+- A) Include it in this tool
+- B) Defer to a separate CSS Formatter tool
+- C) Add "Format & Validate" combo button
+
+→ Recommendation: B, maintains single responsibility and matches your tool architecture.
+```
+
+I answered these follow-up questions, and the cycle repeated: I got critical feedback, an updated decision summary, and a few final questions.
+
+**By this point, we'd gone through several rounds of Q&A with roughly a dozen questions total**, covering everything from API choices to error handling to user messaging. Each time, I had to type: "Now give me critical feedback on my responses. Then summarize all decisions. Lastly give me follow-up questions."
+
+It was getting tedious.
+
+> 💡 **Evolution of the process**: I didn't always structure it this way. Initially, I only asked for follow-up questions. But the Agent would mostly agree with me. Then I started requesting a decision summary after seeing someone else recommend it. As chats grow long, it reaches the model's context window limits, so Agents start summarizing the chat history and "forgetting" previous details. The summary keeps us aligned. The critical feedback request came last, and that's when the quality shot up. Each addition solved a real problem I'd encountered.
+
+---
+
+## Enter the Skill
+
+The repetitive meta-prompting was a clear signal: **this process worked, but it needed to be DRY'd up.** Modern AI editors like [VS Code Copilot](https://code.visualstudio.com/docs/copilot/copilot-chat), [Cursor](https://cursor.com/), and [Claude Code](https://code.claude.com/) support **skills** (reusable prompt templates that standardize workflows across conversations and even across models).
+
+I formalized the deliberation-first coding process into a skill that:
+
+1. **Normalizes structure** across Claude, GPT, and other models (they used to vary wildly in how they formatted questions and decisions)
+2. **Condenses meta-prompting** into a single invocation. No more typing "give me critical feedback, then decisions, then questions" every round
+3. **Enforces the pattern** automatically. The Agent knows to provide all three components without being reminded
+
+With the skill active, I just answer the Agent's questions naturally. It automatically provides critical feedback, updates the decision log, and asks follow-ups (every time, consistently).
+
+Here's what the CSS Validator conversation looked like with the skill:
+
+- **Me:** [answers to questions 5 & 6]
+- **Agent:** [critical feedback on my answers] → [updated decision summary] → [2 final follow-up questions]
+- **Me:** [answers final questions]
+- **Agent:** [final critical feedback] → [complete decision log] → "We've reached convergence. Ready for implementation plan?"
+
+No manual prompting. The skill enforces the structure. I focus on thinking through decisions, and the Agent handles the workflow mechanics.
+
+> Want to learn more about skills? Check out [Claude Code's documentation on creating custom skills](https://code.claude.com/docs/en/skills). I've included my full deliberate skill at the end of this post.
+
+---
+
+## Phase 3: Exit Path (Plan & Implement)
+
+Once we reached convergence (no meaningful open questions remaining), I asked for an implementation plan. The Agent produced a detailed breakdown covering core validation, UX enhancements, and verification steps. With this shared understanding, it generated the CSS Validator code.
+
+I reviewed it, made 2 small tweaks for edge cases around sourcemap comments, and shipped it.
+
+**What used to take 5+ rounds of "no, that's not what I meant", architectural rewrites became 1-2 rounds of edge case refinement.** The architecture was mine. The implementation was the Agent's. Both were better for it.
+
+---
+
+## The Meta Moment
+
+Here's where it gets fun: **this entire blog post was created using the [deliberate skill](https://gist.github.com/benmvp/957f267b3643d629d20c5120ef29a3a6).**
+
+Here's the prompt I used:
+
+```
+/deliberate
+
+I want to create a new GenAI blog post about my structured "vibe coding" process.
+It involves lots of conversations with the Agent before actually writing out the code,
+as opposed to the write-review-write loop that I believe is inefficient and error-prone.
+Ultimately the blog post is an explanation of how I came to my deliberate skill.
+I did this process over and over so many times and that's what skills are for.
+
+Here's my working outline:
+[... included my rough outline ...]
+
+Example to use throughout: Adding the CSS Validator tool to my CodeMata app
+
+Follow the tone & voice of the other GenAI-related blog posts
+```
+
+The Agent asked clarifying questions about audience, structure, example depth, and how to handle the evolution story. I answered. It gave critical feedback on my responses (challenging my framing, surfacing risks about dismissing non-skill-users, questioning whether two examples would create fatigue). **We went through 4 rounds of Q&A with 12 questions total**, plus my additional notes and thoughts along the way.
+
+We iterated until convergence. Then the Agent produced an implementation plan which it then implemented into what you're reading right now. I'm refining and expanding as I write, but the architecture (the structure, the insights, the flow) came from that deliberate conversation.
+
+**The process works for code, docs, specs, architecture, anything requiring thoughtful planning.** And because it's formalized as a skill, I can use it across all my repos with a single line.
+
+---
+
+## Why Deliberation-First Coding Works
+
+Let me synthesize the key principles that make this approach effective:
+
+**1. Front-loaded shared context removes incorrect assumptions**
+
+The Agent needs to understand your codebase patterns, constraints, and goals. Without this context, it's guessing. With it, it's collaborating. This is similar to what I wrote about in my [GenAI shift-left architecture](../genai-shift-left-software-architecture) post (moving quality upstream by deliberating before generating).
+
+**2. Adversarial partnership (critical feedback) surfaces risks for informed decisions**
+
+Models are sycophantic by default. They'll agree with you even when you're wrong. By explicitly requesting critical feedback, you turn the Agent into a constructive challenger that surfaces gotchas, edge cases, and trade-offs you haven't considered. This isn't about the Agent being "right", it's about making informed decisions.
+
+**3. Decision continuity (summaries) prevents Agent "forgetting" in long chats**
+
+As conversations grow long, context windows get crowded and Agents start losing track of earlier decisions when they summarize the chat history. Regular decision summaries act as a running record, ensuring nothing gets lost or contradicted 10 questions later.
+
+**4. Structural consistency (via skill) normalizes output across models**
+
+Different models format responses differently. Claude might use tables, GPT might use bullets, and the structure can even vary within chat sessions. The skill enforces a consistent format, making the process predictable and reliable regardless of which model you're using.
+
+**The value proposition:** The Agent becomes autonomous in HOW it writes code, while YOU retain control over WHAT gets built and WHY. That's true collaboration, not micromanagement.
+
+**Reality check:** You'll still iterate after the first implementation, but on refinement and polish, not fundamental rewrites. The architecture is yours. The implementation is the Agent's. Both are better for it.
+
+---
+
+## Conclusion
+
+Remember those 5+ frustrating iterations rewriting AI-generated code because it didn't understand what you meant? They're gone. Replaced by one focused conversation that gets it right the first time.
+
+This is the natural evolution of the ideas I've been exploring in my [Mythical 10x Developer](../mythical-10x-developer) and [shift-left architecture](../genai-shift-left-software-architecture) posts. If AI commoditizes code implementation, **deliberation-first coding** commoditizes the path to correct implementation. You're not just moving faster, you're moving smarter, with fewer mistakes and less frustration.
+
+**If you're using AI Agents and still fighting the write-review-write loop, try deliberating first.** Start with the manual process:
+
+1. Provide rich context upfront
+2. Ask for reflection + clarifying questions with options
+3. Answer questions, then request critical feedback + decision summary + follow-ups
+4. Iterate until convergence
+5. Get an implementation plan
+6. Review and refine the generated code
+
+When it clicks (and it will), [grab the skill](https://gist.github.com/benmvp/957f267b3643d629d20c5120ef29a3a6) and make it automatic. Your future self will thank you.
+
+Keep learning my friends. 🤓
