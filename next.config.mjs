@@ -3,24 +3,29 @@
  */
 const SLIDE_SHORT_URLS = [
   {
+    source: '/ato-agentic-dev',
+    destination:
+      'https://docs.google.com/presentation/d/e/2PACX-1vSOuRswwEr-CBtuwDjdWB9BhC8TR9SWZRiwn3NJc12CdIrkSVu2BQUML5z6YH_5rLUbuyUZpqc6yLjG/pub',
+  },
+  {
     source: '/jsfwd-sneaky-ai',
     destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vR-tOqiOULqGQRVo-PiWcGF7vVQkRI1sm11oyFJuGkq4P7DxS1938x8XyROmA9j-BZgCsr0xfc0Oard/pub?start=false&loop=false&delayms=60000',
+      'https://docs.google.com/presentation/d/e/2PACX-1vR-tOqiOULqGQRVo-PiWcGF7vVQkRI1sm11oyFJuGkq4P7DxS1938x8XyROmA9j-BZgCsr0xfc0Oard/pub',
   },
   {
     source: '/ato-sneaky-ai',
     destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vQgKgkoVnec4xWCLwZskQk7416Ucu-pGTbt9K7Gmzg6ypqhE5DGbPmtBXMK-axlc6ixc6TXRnNkfBpv/pub?start=false&loop=false&delayms=60000',
+      'https://docs.google.com/presentation/d/e/2PACX-1vQgKgkoVnec4xWCLwZskQk7416Ucu-pGTbt9K7Gmzg6ypqhE5DGbPmtBXMK-axlc6ixc6TXRnNkfBpv/pub',
   },
   {
     source: '/cf-sneaky-ai',
     destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vSn0z1cNgbFN9SKKxGYg2xOjMf2n09ecYQ0HLX9o8aVpryDGDVuSluxq1Nr_kcVGVcRm2hJrpIXzhkq/pub?start=false&loop=false&delayms=60000',
+      'https://docs.google.com/presentation/d/e/2PACX-1vSn0z1cNgbFN9SKKxGYg2xOjMf2n09ecYQ0HLX9o8aVpryDGDVuSluxq1Nr_kcVGVcRm2hJrpIXzhkq/pub',
   },
   {
     source: '/cf-ai-shop',
     destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vQwJqE6a0JqOHulGbVfOJ3K3rI9z4iUnUeX__JhIAGpNTz5125dul0HJHQR7dKDWO7MjufN-2EMGmdG/pub?start=false&loop=false&delayms=60000',
+      'https://docs.google.com/presentation/d/e/2PACX-1vQwJqE6a0JqOHulGbVfOJ3K3rI9z4iUnUeX__JhIAGpNTz5125dul0HJHQR7dKDWO7MjufN-2EMGmdG/pub',
   },
   {
     source: '/ct-nextjs',
@@ -41,7 +46,7 @@ const SLIDE_SHORT_URLS = [
   {
     source: '/hs-phx-ai',
     destination:
-      'https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub?start=false&loop=false&delayms=60000',
+      'https://docs.google.com/presentation/d/e/2PACX-1vTrdHIM9kyJsF0-gO1oItpA64gZG2QYUA0GZKkm5T-yCHMm3g0VNe1ytQ3PFCqvch-2v_OXsQSy7dZR/pub',
   },
   {
     source: '/bit-webdev',

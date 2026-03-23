@@ -55,6 +55,12 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         id: 'agentic-productivity',
         date: '03/24/2026',
         time: '12p',
+        links: [
+          {
+            label: 'Slides',
+            url: '/ato-agentic-dev',
+          },
+        ],
       },
     ],
   },
@@ -70,7 +76,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/jsfwd-sneaky-ai',
+            url: '/jsfwd-sneaky-ai',
           },
           {
             label: 'Code examples',
@@ -98,7 +104,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/ato-sneaky-ai',
+            url: '/ato-sneaky-ai',
           },
           {
             label: 'Code examples',
@@ -126,7 +132,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/cf-sneaky-ai',
+            url: '/cf-sneaky-ai',
           },
           {
             label: 'Code examples',
@@ -142,7 +148,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/cf-ai-shop',
+            url: '/cf-ai-shop',
           },
           {
             label: 'Code examples',
@@ -263,7 +269,7 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
         links: [
           {
             label: 'Slides',
-            url: 'https://www.benmvp.com/hs-phx-ai',
+            url: '/hs-phx-ai',
           },
           {
             label: 'Code examples',
