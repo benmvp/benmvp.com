@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "benmvp.com",
+  "packageManager": "pnpm@12.16.1",
   "engines": {
     "node": ">=18"
   },

@@ -23,7 +23,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm dependencies
-        run: pnpm install
+        run: pnpm install --allow-build esbuild
 
       - name: Run lint
         run: pnpm run lint
