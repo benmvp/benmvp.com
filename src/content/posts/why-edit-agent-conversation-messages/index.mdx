@@ -1,0 +1,79 @@
+---
+date: 2026-11-01
+title: Why I Edit My Agent Conversation Messages
+shortDescription: How I use conversation refactoring to clarify my intent and change direction when working with AI Agents
+category: AI
+tags: [genai, ai, developer-experience, agent, vscode, productivity]
+hero: ai-agent-conversation-refactoring.jpeg
+heroAlt: An edited message in an AI conversation branching into a clear new path while the original thread fades into the background
+---
+
+I've already edited the prompt for this blog post more than five times. Not five follow-up messages. I've gone back, changed what I originally said, and asked the Agent to respond again.
+
+And yes, I'm working with an AI Agent to write this post, much like how I write code these days. I don't write much of the implementation code myself anymore. Instead, I spend a lot of time [deliberating with the Agent](/blog/deliberate-coding-ai-agents/) so we have a solid plan before it generates the code. I still have to review and verify what it produces, of course.
+
+But even during those conversations, I'll get a response and realize, "Oh, that's not what I meant." Or sometimes, "Actually, now I know what I want."
+
+**Instead of explaining that in another message, I often edit the message that led us there.**
+
+## Refactoring the conversation
+
+I call this **conversation refactoring**: editing an earlier message and resubmitting it so the conversation continues from my revised explanation.
+
+Sometimes the Agent gets something wrong because I left out an important constraint. Sometimes my wording was ambiguous. And sometimes its response sparks an idea I hadn't considered until I saw it. The Agent didn't necessarily misunderstand me. I just hadn't figured out what I wanted yet!
+
+I'll usually edit my most recent message. But if we've spent several exchanges going in the wrong direction, I'll go back to wherever that direction started. I bring any useful discoveries into the revised message, then continue from there.
+
+I'm not trying to write a perfect prompt on the first attempt. **The response helps me figure out what the prompt should have said.**
+
+## A frontend example
+
+Imagine I'm planning a notification settings panel and send this:
+
+```text
+Help me plan a React settings panel where users can toggle
+email and push notifications.
+```
+
+The Agent proposes the toggles, some component state, and a Save button. Nothing unreasonable there. But seeing that proposal makes me realize I want changes to save immediately, without a separate button.
+
+I could reply, "Actually, make it auto-save. Oh, and show when it's saving. And what happens if saving fails?"
+
+Instead, I'd edit my earlier message:
+
+```text
+Help me plan a React settings panel where users can toggle
+email and push notifications. Each toggle should save immediately,
+without a Save button. Include saving feedback and a way to
+recover if a change fails to save.
+```
+
+Now the Agent can plan around that behavior from the beginning, rather than revise a proposal built around an explicit save action.
+
+The first response wasn't wasted. It helped me discover a requirement. I just don't need to keep that proposal in the conversation.
+
+## Why I think it helps
+
+The useful mental model is that **the model doesn't remember our conversation like a person does**. Each response is generated from the context supplied for that request: instructions, conversation history, and potentially files or tool results. The model call is effectively stateless; the application maintains the conversation.
+
+That's a simplification. Tools may summarize older messages or select which context to include, and caching can avoid reprocessing some repeated input. But the gist is that the next response depends on the context available for that request.
+
+When editing an earlier message creates a new conversation branch, the abandoned exchange doesn't need to remain in its active history. The details vary by tool, but I find it helpful to give the Agent my current intent without all the detours.
+
+**This isn't about saving tokens.** I'm still making repeated requests. A shorter conversation may leave less to summarize later, but my main goal is clarity, not cost savings or a guarantee of better answers.
+
+## Sometimes I keep going
+
+My main reason for _not_ editing? **I like the response and want to keep it.** If the Agent gives me a useful outline and I think of something to add, I'll send a follow-up. That's happened while developing this very post.
+
+The question is whether I want to build on the response or replace the direction it took. Addendums are fine. I don't rewind just because I have another thought.
+
+Another reason I'll keep going is that the Agent has already changed files or run commands. Editing a message doesn't necessarily undo those actions. Conversation history and workspace state are different things. If I want to keep that work, I'll often continue the conversation so we can build on what's already there.
+
+---
+
+I primarily do this in VS Code, but I also use this technique in Gemini for non-coding conversations. It's become a regular part of how I work with conversational AI everywhere. I'm sad when I'm in an environment that _doesn't_ support editing earlier messages.
+
+The next time you're about to type "no, what I meant was," consider editing the earlier message instead. Sometimes the thing that needs revising isn't the code. It's your explanation.
+
+Keep learning my friends. 🤓
