@@ -60,6 +60,10 @@ export const SPEAKING_ENGAGEMENTS: SourceEngagement[] = [
             label: 'Slides',
             url: '/ato-agentic-dev',
           },
+          {
+            label: 'Video',
+            url: 'https://www.youtube.com/watch?v=F4QR_cFQLGU',
+          },
         ],
       },
     ],
